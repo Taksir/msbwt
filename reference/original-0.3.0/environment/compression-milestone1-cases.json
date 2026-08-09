@@ -1,0 +1,77 @@
+{
+  "format": "msbwt-legacy-compression-milestone1-cases-v1",
+  "profile_id": "py27-late-05a7d6d83862",
+  "route": "pyx-historical-cython",
+  "starting_artifacts": {
+    "nonuniform_build": {
+      "path": "nonuniform-prefix/py27-late-05a7d6d83862/pyx-historical-cython/build/artifacts",
+      "primary": "msbwt.npy",
+      "primary_sha256": "da28963ca3726568dd7a26eccea35f107bd4cb8b295c909de628374db38dd4b2",
+      "tree_sha256": "ad4aa043feb549e0af861ffde0deca11f8ac0b030c5305183f61f04f5f4d8c0a"
+    },
+    "nonuniform_pre": {
+      "path": "nonuniform-prefix/py27-late-05a7d6d83862/pyx-historical-cython/pre/artifacts",
+      "tree_sha256": "71f549690de7b78b8b2979692f0594966cb33618e1f7e48c098a17ecc3ea31a7"
+    },
+    "uniform_build": {
+      "path": "uniform-multifile/py27-late-05a7d6d83862/pyx-historical-cython/build/artifacts",
+      "primary": "msbwt.npy",
+      "primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+      "tree_sha256": "842bfc80080ca553ee23f07eb3da7616df96822cee7d774d163c1c2058d0132e"
+    }
+  },
+  "successful_case_order": [
+    "uniform-posthoc",
+    "nonuniform-posthoc",
+    "uniform-direct-split",
+    "uniform-direct-wrapper"
+  ],
+  "expected_failure_order": [
+    "uniform-decompress",
+    "nonuniform-decompress"
+  ],
+  "decompression_expected_failure": {
+    "exit_code": 1,
+    "stderr_sha256": "227471aa531ec114ada93c2507f6b621df8109d70324b7217285efd518904ac4",
+    "exception": "TypeError: slice indices must be integers or None or have an __index__ method",
+    "traceback_locations": [
+      "MUS/CommandLineInterface.py\", line 175",
+      "MUS/MSBWTGen.py\", line 1203",
+      "MUS/MSBWTGen.py\", line 1222",
+      "MUS/MultiStringBWT.py\", line 608",
+      "MUS/MultiStringBWT.py\", line 662"
+    ],
+    "source_side_effects": [
+      "comp_fmIndex.npy",
+      "comp_refIndex.npy",
+      "totalCounts.p"
+    ],
+    "cases": {
+      "uniform": {
+        "compressed_sha256": "53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3",
+        "compressed_shape": [22],
+        "source_manifest_content_sha256": "722451840cfca8ff03edfe11c80ba08fed3949636717febaaf8200f1efdd0bf5",
+        "destination_manifest_content_sha256": "2d33197387eafb59f1c9db2834f9da9f24d60a68ff01282f31f1787a0be0093a",
+        "output_sha256": "f9450ec830d3eca779fdb8a7df2127cb0117620b3ce3588a1c9d76625b96aa22",
+        "output_shape": [48],
+        "output_payload_sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+      },
+      "nonuniform": {
+        "compressed_sha256": "9d19222eaa78c1d89304e79ff14a8a0a5f0c21c3ae979d179f570f1d8d5c1e66",
+        "compressed_shape": [16],
+        "source_manifest_content_sha256": "38e5d6b9d432215173d0c2f7fcb29b3b746ed7d6b5e72ed9c42259ba9c4567dd",
+        "destination_manifest_content_sha256": "e968933ebbd14dc2e73bf50171920cde2795eed23c1164b88268efbe7c5d3292",
+        "output_sha256": "df951972060da0644c1da6d1f7e2a318d26f6220c51fd2fccd5e374ebc7b83a3",
+        "output_shape": [30],
+        "output_payload_sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+      }
+    }
+  },
+  "fixture_cases": {
+    "nonuniform": "nonuniform-prefix",
+    "uniform": "uniform-multifile"
+  },
+  "canonical_processes": 1,
+  "comparison_processes": 2,
+  "canonical_runs": ["run-a", "run-b"]
+}

@@ -123,6 +123,10 @@ def parse_args(argv):
     parser.add_argument("--case", required=True)
     parser.add_argument("--case-manifest", default=probe_legacy.DEFAULT_ORACLE_CASES)
     parser.add_argument("--output", required=True, help="JSON result path outside the copied dataset")
+    parser.add_argument(
+        "--coexistence-compressed-primary",
+        help="copy this comp_msbwt.npy beside the byte primary, then validate loader preference"
+    )
     return parser.parse_args(argv)
 
 
@@ -144,6 +148,11 @@ def main(argv=None):
         sequences.extend(read_fastq_sequences(fixture_path))
 
     shutil.copytree(args.dataset, args.copy)
+    if args.coexistence_compressed_primary:
+        compressed_target = os.path.join(args.copy, "comp_msbwt.npy")
+        if os.path.exists(compressed_target):
+            raise SystemExit("coexistence copy already contains comp_msbwt.npy")
+        shutil.copy2(args.coexistence_compressed_primary, compressed_target)
     before = inventory_files(args.copy)
     expected_recovered = expected_recovered_strings(sequences)
     queries = all_fixture_substrings(sequences)
@@ -174,10 +183,12 @@ def main(argv=None):
             for query in queries
         }
         dollar_count = int(reader.getSymbolCount(0))
-        recovered = sorted(reader.recoverString(index) for index in range(dollar_count))
+        recovered_by_id = [reader.recoverString(index) for index in range(dollar_count)]
+        recovered = sorted(recovered_by_id)
         result.update({
             "actual_queries": actual_queries,
             "actual_recovered_strings": [value.decode("ascii") for value in recovered],
+            "recovered_by_dollar_id": [value.decode("ascii") for value in recovered_by_id],
             "dollar_count": dollar_count,
             "reader_class": reader.__class__.__name__,
             "total_size": int(reader.getTotalSize())
@@ -188,6 +199,38 @@ def main(argv=None):
             raise AssertionError("frozen reader recovery differs from fixture sequences")
         if result["total_size"] != sum(len(sequence) + 1 for sequence in sequences):
             raise AssertionError("frozen reader total size differs from fixture-derived length")
+        if args.coexistence_compressed_primary:
+            if result["reader_class"] != "ByteBWT":
+                raise AssertionError("coexistence directory did not prefer ByteBWT")
+            result["coexistence_before_removal"] = {
+                "reader_class": result["reader_class"],
+                "actual_queries": actual_queries,
+                "recovered_by_dollar_id": result["recovered_by_dollar_id"],
+                "total_size": result["total_size"],
+                "inventory": inventory_files(args.copy)
+            }
+            os.remove(os.path.join(args.copy, "msbwt.npy"))
+            rle_reader = MultiStringBWTCython.loadBWT(os.path.abspath(args.copy), useMemmap=False)
+            rle_queries = {
+                query.decode("ascii"): int(rle_reader.countOccurrencesOfSeq(query))
+                for query in queries
+            }
+            rle_dollar_count = int(rle_reader.getSymbolCount(0))
+            rle_recovered_by_id = [
+                rle_reader.recoverString(index) for index in range(rle_dollar_count)
+            ]
+            result["coexistence_after_byte_removal"] = {
+                "reader_class": rle_reader.__class__.__name__,
+                "actual_queries": rle_queries,
+                "recovered_by_dollar_id": [value.decode("ascii") for value in rle_recovered_by_id],
+                "total_size": int(rle_reader.getTotalSize()),
+                "inventory": inventory_files(args.copy)
+            }
+            if rle_reader.__class__.__name__ != "RLE_BWT":
+                raise AssertionError("loader did not select RLE_BWT after byte-primary removal")
+            if (rle_queries != actual_queries or rle_recovered_by_id != recovered_by_id or
+                    int(rle_reader.getTotalSize()) != result["total_size"]):
+                raise AssertionError("coexistence RLE reader differs from preferred ByteBWT")
         result["status"] = "passed"
     except Exception as exc:
         result["error"] = "{0}: {1}".format(exc.__class__.__name__, exc)
