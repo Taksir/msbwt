@@ -442,6 +442,53 @@ Repeat twice and require identical partial manifests and identical resumed
 results.  The restart code selects the numerically largest backup but validates
 no checksum, shape, or completeness; do not add such validation to the oracle.
 
+### Resolved R2 authoritative legacy contract
+
+Executed frozen-oracle evidence resolves the R2 clean-vs-recovered comparison.
+Do NOT require whole-tree equality between the clean and recovered R2 results.
+For the plan-mandated 259-read case under `py27-late-05a7d6d83862` and
+`pyx-historical-cython`, the clean build deterministically retains:
+
+```text
+backup.256.npy
+msbwt.npy
+offsets.npy
+seqs.npy
+```
+
+and the recovered build deterministically retains:
+
+```text
+msbwt.npy
+offsets.npy
+seqs.npy
+```
+
+The clean path never removes `backup.256.npy` because frozen
+`MultimergeCython.interleaveLevelMerge` deletes an old backup only when a newer
+backup replaces it (`MUSCython/MultimergeCython.pyx:770-773`); with 259 reads
+the final merge (256 to 512) creates no newer backup, so `oldBackupFN` stays
+`None` and no removal runs.  The recovered path sets `oldBackupFN` from the
+located backup and therefore removes it.  This clean-vs-recovered auxiliary
+file-set difference is accepted, documented, frozen legacy behavior.  R2
+success instead requires:
+
+1. `msbwt.npy` byte-identical between clean and recovered builds.
+2. Its dtype/shape/header/payload properties match as applicable.
+3. Repeated clean executions are deterministic.
+4. Repeated recovered executions are deterministic.
+5. Frozen reader/query/recovered-string behavior is identical.
+6. The clean build's retained `backup.256.npy` is recorded explicitly as an
+   auxiliary legacy checkpoint artifact, never mislabeled as a primary result.
+7. The recovered build's removal of that checkpoint is recorded explicitly.
+8. No other unexplained file differences are allowed.
+9. The relationship is protected by regression tests.
+
+Do not delete `backup.256.npy` from the clean control to force tree equality.
+Do not modify the frozen oracle.  Do not generalize this behavior beyond the
+executed R2 case/profile.  R1 is unchanged: its resumed and clean final trees
+are required to be byte-identical as already observed.
+
 ### Recovery evidence retention
 
 For each interruption retain the expected exit, failpoint identifier, exact
@@ -553,9 +600,15 @@ review; never update an existing golden or repair frozen source.
 8. Add and verify the exact 259-read recovery fixture, then execute R1 and R2
    twice each using exit-86 failpoints, immutable partial snapshots, resume
    copies, and independent clean controls.
-9. Require partial-manifest repeatability, explicit frozen resume log markers,
-   byte-identical resumed/clean primaries, equal reader behavior, and clean
-   success-time checkpoint removal.  Stop on any divergence or leftover.
+9. Require partial-manifest repeatability and explicit frozen resume log
+   markers for both R1 and R2.  R1 requires byte-identical resumed/clean final
+   trees.  R2 requires byte-identical resumed/clean `msbwt.npy` primaries,
+   identical reader behavior, repeated clean and repeated recovered
+   determinism, and the documented clean-vs-recovered relationship under the
+   resolved R2 legacy contract: the clean build deterministically retains
+   `backup.256.npy` as an auxiliary checkpoint artifact and the recovered build
+   deterministically removes it, with no other unexplained file differences.
+   Stop on any divergence beyond that resolved relationship.
 10. Run milestone 3 only as named failure experiments.  Preserve every partial
    file and parser/exit result; make no recovery or successful-golden claim.
 11. Rerun fixture generation checks, frozen-source verification, all compatibility

@@ -288,6 +288,47 @@ def assert_identical_trees(left, right, label):
     return comparison
 
 
+def assert_r2_relationship(resumed_tree, clean_tree, case_config):
+    """Enforce the resolved R2 legacy contract.
+
+    The frozen multimerge builder retains ``backup.256.npy`` in the clean
+    control (no newer backup ever triggers its removal) while the recovered
+    build removes it (the resume path sets ``oldBackupFN`` from the located
+    backup).  This clean-vs-recovered auxiliary file-set difference is
+    accepted documented legacy behavior.  The ``msbwt.npy`` primary and every
+    other common file must be byte-identical, and no other unexplained file
+    may appear in either tree.
+    """
+    backup = case_config["partial_backup"]
+    resumed_map = dict((item["path"], item) for item in resumed_tree["files"])
+    clean_map = dict((item["path"], item) for item in clean_tree["files"])
+    resumed_paths = set(resumed_map)
+    clean_paths = set(clean_map)
+    if backup not in clean_paths:
+        raise RuntimeError("clean R2 build did not retain backup {0}".format(backup))
+    if backup in resumed_paths:
+        raise RuntimeError("recovered R2 build unexpectedly retained backup {0}".format(backup))
+    expected_resumed = clean_paths.difference((backup,))
+    if resumed_paths != expected_resumed:
+        raise RuntimeError(
+            "R2 recovered/clean file sets diverge beyond the retained backup: "
+            "recovered={0} clean={1}".format(sorted(resumed_paths), sorted(clean_paths)))
+    changed = sorted(path for path in resumed_paths if resumed_map[path] != clean_map[path])
+    if changed:
+        raise RuntimeError("R2 recovered/clean common files differ: {0}".format(changed))
+    return {
+        "clean_retains_backup": True,
+        "recovered_removes_backup": True,
+        "no_other_divergence": True,
+        "clean_file_set": sorted(clean_paths),
+        "recovered_file_set": sorted(resumed_paths),
+        "retained_backup": backup,
+        "backup_sha256": clean_map[backup]["sha256"],
+        "common_files_equal": True,
+        "common_files": sorted(resumed_paths),
+    }
+
+
 def r1_case(recorder, built_source, environment_root, operation_root, label, fixture, config):
     """Run one direct uniform RLE checkpoint interrupt/resume/clean family."""
     case_config = config["cases"]["r1"]
@@ -341,7 +382,8 @@ def r1_case(recorder, built_source, environment_root, operation_root, label, fix
     clean_primary = rle_primary_record(os.path.join(clean_partial, "comp_msbwt.npy"))
 
     tree_match = assert_identical_trees(resumed_tree, clean_tree, "r1 resumed/clean")
-    if resumed_primary != clean_primary:
+    primary_equal = resumed_primary == clean_primary
+    if not primary_equal:
         raise RuntimeError("r1 resumed comp_msbwt.npy differs from clean control")
 
     return {
@@ -358,8 +400,10 @@ def r1_case(recorder, built_source, environment_root, operation_root, label, fix
         "resumed_primary": resumed_primary,
         "clean_tree": clean_tree,
         "clean_primary": clean_primary,
-        "resume_equals_clean_tree": tree_match,
-        "resume_equals_clean_primary": resumed_primary == clean_primary,
+        "relationship": {
+            "tree_equal": tree_match["matches"],
+            "primary_equal": primary_equal,
+        },
     }
 
 
@@ -415,7 +459,11 @@ def r2_case(recorder, built_source, environment_root, operation_root, label, fix
     clean_exit = run_required(
         recorder, label + "-r2-clean",
         cli_argv("cfpp", "-p", "1", clean_partial), built_source)
-    assert_no_checkpoint_temps(clean_partial, ("backup.", "msbwt.temp.", "inter"))
+    # The clean control deterministically retains backup.<numSeqs-bucket>.npy
+    # under the resolved R2 legacy contract; only msbwt.temp./inter leftovers
+    # are forbidden, and the retained backup is asserted by the relationship
+    # check below.
+    assert_no_checkpoint_temps(clean_partial, ("msbwt.temp.", "inter"))
     clean_tree = inventory(clean_partial)
     clean_primary = parse_u1_npy(os.path.join(clean_partial, "msbwt.npy"))
     clean_primary_record = {
@@ -427,8 +475,10 @@ def r2_case(recorder, built_source, environment_root, operation_root, label, fix
         "payload_sha256": clean_primary["payload_sha256"],
     }
 
-    tree_match = assert_identical_trees(resumed_tree, clean_tree, "r2 resumed/clean")
-    if resumed_primary_record != clean_primary_record:
+    relationship = assert_r2_relationship(resumed_tree, clean_tree, case_config)
+    primary_equal = resumed_primary_record == clean_primary_record
+    relationship["primary_equal"] = primary_equal
+    if not primary_equal:
         raise RuntimeError("r2 resumed msbwt.npy differs from clean control")
 
     return {
@@ -445,8 +495,7 @@ def r2_case(recorder, built_source, environment_root, operation_root, label, fix
         "resumed_primary": resumed_primary_record,
         "clean_tree": clean_tree,
         "clean_primary": clean_primary_record,
-        "resume_equals_clean_tree": tree_match,
-        "resume_equals_clean_primary": resumed_primary_record == clean_primary_record,
+        "relationship": relationship,
     }
 
 
@@ -535,8 +584,8 @@ def execute(recorder, built_source, run_dir, fixture_root, golden_root, manifest
             resumed_match = tree_compare(resumed_a, resumed_b)
             clean_match = tree_compare(clean_a, clean_b)
             result["cases"][case_id]["resume_equals_clean"] = {
-                "run_a": result["cases"][case_id]["runs"][run_a]["resume_equals_clean_tree"],
-                "run_b": result["cases"][case_id]["runs"][run_b]["resume_equals_clean_tree"],
+                "run_a": result["cases"][case_id]["runs"][run_a]["relationship"],
+                "run_b": result["cases"][case_id]["runs"][run_b]["relationship"],
                 "resumed_a_equals_resumed_b": resumed_match["matches"],
                 "clean_a_equals_clean_b": clean_match["matches"],
             }

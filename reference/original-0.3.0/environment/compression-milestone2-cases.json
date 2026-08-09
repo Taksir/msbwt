@@ -78,7 +78,19 @@
         "1",
         "DESTINATION"
       ],
-      "reader_case": "recovery-nonuniform-259"
+      "reader_case": "recovery-nonuniform-259",
+      "clean_retained_backup": "backup.256.npy",
+      "clean_retained_files": [
+        "backup.256.npy",
+        "msbwt.npy",
+        "offsets.npy",
+        "seqs.npy"
+      ],
+      "recovered_retained_files": [
+        "msbwt.npy",
+        "offsets.npy",
+        "seqs.npy"
+      ]
     }
   }
 }

@@ -93,6 +93,15 @@ class CompressionMilestone2HarnessTests(unittest.TestCase):
         self.assertEqual(r2["partial_backup"], "backup.256.npy")
         self.assertEqual(r2["resume_argv"], ["cfpp", "-p", "1", "DESTINATION"])
         self.assertEqual(r2["resume_log_marker"], "Backup located, resuming...")
+        self.assertEqual(r2["clean_retained_backup"], "backup.256.npy")
+        self.assertEqual(
+            r2["clean_retained_files"],
+            ["backup.256.npy", "msbwt.npy", "offsets.npy", "seqs.npy"],
+        )
+        self.assertEqual(
+            r2["recovered_retained_files"],
+            ["msbwt.npy", "offsets.npy", "seqs.npy"],
+        )
 
     def test_runner_records_the_exact_cli_and_failpoint_contract(self) -> None:
         source = RUNNER_PATH.read_text(encoding="utf-8")
@@ -109,7 +118,13 @@ class CompressionMilestone2HarnessTests(unittest.TestCase):
             'case_config["resume_log_marker"] not in resume_stdout.decode("utf-8")',
             "def r1_case(",
             "def r2_case(",
+            "def assert_r2_relationship(",
             'config["uniform_preprocess"]["tree_sha256"]',
+            'raise RuntimeError("clean R2 build did not retain backup {0}".format(backup))',
+            'raise RuntimeError("recovered R2 build unexpectedly retained backup {0}".format(backup))',
+            '"clean_retains_backup": True',
+            '"recovered_removes_backup": True',
+            '"no_other_divergence": True',
         ):
             self.assertIn(required, source)
 
@@ -230,6 +245,79 @@ class CompressionMilestone2HarnessTests(unittest.TestCase):
             backup = compression_milestone2.assert_partial_backup(str(root), case_config)
             self.assertEqual(backup["backup"], "backup.256.npy")
             self.assertIn("msbwt.npy", backup["file_set"])
+
+    def test_r2_relationship_requires_clean_backup_and_removed_recovered_backup(self) -> None:
+        case_config = {
+            "partial_backup": "backup.256.npy",
+            "clean_retained_backup": "backup.256.npy",
+        }
+        with writable_temporary_directory() as temporary:
+            clean = temporary / "clean"
+            resumed = temporary / "resumed"
+            clean.mkdir()
+            resumed.mkdir()
+            for name in ("msbwt.npy", "offsets.npy", "seqs.npy"):
+                (clean / name).write_bytes(name.encode("ascii"))
+                (resumed / name).write_bytes(name.encode("ascii"))
+            clean_tree = compression_milestone2.inventory(str(clean))
+            resumed_tree = compression_milestone2.inventory(str(resumed))
+            with self.assertRaises(RuntimeError):
+                compression_milestone2.assert_r2_relationship(
+                    resumed_tree, clean_tree, case_config
+                )
+            (clean / "backup.256.npy").write_bytes(b"backup")
+            clean_tree = compression_milestone2.inventory(str(clean))
+            relationship = compression_milestone2.assert_r2_relationship(
+                resumed_tree, clean_tree, case_config
+            )
+            self.assertTrue(relationship["clean_retains_backup"])
+            self.assertTrue(relationship["recovered_removes_backup"])
+            self.assertTrue(relationship["no_other_divergence"])
+            self.assertTrue(relationship["common_files_equal"])
+            self.assertEqual(relationship["clean_file_set"], [
+                "backup.256.npy", "msbwt.npy", "offsets.npy", "seqs.npy"
+            ])
+            self.assertEqual(relationship["recovered_file_set"], [
+                "msbwt.npy", "offsets.npy", "seqs.npy"
+            ])
+
+            # recovered build must not retain the backup
+            (resumed / "backup.256.npy").write_bytes(b"backup")
+            resumed_tree = compression_milestone2.inventory(str(resumed))
+            with self.assertRaises(RuntimeError):
+                compression_milestone2.assert_r2_relationship(
+                    resumed_tree, clean_tree, case_config
+                )
+            (resumed / "backup.256.npy").unlink()
+
+            # clean build must not lose the backup
+            clean_no_backup = compression_milestone2.inventory(str(clean))
+            del clean_no_backup["files"][:]
+            clean_no_backup["files"] = [
+                item for item in compression_milestone2.inventory(str(clean))["files"]
+                if item["path"] != "backup.256.npy"
+            ]
+            with self.assertRaises(RuntimeError):
+                compression_milestone2.assert_r2_relationship(
+                    resumed_tree, clean_no_backup, case_config
+                )
+
+            # unexplained extra file must be rejected
+            (resumed / "surprise.txt").write_bytes(b"x")
+            resumed_tree = compression_milestone2.inventory(str(resumed))
+            with self.assertRaises(RuntimeError):
+                compression_milestone2.assert_r2_relationship(
+                    resumed_tree, clean_tree, case_config
+                )
+            (resumed / "surprise.txt").unlink()
+
+            # common file byte difference must be rejected
+            (resumed / "msbwt.npy").write_bytes(b"different")
+            resumed_tree = compression_milestone2.inventory(str(resumed))
+            with self.assertRaises(RuntimeError):
+                compression_milestone2.assert_r2_relationship(
+                    resumed_tree, clean_tree, case_config
+            )
 
     def test_tree_compare_reports_added_removed_and_changed(self) -> None:
         with writable_temporary_directory() as temporary:
