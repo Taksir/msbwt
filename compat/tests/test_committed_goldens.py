@@ -50,6 +50,7 @@ PROFILE_PATH = (
 )
 FIXTURE_MANIFEST_PATH = REPOSITORY_ROOT / "compat" / "fixtures" / "synthetic" / "fixture-manifest.json"
 LOCK_ROOT = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environment" / "wsl" / "locks"
+RECONSTRUCTION_SCRIPT = LOCK_ROOT.parent / "reconstruct-py27-late.sh"
 
 
 def load_json(path):
@@ -58,6 +59,22 @@ def load_json(path):
 
 
 class CommittedGoldenTests(unittest.TestCase):
+    def test_reconstruction_bootstraps_locked_pip_before_full_wheel_lock(self):
+        script = RECONSTRUCTION_SCRIPT.read_text(encoding="utf-8")
+        bootstrap = script.index('expected_filename = \'pip-20.3.4-py2.py3-none-any.whl\'')
+        version_gate = script.index('PIP_VERSION_OUTPUT=$("$PREFIX/bin/python" -m pip --version)')
+        full_lock = script.index('--require-hashes --upgrade -r "$WHEEL_LOCK"')
+
+        self.assertLess(bootstrap, version_gate)
+        self.assertLess(version_gate, full_lock)
+        self.assertIn('cd "$WORK_DIR"', script)
+        self.assertIn("unset PYTHONHOME PYTHONPATH PYTHONUSERBASE", script)
+        self.assertIn("export PYTHONNOUSERSITE=1", script)
+        self.assertIn("export PIP_CONFIG_FILE=/dev/null", script)
+        self.assertIn("curl --disable --fail", script)
+        self.assertIn("--no-deps --only-binary=:all: --no-index --upgrade", script)
+        self.assertNotIn("217ae5161a0e08c0fb873858806e3478c9775caffce5168b50ec885e358c199d", script)
+
     def test_environment_locks_match_verified_profile(self):
         profile = load_json(PROFILE_PATH)
         conda_lock = load_json(LOCK_ROOT / (PROFILE_ID + "-conda-sha256.json"))
