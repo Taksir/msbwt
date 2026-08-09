@@ -1,0 +1,17 @@
+{
+  "build_argv": [
+    "setup.py",
+    "build_ext",
+    "--inplace"
+  ],
+  "committed_generated_c_sha256": "9fcf5ec63751c0c3fb56476fa901761fcb218603b5b1c168c645de407343b6ea",
+  "cython_version": "0.29.36",
+  "cythonize_source": "from Cython.Build import cythonize; import numpy; cythonize('MUSCython/GenericMerge.pyx', include_path=[numpy.get_include()], force=True)",
+  "frozen_manifest": "frozen-source.sha256",
+  "oracle_class": "secondary-regenerated-source",
+  "pyx_sha256_after": "fe8b699c73a0e671b63cbbe7f2eeba941b91a321156a02df44bf0e010cedce87",
+  "pyx_sha256_before": "fe8b699c73a0e671b63cbbe7f2eeba941b91a321156a02df44bf0e010cedce87",
+  "pyx_unchanged": true,
+  "regenerated_c_different_from_committed": true,
+  "regenerated_c_sha256": "3116532cb2eeaab0ccfb8a32901b5bee83aabe95a8d34aad878a2d48c03b724c"
+}

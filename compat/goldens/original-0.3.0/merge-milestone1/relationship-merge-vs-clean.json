@@ -1,0 +1,94 @@
+{
+  "clean_primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+  "committed_golden_primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+  "format": "msbwt-legacy-merge-milestone1-relationship-merge-vs-clean-v1",
+  "input_side_effects": {
+    "input_a": [
+      "fmIndex.npy",
+      "totalCounts.npy"
+    ],
+    "input_b": [
+      "fmIndex.npy",
+      "totalCounts.npy"
+    ]
+  },
+  "interleave": {
+    "dtype": "|u1",
+    "sha256": "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6",
+    "shape": [
+      7
+    ],
+    "shape_literal": "(7,)"
+  },
+  "merged_equals_clean_whole_file": true,
+  "merged_equals_committed_golden_whole_file": true,
+  "merged_primary": {
+    "dtype": "|u1",
+    "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+    "shape": [
+      48
+    ],
+    "shape_literal": "(48L,)"
+  },
+  "merged_primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+  "oracle_class": "secondary-regenerated-source",
+  "output_files": [
+    "inter0.npy",
+    "msbwt.npy"
+  ],
+  "promoted_artifact_equals_committed_golden_whole_file": true,
+  "run_a_inputs": {
+    "clean": {
+      "dtype": "|u1",
+      "header_length": 118,
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48L,), }                                                          ",
+      "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+      "payload_size": 48,
+      "sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+      "shape": [
+        48
+      ],
+      "shape_literal": "(48L,)",
+      "size": 176,
+      "version": [
+        1,
+        0
+      ]
+    },
+    "input_a": {
+      "dtype": "|u1",
+      "header_length": 118,
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (24L,), }                                                          ",
+      "payload_sha256": "03ad79575d8bb793ff10796eb678101b67bd8bcae89cdd7aac8c1b1b724742ff",
+      "payload_size": 24,
+      "sha256": "e277c7e5c529808c230fb9dae61626a24eeddad54df2f38e22357a12520f69a1",
+      "shape": [
+        24
+      ],
+      "shape_literal": "(24L,)",
+      "size": 152,
+      "version": [
+        1,
+        0
+      ]
+    },
+    "input_b": {
+      "dtype": "|u1",
+      "header_length": 118,
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (24L,), }                                                          ",
+      "payload_sha256": "0de0ad12b21ffa120a371c1f2d02e22b697396092c39eed12ce3178859ce4c13",
+      "payload_size": 24,
+      "sha256": "15f40b98ce3310dfe71c15c34509075e68a271bcc93b125b7005cd2b8f82ff08",
+      "shape": [
+        24
+      ],
+      "shape_literal": "(24L,)",
+      "size": 152,
+      "version": [
+        1,
+        0
+      ]
+    }
+  },
+  "status": "passed"
+}

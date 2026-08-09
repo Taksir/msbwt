@@ -1,0 +1,363 @@
+{
+  "backward_counts_valid": true,
+  "decoded_bwt": "ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$",
+  "expected_symbol_counts": {
+    "$": 8,
+    "A": 9,
+    "C": 9,
+    "G": 9,
+    "N": 4,
+    "T": 9
+  },
+  "format": "msbwt-legacy-merge-milestone1-relationship-independent-oracle-v1",
+  "interleave_verification": {
+    "blocks": [
+      {
+        "end": 1,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "$AAAAA",
+        "start": 0,
+        "zeros": 1
+      },
+      {
+        "end": 4,
+        "expected_bit": null,
+        "matched": true,
+        "ones": 1,
+        "rotation": "$ACGTN",
+        "start": 1,
+        "zeros": 2
+      },
+      {
+        "end": 5,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "$CCCCC",
+        "start": 4,
+        "zeros": 0
+      },
+      {
+        "end": 6,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "$GGGGG",
+        "start": 5,
+        "zeros": 0
+      },
+      {
+        "end": 7,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "$NACGT",
+        "start": 6,
+        "zeros": 1
+      },
+      {
+        "end": 8,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "$TTTTT",
+        "start": 7,
+        "zeros": 0
+      },
+      {
+        "end": 9,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "A$AAAA",
+        "start": 8,
+        "zeros": 1
+      },
+      {
+        "end": 10,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "AA$AAA",
+        "start": 9,
+        "zeros": 1
+      },
+      {
+        "end": 11,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "AAA$AA",
+        "start": 10,
+        "zeros": 1
+      },
+      {
+        "end": 12,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "AAAA$A",
+        "start": 11,
+        "zeros": 1
+      },
+      {
+        "end": 13,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "AAAAA$",
+        "start": 12,
+        "zeros": 1
+      },
+      {
+        "end": 14,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "ACGT$N",
+        "start": 13,
+        "zeros": 1
+      },
+      {
+        "end": 17,
+        "expected_bit": null,
+        "matched": true,
+        "ones": 1,
+        "rotation": "ACGTN$",
+        "start": 14,
+        "zeros": 2
+      },
+      {
+        "end": 18,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "C$CCCC",
+        "start": 17,
+        "zeros": 0
+      },
+      {
+        "end": 19,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "CC$CCC",
+        "start": 18,
+        "zeros": 0
+      },
+      {
+        "end": 20,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "CCC$CC",
+        "start": 19,
+        "zeros": 0
+      },
+      {
+        "end": 21,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "CCCC$C",
+        "start": 20,
+        "zeros": 0
+      },
+      {
+        "end": 22,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "CCCCC$",
+        "start": 21,
+        "zeros": 0
+      },
+      {
+        "end": 23,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "CGT$NA",
+        "start": 22,
+        "zeros": 1
+      },
+      {
+        "end": 26,
+        "expected_bit": null,
+        "matched": true,
+        "ones": 1,
+        "rotation": "CGTN$A",
+        "start": 23,
+        "zeros": 2
+      },
+      {
+        "end": 27,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "G$GGGG",
+        "start": 26,
+        "zeros": 0
+      },
+      {
+        "end": 28,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "GG$GGG",
+        "start": 27,
+        "zeros": 0
+      },
+      {
+        "end": 29,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "GGG$GG",
+        "start": 28,
+        "zeros": 0
+      },
+      {
+        "end": 30,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "GGGG$G",
+        "start": 29,
+        "zeros": 0
+      },
+      {
+        "end": 31,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "GGGGG$",
+        "start": 30,
+        "zeros": 0
+      },
+      {
+        "end": 32,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "GT$NAC",
+        "start": 31,
+        "zeros": 1
+      },
+      {
+        "end": 35,
+        "expected_bit": null,
+        "matched": true,
+        "ones": 1,
+        "rotation": "GTN$AC",
+        "start": 32,
+        "zeros": 2
+      },
+      {
+        "end": 38,
+        "expected_bit": null,
+        "matched": true,
+        "ones": 1,
+        "rotation": "N$ACGT",
+        "start": 35,
+        "zeros": 2
+      },
+      {
+        "end": 39,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "NACGT$",
+        "start": 38,
+        "zeros": 1
+      },
+      {
+        "end": 40,
+        "expected_bit": 0,
+        "matched": true,
+        "ones": 0,
+        "rotation": "T$NACG",
+        "start": 39,
+        "zeros": 1
+      },
+      {
+        "end": 41,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "T$TTTT",
+        "start": 40,
+        "zeros": 0
+      },
+      {
+        "end": 44,
+        "expected_bit": null,
+        "matched": true,
+        "ones": 1,
+        "rotation": "TN$ACG",
+        "start": 41,
+        "zeros": 2
+      },
+      {
+        "end": 45,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "TT$TTT",
+        "start": 44,
+        "zeros": 0
+      },
+      {
+        "end": 46,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "TTT$TT",
+        "start": 45,
+        "zeros": 0
+      },
+      {
+        "end": 47,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "TTTT$T",
+        "start": 46,
+        "zeros": 0
+      },
+      {
+        "end": 48,
+        "expected_bit": 1,
+        "matched": true,
+        "ones": 1,
+        "rotation": "TTTTT$",
+        "start": 47,
+        "zeros": 0
+      }
+    ],
+    "one_count": 24,
+    "tied_positions_count": 18,
+    "unambiguous_mismatches": 0,
+    "unique_a_positions": 12,
+    "unique_b_positions": 18,
+    "zero_count": 24
+  },
+  "lf_recovery_matches": true,
+  "merged_payload_equals_oracle_prediction": true,
+  "merged_payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+  "oracle_class": "secondary-regenerated-source",
+  "oracle_tool": "compat/tools/bwt_oracle.py",
+  "predicted_payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+  "status": "passed",
+  "symbol_counts": {
+    "$": 8,
+    "A": 9,
+    "C": 9,
+    "G": 9,
+    "N": 4,
+    "T": 9
+  },
+  "symbol_counts_match": true
+}

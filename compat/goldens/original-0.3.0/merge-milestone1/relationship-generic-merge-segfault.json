@@ -1,0 +1,27 @@
+{
+  "classification": "LEGACY GENERATED-CODE DEFECT",
+  "committed_generated_c": "MUSCython/GenericMerge.c",
+  "committed_generated_c_provenance": "Cython 0.23.4",
+  "committed_generated_c_sha256": "9fcf5ec63751c0c3fb56476fa901761fcb218603b5b1c168c645de407343b6ea",
+  "deterministic_across_runs": true,
+  "exit_code": -11,
+  "format": "msbwt-legacy-merge-milestone1-relationship-generic-merge-segfault-v1",
+  "input_side_effects": [
+    "fmIndex.npy",
+    "totalCounts.npy"
+  ],
+  "invocation": [
+    "merge",
+    "-p",
+    "2",
+    "DESTINATION",
+    "INPUT_A",
+    "INPUT_B"
+  ],
+  "note": "The verified-profile build compiles the committed generated C of the 40-file frozen projection; this segfault is historical failure evidence and is NOT the semantic behavior modern2 must reproduce. Successful semantics use the secondary regenerated-source oracle.",
+  "oracle_class": "historical-generated-c",
+  "output_files": [],
+  "signal": "SIGSEGV",
+  "status": "preserved-failure-evidence",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,51 @@
+{
+  "canonical_runs": [
+    "run-a",
+    "run-b"
+  ],
+  "clean_committed_golden": {
+    "path": "uniform-multifile/py27-late-05a7d6d83862/pyx-historical-cython/build/artifacts",
+    "primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f"
+  },
+  "format": "msbwt-legacy-merge-milestone1-profile-provenance-v1",
+  "interleave": {
+    "dtype": "|u1",
+    "path": "secondary-regenerated-source/artifacts/inter0.npy",
+    "sha256": "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6",
+    "shape": [
+      7
+    ]
+  },
+  "legacy_defects": {
+    "generated_code": {
+      "classification": "LEGACY GENERATED-CODE DEFECT",
+      "committed_generated_c": "MUSCython/GenericMerge.c",
+      "committed_generated_c_sha256": "9fcf5ec63751c0c3fb56476fa901761fcb218603b5b1c168c645de407343b6ea",
+      "merge_p2_exit": -11,
+      "preserved_as": "relationship-generic-merge-segfault.json",
+      "provenance": "Cython 0.23.4",
+      "signal": "SIGSEGV",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source_bug": {
+      "classification": "LEGACY SOURCE BUG",
+      "merge_p1_exception": "UnboundLocalError: local variable 'numProcs' referenced before assignment",
+      "preserved_as": "relationship-merge-p1-unboundlocalerror.json",
+      "stderr_sha256": "186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c"
+    }
+  },
+  "merged_primary": {
+    "dtype": "|u1",
+    "path": "secondary-regenerated-source/artifacts/msbwt.npy",
+    "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+    "sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "shape": [
+      48
+    ],
+    "shape_literal": "(48L,)"
+  },
+  "oracle_class": "secondary-regenerated-source",
+  "profile_id": "py27-late-05a7d6d83862",
+  "route": "pyx-historical-cython",
+  "source_commit": "7503346ec072ddb89520db86fef85569a9ba093a"
+}

@@ -1,0 +1,220 @@
+{
+  "cli_query": {
+    "count_stdout_sha256": "81b4bef38a779e0d06cfc7d49653218fd5438481496d3dc4a5be2234c161bad2",
+    "count_text": "3",
+    "dump_stdout_sha256": "4637962d3a37f257829eb5cee366b8258df7b3619762b2c3ac000135a4c5565d",
+    "dumped_strings": [
+      "ACGTN",
+      "ACGTN",
+      "ACGTN"
+    ]
+  },
+  "derived_index_classification": {
+    "lazy_deletable_regenerable": [
+      "totalCounts.npy",
+      "fmIndex.npy"
+    ],
+    "merge_provenance_not_reader_required": [
+      "inter0.npy"
+    ],
+    "primary_persistent": [
+      "msbwt.npy"
+    ]
+  },
+  "format": "msbwt-legacy-merge-milestone1-relationship-reader-v1",
+  "oracle_class": "secondary-regenerated-source",
+  "reader_smoke": {
+    "actual_queries": {
+      "A": 9,
+      "AA": 4,
+      "AAA": 3,
+      "AAAA": 2,
+      "AAAAA": 1,
+      "AAAAAA": 0,
+      "AC": 4,
+      "ACG": 4,
+      "ACGT": 4,
+      "ACGTN": 3,
+      "C": 9,
+      "CC": 4,
+      "CCC": 3,
+      "CCCC": 2,
+      "CCCCC": 1,
+      "CG": 4,
+      "CGT": 4,
+      "CGTN": 3,
+      "G": 9,
+      "GG": 4,
+      "GGG": 3,
+      "GGGG": 2,
+      "GGGGG": 1,
+      "GT": 4,
+      "GTN": 3,
+      "N": 4,
+      "NA": 1,
+      "NAC": 1,
+      "NACG": 1,
+      "NACGT": 1,
+      "T": 9,
+      "TN": 3,
+      "TT": 4,
+      "TTT": 3,
+      "TTTT": 2,
+      "TTTTT": 1
+    },
+    "classification": {
+      "derived_indexes": {
+        "deleted_for_regeneration": [
+          "fmIndex.npy",
+          "totalCounts.npy"
+        ],
+        "first_load_created": [
+          "fmIndex.npy",
+          "totalCounts.npy"
+        ],
+        "inventory_after_regeneration": {
+          "fmIndex.npy": {
+            "sha256": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+            "size": 176
+          },
+          "inter0.npy": {
+            "sha256": "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6",
+            "size": 135
+          },
+          "msbwt.npy": {
+            "sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+            "size": 176
+          },
+          "totalCounts.npy": {
+            "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+            "size": 176
+          }
+        },
+        "regenerated": [
+          "fmIndex.npy",
+          "totalCounts.npy"
+        ],
+        "regenerated_bytes_identical_to_first_load": true,
+        "reload": {
+          "dollar_count": 8,
+          "reader_class": "ByteBWT",
+          "total_size": 48
+        }
+      },
+      "first_load_inventory": {
+        "fmIndex.npy": {
+          "sha256": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+          "size": 176
+        },
+        "inter0.npy": {
+          "sha256": "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6",
+          "size": 135
+        },
+        "msbwt.npy": {
+          "sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+          "size": 176
+        },
+        "totalCounts.npy": {
+          "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+          "size": 176
+        }
+      },
+      "interleave": {
+        "inventory_after_removal": {
+          "fmIndex.npy": {
+            "sha256": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+            "size": 176
+          },
+          "msbwt.npy": {
+            "sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+            "size": 176
+          },
+          "totalCounts.npy": {
+            "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+            "size": 176
+          }
+        },
+        "present": true,
+        "reload_after_removal": {
+          "dollar_count": 8,
+          "reader_class": "ByteBWT",
+          "total_size": 48
+        },
+        "removed": true,
+        "required_by_reader": false
+      }
+    },
+    "dollar_count": 8,
+    "expected_queries": {
+      "A": 9,
+      "AA": 4,
+      "AAA": 3,
+      "AAAA": 2,
+      "AAAAA": 1,
+      "AAAAAA": 0,
+      "AC": 4,
+      "ACG": 4,
+      "ACGT": 4,
+      "ACGTN": 3,
+      "C": 9,
+      "CC": 4,
+      "CCC": 3,
+      "CCCC": 2,
+      "CCCCC": 1,
+      "CG": 4,
+      "CGT": 4,
+      "CGTN": 3,
+      "G": 9,
+      "GG": 4,
+      "GGG": 3,
+      "GGGG": 2,
+      "GGGGG": 1,
+      "GT": 4,
+      "GTN": 3,
+      "N": 4,
+      "NA": 1,
+      "NAC": 1,
+      "NACG": 1,
+      "NACGT": 1,
+      "T": 9,
+      "TN": 3,
+      "TT": 4,
+      "TTT": 3,
+      "TTTT": 2,
+      "TTTTT": 1
+    },
+    "queries_match": true,
+    "reader_class": "ByteBWT",
+    "recovered_by_dollar_id": [
+      "$AAAAA",
+      "$ACGTN",
+      "$ACGTN",
+      "$ACGTN",
+      "$CCCCC",
+      "$GGGGG",
+      "$NACGT",
+      "$TTTTT"
+    ],
+    "recovery_match": true,
+    "side_effects": {
+      "added": [
+        {
+          "path": "fmIndex.npy",
+          "sha256": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+          "size": 176
+        },
+        {
+          "path": "totalCounts.npy",
+          "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+          "size": 176
+        }
+      ],
+      "changed": [],
+      "removed": [
+        "inter0.npy"
+      ]
+    },
+    "total_size": 48
+  },
+  "status": "passed"
+}

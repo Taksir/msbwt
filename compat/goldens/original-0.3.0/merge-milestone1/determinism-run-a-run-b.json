@@ -1,0 +1,60 @@
+{
+  "all_gates_passed": true,
+  "determinism": {
+    "clean": {
+      "output_identical": true,
+      "preprocess_identical": true,
+      "primary_identical": true
+    },
+    "input_a": {
+      "output_identical": true,
+      "preprocess_identical": true,
+      "primary_identical": true
+    },
+    "input_b": {
+      "output_identical": true,
+      "preprocess_identical": true,
+      "primary_identical": true
+    },
+    "merged": {
+      "input_a_after_identical": true,
+      "input_a_before_identical": true,
+      "input_a_side_effects_identical": true,
+      "input_b_after_identical": true,
+      "input_b_before_identical": true,
+      "input_b_side_effects_identical": true,
+      "interleave_identical": true,
+      "output_identical": true,
+      "primary_identical": true
+    },
+    "nameerror": {
+      "exit_code_identical": true,
+      "output_directory_created": true,
+      "output_files_identical": true,
+      "sanitized_stderr_identical": true,
+      "stderr_sha256_identical": true
+    },
+    "reader": {
+      "cli_query_count_identical": true,
+      "cli_query_dumped_identical": true,
+      "reader_class_identical": true,
+      "reader_smoke_queries_identical": true,
+      "reader_smoke_recovery_identical": true,
+      "reader_smoke_total_size_identical": true
+    },
+    "segfault": {
+      "exit_code_identical": true,
+      "input_a_side_effects_identical": true,
+      "input_b_side_effects_identical": true,
+      "output_files_identical": true,
+      "signal_identical": true,
+      "stderr_sha256_identical": true
+    }
+  },
+  "format": "msbwt-legacy-merge-milestone1-determinism-v1",
+  "oracle_class": "secondary-regenerated-source",
+  "runs": [
+    "run-a",
+    "run-b"
+  ]
+}

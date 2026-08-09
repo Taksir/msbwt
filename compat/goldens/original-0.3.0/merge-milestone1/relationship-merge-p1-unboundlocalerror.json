@@ -1,0 +1,23 @@
+{
+  "classification": "LEGACY SOURCE BUG",
+  "deterministic_across_runs": true,
+  "exception": "UnboundLocalError: local variable 'numProcs' referenced before assignment",
+  "exit_code": 1,
+  "format": "msbwt-legacy-merge-milestone1-relationship-merge-p1-unboundlocalerror-v1",
+  "inputs_unchanged": true,
+  "invocation": [
+    "merge",
+    "-p",
+    "1",
+    "DESTINATION",
+    "INPUT_A",
+    "INPUT_B"
+  ],
+  "note": "Frozen source is not repaired. modern2 is explicitly permitted to FIX this as a documented correctness/CLI compatibility deviation, making both merge -p 1 and merge -p 2 functional while matching the characterized successful merge semantics.",
+  "oracle_class": "secondary-regenerated-source",
+  "output_directory_created": true,
+  "output_files": [],
+  "source_location": "MUS/CommandLineInterface.py:193",
+  "status": "preserved-failure-evidence",
+  "stderr_sha256": "186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c"
+}
