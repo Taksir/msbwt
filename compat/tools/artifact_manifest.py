@@ -559,5 +559,173 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     return 2  # pragma: no cover - argparse.error raises SystemExit
 
 
+# ---------------------------------------------------------------------------
+# Frozen RLE safe-decoding (host-side Python 3; no NumPy/pickle/object arrays)
+# ---------------------------------------------------------------------------
+
+RLE_SYMBOL_ORDER = "$ACGNT"
+
+
+def _rle_byte_value(value: Any) -> int:
+    return value if isinstance(value, int) else ord(value)
+
+
+def decode_rle_payload(payload: bytes) -> Dict[str, Any]:
+    """Decode a frozen ``|u1`` RLE payload without loading a NumPy array.
+
+    Low three bits index ``RLE_SYMBOL_ORDER`` (``$ACGNT``); the upper five bits
+    of consecutive same-symbol bytes are little-endian base-32 run-length
+    digits.  The committed uncompressed ``msbwt.npy`` stores the BWT as numeric
+    symbol indices, so ``decoded_bytes`` carries those indices and
+    ``decoded_sha256`` is computed over them.  ``decoded_symbols`` is the ASCII
+    rendering for human-readable records.
+    """
+    runs: List[Dict[str, Any]] = []
+    decoded_bytes = bytearray()
+    decoded_symbols = bytearray()
+    position = 0
+    index = 0
+    length = len(payload)
+    while index < length:
+        symbol_index = _rle_byte_value(payload[index]) & 0x07
+        if symbol_index >= len(RLE_SYMBOL_ORDER):
+            raise ManifestError(
+                "RLE payload encodes an unknown symbol index: {}".format(symbol_index)
+            )
+        count = 0
+        offset = 0
+        digit_values: List[int] = []
+        while (index + offset) < length and (
+            _rle_byte_value(payload[index + offset]) & 0x07
+        ) == symbol_index:
+            digit = (_rle_byte_value(payload[index + offset]) >> 3) & 0x1F
+            digit_values.append(digit)
+            count += digit * (32 ** offset)
+            offset += 1
+        if count <= 0:
+            raise ManifestError(
+                "RLE payload encodes a non-positive run length: {}".format(count)
+            )
+        symbol = RLE_SYMBOL_ORDER[symbol_index]
+        start = position
+        end = position + count
+        runs.append(
+            {
+                "symbol_index": symbol_index,
+                "symbol": symbol,
+                "count": count,
+                "start": start,
+                "end": end,
+                "digits": offset,
+                "digit_values": digit_values,
+            }
+        )
+        decoded_bytes.extend(bytearray([symbol_index]) * count)
+        decoded_symbols += symbol.encode("ascii") * count
+        position = end
+        index += offset
+    return {
+        "runs": runs,
+        "run_count": len(runs),
+        "decoded_bytes": bytes(decoded_bytes),
+        "decoded_sha256": sha256_bytes(bytes(decoded_bytes)),
+        "decoded_length": len(decoded_bytes),
+        "decoded_symbols": decoded_symbols.decode("ascii"),
+    }
+
+
+def runs_from_byte_bwt(bwt_bytes: bytes) -> List[Dict[str, Any]]:
+    """Group a committed uncompressed BWT (numeric indices) into runs."""
+    runs: List[Dict[str, Any]] = []
+    position = 0
+    index = 0
+    length = len(bwt_bytes)
+    while index < length:
+        symbol_index = _rle_byte_value(bwt_bytes[index])
+        offset = 0
+        while (index + offset) < length and _rle_byte_value(bwt_bytes[index + offset]) == symbol_index:
+            offset += 1
+        count = offset
+        symbol = RLE_SYMBOL_ORDER[symbol_index] if symbol_index < len(RLE_SYMBOL_ORDER) else "?"
+        runs.append(
+            {
+                "symbol_index": symbol_index,
+                "symbol": symbol,
+                "count": count,
+                "start": position,
+                "end": position + count,
+                "digits": 0,
+                "digit_values": [],
+            }
+        )
+        position += count
+        index += count
+    return runs
+
+
+def run_signature(runs: Sequence[Mapping[str, Any]]) -> List[List[int]]:
+    """Semantic run boundary/sequence view, ignoring RLE byte-digit encoding."""
+    return [[run["symbol"], run["count"], run["start"], run["end"]] for run in runs]
+
+
+def extract_shape_literal(header_text: str) -> str:
+    """Return the raw NumPy shape literal as persisted, preserving ``L`` suffixes."""
+    marker = "'shape': "
+    index = header_text.find(marker)
+    if index < 0:
+        raise ManifestError("NumPy header lacks a shape entry: {!r}".format(header_text))
+    index += len(marker)
+    depth = 0
+    start = index
+    for position in range(index, len(header_text)):
+        character = header_text[position]
+        if character == "(":
+            depth += 1
+        elif character == ")":
+            depth -= 1
+            if depth == 0:
+                return header_text[start : position + 1]
+    raise ManifestError("NumPy header shape literal is unbalanced: {!r}".format(header_text))
+
+
+def _read_file_bytes(path: Path, offset: int) -> bytes:
+    with path.open("rb") as handle:
+        handle.seek(offset)
+        return handle.read()
+
+
+def decode_npy_rle_primary(path: os.PathLike[str] | str) -> Dict[str, Any]:
+    """Safe-decode a ``|u1`` RLE ``comp_msbwt.npy`` primary without NumPy.
+
+    Combines NP1 header parsing and the independent RLE decoder into one
+    JSON-safe report: payload hash, every encoded digit, run boundaries,
+    symbol/count pairs, decoded length, decoded-BWT hash, decoded symbols,
+    raw shape literal, dtype, and whole-file hash.
+    """
+    path_obj = Path(path)
+    parsed = parse_npy_header(path_obj)
+    if parsed["dtype_descriptor"] != "|u1":
+        raise ManifestError("RLE primary dtype is not |u1: {!r}".format(parsed["dtype_descriptor"]))
+    decoded = decode_rle_payload(_read_file_bytes(path_obj, parsed["payload_offset"]))
+    record = {
+        "dtype": parsed["dtype_descriptor"],
+        "shape": parsed["shape"],
+        "shape_literal": extract_shape_literal(parsed["header_text"]),
+        "header_text": parsed["header_text"].rstrip("\n"),
+        "header_length": parsed["header_length"],
+        "version": parsed["version"],
+        "payload_sha256": parsed["payload_sha256"],
+        "payload_size": parsed["payload_size"],
+        "whole_sha256": sha256_file(path_obj),
+        "size": path_obj.stat().st_size,
+    }
+    record["runs"] = decoded["runs"]
+    record["run_count"] = decoded["run_count"]
+    record["decoded_length"] = decoded["decoded_length"]
+    record["decoded_sha256"] = decoded["decoded_sha256"]
+    record["decoded_bwt"] = decoded["decoded_symbols"]
+    return record
+
+
 if __name__ == "__main__":
     raise SystemExit(main())

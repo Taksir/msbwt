@@ -1,0 +1,1 @@
+{"after":{"files":[],"tree_sha256":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},"argv":["cffq","-p","1","-c","N_UNSUPPORTED","nonuniform.fastq"],"before":null,"case":"nonuniform-cffq","comp_msbwt_exists":false,"exit_code":0,"format":"msbwt-legacy-unsupported-record-v1","profile_id":"py27-late-05a7d6d83862","route":"pyx-historical-cython"}

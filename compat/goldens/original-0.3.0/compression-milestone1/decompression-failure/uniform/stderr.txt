@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "MUS/CommandLineInterface.py", line 175, in mainRun
+    MSBWTGen.decompressBWT(args.srcDir, args.dstDir, args.numProcesses, logger)
+  File "MUS/MSBWTGen.py", line 1203, in decompressBWT
+    rets.append(decompressBWTPoolProcess(tup))
+  File "MUS/MSBWTGen.py", line 1222, in decompressBWTPoolProcess
+    outputBwt[startIndex:endIndex] = msbwt.getBWTRange(startIndex, endIndex)   
+  File "MUS/MultiStringBWT.py", line 608, in getBWTRange
+    return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]
+  File "MUS/MultiStringBWT.py", line 662, in decompressBlocks
+    ret[s:s+counts[lInd]] = letters[lInd]
+TypeError: slice indices must be integers or None or have an __index__ method
