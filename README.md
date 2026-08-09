@@ -1,148 +1,302 @@
-Introduction
-============
+# MSBWT Modernization
 
-MSBWT is a package for combining strings from sequencing into a data structure known as the multi-string BWT (MSBWT).  
-This structure allows for querying a k-mer in O(k) time regardless of how many strings are present in the MSBWT.  This
-particular package was created originally for merging MSBWTs after creation.  In short, this allows for multiple data
-sets to be combined into a single structure which allows for queries over both data sets simultaneously.
+> **Status: active modernization work — not production-ready and not yet released.**
 
-Included in this package are implementations of MSBWT creation algorithms as described by Bauer et al. in "Lightweight
-BWT construction for very large string collections" for different file types.  Furthermore, the algorithm for merging
-these MSBWTs from Holt and McMillan in "Merging of Multi-String BWTs with Applications" is also implemented.
+This repository is a modernization fork of the original [`holtjma/msbwt`](https://github.com/holtjma/msbwt) project.
 
-Currently, some rudimentary query utilities are also in place on the command line interface.  However, we recommend to 
-anyone wishing to perform some dynamic/interactive queries to use the API provided by the source code.
+MSBWT is a bioinformatics package for building, merging, compressing, decompressing, and querying **multi-string Burrows-Wheeler transforms (MSBWTs)** from sequencing data. The original implementation was written for Python 2.7 and includes substantial Cython code. The original package supports creation and merging of MSBWTs and k-mer querying over the resulting data structure.
 
-For detailed usage, please type after installation:
+The purpose of this fork is **not to redesign MSBWT from scratch**. The goal is to preserve the original algorithms, command-line interface, public APIs, import paths, and on-disk MSBWT formats as closely as possible while making the project maintainable on modern systems.
 
-	msbwt -h
+## Project goals
 
-Wiki Pages
-==========
+The intended end state is two separately installable distributions:
 
-Wiki pages for common use cases of the MSBWT can be found on our github page: https://github.com/holtjma/msbwt/wiki
+- **`msbwt-modern2`**
+  - Python 2.7
+  - Cython 3.0.x
+  - newest practical dependencies that still support Python 2.7
+  - intended mainly for legacy compatibility and reproducibility
 
-References
-==========
+- **`msbwt-modern3`**
+  - current stable Python 3
+  - current stable Cython, NumPy, pysam, and modern build tooling
+  - intended to become the primary maintained implementation
 
-Holt, James, and Leonard McMillan. "Merging of multi-string BWTs with applications." Bioinformatics (2014): btu584.
+Both distributions are intended to preserve, wherever technically possible:
 
-Holt, James, and Leonard McMillan. "Constructing burrows-wheeler transforms of large string collections via merging." 
-Proceedings of the 5th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics. ACM, 2014.
+- the existing `msbwt` CLI commands and options;
+- existing public API behavior;
+- existing `MUS` and `MUSCython` import paths;
+- readability of datasets produced by the original implementation;
+- readability of modern datasets by older implementations where the format permits it;
+- bit-for-bit identical persistent output files for unchanged behavior.
 
-System Requirements
-===================
+Correctness and security take precedence over preserving known bugs. Any intentional behavioral or format deviation will be documented.
 
-Msbwt and its modules have been tested under Python 2.7.  The package is distributed with both Cython and the 
-corresponding C files.  We recommend using installing Cython prior to installing this package.
+## Current status
 
-Two Python modules are required to run the code.
+**Estimated overall modernization progress: ~30–35%.**
 
-[pysam] - Tested with pysam 0.7.4
+This percentage is only a project-planning estimate, not a release-readiness score. The repository audit and the first authoritative legacy baseline are complete, but the actual `modern2` and `modern3` implementation ports have **not started yet**. The current handoff explicitly records that no modern2 or modern3 port has begun.
 
-As a wrapper of Samtools, the pysam module facilitates the manipulation of SAM/BAM files in Python. Its latest 
-package can be downloaded from:
+### Completed
 
-	http://code.google.com/p/pysam/
+- [x] Forked and preserved the original Git history and attribution.
+- [x] Audited the Python, Cython, build, CLI, API, persistence, dependency, platform, and security surfaces.
+- [x] Identified the public CLI/API compatibility surface.
+- [x] Documented persistent MSBWT file formats and legacy inconsistencies.
+- [x] Designed a monorepo architecture for separate `modern2` and `modern3` distributions with shared compatibility tests.
+- [x] Created deterministic synthetic FASTQ fixtures.
+- [x] Created safe binary/NumPy artifact-manifest tooling.
+- [x] Reconstructed a genuine CPython 2.7 legacy oracle under WSL2 without modifying the frozen original implementation.
+- [x] Locked the verified legacy environment using exact package/artifact hashes.
+- [x] Verified all 40 frozen implementation/package files against original commit `7503346`.
+- [x] Generated and committed genuine Python-2 golden outputs for the first uniform, uncompressed construction path.
+- [x] Repeated the oracle build independently and confirmed bit-for-bit identical preprocessing and build artifacts.
+- [x] Verified that the frozen reader can load the promoted dataset and return expected query results.
+- [x] Added regression tests protecting the frozen source, fixtures, golden bytes, NumPy headers, and artifact manifests.
 
+The completed handoff records two independent successful `uniform-multifile` runs, exact environment locks, committed goldens, and a 28-test host-side verification suite.
 
-[argparse] - Tested with argparse 1.2.1
+## Verified legacy baseline
 
-The argparse module is used to parse the command line arguments of the module. It has been maintained in Python 
-Standard Library since Python 2.7.  Its latest package can be downloaded from:
+The current verified oracle profile uses:
 
-	http://code.google.com/p/argparse/
+- Ubuntu 26.04 LTS under WSL2 x86-64
+- CPython 2.7.18
+- GCC 7.3.0
+- NumPy 1.16.6
+- pysam 0.15.4
+- Cython 0.29.36
+- pip 20.3.4
+- setuptools 44.1.1
+- wheel 0.37.1
 
-[numpy] - Tested with numpy 1.10.1
+This is a **verified late-Python-2 environment**, not a claim that it exactly reproduces the dependency stack originally used by the MSBWT authors.
 
-The numpy module provide various fast numerical functions for Python.  Its latest package can be downloaded from:
+The first promoted golden case runs the original CLI:
 
-	http://www.numpy.org
+```bash
+msbwt pp -u OUTPUT uniform-a.fastq uniform-b.fastq
+msbwt cfpp -p 1 -u OUTPUT
+```
 
-Installation
-============
+Two independent runs produced identical file sets, raw NumPy headers, payload hashes, and whole-file SHA-256 values.
 
-It is recommended to use easy-install (http://packages.python.org/distribute/easy_install.html) for the 
-installation.
+For the resulting primary BWT:
 
-	easy_install msbwt
+```text
+msbwt.npy
+dtype:  |u1
+shape:  (48,)
+SHA256: dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f
+```
 
-Alternatively, users can download the tarball of source from
+A frozen-reader smoke test returned:
 
-	https://github.com/holtjma/msbwt
+```text
+ACGTN = 3
+AAAAA = 1
+CCCCC = 1
+AGCTA = 0
+```
 
-and then type:
+These values and the promoted artifact hash are part of the committed golden contract.
 
-	easy_install msbwt-<version>.tar.gz
+## What is not done yet
 
-By default, the package will be installed under the directory of Python dist-packages, and the executable of 
-msbwt can be found under '/usr/local/bin/'.
+This fork should **not** currently be treated as a finished replacement for the original MSBWT package.
 
-If you don't have permission to install it in the system-owned directory, you can install it in locally following 
-the next steps:
+Major work still remains:
 
-(1) Create a local package directory for python:
+- [ ] Verify the committed Python-2 reconstruction script from a completely fresh environment/prefix.
+- [ ] Add non-uniform FASTQ preprocessing/build goldens.
+- [ ] Add gzip FASTQ goldens.
+- [ ] Characterize compressed construction.
+- [ ] Characterize compression and decompression.
+- [ ] Characterize query/index side effects and derived index files.
+- [ ] Characterize merge behavior.
+- [ ] Characterize interruption/recovery behavior.
+- [ ] Expand API and CLI regression coverage.
+- [ ] Characterize multiprocessing and determinism across process counts.
+- [ ] Establish additional public biological fixtures.
+- [ ] Build `msbwt-modern2` using Python 2.7 + Cython 3.0.x.
+- [ ] Validate `modern2` against legacy golden outputs.
+- [ ] Build the Python 3 / modern Cython implementation.
+- [ ] Validate old-reader/new-writer and new-reader/old-writer compatibility.
+- [ ] Add native Windows support and CI.
+- [ ] Add Linux/HPC CI.
+- [ ] Add macOS support and CI where feasible.
+- [ ] Add wheel/sdist release workflows.
+- [ ] Fix confirmed correctness and security issues with documented compatibility entries.
+- [ ] Establish benchmark baselines.
+- [ ] Optimize performance only after compatibility is established.
+- [ ] Publish separately installable `msbwt-modern2` and `msbwt-modern3` releases.
 
-	mkdir -p <local_dir>
+Only the uniform uncompressed build path and a small reader smoke currently have golden coverage; nonuniform/gzip, compressed build, compression/decompression, recovery, merge, indexing, and broader API/CLI behavior remain open.
 
-(2) Add the absolute path of <local_dir> to the environment variable PYTHONPATH:
+## Next milestone
 
-	export PYTHONPATH=$PYTHONPATH:<local_dir>
+The immediate next step is **additional frozen-oracle characterization**, not source modernization.
 
-(3) Use easy_install to install the package in that directory:
+The next two synthetic cases are:
 
-	easy_install -d <local_dir> msbwt-<version>.tar.gz
+1. **Non-uniform FASTQ**
+   ```bash
+   msbwt pp OUTPUT nonuniform.fastq
+   msbwt cfpp -p 1 OUTPUT
+   ```
 
-For example, if you want to install the package under the home directory in
-a Linux system, you can type:
+2. **Gzip FASTQ**
+   ```bash
+   msbwt pp OUTPUT uniform-a.fastq.gz nonuniform.fastq.gz
+   msbwt cfpp -p 1 OUTPUT
+   ```
 
-	mkdir -p /home/$USER/.local/lib/python/dist-packages/
-	export PYTHONPATH=$PYTHONPATH:/home/$USER/.local/lib/python/dist-packages/
-	easy_install -d /home/$USER/.local/lib/python/dist-packages/ msbwt-<version>.tar.gz
+Each successful legacy case must be executed independently at least twice and produce identical retained files, whole-file hashes, raw NumPy headers, logical dtypes/shapes, and payload hashes before its outputs are promoted as authoritative goldens.
 
-After installation, msbwt will be located in '/home/$USER/.local/lib/python/dist-packages/'.
+Compression/decompression and recovery characterization follow after these cases.
 
+## Compatibility philosophy
 
-Detailed Description
-===========
+Modernization work follows several rules:
 
-The msbwt package is primarily focused on creation, merging, and querying of MSBWTs.  To perform a query, several
-data structures are useful and stored with the MSBWT.  To handle this, each MSBWT is grouped into a directory which
-contains standardized filenames.  Here is the description of what each file contains:
+1. **The original implementation is an oracle, not something to silently repair.**  
+   Existing behavior must first be characterized before changing the corresponding implementation.
 
- * seqs.npy - Contains the raw input strings in a sorted, numerical format. It can be safely deleted after msbwt.npy has been fully instantiated.
- * offsets.npy - Contains meta-data regarding seq.npy.  For strings of uniform length, this file is very small. If strings have variable size, it will be O(S) where S is the number of strings.  This file can be safely deleted after msbwt.npy has been fully instantiated.
- * about.npy - Contains information regarding the origin of the sorted strings to be stored in the MSBWT.  For example, if multiple FASTQ files are used for input, this file includes both the source file and which read it was in that file.  For paired end reads, this can be useful for finding mates. If deleted, this file is NOT recoverable from msbwt.npy.
- * msbwt.npy - Contains the full, uncompressed MSBWT.  Each symbol in the MSBWT takes one byte of space.  If deleted, the MSBWT is NOT recoverable except from comp_msbwt.npy.
- * fmIndex.npy - Contains a sampled FM-index for msbwt.npy.  This is derived from msbwt.npy and must be created for any queries to work.  If deleted, the file will be automatically re-created if a query is performed on the data set.
- * comp\_msbwt.npy - Contains the compressed MSBWT.  Each byte contains 3 bits for the symbol and 5 bits for a count. Each run is compressed into a symbol/length pairs and lengths too big for 5 bits expanded to multiple bytes such that one byte contains lengths < 32, two bytes < 32^2, three bytes < 32^3, and so on for as many bytes are necessary to store the run length.  If deleted, this file is NOT recoverable except from msbwt.npy.
- * comp\_fmIndex.npy	- Contains a sampled FM-index for comp\_msbwt.npy.  This is derived from comp\_msbwt.npy and must be created for any queries to work.  If deleted, this file will be automatically re-created if a query is performed on the data set.
- * comp\_refIndex.npy - Contains offset information for the sample FM-index.  This is derived from com\p_msbwt.npy and must be created for any queries to work.  If deleted, this file will be automatically re-created if a query if performed on the data set.
+2. **Golden outputs are immutable evidence.**  
+   A modern implementation producing different bytes is not enough reason to update the expected output.
 
-The msbwt package is broken down into various sub-functions which include MSBWT creation, merging, and querying.  Below is a
-list of each along with the expected output.
+3. **Correctness and security fixes are allowed to change behavior.**  
+   Such changes must be documented explicitly, including their compatibility impact.
 
- * cffq - Create From FASTQ.  This function takes a list of input FASTQ files and will create the MSBWT from the strings contained in them to be stored in the end result of msbwt.npy.  This is functionally the same as doing 'pp' followed by 'cfpp'.  Note that strings of uniform length can be processed faster than strings of non-uniform length.
- * pp - Pre-Process.  This function takes a list of input FASTQ files and will create the seqs.npy, offsets.npy, and about.npy files for those FASTQ files.  Note that strings of uniform length can be processed faster than strings of non-uniform length.
- * cfpp - Create From Pre-Process.  This function takes a pre-processed directory and creates the MSBWT from the strings contained in seqs.npy to create msbwt.npy.
- * merge - This function takes a list of input MSBWT directories and merges them into a single output MSBWT.  The resulting BWT will always be stored in msbwt.npy of the output directory.
- * query - This function is for performing a single query of a specific k-mer within the data.  Options exist for dumping the associated strings containing that k-mer as well.
- * massquery - This function takes a list of queries in a line separated file and performs those searches storing counts for each query in a CSV file.
- * compress - This function takes an uncompressed MSBWT and converts it to the compressed version.  The auxiliary FM-index will need to be reconstructed for the new data format.
- * decompress - This function takes a compressed MSBWT and converts it back into its original uncompressed format. The auxiliary FM-index will need to be reconstructed for this format.
- * convert - This function converted a raw text input BWT to our run-length encoded version.
+4. **Algorithms are preserved during initial migration.**  
+   Refactoring and optimization come after behavioral parity and benchmark baselines.
 
-The latest release also includes installation of the Cython library used to load the MSBWTs and perform merges.  After 
-installation, the libraries are available through regular Python imports like so:
+5. **Platform support must be demonstrated.**  
+   A platform is not considered supported merely because it can run Python.
 
-	import MUSCython.MultiStringBWTCython as MultiStringBWT
-	msbwt = MultiStringBWT.loadBWT('/path/to/directory')
-	msbwt.countOccurrencesOfSeq('CAT')
+These principles are part of the current handoff and compatibility contract.
 
-Other commands are available as well. For more information, refer to the code available at https://github.com/holtjma/msbwt.
+## Repository direction
 
-References
-==========
-Holt, James, and Leonard McMillan. "Merging of multi-string BWTs with applications." *Bioinformatics* (2014): btu584.
+The planned architecture is a single repository containing two independent distributions and shared compatibility infrastructure:
 
-Holt, James, and Leonard McMillan. "Constructing Burrows-Wheeler transforms of large string collections via merging." *Proceedings of the 5th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics.* ACM, 2014.
+```text
+reference/original-0.3.0/   frozen legacy oracle
+packages/msbwt-modern2/     Python 2.7 distribution
+packages/msbwt-modern3/     modern Python 3 distribution
+compat/                     fixtures, goldens, manifests, differential testing
+tests/                      shared and target-specific tests
+benchmarks/                 reproducible performance tests
+docs/                       architecture, compatibility, migration, security
+```
+
+The two planned distributions will keep independent build metadata/environments while sharing format specifications, fixtures, goldens, and differential tests.
+
+## Installation
+
+### Modernized packages
+
+**Not available yet.**
+
+Do not expect either of these to work yet:
+
+```bash
+pip install msbwt-modern2
+pip install msbwt-modern3
+```
+
+They are planned distribution names, not current releases.
+
+### Original implementation
+
+The repository still contains the original MSBWT source for compatibility and oracle work, but it depends on a legacy Python 2/Cython ecosystem and should not be considered a normal modern installation target.
+
+If you need the historical package today, refer to the original project:
+
+- https://github.com/holtjma/msbwt
+
+The original README targeted Python 2.7 and documented old NumPy/pysam-era installation instructions.
+
+## Original MSBWT functionality
+
+The original package provides tools for:
+
+- constructing MSBWTs from sequencing data;
+- preprocessing FASTQ data;
+- merging MSBWT datasets;
+- querying k-mers;
+- bulk/mass queries;
+- run-length compression;
+- decompression;
+- conversion from raw text BWTs;
+- Python/Cython APIs for interactive querying and analysis.
+
+The original README documents these operations through `cffq`, `pp`, `cfpp`, `merge`, `query`, `massquery`, `compress`, `decompress`, and `convert`.
+
+## Known modernization risks
+
+The audit has identified several areas requiring careful treatment:
+
+- Python 2 integer-division semantics;
+- Python 2 `str` versus Python 3 text/bytes behavior;
+- Cython 0.x/3.x semantic differences;
+- NumPy `.npy` header differences across versions;
+- files with `.npy` names that are not always ordinary NumPy containers;
+- Python/C integer-width assumptions, especially on Windows;
+- binary files historically opened using text-mode C I/O;
+- unsafe legacy pickle/object-array loading;
+- unchecked Cython memory accesses on malformed data;
+- mutation of derived indexes during reads;
+- multiprocessing and filesystem-order determinism;
+- legacy and overlapping construction algorithms.
+
+These are why the project is using strict characterization and golden-output testing rather than a direct automated Python-2-to-Python-3 translation.
+
+## Documentation
+
+Modernization design and evidence live under `docs/modernization/`.
+
+Important documents include:
+
+- `HANDOFF.md` — current project state and exact next milestone;
+- `LEGACY_ORACLE_STATUS.md` — executed legacy environment and oracle results;
+- `FORENSIC_AUDIT.md` — source/build/platform/security audit;
+- `BEHAVIORAL_SURFACE.md` — CLI, API, and persistent-file inventory;
+- `COMPATIBILITY_TESTING.md` — regression and reader/writer test strategy;
+- `ARCHITECTURE.md` — proposed modern2/modern3 repository architecture;
+- `RISKS_AND_OPEN_QUESTIONS.md` — unresolved compatibility and engineering risks.
+
+## Project maturity
+
+This repository is currently best described as:
+
+> **an evidence-driven modernization effort with a verified legacy baseline, not yet a modernized release.**
+
+The project has deliberately spent significant effort establishing what the original implementation actually does before changing it. This makes progress appear slower than a direct Python-2-to-Python-3 translation, but it is necessary to preserve scientific reproducibility and binary compatibility.
+
+Contributions and review are welcome, but users should not yet depend on this fork as a production replacement for the original package.
+
+## Provenance and attribution
+
+This work is based on the original MSBWT implementation by **James Holt** and collaborators at UNC-Chapel Hill. The original algorithms, authorship, scientific publications, and MIT license remain credited and preserved.
+
+This fork is a modernization and maintenance effort; it does not claim authorship of the original MSBWT algorithms or implementation.
+
+## References
+
+Holt, James, and Leonard McMillan.  
+**“Merging of multi-string BWTs with applications.”**  
+*Bioinformatics* (2014): btu584.
+
+Holt, James, and Leonard McMillan.  
+**“Constructing Burrows-Wheeler transforms of large string collections via merging.”**  
+*Proceedings of the 5th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics.* ACM, 2014.
+
+The original README also cites the MSBWT construction approach described by Bauer et al. in **“Lightweight BWT construction for very large string collections.”**
+
+## License
+
+The original project is distributed under the MIT License. Original copyright, license, attribution, and scientific references are preserved in this fork.
