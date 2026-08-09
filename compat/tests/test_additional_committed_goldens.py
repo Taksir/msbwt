@@ -24,14 +24,27 @@ FIXTURE_ROOT = REPOSITORY_ROOT / "compat" / "fixtures" / "synthetic"
 CASE_MANIFEST = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environment" / "oracle-cases.json"
 CASES = {
     "nonuniform-prefix": {
-        "fixture": "nonuniform.fastq",
-        "fixture_sha256": "e19ef01c7683cd81534fada1f8142ddf35710a2e1bf9b70d92bb8de2acb1973e",
+        "fixtures": {
+            "nonuniform.fastq": "e19ef01c7683cd81534fada1f8142ddf35710a2e1bf9b70d92bb8de2acb1973e"
+        },
         "stage_counts": {"pre": 2, "build": 3},
         "pre_tree": "71f549690de7b78b8b2979692f0594966cb33618e1f7e48c098a17ecc3ea31a7",
         "build_tree": "ad4aa043feb549e0af861ffde0deca11f8ac0b030c5305183f61f04f5f4d8c0a",
         "msbwt_sha256": "da28963ca3726568dd7a26eccea35f107bd4cb8b295c909de628374db38dd4b2",
         "shape": [30],
         "total_size": 30,
+    },
+    "gzip-input": {
+        "fixtures": {
+            "uniform-a.fastq.gz": "dc8bdc5aedc346f364e5e73a34734f61a55cb1b97f9788ac10ff774c16aaeadb",
+            "nonuniform.fastq.gz": "93936b82d32a57dc8d1e7658fc8421ea61819db69414ac1464c5287e7148ccd8",
+        },
+        "stage_counts": {"pre": 2, "build": 3},
+        "pre_tree": "e8e2d8d4c7f40019a3e20acdaba515514f00cdc06cba47056240628a678018c9",
+        "build_tree": "188acea4cac12486c4c1a0d97ef618e807d3142e28cc266c56dda141d621bc8f",
+        "msbwt_sha256": "da40d02ef42d4cf61d7b4814a2bc2c44c48f3516a53d6111a19bf2fdba8ff33b",
+        "shape": [54],
+        "total_size": 54,
     }
 }
 
@@ -46,10 +59,10 @@ class AdditionalCommittedGoldenTests(unittest.TestCase):
         fixture_manifest = FIXTURE_ROOT / "fixture-manifest.json"
         self.assertEqual(artifact_manifest.sha256_file(fixture_manifest), FIXTURE_MANIFEST_SHA256)
         for config in CASES.values():
-            self.assertEqual(
-                artifact_manifest.sha256_file(FIXTURE_ROOT / config["fixture"]),
-                config["fixture_sha256"],
-            )
+            for fixture, fixture_sha256 in config["fixtures"].items():
+                self.assertEqual(
+                    artifact_manifest.sha256_file(FIXTURE_ROOT / fixture), fixture_sha256
+                )
 
     def test_artifacts_provenance_determinism_and_reader_contract(self) -> None:
         for case_id, config in CASES.items():
@@ -66,6 +79,14 @@ class AdditionalCommittedGoldenTests(unittest.TestCase):
                 self.assertEqual(provenance["fixture_manifest_sha256"], FIXTURE_MANIFEST_SHA256)
                 self.assertEqual(provenance["oracle_case_manifest_sha256"], CASE_MANIFEST_SHA256)
                 self.assertNotIn(" -u ", " ".join(provenance["commands"]))
+                self.assertEqual(
+                    {
+                        Path(item["path"]).name: item["sha256"]
+                        for item in provenance["fixtures"]
+                    },
+                    config["fixtures"],
+                )
+                self.assertTrue(all(run["command_failures"] == 0 for run in provenance["runs"]))
                 self.assertEqual(determinism["status"], "passed")
                 self.assertEqual(determinism["runs"], ["run-a", "run-b"])
 
@@ -90,9 +111,15 @@ class AdditionalCommittedGoldenTests(unittest.TestCase):
                 self.assertEqual(primary["npy"]["shape"], config["shape"])
 
                 self.assertEqual(reader["status"], "passed")
+                self.assertEqual(reader["format"], "msbwt-legacy-reader-smoke-v1")
                 self.assertEqual(reader["actual_queries"], reader["expected_queries"])
                 self.assertEqual(reader["actual_recovered_strings"], reader["expected_recovered_strings"])
                 self.assertEqual(reader["total_size"], config["total_size"])
+                self.assertEqual(
+                    artifact_manifest.sha256_file(root / "reader-smoke.json"),
+                    determinism["reader_smoke"]["result_sha256"],
+                )
+                self.assertTrue(determinism["reader_smoke"]["matches"])
                 self.assertEqual(reader["side_effects"]["changed"], [])
                 self.assertEqual(reader["side_effects"]["removed"], [])
                 self.assertEqual(

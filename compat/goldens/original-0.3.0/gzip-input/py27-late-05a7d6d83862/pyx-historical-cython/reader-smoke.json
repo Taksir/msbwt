@@ -1,0 +1,126 @@
+{
+  "actual_queries": {
+    "A": 13,
+    "AA": 4,
+    "AAA": 3,
+    "AAAA": 2,
+    "AAAAA": 1,
+    "AAAAAAAA": 0,
+    "AC": 7,
+    "ACG": 6,
+    "ACGT": 5,
+    "ACGTN": 3,
+    "C": 7,
+    "CG": 6,
+    "CGT": 5,
+    "CGTN": 3,
+    "G": 6,
+    "GT": 5,
+    "GTN": 3,
+    "N": 5,
+    "NA": 1,
+    "NAC": 1,
+    "NACG": 1,
+    "NACGT": 1,
+    "T": 12,
+    "TN": 3,
+    "TT": 6,
+    "TTT": 5,
+    "TTTT": 4,
+    "TTTTT": 3,
+    "TTTTTT": 2,
+    "TTTTTTT": 1
+  },
+  "actual_recovered_strings": [
+    "$A",
+    "$AAAAA",
+    "$AC",
+    "$ACG",
+    "$ACGT",
+    "$ACGTN",
+    "$ACGTN",
+    "$ACGTN",
+    "$N",
+    "$NACGT",
+    "$TTTTTTT"
+  ],
+  "case_id": "gzip-input",
+  "dollar_count": 11,
+  "expected_queries": {
+    "A": 13,
+    "AA": 4,
+    "AAA": 3,
+    "AAAA": 2,
+    "AAAAA": 1,
+    "AAAAAAAA": 0,
+    "AC": 7,
+    "ACG": 6,
+    "ACGT": 5,
+    "ACGTN": 3,
+    "C": 7,
+    "CG": 6,
+    "CGT": 5,
+    "CGTN": 3,
+    "G": 6,
+    "GT": 5,
+    "GTN": 3,
+    "N": 5,
+    "NA": 1,
+    "NAC": 1,
+    "NACG": 1,
+    "NACGT": 1,
+    "T": 12,
+    "TN": 3,
+    "TT": 6,
+    "TTT": 5,
+    "TTTT": 4,
+    "TTTTT": 3,
+    "TTTTTT": 2,
+    "TTTTTTT": 1
+  },
+  "expected_recovered_strings": [
+    "$A",
+    "$AAAAA",
+    "$AC",
+    "$ACG",
+    "$ACGT",
+    "$ACGTN",
+    "$ACGTN",
+    "$ACGTN",
+    "$N",
+    "$NACGT",
+    "$TTTTTTT"
+  ],
+  "fixture_files": [
+    {
+      "byte_count": 138,
+      "path": "uniform-a.fastq.gz",
+      "sha256": "dc8bdc5aedc346f364e5e73a34734f61a55cb1b97f9788ac10ff774c16aaeadb"
+    },
+    {
+      "byte_count": 151,
+      "path": "nonuniform.fastq.gz",
+      "sha256": "93936b82d32a57dc8d1e7658fc8421ea61819db69414ac1464c5287e7148ccd8"
+    }
+  ],
+  "format": "msbwt-legacy-reader-smoke-v1",
+  "reader_class": "ByteBWT",
+  "side_effects": {
+    "added": [
+      {
+        "path": "fmIndex.npy",
+        "sha256": "9207663ec63508a3dd5dfc179f3963ac5aa2b5e046ed84dee6de5fd049cf82d4",
+        "size": 176
+      },
+      {
+        "path": "totalCounts.npy",
+        "sha256": "d5a953fe54e57854b58000639cbc29511f93736abf57819b7ee87f54ea54911f",
+        "size": 176
+      }
+    ],
+    "changed": [],
+    "removed": []
+  },
+  "status": "passed",
+  "total_size": 54
+}
