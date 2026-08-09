@@ -1,0 +1,4 @@
+# Raw oracle probe runs can be large and machine-specific.  Promote only
+# reviewed golden artifacts to compat/goldens through a separate change.
+*
+!.gitignore

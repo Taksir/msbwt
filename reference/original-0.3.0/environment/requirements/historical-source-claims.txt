@@ -1,0 +1,6 @@
+# Candidate-only versions.  The frozen README names NumPy 1.10.1 and pysam
+# 0.7.4; 0.23.4 is the Cython version embedded in part of the committed C.
+# It does not state pip, setuptools, or wheel versions.
+numpy==1.10.1
+pysam==0.7.4
+Cython==0.23.4

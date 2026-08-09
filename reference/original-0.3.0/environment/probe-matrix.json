@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "candidate-only",
+  "source_commit": "7503346ec072ddb89520db86fef85569a9ba093a",
+  "candidates": {
+    "historical-source-claims": {
+      "status": "candidate-only",
+      "rationale": "Versions named in the original README or encoded by committed generated C; pip/setuptools/wheel were not stated by the source.",
+      "pip": null,
+      "setuptools": null,
+      "wheel": null,
+      "numpy": "1.10.1",
+      "pysam": "0.7.4",
+      "cython": "0.23.4"
+    },
+    "historical-generated-c-0.18": {
+      "status": "candidate-only",
+      "rationale": "Six committed C files declare Cython 0.18 and six declare 0.23.4. This all-.pyx probe tests 0.18 as a separate historical possibility; it cannot recreate the mixed generated-C provenance.",
+      "pip": null,
+      "setuptools": null,
+      "wheel": null,
+      "numpy": "1.10.1",
+      "pysam": "0.7.4",
+      "cython": "0.18"
+    },
+    "late-python2-candidate": {
+      "status": "candidate-only",
+      "rationale": "Potential late Python-2 toolchain for empirical probing; it is not historical provenance and has not been tested against this source.",
+      "pip": "20.3.4",
+      "setuptools": "44.1.1",
+      "wheel": "0.37.1",
+      "numpy": "1.16.6",
+      "pysam": "0.15.4",
+      "cython": "0.29.36"
+    }
+  }
+}

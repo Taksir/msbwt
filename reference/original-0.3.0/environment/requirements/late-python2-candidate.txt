@@ -1,0 +1,8 @@
+# Candidate-only late Python-2 toolchain.  Do not treat these as verified
+# compatibility pins until a retained probe result records them.
+pip==20.3.4
+setuptools==44.1.1
+wheel==0.37.1
+numpy==1.16.6
+pysam==0.15.4
+Cython==0.29.36

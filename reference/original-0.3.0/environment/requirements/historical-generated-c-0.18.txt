@@ -1,0 +1,5 @@
+# Candidate-only.  Half of the committed generated C says only "Cython 0.18";
+# a full .pyx regeneration cannot reproduce the source's mixed C provenance.
+numpy==1.10.1
+pysam==0.7.4
+Cython==0.18
