@@ -1,0 +1,142 @@
+"""Host-side guards for the canonical merge/reader-indexing oracle.
+
+The canonical merge baseline is blocked by an executed legacy defect: the
+frozen ``merge`` CLI deterministically segfaults under the verified profile
+because the committed ``MUSCython/GenericMerge.c`` (Cython 0.23.4 provenance)
+crashes inside the first merge iteration.  These tests protect the intended
+experiment's contract, the executed ``-p 1`` ``UnboundLocalError`` defect, the
+committed-codegen provenance that explains the segfault, and the harness
+wiring.
+"""
+
+from __future__ import annotations
+
+import importlib.util
+import json
+import sys
+import unittest
+from pathlib import Path
+
+
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
+ENVIRONMENT_ROOT = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environment"
+MANIFEST_PATH = ENVIRONMENT_ROOT / "merge-milestone1-cases.json"
+RUNNER_PATH = ENVIRONMENT_ROOT / "merge_milestone1.py"
+PROBE_PATH = ENVIRONMENT_ROOT / "probe_legacy.py"
+WSL_DRIVER = ENVIRONMENT_ROOT / "wsl" / "run-wsl-probe.sh"
+GENERIC_MERGE_C = REPOSITORY_ROOT / "MUSCython" / "GenericMerge.c"
+PLAN_PATH = REPOSITORY_ROOT / "docs" / "modernization" / "MERGE_INDEXING_PLAN.md"
+
+sys.path.insert(0, str(ENVIRONMENT_ROOT))
+SPEC = importlib.util.spec_from_file_location("merge_milestone1", RUNNER_PATH)
+assert SPEC is not None and SPEC.loader is not None
+merge_milestone1 = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(merge_milestone1)
+
+
+class MergeMilestone1HarnessTests(unittest.TestCase):
+    def test_manifest_pins_profile_route_and_canonical_merge(self) -> None:
+        manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+
+        self.assertEqual(manifest["format"], "msbwt-legacy-merge-milestone1-cases-v1")
+        self.assertEqual(manifest["profile_id"], "py27-late-05a7d6d83862")
+        self.assertEqual(manifest["route"], "pyx-historical-cython")
+        self.assertEqual(manifest["canonical_runs"], ["run-a", "run-b"])
+        self.assertEqual(manifest["fixture_sets"],
+                         {"input_a": ["uniform-a.fastq"],
+                          "input_b": ["uniform-b.fastq"],
+                          "clean": ["uniform-a.fastq", "uniform-b.fastq"]})
+        self.assertEqual(manifest["merge_argv"],
+                         ["merge", "-p", "2", "DESTINATION", "INPUT_A", "INPUT_B"])
+        self.assertEqual(manifest["nameerror_argv"],
+                         ["merge", "-p", "1", "DESTINATION", "INPUT_A", "INPUT_B"])
+        self.assertEqual(
+            manifest["clean_committed_golden"]["primary_sha256"],
+            "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f")
+        self.assertEqual(manifest["expected"]["merged"]["output_files"],
+                         ["inter0.npy", "msbwt.npy"])
+        self.assertEqual(manifest["expected"]["merged"]["input_side_effects"],
+                         ["fmIndex.npy", "totalCounts.npy"])
+        self.assertEqual(manifest["expected"]["merged"]["interleave_shape"], [7])
+        self.assertEqual(manifest["expected"]["merged"]["symbol_counts"],
+                         {"A": 9, "C": 9, "G": 9, "N": 4, "T": 9, "$": 8})
+
+    def test_runner_records_the_exact_merge_contract(self) -> None:
+        source = RUNNER_PATH.read_text(encoding="utf-8")
+
+        for required in (
+            'FORMAT = "msbwt-legacy-merge-milestone1-raw-v1"',
+            "NAMEERROR_EXIT_CODE = 1",
+            'cli_argv("merge", "-p", "2", out, in_a, in_b)',
+            'cli_argv("merge", "-p", "1", out, in_a, in_b)',
+            '"UnboundLocalError" not in streams["sanitized_stderr"]',
+            '"numProcs" not in streams["sanitized_stderr"]',
+            'output_paths != ["inter0.npy", "msbwt.npy"]',
+            '"merge -p 1 stderr lacks the numProcs NameError"',
+            "def nameerror_probe(",
+            "def merge_case(",
+            "def clean_case(",
+            "def reader_evidence(",
+            "def assert_determinism(",
+            "def execute(",
+        ):
+            self.assertIn(required, source)
+
+    def test_runner_records_the_executed_unboundlocalerror_defect(self) -> None:
+        # The executed -p 1 probe raised UnboundLocalError (a NameError
+        # subclass), which is the exact legacy contract the runner must capture.
+        source = RUNNER_PATH.read_text(encoding="utf-8")
+        self.assertIn(
+            '"UnboundLocalError" not in streams["sanitized_stderr"] and', source)
+        self.assertIn(
+            'exception_type = "UnboundLocalError" if "UnboundLocalError" in streams["sanitized_stderr"] else', source)
+
+    def test_committed_generic_merge_c_is_historical_cython_provenance(self) -> None:
+        # The pyx-historical-cython route compiles the committed generated C.
+        # GenericMerge.c is Cython 0.23.4 provenance; this documents why the
+        # frozen merge segfaults under the verified profile.
+        first_line = GENERIC_MERGE_C.read_bytes().split(b"\n", 1)[0]
+        self.assertIn(b"Generated by Cython", first_line)
+        self.assertIn(b"0.23.4", first_line)
+        self.assertNotIn(b"0.29.36", first_line)
+
+    def test_plan_documents_the_blocking_segfault_and_decision(self) -> None:
+        plan = PLAN_PATH.read_text(encoding="utf-8")
+        self.assertIn("Executed blocking finding", plan)
+        self.assertIn("deterministically segfaults", plan)
+        self.assertIn("SIGSEGV", plan)
+        self.assertIn("Cython 0.23.4", plan)
+        self.assertIn("UnboundLocalError", plan)
+        self.assertIn("Decision required before modern2", plan)
+
+    def test_probe_requires_merge_inputs_and_historical_pyx_route(self) -> None:
+        source = PROBE_PATH.read_text(encoding="utf-8")
+
+        self.assertIn("args.merge_milestone1", source)
+        self.assertIn("merge_options", source)
+        self.assertIn("import merge_milestone1", source)
+        self.assertIn("--merge-milestone1 requires --route pyx-historical-cython", source)
+        self.assertIn("--merge-milestone1 requires --fixture-root and --golden-root", source)
+        self.assertIn("DEFAULT_MERGE_CASES", source)
+
+    def test_wsl_driver_passes_merge_milestone_through(self) -> None:
+        source = WSL_DRIVER.read_text(encoding="utf-8")
+
+        self.assertIn("MERGE_MILESTONE1", source)
+        self.assertIn("--merge-milestone1", source)
+        self.assertIn("--merge-milestone1 requires an existing --golden-root.", source)
+
+    def test_validate_config_accepts_the_committed_fixtures_and_golden(self) -> None:
+        golden_root = REPOSITORY_ROOT / "compat" / "goldens" / "original-0.3.0"
+        fixture_root = REPOSITORY_ROOT / "compat" / "fixtures" / "synthetic"
+        config, fixture_sets, golden_path = merge_milestone1.validate_config(
+            str(MANIFEST_PATH), str(golden_root), str(fixture_root))
+        self.assertEqual(config["profile_id"], "py27-late-05a7d6d83862")
+        self.assertEqual(sorted(fixture_sets.keys()), ["clean", "input_a", "input_b"])
+        self.assertTrue(Path(golden_path).as_posix().endswith(
+            "uniform-multifile/py27-late-05a7d6d83862/pyx-historical-cython/build/artifacts"))
+        self.assertTrue((Path(golden_path) / "msbwt.npy").is_file())
+
+
+if __name__ == "__main__":
+    unittest.main()

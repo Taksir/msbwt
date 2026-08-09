@@ -62,6 +62,21 @@ class LegacyReaderSmokeTests(unittest.TestCase):
             },
         )
 
+    def test_classification_probe_contract_is_present(self) -> None:
+        source = Path(reader_smoke.__file__).read_text(encoding="utf-8")
+
+        for required in (
+            "def run_classification(copy_path, queries, expected_queries, expected_recovered):",
+            '"totalCounts.npy", "fmIndex.npy"]',
+            '"regenerated_bytes_identical_to_first_load"',
+            'interleave_path = os.path.join(copy_path, "inter0.npy")',
+            '"required_by_reader"',
+            "--classification",
+            "action=\"store_true\",",
+            "if args.classification:",
+        ):
+            self.assertIn(required, source)
+
 
 if __name__ == "__main__":
     unittest.main()
