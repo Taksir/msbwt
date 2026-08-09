@@ -1,5 +1,5 @@
-# Candidate-only late Python-2 toolchain.  Do not treat these as verified
-# compatibility pins until a retained probe result records them.
+# Versions verified by oracle profile py27-late-05a7d6d83862.  This file is a
+# readable version list; use the WSL hash lock for reproducible installation.
 pip==20.3.4
 setuptools==44.1.1
 wheel==0.37.1
