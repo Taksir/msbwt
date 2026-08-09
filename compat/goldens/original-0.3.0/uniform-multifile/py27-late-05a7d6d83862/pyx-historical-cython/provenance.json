@@ -1,0 +1,59 @@
+{
+  "format": "msbwt-legacy-golden-provenance-v1",
+  "case_id": "uniform-multifile",
+  "profile_id": "py27-late-05a7d6d83862",
+  "candidate": "late-python2-candidate",
+  "route": "pyx-historical-cython",
+  "source_commit": "7503346ec072ddb89520db86fef85569a9ba093a",
+  "source_verification": "passed for all 40 frozen files in both runs",
+  "interpreter_gate": "CPython 2.7",
+  "fixture_manifest_sha256": "862187170b964062c4d31f45d2d88973dac793d46095ba8d7f742e74e6253358",
+  "fixtures": [
+    {
+      "path": "compat/fixtures/synthetic/uniform-a.fastq",
+      "byte_count": 173,
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180"
+    },
+    {
+      "path": "compat/fixtures/synthetic/uniform-b.fastq",
+      "byte_count": 162,
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029"
+    }
+  ],
+  "commands": [
+    "python -c 'from MUS import CommandLineInterface; CommandLineInterface.mainRun()' pp -u OUTPUT uniform-a.fastq uniform-b.fastq",
+    "python -c 'from MUS import CommandLineInterface; CommandLineInterface.mainRun()' cfpp -p 1 -u OUTPUT"
+  ],
+  "runs": [
+    {
+      "id": "run-b",
+      "started_utc": "2026-08-09T00:58:44Z",
+      "report_status": "passed",
+      "command_failures": 0
+    },
+    {
+      "id": "run-c",
+      "started_utc": "2026-08-09T01:02:04Z",
+      "report_status": "passed",
+      "command_failures": 0
+    }
+  ],
+  "all_gate_returncodes": 0,
+  "preprocess_oracle_tree_sha256": "4f666f2f8841b2326160ca0d8c2fb975cac3e8e58d006e90ee1265fd238ecf05",
+  "build_oracle_tree_sha256": "842bfc80080ca553ee23f07eb3da7616df96822cee7d774d163c1c2058d0132e",
+  "legacy_reader_smoke": {
+    "performed_on": "a disposable copy of run-b build output",
+    "reader": "frozen MUS.MultiStringBWT.loadBWT under the same CPython 2.7 profile",
+    "result": {
+      "class": "MultiStringBWT",
+      "total_size": 48,
+      "count_AAAAA": 1,
+      "count_ACGTN": 3,
+      "count_CCCCC": 1,
+      "count_AGCTA": 0
+    },
+    "status": "passed",
+    "golden_artifacts_mutated": false
+  },
+  "path_policy": "Host-specific absolute paths and full raw environment dumps are intentionally not committed"
+}
