@@ -35,6 +35,11 @@ class LegacyReaderSmokeTests(unittest.TestCase):
         self.assertIn(b"TT", queries)
         self.assertIn(b"A" * (max(map(len, sequences)) + 1), queries)
 
+    def test_recovery_expectation_uses_legacy_sentinel_prefix(self) -> None:
+        sequences = [b"A", b"AC"]
+
+        self.assertEqual(reader_smoke.expected_recovered_strings(sequences), [b"$A", b"$AC"])
+
     def test_inventory_comparison_records_reader_side_effects(self) -> None:
         before = {"existing.npy": {"sha256": "a", "size": 1}}
         after = {

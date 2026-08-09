@@ -91,6 +91,13 @@ def overlapping_count(sequences, query):
     )
 
 
+def expected_recovered_strings(sequences):
+    """Return the legacy recoverString representation for fixture reads."""
+    # recoverString returns the sentinel first; the legacy CLI deliberately
+    # strips byte zero before displaying recovered sequences.
+    return sorted(b"$" + sequence for sequence in sequences)
+
+
 def compare_inventories(before, after):
     before_paths = set(before)
     after_paths = set(after)
@@ -136,7 +143,7 @@ def main(argv=None):
 
     shutil.copytree(args.dataset, args.copy)
     before = inventory_files(args.copy)
-    expected_recovered = sorted(sequence + b"$" for sequence in sequences)
+    expected_recovered = expected_recovered_strings(sequences)
     queries = all_fixture_substrings(sequences)
     expected_queries = {
         query.decode("ascii"): overlapping_count(sequences, query)
