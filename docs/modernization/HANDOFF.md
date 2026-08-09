@@ -10,8 +10,12 @@ host-side safe RLE decoder is committed, the R1/R2 builder-recovery evidence
 with the resolved R2 clean-vs-recovered legacy contract is promoted under
 `compat/goldens/original-0.3.0/compression-milestone2/`, and the Milestone-3
 non-resumable interruption evidence is promoted under
-`compat/goldens/original-0.3.0/compression-milestone3/`.  No modern2 or modern3
-implementation port has started.
+`compat/goldens/original-0.3.0/compression-milestone3/`.  The Merge/Indexing
+milestone was attempted and STOPPED at a blocking legacy defect: the frozen
+`merge` CLI deterministically segfaults under the verified profile because the
+committed `MUSCython/GenericMerge.c` (Cython 0.23.4 provenance) crashes inside
+the first merge iteration.  No modern2 or modern3 implementation port has
+started.
 
 ## Start here
 
@@ -146,8 +150,27 @@ loading was performed only on disposable copies and created the inventoried
   cases and the two unsupported nonuniform direct cases have committed evidence.
   Milestone 2 (implemented builder recovery) and Milestone 3 (non-resumable
   interruption failure characterization) are promoted under
-  `compression-milestone2/` and `compression-milestone3/`.  Merge,
-  indexing, and broader API/CLI behavior remain.
+  `compression-milestone2/` and `compression-milestone3/`.  Broader API/CLI
+  behavior remains.
+- The Merge/Indexing milestone is BLOCKED by an executed legacy defect: under
+  the verified profile, `merge -p 2` deterministically segfaults (SIGSEGV,
+  exit 139/-11) for every tested uniform byte input because the committed
+  `MUSCython/GenericMerge.c` (Cython 0.23.4) crashes inside the first
+  `targetedIterationMerge2` iteration; no `msbwt.npy`/`inter0.npy` is written.
+  The `merge` default `-p 1` raises
+  `UnboundLocalError: local variable 'numProcs' referenced before assignment`
+  (a `NameError` subclass), stderr SHA-256
+  `186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c`.
+  Diagnostic evidence (not a promotion or policy) shows force-regenerating
+  `GenericMerge` with the profile's pinned Cython 0.29.36 produces a working
+  merge whose primary is byte-identical to the committed uniform golden and
+  which passes the full reader/query/recovery and derived-index classification
+  checks.  A host-side independent oracle (`compat/tools/bwt_oracle.py`)
+  reproduces the committed uniform primary and proves the committed
+  nonuniform primary is a valid but differently ordered MSBWT.  See
+  `MERGE_INDEXING_PLAN.md` "Executed blocking finding"; the decision whether
+  the merge oracle is established from a Cython-regenerated build or treated
+  as uncharacterized legacy behavior is required before modern2.
 - Reader side effects, recovery files, multiprocessing behavior, filesystem
   ordering, and cross-platform byte determinism need operation-specific tests.
 
@@ -361,8 +384,18 @@ copies, and independent clean controls, and the R2 clean-vs-recovered legacy
 contract is resolved (see the plan).  Milestone 3 (non-resumable interruption
 evidence) is complete and promoted under
 `compat/goldens/original-0.3.0/compression-milestone3/`; see the plan's
-"Milestone 3 executed evidence" note for the resolved m3c2 finding.  Do not
-begin modern2 or modern3 implementation first.
+"Milestone 3 executed evidence" note for the resolved m3c2 finding.
+
+The Merge/Indexing milestone (canonical `merge -p 2` of the two uniform byte
+BWTs built from `uniform-a.fastq` and `uniform-b.fastq`) was attempted under
+`py27-late-05a7d6d83862` and is BLOCKED: the frozen `merge` CLI
+deterministically segfaults on the verified profile due to the committed
+Cython-0.23.4 `GenericMerge.c`.  The harness, manifest, plan, and tests from
+the attempt are committed, and the executed evidence plus a diagnostic
+Cython-0.29.36 regeneration result are recorded in
+`MERGE_INDEXING_PLAN.md`.  Resolve the merge oracle policy (regenerated-build
+oracle vs uncharacterized legacy behavior) before attempting the merge
+baseline again.  Do not begin modern2 or modern3 implementation first.
 
 ### Resolved compression policy
 
