@@ -127,7 +127,7 @@ class CompressionMilestone1HarnessTests(unittest.TestCase):
             (compressed / "comp_msbwt.npy").write_bytes(compressed_primary)
 
             payload = b"\x00" * 4
-            header_text = "{'descr': '|u1', 'fortran_order': False, 'shape': (4L,), }"
+            header_text = "{'descr': '|u1', 'fortran_order': False, 'shape': (4,), }"
             padding = 16 - ((10 + len(header_text) + 1) % 16)
             header = (header_text + (" " * padding) + "\n").encode("ascii")
             npy_bytes = b"\x93NUMPY\x01\x00" + len(header).to_bytes(2, "little") + header + payload

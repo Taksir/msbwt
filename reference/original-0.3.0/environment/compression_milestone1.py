@@ -148,7 +148,7 @@ def assert_u1_npy_bytes(path, expected_shape, expected_sha256, expected_payload_
     header_length = struct.unpack("<H", data[8:10])[0]
     header = data[10:10 + header_length]
     payload = data[10 + header_length:]
-    shape_text = "'shape': ({0}L,)".format(expected_shape[0]).encode("ascii")
+    shape_text = "'shape': ({0},)".format(expected_shape[0]).encode("ascii")
     if b"'descr': '|u1'" not in header or shape_text not in header:
         raise RuntimeError("preallocated destination metadata differs")
     if len(payload) != expected_shape[0] or payload != b"\x00" * expected_shape[0]:
