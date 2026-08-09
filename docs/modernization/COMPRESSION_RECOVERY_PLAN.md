@@ -1,7 +1,8 @@
 # Compression, decompression, and recovery characterization plan
 
 Status: source-resolved execution plan with the verified-profile decompression
-failure policy resolved; no compression/recovery golden has been promoted yet.
+failure and cross-route compression policies resolved; no compression/recovery
+golden has been promoted yet.
 
 This plan is for the verified frozen profile `py27-late-05a7d6d83862` and the
 historical-pyx route only.  Frozen execution and persisted bytes remain the
@@ -35,6 +36,13 @@ The relevant dispatch and implementations are:
   TODO/commented rather than implemented;
 - `MUS/MultiStringBWT.py` and `MUSCython/RLE_BWTCython.pyx`: pure-Python and
   compiled RLE readers and their different derived indexes.
+
+The frozen writers share one RLE payload format but do not share one whole-file
+NumPy serialization path.  Post-hoc `compress` supplies a Python `int` shape to
+`open_memmap`; the direct Cython builder supplies a C `unsigned long`, converted
+to a Python-2 `long`.  NumPy therefore persists `(length,)` for post-hoc output
+and `(lengthL,)` for direct output.  This source-defined header difference is a
+compatibility contract, not a defective RLE route.
 
 ## Common command form and gates
 
@@ -73,6 +81,61 @@ ext4 copy.
 
 The copied byte sources must not contain query-derived indexes.  Refuse rather
 than delete unexpected files.
+
+### Resolved uniform cross-route policy
+
+Executed frozen-oracle evidence selects policy **B**, narrowly: the named
+post-hoc and direct routes produce byte-distinct valid NPY files, so each route
+requires its own whole-file golden.  They do not produce alternative RLE
+payloads for this input.  After independently parsing the NPY v1 framing without
+loading an array, all three payloads were the same 22 bytes:
+
+```text
+09 1c 0a 0b 15 21 08 0c 18 22 08 21 23 08 22 1d 08 0b 0d 1b 1d 08
+payload SHA-256: 6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb
+```
+
+The complete persisted artifacts are:
+
+| Route | Whole-file SHA-256 | Raw shape literal | RLE payload |
+|---|---|---|---|
+| post-hoc `compress -p 1` | `53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3` | `(22,)` | canonical payload above |
+| split `cfpp -p 1 -u -c` | `0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372` | `(22L,)` | canonical payload above |
+| wrapper `cffq -p 1 -u -c` | `0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372` | `(22L,)` | canonical payload above |
+
+Low three bits decode the symbol order `$ACGNT`; upper five-bit digits decode
+least-significant first in base 32 while adjacent bytes retain the same symbol.
+All three artifacts have these exact 22 logical runs and boundaries:
+
+```text
+A1[0,1) N3[1,4) C1[4,5) G1[5,6) T2[6,8) A4[8,12)
+$1[12,13) N1[13,14) $3[14,17) C4[17,21) $1[21,22)
+A4[22,26) G4[26,30) $1[30,31) C4[31,35) T3[35,38)
+$1[38,39) G1[39,40) T1[40,41) G3[41,44) T3[44,47) $1[47,48)
+```
+
+Each independently decodes to 48 symbols and exactly to the authoritative
+uncompressed `msbwt.npy` payload (SHA-256
+`75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e`):
+
+```text
+ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$
+```
+
+Disposable frozen compiled-reader checks passed independently for the byte
+golden and each compressed artifact.  Each compressed route loaded as
+`RLE_BWT`, reported total size 48, matched all 36 fixture-derived query counts,
+recovered the same eight strings in the same dollar-ID order as `ByteBWT`, and
+created the same inventoried `totalCounts.npy`, `comp_fmIndex.npy`, and
+`comp_refIndex.npy` side effects.  This reader evidence confirms validity but is
+not the basis for allowing the whole-file mismatch; the NPY framing and RLE
+payload were examined separately.
+
+The direct split and wrapper commands dispatch to the same
+`MSBWTCompGenCython.createMsbwtFromSeqs` implementation.  Their whole-file
+primary equality remains mandatory.  Post-hoc/direct whole-file equality is
+not a contract; exact payload, decoded-run, decoded-BWT, and reader-behavior
+equality are contracts for the named uniform case.
 
 ### Exact command cases
 
@@ -227,10 +290,12 @@ failure into an exception or add `-u`.
 
 All relationships below are required promotion gates for successful outputs:
 
-1. Uniform post-hoc `U_RLE`, split direct `U_DIRECT`, and wrapper direct
-   `U_WRAPPED` must have byte-identical `comp_msbwt.npy`.  The two construction
-   algorithms emit the same source-defined RLE representation; any observed
-   mismatch is conflicting legacy semantics and requires a stop/report.
+1. Split direct `U_DIRECT` and wrapper direct `U_WRAPPED` must have
+   byte-identical `comp_msbwt.npy`, including NPY header and payload.  Post-hoc
+   `U_RLE` must retain its separate route-specific whole-file hash.  Across all
+   three routes, require identical `|u1` logical shape, exact RLE payload bytes,
+   run boundaries, symbol/run-length sequence, decoded symbol count, and decoded
+   BWT bytes.
 2. Split and wrapper `about.npy` must match.  Their complete retained file sets
    must not be forced to match because wrapper cleanup is source-defined.
 3. On separate disposable copies, the compiled RLE reader must return the same
@@ -251,19 +316,40 @@ The source computes different cache types (`totalCounts.p` versus
 
 ### Milestone 1 determinism and promotion
 
-For every run, inventory the complete source-before, source-after, destination,
-and reader-copy trees with the safe artifact tool.  Require identical retained
-file sets, whole-file SHA-256, raw NPY headers, logical dtype/shape, and payload
-SHA-256 across the two canonical `-p 1` runs.  Require exact primary equality
-for the additional `-p 2` run.
+Run two fresh canonical `-p 1` executions for each successful path separately:
+uniform post-hoc, nonuniform post-hoc, uniform direct split, and uniform direct
+wrapper.  For every run, inventory the complete source-before, source-after,
+destination, and reader-copy trees with the safe artifact tool.  Within the
+same path require identical retained file sets, whole-file SHA-256, raw NPY
+headers, logical dtype/shape, and payload SHA-256 across both runs.
 
-Successful post-hoc compression is independently promotable despite the
-authoritative decompression failure after its two canonical runs match, its
-`-p 2` primary matches, the safe decoder validates it, and the frozen compiled
-RLE reader passes fixture-derived behavior and side-effect inventory checks.
-The uniform cross-algorithm relationship report remains required once the
-direct outputs exist, but decompression success is not a prerequisite for
-post-hoc compression promotion.
+After a path's two `-p 1` runs match, run that same successful process-bearing
+path once in a new directory at `-p 2`.  Its whole primary, including the raw
+NPY header, must equal that path's canonical `-p 1` primary.  Do not compare a
+post-hoc `-p 2` whole file to a direct golden.  Direct split and wrapper whole
+files must still equal one another at both process counts.
+
+Safe decoding must parse NPY v1 framing and the `|u1` payload without pickle or
+object-array loading, reject inconsistent header length/shape/payload size,
+and report payload hash, every encoded digit, run boundary, symbol/count pair,
+total decoded size, and decoded-BWT hash.  For uniform output, require the
+route-specific headers above, the shared payload/run report above, and exact
+decoded equality to the committed uncompressed primary.  Apply the same
+decoded-equality rule independently to post-hoc nonuniform output.
+
+On separate disposable copies, validate each canonical artifact independently
+with the frozen compiled reader and compare total size, symbol totals, all
+fixture-derived substring counts, dollar IDs, and recovered strings against its
+corresponding uncompressed golden.  Inventory derived side effects; never load
+or query a pristine promotion directory.
+
+Promote a successful path only to its own route-specific golden after its two
+canonical runs match, its same-path `-p 2` primary matches, safe decoding passes,
+and the frozen compiled reader passes fixture-derived behavior and side-effect
+inventory checks.  Promote direct split and direct wrapper separately even
+though their primaries are required to match.  The uniform cross-route semantic
+relationship report remains required, but post-hoc/direct whole-file equality
+and decompression success are not prerequisites for promotion.
 
 Promote only reviewed successful artifacts, manifests, decoded-RLE reports,
 relationship reports, reader-side-effect inventories, the named failure
@@ -430,11 +516,13 @@ Medium must stop and report rather than work around any of these:
 8. Raw direct-RLE state uses C `fopen(..., "w+")` text mode.  This milestone is
    Linux-oracle evidence only and establishes no Windows byte claim.
 
-Any primary mismatch between clean algorithms, successful process counts, or
-resume/control is a compatibility-policy stop.  Any decompression result that
-differs from the narrow expected-failure contract is also a stop.  Commit
-failure evidence only after review; never update an existing golden or repair
-frozen source.
+Stop on any same-path repeated-run or process-count primary mismatch; any direct
+split/wrapper whole-file mismatch; any uniform cross-route payload, decoded-run,
+decoded-BWT, total-size, or reader-result mismatch; any invalid/unexpected NPY
+header difference beyond the resolved route-specific shape literal; or any
+resume/control mismatch.  Any decompression result that differs from the narrow
+expected-failure contract is also a stop.  Commit failure evidence only after
+review; never update an existing golden or repair frozen source.
 
 ## Exact acceptance checklist for Medium
 
@@ -450,14 +538,18 @@ frozen source.
 4. Require both decompression cases to match the exact exit, traceback, source
    side effects, destination preallocation, manifests, and two-run determinism
    contract above.  Do not load partial outputs or require a roundtrip.
-5. Require exact uniform RLE equality across post-hoc, split, wrapper, and
-   successful process-count paths.  Stop on any mismatch.
+5. Require whole-file equality within each route across repeated runs and its
+   `-p 2` run, plus whole-file equality between direct split and wrapper.  Allow
+   only the documented post-hoc/direct NPY-header difference; require exact
+   uniform payload, run, decoded-BWT, total-size, and reader-result equality.
 6. Run fixture-derived compiled-reader query/recovery checks on disposable RLE
    and coexistence copies; inventory all source and reader side effects without
    mutating pristine promoted artifacts.
-7. Promote milestone 1 only after safe manifests prove identical file sets,
-   whole-file hashes, raw headers, dtype/shape, payload hashes, decoded RLE, and
-   canonical tree hashes; commit path-sanitized provenance and strict tests.
+7. Promote each route to a separate authoritative golden only after safe
+   manifests prove same-route file-set and byte determinism, safe decoding and
+   compiled-reader validation pass, and the cross-route relationship report
+   proves the exact distinctions above; commit path-sanitized provenance and
+   strict tests.
 8. Add and verify the exact 259-read recovery fixture, then execute R1 and R2
    twice each using exit-86 failpoints, immutable partial snapshots, resume
    copies, and independent clean controls.
@@ -470,6 +562,9 @@ frozen source.
     tests, WSL shell syntax checks, and `git diff --check`; make separate focused
     commits for harness, clean RLE goldens, recovery evidence, and documentation.
 
-After this plan is committed, the exact next executable milestone is milestone
-1 only.  Do not begin recovery execution, modern2, or modern3 in the same
-change set.
+Medium must resume with a fresh milestone-1 result parent, not the stopped raw
+directory.  Amend the external harness relationship gate before execution so
+it compares route-specific whole files, direct split/wrapper whole files, and
+cross-route payload/decoded reports separately.  Then rerun milestone 1 from
+its first command and complete only milestone 1.  Do not begin recovery
+execution, modern2, or modern3 in the same change set.

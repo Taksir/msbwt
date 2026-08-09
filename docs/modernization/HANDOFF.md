@@ -2,8 +2,8 @@
 
 Status: fresh-prefix reconstruction and the nonuniform/gzip frozen-oracle
 expansion are complete on branch `codex/modernization`; the milestone-1
-decompression compatibility policy is resolved; no modern2 or modern3
-implementation port has started.
+decompression and cross-route compression compatibility policies are resolved;
+no modern2 or modern3 implementation port has started.
 
 ## Start here
 
@@ -171,12 +171,42 @@ oracle-failure special case.  All acceptance criteria below passed.
 
 ## Next milestone boundary
 
-The ambiguity is resolved in `COMPRESSION_RECOVERY_PLAN.md`.  Execute only its
-milestone 1 next: repeat clean post-hoc uniform/nonuniform compression, capture
-the two authoritative `-p 1` decompression failures, run uniform direct
-compressed construction, capture unsupported-nonuniform failures, and validate
-successful RLE readers/relationships.  Compression/decompression and builder
-recovery are deliberately separate promotions.
+The compression ambiguity is resolved in `COMPRESSION_RECOVERY_PLAN.md` as
+policy B, narrowly.  The uniform post-hoc and direct outputs have an identical
+22-byte RLE payload, identical 22 decoded runs, and the exact same 48-symbol BWT.
+Their whole files differ only because frozen post-hoc code writes NPY shape
+`(22,)`, while the direct Cython builder writes `(22L,)`.  Both compiled-reader
+forms passed independently on disposable copies and matched the uncompressed
+golden's query and recovery behavior.  No frozen route is defective.
+
+Execute only milestone 1 next: first amend the external harness so post-hoc and
+direct whole-file hashes are route-specific while direct split/wrapper
+whole-file equality and cross-route payload/decoded/reader equality remain
+mandatory.  Start from a fresh result parent; do not reuse the stopped raw run.
+Repeat clean post-hoc uniform/nonuniform compression, capture the two
+authoritative `-p 1` decompression failures, run uniform direct compressed
+construction, capture unsupported-nonuniform failures, and validate successful
+RLE readers/relationships.  Compression/decompression and builder recovery are
+deliberately separate promotions.
+
+### Resolved compression policy
+
+- Post-hoc `compress`, direct `cfpp -u -c`, and direct `cffq -u -c` each require
+  a separate authoritative whole-file golden and two byte-identical `-p 1`
+  executions.
+- Each successful path requires one fresh `-p 2` execution byte-identical to
+  its own `-p 1` primary.  Direct split and wrapper primaries must remain
+  byte-identical to each other at both process counts.
+- Across uniform routes, require identical RLE payload bytes, run boundaries,
+  symbol/run-length sequence, decoded length and BWT, plus frozen-reader total
+  size, symbol totals, queries, dollar IDs, and recovered strings.
+- Safe decoding must parse NPY framing and the RLE payload independently; reader
+  agreement alone does not prove persistent-byte interchangeability.  Reader
+  checks run only on disposable copies and inventory their derived indexes.
+- Promote each route independently only after same-route determinism, `-p 2`,
+  safe decoding, reader validation, and the cross-route relationship report all
+  pass.  Stop on any difference beyond the documented post-hoc/direct NPY shape
+  header, or on any change to the resolved decompression failure contract.
 
 ### Resolved decompression policy
 
