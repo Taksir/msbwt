@@ -1,9 +1,12 @@
 # Modernization handoff
 
-Status: fresh-prefix reconstruction and the nonuniform/gzip frozen-oracle
-expansion are complete on branch `codex/modernization`; the milestone-1
-decompression and cross-route compression compatibility policies are resolved;
-no modern2 or modern3 implementation port has started.
+Status: Compression/Recovery Milestone 1 (clean RLE) is complete on branch
+`codex/modernization`; the post-hoc and direct uniform routes plus the
+nonuniform post-hoc route are promoted to separate route-specific goldens, the
+uniform cross-route semantic equality and the decompression expected-failure
+contract are verified under `py27-late-05a7d6d83862`, and the host-side safe RLE
+decoder is committed.  Milestone 2 (builder recovery) has not started; no
+modern2 or modern3 implementation port has started.
 
 ## Start here
 
@@ -131,11 +134,12 @@ loading was performed only on disposable copies and created the inventoried
   has a `CompressToRLE.pyx` fallback defect.  Preserve the generated-C route's
   observed failure; do not patch the oracle.
 - Uniform and nonuniform uncompressed preprocessing/build plus plain/gzip input
-  and fixture-derived reader smoke now have golden coverage.  Compression and
-  compressed build still need repeat/promotion evidence.  The two named
-  post-hoc decompression cases now have a resolved expected-failure policy but
-  no committed failure evidence yet.  Recovery, merge, indexing, and broader
-  API/CLI behavior remain.
+  and fixture-derived reader smoke have golden coverage.  Compression/Recovery
+  Milestone 1 (clean RLE) is now promoted: post-hoc and direct uniform plus
+  nonuniform post-hoc routes have route-specific goldens, cross-route uniform
+  semantic equality is verified, and the two decompression expected-failure
+  cases and the two unsupported nonuniform direct cases have committed evidence.
+  Builder recovery, merge, indexing, and broader API/CLI behavior remain.
 - Reader side effects, recovery files, multiprocessing behavior, filesystem
   ordering, and cross-platform byte determinism need operation-specific tests.
 
@@ -169,25 +173,90 @@ oracle-failure special case.  All acceptance criteria below passed.
 5. Path-sanitized provenance, artifacts/manifests, determinism reports, reader
    side-effect inventories, and strict tests are committed.
 
+## Completed Compression/Recovery Milestone 1
+
+Clean RLE construction/conversion is fully characterized and promoted from one
+verified WSL2 ext4 oracle run (`py27-late-05a7d6d83862`, `pyx-historical-cython`,
+candidate `late-python2-candidate`).  The external harness relationship gate was
+amended in commit `48f8ea6` to compare route-specific whole files, direct
+split/wrapper whole files, and cross-route payload/decoded reports separately,
+matching the policy resolved in `5ca132d`.  The run executed two canonical
+`-p 1` groups, the two authoritative `-p 1` decompression failures per case,
+one fresh `-p 2` successful-process comparison, the two unsupported nonuniform
+direct cases, and the disposable compiled-reader evidence, then wrote
+`raw-result.json` with `"status": "passed"`.
+
+### Promoted goldens
+
+Route-specific RLE primaries under
+`compat/goldens/original-0.3.0/<case>/py27-late-05a7d6d83862/pyx-historical-cython/`
+(each with `artifacts/`, `manifest.json`, `decoded-rle.json`, `provenance.json`,
+and `reader-smoke.json`):
+
+| Case | Files | `comp_msbwt.npy` SHA-256 | Raw shape | Runs | Decoded |
+|---|---|---|---|---|---|
+| `uniform-compress-posthoc` | `comp_msbwt.npy` | `53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3` | `(22,)` | 22 | 48 |
+| `nonuniform-compress-posthoc` | `comp_msbwt.npy` | `9d19222eaa78c1d89304e79ff14a8a0a5f0c21c3ae979d179f570f1d8d5c1e66` | `(16,)` | 16 | 30 |
+| `uniform-direct-split` | `comp_msbwt.npy`, `about.npy`, `offsets.npy`, `seqs.npy.{0..5}.npy` | `0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372` | `(22L,)` | 22 | 48 |
+| `uniform-direct-wrapper` | `comp_msbwt.npy`, `about.npy` | `0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372` | `(22L,)` | 22 | 48 |
+
+Shared uniform RLE payload SHA-256
+`6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb`; decoded
+BWT `ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$` (SHA-256
+`75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e`, equal to
+the committed uniform byte primary).  Nonuniform decoded BWT SHA-256
+`7a97b19addd3c41a79dbd6ce5e43609766eca78a971576e1ab2b32e3df80ca03`, equal to
+the committed nonuniform byte primary.  Direct split and wrapper whole files
+are byte-identical and byte-identical across `-p 1` and `-p 2`; each route is
+byte-for-byte deterministic across `run-a`, `run-b`, and `run-p2`.
+
+Cross-route relationship, determinism, coexistence loader preference, profile
+provenance, the two decompression-failure records/manifests/canonical stderr,
+and the two unsupported records are committed under
+`compat/goldens/original-0.3.0/compression-milestone1/`.  Pure-Python pickle
+contents, reader-mutated copies, invalid preallocated decompression outputs, and
+raw run directories are NOT committed; their exact bytes are represented by the
+safe manifests.
+
+### Verified behavior
+
+- Within-route determinism: identical retained file sets, whole-file SHA-256,
+  raw NPY headers, dtype/shape, payload SHA-256, and decoded products across
+  both `-p 1` runs and the `-p 2` run for all four routes.
+- Cross-route uniform semantic equality: identical `|u1` logical shape `(22,)`,
+  RLE payload bytes, 22-run sequence, decoded length 48, and decoded BWT;
+  post-hoc whole file differs from direct only by the `(22,)` vs `(22L,)`
+  NumPy shape literal.
+- Safe RLE decoding (host-side, no NumPy/pickle): parses NPY v1 framing,
+  rejects inconsistent dtype/shape/payload, reports every encoded base-32
+  digit, run boundaries, symbol/count pairs, decoded length, and decoded-BWT
+  hash over numeric symbol-index bytes.
+- Frozen compiled reader: each route loaded as `RLE_BWT`, total size 48 (uniform)
+  / 30 (nonuniform), matched all fixture-derived queries and recovered strings,
+  and created exactly `totalCounts.npy`, `comp_fmIndex.npy`, `comp_refIndex.npy`
+  on disposable copies.  Coexistence of byte and RLE primaries loaded as
+  `ByteBWT`; after removing only the byte primary, loaded as `RLE_BWT` with the
+  same logical results.
+- Decompression expected failure (two fresh `-p 1` probes per case): exit `1`,
+  stderr SHA-256 `227471aa531ec114ada93c2507f6b621df8109d70324b7217285efd518904ac4`,
+  final exception
+  `TypeError: slice indices must be integers or None or have an __index__ method`
+  at `MUS/MultiStringBWT.py:662`.  Source-after gained exactly
+  `totalCounts.p`, `comp_fmIndex.npy`, `comp_refIndex.npy`; destination retained
+  one correctly shaped but all-zero preallocated `msbwt.npy`.  Both runs matched
+  byte-for-byte.
+- Unsupported nonuniform direct compression (`cfpp -p 1 -c`, `cffq -p 1 -c`):
+  exit `0`, no `comp_msbwt.npy`, log-only failure preserved.
+
 ## Next milestone boundary
 
-The compression ambiguity is resolved in `COMPRESSION_RECOVERY_PLAN.md` as
-policy B, narrowly.  The uniform post-hoc and direct outputs have an identical
-22-byte RLE payload, identical 22 decoded runs, and the exact same 48-symbol BWT.
-Their whole files differ only because frozen post-hoc code writes NPY shape
-`(22,)`, while the direct Cython builder writes `(22L,)`.  Both compiled-reader
-forms passed independently on disposable copies and matched the uncompressed
-golden's query and recovery behavior.  No frozen route is defective.
-
-Execute only milestone 1 next: first amend the external harness so post-hoc and
-direct whole-file hashes are route-specific while direct split/wrapper
-whole-file equality and cross-route payload/decoded/reader equality remain
-mandatory.  Start from a fresh result parent; do not reuse the stopped raw run.
-Repeat clean post-hoc uniform/nonuniform compression, capture the two
-authoritative `-p 1` decompression failures, run uniform direct compressed
-construction, capture unsupported-nonuniform failures, and validate successful
-RLE readers/relationships.  Compression/decompression and builder recovery are
-deliberately separate promotions.
+Milestone 1 is committed and green.  The next executable step is Milestone 2
+(builder recovery) only, following `COMPRESSION_RECOVERY_PLAN.md`: add the exact
+259-read `recovery-nonuniform-259` fixture, then run R1 (direct uniform RLE
+checkpoint) and R2 (nonuniform multimerge backup) twice each with exit-86
+failpoints, immutable partial snapshots, resume copies, and independent clean
+controls.  Milestone 3 is non-resumable interruption evidence only.  Do not
+begin modern2 or modern3 implementation first.
 
 ### Resolved compression policy
 
