@@ -124,6 +124,25 @@ export MKL_NUM_THREADS=1
 export NUMEXPR_NUM_THREADS=1
 export VECLIB_MAXIMUM_THREADS=1
 
+# Compiler packages need their own sysroot and linker variables.  Start from a
+# known build environment, then use only activation scripts shipped inside the
+# selected isolated prefix (never user or system shell initialization).
+unset AR AS CC CXX CFLAGS CPPFLAGS CXXFLAGS LD LDFLAGS
+unset CONDA_BUILD_SYSROOT _CONDA_PYTHON_SYSCONFIGDATA_NAME
+export CONDA_PREFIX="$ENV_PREFIX"
+
+TOOLCHAIN_ACTIVATED=0
+set +u
+for activation_name in activate-binutils_linux-64.sh activate-gcc_linux-64.sh activate-gxx_linux-64.sh; do
+    activation_path="$ENV_PREFIX/etc/conda/activate.d/$activation_name"
+    if [ -f "$activation_path" ]; then
+        # shellcheck source=/dev/null
+        . "$activation_path"
+        TOOLCHAIN_ACTIVATED=1
+    fi
+done
+set -u
+
 pick_wrapper() {
     local suffix=$1
     local candidate_path
@@ -136,21 +155,28 @@ pick_wrapper() {
     return 1
 }
 
-if CC_WRAPPER=$(pick_wrapper gcc); then
-    export CC="$CC_WRAPPER"
-elif command -v gcc >/dev/null 2>&1; then
-    export CC=$(command -v gcc)
-else
-    printf 'No conda gcc wrapper or Linux gcc found in sanitized PATH.\n' >&2
-    exit 69
+if [ "$TOOLCHAIN_ACTIVATED" -eq 0 ]; then
+    if CC_WRAPPER=$(pick_wrapper gcc); then
+        export CC="$CC_WRAPPER"
+    elif command -v gcc >/dev/null 2>&1; then
+        export CC=$(command -v gcc)
+    else
+        printf 'No conda gcc wrapper or Linux gcc found in sanitized PATH.\n' >&2
+        exit 69
+    fi
+
+    if CXX_WRAPPER=$(pick_wrapper g++); then
+        export CXX="$CXX_WRAPPER"
+    elif command -v g++ >/dev/null 2>&1; then
+        export CXX=$(command -v g++)
+    else
+        printf 'No conda g++ wrapper or Linux g++ found in sanitized PATH.\n' >&2
+        exit 69
+    fi
 fi
 
-if CXX_WRAPPER=$(pick_wrapper g++); then
-    export CXX="$CXX_WRAPPER"
-elif command -v g++ >/dev/null 2>&1; then
-    export CXX=$(command -v g++)
-else
-    printf 'No conda g++ wrapper or Linux g++ found in sanitized PATH.\n' >&2
+if [ -z "${CC:-}" ] || [ -z "${CXX:-}" ]; then
+    printf 'Compiler activation did not provide both CC and CXX.\n' >&2
     exit 69
 fi
 

@@ -41,7 +41,10 @@ VERSIONED_CANDIDATE_PACKAGES = (
 COMPILER_CONFIG_VARIABLES = (
     "CONFIG_ARGS", "CC", "CFLAGS", "CPPFLAGS", "LDFLAGS", "LDSHARED", "SOABI"
 )
-INHERITED_BUILD_VARIABLES = ("CC", "CXX", "CFLAGS", "CPPFLAGS", "LDFLAGS", "PATH")
+INHERITED_BUILD_VARIABLES = (
+    "AR", "AS", "CC", "CXX", "CFLAGS", "CPPFLAGS", "CXXFLAGS", "LD", "LDFLAGS",
+    "CONDA_BUILD_SYSROOT", "_CONDA_PYTHON_SYSCONFIGDATA_NAME", "PATH"
+)
 
 try:
     STRING_TYPES = (basestring,)
@@ -280,11 +283,12 @@ def copy_frozen_projection(source, destination, manifest):
 
 
 def version_probe_commands(recorder):
+    compiler = os.environ.get("CC") or "gcc"
     commands = [
         ("python-version", [sys.executable, "--version"]),
         ("pip-version", [sys.executable, "-m", "pip", "--version"]),
         ("pip-freeze-all", [sys.executable, "-m", "pip", "freeze", "--all"]),
-        ("compiler-version", ["gcc", "--version"]),
+        ("compiler-version", [compiler, "--version"]),
         ("python-package-versions", [sys.executable, "-c", "import json; import sys; names=['numpy','pysam','Cython','setuptools','wheel']; result={};\nfor name in names:\n try:\n  module=__import__(name); result[name]=getattr(module, '__version__', 'present-no-version')\n except Exception as exc:\n  result[name]='IMPORT_FAILED: %s: %s' % (exc.__class__.__name__, exc)\nprint(json.dumps(result, sort_keys=True))"])
     ]
     for label, argv in commands:

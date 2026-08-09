@@ -27,6 +27,16 @@ SPEC.loader.exec_module(legacy_probe)
 
 
 class LegacyProbeGuardTests(unittest.TestCase):
+    def test_version_probe_uses_selected_compiler(self) -> None:
+        recorder = mock.Mock(spec=legacy_probe.Recorder)
+        recorder.run.return_value = 0
+
+        with mock.patch.dict(legacy_probe.os.environ, {"CC": "/isolated/bin/pinned-cc"}):
+            legacy_probe.version_probe_commands(recorder)
+
+        calls = {call.args[0]: call.args[1] for call in recorder.run.call_args_list}
+        self.assertEqual(calls["compiler-version"], ["/isolated/bin/pinned-cc", "--version"])
+
     def test_first_goldens_reject_non_python27_before_results(self) -> None:
         if sys.version_info[:2] == (2, 7):
             self.skipTest("host interpreter is Python 2.7")
