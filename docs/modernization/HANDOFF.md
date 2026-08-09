@@ -344,10 +344,11 @@ No recovery or successful-golden claim is made for any partial artifact.
 Promoted evidence under `compat/goldens/original-0.3.0/compression-milestone3/`:
 profile provenance, the run-a/run-b determinism report, relationship records
 for m3c1/m3c2/m3c4, run-a/run-b partial safe manifests, sanitized failpoint
-records, parser-refusal records, the m3c1 interrupted temp artifact with its
-manifest, and the m3c2 evidence/clean-compression hashes.  Raw run directories,
-the 1 MB evidence inputs, and the all-zero preallocated primary are not
-committed; their exact bytes are represented by the safe manifests and hashes.
+records, parser-refusal records, the m3c1 interrupted temp artifact (safe
+manifested by the promoted m3c1 partial manifest), and the m3c2
+evidence/clean-compression hashes.  Raw run directories, the 1 MB evidence
+inputs, and the all-zero preallocated primary are not committed; their exact
+bytes are represented by the safe manifests and hashes.
 
 ## Next milestone boundary
 

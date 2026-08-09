@@ -125,25 +125,27 @@ class CompressionMilestone3GoldenTests(unittest.TestCase):
         assert_sanitized(M3 / "relationship-m3c1.json")
 
     def test_m3c1_promoted_temp_artifact_bytes_match_the_golden(self) -> None:
-        evidence = artifact_manifest.load_json(
-            M3 / "m3c1-temp-primary-evidence" / "manifest.json")
-        temp = next(
-            item for item in evidence["artifacts"]
-            if item["path"] == "comp_msbwt.npy.temp.0.npy")
-        self.assertEqual(temp["sha256"], POSTHOC_GOLDEN_SHA256)
-        self.assertEqual(temp["npy"]["dtype_descriptor"], "|u1")
-        self.assertEqual(temp["npy"]["shape"], [22])
-        self.assertEqual(
-            temp["npy"]["payload_sha256"], UNIFORM_RLE_PAYLOAD_SHA256)
+        temp_path = M3 / "m3c1-temp-primary-evidence" / "comp_msbwt.npy.temp.0.npy"
+        temp_bytes = temp_path.read_bytes()
+        self.assertEqual(hashlib.sha256(temp_bytes).hexdigest(), POSTHOC_GOLDEN_SHA256)
         # the interrupted temp chunk is byte-identical to the committed
         # uniform-compress-posthoc comp_msbwt.npy golden
         golden = artifact_manifest.load_json(
             GOLDEN_ROOT / "uniform-compress-posthoc" / PROFILE_ID / ROUTE / "manifest.json")
         golden_comp = next(
             item for item in golden["artifacts"] if item["path"] == "comp_msbwt.npy")
-        self.assertEqual(temp["sha256"], golden_comp["sha256"])
-        self.assertEqual(evidence["content_sha256"], PARTIAL_CONTENT_SHA256["m3c1"])
-        assert_sanitized(M3 / "m3c1-temp-primary-evidence" / "manifest.json")
+        self.assertEqual(
+            hashlib.sha256(temp_bytes).hexdigest(), golden_comp["sha256"])
+        # its safe byte manifest is the promoted partial manifest
+        partial = artifact_manifest.load_json(M3 / "partial" / "m3c1-run-a.manifest.json")
+        temp = next(item for item in partial["artifacts"])
+        self.assertEqual(temp["path"], "comp_msbwt.npy.temp.0.npy")
+        self.assertEqual(temp["sha256"], POSTHOC_GOLDEN_SHA256)
+        self.assertEqual(temp["npy"]["dtype_descriptor"], "|u1")
+        self.assertEqual(temp["npy"]["shape"], [22])
+        self.assertEqual(temp["npy"]["payload_sha256"], UNIFORM_RLE_PAYLOAD_SHA256)
+        self.assertEqual(partial["content_sha256"], PARTIAL_CONTENT_SHA256["m3c1"])
+        assert_sanitized(M3 / "partial" / "m3c1-run-a.manifest.json")
 
     def test_m3c2_worker_fails_before_any_region_with_all_zero_primary(self) -> None:
         rel = load_json(M3 / "relationship-m3c2.json")
