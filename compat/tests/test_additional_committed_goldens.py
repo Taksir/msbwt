@@ -17,8 +17,8 @@ SPEC.loader.exec_module(artifact_manifest)
 
 PROFILE_ID = "py27-late-05a7d6d83862"
 ROUTE = "pyx-historical-cython"
-FIXTURE_MANIFEST_SHA256 = "862187170b964062c4d31f45d2d88973dac793d46095ba8d7f742e74e6253358"
-CASE_MANIFEST_SHA256 = "4757149711e322b56dd0cb8948066955e19c5724343d866e31c8df7a2eb15bd6"
+FIXTURE_MANIFEST_SHA256 = "7144c351057fe1acd8f8481a32fa560d9d85887e8f6d9d6a4140669f2d57eb97"
+CASE_MANIFEST_SHA256 = "513f6957a06e4f1886d9499b4f1287f90a31d0d3e668971b4606bcb8536afc1a"
 GOLDEN_BASE = REPOSITORY_ROOT / "compat" / "goldens" / "original-0.3.0"
 FIXTURE_ROOT = REPOSITORY_ROOT / "compat" / "fixtures" / "synthetic"
 CASE_MANIFEST = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environment" / "oracle-cases.json"

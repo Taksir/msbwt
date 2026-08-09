@@ -17,7 +17,7 @@ SPEC.loader.exec_module(artifact_manifest)
 SOURCE_COMMIT = "7503346ec072ddb89520db86fef85569a9ba093a"
 PROFILE_ID = "py27-late-05a7d6d83862"
 ROUTE = "pyx-historical-cython"
-FIXTURE_MANIFEST_SHA256 = "862187170b964062c4d31f45d2d88973dac793d46095ba8d7f742e74e6253358"
+FIXTURE_MANIFEST_SHA256 = "7144c351057fe1acd8f8481a32fa560d9d85887e8f6d9d6a4140669f2d57eb97"
 EXPECTED_FIXTURES = {
     "compat/fixtures/synthetic/uniform-a.fastq": {
         "byte_count": 173,

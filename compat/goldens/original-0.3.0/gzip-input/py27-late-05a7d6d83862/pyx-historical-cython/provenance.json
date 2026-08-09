@@ -7,8 +7,8 @@
   "source_commit": "7503346ec072ddb89520db86fef85569a9ba093a",
   "source_verification": "passed for all 40 frozen files in both runs",
   "interpreter_gate": "CPython 2.7",
-  "fixture_manifest_sha256": "862187170b964062c4d31f45d2d88973dac793d46095ba8d7f742e74e6253358",
-  "oracle_case_manifest_sha256": "4757149711e322b56dd0cb8948066955e19c5724343d866e31c8df7a2eb15bd6",
+  "fixture_manifest_sha256": "7144c351057fe1acd8f8481a32fa560d9d85887e8f6d9d6a4140669f2d57eb97",
+  "oracle_case_manifest_sha256": "513f6957a06e4f1886d9499b4f1287f90a31d0d3e668971b4606bcb8536afc1a",
   "fixtures": [
     {
       "path": "compat/fixtures/synthetic/uniform-a.fastq.gz",

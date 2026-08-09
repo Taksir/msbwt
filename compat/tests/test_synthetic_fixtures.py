@@ -63,6 +63,57 @@ class SyntheticFixtureGeneratorTests(unittest.TestCase):
             artifacts["nonuniform.fastq"],
         )
 
+    def test_recovery_nonuniform_259_fixture_is_nonuniform_repeated_37_times(self) -> None:
+        """Pin the documented recovery fixture rule and byte contract.
+
+        The plan requires the exact recovery fixture for the nonuniform
+        multimerge backup milestone:
+        ``recovery-nonuniform-259.fastq`` = ``nonuniform.fastq`` repeated 37
+        times, 9102 bytes, SHA-256
+        ``8606e2b580afeafee17600ce6c33db67d14f2cc22235edfa51100811ad6d65b9``.
+        """
+        artifacts = dict(fixture_generator.expected_artifacts())
+        nonuniform = artifacts["nonuniform.fastq"]
+        recovery = artifacts["recovery-nonuniform-259.fastq"]
+
+        self.assertEqual(recovery, nonuniform * 37)
+        self.assertEqual(len(recovery), 9102)
+        self.assertEqual(
+            hashlib.sha256(recovery).hexdigest(),
+            "8606e2b580afeafee17600ce6c33db67d14f2cc22235edfa51100811ad6d65b9",
+        )
+        record_count = recovery.count(b"\n") // 4
+        self.assertEqual(record_count, 259)
+        self.assertEqual(record_count, 7 * 37)
+
+        manifest = json.loads(artifacts[fixture_generator.MANIFEST_NAME].decode("utf-8"))
+        case_ids = {case["id"] for case in manifest["cases"]}
+        self.assertIn("recovery-nonuniform-259", case_ids)
+        recovery_entry = next(
+            item
+            for item in manifest["files"]
+            if item["path"] == "recovery-nonuniform-259.fastq"
+        )
+        self.assertEqual(recovery_entry["byte_count"], 9102)
+        self.assertEqual(
+            recovery_entry["sha256"],
+            "8606e2b580afeafee17600ce6c33db67d14f2cc22235edfa51100811ad6d65b9",
+        )
+
+    def test_recovery_fixture_repeats_ignored_headers_without_changing_sequences(self) -> None:
+        """The 259 reads must be the seven nonuniform sequences repeated exactly."""
+        artifacts = dict(fixture_generator.expected_artifacts())
+        nonuniform_lines = artifacts["nonuniform.fastq"].splitlines()
+        recovery_lines = artifacts["recovery-nonuniform-259.fastq"].splitlines()
+
+        expected = (nonuniform_lines * 37)
+        self.assertEqual(recovery_lines, expected)
+        recovery_sequences = [recovery_lines[index] for index in range(1, len(recovery_lines), 4)]
+        nonuniform_sequences = [
+            nonuniform_lines[index] for index in range(1, len(nonuniform_lines), 4)
+        ]
+        self.assertEqual(recovery_sequences, nonuniform_sequences * 37)
+
     def test_check_reports_drift(self) -> None:
         expected = dict(fixture_generator.expected_artifacts())
 

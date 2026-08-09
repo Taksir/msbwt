@@ -64,7 +64,19 @@ FIXTURE_PURPOSES = {
         "Byte-for-byte deterministic gzip equivalents for the uniform-a and "
         "nonuniform inputs; exercises the legacy .gz input branch."
     ),
+    "recovery-nonuniform-259": (
+        "The nonuniform.fastq content repeated 37 times (259 reads) so the "
+        "frozen nonuniform multimerge path passes its first 256-read group "
+        "boundary and writes a backup.256.npy; used by the implemented builder "
+        "recovery milestone."
+    ),
 }
+
+# The recovery milestone needs a nonuniform dataset that crosses the frozen
+# 256-group backup boundary.  Repeating the exact seven-read nonuniform input
+# 37 times yields 259 reads while keeping the repeated headers harmless because
+# the frozen FASTQ preprocessor ignores headers.
+RECOVERY_NONUNIFORM_REPEATS = 37
 
 
 def _fastq_bytes(records: Iterable[Tuple[str, str, str, str]]) -> bytes:
@@ -120,12 +132,16 @@ def expected_files() -> Tuple[Tuple[str, bytes], ...]:
     """Return every generated fixture in its stable manifest order."""
     uniform_a = _fastq_bytes(FASTQ_RECORDS["uniform-a.fastq"])
     nonuniform = _fastq_bytes(FASTQ_RECORDS["nonuniform.fastq"])
+    recovery_nonuniform = _fastq_bytes(
+        FASTQ_RECORDS["nonuniform.fastq"] * RECOVERY_NONUNIFORM_REPEATS
+    )
     return (
         ("uniform-a.fastq", uniform_a),
         ("uniform-b.fastq", _fastq_bytes(FASTQ_RECORDS["uniform-b.fastq"])),
         ("nonuniform.fastq", nonuniform),
         ("uniform-a.fastq.gz", _gzip_bytes(uniform_a)),
         ("nonuniform.fastq.gz", _gzip_bytes(nonuniform)),
+        ("recovery-nonuniform-259.fastq", recovery_nonuniform),
     )
 
 
@@ -166,6 +182,11 @@ def expected_manifest(files: Sequence[Tuple[str, bytes]]) -> bytes:
                 "id": "gzip-input",
                 "purpose": FIXTURE_PURPOSES["gzip-input"],
                 "files": ["uniform-a.fastq.gz", "nonuniform.fastq.gz"],
+            },
+            {
+                "id": "recovery-nonuniform-259",
+                "purpose": FIXTURE_PURPOSES["recovery-nonuniform-259"],
+                "files": ["recovery-nonuniform-259.fastq"],
             },
         ],
         "files": [_file_metadata(name, raw) for name, raw in files],

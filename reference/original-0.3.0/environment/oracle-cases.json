@@ -37,6 +37,17 @@
       ],
       "id": "gzip-input",
       "preprocess_options": []
+    },
+    {
+      "build_options": [
+        "-p",
+        "1"
+      ],
+      "files": [
+        "recovery-nonuniform-259.fastq"
+      ],
+      "id": "recovery-nonuniform-259",
+      "preprocess_options": []
     }
   ],
   "format": "msbwt-legacy-oracle-cases-v1"

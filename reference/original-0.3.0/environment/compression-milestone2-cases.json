@@ -1,0 +1,84 @@
+{
+  "format": "msbwt-legacy-compression-milestone2-cases-v1",
+  "profile_id": "py27-late-05a7d6d83862",
+  "route": "pyx-historical-cython",
+  "failpoint_exit_code": 86,
+  "canonical_runs": [
+    "run-a",
+    "run-b"
+  ],
+  "fixture_cases": {
+    "uniform": "uniform-multifile",
+    "nonuniform_recovery": "recovery-nonuniform-259"
+  },
+  "uniform_preprocess": {
+    "tree_sha256": "4f666f2f8841b2326160ca0d8c2fb975cac3e8e58d006e90ee1265fd238ecf05",
+    "manifest_content_sha256": "a8bdda27f2729745f4afb7b00dad41150e361b949a8807489b13be02b704fad1"
+  },
+  "cases": {
+    "r1": {
+      "label": "direct uniform RLE checkpoint",
+      "adapter_function": "MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs",
+      "adapter_processes": 1,
+      "failpoint_prefix": "Finished iteration 2 in",
+      "preprocess_argv": [
+        "pp",
+        "-u",
+        "DESTINATION",
+        "uniform-a.fastq",
+        "uniform-b.fastq"
+      ],
+      "partial_checkpoint_column": 2,
+      "partial_minimum_files": [
+        "fmDeltas.2.npy",
+        "fmStarts.2.npy"
+      ],
+      "partial_minimum_state_files": 6,
+      "resume_argv": [
+        "cfpp",
+        "-p",
+        "1",
+        "-u",
+        "-c",
+        "DESTINATION"
+      ],
+      "resume_log_marker": "Resuming previous run from 2",
+      "clean_argv": [
+        "cfpp",
+        "-p",
+        "1",
+        "-u",
+        "-c",
+        "DESTINATION"
+      ],
+      "reader_case": "uniform-multifile"
+    },
+    "r2": {
+      "label": "nonuniform multimerge backup",
+      "adapter_function": "MUSCython.MultimergeCython.interleaveLevelMerge",
+      "adapter_processes": 1,
+      "adapter_uniform": false,
+      "failpoint_prefix": "Backup creation finished.",
+      "preprocess_argv": [
+        "pp",
+        "DESTINATION",
+        "recovery-nonuniform-259.fastq"
+      ],
+      "partial_backup": "backup.256.npy",
+      "resume_argv": [
+        "cfpp",
+        "-p",
+        "1",
+        "DESTINATION"
+      ],
+      "resume_log_marker": "Backup located, resuming...",
+      "clean_argv": [
+        "cfpp",
+        "-p",
+        "1",
+        "DESTINATION"
+      ],
+      "reader_case": "recovery-nonuniform-259"
+    }
+  }
+}

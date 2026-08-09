@@ -22,6 +22,13 @@
       ],
       "id": "gzip-input",
       "purpose": "Byte-for-byte deterministic gzip equivalents for the uniform-a and nonuniform inputs; exercises the legacy .gz input branch."
+    },
+    {
+      "files": [
+        "recovery-nonuniform-259.fastq"
+      ],
+      "id": "recovery-nonuniform-259",
+      "purpose": "The nonuniform.fastq content repeated 37 times (259 reads) so the frozen nonuniform multimerge path passes its first 256-read group boundary and writes a backup.256.npy; used by the implemented builder recovery milestone."
     }
   ],
   "files": [
@@ -54,6 +61,12 @@
       "kind": "fastq-gzip",
       "path": "nonuniform.fastq.gz",
       "sha256": "93936b82d32a57dc8d1e7658fc8421ea61819db69414ac1464c5287e7148ccd8"
+    },
+    {
+      "byte_count": 9102,
+      "kind": "fastq",
+      "path": "recovery-nonuniform-259.fastq",
+      "sha256": "8606e2b580afeafee17600ce6c33db67d14f2cc22235edfa51100811ad6d65b9"
     }
   ],
   "generator": {

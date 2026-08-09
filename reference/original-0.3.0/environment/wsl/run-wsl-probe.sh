@@ -15,6 +15,7 @@ Usage:
     --route generated-c-no-cython|pyx-historical-cython|all \
     --fixture-root /absolute/path/to/synthetic-fixtures \
     [--compression-milestone1 --golden-root /absolute/path/to/original-0.3.0-goldens] \
+    [--compression-milestone2 --golden-root /absolute/path/to/original-0.3.0-goldens] \
     [--golden-case uniform-multifile|nonuniform-prefix|gzip-input]...
 
 The Python environment is expected to be isolated already.  The supplied
@@ -33,6 +34,7 @@ ROUTE=""
 FIXTURE_ROOT=""
 GOLDEN_CASES=()
 COMPRESSION_MILESTONE1=0
+COMPRESSION_MILESTONE2=0
 GOLDEN_ROOT=""
 
 while [ "$#" -gt 0 ]; do
@@ -67,6 +69,10 @@ while [ "$#" -gt 0 ]; do
             ;;
         --compression-milestone1)
             COMPRESSION_MILESTONE1=1
+            shift
+            ;;
+        --compression-milestone2)
+            COMPRESSION_MILESTONE2=1
             shift
             ;;
         --golden-root)
@@ -224,6 +230,13 @@ if [ "$COMPRESSION_MILESTONE1" -eq 1 ]; then
         exit 66
     fi
     COMPRESSION_ARGS+=(--compression-milestone1 --golden-root "$GOLDEN_ROOT")
+fi
+if [ "$COMPRESSION_MILESTONE2" -eq 1 ]; then
+    if [ -z "$GOLDEN_ROOT" ] || [ ! -d "$GOLDEN_ROOT" ]; then
+        printf '%s\n' '--compression-milestone2 requires an existing --golden-root.' >&2
+        exit 66
+    fi
+    COMPRESSION_ARGS+=(--compression-milestone2 --golden-root "$GOLDEN_ROOT")
 fi
 
 exec "$PYTHON" "$PROBE" \
