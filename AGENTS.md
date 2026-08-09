@@ -38,10 +38,10 @@ These rules apply to every change in this repository.
 
 ## Tests, data, and performance
 
-- Use deterministic tiny fixtures first, then checksum-pinned small public bacterial and viral data. Never commit or require private datasets.
+- Use deterministic tiny fixtures first, then checksum-pinned small public bacterial and viral data. Never commit or require private datasets. The first verified CPython-2 oracle outputs and exact profile are under `compat/goldens/original-0.3.0/`; never regenerate them under Python 3.
 - Record raw-file hashes and logical array metadata. Do not update goldens without an approved compatibility explanation.
 - Establish correctness and reproducible baselines before optimization. Report wall time, CPU time, peak memory, disk I/O, process count, cache state, platform, compiler, and dataset hash.
-- Do not claim a platform supported until its build and behavioral suite pass there. Python 2 requires a reproducible legacy Linux container as the reference.
+- Do not claim a platform supported until its build and behavioral suite pass there. Python 2 requires an isolated reproducible Linux reference environment; the verified baseline is the hash-pinned WSL2 profile documented in `docs/modernization/LEGACY_ORACLE_STATUS.md`, while containers remain a future portability option.
 
 ## Repository hygiene
 

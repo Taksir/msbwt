@@ -4,11 +4,13 @@ This directory contains execution harness files only.  It is **not** a copy of
 the MSBWT implementation and must never be used to repair it.  The canonical
 oracle source is commit `7503346ec072ddb89520db86fef85569a9ba093a`.
 
-Status: **the linux/amd64 base digest is resolved but not locally executed; no
-candidate dependency combination has been verified yet.**  A direct WSL runner
-is available, but it has not produced successful evidence.  Every version in
-`environment/probe-matrix.json` is an explicit candidate, not a claim that it
-builds or reproduces legacy output.
+Status: **the direct WSL runner has verified the late-Python-2 candidate and
+produced the first committed synthetic goldens.**  See
+`../../../docs/modernization/LEGACY_ORACLE_STATUS.md` and
+`../../../compat/goldens/original-0.3.0/`.  The other matrix entries remain
+candidate-only; success of this profile is not a claim about the authors'
+original dependency environment.  The resolved Docker base remains an
+unexecuted secondary reference because this host uses WSL directly.
 
 The reference Dockerfile explicitly selects `linux/amd64`, matching its pinned
 manifest.  An ARM host therefore needs an amd64-capable Docker builder/emulator
@@ -78,19 +80,34 @@ directory):
 
 ```bash
 bash reference/original-0.3.0/environment/wsl/run-wsl-probe.sh \
-  --python /home/mytho/.local/legacy-python2/bin/python \
+  --python /home/USER/.local/legacy-python2/bin/python \
   --source /mnt/d/path/to/msbwt \
-  --results /home/mytho/msbwt-oracle-results \
+  --results /home/USER/msbwt-oracle-results \
   --candidate late-python2-candidate \
   --route pyx-historical-cython \
   --fixture-root /mnt/d/path/to/msbwt/compat/fixtures/synthetic
 ```
 
 Keep `--results` on Linux-native storage; the source can be a mounted
-read-only checkout.  The runner selects conda compiler wrappers in the chosen
-environment when present, otherwise an already-installed Linux `gcc`/`g++`.
-It records the selected values in `environment.json`; it never asks for or
-stores a password.
+read-only checkout.  The runner clears inherited build variables and, when
+present, sources only the binutils/GCC/G++ activation scripts shipped inside
+the selected conda prefix.  Those scripts provide the compiler sysroot and
+exact flags required by archived conda toolchains.  For a non-conda
+environment it selects compiler wrappers from that prefix, then an
+already-installed Linux `gcc`/`g++`.  It records the selected values in
+`environment.json`; it never asks for or stores a password.
+
+Reconstruct the verified profile with
+`environment/wsl/reconstruct-py27-late.sh`.  It requires a new absolute target
+prefix plus the official micromamba 2.8.1 Linux x86-64 artifact from
+`https://github.com/mamba-org/micromamba-releases/releases/download/2.8.1-0/micromamba-linux-64`,
+whose SHA-256 must be
+`9689782d863c05a1bf5d2d371ba527104e7a4eb4310c1637d8653b751aed9c82`.
+The script enforces that bootstrap hash, downloads the 32 exact conda artifacts
+in `environment/wsl/locks/`, verifies every SHA-256 before installation, and
+then installs the six exact wheel URLs under pip `--require-hashes` with source
+fallback disabled.  It uses a temporary isolated mamba root and no apt package,
+system Python-2 package, sudo call, shell initialization, or existing target.
 
 The golden path rejects any interpreter other than CPython 2.7 before creating
 a result directory.  The exact-version gate imports NumPy, pysam, and Cython (and pip, setuptools,
@@ -134,5 +151,5 @@ credentials, queries, or fragments are redacted rather than persisted.
 
 `probe-matrix.json` separates the README-era source claims from a later
 Python-2 candidate.  The script accepts only exact candidate values and records
-what was actually importable.  Until a result directory records success, all
-of these remain unverified.
+what was actually importable.  The late-Python-2 candidate now has two passing
+golden runs; the historical dependency candidates remain unverified.

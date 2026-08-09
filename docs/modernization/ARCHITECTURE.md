@@ -14,7 +14,9 @@ benchmarks/                  reproducible datasets and operation drivers
 docs/                        provenance, compatibility, migration, security, releases
 ```
 
-Do not create this layout until the legacy oracle and initial goldens are working. The paths are an architectural destination, not an implementation performed by this audit.
+The legacy-oracle/initial-golden gate is now met for the `reference/` and
+`compat/` roles.  The two `packages/` roots remain an architectural destination;
+do not create or port them without the next implementation-phase authorization.
 
 The frozen source should be byte-identical to audited commit `7503346` (or reference that commit without duplication) plus only the minimum external harness/container files needed to execute it. Never “repair” the oracle; record its failures. Build modern2 and modern3 in separate environments because both distributions should initially retain `MUS`, `MUSCython`, and the `msbwt` command and therefore cannot safely coexist in one site-packages environment.
 
@@ -52,7 +54,11 @@ A monorepo still provides the strongest compatibility control:
 
 ## Modern2 toolchain
 
-- Python 2.7 in a digest-pinned legacy Linux container is the Tier 1 reference.
+- Python 2.7 in an isolated hash-pinned Linux environment is the Tier 1
+  reference.  The current verified baseline is WSL2 profile
+  `py27-late-05a7d6d83862`; reproduce it from the committed locks.  A portable
+  container image remains desirable but is not required to trust the committed
+  byte manifests.
 - Select the newest Cython 3.0.x release that empirically builds the full extension set on Python 2.7; set `language_level=2` explicitly and pin every build dependency.
 - Determine newest practical Python-2-compatible NumPy, pysam, setuptools/pip/wheel, compiler, and manylinux baseline by a tested compatibility matrix. Do not infer “latest compatible” from metadata alone.
 - Preserve Python 2 string/integer semantics intentionally. Add explicit `cdivision` or `//` only after tests demonstrate the original result.
