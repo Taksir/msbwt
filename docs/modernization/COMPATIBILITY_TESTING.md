@@ -21,13 +21,15 @@ Resolve NumPy and pysam through empirical build/import/operation tests. Capture 
 
 The first deliverable is not “all tests pass”; it is a machine-readable matrix of what builds, imports, runs, fails, and crashes.
 
-Status update (2026-08-08): the late-Python-2 WSL profile
+Status update (2026-08-09): the late-Python-2 WSL profile
 `py27-late-05a7d6d83862` now builds/imports the unmodified oracle and has two
-byte-identical `uniform-multifile` runs plus a legacy load/query smoke.  Exact
-artifacts, manifests, and sanitized provenance are committed under
+byte-identical runs each for `uniform-multifile`, `nonuniform-prefix`, and
+`gzip-input`.  The latter two also have fixture-derived query/recovery checks
+and derived-index inventories from disposable copies.  Exact artifacts,
+manifests, determinism reports, and sanitized provenance are committed under
 `compat/goldens/original-0.3.0/`.  The original-version dependency candidates
-and generated-C route are still separate characterization work; do not treat
-the verified late profile as proof of their behavior.
+and generated-C route remain separate characterization work; do not treat the
+verified late profile as proof of their behavior.
 
 ## Fixture ladder
 

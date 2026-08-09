@@ -1,7 +1,8 @@
 # Modernization handoff
 
-Status: frozen-oracle milestone complete on branch `codex/modernization`; no
-modern2 or modern3 implementation port has started.
+Status: fresh-prefix reconstruction and the nonuniform/gzip frozen-oracle
+expansion are complete on branch `codex/modernization`; no modern2 or modern3
+implementation port has started.
 
 ## Start here
 
@@ -34,10 +35,14 @@ Read the detailed evidence only as needed:
    imports through the historical-pyx route.
 4. Two independent `uniform-multifile` oracle runs passed `pp -u` followed by
    `cfpp -p 1 -u`; preprocessing and build snapshots match byte-for-byte.
-5. Exact environment locks, sanitized provenance, golden manifests, and tests
-   are committed.  The last full host suite passed 28 tests, fixture-byte
-   verification, the 40-file source check, WSL shell syntax checks, and
-   `git diff --check`.
+5. The committed reconstruction script rebuilt the verified profile in a new
+   empty prefix without sudo or user/global Python state.  It hash-verifies and
+   installs the pinned pip 20.3.4 wheel before processing the full wheel lock.
+6. Two independent runs each of `nonuniform-prefix` and `gzip-input` passed all
+   gates, matched byte-for-byte at preprocessing and build stages, and passed
+   fixture-derived reader query/recovery checks on disposable copies.  Their
+   exact artifacts, manifests, provenance, determinism reports, and strict
+   tests are committed.
 
 ## Authoritative oracle environment
 
@@ -63,10 +68,11 @@ bash reference/original-0.3.0/environment/wsl/reconstruct-py27-late.sh \
 
 The script refuses an existing prefix and verifies micromamba plus all conda
 and wheel hashes.  It needs network access, `curl`, `sha256sum`, and Python 3,
-but no sudo.  Its syntax and locks are tested; a completely fresh-prefix run of
-the committed reconstruction script remains unverified.
+but no sudo.  A completely fresh-prefix execution of the committed script
+passed the frozen-source, fixture, profile-version, import, and compatibility
+checks without relying on an existing micromamba, pip, or user environment.
 
-## Authoritative golden output
+## Authoritative golden outputs
 
 The first golden case is:
 
@@ -83,6 +89,20 @@ A frozen-reader smoke on a disposable build copy loaded 48 symbols and returned
 `ACGTN=3`, `AAAAA=1`, `CCCCC=1`, and `AGCTA=0`.  Loading creates derived
 `totalCounts.npy` and `fmIndex.npy`, so never run reader tests in a pristine
 golden directory.
+
+The next two golden cases are under the same profile and route:
+
+- `nonuniform-prefix`: preprocessing tree `71f549690de7b78b8b2979692f0594966cb33618e1f7e48c098a17ecc3ea31a7`,
+  build tree `ad4aa043feb549e0af861ffde0deca11f8ac0b030c5305183f61f04f5f4d8c0a`,
+  and `msbwt.npy` shape `(30,)`.
+- `gzip-input`: preprocessing tree `e8e2d8d4c7f40019a3e20acdaba515514f00cdc06cba47056240628a678018c9`,
+  build tree `188acea4cac12486c4c1a0d97ef618e807d3142e28cc266c56dda141d621bc8f`,
+  and `msbwt.npy` shape `(54,)`.
+
+Both were executed twice in fresh WSL ext4 result parents with one process.
+Their raw manifests and reader-smoke JSON matched exactly across runs.  Reader
+loading was performed only on disposable copies and created the inventoried
+`totalCounts.npy` and `fmIndex.npy` files without mutating promoted snapshots.
 
 ## Decisions that remain in force
 
@@ -107,27 +127,27 @@ golden directory.
 - The committed generated C has mixed Cython provenance, and frozen `setup.py`
   has a `CompressToRLE.pyx` fallback defect.  Preserve the generated-C route's
   observed failure; do not patch the oracle.
-- Only uniform uncompressed preprocessing/build and a small reader smoke have
-  golden coverage.  Nonuniform/gzip, compressed build, compression,
-  decompression, recovery, merge, indexing, and broader API/CLI behavior remain.
+- Uniform and nonuniform uncompressed preprocessing/build plus plain/gzip input
+  and fixture-derived reader smoke now have golden coverage.  Compressed build,
+  compression, decompression, recovery, merge, indexing, and broader API/CLI
+  behavior remain.
 - Reader side effects, recovery files, multiprocessing behavior, filesystem
   ordering, and cross-platform byte determinism need operation-specific tests.
 
-## Exact next milestone
+## Completed exact milestone
 
-Expand the frozen-oracle synthetic baseline, without changing implementation,
-for these two cases in this order:
+The frozen-oracle synthetic baseline was expanded, without changing the frozen
+implementation, for these two cases in order:
 
 1. `nonuniform-prefix`: `pp OUTPUT nonuniform.fastq`, then
    `cfpp -p 1 OUTPUT`.
 2. `gzip-input`: `pp OUTPUT uniform-a.fastq.gz nonuniform.fastq.gz`, then
    `cfpp -p 1 OUTPUT`.
 
-Extend the external harness mechanically so cases are manifest-driven; do not
-embed modernized behavior or special-case oracle failures.  Compression and
-recovery are the following milestone, not part of this one.
+The external harness is manifest-driven and contains no modernized behavior or
+oracle-failure special case.  All acceptance criteria below passed.
 
-### Acceptance criteria
+### Completed acceptance evidence
 
 1. Before every run, the genuine CPython-2.7 gate, exact profile-version gate,
    extension build/import, CLI version, fixture hashes, and frozen 40-file
@@ -141,8 +161,17 @@ recovery are the following milestone, not part of this one.
 4. On disposable copies only, load each successful build with the frozen reader,
    assert fixture-derived query/recovery results, and inventory every derived
    side-effect file.  Do not mutate promoted snapshots.
-5. Commit path-sanitized provenance, artifacts/manifests, determinism reports,
-   and strict tests.  Finish with the commands below and a clean worktree.
+5. Path-sanitized provenance, artifacts/manifests, determinism reports, reader
+   side-effect inventories, and strict tests are committed.
+
+## Next milestone boundary
+
+Compression and recovery are the next documented compatibility area.  The
+repository does not yet resolve their exact command sequence, case order, or
+promotion acceptance criteria.  Stop for that policy decision before running
+or changing the oracle.  Do not begin modern2 or modern3 implementation first.
+
+Finish every handoff with the commands below and a clean worktree.
 
 ```text
 python -B compat/fixtures/synthetic/generate_fixtures.py --check

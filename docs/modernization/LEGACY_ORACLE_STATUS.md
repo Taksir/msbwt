@@ -1,18 +1,19 @@
 # Legacy oracle reconstruction status
 
-Status date: 2026-08-08 (runs completed 2026-08-09 UTC)
+Status date: 2026-08-09
 
 ## Current result
 
 The frozen original source now builds and runs under genuine CPython 2.7 in an
-isolated WSL2 Linux environment.  The first `uniform-multifile` preprocessing
-and uncompressed-build artifacts are committed under
+isolated WSL2 Linux environment.  `uniform-multifile`, `nonuniform-prefix`, and
+`gzip-input` preprocessing and uncompressed-build artifacts are committed under
 `compat/goldens/original-0.3.0/`.
 
-Two independent fully green runs produced identical file sets, whole-file
-SHA-256 values, raw NumPy header bytes, and payload hashes.  A frozen-reader
-smoke on a disposable build copy loaded 48 symbols and returned the expected
-counts: `ACGTN=3`, `AAAAA=1`, `CCCCC=1`, and absent `AGCTA=0`.
+Two independent fully green runs per case produced identical file sets,
+whole-file SHA-256 values, raw NumPy header bytes, logical dtype/shape, and
+payload hashes.  Frozen-reader smokes on disposable copies returned exact
+fixture-derived substring counts and recovered strings.  Each load's created
+`totalCounts.npy` and `fmIndex.npy` files were inventoried separately.
 
 This establishes a verified late-Python-2 oracle profile.  It does not prove
 the exact dependency environment originally used by the authors.
@@ -53,6 +54,25 @@ Use the committed stage manifests as the byte authority.  The probe's
 retained in `provenance.json`; they are not interchangeable with the manifest
 content hashes.
 
+The completed expansion used these exact additional commands without `-u`:
+
+1. `pp OUTPUT nonuniform.fastq`; `cfpp -p 1 OUTPUT`.
+2. `pp OUTPUT uniform-a.fastq.gz nonuniform.fastq.gz`; `cfpp -p 1 OUTPUT`.
+
+Both cases passed twice in fresh ext4 result parents.  Their preprocessing/build
+tree hashes, artifact manifests, reader results, and derived-file inventories
+are recorded under their case/profile/route golden directories.
+
+## Reproducible reconstruction
+
+The committed `reconstruct-py27-late.sh` was exercised against a genuinely new
+empty prefix.  It used bundled/ensurepip pip only to bootstrap, fetched the
+already-pinned pip 20.3.4 wheel, verified its SHA-256, installed it locally with
+no dependency resolution or user site, asserted `python -m pip --version`, and
+then processed the unchanged wheel lock.  Reconstruction and the subsequent
+frozen-source, fixture, profile, import, and compatibility checks passed without
+sudo or an existing micromamba/pip/user environment.
+
 ## Diagnosed reconstruction constraints
 
 - Ubuntu 26.04 repositories contain no Python 2 runtime/dev packages, so an
@@ -74,8 +94,8 @@ content hashes.
 
 ## Next compatibility work
 
-1. Add golden cases for nonuniform preprocessing/build, gzip input, compressed
-   build, compression/decompression, and recovery before porting those paths.
+1. Define exact command order and acceptance criteria for compressed build,
+   compression/decompression, and recovery before running or porting them.
 2. Characterize query/index side effects separately: first load creates
    `totalCounts.npy` and `fmIndex.npy`, so smoke tests must use snapshot copies.
 3. Probe the historical dependency candidate in a clean activated environment
