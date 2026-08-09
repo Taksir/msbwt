@@ -17,7 +17,9 @@ import probe_legacy
 
 def write_json(path, value):
     with open(path, "wb") as handle:
-        encoded = json.dumps(value, indent=2, sort_keys=True, ensure_ascii=True)
+        encoded = json.dumps(
+            value, indent=2, sort_keys=True, ensure_ascii=True, separators=(",", ": ")
+        )
         if not isinstance(encoded, bytes):
             encoded = encoded.encode("utf-8")
         handle.write(encoded)

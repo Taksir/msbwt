@@ -19,7 +19,7 @@
   },
   "reader_smoke": {
     "matches": true,
-    "result_sha256": "ec0f5aba1be48c35d798d64edd7bb8faea493d2006d44c98109a033fcafa17c1"
+    "result_sha256": "26bd635edd4f9e7a214589bd952a6c15ac946e0fccfa6662ff5f21a3da07c28e"
   },
   "comparison_scope": "identical retained file sets, whole-file SHA-256, raw NumPy header bytes, logical dtype/shape, and payload SHA-256",
   "status": "passed"
