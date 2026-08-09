@@ -94,8 +94,9 @@ sudo or an existing micromamba/pip/user environment.
 
 ## Next compatibility work
 
-1. Define exact command order and acceptance criteria for compressed build,
-   compression/decompression, and recovery before running or porting them.
+1. Execute clean RLE milestone 1 from `COMPRESSION_RECOVERY_PLAN.md`; its exact
+   command order, artifact policy, relationships, and stop conditions are now
+   source-resolved.  Keep its promotion separate from later recovery evidence.
 2. Characterize query/index side effects separately: first load creates
    `totalCounts.npy` and `fmIndex.npy`, so smoke tests must use snapshot copies.
 3. Probe the historical dependency candidate in a clean activated environment

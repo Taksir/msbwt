@@ -18,6 +18,8 @@ root `README.md` available for the modernization project.
 Read the detailed evidence only as needed:
 
 - `LEGACY_ORACLE_STATUS.md`: executed environment, results, and constraints.
+- `COMPRESSION_RECOVERY_PLAN.md`: source-resolved next commands, artifact
+  policy, failpoints, stop conditions, and acceptance checklist.
 - `COMPATIBILITY_TESTING.md`: characterization and reader/writer matrix.
 - `BEHAVIORAL_SURFACE.md`: CLI, API, compiled modules, and persistent files.
 - `ARCHITECTURE.md`: recommended two-distribution monorepo design.
@@ -166,10 +168,18 @@ oracle-failure special case.  All acceptance criteria below passed.
 
 ## Next milestone boundary
 
-Compression and recovery are the next documented compatibility area.  The
-repository does not yet resolve their exact command sequence, case order, or
-promotion acceptance criteria.  Stop for that policy decision before running
-or changing the oracle.  Do not begin modern2 or modern3 implementation first.
+The ambiguity is resolved in `COMPRESSION_RECOVERY_PLAN.md`.  Execute only its
+milestone 1 next: clean post-hoc uniform/nonuniform compression, decompression,
+uniform direct compressed construction, unsupported-nonuniform failure records,
+and reader/roundtrip relationships.  Compression/decompression and builder
+recovery are deliberately separate promotions.
+
+Do not start recovery execution until clean RLE milestone 1 is committed and
+green.  Recovery then uses only the named external failpoints and immutable
+partial snapshots in the plan.  Post-hoc compression, decompression, and the
+uniform byte builder have no source-supported resume entry; characterize their
+interruptions as failures rather than inventing recovery.  Do not begin modern2
+or modern3 implementation first.
 
 Finish every handoff with the commands below and a clean worktree.
 
