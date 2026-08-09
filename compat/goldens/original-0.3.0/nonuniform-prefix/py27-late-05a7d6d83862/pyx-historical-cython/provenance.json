@@ -1,0 +1,48 @@
+{
+  "format": "msbwt-legacy-golden-provenance-v1",
+  "case_id": "nonuniform-prefix",
+  "profile_id": "py27-late-05a7d6d83862",
+  "candidate": "late-python2-candidate",
+  "route": "pyx-historical-cython",
+  "source_commit": "7503346ec072ddb89520db86fef85569a9ba093a",
+  "source_verification": "passed for all 40 frozen files in both runs",
+  "interpreter_gate": "CPython 2.7",
+  "fixture_manifest_sha256": "862187170b964062c4d31f45d2d88973dac793d46095ba8d7f742e74e6253358",
+  "oracle_case_manifest_sha256": "4757149711e322b56dd0cb8948066955e19c5724343d866e31c8df7a2eb15bd6",
+  "fixtures": [
+    {
+      "path": "compat/fixtures/synthetic/nonuniform.fastq",
+      "byte_count": 246,
+      "sha256": "e19ef01c7683cd81534fada1f8142ddf35710a2e1bf9b70d92bb8de2acb1973e"
+    }
+  ],
+  "commands": [
+    "python -c 'from MUS import CommandLineInterface; CommandLineInterface.mainRun()' pp OUTPUT nonuniform.fastq",
+    "python -c 'from MUS import CommandLineInterface; CommandLineInterface.mainRun()' cfpp -p 1 OUTPUT"
+  ],
+  "runs": [
+    {
+      "id": "run-a",
+      "started_utc": "2026-08-09T03:57:18Z",
+      "report_status": "passed",
+      "command_failures": 0
+    },
+    {
+      "id": "run-b",
+      "started_utc": "2026-08-09T04:01:26Z",
+      "report_status": "passed",
+      "command_failures": 0
+    }
+  ],
+  "all_gate_returncodes": 0,
+  "preprocess_oracle_tree_sha256": "71f549690de7b78b8b2979692f0594966cb33618e1f7e48c098a17ecc3ea31a7",
+  "build_oracle_tree_sha256": "ad4aa043feb549e0af861ffde0deca11f8ac0b030c5305183f61f04f5f4d8c0a",
+  "legacy_reader_smoke": {
+    "performed_on": "separate disposable copies of both successful build outputs",
+    "reader": "frozen MUSCython.MultiStringBWTCython.loadBWT under the same CPython 2.7 profile",
+    "status": "passed",
+    "golden_artifacts_mutated": false,
+    "side_effect_files": ["fmIndex.npy", "totalCounts.npy"]
+  },
+  "path_policy": "Host-specific absolute paths and full raw environment dumps are intentionally not committed"
+}

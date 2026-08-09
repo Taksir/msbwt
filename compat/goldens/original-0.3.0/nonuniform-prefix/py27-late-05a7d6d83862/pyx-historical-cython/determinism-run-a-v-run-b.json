@@ -1,0 +1,26 @@
+{
+  "format": "msbwt-legacy-determinism-comparison-v1",
+  "runs": ["run-a", "run-b"],
+  "preprocess": {
+    "matches": true,
+    "added": [],
+    "changed": [],
+    "removed": [],
+    "manifest_content_sha256": "5602c09a053cec15eb925b558b6e41aec65af3ce4e1261cfdfdc4b7d006c1ee3",
+    "oracle_tree_sha256": "71f549690de7b78b8b2979692f0594966cb33618e1f7e48c098a17ecc3ea31a7"
+  },
+  "build": {
+    "matches": true,
+    "added": [],
+    "changed": [],
+    "removed": [],
+    "manifest_content_sha256": "cfa30dfc7a3712cad7648c7408ddc11c6f4a53ea2f820eefb543705473fb81c3",
+    "oracle_tree_sha256": "ad4aa043feb549e0af861ffde0deca11f8ac0b030c5305183f61f04f5f4d8c0a"
+  },
+  "reader_smoke": {
+    "matches": true,
+    "result_sha256": "ec0f5aba1be48c35d798d64edd7bb8faea493d2006d44c98109a033fcafa17c1"
+  },
+  "comparison_scope": "identical retained file sets, whole-file SHA-256, raw NumPy header bytes, logical dtype/shape, and payload SHA-256",
+  "status": "passed"
+}
