@@ -1,12 +1,15 @@
 # Modernization handoff
 
-Status: Compression/Recovery Milestone 1 (clean RLE) is complete on branch
-`codex/modernization`; the post-hoc and direct uniform routes plus the
-nonuniform post-hoc route are promoted to separate route-specific goldens, the
-uniform cross-route semantic equality and the decompression expected-failure
-contract are verified under `py27-late-05a7d6d83862`, and the host-side safe RLE
-decoder is committed.  Milestone 2 (builder recovery) has not started; no
-modern2 or modern3 implementation port has started.
+Status: Compression/Recovery Milestone 1 (clean RLE) and Milestone 2 (builder
+recovery) are complete on branch `codex/modernization`.  The post-hoc and
+direct uniform routes plus the nonuniform post-hoc route are promoted to
+separate route-specific goldens, the uniform cross-route semantic equality and
+the decompression expected-failure contract are verified under
+`py27-late-05a7d6d83862`, the host-side safe RLE decoder is committed, and the
+R1/R2 builder-recovery evidence with the resolved R2 clean-vs-recovered legacy
+contract is promoted under `compat/goldens/original-0.3.0/compression-milestone2/`.
+Milestone 3 has not started; no modern2 or modern3 implementation port has
+started.
 
 ## Start here
 
@@ -248,15 +251,67 @@ safe manifests.
 - Unsupported nonuniform direct compression (`cfpp -p 1 -c`, `cffq -p 1 -c`):
   exit `0`, no `comp_msbwt.npy`, log-only failure preserved.
 
+## Completed Compression/Recovery Milestone 2
+
+Implemented builder recovery is fully characterized and promoted from one
+verified WSL2 ext4 oracle run (`py27-late-05a7d6d83862`,
+`pyx-historical-cython`) through the manifest-driven milestone-2 probe
+(`compression-milestone2-cases.json`, `compression_milestone2.py`,
+`failpoint_adapter.py`).  Both cases ran twice (run-a/run-b) with exit-86
+external failpoints, immutable partial snapshots, resume copies, and
+independent clean controls.  The frozen source was not modified.
+
+### R1 direct uniform RLE checkpoint
+
+- Failpoint: frozen `MSBWTCompGenCython.createMsbwtFromSeqs(dir, 1, logger)`
+  exited 86 at `Finished iteration 2 in` (`MUSCython/MSBWTCompGenCython.pyx:288`).
+- Partial tree (deterministic, 22 files): six `state.<symbol>.2.dat`, plus
+  `fmStarts.2.npy`, `fmDeltas.2.npy`, six `inserts.*.2.npy`, and the eight
+  preprocess files.
+- Resume `cfpp -p 1 -u -c` logged `Resuming previous run from 2`; the resumed
+  and clean final trees are byte-identical (9 files each) and the recovered
+  `comp_msbwt.npy` SHA-256 is `0ca6329b54f0...`, byte-identical to the
+  committed `uniform-direct-split` golden and decoding to the committed
+  uniform BWT (`75134b489342...`, 48 symbols).
+- Readers (RLE_BWT, total 48, 8 dollars) match on resumed and clean copies.
+
+### R2 nonuniform multimerge backup
+
+- Failpoint: frozen `MultimergeCython.interleaveLevelMerge(dir, 1, False,
+  logger)` exited 86 at `Backup creation finished.`
+  (`MUSCython/MultimergeCython.pyx:768`); complete `backup.256.npy` retained.
+- Resume `cfpp -p 1` logged `Backup located, resuming...`.  The recovered and
+  clean `msbwt.npy` primaries are byte-identical: `|u1`, shape `(1110,)`,
+  SHA-256 `04c9d88aa1c3...`.
+- Resolved R2 legacy contract (authoritative): the clean control
+  deterministically retains `backup.256.npy` (SHA-256 `ab03a690620f...`) as an
+  auxiliary clean-path checkpoint artifact, while the recovered build
+  deterministically removes it.  No other file differences exist.  Readers
+  (ByteBWT, total 1110, 259 dollars) match on resumed and clean copies.
+
+### Promoted evidence
+
+`compat/goldens/original-0.3.0/compression-milestone2/` holds profile
+provenance, the run-a/run-b determinism report, the R1 and R2
+clean-vs-recovered relationship reports, combined reader evidence, sanitized
+failpoint records, partial-tree safe manifests (r1/r2, run-a/run-b), the
+recovered and clean artifact trees with safe manifests (`r1-recovered`,
+`r1-clean`, `r2-recovered`, `r2-clean`), and the `backup.256.npy` auxiliary
+classification record.  Raw run directories, reader-mutated copies, and the
+frozen scratch build are not committed; their exact bytes are represented by
+the safe manifests and reports.
+
 ## Next milestone boundary
 
-Milestone 1 is committed and green.  The next executable step is Milestone 2
-(builder recovery) only, following `COMPRESSION_RECOVERY_PLAN.md`: add the exact
-259-read `recovery-nonuniform-259` fixture, then run R1 (direct uniform RLE
-checkpoint) and R2 (nonuniform multimerge backup) twice each with exit-86
-failpoints, immutable partial snapshots, resume copies, and independent clean
-controls.  Milestone 3 is non-resumable interruption evidence only.  Do not
-begin modern2 or modern3 implementation first.
+Milestone 1 is committed and green.  Milestone 2 (builder recovery) is complete
+following `COMPRESSION_RECOVERY_PLAN.md`: the exact 259-read
+`recovery-nonuniform-259` fixture is committed, R1 (direct uniform RLE
+checkpoint) and R2 (nonuniform multimerge backup) each ran twice under the
+verified profile with exit-86 failpoints, immutable partial snapshots, resume
+copies, and independent clean controls, and the R2 clean-vs-recovered legacy
+contract is resolved (see the plan).  Milestone 3 is non-resumable interruption
+evidence only and has not begun.  Do not begin modern2 or modern3
+implementation first.
 
 ### Resolved compression policy
 
