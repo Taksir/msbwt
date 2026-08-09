@@ -4,9 +4,12 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import shutil
 import subprocess
 import sys
 import unittest
+import uuid
+from contextlib import contextmanager
 from pathlib import Path
 from unittest import mock
 
@@ -18,6 +21,20 @@ sys.dont_write_bytecode = True
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 PROBE_PATH = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environment" / "probe_legacy.py"
 FIXTURE_ROOT = REPOSITORY_ROOT / "compat" / "fixtures" / "synthetic"
+FROZEN_MANIFEST = (
+    REPOSITORY_ROOT
+    / "reference"
+    / "original-0.3.0"
+    / "environment"
+    / "frozen-source.sha256"
+)
+FROZEN_README = (
+    REPOSITORY_ROOT
+    / "reference"
+    / "original-0.3.0"
+    / "frozen-source"
+    / "README.md"
+)
 
 sys.path.insert(0, str(PROBE_PATH.parent))
 SPEC = importlib.util.spec_from_file_location("legacy_probe_guard", PROBE_PATH)
@@ -26,7 +43,52 @@ legacy_probe = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(legacy_probe)
 
 
+@contextmanager
+def workspace_temporary_directory():
+    base = REPOSITORY_ROOT / "compat" / ".tmp-tests"
+    base.mkdir(exist_ok=True)
+    temporary = base / ("frozen-projection-" + uuid.uuid4().hex)
+    temporary.mkdir()
+    try:
+        yield temporary
+    finally:
+        shutil.rmtree(temporary)
+        try:
+            base.rmdir()
+        except OSError:
+            pass
+
+
 class LegacyProbeGuardTests(unittest.TestCase):
+    def test_public_readme_may_differ_from_frozen_projection_readme(self) -> None:
+        expected_hash = "4b1979b56531e683f05f21f03cb9b1b6ebf70ab5a6f01e658382e02505ba62f4"
+        entries = legacy_probe.verify_frozen_source.read_manifest(str(FROZEN_MANIFEST))
+        readme_entry = next(entry for entry in entries if entry[1] == "README.md")
+
+        self.assertEqual(len(entries), 40)
+        self.assertEqual(readme_entry, (
+            expected_hash,
+            "README.md",
+            "reference/original-0.3.0/frozen-source/README.md",
+        ))
+        self.assertEqual(legacy_probe.sha256_file(str(FROZEN_README)), expected_hash)
+        self.assertNotEqual(
+            legacy_probe.sha256_file(str(REPOSITORY_ROOT / "README.md")),
+            expected_hash,
+        )
+        self.assertEqual(
+            legacy_probe.verify_frozen_source.verify(str(REPOSITORY_ROOT), str(FROZEN_MANIFEST)),
+            [],
+        )
+
+        with workspace_temporary_directory() as temporary:
+            destination = temporary / "oracle-source"
+            legacy_probe.copy_frozen_projection(
+                str(REPOSITORY_ROOT), str(destination), str(FROZEN_MANIFEST)
+            )
+            self.assertEqual((destination / "README.md").read_bytes(), FROZEN_README.read_bytes())
+            self.assertEqual(sum(path.is_file() for path in destination.rglob("*")), 40)
+
     def test_version_probe_uses_selected_compiler(self) -> None:
         recorder = mock.Mock(spec=legacy_probe.Recorder)
         recorder.run.return_value = 0

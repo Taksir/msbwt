@@ -27,18 +27,29 @@ def read_manifest(path):
             pieces = line.split(None, 1)
             if len(pieces) != 2 or len(pieces[0]) != 64:
                 raise ValueError("invalid manifest line {0}".format(number))
-            digest, relative = pieces
+            digest, declaration = pieces
+            marker = b" <- "
+            if marker in declaration:
+                destination, source_relative = declaration.split(marker, 1)
+                if marker in source_relative:
+                    raise ValueError("invalid manifest source override on line {0}".format(number))
+            else:
+                destination = declaration
+                source_relative = declaration
             try:
                 digest_text = digest.decode("ascii").lower()
             except AttributeError:
                 digest_text = digest.lower()
-            try:
-                relative_text = relative.decode("utf-8")
-            except AttributeError:
-                relative_text = relative
-            if os.path.isabs(relative_text) or ".." in relative_text.split("/"):
-                raise ValueError("unsafe manifest path on line {0}".format(number))
-            entries.append((digest_text, relative_text))
+            decoded_paths = []
+            for value in (destination, source_relative):
+                try:
+                    value_text = value.decode("utf-8")
+                except AttributeError:
+                    value_text = value
+                if not value_text or os.path.isabs(value_text) or ".." in value_text.split("/"):
+                    raise ValueError("unsafe manifest path on line {0}".format(number))
+                decoded_paths.append(value_text)
+            entries.append((digest_text, decoded_paths[0], decoded_paths[1]))
     if not entries:
         raise ValueError("manifest has no entries")
     return entries
@@ -56,14 +67,14 @@ def sha256_file(path):
 
 def verify(source, manifest):
     mismatches = []
-    for expected, relative in read_manifest(manifest):
-        path = os.path.join(source, *relative.split("/"))
+    for expected, destination_relative, source_relative in read_manifest(manifest):
+        path = os.path.join(source, *source_relative.split("/"))
         if not os.path.isfile(path):
-            mismatches.append((relative, "missing", expected, None))
+            mismatches.append((destination_relative, "missing", expected, None))
             continue
         actual = sha256_file(path)
         if actual != expected:
-            mismatches.append((relative, "sha256", expected, actual))
+            mismatches.append((destination_relative, "sha256", expected, actual))
     return mismatches
 
 

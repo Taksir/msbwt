@@ -1,8 +1,12 @@
 # Frozen original 0.3.0 oracle harness
 
-This directory contains execution harness files only.  It is **not** a copy of
-the MSBWT implementation and must never be used to repair it.  The canonical
-oracle source is commit `7503346ec072ddb89520db86fef85569a9ba093a`.
+This directory contains execution harness files plus collision-safe frozen
+source overrides.  It is **not** a second editable MSBWT implementation and
+must never be used to repair the oracle.  The canonical source is commit
+`7503346ec072ddb89520db86fef85569a9ba093a`.  Its original CRLF `README.md`
+bytes live under `frozen-source/` because the public root README documents the
+modernization project; the manifest restores those bytes to root only in each
+disposable oracle copy.
 
 Status: **the direct WSL runner has verified the late-Python-2 candidate and
 produced the first committed synthetic goldens.**  See

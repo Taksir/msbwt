@@ -274,9 +274,9 @@ def copy_frozen_projection(source, destination, manifest):
     if os.path.exists(destination):
         raise RuntimeError("scratch destination already exists: {0}".format(destination))
     entries = verify_frozen_source.read_manifest(manifest)
-    for unused_digest, relative in entries:
-        source_path = os.path.join(source, *relative.split("/"))
-        destination_path = os.path.join(destination, *relative.split("/"))
+    for unused_digest, destination_relative, source_relative in entries:
+        source_path = os.path.join(source, *source_relative.split("/"))
+        destination_path = os.path.join(destination, *destination_relative.split("/"))
         parent = os.path.dirname(destination_path)
         ensure_directory(parent)
         shutil.copy2(source_path, destination_path)

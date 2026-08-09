@@ -10,6 +10,9 @@ are authoritative.  The frozen projection is 40 files from commit
 `7503346ec072ddb89520db86fef85569a9ba093a`, verified by
 `reference/original-0.3.0/environment/frozen-source.sha256`.  Never repair that
 projection to make the oracle run; capture failures as legacy behavior.
+The historical CRLF `README.md` is stored under the dedicated frozen reference
+area and mapped back to root in disposable oracle copies, leaving the public
+root `README.md` available for the modernization project.
 
 Read the detailed evidence only as needed:
 

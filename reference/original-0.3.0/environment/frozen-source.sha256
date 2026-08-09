@@ -1,5 +1,8 @@
 # SHA-256 content manifest for commit 7503346ec072ddb89520db86fef85569a9ba093a.
 # Extra harness/docs files are allowed; every listed file must match exactly.
+# An optional "DESTINATION <- REPOSITORY_SOURCE" keeps a historical file at a
+# collision-free reference path while restoring its original destination in
+# disposable oracle copies.
 8e687b1d69969b6a53ab85c1df7ce2fe7d88e6fe8fb3df5c0a6f249d1d1eb986  AUTHORS
 34a5caa873ae8a2eb845218ece36e926390c124f85a849b2e40808ef162563a6  LICENSE
 5812a644730478f7cea367314c89e0f05e3d9c89fd7bb99cd4e198dd395bc345  MANIFEST.in
@@ -36,7 +39,7 @@ d15334db62e819f827672a4288c463e4bea732910e3c0ef26db5289d22900859  MUSCython/Mult
 c0a1811897a97dfeecfb91023cc3d75d2d021e00b3a93e4749be58c3f3fb8a7f  MUSCython/RLE_BWTCython.c
 495e94fbc4d546f4cb19834646b22ec50c5bbbdbae0c959bb8bf400ff4bc0888  MUSCython/RLE_BWTCython.pyx
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  MUSCython/__init__.py
-4b1979b56531e683f05f21f03cb9b1b6ebf70ab5a6f01e658382e02505ba62f4  README.md
+4b1979b56531e683f05f21f03cb9b1b6ebf70ab5a6f01e658382e02505ba62f4  README.md <- reference/original-0.3.0/frozen-source/README.md
 b9b343f4a093b54996510725d9d2ab4251aa0f7581df1d4006d7bc47c2a5f18b  bin/msbwt
 bde3b405f48b3e559fa03229f46ffea062af7982592eba150b9e81af51cf4cf2  setup.cfg
 e3764145ccc558345a1713fcc82dc99862171dae0b2ec8e5ad1c804bbd9676b3  setup.py
