@@ -1,0 +1,109 @@
+{
+  "format": "msbwt-legacy-compression-milestone3-cases-v1",
+  "profile_id": "py27-late-05a7d6d83862",
+  "route": "pyx-historical-cython",
+  "failpoint_exit_code": 86,
+  "natural_failure_exit_code": 87,
+  "canonical_runs": [
+    "run-a",
+    "run-b"
+  ],
+  "fixture_cases": {
+    "uniform": "uniform-multifile"
+  },
+  "uniform_preprocess": {
+    "tree_sha256": "4f666f2f8841b2326160ca0d8c2fb975cac3e8e58d006e90ee1265fd238ecf05",
+    "manifest_content_sha256": "a8bdda27f2729745f4afb7b00dad41150e361b949a8807489b13be02b704fad1"
+  },
+  "uniform_byte_golden": {
+    "path": "uniform-multifile/PROFILE/ROUTE/build/artifacts",
+    "primary": "msbwt.npy",
+    "primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "symbol_count": 48,
+    "tree_sha256": "842bfc80080ca553ee23f07eb3da7616df96822cee7d774d163c1c2058d0132e"
+  },
+  "evidence": {
+    "repeat_count": 22000,
+    "expected_total_symbols": 1056000,
+    "compression_worksize": 1000000,
+    "expected_tuples": 2
+  },
+  "uniform_rle_payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+  "cases": {
+    "m3c1": {
+      "label": "post-hoc compression worker interruption",
+      "adapter_function": "MUS.MSBWTGen.compressBWTPoolProcess",
+      "adapter_processes": 1,
+      "failpoint_prefix": "M3C1-PROCEDURAL-FAILPOINT-NEVER-LOGGED",
+      "expected_exit_codes": [
+        86
+      ],
+      "temp_prefix": "comp_msbwt.npy.temp.",
+      "final_primary": "comp_msbwt.npy"
+    },
+    "m3c2": {
+      "label": "post-hoc decompression worker interruption",
+      "adapter_function": "MUS.MSBWTGen.decompressBWTPoolProcess",
+      "adapter_processes": 1,
+      "failpoint_prefix": "M3C2-PROCEDURAL-FAILPOINT-NEVER-LOGGED",
+      "expected_exit_codes": [
+        86,
+        87
+      ],
+      "worksize": 1000000,
+      "expected_tuples": 2,
+      "source_side_effects": [
+        "comp_fmIndex.npy",
+        "comp_refIndex.npy",
+        "totalCounts.p"
+      ]
+    },
+    "m3c4": {
+      "label": "uniform byte-builder interruption",
+      "adapter_function": "MUSCython.MSBWTGenCython.createMsbwtFromSeqs",
+      "adapter_processes": 1,
+      "failpoint_prefix": "Finished iteration 2 in",
+      "expected_exit_codes": [
+        86
+      ],
+      "preprocess_argv": [
+        "pp",
+        "-u",
+        "DESTINATION",
+        "uniform-a.fastq",
+        "uniform-b.fastq"
+      ],
+      "restart_argv": [
+        "cfpp",
+        "-p",
+        "1",
+        "-u",
+        "DESTINATION"
+      ],
+      "restart_mode": "restart-from-scratch",
+      "partial_checkpoint_column": 2,
+      "partial_minimum_state_files": 6,
+      "clean_primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f"
+    }
+  },
+  "parser_refusals": {
+    "m3c1": {
+      "cli": [
+        "compress",
+        "-p",
+        "1",
+        "SOURCE",
+        "DESTINATION"
+      ]
+    },
+    "m3c2": {
+      "cli": [
+        "decompress",
+        "-p",
+        "1",
+        "SOURCE",
+        "DESTINATION"
+      ]
+    }
+  }
+}

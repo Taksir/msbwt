@@ -15,6 +15,19 @@ Cases:
   r2  frozen MUSCython.MultimergeCython.interleaveLevelMerge(dataset, 1,
        False, logger)  -- nonuniform multimerge backup at
        "Backup creation finished."
+  m3c1  non-resumable post-hoc compression: call the frozen
+       MUS.MSBWTGen.compressBWTPoolProcess once for the first bin tuple, then
+       exit 86 before the parent join step runs.  The destination retains the
+       complete comp_msbwt.npy.temp.<bin>.npy chunk and no final primary.
+  m3c2  non-resumable post-hoc decompression: replicate the frozen
+       MUS.MSBWTGen.decompressBWT preallocation and tuple dispatch, then call
+       the frozen MUS.MSBWTGen.decompressBWTPoolProcess for the first tuple.
+       If that worker completes, exit 86 before the second tuple; if the frozen
+       worker itself raises (the committed decompression failure contract),
+       record the natural failure and exit NATURAL_FAILURE_EXIT_CODE.
+  m3c4  uniform byte builder: frozen MUSCython.MSBWTGenCython.createMsbwtFromSeqs
+       interrupted at "Finished iteration 2 in".  The byte builder has no
+       checkpoint scan, so a later CLI run restarts from scratch.
 """
 from __future__ import print_function
 
@@ -25,6 +38,8 @@ import sys
 import time
 
 FAILPOINT_EXIT_CODE = 86
+NATURAL_FAILURE_EXIT_CODE = 87
+COMPRESSION_WORKSIZE = 1000000
 
 
 def write_json(path, value):
@@ -40,9 +55,12 @@ def write_json(path, value):
 def parse_args(argv):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dataset", required=True,
-                        help="preprocessed dataset directory passed to the frozen builder")
-    parser.add_argument("--case", required=True, choices=("r1", "r2"),
-                        help="recovery case selector for the frozen entry point")
+                        help="dataset directory passed to the frozen worker")
+    parser.add_argument("--case", required=True,
+                        choices=("r1", "r2", "m3c1", "m3c2", "m3c4"),
+                        help="recovery/failure case selector for the frozen entry point")
+    parser.add_argument("--destination", default=None,
+                        help="interrupted destination directory for m3c1/m3c2")
     parser.add_argument("--failpoint-prefix", required=True,
                         help="exact completed-checkpoint logger message prefix")
     parser.add_argument("--record", required=True,
@@ -118,17 +136,161 @@ class FailpointLogger(object):
             self._handle.close()
 
 
-def run_case(args, logger):
+def run_byte_builder_case(args, logger):
     # The adapter is executed by script path, so its working directory (the
     # frozen build root passed by the harness) is not automatically on
     # sys.path.  Insert it so the compiled MUSCython extensions resolve.
     sys.path.insert(0, os.getcwd())
-    if args.case == "r1":
-        from MUSCython import MSBWTCompGenCython
-        MSBWTCompGenCython.createMsbwtFromSeqs(args.dataset, args.processes, logger)
+    from MUSCython import MSBWTGenCython
+    MSBWTGenCython.createMsbwtFromSeqs(args.dataset, args.processes, logger)
+
+
+def run_compression_worker_case(args, logger):
+    """Call the frozen post-hoc compression worker once, then exit 86.
+
+    The frozen ``compressBWT`` parent would otherwise compute the bin tuples,
+    run every ``compressBWTPoolProcess`` worker, then join the temp chunks into
+    ``comp_msbwt.npy`` and delete the temp files.  This adapter replicates only
+    the dispatch of the first bin and exits before any parent join step, so the
+    destination retains the complete ``comp_msbwt.npy.temp.<bin>.npy`` chunk
+    and never receives the final primary.
+    """
+    sys.path.insert(0, os.getcwd())
+    from MUS import MSBWTGen
+    import numpy as np
+
+    if args.destination is None:
+        raise RuntimeError("m3c1 requires --destination")
+    inputFN = os.path.join(args.dataset, "msbwt.npy")
+    bwt = np.load(inputFN, 'r')
+    numBins = max(args.processes, bwt.shape[0] / COMPRESSION_WORKSIZE)
+    startIndex = 0
+    endIndex = bwt.shape[0] / numBins
+    tempFN = os.path.join(args.destination, 'comp_msbwt.npy.temp.0.npy')
+    tup = (inputFN, startIndex, endIndex, tempFN)
+    logger.info('Invoking compressBWTPoolProcess for first tuple {0}'.format(repr(tup)))
+    ret = MSBWTGen.compressBWTPoolProcess(tup)
+    logger.info('compressBWTPoolProcess returned size {0}'.format(ret[0]))
+    write_json(args.record, {
+        "adapter": "failpoint_adapter.py",
+        "case": args.case,
+        "dataset": args.dataset,
+        "destination": args.destination,
+        "exit_code": FAILPOINT_EXIT_CODE,
+        "mode": "first-worker-completed",
+        "first_tuple": {
+            "input_fn": inputFN,
+            "start_index": startIndex,
+            "end_index": endIndex,
+            "temp_fn": tempFN,
+        },
+        "worker_returned_size": ret[0],
+        "num_bins": numBins,
+    })
+    logger.close()
+    os._exit(FAILPOINT_EXIT_CODE)
+
+
+def run_decompression_worker_case(args, logger):
+    """Replicate the frozen decompression preallocation and first worker tuple.
+
+    The frozen ``decompressBWT`` parent preallocates ``<dst>/msbwt.npy`` and
+    computes the ``(src, dst, start, end)`` tuples.  This adapter replicates
+    exactly those steps, calls the frozen ``decompressBWTPoolProcess`` for the
+    first tuple, and exits 86 before the second tuple.  If the frozen worker
+    itself raises (the committed profile-specific decompression failure), the
+    natural failure is recorded and the adapter exits
+    ``NATURAL_FAILURE_EXIT_CODE`` so the harness can distinguish an induced
+    interruption from a worker failure.
+    """
+    sys.path.insert(0, os.getcwd())
+    from MUS import MSBWTGen
+    from MUS import MultiStringBWT
+    import numpy as np
+
+    if args.destination is None:
+        raise RuntimeError("m3c2 requires --destination")
+    msbwt = MultiStringBWT.CompressedMSBWT()
+    msbwt.loadMsbwt(args.dataset, None)
+    totalSize = msbwt.getTotalSize()
+    outputFile = np.lib.format.open_memmap(
+        os.path.join(args.destination, 'msbwt.npy'), 'w+', '<u1', (totalSize,))
+    del outputFile
+
+    worksize = COMPRESSION_WORKSIZE
+    tups = [None] * (totalSize / worksize + 1)
+    x = 0
+    if totalSize > worksize:
+        for x in xrange(0, totalSize / worksize):
+            tups[x] = (args.dataset, args.destination, x * worksize, (x + 1) * worksize)
+        tups[-1] = (args.dataset, args.destination, (x + 1) * worksize, totalSize)
     else:
-        from MUSCython import MultimergeCython
-        MultimergeCython.interleaveLevelMerge(args.dataset, args.processes, False, logger)
+        tups[0] = (args.dataset, args.destination, 0, totalSize)
+
+    logger.info('Preallocated msbwt.npy totalSize={0}; tuples={1}'.format(totalSize, len(tups)))
+    logger.info('Invoking decompressBWTPoolProcess for first tuple {0}'.format(repr(tups[0])))
+    try:
+        MSBWTGen.decompressBWTPoolProcess(tups[0])
+    except Exception as exc:
+        import traceback
+        logger.error('decompressBWTPoolProcess first tuple raised {0}: {1}'.format(
+            exc.__class__.__name__, exc))
+        formatted = traceback.format_exc()
+        traceback.print_exc()
+        locations = [line.strip() for line in formatted.split("\n")
+                     if 'File "' in line]
+        write_json(args.record, {
+            "adapter": "failpoint_adapter.py",
+            "case": args.case,
+            "dataset": args.dataset,
+            "destination": args.destination,
+            "exit_code": NATURAL_FAILURE_EXIT_CODE,
+            "mode": "first-tuple-worker-failed-naturally",
+            "exception_type": exc.__class__.__name__,
+            "exception": str(exc),
+            "traceback_locations": locations,
+            "total_size": totalSize,
+            "tuple_count": len(tups),
+            "first_tuple": list(tups[0]),
+        })
+        logger.close()
+        os._exit(NATURAL_FAILURE_EXIT_CODE)
+    logger.info('decompressBWTPoolProcess first tuple completed')
+    write_json(args.record, {
+        "adapter": "failpoint_adapter.py",
+        "case": args.case,
+        "dataset": args.dataset,
+        "destination": args.destination,
+        "exit_code": FAILPOINT_EXIT_CODE,
+        "mode": "first-tuple-completed",
+        "total_size": totalSize,
+        "tuple_count": len(tups),
+        "first_tuple": list(tups[0]),
+    })
+    logger.close()
+    os._exit(FAILPOINT_EXIT_CODE)
+
+
+def run_case(args, logger):
+    if args.case in ("r1", "r2"):
+        # The adapter is executed by script path, so its working directory (the
+        # frozen build root passed by the harness) is not automatically on
+        # sys.path.  Insert it so the compiled MUSCython extensions resolve.
+        sys.path.insert(0, os.getcwd())
+        if args.case == "r1":
+            from MUSCython import MSBWTCompGenCython
+            MSBWTCompGenCython.createMsbwtFromSeqs(args.dataset, args.processes, logger)
+        else:
+            from MUSCython import MultimergeCython
+            MultimergeCython.interleaveLevelMerge(args.dataset, args.processes, False, logger)
+    elif args.case == "m3c4":
+        run_byte_builder_case(args, logger)
+    elif args.case == "m3c1":
+        run_compression_worker_case(args, logger)
+    elif args.case == "m3c2":
+        run_decompression_worker_case(args, logger)
+    else:  # pragma: no cover - argparse restricts the choices
+        raise RuntimeError("unknown case {0}".format(args.case))
 
 
 def main(argv=None):
