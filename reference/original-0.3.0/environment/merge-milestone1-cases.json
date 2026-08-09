@@ -55,6 +55,21 @@
     "tree_sha256": "842bfc80080ca553ee23f07eb3da7616df96822cee7d774d163c1c2058d0132e",
     "symbol_count": 48
   },
+  "regeneration": {
+    "oracle_class": "secondary-regenerated-source",
+    "cython_version": "0.29.36",
+    "frozen_pyx": "MUSCython/GenericMerge.pyx",
+    "frozen_pyx_sha256": "fe8b699c73a0e671b63cbbe7f2eeba941b91a321156a02df44bf0e010cedce87",
+    "committed_generated_c": "MUSCython/GenericMerge.c",
+    "committed_generated_c_sha256": "9fcf5ec63751c0c3fb56476fa901761fcb218603b5b1c168c645de407343b6ea",
+    "cythonize_source": "from Cython.Build import cythonize; import numpy; cythonize('MUSCython/GenericMerge.pyx', include_path=[numpy.get_include()], force=True)",
+    "build_argv": [
+      "setup.py",
+      "build_ext",
+      "--inplace"
+    ],
+    "scope": "MUSCython.GenericMerge extension only; frozen .pyx unmodified"
+  },
   "expected": {
     "input_a": {
       "reads": 4,

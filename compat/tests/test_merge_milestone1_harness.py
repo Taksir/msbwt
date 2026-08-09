@@ -60,6 +60,21 @@ class MergeMilestone1HarnessTests(unittest.TestCase):
         self.assertEqual(manifest["expected"]["merged"]["interleave_shape"], [7])
         self.assertEqual(manifest["expected"]["merged"]["symbol_counts"],
                          {"A": 9, "C": 9, "G": 9, "N": 4, "T": 9, "$": 8})
+        regeneration = manifest["regeneration"]
+        self.assertEqual(regeneration["oracle_class"], "secondary-regenerated-source")
+        self.assertEqual(regeneration["cython_version"], "0.29.36")
+        self.assertEqual(
+            regeneration["frozen_pyx_sha256"],
+            "fe8b699c73a0e671b63cbbe7f2eeba941b91a321156a02df44bf0e010cedce87")
+        self.assertEqual(
+            regeneration["committed_generated_c_sha256"],
+            "9fcf5ec63751c0c3fb56476fa901761fcb218603b5b1c168c645de407343b6ea")
+        self.assertIn("force=True", regeneration["cythonize_source"])
+        self.assertEqual(regeneration["build_argv"],
+                         ["setup.py", "build_ext", "--inplace"])
+        self.assertEqual(
+            regeneration["scope"],
+            "MUSCython.GenericMerge extension only; frozen .pyx unmodified")
 
     def test_runner_records_the_exact_merge_contract(self) -> None:
         source = RUNNER_PATH.read_text(encoding="utf-8")
@@ -74,6 +89,9 @@ class MergeMilestone1HarnessTests(unittest.TestCase):
             'output_paths != ["inter0.npy", "msbwt.npy"]',
             '"merge -p 1 stderr lacks the numProcs NameError"',
             "def nameerror_probe(",
+            "def segfault_probe(",
+            "def verify_frozen_projection(",
+            "def regenerate_generic_merge(",
             "def merge_case(",
             "def clean_case(",
             "def reader_evidence(",
@@ -81,6 +99,32 @@ class MergeMilestone1HarnessTests(unittest.TestCase):
             "def execute(",
         ):
             self.assertIn(required, source)
+
+    def test_runner_records_the_regeneration_and_segfault_contract(self) -> None:
+        source = RUNNER_PATH.read_text(encoding="utf-8")
+
+        for required in (
+            "SEGFAULT_EXIT_CODE = -11",
+            "GENERIC_MERGE_PYX = \"MUSCython/GenericMerge.pyx\"",
+            "GENERIC_MERGE_C = \"MUSCython/GenericMerge.c\"",
+            'returncode != SEGFAULT_EXIT_CODE',
+            'a_side_effects != ["fmIndex.npy", "totalCounts.npy"]',
+            'cythonize_argv = [sys.executable, "-c", regen["cythonize_source"]]',
+            'build_argv = [sys.executable] + regen["build_argv"]',
+            'if pre_pyx_hash != regen["frozen_pyx_sha256"]:',
+            'if pre_c_hash != regen["committed_generated_c_sha256"]:',
+            "regenerated_c_different_from_committed",
+            'result["regeneration"] = regenerate_generic_merge(',
+            '"segfault"',
+            '"oracle_class": config["regeneration"]["oracle_class"]',
+        ):
+            self.assertIn(required, source)
+
+    def test_manifest_pins_the_cythonize_source_literal(self) -> None:
+        manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+        self.assertIn(
+            "cythonize('MUSCython/GenericMerge.pyx'",
+            manifest["regeneration"]["cythonize_source"])
 
     def test_runner_records_the_executed_unboundlocalerror_defect(self) -> None:
         # The executed -p 1 probe raised UnboundLocalError (a NameError
@@ -100,14 +144,20 @@ class MergeMilestone1HarnessTests(unittest.TestCase):
         self.assertIn(b"0.23.4", first_line)
         self.assertNotIn(b"0.29.36", first_line)
 
-    def test_plan_documents_the_blocking_segfault_and_decision(self) -> None:
+    def test_plan_documents_the_resolved_policy_and_segfault(self) -> None:
         plan = PLAN_PATH.read_text(encoding="utf-8")
-        self.assertIn("Executed blocking finding", plan)
-        self.assertIn("deterministically segfaults", plan)
-        self.assertIn("SIGSEGV", plan)
+        self.assertIn("Resolved merge compatibility policy", plan)
+        self.assertIn("LEGACY GENERATED-CODE DEFECT", plan)
+        self.assertIn("LEGACY SOURCE BUG", plan)
+        self.assertIn("SECONDARY REGENERATED-SOURCE ORACLE", plan)
+        self.assertIn("deterministic SIGSEGV", plan)
         self.assertIn("Cython 0.23.4", plan)
+        self.assertIn("Cython 0.29.36", plan)
         self.assertIn("UnboundLocalError", plan)
-        self.assertIn("Decision required before modern2", plan)
+        self.assertIn("Executed blocking finding (resolved)", plan)
+        self.assertIn("secondary-regenerated-source", plan)
+        self.assertIn("merge -p 1", plan)
+        self.assertIn("merge -p 2", plan)
 
     def test_probe_requires_merge_inputs_and_historical_pyx_route(self) -> None:
         source = PROBE_PATH.read_text(encoding="utf-8")
