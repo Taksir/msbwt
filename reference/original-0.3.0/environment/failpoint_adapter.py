@@ -119,6 +119,10 @@ class FailpointLogger(object):
 
 
 def run_case(args, logger):
+    # The adapter is executed by script path, so its working directory (the
+    # frozen build root passed by the harness) is not automatically on
+    # sys.path.  Insert it so the compiled MUSCython extensions resolve.
+    sys.path.insert(0, os.getcwd())
     if args.case == "r1":
         from MUSCython import MSBWTCompGenCython
         MSBWTCompGenCython.createMsbwtFromSeqs(args.dataset, args.processes, logger)
