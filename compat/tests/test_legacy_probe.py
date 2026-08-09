@@ -175,7 +175,11 @@ class LegacyProbeGuardTests(unittest.TestCase):
                 candidate_name="test-candidate",
                 destination="nonexistent-oracle-destination",
                 run_dir="nonexistent-legacy-probe-run",
-                fixture_info={"fixture_root": str(FIXTURE_ROOT), "files": []},
+                fixture_info={
+                    "case_id": "uniform-multifile",
+                    "fixture_root": str(FIXTURE_ROOT),
+                    "files": [],
+                },
                 gate=gate,
                 dependency_install_failures={"base": [], "route": []},
             )
@@ -265,6 +269,75 @@ class LegacyProbeGuardTests(unittest.TestCase):
             ],
         )
 
+    def test_validates_manifest_driven_nonuniform_and_gzip_commands(self) -> None:
+        expected = {
+            "nonuniform-prefix": {
+                "files": ["nonuniform.fastq"],
+                "preprocess_options": [],
+                "build_options": ["-p", "1"],
+            },
+            "gzip-input": {
+                "files": ["uniform-a.fastq.gz", "nonuniform.fastq.gz"],
+                "preprocess_options": [],
+                "build_options": ["-p", "1"],
+            },
+        }
+        gate = {
+            "base_dependency_install": 0,
+            "candidate_version": 0,
+            "route_dependency_install": 0,
+            "build": 0,
+            "build_ext_inplace": 0,
+            "import_smoke": 0,
+            "cli_version": 0,
+        }
+
+        for case_id, case_expected in expected.items():
+            with self.subTest(case_id=case_id):
+                fixture_info = legacy_probe.validate_golden_case(str(FIXTURE_ROOT), case_id)
+                self.assertEqual(
+                    [item["path"] for item in fixture_info["files"]], case_expected["files"]
+                )
+                self.assertEqual(fixture_info["preprocess_options"], [])
+                self.assertEqual(fixture_info["build_options"], ["-p", "1"])
+
+                recorder = mock.Mock(spec=legacy_probe.Recorder)
+                recorder.run.return_value = 0
+                with mock.patch.object(legacy_probe, "ensure_directory"), mock.patch.object(
+                    legacy_probe, "require_new_path"
+                ), mock.patch.object(
+                    legacy_probe, "copy_oracle_snapshot", return_value={"path": "snapshot", "tree_sha256": "0" * 64}
+                ), mock.patch.object(legacy_probe, "write_json"):
+                    result = legacy_probe.run_golden_case(
+                        recorder=recorder,
+                        route="pyx-historical-cython",
+                        candidate_name="late-python2-candidate",
+                        destination="oracle-source",
+                        run_dir="probe-run",
+                        fixture_info=fixture_info,
+                        gate=gate,
+                        dependency_install_failures={"base": [], "route": []},
+                    )
+
+                self.assertEqual(result["status"], "passed")
+                preprocess_argv = recorder.run.call_args_list[0].args[1]
+                build_argv = recorder.run.call_args_list[1].args[1]
+                dataset = legacy_probe.os.path.join("oracle-source", "oracle-golden-" + case_id)
+                self.assertEqual(preprocess_argv[3:5], ["pp", dataset])
+                self.assertNotIn("-u", preprocess_argv)
+                self.assertEqual(
+                    build_argv,
+                    [
+                        legacy_probe.sys.executable,
+                        "-c",
+                        legacy_probe.CLI_MAIN,
+                        "cfpp",
+                        "-p",
+                        "1",
+                        dataset,
+                    ],
+                )
+
     def test_main_rejects_first_goldens_without_dependency_install_before_results(self) -> None:
         results = REPOSITORY_ROOT / "compat" / ".guard-results-no-install"
         self.assertFalse(results.exists())
@@ -288,7 +361,7 @@ class LegacyProbeGuardTests(unittest.TestCase):
         self.assertFalse(results.exists())
         self.assertFalse(missing_fixture_root.exists())
 
-        with self.assertRaisesRegex(SystemExit, "invalid first-golden fixtures"):
+        with self.assertRaisesRegex(SystemExit, "invalid golden case uniform-multifile"):
             legacy_probe.main(
                 [
                     "--source",
@@ -307,6 +380,7 @@ class LegacyProbeGuardTests(unittest.TestCase):
     def test_nonzero_gate_skips_first_golden_without_recorder_execution(self) -> None:
         recorder = mock.Mock(spec=legacy_probe.Recorder)
         fixture_info = {
+            "case_id": "uniform-multifile",
             "fixture_root": str(FIXTURE_ROOT),
             "files": [],
         }

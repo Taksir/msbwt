@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "build_options": [
+        "-p",
+        "1",
+        "-u"
+      ],
+      "files": [
+        "uniform-a.fastq",
+        "uniform-b.fastq"
+      ],
+      "id": "uniform-multifile",
+      "preprocess_options": [
+        "-u"
+      ]
+    },
+    {
+      "build_options": [
+        "-p",
+        "1"
+      ],
+      "files": [
+        "nonuniform.fastq"
+      ],
+      "id": "nonuniform-prefix",
+      "preprocess_options": []
+    },
+    {
+      "build_options": [
+        "-p",
+        "1"
+      ],
+      "files": [
+        "uniform-a.fastq.gz",
+        "nonuniform.fastq.gz"
+      ],
+      "id": "gzip-input",
+      "preprocess_options": []
+    }
+  ],
+  "format": "msbwt-legacy-oracle-cases-v1"
+}

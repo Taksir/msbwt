@@ -13,7 +13,8 @@ Usage:
     --results /absolute/path/to/new-oracle-results-parent \
     --candidate candidate-key \
     --route generated-c-no-cython|pyx-historical-cython|all \
-    --fixture-root /absolute/path/to/synthetic-fixtures
+    --fixture-root /absolute/path/to/synthetic-fixtures \
+    [--golden-case uniform-multifile|nonuniform-prefix|gzip-input]...
 
 The Python environment is expected to be isolated already.  The supplied
 results directory should be Linux-native storage (for example /home/...);
@@ -29,6 +30,7 @@ RESULTS=""
 CANDIDATE=""
 ROUTE=""
 FIXTURE_ROOT=""
+GOLDEN_CASES=()
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
@@ -54,6 +56,10 @@ while [ "$#" -gt 0 ]; do
             ;;
         --fixture-root)
             FIXTURE_ROOT=${2:?--fixture-root requires a value}
+            shift 2
+            ;;
+        --golden-case)
+            GOLDEN_CASES+=("${2:?--golden-case requires a value}")
             shift 2
             ;;
         --help|-h)
@@ -191,11 +197,20 @@ if [ ! -f "$PROBE" ]; then
     exit 66
 fi
 
+GOLDEN_ARGS=()
+if [ "${#GOLDEN_CASES[@]}" -eq 0 ]; then
+    GOLDEN_ARGS+=(--run-first-goldens)
+else
+    for golden_case in "${GOLDEN_CASES[@]}"; do
+        GOLDEN_ARGS+=(--golden-case "$golden_case")
+    done
+fi
+
 exec "$PYTHON" "$PROBE" \
     --source "$SOURCE" \
     --results "$RESULTS" \
     --candidate "$CANDIDATE" \
     --route "$ROUTE" \
     --install-dependencies \
-    --run-first-goldens \
+    "${GOLDEN_ARGS[@]}" \
     --fixture-root "$FIXTURE_ROOT"

@@ -25,9 +25,9 @@ import verify_frozen_source
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_MATRIX = os.path.join(SCRIPT_DIR, "probe-matrix.json")
 DEFAULT_MANIFEST = os.path.join(SCRIPT_DIR, "frozen-source.sha256")
+DEFAULT_ORACLE_CASES = os.path.join(SCRIPT_DIR, "oracle-cases.json")
 ROUTES = ("generated-c-no-cython", "pyx-historical-cython")
 FIRST_GOLDEN_CASE_ID = "uniform-multifile"
-FIRST_GOLDEN_FILES = ("uniform-a.fastq", "uniform-b.fastq")
 FIRST_GOLDEN_MANIFEST = "fixture-manifest.json"
 CLI_MAIN = "from MUS import CommandLineInterface; CommandLineInterface.mainRun()"
 VERSIONED_CANDIDATE_PACKAGES = (
@@ -99,8 +99,8 @@ def require_new_path(path, description):
         raise RuntimeError("refusing to overwrite existing {0}: {1}".format(description, path))
 
 
-def validate_first_golden_fixtures(fixture_root):
-    """Validate the exact two FASTQ inputs before creating a probe result.
+def validate_golden_case(fixture_root, case_id, case_manifest=DEFAULT_ORACLE_CASES):
+    """Validate one manifest-defined CLI case before creating a probe result.
 
     The fixture manifest is host-side compatibility input.  This Python-2
     reader only checks its declared byte count and SHA-256 values; it does not
@@ -122,9 +122,33 @@ def validate_first_golden_fixtures(fixture_root):
     cases = manifest.get("cases")
     if not isinstance(cases, list):
         raise ValueError("fixture manifest cases is not a list")
-    matching_cases = [case for case in cases if isinstance(case, dict) and case.get("id") == FIRST_GOLDEN_CASE_ID]
-    if len(matching_cases) != 1 or matching_cases[0].get("files") != list(FIRST_GOLDEN_FILES):
-        raise ValueError("fixture manifest does not declare the exact {0} case".format(FIRST_GOLDEN_CASE_ID))
+    matching_cases = [case for case in cases if isinstance(case, dict) and case.get("id") == case_id]
+    if len(matching_cases) != 1 or not isinstance(matching_cases[0].get("files"), list):
+        raise ValueError("fixture manifest does not declare exactly one {0} case".format(case_id))
+
+    try:
+        oracle_manifest = read_json(case_manifest)
+    except (IOError, ValueError, UnicodeDecodeError) as exc:
+        raise ValueError("oracle case manifest is not valid UTF-8 JSON: {0}".format(exc))
+    if oracle_manifest.get("format") != "msbwt-legacy-oracle-cases-v1":
+        raise ValueError("unsupported oracle case manifest format: {0!r}".format(oracle_manifest.get("format")))
+    oracle_cases = oracle_manifest.get("cases")
+    if not isinstance(oracle_cases, list):
+        raise ValueError("oracle case manifest cases is not a list")
+    oracle_matches = [case for case in oracle_cases if isinstance(case, dict) and case.get("id") == case_id]
+    if len(oracle_matches) != 1:
+        raise ValueError("oracle case manifest does not declare exactly one {0} case".format(case_id))
+    oracle_case = oracle_matches[0]
+    case_files = oracle_case.get("files")
+    if case_files != matching_cases[0]["files"] or not case_files:
+        raise ValueError("oracle and fixture manifests disagree for {0}".format(case_id))
+    for option_key in ("preprocess_options", "build_options"):
+        options = oracle_case.get(option_key)
+        if not isinstance(options, list) or not all(
+                isinstance(option, STRING_TYPES) and
+                (option.startswith("-") or option.isdigit())
+                for option in options):
+            raise ValueError("oracle case has invalid {0}: {1}".format(option_key, case_id))
 
     file_entries = manifest.get("files")
     if not isinstance(file_entries, list):
@@ -139,12 +163,12 @@ def validate_first_golden_fixtures(fixture_root):
         declared[path] = entry
 
     verified_files = []
-    for name in FIRST_GOLDEN_FILES:
+    for name in case_files:
         entry = declared.get(name)
         if entry is None:
             raise ValueError("fixture manifest lacks required file: {0}".format(name))
         if os.path.basename(name) != name:
-            raise ValueError("first golden file is not a simple filename: {0}".format(name))
+            raise ValueError("oracle fixture is not a simple filename: {0}".format(name))
         expected_hash = entry.get("sha256")
         expected_size = entry.get("byte_count")
         if not isinstance(expected_hash, STRING_TYPES) or len(expected_hash) != 64:
@@ -168,12 +192,21 @@ def validate_first_golden_fixtures(fixture_root):
             "sha256": actual_hash
         })
     return {
-        "case_id": FIRST_GOLDEN_CASE_ID,
+        "build_options": list(oracle_case["build_options"]),
+        "case_id": case_id,
+        "case_manifest": os.path.basename(case_manifest),
+        "case_manifest_sha256": sha256_file(case_manifest),
         "fixture_manifest": FIRST_GOLDEN_MANIFEST,
         "fixture_manifest_sha256": sha256_file(manifest_path),
         "fixture_root": root,
-        "files": verified_files
+        "files": verified_files,
+        "preprocess_options": list(oracle_case["preprocess_options"])
     }
+
+
+def validate_first_golden_fixtures(fixture_root):
+    """Backward-compatible validator for the original uniform case."""
+    return validate_golden_case(fixture_root, FIRST_GOLDEN_CASE_ID)
 
 
 def _path_bytes(path):
@@ -528,29 +561,30 @@ def resolve_routes(value):
     return (value,)
 
 
-def run_first_golden_case(
+def run_golden_case(
         recorder, route, candidate_name, destination, run_dir, fixture_info, gate,
         dependency_install_failures):
-    """Capture the one permitted initial CLI scenario after every gate passes."""
+    """Capture one manifest-defined CLI scenario after every gate passes."""
+    case_id = fixture_info["case_id"]
     case_dir = os.path.join(
         run_dir,
-        "first-goldens",
-        "{0}-{1}".format(FIRST_GOLDEN_CASE_ID, safe_component(route))
+        "golden-cases",
+        "{0}-{1}".format(case_id, safe_component(route))
     )
-    require_new_path(case_dir, "first-golden case directory")
+    require_new_path(case_dir, "golden case directory")
     ensure_directory(case_dir)
-    dataset_dir = os.path.join(destination, "oracle-first-golden-" + FIRST_GOLDEN_CASE_ID)
+    dataset_dir = os.path.join(destination, "oracle-golden-" + case_id)
     result = {
         "build_route": route,
         "candidate": candidate_name,
-        "case_id": FIRST_GOLDEN_CASE_ID,
+        "case_id": case_id,
         "command_labels": {
             "setup_build": "build-{0}".format(route),
             "build_ext_inplace": "build-ext-inplace-{0}".format(route),
             "import_smoke": "import-smoke-{0}".format(route),
             "cli_version": "cli-version-{0}".format(route),
-            "preprocess": "first-golden-pp-{0}".format(FIRST_GOLDEN_CASE_ID),
-            "cfpp": "first-golden-cfpp-{0}".format(FIRST_GOLDEN_CASE_ID)
+            "preprocess": "golden-pp-{0}".format(case_id),
+            "cfpp": "golden-cfpp-{0}".format(case_id)
         },
         "fixture": fixture_info,
         "gate_returncodes": gate,
@@ -566,11 +600,15 @@ def run_first_golden_case(
         return result
 
     try:
-        require_new_path(dataset_dir, "first-golden working dataset")
-        fixture_paths = [os.path.join(fixture_info["fixture_root"], name) for name in FIRST_GOLDEN_FILES]
+        require_new_path(dataset_dir, "golden working dataset")
+        fixture_paths = [
+            os.path.join(fixture_info["fixture_root"], item["path"])
+            for item in fixture_info["files"]
+        ]
         preprocess_returncode = recorder.run(
             result["command_labels"]["preprocess"],
-            [sys.executable, "-c", CLI_MAIN, "pp", "-u", dataset_dir] + fixture_paths,
+            [sys.executable, "-c", CLI_MAIN, "pp"] +
+            fixture_info["preprocess_options"] + [dataset_dir] + fixture_paths,
             cwd=destination
         )
         result["preprocess_returncode"] = preprocess_returncode
@@ -581,7 +619,8 @@ def run_first_golden_case(
 
         build_returncode = recorder.run(
             result["command_labels"]["cfpp"],
-            [sys.executable, "-c", CLI_MAIN, "cfpp", "-p", "1", "-u", dataset_dir],
+            [sys.executable, "-c", CLI_MAIN, "cfpp"] +
+            fixture_info["build_options"] + [dataset_dir],
             cwd=destination
         )
         result["build_returncode"] = build_returncode
@@ -599,9 +638,19 @@ def run_first_golden_case(
         write_json(os.path.join(case_dir, "case-result.json"), result)
 
 
+def run_first_golden_case(
+        recorder, route, candidate_name, destination, run_dir, fixture_info, gate,
+        dependency_install_failures):
+    """Backward-compatible entry point for existing guard tests."""
+    return run_golden_case(
+        recorder, route, candidate_name, destination, run_dir, fixture_info, gate,
+        dependency_install_failures
+    )
+
+
 def run_route(
         recorder, route, source, scratch_root, manifest, candidate, candidate_name,
-        install_dependencies, base_install_failures, run_first_goldens, fixture_info, run_dir):
+        install_dependencies, base_install_failures, fixture_infos, run_dir):
     destination = os.path.join(scratch_root, route)
     copy_frozen_projection(source, destination, manifest)
     route_install_failures = []
@@ -652,11 +701,16 @@ def run_route(
         "gate_returncodes": gate,
         "route": route
     }
-    if run_first_goldens:
-        route_result["first_golden"] = run_first_golden_case(
-            recorder, route, candidate_name, destination, run_dir, fixture_info, gate,
-            dependency_install_failures
-        )
+    if fixture_infos:
+        route_result["golden_cases"] = []
+        for fixture_info in fixture_infos:
+            case_result = run_golden_case(
+                recorder, route, candidate_name, destination, run_dir, fixture_info, gate,
+                dependency_install_failures
+            )
+            route_result["golden_cases"].append(case_result)
+            if case_result["case_id"] == FIRST_GOLDEN_CASE_ID:
+                route_result["first_golden"] = case_result
     return route_result
 
 
@@ -672,11 +726,18 @@ def parse_args(argv):
     parser.add_argument(
         "--run-first-goldens",
         action="store_true",
-        help="after successful build/import/CLI gates, run only the uniform-multifile pp/cfpp scenario"
+        help="backward-compatible alias for --golden-case uniform-multifile"
     )
     parser.add_argument(
+        "--golden-case",
+        action="append",
+        default=[],
+        help="manifest-defined golden case to run after successful gates; repeatable"
+    )
+    parser.add_argument("--case-manifest", default=DEFAULT_ORACLE_CASES, help="oracle case command manifest")
+    parser.add_argument(
         "--fixture-root",
-        help="synthetic fixture directory; required with --run-first-goldens and verified before any result directory is created"
+        help="synthetic fixture directory; required with --golden-case/--run-first-goldens and verified before results"
     )
     parser.add_argument("--allow-failures", action="store_true", help="return zero after recording failed commands")
     return parser.parse_args(argv)
@@ -690,18 +751,24 @@ def main(argv=None):
         raise SystemExit("unknown candidate: {0}".format(args.candidate))
     if candidate.get("status") != "candidate-only":
         raise SystemExit("refusing candidate without explicit candidate-only status")
-    fixture_info = None
+    requested_cases = list(args.golden_case)
     if args.run_first_goldens:
+        requested_cases.append(FIRST_GOLDEN_CASE_ID)
+    if len(requested_cases) != len(set(requested_cases)):
+        raise SystemExit("golden cases must not be requested more than once")
+    fixture_infos = []
+    if requested_cases:
         if not args.install_dependencies:
-            raise SystemExit("--run-first-goldens requires --install-dependencies")
+            raise SystemExit("--golden-case requires --install-dependencies")
         if not args.fixture_root:
-            raise SystemExit("--run-first-goldens requires --fixture-root")
-        try:
-            fixture_info = validate_first_golden_fixtures(args.fixture_root)
-        except ValueError as exc:
-            raise SystemExit("invalid first-golden fixtures: {0}".format(exc))
+            raise SystemExit("--golden-case requires --fixture-root")
+        for case_id in requested_cases:
+            try:
+                fixture_infos.append(validate_golden_case(args.fixture_root, case_id, args.case_manifest))
+            except ValueError as exc:
+                raise SystemExit("invalid golden case {0}: {1}".format(case_id, exc))
         if sys.version_info[:2] != (2, 7) or platform.python_implementation() != "CPython":
-            raise SystemExit("--run-first-goldens requires CPython 2.7")
+            raise SystemExit("--golden-case requires CPython 2.7")
 
     run_dir = os.path.join(os.path.abspath(args.results), utc_run_id())
     ensure_directory(run_dir)
@@ -731,7 +798,7 @@ def main(argv=None):
                     route_results.append(run_route(
                         recorder, route, source, scratch_root, args.manifest,
                         candidate, args.candidate, args.install_dependencies,
-                        base_install_failures, args.run_first_goldens, fixture_info, run_dir
+                        base_install_failures, fixture_infos, run_dir
                     ))
                 except Exception as exc:
                     route_errors.append("{0}: {1}".format(route, exc))
