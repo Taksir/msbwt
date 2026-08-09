@@ -114,6 +114,72 @@ def compare_inventories(before, after):
     }
 
 
+def run_classification(copy_path, queries, expected_queries, expected_recovered):
+    """Classify reader-created files on a disposable copy.
+
+    Derived indexes (``totalCounts.npy``/``fmIndex.npy``) are deleted and
+    reloaded to prove they are regenerable and byte-stable.  ``inter0.npy`` is
+    deleted and reloaded to prove it is not required by the reader.
+    """
+    from MUSCython import MultiStringBWTCython
+    first_inventory = inventory_files(copy_path)
+
+    def load_and_check():
+        reader = MultiStringBWTCython.loadBWT(os.path.abspath(copy_path), useMemmap=False)
+        actual = {
+            query.decode("ascii"): int(reader.countOccurrencesOfSeq(query))
+            for query in queries
+        }
+        dollar_count = int(reader.getSymbolCount(0))
+        recovered = sorted(reader.recoverString(index) for index in range(dollar_count))
+        if actual != expected_queries:
+            raise AssertionError("classification reload query results differ")
+        if recovered != expected_recovered:
+            raise AssertionError("classification reload recovery differs")
+        return {
+            "reader_class": reader.__class__.__name__,
+            "total_size": int(reader.getTotalSize()),
+            "dollar_count": dollar_count,
+        }
+
+    result = {"first_load_inventory": first_inventory}
+    derived = ["totalCounts.npy", "fmIndex.npy"]
+    first_load_created = []
+    for name in derived:
+        if name in first_inventory:
+            first_load_created.append(name)
+    for name in first_load_created:
+        os.remove(os.path.join(copy_path, name))
+    reloaded = load_and_check()
+    regeneration_inventory = inventory_files(copy_path)
+    regenerated_identical = all(
+        name in regeneration_inventory and regeneration_inventory[name] == first_inventory[name]
+        for name in first_load_created)
+    result["derived_indexes"] = {
+        "first_load_created": sorted(first_load_created),
+        "deleted_for_regeneration": sorted(first_load_created),
+        "regenerated": sorted(
+            name for name in first_load_created if name in regeneration_inventory),
+        "regenerated_bytes_identical_to_first_load": regenerated_identical,
+        "inventory_after_regeneration": regeneration_inventory,
+        "reload": reloaded,
+    }
+
+    interleave_path = os.path.join(copy_path, "inter0.npy")
+    result["interleave"] = {"present": os.path.exists(interleave_path)}
+    if os.path.exists(interleave_path):
+        os.remove(interleave_path)
+        after_removal = load_and_check()
+        removal_inventory = inventory_files(copy_path)
+        result["interleave"].update({
+            "removed": True,
+            "required_by_reader": False,
+            "reload_after_removal": after_removal,
+            "inventory_after_removal": removal_inventory,
+        })
+    return result
+
+
 def parse_args(argv):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", required=True, help="built frozen source used for imports")
@@ -126,6 +192,11 @@ def parse_args(argv):
     parser.add_argument(
         "--coexistence-compressed-primary",
         help="copy this comp_msbwt.npy beside the byte primary, then validate loader preference"
+    )
+    parser.add_argument(
+        "--classification",
+        action="store_true",
+        help="probe derived-index regeneration and inter0.npy non-requirement on the disposable copy"
     )
     return parser.parse_args(argv)
 
@@ -199,6 +270,9 @@ def main(argv=None):
             raise AssertionError("frozen reader recovery differs from fixture sequences")
         if result["total_size"] != sum(len(sequence) + 1 for sequence in sequences):
             raise AssertionError("frozen reader total size differs from fixture-derived length")
+        if args.classification:
+            result["classification"] = run_classification(
+                args.copy, queries, expected_queries, expected_recovered)
         if args.coexistence_compressed_primary:
             if result["reader_class"] != "ByteBWT":
                 raise AssertionError("coexistence directory did not prefer ByteBWT")

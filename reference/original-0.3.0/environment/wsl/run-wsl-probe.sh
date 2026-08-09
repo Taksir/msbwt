@@ -17,6 +17,7 @@ Usage:
     [--compression-milestone1 --golden-root /absolute/path/to/original-0.3.0-goldens] \
     [--compression-milestone2 --golden-root /absolute/path/to/original-0.3.0-goldens] \
     [--compression-milestone3 --golden-root /absolute/path/to/original-0.3.0-goldens] \
+    [--merge-milestone1 --golden-root /absolute/path/to/original-0.3.0-goldens] \
     [--golden-case uniform-multifile|nonuniform-prefix|gzip-input]...
 
 The Python environment is expected to be isolated already.  The supplied
@@ -37,6 +38,7 @@ GOLDEN_CASES=()
 COMPRESSION_MILESTONE1=0
 COMPRESSION_MILESTONE2=0
 COMPRESSION_MILESTONE3=0
+MERGE_MILESTONE1=0
 GOLDEN_ROOT=""
 
 while [ "$#" -gt 0 ]; do
@@ -79,6 +81,10 @@ while [ "$#" -gt 0 ]; do
             ;;
         --compression-milestone3)
             COMPRESSION_MILESTONE3=1
+            shift
+            ;;
+        --merge-milestone1)
+            MERGE_MILESTONE1=1
             shift
             ;;
         --golden-root)
@@ -250,6 +256,13 @@ if [ "$COMPRESSION_MILESTONE3" -eq 1 ]; then
         exit 66
     fi
     COMPRESSION_ARGS+=(--compression-milestone3 --golden-root "$GOLDEN_ROOT")
+fi
+if [ "$MERGE_MILESTONE1" -eq 1 ]; then
+    if [ -z "$GOLDEN_ROOT" ] || [ ! -d "$GOLDEN_ROOT" ]; then
+        printf '%s\n' '--merge-milestone1 requires an existing --golden-root.' >&2
+        exit 66
+    fi
+    COMPRESSION_ARGS+=(--merge-milestone1 --golden-root "$GOLDEN_ROOT")
 fi
 
 exec "$PYTHON" "$PROBE" \

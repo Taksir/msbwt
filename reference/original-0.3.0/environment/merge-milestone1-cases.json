@@ -1,0 +1,117 @@
+{
+  "format": "msbwt-legacy-merge-milestone1-cases-v1",
+  "profile_id": "py27-late-05a7d6d83862",
+  "route": "pyx-historical-cython",
+  "canonical_runs": [
+    "run-a",
+    "run-b"
+  ],
+  "fixture_sets": {
+    "input_a": [
+      "uniform-a.fastq"
+    ],
+    "input_b": [
+      "uniform-b.fastq"
+    ],
+    "clean": [
+      "uniform-a.fastq",
+      "uniform-b.fastq"
+    ]
+  },
+  "input_build_argv": {
+    "preprocess": [
+      "pp",
+      "-u",
+      "DESTINATION"
+    ],
+    "build": [
+      "cfpp",
+      "-p",
+      "1",
+      "-u",
+      "DESTINATION"
+    ]
+  },
+  "merge_argv": [
+    "merge",
+    "-p",
+    "2",
+    "DESTINATION",
+    "INPUT_A",
+    "INPUT_B"
+  ],
+  "nameerror_argv": [
+    "merge",
+    "-p",
+    "1",
+    "DESTINATION",
+    "INPUT_A",
+    "INPUT_B"
+  ],
+  "clean_committed_golden": {
+    "path": "uniform-multifile/PROFILE/ROUTE/build/artifacts",
+    "primary": "msbwt.npy",
+    "primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "tree_sha256": "842bfc80080ca553ee23f07eb3da7616df96822cee7d774d163c1c2058d0132e",
+    "symbol_count": 48
+  },
+  "expected": {
+    "input_a": {
+      "reads": 4,
+      "symbols": 24,
+      "fixture_sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180"
+    },
+    "input_b": {
+      "reads": 4,
+      "symbols": 24,
+      "fixture_sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029"
+    },
+    "clean": {
+      "reads": 8,
+      "symbols": 48
+    },
+    "merged": {
+      "reads": 8,
+      "symbols": 48,
+      "output_files": [
+        "inter0.npy",
+        "msbwt.npy"
+      ],
+      "input_side_effects": [
+        "fmIndex.npy",
+        "totalCounts.npy"
+      ],
+      "interleave_shape": [
+        7
+      ],
+      "symbol_counts": {
+        "A": 9,
+        "C": 9,
+        "G": 9,
+        "N": 4,
+        "T": 9,
+        "$": 8
+      }
+    }
+  },
+  "reader": {
+    "case_id": "uniform-multifile",
+    "expected_total_size": 48,
+    "expected_dollar_count": 8,
+    "expected_queries": {
+      "ACGTN": 3,
+      "AAAAA": 1,
+      "CCCCC": 1,
+      "GGGGG": 1,
+      "TTTTT": 1,
+      "NACGT": 1,
+      "ACGT": 4,
+      "A": 9,
+      "C": 9,
+      "G": 9,
+      "N": 4,
+      "T": 9,
+      "TTTTTT": 0
+    }
+  }
+}

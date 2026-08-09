@@ -29,6 +29,7 @@ DEFAULT_ORACLE_CASES = os.path.join(SCRIPT_DIR, "oracle-cases.json")
 DEFAULT_COMPRESSION_CASES = os.path.join(SCRIPT_DIR, "compression-milestone1-cases.json")
 DEFAULT_COMPRESSION2_CASES = os.path.join(SCRIPT_DIR, "compression-milestone2-cases.json")
 DEFAULT_COMPRESSION3_CASES = os.path.join(SCRIPT_DIR, "compression-milestone3-cases.json")
+DEFAULT_MERGE_CASES = os.path.join(SCRIPT_DIR, "merge-milestone1-cases.json")
 ROUTES = ("generated-c-no-cython", "pyx-historical-cython")
 FIRST_GOLDEN_CASE_ID = "uniform-multifile"
 FIRST_GOLDEN_MANIFEST = "fixture-manifest.json"
@@ -654,7 +655,8 @@ def run_first_golden_case(
 def run_route(
         recorder, route, source, scratch_root, manifest, candidate, candidate_name,
         install_dependencies, base_install_failures, fixture_infos, run_dir,
-        compression_options=None, compression2_options=None, compression3_options=None):
+        compression_options=None, compression2_options=None, compression3_options=None,
+        merge_options=None):
     destination = os.path.join(scratch_root, route)
     copy_frozen_projection(source, destination, manifest)
     route_install_failures = []
@@ -745,6 +747,16 @@ def run_route(
             route_result["compression_milestone3"] = compression_milestone3.execute(
                 recorder, destination, run_dir, compression3_options["fixture_root"],
                 compression3_options["golden_root"], compression3_options["manifest"])
+    if merge_options:
+        if route != "pyx-historical-cython":
+            raise RuntimeError("merge milestone requires the historical-pyx route")
+        if any(returncode != 0 for returncode in gate.values()):
+            route_result["merge_milestone1"] = {"status": "skipped-gate-failure"}
+        else:
+            import merge_milestone1
+            route_result["merge_milestone1"] = merge_milestone1.execute(
+                recorder, destination, run_dir, merge_options["fixture_root"],
+                merge_options["golden_root"], merge_options["manifest"])
     return route_result
 
 
@@ -785,9 +797,14 @@ def parse_args(argv):
         "--compression-milestone3", action="store_true",
         help="run the manifest-driven non-resumable interruption milestone after all route gates pass"
     )
+    parser.add_argument(
+        "--merge-milestone1", action="store_true",
+        help="run the manifest-driven canonical merge/reader-indexing milestone after all route gates pass"
+    )
     parser.add_argument("--compression-manifest", default=DEFAULT_COMPRESSION_CASES)
     parser.add_argument("--compression2-manifest", default=DEFAULT_COMPRESSION2_CASES)
     parser.add_argument("--compression3-manifest", default=DEFAULT_COMPRESSION3_CASES)
+    parser.add_argument("--merge-manifest", default=DEFAULT_MERGE_CASES)
     parser.add_argument("--golden-root", help="original-0.3.0 golden root used as read-only copy source")
     parser.add_argument("--allow-failures", action="store_true", help="return zero after recording failed commands")
     return parser.parse_args(argv)
@@ -864,6 +881,21 @@ def main(argv=None):
             "golden_root": os.path.abspath(args.golden_root),
             "manifest": os.path.abspath(args.compression3_manifest)
         }
+    merge_options = None
+    if args.merge_milestone1:
+        if args.route != "pyx-historical-cython":
+            raise SystemExit("--merge-milestone1 requires --route pyx-historical-cython")
+        if not args.install_dependencies:
+            raise SystemExit("--merge-milestone1 requires --install-dependencies")
+        if not args.fixture_root or not args.golden_root:
+            raise SystemExit("--merge-milestone1 requires --fixture-root and --golden-root")
+        if sys.version_info[:2] != (2, 7) or platform.python_implementation() != "CPython":
+            raise SystemExit("--merge-milestone1 requires CPython 2.7")
+        merge_options = {
+            "fixture_root": os.path.abspath(args.fixture_root),
+            "golden_root": os.path.abspath(args.golden_root),
+            "manifest": os.path.abspath(args.merge_manifest)
+        }
 
     run_dir = os.path.join(os.path.abspath(args.results), utc_run_id())
     ensure_directory(run_dir)
@@ -894,7 +926,8 @@ def main(argv=None):
                         recorder, route, source, scratch_root, args.manifest,
                         candidate, args.candidate, args.install_dependencies,
                         base_install_failures, fixture_infos, run_dir,
-                        compression_options, compression2_options, compression3_options
+                        compression_options, compression2_options, compression3_options,
+                        merge_options
                     ))
                 except Exception as exc:
                     route_errors.append("{0}: {1}".format(route, exc))
