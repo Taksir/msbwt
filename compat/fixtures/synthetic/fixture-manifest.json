@@ -1,0 +1,70 @@
+{
+  "cases": [
+    {
+      "files": [
+        "uniform-a.fastq",
+        "uniform-b.fastq"
+      ],
+      "id": "uniform-multifile",
+      "purpose": "Uniform five-base reads split across two files; exercises duplicate sequences, a lexicographic tie across files, A/C/G/N/T coverage, and paired-looking identifiers."
+    },
+    {
+      "files": [
+        "nonuniform.fastq"
+      ],
+      "id": "nonuniform-prefix",
+      "purpose": "Variable-length reads with prefix relationships, shortest practical reads, A/C/G/N/T coverage, and a longer homopolymer."
+    },
+    {
+      "files": [
+        "uniform-a.fastq.gz",
+        "nonuniform.fastq.gz"
+      ],
+      "id": "gzip-input",
+      "purpose": "Byte-for-byte deterministic gzip equivalents for the uniform-a and nonuniform inputs; exercises the legacy .gz input branch."
+    }
+  ],
+  "files": [
+    {
+      "byte_count": 173,
+      "kind": "fastq",
+      "path": "uniform-a.fastq",
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180"
+    },
+    {
+      "byte_count": 162,
+      "kind": "fastq",
+      "path": "uniform-b.fastq",
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029"
+    },
+    {
+      "byte_count": 246,
+      "kind": "fastq",
+      "path": "nonuniform.fastq",
+      "sha256": "e19ef01c7683cd81534fada1f8142ddf35710a2e1bf9b70d92bb8de2acb1973e"
+    },
+    {
+      "byte_count": 138,
+      "kind": "fastq-gzip",
+      "path": "uniform-a.fastq.gz",
+      "sha256": "dc8bdc5aedc346f364e5e73a34734f61a55cb1b97f9788ac10ff774c16aaeadb"
+    },
+    {
+      "byte_count": 151,
+      "kind": "fastq-gzip",
+      "path": "nonuniform.fastq.gz",
+      "sha256": "93936b82d32a57dc8d1e7658fc8421ea61819db69414ac1464c5287e7148ccd8"
+    }
+  ],
+  "generator": {
+    "fastq_line_endings": "LF",
+    "gzip": {
+      "compression_level": 9,
+      "filename_header": "",
+      "mtime": 0,
+      "os_byte": 255
+    },
+    "script": "generate_fixtures.py"
+  },
+  "schema_version": 1
+}

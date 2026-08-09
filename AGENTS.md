@@ -6,7 +6,7 @@ These rules apply to every change in this repository.
 
 - Treat executable behavior and persisted bytes from the frozen original implementation as the compatibility authority. Treat README text, comments, and package metadata as claims to verify.
 - Preserve the original authors, MIT license, scientific references, and repository history. This is a maintenance fork.
-- Start with [the forensic audit](docs/modernization/FORENSIC_AUDIT.md), [behavioral surface](docs/modernization/BEHAVIORAL_SURFACE.md), [architecture proposal](docs/modernization/ARCHITECTURE.md), [test plan](docs/modernization/COMPATIBILITY_TESTING.md), and [risk register](docs/modernization/RISKS_AND_OPEN_QUESTIONS.md).
+- Start with [the forensic audit](docs/modernization/FORENSIC_AUDIT.md), [behavioral surface](docs/modernization/BEHAVIORAL_SURFACE.md), [architecture proposal](docs/modernization/ARCHITECTURE.md), [test plan](docs/modernization/COMPATIBILITY_TESTING.md), [legacy oracle status](docs/modernization/LEGACY_ORACLE_STATUS.md), and [risk register](docs/modernization/RISKS_AND_OPEN_QUESTIONS.md).
 
 ## Compatibility gates
 

@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+
+# Workspace-local test scratch; tests remove it after successful runs.
+compat/.tmp-tests/

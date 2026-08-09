@@ -1,0 +1,16 @@
+@pair-000/1 source=uniform-a
+ACGTN
++
+IIIII
+@pair-001/1 duplicate=first
+AAAAA
++
+#####
+@pair-002/1 duplicate=second
+ACGTN
++
+JKLMN
+@pair-000/2 reverse-complement
+NACGT
++
++++++

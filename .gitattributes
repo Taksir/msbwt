@@ -1,0 +1,20 @@
+# Keep the frozen oracle projection byte-stable across Windows/Linux checkouts.
+/AUTHORS text eol=lf
+/LICENSE text eol=lf
+/MANIFEST.in text eol=lf
+/README.md text eol=lf
+/setup.cfg text eol=lf
+/setup.py text eol=lf
+/bin/msbwt text eol=lf
+/MUS/*.py text eol=lf
+/MUS/*.pyc binary
+/MUSCython/*.c text eol=lf
+/MUSCython/*.pxd text eol=lf
+/MUSCython/*.pyx text eol=lf
+
+# Fixture and container bytes are also reproducibility inputs.
+/compat/**/*.py text eol=lf
+/compat/fixtures/synthetic/*.fastq text eol=lf
+/compat/fixtures/synthetic/*.json text eol=lf
+/compat/fixtures/synthetic/*.gz binary
+/reference/original-0.3.0/environment/run-probe.sh text eol=lf
