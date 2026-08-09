@@ -1,0 +1,1 @@
+{"adapter":"failpoint_adapter.py","case":"m3c1","exit_code":86,"first_tuple":{"end_index":48,"input_fn":"SOURCE/msbwt.npy","start_index":0,"temp_fn":"DESTINATION/comp_msbwt.npy.temp.0.npy"},"mode":"first-worker-completed","num_bins":1,"worker_returned_size":22}
