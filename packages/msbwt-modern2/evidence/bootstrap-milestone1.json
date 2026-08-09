@@ -1,0 +1,31 @@
+{
+  "build": {
+    "cython": "3.0.12",
+    "language_level": 2,
+    "modules": 8,
+    "status": "ok"
+  },
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "status": "passed"
+  },
+  "install": {
+    "status": "ok"
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "slice": {
+    "build_match": true,
+    "case": "uniform-multifile",
+    "pre_match": true,
+    "status": "ok"
+  }
+}

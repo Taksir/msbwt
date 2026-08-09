@@ -1,0 +1,43 @@
+{
+  "format": "msbwt-modern2-environment-v1",
+  "profile_id": "modern2-python27-3.0.12",
+  "status": "verified-2026-08-09",
+  "distribution": "msbwt-modern2",
+  "bootstrap_source": "environment/bootstrap-modern2.sh (micromamba 2.8.1)",
+  "target": {
+    "implementation": "CPython",
+    "version": "2.7.18",
+    "distribution_build": "h42bf7aa_3",
+    "abi": "cp27mu",
+    "unicode_width": "UCS4",
+    "maxunicode": 1114111,
+    "artifact_url": "https://repo.anaconda.com/pkgs/main/linux-64/python-2.7.18-h42bf7aa_3.conda",
+    "artifact_sha256": "0f1787b7e4b8a9f826a15a5d3d5a20d7645dd7767e7faedace7fc5050cd941f3"
+  },
+  "python_packages": [
+    {"name": "Cython", "version": "3.0.12", "wheel": "Cython-3.0.12-py2.py3-none-any.whl", "artifact_sha256": "0038c9bae46c459669390e53a1ec115f8096b2e4647ae007ff1bf4e6dee92806"},
+    {"name": "numpy", "version": "1.16.6", "wheel": "numpy-1.16.6-cp27-cp27mu-manylinux1_x86_64.whl", "artifact_sha256": "1680c8d5086a88d293dfd1a10b6429a09140cacee878034fa2308472ec835db4"},
+    {"name": "pysam", "version": "0.15.4", "wheel": "pysam-0.15.4-cp27-cp27mu-manylinux2010_x86_64.whl", "artifact_sha256": "3d5158231cab88cb8a931b78f34fb6eb939a093cb8d5273452cc12d3206e445e"},
+    {"name": "pip", "version": "20.3.4", "wheel": "pip-20.3.4-py2.py3-none-any.whl", "artifact_sha256": "217ae5161a0e08c0fb873858806e3478c9775caffce5168b50ec885e358c199d"},
+    {"name": "setuptools", "version": "44.1.1", "wheel": "setuptools-44.1.1-py2.py3-none-any.whl", "artifact_sha256": "27a714c09253134e60a6fa68130f78c7037e5562c4f21f8f318f2ae900d152d5"},
+    {"name": "wheel", "version": "0.37.1", "wheel": "wheel-0.37.1-py2.py3-none-any.whl", "artifact_sha256": "4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a"}
+  ],
+  "build_toolchain": {
+    "compiler": "x86_64-conda_cos6-linux-gnu-cc (crosstool-NG 1.23.0.450-d54ae) 7.3.0",
+    "compiler_target": "x86_64-conda_cos6-linux-gnu",
+    "binutils": "2.34",
+    "conda_artifact_set": "byte-identical to verified oracle profile py27-late-05a7d6d83862 (see modern2-conda-sha256.json)",
+    "runtime_libgcc": "15.2.0 h69a1729_8"
+  },
+  "host": {
+    "os": "Ubuntu 26.04 LTS on WSL2 x86-64",
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "note": "same verified host family as the legacy oracle profile"
+  },
+  "build_commands": [
+    "bash packages/msbwt-modern2/environment/bootstrap-modern2.sh --micromamba /absolute/path/to/micromamba-2.8.1 --prefix /new/absolute/prefix",
+    "bash packages/msbwt-modern2/environment/build-modern2.sh --prefix /absolute/prefix --source /absolute/packages/msbwt-modern2",
+    "bash packages/msbwt-modern2/validate/bootstrap-milestone1.sh --prefix /absolute/prefix --package /absolute/packages/msbwt-modern2 --repository /absolute/msbwt"
+  ],
+  "cython_policy": "exactly Cython 3.0.x; pinned 3.0.12 (last 3.0 series, Requires-Python >= 2.7). Cython 3.1+ and 0.29.x are prohibited for modern2. language_level=2 applied explicitly in setup.py cythonize and per-module #cython: language_level=2 header."
+}

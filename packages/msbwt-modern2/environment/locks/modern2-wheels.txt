@@ -1,0 +1,11 @@
+# All entries are wheels: no source distribution fallback is permitted.
+# msbwt-modern2 wheel lock.  Python-2.7 wheels identical to the verified
+# oracle profile py27-late-05a7d6d83862 except Cython, which is pinned to the
+# newest Cython 3.0.x (3.0.12, the last 3.0 series release, declared
+# Requires-Python >= 2.7).  Cython 3.1+ must NOT be used for modern2.
+pip @ https://files.pythonhosted.org/packages/27/79/8a850fe3496446ff0d584327ae44e7500daf6764ca1a382d2d02789accf7/pip-20.3.4-py2.py3-none-any.whl --hash=sha256:217ae5161a0e08c0fb873858806e3478c9775caffce5168b50ec885e358c199d
+setuptools @ https://files.pythonhosted.org/packages/e1/b7/182161210a13158cd3ccc41ee19aadef54496b74f2817cc147006ec932b4/setuptools-44.1.1-py2.py3-none-any.whl --hash=sha256:27a714c09253134e60a6fa68130f78c7037e5562c4f21f8f318f2ae900d152d5
+wheel @ https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl --hash=sha256:4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
+numpy @ https://files.pythonhosted.org/packages/3a/5f/47e578b3ae79e2624e205445ab77a1848acdaa2929a00eeef6b16eaaeb20/numpy-1.16.6-cp27-cp27mu-manylinux1_x86_64.whl --hash=sha256:1680c8d5086a88d293dfd1a10b6429a09140cacee878034fa2308472ec835db4
+pysam @ https://files.pythonhosted.org/packages/68/7b/a54f66a8b126c0d6eefa3f71ebdd46bf967c0452759b553432e845e927f3/pysam-0.15.4-cp27-cp27mu-manylinux2010_x86_64.whl --hash=sha256:3d5158231cab88cb8a931b78f34fb6eb939a093cb8d5273452cc12d3206e445e
+Cython @ https://files.pythonhosted.org/packages/27/6b/7c87867d255cbce8167ed99fc65635e9395d2af0f0c915428f5b17ec412d/Cython-3.0.12-py2.py3-none-any.whl --hash=sha256:0038c9bae46c459669390e53a1ec115f8096b2e4647ae007ff1bf4e6dee92806

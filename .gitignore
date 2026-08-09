@@ -3,3 +3,13 @@ __pycache__/
 
 # Workspace-local test scratch; tests remove it after successful runs.
 compat/.tmp-tests/
+
+# msbwt-modern2 / msbwt-modern3 in-tree build outputs (generated C is
+# committed per the modern2 generated-C policy; binaries and scratch never are).
+packages/*/build/
+packages/*/dist/
+packages/*/*.so
+packages/*/*.pyd
+packages/*/*.egg-info/
+packages/*/MUSCython/*.so
+packages/*/MUSCython/*.pyd
