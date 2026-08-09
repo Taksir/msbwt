@@ -1,0 +1,187 @@
+{
+  "build": {
+    "cython": "3.0.12",
+    "language_level": 2,
+    "modules": 8,
+    "status": "ok"
+  },
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "milestone": "modern2-milestone2-compression",
+    "status": "passed"
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "reader": {
+    "direct-a": {
+      "dollar_count": 8,
+      "queries_match": true,
+      "reader_class": "MUSCython.RLE_BWTCython.RLE_BWT",
+      "recovered_match": true,
+      "side_effects": {
+        "added": [
+          {
+            "path": "comp_fmIndex.npy",
+            "sha256": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+            "size": 176
+          },
+          {
+            "path": "comp_refIndex.npy",
+            "sha256": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+            "size": 136
+          },
+          {
+            "path": "totalCounts.npy",
+            "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+            "size": 176
+          }
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "total_size": 48
+    },
+    "direct-wrapper-a": {
+      "dollar_count": 8,
+      "queries_match": true,
+      "reader_class": "MUSCython.RLE_BWTCython.RLE_BWT",
+      "recovered_match": true,
+      "side_effects": {
+        "added": [
+          {
+            "path": "comp_fmIndex.npy",
+            "sha256": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+            "size": 176
+          },
+          {
+            "path": "comp_refIndex.npy",
+            "sha256": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+            "size": 136
+          },
+          {
+            "path": "totalCounts.npy",
+            "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+            "size": 176
+          }
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "total_size": 48
+    },
+    "posthoc-a": {
+      "dollar_count": 8,
+      "queries_match": true,
+      "reader_class": "MUSCython.RLE_BWTCython.RLE_BWT",
+      "recovered_match": true,
+      "side_effects": {
+        "added": [
+          {
+            "path": "comp_fmIndex.npy",
+            "sha256": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+            "size": 176
+          },
+          {
+            "path": "comp_refIndex.npy",
+            "sha256": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+            "size": 136
+          },
+          {
+            "path": "totalCounts.npy",
+            "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+            "size": 176
+          }
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "total_size": 48
+    }
+  },
+  "routes": {
+    "cross_route": {
+      "decoded_bwt": "ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$",
+      "decoded_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+      "direct_equals_wrapper_whole": true,
+      "direct_shape_literal": "(22L,)",
+      "payload_equal": true,
+      "payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+      "posthoc_shape_literal": "(22,)"
+    },
+    "decoded_matches_committed_byte_primary": true,
+    "direct-split": {
+      "committed_decoded_rle_match": true,
+      "decoded_bwt": "ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$",
+      "decoded_length": 48,
+      "decoded_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+      "dtype": "|u1",
+      "golden": "uniform-direct-split",
+      "golden_manifest_match": true,
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (22L,), }                                                          ",
+      "payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+      "payload_size": 22,
+      "run-a_whole_sha256": "0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372",
+      "run-b_whole_sha256": "0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372",
+      "run-p2_whole_sha256": "0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372",
+      "run_a_equals_run_b": true,
+      "run_a_equals_run_p2": true,
+      "run_count": 22,
+      "shape": [
+        22
+      ],
+      "shape_literal": "(22L,)"
+    },
+    "direct-wrapper": {
+      "committed_decoded_rle_match": true,
+      "decoded_bwt": "ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$",
+      "decoded_length": 48,
+      "decoded_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+      "dtype": "|u1",
+      "golden": "uniform-direct-wrapper",
+      "golden_manifest_match": true,
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (22L,), }                                                          ",
+      "payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+      "payload_size": 22,
+      "run-a_whole_sha256": "0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372",
+      "run-b_whole_sha256": "0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372",
+      "run-p2_whole_sha256": "0ca6329b54f0cdcec79a5f274fcafa226ee04095b7849ef6624edc630040a372",
+      "run_a_equals_run_b": true,
+      "run_a_equals_run_p2": true,
+      "run_count": 22,
+      "shape": [
+        22
+      ],
+      "shape_literal": "(22L,)"
+    },
+    "posthoc": {
+      "committed_decoded_rle_match": true,
+      "decoded_bwt": "ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$",
+      "decoded_length": 48,
+      "decoded_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+      "dtype": "|u1",
+      "golden": "uniform-compress-posthoc",
+      "golden_manifest_match": true,
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (22,), }                                                           ",
+      "payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+      "payload_size": 22,
+      "run-a_whole_sha256": "53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3",
+      "run-b_whole_sha256": "53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3",
+      "run-p2_whole_sha256": "53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3",
+      "run_a_equals_run_b": true,
+      "run_a_equals_run_p2": true,
+      "run_count": 22,
+      "shape": [
+        22
+      ],
+      "shape_literal": "(22,)"
+    }
+  }
+}
