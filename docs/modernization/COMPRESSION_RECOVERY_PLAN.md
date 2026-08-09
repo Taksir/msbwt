@@ -1,7 +1,7 @@
 # Compression, decompression, and recovery characterization plan
 
-Status: source-resolved execution plan; no compression/recovery oracle run or
-golden has been created yet.
+Status: source-resolved execution plan with the verified-profile decompression
+failure policy resolved; no compression/recovery golden has been promoted yet.
 
 This plan is for the verified frozen profile `py27-late-05a7d6d83862` and the
 historical-pyx route only.  Frozen execution and persisted bytes remain the
@@ -74,7 +74,7 @@ ext4 copy.
 The copied byte sources must not contain query-derived indexes.  Refuse rather
 than delete unexpected files.
 
-### Exact successful command cases
+### Exact command cases
 
 Run the cases in this order.
 
@@ -91,9 +91,10 @@ Run the cases in this order.
    compress -p 1 N_BYTE N_RLE
    ```
 
-3. Uniform and nonuniform decompression.  `U_RLE_SOURCE_COPY` and
-   `N_RLE_SOURCE_COPY` must be disposable pristine copies because this command
-   mutates its compressed source by constructing pure-Python indexes:
+3. Uniform and nonuniform decompression expected-failure characterization.
+   `U_RLE_SOURCE_COPY` and `N_RLE_SOURCE_COPY` must be disposable pristine
+   copies because this command mutates its compressed source by constructing
+   pure-Python indexes:
 
    ```text
    decompress -p 1 U_RLE_SOURCE_COPY U_ROUNDTRIP
@@ -114,10 +115,85 @@ Run the cases in this order.
    cffq -p 1 -u -c U_WRAPPED uniform-a.fastq uniform-b.fastq
    ```
 
-Run cases 1 through 5 twice independently at `-p 1`.  After those runs match,
-run one additional fresh execution of each process-bearing command at `-p 2`.
-The `-p 2` primary bytes must match the canonical `-p 1` primary bytes; a
-mismatch is a stop condition and is recorded as legacy process-count behavior.
+Run the two post-hoc compression cases and the two direct-construction cases
+twice independently at `-p 1`.  After those successful runs match, run one
+additional fresh execution of each successful process-bearing command at
+`-p 2`.  The `-p 2` primary bytes must match the canonical `-p 1` primary
+bytes; a mismatch is a stop condition and is recorded as legacy process-count
+behavior.
+
+Run each decompression command twice independently at `-p 1` and require the
+authoritative failure contract below.  Do not run it through a helper that
+requires exit zero, and do not attempt reader or roundtrip validation on the
+preallocated destination.  No `-p 2` decompression behavior has been executed;
+it is outside this contract and is not a milestone-1 promotion gate.
+
+### Authoritative verified-profile decompression failure
+
+This is deterministic frozen behavior for the exact verified profile and
+inputs below.  It is not a harness/invocation error: direct CLI execution
+reached the frozen decompression worker in four fresh probes (two uniform and
+two nonuniform), and all four produced the same traceback.  The type mechanism
+was also inspected externally without changing the oracle: line 637 creates
+`counts` with dtype `<u8`; at line 662, CPython 2.7 plus NumPy 1.16.6 evaluates
+the Python `int` expression `s + counts[lInd]` as NumPy `float64` (`1.0` for
+the first observed run), which has no `__index__` method and is invalid as a
+slice bound.  Other interpreter/NumPy profiles have not been executed, so do
+not generalize this result to them.
+
+The narrow authoritative contract is:
+
+1. Profile/route/source: `py27-late-05a7d6d83862`,
+   `pyx-historical-cython`, frozen 40-file projection from
+   `7503346ec072ddb89520db86fef85569a9ba093a`.
+2. Invocation: exact CLI `decompress -p 1 SOURCE_COPY OUTPUT`; `SOURCE_COPY`
+   is a fresh ext4 directory containing only the named post-hoc
+   `comp_msbwt.npy`, with no derived caches, and `OUTPUT` does not exist before
+   argument parsing.
+3. Inputs: uniform `comp_msbwt.npy` SHA-256
+   `53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3`
+   (`|u1`, shape `(22,)`), or nonuniform SHA-256
+   `9d19222eaa78c1d89304e79ff14a8a0a5f0c21c3ae979d179f570f1d8d5c1e66`
+   (`|u1`, shape `(16,)`).  These compression outputs have been produced only
+   once each and are inputs to this failure decision, not yet promoted
+   successful compression goldens.
+4. Result: exit `1`; final exception exactly
+   `TypeError: slice indices must be integers or None or have an __index__ method`
+   at `MUS/MultiStringBWT.py:662`, reached through
+   `CommandLineInterface.py:175`, `MSBWTGen.py:1203`,
+   `MSBWTGen.py:1222`, and `MultiStringBWT.py:608`.  The complete raw stderr
+   was byte-identical in all four probes, SHA-256
+   `227471aa531ec114ada93c2507f6b621df8109d70324b7217285efd518904ac4`.
+5. Partial state: the source primary remains unchanged and gains exactly
+   `totalCounts.p`, `comp_fmIndex.npy`, and `comp_refIndex.npy`; the destination
+   contains exactly one preallocated, unwritten `msbwt.npy`.  Exact per-case
+   manifests are:
+
+| Case | Source-after manifest content SHA-256 | Destination manifest content SHA-256 | Preallocated destination |
+|---|---|---|---|
+| uniform | `722451840cfca8ff03edfe11c80ba08fed3949636717febaaf8200f1efdd0bf5` | `2d33197387eafb59f1c9db2834f9da9f24d60a68ff01282f31f1787a0be0093a` | `msbwt.npy`: `|u1`, shape `(48,)`, whole-file SHA-256 `f9450ec830d3eca779fdb8a7df2127cb0117620b3ce3588a1c9d76625b96aa22`, 48 zero-byte payload SHA-256 `17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1` |
+| nonuniform | `38e5d6b9d432215173d0c2f7fcb29b3b746ed7d6b5e72ed9c42259ba9c4567dd` | `e968933ebbd14dc2e73bf50171920cde2795eed23c1164b88268efbe7c5d3292` | `msbwt.npy`: `|u1`, shape `(30,)`, whole-file SHA-256 `df951972060da0644c1da6d1f7e2a318d26f6220c51fd2fccd5e374ebc7b83a3`, 30 zero-byte payload SHA-256 `0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62` |
+
+For each case the two source-after manifests matched with no added, removed,
+or changed entries, and the two destination manifests also matched exactly.
+Record stdout after replacing the timestamp and disposable absolute paths;
+retain its raw hash outside Git.  The traceback needs no normalization under
+the specified working directory.
+
+Commit two path-sanitized run records per case, source-before/source-after and
+destination safe manifests, the two determinism comparison reports, one exact
+canonical stderr record, profile/frozen-source/input provenance, and strict
+tests for all values above.  Do not commit raw run directories, absolute-path
+stdout, the pickle/cache files, or the invalid preallocated `msbwt.npy`; their
+exact bytes, headers, payloads, file sets, and hashes are represented by the
+safe manifests.
+
+Regression execution must use an expected-failure capture path that asserts
+exit `1`, the exact traceback/final exception, the unchanged compressed
+primary, the exact three source side effects, the exact destination manifest,
+and equality between two fresh runs.  It must then continue to the remaining
+milestone-1 cases.  Never load the partial `msbwt.npy` or assert it as a
+roundtrip output.
 
 ### Exact unsupported cases
 
@@ -139,7 +215,7 @@ failure into an exception or add `-u`.
 | File/state | Classification and promotion rule |
 |---|---|
 | `comp_msbwt.npy` | Authoritative RLE primary.  Promote exact file bytes, NPY header, `|u1` shape, payload hash, decoded runs, and uncompressed logical length. |
-| `msbwt.npy` in a decompression destination | Authoritative byte primary for that command.  It must be compared to the starting byte primary as a whole file and as decoded payload. |
+| `msbwt.npy` in either named decompression destination | Deterministic invalid failure artifact: a correctly shaped but unwritten all-zero preallocation.  Manifest it exactly, but never classify or load it as a byte primary. |
 | `about.npy` | Authoritative provenance where direct FASTQ construction produces it.  Post-hoc `compress`/`decompress` do not copy it. |
 | `seqs.npy*` and `offsets.npy` | Authoritative preprocessing inputs retained by split `pp` + `cfpp`; the `cffq` wrapper deletes them on success.  Preserve that file-set difference. |
 | `totalCounts.npy`, `fmIndex.npy`, `comp_fmIndex.npy`, `comp_refIndex.npy` | Derived compiled-reader indexes.  Exclude from pristine primary goldens; inventory exact side effects on disposable copies. |
@@ -149,25 +225,22 @@ failure into an exception or add `-u`.
 
 ### Required relationships
 
-All relationships below are required promotion gates:
+All relationships below are required promotion gates for successful outputs:
 
-1. `U_ROUNDTRIP/msbwt.npy` must equal `U_BYTE/msbwt.npy` byte-for-byte;
-   `N_ROUNDTRIP/msbwt.npy` must equal `N_BYTE/msbwt.npy` byte-for-byte.  Also
-   compare dtype, shape, raw NPY header, and payload independently.
-2. Uniform post-hoc `U_RLE`, split direct `U_DIRECT`, and wrapper direct
+1. Uniform post-hoc `U_RLE`, split direct `U_DIRECT`, and wrapper direct
    `U_WRAPPED` must have byte-identical `comp_msbwt.npy`.  The two construction
    algorithms emit the same source-defined RLE representation; any observed
    mismatch is conflicting legacy semantics and requires a stop/report.
-3. Split and wrapper `about.npy` must match.  Their complete retained file sets
+2. Split and wrapper `about.npy` must match.  Their complete retained file sets
    must not be forced to match because wrapper cleanup is source-defined.
-4. On separate disposable copies, the compiled RLE reader must return the same
+3. On separate disposable copies, the compiled RLE reader must return the same
    total size, symbol totals, fixture-derived substring counts, dollar IDs, and
    recovered strings as the matching committed byte reader evidence.
-5. A disposable coexistence directory containing both byte and RLE primaries
+4. A disposable coexistence directory containing both byte and RLE primaries
    must load as `ByteBWT`; after removing only the disposable byte primary, it
    must load as `RLE_BWT` with the same logical results.  This records loader
    preference and does not create a writer golden.
-6. RLE decode must be checked independently with a tiny safe decoder: low
+5. RLE decode must be checked independently with a tiny safe decoder: low
    three bits are the symbol; consecutive bytes with the same symbol are
    least-significant-first base-32 run digits in the upper five bits.
 
@@ -184,10 +257,20 @@ file sets, whole-file SHA-256, raw NPY headers, logical dtype/shape, and payload
 SHA-256 across the two canonical `-p 1` runs.  Require exact primary equality
 for the additional `-p 2` run.
 
-Promote only reviewed artifacts, manifests, decoded-RLE reports, relationship
-reports, reader-side-effect inventories, and path-sanitized provenance.  Never
-promote raw run directories, reader-mutated copies, pure-Python pickle contents,
-or compression temp files from a successful case.
+Successful post-hoc compression is independently promotable despite the
+authoritative decompression failure after its two canonical runs match, its
+`-p 2` primary matches, the safe decoder validates it, and the frozen compiled
+RLE reader passes fixture-derived behavior and side-effect inventory checks.
+The uniform cross-algorithm relationship report remains required once the
+direct outputs exist, but decompression success is not a prerequisite for
+post-hoc compression promotion.
+
+Promote only reviewed successful artifacts, manifests, decoded-RLE reports,
+relationship reports, reader-side-effect inventories, the named failure
+records/manifests, and path-sanitized provenance.  Never promote raw run
+directories, reader-mutated copies, pure-Python pickle contents, invalid
+preallocated decompression outputs, or compression temp files from a
+successful case.
 
 ## Milestone 2: implemented builder recovery
 
@@ -328,7 +411,9 @@ Medium must stop and report rather than work around any of these:
 1. Direct compressed nonuniform requests log an error but can exit zero after
    creating/retaining a directory.  Preserve the exit/log/file set.
 2. Post-hoc CLI compression/decompression dispatches to pure Python even though
-   near-duplicate Cython functions exist.  Test the actual CLI target only.
+   near-duplicate Cython functions exist.  Test the actual CLI target only;
+   the two named `-p 1` decompressions must match the authoritative failure
+   contract above rather than stop the milestone.
 3. CLI decompression mutates its compressed source with pure-Python caches,
    including pickle.  Always use a disposable source and do not suppress it.
 4. Direct RLE recovery trusts checkpoint existence, scans columns from zero,
@@ -345,9 +430,11 @@ Medium must stop and report rather than work around any of these:
 8. Raw direct-RLE state uses C `fopen(..., "w+")` text mode.  This milestone is
    Linux-oracle evidence only and establishes no Windows byte claim.
 
-Any primary mismatch between clean algorithms, process counts, roundtrip, or
-resume/control is a compatibility-policy stop.  Commit failure evidence only
-after review; never update an existing golden or repair frozen source.
+Any primary mismatch between clean algorithms, successful process counts, or
+resume/control is a compatibility-policy stop.  Any decompression result that
+differs from the narrow expected-failure contract is also a stop.  Commit
+failure evidence only after review; never update an existing golden or repair
+frozen source.
 
 ## Exact acceptance checklist for Medium
 
@@ -356,26 +443,30 @@ after review; never update an existing golden or repair frozen source.
    and CLI version before each run family.
 2. Add only manifest-driven case definitions and external failpoint tooling;
    tests must prove exact argv/options and failpoint messages before execution.
-3. Execute milestone 1 in the listed order: two fresh `-p 1` runs per success
-   case, then one fresh `-p 2` process-count comparison; run both unsupported
-   nonuniform cases as named failure evidence.
-4. Require exact whole-file roundtrip and exact uniform RLE equality across
-   post-hoc, split, wrapper, and process-count paths.  Stop on any mismatch.
-5. Run fixture-derived compiled-reader query/recovery checks on disposable RLE,
-   byte-roundtrip, and coexistence copies; inventory all source and reader side
-   effects without mutating pristine promoted artifacts.
-6. Promote milestone 1 only after safe manifests prove identical file sets,
+3. Execute milestone 1 in the listed order: two fresh `-p 1` runs per
+   successful case, two fresh `-p 1` runs per named decompression failure, then
+   one fresh `-p 2` process-count comparison for successful commands only; run
+   both unsupported nonuniform cases as named failure evidence.
+4. Require both decompression cases to match the exact exit, traceback, source
+   side effects, destination preallocation, manifests, and two-run determinism
+   contract above.  Do not load partial outputs or require a roundtrip.
+5. Require exact uniform RLE equality across post-hoc, split, wrapper, and
+   successful process-count paths.  Stop on any mismatch.
+6. Run fixture-derived compiled-reader query/recovery checks on disposable RLE
+   and coexistence copies; inventory all source and reader side effects without
+   mutating pristine promoted artifacts.
+7. Promote milestone 1 only after safe manifests prove identical file sets,
    whole-file hashes, raw headers, dtype/shape, payload hashes, decoded RLE, and
    canonical tree hashes; commit path-sanitized provenance and strict tests.
-7. Add and verify the exact 259-read recovery fixture, then execute R1 and R2
+8. Add and verify the exact 259-read recovery fixture, then execute R1 and R2
    twice each using exit-86 failpoints, immutable partial snapshots, resume
    copies, and independent clean controls.
-8. Require partial-manifest repeatability, explicit frozen resume log markers,
+9. Require partial-manifest repeatability, explicit frozen resume log markers,
    byte-identical resumed/clean primaries, equal reader behavior, and clean
    success-time checkpoint removal.  Stop on any divergence or leftover.
-9. Run milestone 3 only as named failure experiments.  Preserve every partial
+10. Run milestone 3 only as named failure experiments.  Preserve every partial
    file and parser/exit result; make no recovery or successful-golden claim.
-10. Rerun fixture generation checks, frozen-source verification, all compatibility
+11. Rerun fixture generation checks, frozen-source verification, all compatibility
     tests, WSL shell syntax checks, and `git diff --check`; make separate focused
     commits for harness, clean RLE goldens, recovery evidence, and documentation.
 

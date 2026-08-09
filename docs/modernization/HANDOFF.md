@@ -1,7 +1,8 @@
 # Modernization handoff
 
 Status: fresh-prefix reconstruction and the nonuniform/gzip frozen-oracle
-expansion are complete on branch `codex/modernization`; no modern2 or modern3
+expansion are complete on branch `codex/modernization`; the milestone-1
+decompression compatibility policy is resolved; no modern2 or modern3
 implementation port has started.
 
 ## Start here
@@ -130,9 +131,11 @@ loading was performed only on disposable copies and created the inventoried
   has a `CompressToRLE.pyx` fallback defect.  Preserve the generated-C route's
   observed failure; do not patch the oracle.
 - Uniform and nonuniform uncompressed preprocessing/build plus plain/gzip input
-  and fixture-derived reader smoke now have golden coverage.  Compressed build,
-  compression, decompression, recovery, merge, indexing, and broader API/CLI
-  behavior remain.
+  and fixture-derived reader smoke now have golden coverage.  Compression and
+  compressed build still need repeat/promotion evidence.  The two named
+  post-hoc decompression cases now have a resolved expected-failure policy but
+  no committed failure evidence yet.  Recovery, merge, indexing, and broader
+  API/CLI behavior remain.
 - Reader side effects, recovery files, multiprocessing behavior, filesystem
   ordering, and cross-platform byte determinism need operation-specific tests.
 
@@ -169,10 +172,44 @@ oracle-failure special case.  All acceptance criteria below passed.
 ## Next milestone boundary
 
 The ambiguity is resolved in `COMPRESSION_RECOVERY_PLAN.md`.  Execute only its
-milestone 1 next: clean post-hoc uniform/nonuniform compression, decompression,
-uniform direct compressed construction, unsupported-nonuniform failure records,
-and reader/roundtrip relationships.  Compression/decompression and builder
+milestone 1 next: repeat clean post-hoc uniform/nonuniform compression, capture
+the two authoritative `-p 1` decompression failures, run uniform direct
+compressed construction, capture unsupported-nonuniform failures, and validate
+successful RLE readers/relationships.  Compression/decompression and builder
 recovery are deliberately separate promotions.
+
+### Resolved decompression policy
+
+Two fresh uniform probes and two fresh nonuniform probes under
+`py27-late-05a7d6d83862` and `pyx-historical-cython` all exited `1` at frozen
+`MUS/MultiStringBWT.py:662` with exactly:
+
+```text
+TypeError: slice indices must be integers or None or have an __index__ method
+```
+
+The complete stderr was byte-identical across all four probes.  In each case
+the disposable compressed source gained exactly `totalCounts.p`,
+`comp_fmIndex.npy`, and `comp_refIndex.npy`, while the new destination retained
+only a correctly shaped but unwritten all-zero `msbwt.npy`.  Two-run safe
+manifests matched exactly within each case.  External type inspection showed
+that the frozen `<u8` count and Python `int` addition produces NumPy `float64`
+under this CPython-2.7/NumPy-1.16.6 profile, so the slice bound is invalid.
+
+Treat this only as the narrow expected failure defined in
+`COMPRESSION_RECOVERY_PLAN.md`: exact profile, route, frozen source, named
+post-hoc compressed inputs, command, `-p 1`, exit, traceback, and partial
+manifests.  Other profiles and `-p 2` decompression are uncharacterized.  The
+milestone harness must capture and assert the failure, then continue; it must
+not require exit zero, load the partial output, repair the oracle, or infer a
+roundtrip contract.
+
+The one observed successful post-hoc compression result for each input is not
+yet promotable because compression has not been repeated.  Decompression
+failure does not block independent compression promotion: after two canonical
+compression runs match, the `-p 2` primary matches, safe RLE decoding passes,
+and the frozen compiled reader validates fixture-derived behavior and side
+effects, the post-hoc compression evidence may be promoted.
 
 Do not start recovery execution until clean RLE milestone 1 is committed and
 green.  Recovery then uses only the named external failpoints and immutable
