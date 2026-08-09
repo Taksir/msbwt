@@ -5,7 +5,8 @@ the MSBWT implementation and must never be used to repair it.  The canonical
 oracle source is commit `7503346ec072ddb89520db86fef85569a9ba093a`.
 
 Status: **the linux/amd64 base digest is resolved but not locally executed; no
-candidate dependency combination has been verified yet.**  Every version in
+candidate dependency combination has been verified yet.**  A direct WSL runner
+is available, but it has not produced successful evidence.  Every version in
 `environment/probe-matrix.json` is an explicit candidate, not a claim that it
 builds or reproduces legacy output.
 
@@ -51,16 +52,60 @@ FASTQ files through `pp -u`, then `cfpp -p 1 -u`.  Before creating a run
 directory, it validates the two input names, byte counts, and SHA-256 values
 against `fixture-manifest.json`.  It requires `--install-dependencies`; any
 failed base-package or route-specific Cython installation is recorded by
-package name and blocks a passed case.  The case runs only if `setup.py build`,
-`build_ext --inplace`, the compiled-extension import smoke, and CLI version
-smoke all return zero.  Its two copied dataset trees contain only files the
-oracle wrote; `case-result.json` lives beside them and records the route,
-candidate, fixture hashes, command labels, and outcome.
+package name and blocks a passed case.  The case runs only if the exact
+candidate-version gate, `setup.py build`, `build_ext --inplace`, the
+compiled-extension import smoke, and CLI version smoke all return zero.  Its
+two copied dataset trees contain only files the oracle wrote;
+`case-result.json` lives beside them and records the route, candidate, fixture
+hashes, command labels, and outcome.
 
 These snapshots are **not goldens yet**.  After the container exits, run the
 host-side `compat/tools/artifact_manifest.py inventory` command once for each
 snapshot and write each manifest outside its snapshot directory.  Review those
 host manifests before promoting any output to `compat/goldens`.
+
+## Run directly in WSL
+
+Use this route when a Linux Python-2 environment has already been provisioned
+inside WSL.  The runner does not call `sudo`, install a system package, source
+a shell initialization file, or call a Windows executable.  It requires all
+six explicit arguments and sets a Linux-only PATH, UTC, deterministic hash
+seed, and single-thread numerical environment before invoking the probe.
+
+From the repository directory as seen inside WSL, run (replace the example
+paths with the actual isolated Python-2 environment and Linux-native results
+directory):
+
+```bash
+bash reference/original-0.3.0/environment/wsl/run-wsl-probe.sh \
+  --python /home/mytho/.local/legacy-python2/bin/python \
+  --source /mnt/d/path/to/msbwt \
+  --results /home/mytho/msbwt-oracle-results \
+  --candidate late-python2-candidate \
+  --route pyx-historical-cython \
+  --fixture-root /mnt/d/path/to/msbwt/compat/fixtures/synthetic
+```
+
+Keep `--results` on Linux-native storage; the source can be a mounted
+read-only checkout.  The runner selects conda compiler wrappers in the chosen
+environment when present, otherwise an already-installed Linux `gcc`/`g++`.
+It records the selected values in `environment.json`; it never asks for or
+stores a password.
+
+The golden path rejects any interpreter other than CPython 2.7 before creating
+a result directory.  The exact-version gate imports NumPy, pysam, and Cython (and pip, setuptools,
+or wheel when the matrix names them) after dependency installation.  Their
+resolved versions must exactly match every non-null matrix value.  A missing
+module, failed import, or version mismatch produces a nonzero recorded command
+and blocks `case-result.json` from reporting `passed`.  The generated-C route
+intentionally removes Cython, so its candidate version gate is expected to
+show that conflict rather than silently treating the route as a success.
+
+Candidate-only evidence is a result directory with a failed gate or build.
+Actual successful legacy evidence requires a retained result directory whose
+`report.json` is `passed`, whose relevant candidate-version gate returned zero,
+and whose first-golden case reports `passed`; only then may its output be
+reviewed for promotion to `compat/goldens`.
 
 ## Routes and results
 
@@ -77,6 +122,15 @@ host manifests before promoting any output to `compat/goldens`.
   That name hashes sorted regular files as `file`, NUL, UTF-8 relative path,
   NUL, ASCII decimal byte length, NUL, then payload bytes.  The host artifact
   manifest remains the authoritative reviewed byte inventory.
+
+`environment.json` records the WSL/Linux OS release, uname/architecture,
+glibc and OpenSSL as seen by Python, Python version/prefix/unicode width,
+compiler sysconfig flags, and only the selected inherited build variables.
+`PATH` is explicitly marked host-specific.  The command record separately
+captures `uname`, `/etc/os-release`, `ldd --version`, and `openssl version -a`.
+If the selected Python is a conda environment, it also records package
+name/version/build/channel/URL/checksums from `conda-meta/*.json`; URLs with
+credentials, queries, or fragments are redacted rather than persisted.
 
 `probe-matrix.json` separates the README-era source claims from a later
 Python-2 candidate.  The script accepts only exact candidate values and records

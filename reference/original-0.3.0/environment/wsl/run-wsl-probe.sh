@@ -1,0 +1,175 @@
+#!/usr/bin/env bash
+# Run one frozen-oracle candidate in an already-provisioned WSL Linux Python 2
+# environment.  This script deliberately does not invoke sudo, a shell init
+# file, or any Windows executable.
+set -euo pipefail
+
+usage() {
+    cat <<'USAGE'
+Usage:
+  run-wsl-probe.sh \
+    --python /absolute/path/to/python2.7 \
+    --source /absolute/path/to/msbwt \
+    --results /absolute/path/to/new-oracle-results-parent \
+    --candidate candidate-key \
+    --route generated-c-no-cython|pyx-historical-cython|all \
+    --fixture-root /absolute/path/to/synthetic-fixtures
+
+The Python environment is expected to be isolated already.  The supplied
+results directory should be Linux-native storage (for example /home/...);
+source may be a read-only /mnt/<drive>/ checkout.  The underlying probe writes
+a fresh timestamped directory below --results and exits nonzero on any failed
+dependency, exact-version, build, import, CLI, or golden gate.
+USAGE
+}
+
+PYTHON=""
+SOURCE=""
+RESULTS=""
+CANDIDATE=""
+ROUTE=""
+FIXTURE_ROOT=""
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --python)
+            PYTHON=${2:?--python requires a value}
+            shift 2
+            ;;
+        --source)
+            SOURCE=${2:?--source requires a value}
+            shift 2
+            ;;
+        --results)
+            RESULTS=${2:?--results requires a value}
+            shift 2
+            ;;
+        --candidate)
+            CANDIDATE=${2:?--candidate requires a value}
+            shift 2
+            ;;
+        --route)
+            ROUTE=${2:?--route requires a value}
+            shift 2
+            ;;
+        --fixture-root)
+            FIXTURE_ROOT=${2:?--fixture-root requires a value}
+            shift 2
+            ;;
+        --help|-h)
+            usage
+            exit 0
+            ;;
+        *)
+            printf 'Unknown argument: %s\n' "$1" >&2
+            usage >&2
+            exit 64
+            ;;
+    esac
+done
+
+for required_name in PYTHON SOURCE RESULTS CANDIDATE ROUTE FIXTURE_ROOT; do
+    if [ -z "${!required_name}" ]; then
+        printf 'Missing required --%s argument.\n' "$(printf '%s' "$required_name" | tr '[:upper:]_' '[:lower:]-')" >&2
+        usage >&2
+        exit 64
+    fi
+done
+
+case "$ROUTE" in
+    all|generated-c-no-cython|pyx-historical-cython)
+        ;;
+    *)
+        printf 'Unsupported route: %s\n' "$ROUTE" >&2
+        exit 64
+        ;;
+esac
+
+case "$PYTHON" in
+    /*)
+        ;;
+    *)
+        printf '--python must be an absolute Linux path: %s\n' "$PYTHON" >&2
+        exit 64
+        ;;
+esac
+
+if [ ! -x "$PYTHON" ]; then
+    printf 'Python executable is not executable: %s\n' "$PYTHON" >&2
+    exit 66
+fi
+if [ ! -d "$SOURCE" ] || [ ! -d "$FIXTURE_ROOT" ]; then
+    printf '--source and --fixture-root must be existing directories.\n' >&2
+    exit 66
+fi
+
+ENV_PREFIX=$("$PYTHON" -c 'import sys; print(sys.prefix)')
+ENV_BIN="$ENV_PREFIX/bin"
+if [ ! -d "$ENV_BIN" ]; then
+    printf 'Python sys.prefix has no bin directory: %s\n' "$ENV_PREFIX" >&2
+    exit 66
+fi
+
+# Do not inherit Windows interop paths or user shell initialization.  Keep the
+# isolated environment first, followed only by standard Linux system paths.
+export PATH="$ENV_BIN:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+export TZ=UTC
+export PYTHONHASHSEED=0
+export PYTHONNOUSERSITE=1
+export OPENBLAS_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+export VECLIB_MAXIMUM_THREADS=1
+
+pick_wrapper() {
+    local suffix=$1
+    local candidate_path
+    for candidate_path in "$ENV_BIN"/*-"$suffix"; do
+        if [ -x "$candidate_path" ]; then
+            printf '%s\n' "$candidate_path"
+            return 0
+        fi
+    done
+    return 1
+}
+
+if CC_WRAPPER=$(pick_wrapper gcc); then
+    export CC="$CC_WRAPPER"
+elif command -v gcc >/dev/null 2>&1; then
+    export CC=$(command -v gcc)
+else
+    printf 'No conda gcc wrapper or Linux gcc found in sanitized PATH.\n' >&2
+    exit 69
+fi
+
+if CXX_WRAPPER=$(pick_wrapper g++); then
+    export CXX="$CXX_WRAPPER"
+elif command -v g++ >/dev/null 2>&1; then
+    export CXX=$(command -v g++)
+else
+    printf 'No conda g++ wrapper or Linux g++ found in sanitized PATH.\n' >&2
+    exit 69
+fi
+
+if [[ "$RESULTS" == /mnt/* ]]; then
+    printf 'Warning: --results is on a Windows mount; Linux-native storage is preferred for reproducible extension builds.\n' >&2
+fi
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+PROBE="$SCRIPT_DIR/../probe_legacy.py"
+if [ ! -f "$PROBE" ]; then
+    printf 'Frozen oracle probe is missing: %s\n' "$PROBE" >&2
+    exit 66
+fi
+
+exec "$PYTHON" "$PROBE" \
+    --source "$SOURCE" \
+    --results "$RESULTS" \
+    --candidate "$CANDIDATE" \
+    --route "$ROUTE" \
+    --install-dependencies \
+    --run-first-goldens \
+    --fixture-root "$FIXTURE_ROOT"

@@ -9,6 +9,7 @@ from __future__ import print_function
 
 import argparse
 import datetime
+import glob
 import hashlib
 import json
 import os
@@ -29,6 +30,18 @@ FIRST_GOLDEN_CASE_ID = "uniform-multifile"
 FIRST_GOLDEN_FILES = ("uniform-a.fastq", "uniform-b.fastq")
 FIRST_GOLDEN_MANIFEST = "fixture-manifest.json"
 CLI_MAIN = "from MUS import CommandLineInterface; CommandLineInterface.mainRun()"
+VERSIONED_CANDIDATE_PACKAGES = (
+    ("numpy", "numpy", "numpy"),
+    ("pysam", "pysam", "pysam"),
+    ("cython", "Cython", "Cython"),
+    ("pip", "pip", "pip"),
+    ("setuptools", "setuptools", "setuptools"),
+    ("wheel", "wheel", "wheel")
+)
+COMPILER_CONFIG_VARIABLES = (
+    "CONFIG_ARGS", "CC", "CFLAGS", "CPPFLAGS", "LDFLAGS", "LDSHARED", "SOABI"
+)
+INHERITED_BUILD_VARIABLES = ("CC", "CXX", "CFLAGS", "CPPFLAGS", "LDFLAGS", "PATH")
 
 try:
     STRING_TYPES = (basestring,)
@@ -303,24 +316,204 @@ def install_cython_candidate(recorder, candidate):
     return [] if not install_exact(recorder, "Cython", version) else ["Cython"]
 
 
+def candidate_version_gate_source(candidate):
+    """Return Python-2-compatible code that proves exact candidate versions.
+
+    Package imports are intentionally part of the check.  Metadata claiming a
+    version is insufficient if importing the module itself fails, particularly
+    for compiled NumPy and pysam extensions.
+    """
+    expected = {}
+    modules = {}
+    distributions = {}
+    for matrix_key, module_name, distribution_name in VERSIONED_CANDIDATE_PACKAGES:
+        version = candidate.get(matrix_key)
+        if version is not None:
+            expected[matrix_key] = version
+            modules[matrix_key] = module_name
+            distributions[matrix_key] = distribution_name
+    encoded_expected = json.dumps(expected, sort_keys=True, ensure_ascii=True)
+    encoded_modules = json.dumps(modules, sort_keys=True, ensure_ascii=True)
+    encoded_distributions = json.dumps(distributions, sort_keys=True, ensure_ascii=True)
+    return """
+from __future__ import print_function
+import json
+
+expected = {expected}
+module_names = {modules}
+distribution_names = {distributions}
+try:
+    text_type = unicode
+except NameError:
+    text_type = str
+
+def as_text(value):
+    if isinstance(value, text_type):
+        return value
+    try:
+        return str(value)
+    except Exception:
+        return None
+
+def module_version(module, distribution_name):
+    for attribute in ("__version__", "version"):
+        value = getattr(module, attribute, None)
+        if isinstance(value, (str, text_type)):
+            return as_text(value), "module." + attribute
+        nested = getattr(value, "__version__", None)
+        if isinstance(nested, (str, text_type)):
+            return as_text(nested), "module." + attribute + ".__version__"
+    try:
+        import pkg_resources
+        return as_text(pkg_resources.get_distribution(distribution_name).version), "pkg_resources"
+    except Exception as exc:
+        return None, "version-unavailable: %s: %s" % (exc.__class__.__name__, exc)
+
+resolved = {{}}
+failures = []
+for key in sorted(expected):
+    module_name = module_names[key]
+    try:
+        module = __import__(module_name)
+    except Exception as exc:
+        resolved[key] = {{"actual": None, "error": "%s: %s" % (exc.__class__.__name__, exc), "expected": expected[key]}}
+        failures.append(key)
+        continue
+    actual, source = module_version(module, distribution_names[key])
+    resolved[key] = {{"actual": actual, "expected": expected[key], "source": source}}
+    if actual != expected[key]:
+        failures.append(key)
+print(json.dumps({{"expected": expected, "resolved": resolved, "failures": failures}}, sort_keys=True))
+raise SystemExit(1 if failures else 0)
+""".format(
+        expected=encoded_expected,
+        modules=encoded_modules,
+        distributions=encoded_distributions
+    )
+
+
+def run_candidate_version_gate(recorder, candidate, route):
+    """Record the exact import/version gate that must pass before a golden."""
+    return recorder.run(
+        "candidate-version-gate-{0}".format(route),
+        [sys.executable, "-c", candidate_version_gate_source(candidate)]
+    )
+
+
+def _read_text_file(path):
+    try:
+        with open(path, "rb") as handle:
+            value = handle.read()
+    except IOError as exc:
+        return {"error": "{0}: {1}".format(exc.__class__.__name__, exc), "path": path}
+    try:
+        text = value.decode("utf-8")
+    except UnicodeDecodeError:
+        text = value.decode("utf-8", "replace")
+    return {"path": path, "text": text}
+
+
+def _safe_conda_url(value):
+    """Retain normal package URLs but never persist URL credentials or tokens."""
+    if not isinstance(value, STRING_TYPES):
+        return None
+    try:
+        try:
+            from urllib.parse import urlsplit
+        except ImportError:
+            from urlparse import urlsplit
+        parts = urlsplit(value)
+        if parts.username or parts.password or parts.query or parts.fragment:
+            return None
+    except Exception:
+        return None
+    return value
+
+
+def capture_conda_metadata(prefix):
+    """Capture only reproducibility fields from conda package records, if any."""
+    metadata_directory = os.path.join(prefix, "conda-meta")
+    result = {"directory": metadata_directory, "packages": []}
+    if not os.path.isdir(metadata_directory):
+        return result
+    for path in sorted(glob.glob(os.path.join(metadata_directory, "*.json"))):
+        item = {"file": os.path.basename(path)}
+        try:
+            package = read_json(path)
+        except (IOError, ValueError, UnicodeDecodeError) as exc:
+            item["error"] = "{0}: {1}".format(exc.__class__.__name__, exc)
+            result["packages"].append(item)
+            continue
+        for key in ("name", "version", "build", "channel", "md5", "sha256"):
+            item[key] = package.get(key)
+        url = package.get("url")
+        safe_url = _safe_conda_url(url)
+        item["url"] = safe_url
+        if url is not None and safe_url is None:
+            item["url_redacted"] = True
+        result["packages"].append(item)
+    return result
+
+
+def capture_python_build_metadata():
+    try:
+        import sysconfig
+    except ImportError:
+        from distutils import sysconfig
+    try:
+        import ssl
+        openssl_version = getattr(ssl, "OPENSSL_VERSION", None)
+        openssl_version_info = getattr(ssl, "OPENSSL_VERSION_INFO", None)
+    except ImportError as exc:
+        openssl_version = None
+        openssl_version_info = "IMPORT_FAILED: {0}: {1}".format(exc.__class__.__name__, exc)
+    config_variables = {}
+    for name in COMPILER_CONFIG_VARIABLES:
+        config_variables[name] = sysconfig.get_config_var(name)
+    inherited = {}
+    for name in INHERITED_BUILD_VARIABLES:
+        inherited[name] = {
+            "host_specific": name == "PATH",
+            "value": os.environ.get(name)
+        }
+    return {
+        "compiler_config_variables": config_variables,
+        "inherited_build_environment": inherited,
+        "openssl_from_python": {
+            "version": openssl_version,
+            "version_info": openssl_version_info
+        },
+        "python_prefix": sys.prefix,
+        "python_sys_version": sys.version,
+        "python_maxunicode": getattr(sys, "maxunicode", None)
+    }
+
+
 def capture_host_metadata(recorder, run_dir):
     metadata = {
+        "architecture": platform.machine(),
         "machine": platform.machine(),
         "base_image_reference": os.environ.get("ORACLE_BASE_IMAGE_REFERENCE"),
         "base_image_status": os.environ.get("ORACLE_BASE_IMAGE_STATUS"),
+        "conda_metadata": capture_conda_metadata(sys.prefix),
+        "glibc_from_python": platform.libc_ver(),
+        "os_release": _read_text_file("/etc/os-release"),
         "platform": platform.platform(),
         "python_executable": sys.executable,
         "python_implementation": platform.python_implementation(),
         "python_version": sys.version,
         "timezone_name": os.environ.get("TZ"),
+        "uname_from_python": platform.uname(),
         "utc_started": datetime.datetime.utcnow().isoformat() + "Z"
     }
+    metadata.update(capture_python_build_metadata())
     write_json(os.path.join(run_dir, "environment.json"), metadata)
     for label, argv in (
         ("uname", ["uname", "-a"]),
         ("os-release", ["sh", "-c", "cat /etc/os-release"]),
         ("locale", ["locale"]),
         ("ldd-version", ["ldd", "--version"]),
+        ("openssl-version", ["openssl", "version", "-a"]),
     ):
         recorder.run(label, argv)
 
@@ -420,6 +613,7 @@ def run_route(
     else:
         raise ValueError("unknown route: {0}".format(route))
     version_probe_commands(recorder)
+    candidate_version_returncode = run_candidate_version_gate(recorder, candidate, route)
     build_returncode = recorder.run("build-{0}".format(route), [sys.executable, "setup.py", "build"], cwd=destination)
     build_ext_returncode = recorder.run(
         "build-ext-inplace-{0}".format(route),
@@ -441,6 +635,7 @@ def run_route(
         "build_ext_inplace": build_ext_returncode,
         "cli_version": cli_returncode,
         "base_dependency_install": 0 if not base_install_failures else 1,
+        "candidate_version": candidate_version_returncode,
         "route_dependency_install": 0 if not route_install_failures else 1,
         "import_smoke": import_returncode
     }
@@ -501,6 +696,8 @@ def main(argv=None):
             fixture_info = validate_first_golden_fixtures(args.fixture_root)
         except ValueError as exc:
             raise SystemExit("invalid first-golden fixtures: {0}".format(exc))
+        if sys.version_info[:2] != (2, 7) or platform.python_implementation() != "CPython":
+            raise SystemExit("--run-first-goldens requires CPython 2.7")
 
     run_dir = os.path.join(os.path.abspath(args.results), utc_run_id())
     ensure_directory(run_dir)

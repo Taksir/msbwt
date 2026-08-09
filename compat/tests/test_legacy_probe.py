@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import importlib.util
+import json
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -25,6 +27,151 @@ SPEC.loader.exec_module(legacy_probe)
 
 
 class LegacyProbeGuardTests(unittest.TestCase):
+    def test_first_goldens_reject_non_python27_before_results(self) -> None:
+        if sys.version_info[:2] == (2, 7):
+            self.skipTest("host interpreter is Python 2.7")
+        results = "fixed-nonexistent-python-version-guard-results"
+
+        with self.assertRaisesRegex(SystemExit, "requires CPython 2.7"):
+            legacy_probe.main(
+                [
+                    "--source",
+                    str(REPOSITORY_ROOT),
+                    "--results",
+                    results,
+                    "--run-first-goldens",
+                    "--install-dependencies",
+                    "--fixture-root",
+                    str(FIXTURE_ROOT),
+                ]
+            )
+
+        self.assertFalse(Path(results).exists())
+
+    def test_candidate_version_gate_records_exact_gate_success_with_mock(self) -> None:
+        recorder = mock.Mock(spec=legacy_probe.Recorder)
+        recorder.run.return_value = 0
+        candidate = {
+            "numpy": "1.10.1",
+            "pysam": "0.7.4",
+            "cython": "0.23.4",
+            "pip": None,
+            "setuptools": None,
+            "wheel": None,
+        }
+
+        returncode = legacy_probe.run_candidate_version_gate(
+            recorder, candidate, "pyx-historical-cython"
+        )
+
+        self.assertEqual(returncode, 0)
+        recorder.run.assert_called_once()
+        label, argv = recorder.run.call_args.args
+        self.assertEqual(label, "candidate-version-gate-pyx-historical-cython")
+        self.assertEqual(argv[:2], [legacy_probe.sys.executable, "-c"])
+        self.assertIn('"numpy": "1.10.1"', argv[2])
+        self.assertIn('"Cython"', argv[2])
+
+    def test_candidate_version_gate_failure_blocks_first_golden_with_mock(self) -> None:
+        recorder = mock.Mock(spec=legacy_probe.Recorder)
+        recorder.run.return_value = 1
+        candidate = {
+            "numpy": "not-a-real-version",
+            "pysam": None,
+            "cython": None,
+            "pip": None,
+            "setuptools": None,
+            "wheel": None,
+        }
+        gate_returncode = legacy_probe.run_candidate_version_gate(recorder, candidate, "pyx-historical-cython")
+        gate = {
+            "base_dependency_install": 0,
+            "candidate_version": gate_returncode,
+            "route_dependency_install": 0,
+            "build": 0,
+            "build_ext_inplace": 0,
+            "import_smoke": 0,
+            "cli_version": 0,
+        }
+
+        with mock.patch.object(legacy_probe, "ensure_directory"), mock.patch.object(
+            legacy_probe, "write_json"
+        ):
+            result = legacy_probe.run_first_golden_case(
+                recorder=recorder,
+                route="pyx-historical-cython",
+                candidate_name="test-candidate",
+                destination="nonexistent-oracle-destination",
+                run_dir="nonexistent-legacy-probe-run",
+                fixture_info={"fixture_root": str(FIXTURE_ROOT), "files": []},
+                gate=gate,
+                dependency_install_failures={"base": [], "route": []},
+            )
+
+        self.assertEqual(result["status"], "skipped-gate-failure")
+        self.assertNotEqual(result["status"], "passed")
+        recorder.run.assert_called_once()
+
+    def test_candidate_version_gate_subprocess_reports_mismatch(self) -> None:
+        # The host may have any NumPy version or no NumPy at all.  Both cases
+        # must produce a nonzero result for this deliberately impossible value.
+        source = legacy_probe.candidate_version_gate_source(
+            {
+                "numpy": "not-a-real-version",
+                "pysam": None,
+                "cython": None,
+                "pip": None,
+                "setuptools": None,
+                "wheel": None,
+            }
+        )
+
+        completed = subprocess.run(
+            [sys.executable, "-c", source],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+
+        self.assertEqual(completed.returncode, 1)
+        report = json.loads(completed.stdout)
+        self.assertEqual(report["expected"], {"numpy": "not-a-real-version"})
+        self.assertEqual(report["failures"], ["numpy"])
+
+    def test_candidate_version_gate_subprocess_accepts_resolved_pip_version(self) -> None:
+        import pip
+
+        source = legacy_probe.candidate_version_gate_source(
+            {
+                "numpy": None,
+                "pysam": None,
+                "cython": None,
+                "pip": pip.__version__,
+                "setuptools": None,
+                "wheel": None,
+            }
+        )
+
+        completed = subprocess.run(
+            [sys.executable, "-c", source],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+
+        self.assertEqual(completed.returncode, 0, completed.stderr)
+        report = json.loads(completed.stdout)
+        self.assertEqual(report["failures"], [])
+        self.assertEqual(report["resolved"]["pip"]["actual"], pip.__version__)
+
+    def test_conda_url_capture_refuses_credentials_or_query(self) -> None:
+        self.assertEqual(
+            legacy_probe._safe_conda_url("https://repo.example.invalid/pkg.tar.bz2"),
+            "https://repo.example.invalid/pkg.tar.bz2",
+        )
+        self.assertIsNone(legacy_probe._safe_conda_url("https://token@example.invalid/pkg.tar.bz2"))
+        self.assertIsNone(legacy_probe._safe_conda_url("https://repo.example.invalid/pkg.tar.bz2?token=x"))
+
     def test_validates_exact_first_golden_fixture_case_and_hashes(self) -> None:
         result = legacy_probe.validate_first_golden_fixtures(str(FIXTURE_ROOT))
 
@@ -93,6 +240,7 @@ class LegacyProbeGuardTests(unittest.TestCase):
         }
         gate = {
             "base_dependency_install": 1,
+            "candidate_version": 0,
             "route_dependency_install": 0,
             "build": 0,
             "build_ext_inplace": 0,
