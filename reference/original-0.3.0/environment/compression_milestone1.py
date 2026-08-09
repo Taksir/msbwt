@@ -7,10 +7,12 @@ safe NPY parsing and promotion after every relationship below passes.
 """
 from __future__ import print_function
 
+import ast
 import hashlib
 import json
 import os
 import platform
+import re
 import shutil
 import struct
 import sys
@@ -24,6 +26,15 @@ DERIVED_INPUT_FILES = set((
     "totalCounts.npy", "fmIndex.npy", "totalCounts.p",
     "comp_fmIndex.npy", "comp_refIndex.npy"
 ))
+# Frozen RLE symbol order: low three bits index this table (0..5).
+SYMBOL_ORDER = "$ACGNT"
+
+
+def _byte_value(value):
+    """Return an int for either an int (Python 3 bytes) or a 1-char str (Py2)."""
+    if isinstance(value, int):
+        return value
+    return ord(value)
 
 
 def read_json(path):
@@ -85,6 +96,199 @@ def assert_no_derived_input_files(root):
         raise RuntimeError("starting artifact contains derived reader files: {0}".format(unexpected))
 
 
+def extract_shape_literal(header_text):
+    """Return the raw NumPy shape literal as persisted, preserving ``L`` suffixes.
+
+    Frozen post-hoc compression writes ``(N,)`` while the direct Cython builder
+    writes ``(NL,)`` under Python 2.  Both are valid; the difference is a
+    compatibility contract, so the raw literal is recorded without normalization.
+    """
+    marker = "'shape': "
+    index = header_text.find(marker)
+    if index < 0:
+        raise RuntimeError("NumPy header lacks a shape entry: {0!r}".format(header_text))
+    index += len(marker)
+    depth = 0
+    start = index
+    for position in range(index, len(header_text)):
+        character = header_text[position]
+        if character == "(":
+            depth += 1
+        elif character == ")":
+            depth -= 1
+            if depth == 0:
+                return header_text[start:position + 1]
+    raise RuntimeError("NumPy header shape literal is unbalanced: {0!r}".format(header_text))
+
+
+def parse_u1_npy(path):
+    """Inspect a v1 ``|u1`` NPY primary without loading an array.
+
+    Returns the raw header text, raw shape literal, logical shape, dtype, and
+    payload bytes/hash.  The raw payload is not retained in JSON records; only
+    its hash and decoded products are persisted.
+    """
+    with open(path, "rb") as handle:
+        data = handle.read()
+    sha256 = hashlib.sha256(data).hexdigest()
+    if data[:6] != b"\x93NUMPY":
+        raise RuntimeError("RLE primary is not a NumPy NPY file: {0}".format(path))
+    major = ord(data[6:7])
+    minor = ord(data[7:8])
+    if major != 1:
+        raise RuntimeError("RLE primary is not NPY v1: {0} (version {1}.{2})".format(path, major, minor))
+    header_length = struct.unpack("<H", data[8:10])[0]
+    raw_header = data[10:10 + header_length]
+    if len(raw_header) != header_length:
+        raise RuntimeError("RLE primary NPY header is truncated: {0}".format(path))
+    payload = data[10 + header_length:]
+    header_text = raw_header.decode("latin-1")
+    shape_literal = extract_shape_literal(header_text)
+    normalized = re.sub(r"(?<=[0-9])[Ll]", "", shape_literal)
+    try:
+        shape = list(ast.literal_eval(normalized))
+    except (ValueError, SyntaxError):
+        raise RuntimeError("cannot parse NumPy shape literal: {0!r}".format(shape_literal))
+    dtype_match = re.search(r"'descr':\s*'([^']*)'", header_text)
+    if dtype_match is None:
+        raise RuntimeError("NumPy header lacks a dtype descriptor: {0!r}".format(header_text))
+    dtype = dtype_match.group(1)
+    if dtype != "|u1":
+        raise RuntimeError("RLE primary dtype is not |u1: {0!r} ({1})".format(dtype, path))
+    expected_payload_size = 1
+    for dimension in shape:
+        expected_payload_size *= dimension
+    if len(payload) != expected_payload_size:
+        raise RuntimeError(
+            "RLE primary |u1 payload size {0} is inconsistent with shape {1} ({2})".format(
+                len(payload), shape, path))
+    return {
+        "sha256": sha256,
+        "size": len(data),
+        "version": [major, minor],
+        "header_length": header_length,
+        "header_text": header_text.rstrip("\n"),
+        "shape_literal": shape_literal,
+        "dtype": dtype,
+        "shape": shape,
+        "payload_size": len(payload),
+        "payload": payload,
+        "payload_sha256": hashlib.sha256(payload).hexdigest(),
+    }
+
+
+def decode_rle_payload(payload):
+    """Independently decode a frozen RLE payload without using the legacy reader.
+
+    Low three bits index ``SYMBOL_ORDER`` (``$ACGNT``); the upper five bits of
+    consecutive same-symbol bytes are little-endian base-32 run-length digits.
+    The committed uncompressed ``msbwt.npy`` stores the BWT as numeric symbol
+    indices (0..5), so ``decoded_bytes`` carries those indices and
+    ``decoded_sha256`` is computed over them.  ``decoded_symbols`` is the ASCII
+    rendering for human-readable records.  This is the safe-decoding gate
+    required by the plan and does not load or trust any NumPy array.
+    """
+    runs = []
+    decoded_bytes = bytearray()
+    decoded_symbols = bytearray()
+    position = 0
+    index = 0
+    length = len(payload)
+    while index < length:
+        symbol_index = _byte_value(payload[index]) & 0x07
+        if symbol_index >= len(SYMBOL_ORDER):
+            raise RuntimeError("RLE payload encodes an unknown symbol index: {0}".format(symbol_index))
+        count = 0
+        offset = 0
+        digit_values = []
+        while (index + offset) < length and (_byte_value(payload[index + offset]) & 0x07) == symbol_index:
+            digit = (_byte_value(payload[index + offset]) >> 3) & 0x1F
+            digit_values.append(digit)
+            count += digit * (32 ** offset)
+            offset += 1
+        if count <= 0:
+            raise RuntimeError("RLE payload encodes a non-positive run length: {0}".format(count))
+        symbol = SYMBOL_ORDER[symbol_index]
+        start = position
+        end = position + count
+        runs.append({
+            "symbol_index": symbol_index,
+            "symbol": symbol,
+            "count": count,
+            "start": start,
+            "end": end,
+            "digits": offset,
+            "digit_values": digit_values
+        })
+        decoded_bytes.extend(bytearray([symbol_index]) * count)
+        decoded_symbols += symbol.encode("ascii") * count
+        position = end
+        index += offset
+    return {
+        "runs": runs,
+        "run_count": len(runs),
+        "decoded_bytes": bytes(decoded_bytes),
+        "decoded_sha256": hashlib.sha256(bytes(decoded_bytes)).hexdigest(),
+        "decoded_length": len(decoded_bytes),
+        "decoded_symbols": decoded_symbols.decode("ascii"),
+    }
+
+
+def runs_from_byte_bwt(bwt_bytes):
+    """Group a committed uncompressed BWT (numeric symbol indices) into runs.
+
+    This is an independent cross-check: the RLE-decoded run structure must match
+    the run structure of the authoritative uncompressed ``msbwt.npy`` payload.
+    """
+    runs = []
+    position = 0
+    index = 0
+    length = len(bwt_bytes)
+    while index < length:
+        symbol_index = _byte_value(bwt_bytes[index])
+        offset = 0
+        while (index + offset) < length and _byte_value(bwt_bytes[index + offset]) == symbol_index:
+            offset += 1
+        count = offset
+        symbol = SYMBOL_ORDER[symbol_index] if symbol_index < len(SYMBOL_ORDER) else "?"
+        runs.append({
+            "symbol_index": symbol_index,
+            "symbol": symbol,
+            "count": count,
+            "start": position,
+            "end": position + count,
+            "digits": 0
+        })
+        position += count
+        index += count
+    return runs
+
+
+def rle_primary_record(path):
+    """Build a JSON-safe primary record including the safe-decoded RLE report."""
+    parsed = parse_u1_npy(path)
+    decoded = decode_rle_payload(parsed.pop("payload"))
+    record = {
+        "sha256": parsed["sha256"],
+        "size": parsed["size"],
+        "dtype": parsed["dtype"],
+        "shape": parsed["shape"],
+        "shape_literal": parsed["shape_literal"],
+        "payload_sha256": parsed["payload_sha256"],
+        "payload_size": parsed["payload_size"],
+        "header_text": parsed["header_text"],
+        "header_length": parsed["header_length"],
+        "version": parsed["version"],
+    }
+    record["runs"] = decoded["runs"]
+    record["run_count"] = decoded["run_count"]
+    record["decoded_length"] = decoded["decoded_length"]
+    record["decoded_sha256"] = decoded["decoded_sha256"]
+    record["decoded_bwt"] = decoded["decoded_symbols"]
+    record.pop("decoded_bytes", None)
+    return record
+
+
 def validate_config(path, golden_root, fixture_root):
     config = read_json(path)
     if config.get("format") != "msbwt-legacy-compression-milestone1-cases-v1":
@@ -93,7 +297,7 @@ def validate_config(path, golden_root, fixture_root):
         raise RuntimeError("compression case manifest profile differs from verified profile")
     if config.get("route") != "pyx-historical-cython":
         raise RuntimeError("compression case manifest route differs from verified route")
-    resolved = {}
+    starts = {}
     for key, value in sorted(config["starting_artifacts"].items()):
         source = os.path.abspath(os.path.join(golden_root, *value["path"].split("/")))
         actual = inventory(source)
@@ -104,14 +308,31 @@ def validate_config(path, golden_root, fixture_root):
             if sha256_file(primary) != value["primary_sha256"]:
                 raise RuntimeError("starting primary hash mismatch for {0}".format(key))
         assert_no_derived_input_files(source)
-        resolved[key] = source
+        starts[key] = source
     fixtures = {
         "uniform": probe_legacy.validate_golden_case(
             fixture_root, config["fixture_cases"]["uniform"]),
         "nonuniform": probe_legacy.validate_golden_case(
             fixture_root, config["fixture_cases"]["nonuniform"])
     }
-    return config, resolved, fixtures
+    route_contract = config.get("successful_route_contract")
+    if route_contract is None or route_contract.get("routes") is None:
+        raise RuntimeError("compression case manifest lacks successful_route_contract")
+    byte_primaries = {}
+    for case_key, start_key in (("uniform", "uniform_build"), ("nonuniform", "nonuniform_build")):
+        primary_path = os.path.join(starts[start_key], "msbwt.npy")
+        parsed = parse_u1_npy(primary_path)
+        byte_runs = runs_from_byte_bwt(parsed["payload"])
+        byte_primaries[case_key] = {
+            "sha256": parsed["sha256"],
+            "payload_sha256": parsed["payload_sha256"],
+            "decoded_sha256": parsed["payload_sha256"],
+            "decoded_length": parsed["payload_size"],
+            "runs": byte_runs,
+            "shape": parsed["shape"],
+            "shape_literal": parsed["shape_literal"],
+        }
+    return config, starts, fixtures, route_contract, byte_primaries
 
 
 def cli_argv(*arguments):
@@ -184,7 +405,7 @@ def compress_case(recorder, built_source, operation_root, label, source_artifact
         cli_argv("compress", "-p", str(processes), source, destination), built_source)
     after = inventory(source)
     output = inventory(destination)
-    primary = file_record(os.path.join(destination, "comp_msbwt.npy"))
+    primary = rle_primary_record(os.path.join(destination, "comp_msbwt.npy"))
     assert_no_success_temps(destination)
     if before != after:
         raise RuntimeError("post-hoc compression mutated its byte source")
@@ -265,6 +486,7 @@ def direct_split_case(recorder, built_source, operation_root, label, fixture, pr
         cli_argv("cfpp", "-p", str(processes), "-u", "-c", destination), built_source)
     output = inventory(destination)
     assert_no_success_temps(destination)
+    primary = rle_primary_record(os.path.join(destination, "comp_msbwt.npy"))
     return {
         "argv": [
             ["pp", "-u", "DESTINATION", "uniform-a.fastq", "uniform-b.fastq"],
@@ -272,7 +494,7 @@ def direct_split_case(recorder, built_source, operation_root, label, fixture, pr
         ],
         "preprocess": pre,
         "destination": output,
-        "primary": file_record(os.path.join(destination, "comp_msbwt.npy")),
+        "primary": primary,
         "about": file_record(os.path.join(destination, "about.npy"))
     }
 
@@ -286,11 +508,12 @@ def direct_wrapper_case(recorder, built_source, operation_root, label, fixture, 
         built_source)
     output = inventory(destination)
     assert_no_success_temps(destination)
+    primary = rle_primary_record(os.path.join(destination, "comp_msbwt.npy"))
     return {
         "argv": ["cffq", "-p", str(processes), "-u", "-c", "DESTINATION",
                  "uniform-a.fastq", "uniform-b.fastq"],
         "destination": output,
-        "primary": file_record(os.path.join(destination, "comp_msbwt.npy")),
+        "primary": primary,
         "about": file_record(os.path.join(destination, "about.npy"))
     }
 
@@ -340,14 +563,78 @@ def run_group(recorder, built_source, raw_root, run_id, processes, starts, fixtu
     return result
 
 
-def assert_group_relationships(group, starts):
+def run_signature(runs):
+    """Semantic run boundary/sequence view, ignoring RLE byte-digit encoding."""
+    return [[run["symbol"], run["count"], run["start"], run["end"]] for run in runs]
+
+
+def assert_group_relationships(group, route_contract, byte_primaries):
+    """Gate one run group under the resolved post-hoc/direct compatibility policy.
+
+    Whole-file equality is required only within the same route and between the
+    direct split and wrapper.  Post-hoc and direct whole files are permitted to
+    differ by the documented NumPy shape literal (``(N,)`` versus ``(NL,)``).
+    Across the uniform routes the RLE payload, run sequence, decoded length, and
+    decoded BWT must be identical, and the decoded BWT must equal the committed
+    uncompressed byte primary.  The nonuniform post-hoc decoded BWT must equal
+    its committed nonuniform byte primary.
+    """
     operations = group["operations"]
-    uniform_hashes = set(operations[name]["primary"]["sha256"] for name in (
-        "uniform-posthoc", "uniform-direct-split", "uniform-direct-wrapper"))
-    if len(uniform_hashes) != 1:
-        raise RuntimeError("uniform post-hoc/split/wrapper RLE primaries differ")
+    routes = route_contract["routes"]
+    for name in ("uniform-posthoc", "uniform-direct-split",
+                 "uniform-direct-wrapper", "nonuniform-posthoc"):
+        primary = operations[name]["primary"]
+        expected = routes[name]
+        if primary["sha256"] != expected["whole_sha256"]:
+            raise RuntimeError("route {0} whole-file primary differs: {1} != {2}".format(
+                name, primary["sha256"], expected["whole_sha256"]))
+        if primary["shape_literal"] != expected["shape_literal"]:
+            raise RuntimeError("route {0} shape literal differs: {1!r} != {2!r}".format(
+                name, primary["shape_literal"], expected["shape_literal"]))
+        if primary["decoded_sha256"] != expected["decoded_bwt_sha256"]:
+            raise RuntimeError("route {0} decoded BWT hash differs from contract".format(name))
+        if primary["decoded_length"] != expected["decoded_length"]:
+            raise RuntimeError("route {0} decoded length differs from contract".format(name))
+    split = operations["uniform-direct-split"]["primary"]
+    wrapper = operations["uniform-direct-wrapper"]["primary"]
+    if split["sha256"] != wrapper["sha256"] or split["shape_literal"] != wrapper["shape_literal"]:
+        raise RuntimeError("direct split/wrapper whole-file RLE primary differs")
     if operations["uniform-direct-split"]["about"] != operations["uniform-direct-wrapper"]["about"]:
         raise RuntimeError("uniform split/wrapper about.npy differs")
+    reference = operations["uniform-posthoc"]["primary"]
+    reference_signature = run_signature(reference["runs"])
+    for name in ("uniform-direct-split", "uniform-direct-wrapper"):
+        primary = operations[name]["primary"]
+        if primary["shape"] != reference["shape"]:
+            raise RuntimeError("uniform cross-route logical shape differs for {0}".format(name))
+        if primary["payload_sha256"] != reference["payload_sha256"]:
+            raise RuntimeError("uniform cross-route RLE payload differs for {0}".format(name))
+        if run_signature(primary["runs"]) != reference_signature:
+            raise RuntimeError("uniform cross-route run sequence differs for {0}".format(name))
+        if primary["decoded_sha256"] != reference["decoded_sha256"] or \
+                primary["decoded_length"] != reference["decoded_length"]:
+            raise RuntimeError("uniform cross-route decoded BWT differs for {0}".format(name))
+    if reference["payload_sha256"] != route_contract["uniform_payload_sha256"]:
+        raise RuntimeError("uniform RLE payload sha differs from contract")
+    if reference["shape"] != route_contract["uniform_logical_shape"]:
+        raise RuntimeError("uniform logical shape differs from contract")
+    if reference["decoded_sha256"] != byte_primaries["uniform"]["decoded_sha256"]:
+        raise RuntimeError("uniform decoded BWT differs from committed byte primary")
+    if reference_signature != run_signature(byte_primaries["uniform"]["runs"]):
+        raise RuntimeError("uniform decoded runs differ from committed byte primary")
+    if reference["decoded_length"] != byte_primaries["uniform"]["decoded_length"]:
+        raise RuntimeError("uniform decoded length differs from committed byte primary")
+    if reference["decoded_bwt"] != route_contract["uniform_decoded_bwt"]:
+        raise RuntimeError("uniform decoded BWT symbols differ from contract")
+    nonuniform = operations["nonuniform-posthoc"]["primary"]
+    if nonuniform["decoded_sha256"] != byte_primaries["nonuniform"]["decoded_sha256"]:
+        raise RuntimeError("nonuniform decoded BWT differs from committed byte primary")
+    if run_signature(nonuniform["runs"]) != run_signature(byte_primaries["nonuniform"]["runs"]):
+        raise RuntimeError("nonuniform decoded runs differ from committed byte primary")
+    if nonuniform["decoded_length"] != byte_primaries["nonuniform"]["decoded_length"]:
+        raise RuntimeError("nonuniform decoded length differs from committed byte primary")
+    if nonuniform["shape"] != route_contract["nonuniform_logical_shape"]:
+        raise RuntimeError("nonuniform logical shape differs from contract")
 
 
 def assert_determinism(canonical_a, canonical_b, process_two):
@@ -447,7 +734,8 @@ def reader_evidence(recorder, environment_root, built_source, raw_root, fixture_
 def execute(recorder, built_source, run_dir, fixture_root, golden_root, manifest_path):
     if sys.version_info[:2] != (2, 7) or platform.python_implementation() != "CPython":
         raise RuntimeError("compression milestone requires genuine CPython 2.7")
-    config, starts, fixtures = validate_config(manifest_path, golden_root, fixture_root)
+    config, starts, fixtures, route_contract, byte_primaries = validate_config(
+        manifest_path, golden_root, fixture_root)
     milestone_root = os.path.join(run_dir, "compression-milestone1")
     require_new(milestone_root, "compression milestone result")
     os.makedirs(milestone_root)
@@ -458,22 +746,24 @@ def execute(recorder, built_source, run_dir, fixture_root, golden_root, manifest
         "profile_id": config["profile_id"], "route": config["route"],
         "status": "not-run", "groups": {}, "starting_artifacts": {},
         "case_order": config["successful_case_order"],
-        "expected_failure_order": config["expected_failure_order"]
+        "expected_failure_order": config["expected_failure_order"],
+        "route_contract": route_contract
     }
     for key, path in sorted(starts.items()):
         result["starting_artifacts"][key] = inventory(path)
+    result["byte_primaries"] = byte_primaries
     try:
         for run_id in config["canonical_runs"]:
             group = run_group(
                 recorder, built_source, raw_root, run_id,
                 config["canonical_processes"], starts, fixtures,
                 config["decompression_expected_failure"])
-            assert_group_relationships(group, starts)
+            assert_group_relationships(group, route_contract, byte_primaries)
             result["groups"][run_id] = group
         process_group = run_group(
             recorder, built_source, raw_root, "run-p2",
             config["comparison_processes"], starts, fixtures)
-        assert_group_relationships(process_group, starts)
+        assert_group_relationships(process_group, route_contract, byte_primaries)
         result["groups"]["run-p2"] = process_group
         assert_determinism(
             result["groups"][config["canonical_runs"][0]],
