@@ -114,6 +114,14 @@ class VersionPinTests(unittest.TestCase):
 
 
 class Python2CompatibilityTests(unittest.TestCase):
+    # MUS/MultiStringBWT.py carries the documented modern2 decompression
+    # fix (see COMPATIBILITY.md entry 1 and
+    # docs/modernization/MODERN2_MILESTONE3_DECOMPRESSION.md): the exact
+    # three-line diff vs the frozen original is asserted by
+    # test_modern2_decompression.DecompressionFixSourceTests, so the
+    # bootstrap byte-identity gate exempts only this one documented file.
+    DOCUMENTED_DEVIATIONS = ("MUS/MultiStringBWT.py",)
+
     def test_mus_pure_python_files_match_frozen_manifest(self):
         frozen_manifest = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environment" / "frozen-source.sha256"
         expected = {}
@@ -134,7 +142,18 @@ class Python2CompatibilityTests(unittest.TestCase):
             self.assertTrue(candidate.exists(), relative)
             source_bytes = source_path.read_bytes().replace(b"\r\n", b"\n")
             candidate_bytes = candidate.read_bytes().replace(b"\r\n", b"\n")
+            if relative in self.DOCUMENTED_DEVIATIONS:
+                self.assertNotEqual(candidate_bytes, source_bytes, relative)
+                continue
             self.assertEqual(candidate_bytes, source_bytes, relative)
+
+    def test_documented_deviation_is_covered_by_exact_diff_test(self):
+        decompression_tests = (REPOSITORY_ROOT / "compat" / "tests" /
+                               "test_modern2_decompression.py").read_text(
+            encoding="utf-8")
+        self.assertIn("test_modern2_diff_vs_frozen_is_exactly_the_index_fix",
+                      decompression_tests)
+        self.assertIn("MUS/MultiStringBWT.py", decompression_tests)
 
     def test_pyx_files_carry_language_level_2(self):
         for name in MIGRATED_MODULES:

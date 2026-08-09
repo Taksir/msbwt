@@ -659,8 +659,9 @@ class CompressedMSBWT(BasicBWT):
         while s < ret.shape[0]:
             if lInd >= letters.shape[0]:
                 pass
-            ret[s:s+counts[lInd]] = letters[lInd]
-            s += counts[lInd]
+            runLength = int(counts[lInd])
+            ret[s:s+runLength] = letters[lInd]
+            s += runLength
             lInd += 1
         
         return ret

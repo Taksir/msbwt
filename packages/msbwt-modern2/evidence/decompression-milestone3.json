@@ -1,0 +1,268 @@
+{
+  "build": {
+    "status": "skipped"
+  },
+  "decompression": {
+    "cross_route": {
+      "direct_equals_posthoc_whole": true,
+      "golden_whole_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+      "header_differs_from_golden_only_in_shape_literal": true,
+      "payload_equals_committed_byte_golden": true,
+      "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+      "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+    },
+    "direct": {
+      "destination_determinism": true,
+      "runs": {
+        "run-a": {
+          "destination_files": [
+            "msbwt.npy"
+          ],
+          "dtype": "|u1",
+          "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48,), }                                                           \n",
+          "payload_matches_golden": true,
+          "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+          "shape": [
+            48
+          ],
+          "source_files": [
+            "comp_fmIndex.npy",
+            "comp_msbwt.npy",
+            "comp_refIndex.npy",
+            "totalCounts.p"
+          ],
+          "symbol_counts": {
+            "$": 8,
+            "A": 9,
+            "C": 9,
+            "G": 9,
+            "N": 4,
+            "T": 9
+          },
+          "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+        },
+        "run-b": {
+          "destination_files": [
+            "msbwt.npy"
+          ],
+          "dtype": "|u1",
+          "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48,), }                                                           \n",
+          "payload_matches_golden": true,
+          "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+          "shape": [
+            48
+          ],
+          "source_files": [
+            "comp_fmIndex.npy",
+            "comp_msbwt.npy",
+            "comp_refIndex.npy",
+            "totalCounts.p"
+          ],
+          "symbol_counts": {
+            "$": 8,
+            "A": 9,
+            "C": 9,
+            "G": 9,
+            "N": 4,
+            "T": 9
+          },
+          "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+        },
+        "run-p2": {
+          "destination_files": [
+            "msbwt.npy"
+          ],
+          "dtype": "|u1",
+          "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48,), }                                                           \n",
+          "payload_matches_golden": true,
+          "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+          "shape": [
+            48
+          ],
+          "source_files": [
+            "comp_fmIndex.npy",
+            "comp_msbwt.npy",
+            "comp_refIndex.npy",
+            "totalCounts.p"
+          ],
+          "symbol_counts": {
+            "$": 8,
+            "A": 9,
+            "C": 9,
+            "G": 9,
+            "N": 4,
+            "T": 9
+          },
+          "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+        }
+      },
+      "source_side_effect_determinism": true
+    },
+    "legacy_failure_evidence": {
+      "exception": "TypeError: slice indices must be integers or None or have an __index__ method",
+      "exit_code": 1,
+      "preallocated_payload_all_zero_sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1",
+      "source_side_effects": [
+        "comp_fmIndex.npy",
+        "comp_refIndex.npy",
+        "totalCounts.p"
+      ],
+      "stderr_preserved": true,
+      "traceback_line_662": true
+    },
+    "posthoc": {
+      "destination_determinism": true,
+      "runs": {
+        "run-a": {
+          "destination_files": [
+            "msbwt.npy"
+          ],
+          "dtype": "|u1",
+          "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48,), }                                                           \n",
+          "payload_matches_golden": true,
+          "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+          "shape": [
+            48
+          ],
+          "source_files": [
+            "comp_fmIndex.npy",
+            "comp_msbwt.npy",
+            "comp_refIndex.npy",
+            "totalCounts.p"
+          ],
+          "symbol_counts": {
+            "$": 8,
+            "A": 9,
+            "C": 9,
+            "G": 9,
+            "N": 4,
+            "T": 9
+          },
+          "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+        },
+        "run-b": {
+          "destination_files": [
+            "msbwt.npy"
+          ],
+          "dtype": "|u1",
+          "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48,), }                                                           \n",
+          "payload_matches_golden": true,
+          "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+          "shape": [
+            48
+          ],
+          "source_files": [
+            "comp_fmIndex.npy",
+            "comp_msbwt.npy",
+            "comp_refIndex.npy",
+            "totalCounts.p"
+          ],
+          "symbol_counts": {
+            "$": 8,
+            "A": 9,
+            "C": 9,
+            "G": 9,
+            "N": 4,
+            "T": 9
+          },
+          "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+        },
+        "run-p2": {
+          "destination_files": [
+            "msbwt.npy"
+          ],
+          "dtype": "|u1",
+          "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48,), }                                                           \n",
+          "payload_matches_golden": true,
+          "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+          "shape": [
+            48
+          ],
+          "source_files": [
+            "comp_fmIndex.npy",
+            "comp_msbwt.npy",
+            "comp_refIndex.npy",
+            "totalCounts.p"
+          ],
+          "symbol_counts": {
+            "$": 8,
+            "A": 9,
+            "C": 9,
+            "G": 9,
+            "N": 4,
+            "T": 9
+          },
+          "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+        }
+      },
+      "source_side_effect_determinism": true
+    },
+    "round_trip": {
+      "byte_golden_compress_decompress_payload_equal": true,
+      "whole_sha256": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4"
+    }
+  },
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "milestone": "modern2-milestone3-decompression",
+    "status": "passed"
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "reader": {
+    "decomp-direct-a": {
+      "dollar_count": 8,
+      "queries_match": true,
+      "reader_class": "MUSCython.ByteBWTCython.ByteBWT",
+      "recovered_match": true,
+      "side_effects": {
+        "added": [
+          {
+            "path": "fmIndex.npy",
+            "sha256": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+            "size": 176
+          },
+          {
+            "path": "totalCounts.npy",
+            "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+            "size": 176
+          }
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "total_size": 48
+    },
+    "decomp-posthoc-a": {
+      "dollar_count": 8,
+      "queries_match": true,
+      "reader_class": "MUSCython.ByteBWTCython.ByteBWT",
+      "recovered_match": true,
+      "side_effects": {
+        "added": [
+          {
+            "path": "fmIndex.npy",
+            "sha256": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+            "size": 176
+          },
+          {
+            "path": "totalCounts.npy",
+            "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+            "size": 176
+          }
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "total_size": 48
+    }
+  }
+}
