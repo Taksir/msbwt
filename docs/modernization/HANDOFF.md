@@ -11,11 +11,12 @@ with the resolved R2 clean-vs-recovered legacy contract is promoted under
 `compat/goldens/original-0.3.0/compression-milestone2/`, and the Milestone-3
 non-resumable interruption evidence is promoted under
 `compat/goldens/original-0.3.0/compression-milestone3/`.  The Merge/Indexing
-milestone was attempted and STOPPED at a blocking legacy defect: the frozen
-`merge` CLI deterministically segfaults under the verified profile because the
-committed `MUSCython/GenericMerge.c` (Cython 0.23.4 provenance) crashes inside
-the first merge iteration.  No modern2 or modern3 implementation port has
-started.
+milestone is CLOSED under the resolved merge compatibility policy: the
+committed `MUSCython/GenericMerge.c` segfault is a preserved LEGACY
+GENERATED-CODE DEFECT, and the successful canonical merge baseline is promoted
+under `compat/goldens/original-0.3.0/merge-milestone1/secondary-regenerated-source/`
+from a pinned Cython-0.29.36 regeneration of the unchanged frozen
+`GenericMerge.pyx`.  No modern2 or modern3 implementation port has started.
 
 ## Start here
 
@@ -152,25 +153,32 @@ loading was performed only on disposable copies and created the inventoried
   interruption failure characterization) are promoted under
   `compression-milestone2/` and `compression-milestone3/`.  Broader API/CLI
   behavior remains.
-- The Merge/Indexing milestone is BLOCKED by an executed legacy defect: under
-  the verified profile, `merge -p 2` deterministically segfaults (SIGSEGV,
-  exit 139/-11) for every tested uniform byte input because the committed
-  `MUSCython/GenericMerge.c` (Cython 0.23.4) crashes inside the first
-  `targetedIterationMerge2` iteration; no `msbwt.npy`/`inter0.npy` is written.
-  The `merge` default `-p 1` raises
+- The Merge/Indexing milestone is CLOSED under the resolved merge
+  compatibility policy (see `MERGE_INDEXING_PLAN.md`).  The deterministic
+  segfault of the committed `MUSCython/GenericMerge.c` (Cython 0.23.4
+  provenance, part of the 40-file frozen projection) is classified as a LEGACY
+  GENERATED-CODE DEFECT and is preserved as historical failure evidence
+  (`relationship-generic-merge-segfault.json`: exit -11/SIGSEGV, empty stderr,
+  input-side-effect `fmIndex.npy`+`totalCounts.npy`, deterministic across both
+  canonical runs).  The `merge` default `-p 1` raises
   `UnboundLocalError: local variable 'numProcs' referenced before assignment`
-  (a `NameError` subclass), stderr SHA-256
-  `186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c`.
-  Diagnostic evidence (not a promotion or policy) shows force-regenerating
-  `GenericMerge` with the profile's pinned Cython 0.29.36 produces a working
-  merge whose primary is byte-identical to the committed uniform golden and
-  which passes the full reader/query/recovery and derived-index classification
-  checks.  A host-side independent oracle (`compat/tools/bwt_oracle.py`)
-  reproduces the committed uniform primary and proves the committed
-  nonuniform primary is a valid but differently ordered MSBWT.  See
-  `MERGE_INDEXING_PLAN.md` "Executed blocking finding"; the decision whether
-  the merge oracle is established from a Cython-regenerated build or treated
-  as uncharacterized legacy behavior is required before modern2.
+  (LEGACY SOURCE BUG, stderr SHA-256
+  `186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c`); frozen
+  source is not repaired and modern2 is permitted to fix it as a documented
+  deviation.  Successful merge semantics come from the SECONDARY
+  REGENERATED-SOURCE ORACLE: the unchanged frozen `GenericMerge.pyx`
+  (hash-pinned) was regenerated with the profile's Cython 0.29.36 in a
+  disposable build location and only `MUSCython.GenericMerge` was rebuilt.
+  Two canonical `merge -p 2` runs of the two uniform byte BWTs
+  (`uniform-a.fastq` + `uniform-b.fastq`) were deterministic and produced
+  `msbwt.npy` (`|u1`, `(48L,)`, SHA-256 `dd91d69e...`) byte-identical to the
+  clean-from-scratch control and the committed `uniform-multifile` golden,
+  plus retained `inter0.npy` (`|u1`, `(7,)`); the independent host-side oracle
+  (`compat/tools/bwt_oracle.py`), frozen reader/query/recovered-string checks,
+  and derived-index classification all pass.  The promoted evidence is under
+  `compat/goldens/original-0.3.0/merge-milestone1/` with the successful
+  artifacts unmistakably under `secondary-regenerated-source/`, and the
+  `-p 1`/segfault failure contracts preserved separately.
 - Reader side effects, recovery files, multiprocessing behavior, filesystem
   ordering, and cross-platform byte determinism need operation-specific tests.
 
@@ -386,16 +394,17 @@ evidence) is complete and promoted under
 `compat/goldens/original-0.3.0/compression-milestone3/`; see the plan's
 "Milestone 3 executed evidence" note for the resolved m3c2 finding.
 
-The Merge/Indexing milestone (canonical `merge -p 2` of the two uniform byte
-BWTs built from `uniform-a.fastq` and `uniform-b.fastq`) was attempted under
-`py27-late-05a7d6d83862` and is BLOCKED: the frozen `merge` CLI
-deterministically segfaults on the verified profile due to the committed
-Cython-0.23.4 `GenericMerge.c`.  The harness, manifest, plan, and tests from
-the attempt are committed, and the executed evidence plus a diagnostic
-Cython-0.29.36 regeneration result are recorded in
-`MERGE_INDEXING_PLAN.md`.  Resolve the merge oracle policy (regenerated-build
-oracle vs uncharacterized legacy behavior) before attempting the merge
-baseline again.  Do not begin modern2 or modern3 implementation first.
+The Merge/Indexing milestone is CLOSED under the resolved policy.  The
+canonical `merge -p 2` of the two uniform byte BWTs built from
+`uniform-a.fastq` and `uniform-b.fastq` was executed twice through the
+secondary regenerated-source oracle (pinned Cython 0.29.36 regeneration of the
+unchanged frozen `GenericMerge.pyx`); both runs were deterministic and
+byte-identical to the clean control and the committed uniform golden, with
+full reader/query/recovered-string and derived-index classification evidence.
+The historical committed generated-C segfault and the `-p 1` UnboundLocalError
+are preserved as separate failure contracts.  Evidence: `MERGE_INDEXING_PLAN.md`
+and `compat/goldens/original-0.3.0/merge-milestone1/`.  Do not begin modern2 or
+modern3 implementation first.
 
 ### Resolved compression policy
 

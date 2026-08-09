@@ -1,11 +1,61 @@
 # Merge and reader-indexing characterization plan
 
-Status: source-resolved execution plan with an executed blocking finding.  The
-canonical merge baseline CANNOT be established through the frozen `merge` CLI
-on the verified profile because the committed generated C for
-`MUSCython/GenericMerge` deterministically segfaults.  This plan records the
-intended experiment and the executed evidence; see "Executed blocking finding"
-below.  It is a prerequisite for `msbwt-modern2`, not a broad API survey.
+Status: source-resolved execution plan with the merge compatibility policy
+RESOLVED and the canonical baseline established through a narrowly scoped
+SECONDARY REGENERATED-SOURCE ORACLE.  The frozen `merge` CLI cannot complete on
+the verified profile using the committed generated C
+(`MUSCython/GenericMerge.c`, Cython 0.23.4 provenance, deterministic SIGSEGV);
+that failure is preserved as historical evidence.  Successful merge semantics
+are characterized by regenerating the merge extension from the unchanged
+frozen `.pyx` with the profile's pinned Cython 0.29.36 in a disposable build
+location.  This plan records the intended experiment and its executed
+evidence.  It is a prerequisite for `msbwt-modern2`, not a broad API survey.
+
+## Resolved merge compatibility policy
+
+Authoritative decision (reviewed and authorized):
+
+1. The deterministic segfault in the committed historical
+   `MUSCython/GenericMerge.c` is classified as a LEGACY GENERATED-CODE DEFECT
+   for the characterized merge path.  It remains authoritative evidence about
+   the exact historical frozen generated-C build, and that failure evidence
+   must remain preserved.
+2. The segfault is NOT the semantic behavior modern2 is required to reproduce.
+   Merge semantics are established through a narrowly scoped SECONDARY
+   REGENERATED-SOURCE ORACLE using: the exact unchanged frozen `.pyx`; the
+   verified `py27-late-05a7d6d83862` environment; the already pinned Cython
+   0.29.36 regeneration path demonstrated by the diagnostic; no semantic
+   modifications to frozen `.pyx` source.
+3. This exception applies ONLY to the merge extension/path blocked by the
+   committed historical generated-C defect.  The primary frozen oracle is not
+   redefined globally.
+4. The source-level `-p 1` default-process bug
+   (`UnboundLocalError: local variable 'numProcs' referenced before
+   assignment`) is classified as a LEGACY SOURCE BUG.  Frozen source is not
+   repaired.  modern2 is explicitly permitted to FIX it as a documented
+   correctness/CLI compatibility deviation, making both `merge -p 1` and
+   `merge -p 2` functional while matching the characterized successful merge
+   semantics.
+
+Promotion contract for the regenerated baseline:
+
+1. The frozen `.pyx` used for regeneration is byte-identical to the committed
+   frozen source (hash-verified against `frozen-source.sha256`).
+2. The regeneration process is explicit, reproducible, pinned, and documented.
+3. Repeated regenerated merge runs are deterministic.
+4. The merged primary is byte-identical to the clean-from-scratch combined
+   construction for the canonical fixture.
+5. The independent host-side BWT oracle validates its semantics.
+6. Frozen reader/query/recovered-string behavior validates it.
+7. Lazy index/cache behavior is recorded as already characterized.
+8. The original committed generated-C segfault remains preserved as historical
+   failure evidence.
+9. Tests clearly distinguish historical-generated-C behavior from
+   regenerated-source semantic oracle behavior.
+
+Do not replace or edit the historical frozen `GenericMerge.c`.  Do not alter
+the frozen `.pyx`.  Regenerate/build only in disposable oracle/build locations
+according to existing project conventions.
 
 ## Scope
 
@@ -186,17 +236,21 @@ Stop and report rather than inventing policy if: repeated runs are
 nondeterministic; merged semantics differ from the expected multiset;
 reader/query behavior is inconsistent; merged and clean construction differ;
 a persistent-format difference appears; integer width/platform behavior
-becomes ambiguous; merge requires modifying frozen source; the `inter0.npy`
-format is unclear; or a legacy bug's treatment would affect modern2
-compatibility.
+becomes ambiguous; regeneration requires changing the frozen `.pyx`; more than
+the affected generated merge extension must be semantically changed; the
+previously observed successful diagnostic cannot be reproduced under the
+pinned procedure; the `inter0.npy` format is unclear; or a new compatibility
+ambiguity appears.  Ordinary harness/build/path issues may be fixed
+mechanically.
 
-## Executed blocking finding
+## Executed blocking finding (resolved)
 
 Executed twice on the verified profile (`py27-late-05a7d6d83862`,
 `pyx-historical-cython`, fresh Linux-ext4 result parents) plus repeated
 independent probes.  The frozen `merge` CLI does not complete for ANY uniform
-byte input under the verified profile.  This is a STOP condition; no canonical
-merge golden is promoted.
+byte input under the verified profile when built from the committed generated
+C.  This is the LEGACY GENERATED-CODE DEFECT resolved by the policy above; the
+failure evidence below is preserved as historical.
 
 1. Deterministic segfault: `merge -p 2` (the only working invocation; `-p 1`
    raises `UnboundLocalError`) exits `-11` (SIGSEGV, shell status 139) for
@@ -210,7 +264,7 @@ merge golden is promoted.
    `MUSCython/GenericMerge.c` is `/* Generated by Cython 0.23.4 */` (other
    modules are mixed Cython 0.18/0.23.4).  The segfault is a codegen artifact
    of that historical C, not of the frozen `.pyx` algorithm.
-3. Diagnostic (not a promotion, not a policy): force-regenerating only
+3. Diagnostic (now the secondary-oracle basis): force-regenerating only
    `GenericMerge` from the frozen `.pyx` with the profile's pinned Cython
    0.29.36 (all other modules unchanged) makes `merge -p 2` succeed.  The
    merged `msbwt.npy` is byte-identical to the committed `uniform-multifile`
@@ -219,23 +273,51 @@ merge golden is promoted.
    `["inter0.npy", "msbwt.npy"]`, and a frozen-reader smoke on a disposable
    copy passes all fixture-derived queries and recovered strings with derived
    `totalCounts.npy`/`fmIndex.npy` regenerable byte-identically and
-   `inter0.npy` confirmed not required by the reader.  This shows the frozen
-   merge algorithm is correct and that the failure is confined to the
-   committed codegen.
-4. `-p 1` defect (executed): the default path raises
+   `inter0.npy` confirmed not required by the reader.
+4. `-p 1` defect (LEGACY SOURCE BUG): the default path raises
    `UnboundLocalError: local variable 'numProcs' referenced before assignment`
-   (a `NameError` subclass), not plain `NameError` as previously documented.
-   stderr SHA-256 `186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c`;
-   the output directory is created but empty and the inputs are unchanged.
+   (a `NameError` subclass).  stderr SHA-256
+   `186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c`; the
+   output directory is created but empty and the inputs are unchanged.
 5. Source-derived companion finding (host-side, no oracle execution): the
    frozen nonuniform builder produces a valid MSBWT byte ordering that differs
    from the rotation-sort ordering (both pass all backward-search k-mer counts
    and LF-recover the same read multiset from the committed
-   `nonuniform-prefix` primary).  This is why the canonical case used uniform
+   `nonuniform-prefix` primary).  This is why the canonical case uses uniform
    inputs, where the expected merged bytes are uniquely determined.
 
-Decision required before modern2: whether the merge oracle is established from
-a Cython-regenerated build (intentional build deviation, would likely match a
-Cython-3 modern2 port) or treated as uncharacterized legacy behavior whose
-`merge` CLI must be fixed with a documented intentional deviation.
+## Canonical regenerated-source oracle procedure
+
+The successful merge baseline is executed as follows in each fresh WSL run
+family, all in disposable locations:
+
+1. Verify the frozen 40-file projection in the built source copy (including
+   the exact `MUSCython/GenericMerge.pyx` bytes, hash-pinned in the manifest).
+2. Build the two inputs and the clean control through the unchanged frozen
+   builder path; verify the clean primary equals the committed uniform golden.
+3. Capture the `-p 1` UnboundLocalError probe (LEGACY SOURCE BUG) and the
+   `merge -p 2` SIGSEGV probe (LEGACY GENERATED-CODE DEFECT) on disposable
+   copies using the committed build.
+4. Regenerate and rebuild ONLY `MUSCython.GenericMerge` in the disposable
+   built source copy:
+   - `python -c "from Cython.Build import cythonize; import numpy; cythonize('MUSCython/GenericMerge.pyx', include_path=[numpy.get_include()], force=True)"`
+   - `python setup.py build_ext --inplace`
+   - Cython version pinned at 0.29.36 in the verified
+     `py27-late-05a7d6d83862` environment.
+   - Record the committed and regenerated `GenericMerge.c` hashes and prove
+     the `.pyx` hash is unchanged.
+5. Run the canonical `merge -p 2` twice (run-a/run-b) on the regenerated
+   build; require identical retained file sets, whole-file SHA-256, raw NPY
+   headers, dtype/shape, payload bytes, derived index files, reader/query
+   results, and recovered sequence results.
+6. Run the frozen reader smoke (with derived-index classification) and CLI
+   query probes on disposable copies of both merged outputs.
+7. Host-side: validate with `compat/tools/bwt_oracle.py`, compare the merged
+   primary byte-for-byte with the clean control and the committed uniform
+   golden, and verify the `inter0.npy` source-label invariants.
+
+The promoted golden/evidence lives under
+`compat/goldens/original-0.3.0/merge-milestone1/`, with the successful
+artifacts under `secondary-regenerated-source/` and every evidence record
+carrying `oracle_class` so the two oracle classes can never be conflated.
 
