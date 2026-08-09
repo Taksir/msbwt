@@ -14,6 +14,7 @@ Usage:
     --candidate candidate-key \
     --route generated-c-no-cython|pyx-historical-cython|all \
     --fixture-root /absolute/path/to/synthetic-fixtures \
+    [--compression-milestone1 --golden-root /absolute/path/to/original-0.3.0-goldens] \
     [--golden-case uniform-multifile|nonuniform-prefix|gzip-input]...
 
 The Python environment is expected to be isolated already.  The supplied
@@ -31,6 +32,8 @@ CANDIDATE=""
 ROUTE=""
 FIXTURE_ROOT=""
 GOLDEN_CASES=()
+COMPRESSION_MILESTONE1=0
+GOLDEN_ROOT=""
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
@@ -60,6 +63,14 @@ while [ "$#" -gt 0 ]; do
             ;;
         --golden-case)
             GOLDEN_CASES+=("${2:?--golden-case requires a value}")
+            shift 2
+            ;;
+        --compression-milestone1)
+            COMPRESSION_MILESTONE1=1
+            shift
+            ;;
+        --golden-root)
+            GOLDEN_ROOT=${2:?--golden-root requires a value}
             shift 2
             ;;
         --help|-h)
@@ -198,12 +209,21 @@ if [ ! -f "$PROBE" ]; then
 fi
 
 GOLDEN_ARGS=()
-if [ "${#GOLDEN_CASES[@]}" -eq 0 ]; then
+if [ "${#GOLDEN_CASES[@]}" -eq 0 ] && [ "$COMPRESSION_MILESTONE1" -eq 0 ]; then
     GOLDEN_ARGS+=(--run-first-goldens)
 else
     for golden_case in "${GOLDEN_CASES[@]}"; do
         GOLDEN_ARGS+=(--golden-case "$golden_case")
     done
+fi
+
+COMPRESSION_ARGS=()
+if [ "$COMPRESSION_MILESTONE1" -eq 1 ]; then
+    if [ -z "$GOLDEN_ROOT" ] || [ ! -d "$GOLDEN_ROOT" ]; then
+        printf '%s\n' '--compression-milestone1 requires an existing --golden-root.' >&2
+        exit 66
+    fi
+    COMPRESSION_ARGS+=(--compression-milestone1 --golden-root "$GOLDEN_ROOT")
 fi
 
 exec "$PYTHON" "$PROBE" \
@@ -213,4 +233,5 @@ exec "$PYTHON" "$PROBE" \
     --route "$ROUTE" \
     --install-dependencies \
     "${GOLDEN_ARGS[@]}" \
+    "${COMPRESSION_ARGS[@]}" \
     --fixture-root "$FIXTURE_ROOT"

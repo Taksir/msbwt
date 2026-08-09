@@ -1,0 +1,38 @@
+{
+  "format": "msbwt-legacy-compression-milestone1-cases-v1",
+  "profile_id": "py27-late-05a7d6d83862",
+  "route": "pyx-historical-cython",
+  "starting_artifacts": {
+    "nonuniform_build": {
+      "path": "nonuniform-prefix/py27-late-05a7d6d83862/pyx-historical-cython/build/artifacts",
+      "primary": "msbwt.npy",
+      "primary_sha256": "da28963ca3726568dd7a26eccea35f107bd4cb8b295c909de628374db38dd4b2",
+      "tree_sha256": "ad4aa043feb549e0af861ffde0deca11f8ac0b030c5305183f61f04f5f4d8c0a"
+    },
+    "nonuniform_pre": {
+      "path": "nonuniform-prefix/py27-late-05a7d6d83862/pyx-historical-cython/pre/artifacts",
+      "tree_sha256": "71f549690de7b78b8b2979692f0594966cb33618e1f7e48c098a17ecc3ea31a7"
+    },
+    "uniform_build": {
+      "path": "uniform-multifile/py27-late-05a7d6d83862/pyx-historical-cython/build/artifacts",
+      "primary": "msbwt.npy",
+      "primary_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+      "tree_sha256": "842bfc80080ca553ee23f07eb3da7616df96822cee7d774d163c1c2058d0132e"
+    }
+  },
+  "successful_case_order": [
+    "uniform-posthoc",
+    "nonuniform-posthoc",
+    "uniform-roundtrip",
+    "nonuniform-roundtrip",
+    "uniform-direct-split",
+    "uniform-direct-wrapper"
+  ],
+  "fixture_cases": {
+    "nonuniform": "nonuniform-prefix",
+    "uniform": "uniform-multifile"
+  },
+  "canonical_processes": 1,
+  "comparison_processes": 2,
+  "canonical_runs": ["run-a", "run-b"]
+}
