@@ -14,6 +14,7 @@ import ast
 import base64
 import datetime as _datetime
 import hashlib
+import io
 import json
 import locale
 import os
@@ -21,6 +22,7 @@ import platform
 import subprocess
 import sys
 import time
+import tokenize
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
 
@@ -73,6 +75,36 @@ def _json_safe(value: Any) -> Any:
     raise ManifestError("unsupported scalar in .npy header: {!r}".format(value))
 
 
+def _normalize_python2_long_literals(header_text: str) -> str:
+    """Make Python-2 ``123L`` integer literals acceptable to ``literal_eval``.
+
+    NumPy 1.16 on Python 2 writes shapes such as ``(48L,)``.  Python 3's
+    tokenizer exposes the legacy suffix as a separate adjacent ``NAME`` token;
+    remove only that exact token pair.  Strings and all other header bytes are
+    left alone.  This normalized value is ephemeral: manifests retain the raw
+    header text and bytes from the dataset.
+    """
+
+    try:
+        tokens = list(tokenize.generate_tokens(io.StringIO(header_text).readline))
+    except (tokenize.TokenError, IndentationError, SyntaxError) as exc:
+        raise ManifestError("cannot tokenize NumPy header: {}".format(exc))
+
+    normalized = []
+    for index, token in enumerate(tokens):
+        previous = tokens[index - 1] if index else None
+        if (
+            token.type == tokenize.NAME
+            and token.string in ("L", "l")
+            and previous is not None
+            and previous.type == tokenize.NUMBER
+            and previous.end == token.start
+        ):
+            continue
+        normalized.append(token)
+    return tokenize.untokenize(normalized)
+
+
 def parse_npy_header(path: Path) -> Dict[str, Any]:
     """Read only an ``.npy`` preamble/header; never construct an ndarray."""
 
@@ -114,7 +146,7 @@ def parse_npy_header(path: Path) -> Dict[str, Any]:
     except UnicodeDecodeError as exc:
         raise ManifestError("invalid NumPy header text: {}".format(exc))
     try:
-        header_value = ast.literal_eval(header_text.strip())
+        header_value = ast.literal_eval(_normalize_python2_long_literals(header_text).strip())
     except (MemoryError, RecursionError, ValueError, SyntaxError) as exc:
         raise ManifestError("NumPy header is not a literal dictionary: {}".format(exc))
     if not isinstance(header_value, dict):

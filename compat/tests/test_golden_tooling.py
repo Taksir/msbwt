@@ -91,6 +91,42 @@ class ArtifactManifestTests(unittest.TestCase):
                 self.assertFalse(entry["npy"]["fortran_order"])
                 self.assertEqual(entry["npy"]["payload_size"], 16)
 
+    def test_parses_python2_long_suffixes_without_changing_raw_header_metadata(self):
+        with workspace_temporary_directory() as temporary:
+            for expected_shape in (8, 48):
+                path = Path(temporary) / ("legacy-python2-{}.npy".format(expected_shape))
+                header = (
+                    "{{'descr': '<u8', 'fortran_order': False, "
+                    "'shape': ({}L,), }}\n".format(expected_shape)
+                )
+                payload = b"\x03" * expected_shape
+                write_test_npy(path, 1, header, payload)
+
+                metadata = artifact_manifest.parse_npy_header(path)
+
+                self.assertEqual(metadata["dtype_descriptor"], "<u8")
+                self.assertEqual(metadata["shape"], [expected_shape])
+                self.assertEqual(metadata["payload_size"], len(payload))
+                self.assertEqual(metadata["payload_sha256"], artifact_manifest.sha256_bytes(payload))
+                self.assertEqual(metadata["header_text"], header)
+                self.assertEqual(metadata["header_bytes_hex"], header.encode("latin-1").hex())
+                self.assertEqual(
+                    metadata["header_sha256"],
+                    artifact_manifest.sha256_bytes(header.encode("latin-1")),
+                )
+
+    def test_rejects_malicious_header_after_python2_long_normalization(self):
+        with workspace_temporary_directory() as temporary:
+            path = Path(temporary) / "malicious.npy"
+            header = (
+                "{'descr': '<u8', 'fortran_order': False, "
+                "'shape': (8L, __import__('os').system('not-run')), }\n"
+            )
+            write_test_npy(path, 1, header, b"")
+
+            with self.assertRaisesRegex(artifact_manifest.ManifestError, "literal dictionary"):
+                artifact_manifest.parse_npy_header(path)
+
     def test_rejects_oversized_npy_header_before_reading_it(self):
         with workspace_temporary_directory() as temporary:
             path = Path(temporary) / "oversized.npy"
