@@ -537,6 +537,58 @@ A subsequent `cfpp -p 1 -u` invocation starts construction again; it does not
 scan a checkpoint.  Record whether the final output happens to match a clean
 build, but label it restart-from-scratch, not resume.
 
+### Milestone 3 executed evidence (completed)
+
+Milestone 3 ran twice (run-a/run-b) under `py27-late-05a7d6d83862` and
+`pyx-historical-cython` through the manifest-driven milestone-3 probe
+(`compression-milestone3-cases.json`, `compression_milestone3.py`, and the
+extended `failpoint_adapter.py`).  Every case was deterministic across the two
+canonical runs.  The frozen source was not modified.  Evidence is promoted
+under `compat/goldens/original-0.3.0/compression-milestone3/`.
+
+1. m3c1 (post-hoc compression worker interruption): frozen
+   `MSBWTGen.compressBWTPoolProcess` was called once for the first bin
+   (`<src>/msbwt.npy`, 0, 48, `comp_msbwt.npy.temp.0.npy`) and the adapter
+   exited 86 before the parent join step.  The destination retained exactly
+   `comp_msbwt.npy.temp.0.npy` and no `comp_msbwt.npy`.  The interrupted chunk
+   is byte-identical to the committed `uniform-compress-posthoc`
+   `comp_msbwt.npy` golden (SHA-256 `53d82b388a9d...`, `|u1`, shape `(22,)`,
+   payload `6aadcd547a78...`): with one bin the interrupted temp chunk already
+   equals the eventual final primary.  The byte source was unchanged.
+2. m3c2 (post-hoc decompression worker interruption): the evidence-only byte
+   primary (`|u1`, 1,056,000 symbols) was created by tiling the committed
+   uniform byte payload 22,000 times and compressed cleanly to
+   `comp_msbwt.npy` (`|u1`, shape `(484000,)`, SHA-256 `681caf56aa06...`).
+   The frozen `decompressBWTPoolProcess` was called for the first tuple
+   `(src, dst, 0, 1000000)` and raised before completing any region, so the
+   plan's predicted "one completed region and one unwritten region" was NOT
+   observed.  The actual deterministic behavior is: the worker fails naturally
+   (adapter exit 87) at `MUS/MultiStringBWT.py:630` with
+   `IndexError: only integers, slices (..), ellipsis (..), numpy.newaxis (..)
+   and integer or boolean arrays are valid indices`, because `endRange =
+   refFM[endBlock+1]+1` promotes to NumPy `float64` and is invalid as a memmap
+   index.  This is the same uint64+int-to-float64 mechanism as the committed
+   milestone-1 line-662 `TypeError` contract, manifested at a different line for
+   multi-block inputs.  The preallocated destination `msbwt.npy` therefore has
+   zero completed regions (all 1,056,000 symbols zero, whole-file SHA-256
+   `d77f2be75db0...`), and the source copy gains exactly `totalCounts.p`,
+   `comp_fmIndex.npy`, and `comp_refIndex.npy`.  This is recorded as a resolved
+   finding, not a successful-golden claim.
+3. m3c3 (parser refusal): the unchanged CLI `compress` and `decompress`
+   commands were invoked against copies of each nonempty interrupted
+   destination.  Both exited 2 during argument parsing with
+   `argument dstDir: Non-empty directory already exists: 'DESTINATION'`.
+4. m3c4 (uniform byte builder): frozen
+   `MSBWTGenCython.createMsbwtFromSeqs` was interrupted at
+   `Finished iteration 2 in`; the partial tree retained six
+   `state.<c>.2.npy`, the same six `inserts.*.2.npy` as the R1 checkpoint, and
+   the eight preprocess files.  A subsequent `cfpp -p 1 -u` restarted from
+   scratch (no resume marker; "Generating level 1 insertions" / "Beginning
+   iterations" present) and produced an `msbwt.npy` byte-identical to an
+   independent clean build and to the committed uniform byte golden
+   (`dd91d69ee2785c88...`, shape `(48,)`); the final trees were byte-identical.
+   It is labelled restart-from-scratch, never resume.
+
 ## Source-visible stop conditions and legacy failures
 
 Medium must stop and report rather than work around any of these:

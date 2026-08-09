@@ -1,15 +1,17 @@
 # Modernization handoff
 
-Status: Compression/Recovery Milestone 1 (clean RLE) and Milestone 2 (builder
-recovery) are complete on branch `codex/modernization`.  The post-hoc and
-direct uniform routes plus the nonuniform post-hoc route are promoted to
-separate route-specific goldens, the uniform cross-route semantic equality and
-the decompression expected-failure contract are verified under
-`py27-late-05a7d6d83862`, the host-side safe RLE decoder is committed, and the
-R1/R2 builder-recovery evidence with the resolved R2 clean-vs-recovered legacy
-contract is promoted under `compat/goldens/original-0.3.0/compression-milestone2/`.
-Milestone 3 has not started; no modern2 or modern3 implementation port has
-started.
+Status: Compression/Recovery Milestone 1 (clean RLE), Milestone 2 (builder
+recovery), and Milestone 3 (non-resumable interruption failure characterization)
+are complete on branch `codex/modernization`.  The post-hoc and direct uniform
+routes plus the nonuniform post-hoc route are promoted to separate route-specific
+goldens, the uniform cross-route semantic equality and the decompression
+expected-failure contract are verified under `py27-late-05a7d6d83862`, the
+host-side safe RLE decoder is committed, the R1/R2 builder-recovery evidence
+with the resolved R2 clean-vs-recovered legacy contract is promoted under
+`compat/goldens/original-0.3.0/compression-milestone2/`, and the Milestone-3
+non-resumable interruption evidence is promoted under
+`compat/goldens/original-0.3.0/compression-milestone3/`.  No modern2 or modern3
+implementation port has started.
 
 ## Start here
 
@@ -138,11 +140,14 @@ loading was performed only on disposable copies and created the inventoried
   observed failure; do not patch the oracle.
 - Uniform and nonuniform uncompressed preprocessing/build plus plain/gzip input
   and fixture-derived reader smoke have golden coverage.  Compression/Recovery
-  Milestone 1 (clean RLE) is now promoted: post-hoc and direct uniform plus
+  Milestone 1 (clean RLE) is promoted: post-hoc and direct uniform plus
   nonuniform post-hoc routes have route-specific goldens, cross-route uniform
   semantic equality is verified, and the two decompression expected-failure
   cases and the two unsupported nonuniform direct cases have committed evidence.
-  Builder recovery, merge, indexing, and broader API/CLI behavior remain.
+  Milestone 2 (implemented builder recovery) and Milestone 3 (non-resumable
+  interruption failure characterization) are promoted under
+  `compression-milestone2/` and `compression-milestone3/`.  Merge,
+  indexing, and broader API/CLI behavior remain.
 - Reader side effects, recovery files, multiprocessing behavior, filesystem
   ordering, and cross-platform byte determinism need operation-specific tests.
 
@@ -301,6 +306,49 @@ classification record.  Raw run directories, reader-mutated copies, and the
 frozen scratch build are not committed; their exact bytes are represented by
 the safe manifests and reports.
 
+## Completed Compression/Recovery Milestone 3
+
+Milestone 3 (non-resumable interruption failure characterization) is complete
+and promoted from one verified WSL2 ext4 oracle run
+(`py27-late-05a7d6d83862`, `pyx-historical-cython`) through the manifest-driven
+milestone-3 probe (`compression-milestone3-cases.json`,
+`compression_milestone3.py`, extended `failpoint_adapter.py`).  All four
+experiments ran twice (run-a/run-b) with independent fresh results and every
+case reproduced deterministically.  The frozen source was not modified.
+No recovery or successful-golden claim is made for any partial artifact.
+
+- m3c1: the frozen `compressBWTPoolProcess` was called once for the first bin
+  and the adapter exited 86 before the parent join step.  The destination
+  retained exactly `comp_msbwt.npy.temp.0.npy`, no `comp_msbwt.npy`, and the
+  interrupted chunk is byte-identical to the committed `uniform-compress-posthoc`
+  golden (`53d82b388a9d...`, `|u1`, shape `(22,)`).
+- m3c2: a >1,000,000-symbol evidence primary was compressed cleanly, then the
+  frozen `decompressBWTPoolProcess` was called for the first tuple.  The
+  deterministic observed result differs from the plan's predicted "one
+  completed region and one unwritten region": the worker raises
+  `IndexError` at `MUS/MultiStringBWT.py:630` before completing any region
+  (the same uint64+int-to-float64 mechanism as the committed milestone-1
+  line-662 contract, at a different line for multi-block inputs).  The
+  preallocated destination `msbwt.npy` (shape `(1056000,)`) is all-zero with
+  zero completed regions; the source copy gains `totalCounts.p`,
+  `comp_fmIndex.npy`, `comp_refIndex.npy`.
+- m3c3: `compress` and `decompress` both exit 2 during argument parsing on
+  each nonempty interrupted destination (`Non-empty directory already exists`).
+- m3c4: the uniform byte builder interrupted at `Finished iteration 2 in`
+  leaves six `state.<c>.2.npy` plus six `inserts.*.2.npy`; a subsequent
+  `cfpp -p 1 -u` restarts from scratch (no resume marker) and the restarted
+  `msbwt.npy` is byte-identical to an independent clean build and to the
+  committed uniform byte golden (`dd91d69ee2785c88...`).  It is labelled
+  restart-from-scratch, never resume.
+
+Promoted evidence under `compat/goldens/original-0.3.0/compression-milestone3/`:
+profile provenance, the run-a/run-b determinism report, relationship records
+for m3c1/m3c2/m3c4, run-a/run-b partial safe manifests, sanitized failpoint
+records, parser-refusal records, the m3c1 interrupted temp artifact with its
+manifest, and the m3c2 evidence/clean-compression hashes.  Raw run directories,
+the 1 MB evidence inputs, and the all-zero preallocated primary are not
+committed; their exact bytes are represented by the safe manifests and hashes.
+
 ## Next milestone boundary
 
 Milestone 1 is committed and green.  Milestone 2 (builder recovery) is complete
@@ -309,9 +357,11 @@ following `COMPRESSION_RECOVERY_PLAN.md`: the exact 259-read
 checkpoint) and R2 (nonuniform multimerge backup) each ran twice under the
 verified profile with exit-86 failpoints, immutable partial snapshots, resume
 copies, and independent clean controls, and the R2 clean-vs-recovered legacy
-contract is resolved (see the plan).  Milestone 3 is non-resumable interruption
-evidence only and has not begun.  Do not begin modern2 or modern3
-implementation first.
+contract is resolved (see the plan).  Milestone 3 (non-resumable interruption
+evidence) is complete and promoted under
+`compat/goldens/original-0.3.0/compression-milestone3/`; see the plan's
+"Milestone 3 executed evidence" note for the resolved m3c2 finding.  Do not
+begin modern2 or modern3 implementation first.
 
 ### Resolved compression policy
 
