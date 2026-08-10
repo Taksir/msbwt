@@ -36,14 +36,18 @@ BYTE_READER_SIDE_EFFECTS = {
     "fmIndex.npy": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
 }
 
-# the exact minimal fix in packages/msbwt-modern2/MUS/MultiStringBWT.py
-# (decompressBlocks fill loop) relative to the LF-normalized frozen source
+# the exact minimal fixes in packages/msbwt-modern2/MUS/MultiStringBWT.py
+# relative to the LF-normalized frozen source: the milestone-4 multi-block
+# boundary correction (decompressBlocks endRange site, line 628) plus the
+# milestone-3 fill-loop correction (line 662)
 FIX_ADDED_LINES = [
+    "            endRange = int(self.refFM[endBlock+1])+1",
     "            runLength = int(counts[lInd])",
     "            ret[s:s+runLength] = letters[lInd]",
     "            s += runLength",
 ]
 FIX_REMOVED_LINES = [
+    "            endRange = self.refFM[endBlock+1]+1",
     "            ret[s:s+counts[lInd]] = letters[lInd]",
     "            s += counts[lInd]",
 ]
@@ -168,14 +172,14 @@ class EvidenceTests(unittest.TestCase):
 
 
 class DecompressionFixSourceTests(unittest.TestCase):
-    """The modern2 decompression fix is the NARROWEST possible correction.
+    """The modern2 decompression fixes are the NARROWEST possible corrections.
 
     ``packages/msbwt-modern2/MUS/MultiStringBWT.py`` must differ from the
-    frozen original (LF-normalized) ONLY in the ``decompressBlocks`` fill
-    loop, converting the ``<u8`` run-count scalar to a Python int before it
-    enters slice arithmetic (``s + counts[lInd]`` promotes to float64 under
-    CPython 2.7 / NumPy 1.16.6 and has no ``__index__``).  The conversion
-    preserves the exact mathematical integer value; nothing else may change.
+    frozen original (LF-normalized) ONLY in the two documented decompression
+    index-boundary corrections: the milestone-4 multi-block ``endRange`` site
+    (``int(self.refFM[endBlock+1])+1``) and the milestone-3 fill loop
+    (``int(counts[lInd])``).  Each conversion preserves the exact mathematical
+    integer value; nothing else may change.
     """
 
     def test_frozen_multi_string_bwt_untouched(self):
@@ -183,7 +187,7 @@ class DecompressionFixSourceTests(unittest.TestCase):
                                "MultiStringBWT.py").read_bytes())
         self.assertEqual(digest, "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0")
 
-    def test_modern2_diff_vs_frozen_is_exactly_the_index_fix(self):
+    def test_modern2_diff_vs_frozen_is_exactly_the_index_fixes(self):
         frozen = (REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py").read_bytes()
         modern = (PACKAGE / "MUS" / "MultiStringBWT.py").read_bytes()
         frozen_lines = frozen.replace(b"\r\n", b"\n").decode("utf-8").splitlines()
@@ -195,6 +199,7 @@ class DecompressionFixSourceTests(unittest.TestCase):
         self.assertEqual(removed, FIX_REMOVED_LINES)
         context = [line[1:] for line in diff if line.startswith(" ")]
         self.assertIn("            if lInd >= letters.shape[0]:", context)
+        self.assertIn("            while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", context)
 
     def test_index_conversion_sites_are_explicit_and_local(self):
         text = (PACKAGE / "MUS" / "MultiStringBWT.py").read_text(encoding="utf-8")
@@ -202,11 +207,15 @@ class DecompressionFixSourceTests(unittest.TestCase):
                          text.index("        return ret", text.index(
                              "        #we're at the correct letter index now"))]
         self.assertIn("runLength = int(counts[lInd])", fill_loop)
-        # every numeric conversion in the file is either the fix site or a
-        # pre-existing legacy conversion (lines 90/126/335/381/463/497/604/
-        # 676/1144/1145/1189/1335 of the LF-normalized frozen file); the fix
-        # introduced no other int()/long()/float() churn anywhere
-        fix_site = "            runLength = int(counts[lInd])"
+        self.assertIn("endRange = int(self.refFM[endBlock+1])+1", text)
+        # every numeric conversion in the file is either a documented fix site
+        # or a pre-existing legacy conversion (lines 90/126/335/381/463/497/
+        # 604/676/1144/1145/1189/1335 of the LF-normalized frozen file); the
+        # fixes introduced no other int()/long()/float() churn anywhere
+        fix_sites = [
+            "            runLength = int(counts[lInd])",
+            "            endRange = int(self.refFM[endBlock+1])+1",
+        ]
         legacy_sites = [
             "                self.searchCache[seq[-self.cacheDepth:]] = (int(res[0]), int(res[1]))",
             "                self.searchCache[seq[-self.cacheDepth:]] = (int(res[0]), int(res[1]))",
@@ -221,7 +230,7 @@ class DecompressionFixSourceTests(unittest.TestCase):
             "        return (pieces[0], int(pieces[1]))",
             "            perc = float(maxV)/total",
         ]
-        allowed = set(legacy_sites) | {fix_site}
+        allowed = set(legacy_sites) | set(fix_sites)
         found = set()
         for line in text.splitlines():
             if re.search(r"\b(?:int|long|float)\(", line):
@@ -229,6 +238,7 @@ class DecompressionFixSourceTests(unittest.TestCase):
         self.assertEqual(found, allowed)
         self.assertNotIn("ret[s:s+counts[lInd]]", text)
         self.assertNotIn("s += counts[lInd]", text)
+        self.assertNotIn("endRange = self.refFM[endBlock+1]+1", text)
 
     def test_frozen_failure_site_still_holds_original_arithmetic(self):
         # the frozen source must keep the exact legacy failing expression so
