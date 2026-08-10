@@ -9,6 +9,7 @@ environment.  The runtime build/slice validation lives in
 packages/msbwt-modern2/validate/compression-milestone2.sh (WSL).
 """
 
+import difflib
 import json
 import re
 import unittest
@@ -143,6 +144,10 @@ class CompressionSourceIdentityTests(unittest.TestCase):
             source = declaration.split(" <- ", 1)[-1]
             expected[source] = digest
         for name in COMPRESSION_SLICE_MODULES:
+            if name == "RLE_BWTCython":
+                # milestone 5: carries the documented decompressBlocks
+                # endRange correction; see test_rle_pyx_diff_is_language_level_plus_reader_fix
+                continue
             relative = "MUSCython/{}.pyx".format(name)
             frozen_bytes = (REPOSITORY_ROOT / relative).read_bytes().replace(
                 b"\r\n", b"\n")
@@ -154,6 +159,26 @@ class CompressionSourceIdentityTests(unittest.TestCase):
             expected_lines = frozen_lines[:1] + \
                 [b"#cython: language_level=2"] + frozen_lines[1:]
             self.assertEqual(migrated.splitlines(), expected_lines, relative)
+
+    def test_rle_pyx_diff_is_language_level_plus_reader_fix(self):
+        # milestone 5 exception: RLE_BWTCython.pyx also carries the single
+        # documented reader-side decompressBlocks endRange correction
+        # (int(self.refFM[endBlock+1])+1); see test_modern2_reader_boundaries
+        frozen = (REPOSITORY_ROOT / "MUSCython" / "RLE_BWTCython.pyx").read_bytes()
+        migrated = (MUSCYN / "RLE_BWTCython.pyx").read_bytes()
+        frozen_text = frozen.replace(b"\r\n", b"\n").decode("utf-8")
+        migrated_text = migrated.replace(b"\r\n", b"\n").decode("utf-8")
+        added = [line[1:] for line in difflib.unified_diff(
+            frozen_text.splitlines(), migrated_text.splitlines(), lineterm="")
+            if line.startswith("+") and not line.startswith("+++")]
+        removed = [line[1:] for line in difflib.unified_diff(
+            frozen_text.splitlines(), migrated_text.splitlines(), lineterm="")
+            if line.startswith("-") and not line.startswith("---")]
+        self.assertEqual(added, [
+            "#cython: language_level=2",
+            "            endRange = int(self.refFM[endBlock+1])+1"])
+        self.assertEqual(removed, [
+            "            endRange = self.refFM[endBlock+1]+1"])
 
     def test_no_typed_division_on_direct_compression_path(self):
         text = (MUSCYN / "MSBWTCompGenCython.pyx").read_text(
