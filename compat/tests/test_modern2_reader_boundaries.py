@@ -209,10 +209,14 @@ class ReaderFixSourceTests(unittest.TestCase):
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py",
             PACKAGE / "MUS" / "MultiStringBWT.py")
-        self.assertEqual(len(added), 6)
-        self.assertEqual(len(removed), 5)
+        self.assertEqual(len(added), 7)
+        self.assertEqual(len(removed), 6)
         self.assertEqual(added.count("            endRange = int(self.refFM[binID+1])+1"), 2)
         self.assertEqual(removed.count("            endRange = self.refFM[binID+1]+1"), 2)
+        self.assertIn("            np.add.at(ret, letters[0:x-1], counts[0:x-1])",
+                      added)
+        self.assertIn("            ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)",
+                      removed)
 
 
 if __name__ == "__main__":

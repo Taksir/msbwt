@@ -40,7 +40,9 @@ BYTE_READER_SIDE_EFFECTS = {
 # relative to the LF-normalized frozen source: the milestone-5 reader
 # boundary corrections (getCharAtIndex and getFullFMAtIndex endRange sites),
 # the milestone-4 multi-block boundary correction (decompressBlocks endRange
-# site, line 628), plus the milestone-3 fill-loop correction (line 662)
+# site, line 628), the milestone-3 fill-loop correction (line 662), plus the
+# milestone-6 pure-FM fill-line correction (np.add.at replacing the float64
+# np.bincount in-place add at line 726)
 FIX_ADDED_LINES = [
     "            endRange = int(self.refFM[binID+1])+1",
     "            endRange = int(self.refFM[endBlock+1])+1",
@@ -48,6 +50,7 @@ FIX_ADDED_LINES = [
     "            ret[s:s+runLength] = letters[lInd]",
     "            s += runLength",
     "            endRange = int(self.refFM[binID+1])+1",
+    "            np.add.at(ret, letters[0:x-1], counts[0:x-1])",
 ]
 FIX_REMOVED_LINES = [
     "            endRange = self.refFM[binID+1]+1",
@@ -55,6 +58,7 @@ FIX_REMOVED_LINES = [
     "            ret[s:s+counts[lInd]] = letters[lInd]",
     "            s += counts[lInd]",
     "            endRange = self.refFM[binID+1]+1",
+    "            ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)",
 ]
 
 
@@ -180,12 +184,14 @@ class DecompressionFixSourceTests(unittest.TestCase):
     """The modern2 decompression fixes are the NARROWEST possible corrections.
 
     ``packages/msbwt-modern2/MUS/MultiStringBWT.py`` must differ from the
-    frozen original (LF-normalized) ONLY in the four documented
-    index-boundary corrections: the milestone-5 reader ``endRange`` sites in
-    ``getCharAtIndex`` and ``getFullFMAtIndex`` (``int(self.refFM[binID+1])+1``),
-    the milestone-4 multi-block ``decompressBlocks`` endRange site
-    (``int(self.refFM[endBlock+1])+1``), and the milestone-3 fill loop
-    (``int(counts[lInd])``).  Each conversion preserves the exact mathematical
+    frozen original (LF-normalized) ONLY in the five documented
+    index-boundary / count-update corrections: the milestone-5 reader
+    ``endRange`` sites in ``getCharAtIndex`` and ``getFullFMAtIndex``
+    (``int(self.refFM[binID+1])+1``), the milestone-4 multi-block
+    ``decompressBlocks`` endRange site (``int(self.refFM[endBlock+1])+1``),
+    the milestone-3 fill loop (``int(counts[lInd])``), and the milestone-6
+    pure-FM fill line (``np.add.at`` replacing the float64 ``np.bincount``
+    in-place add).  Each conversion preserves the exact mathematical
     integer value; nothing else may change.
     """
 
