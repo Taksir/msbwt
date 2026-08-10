@@ -26,10 +26,11 @@ MIGRATED_MODULES = [
     "MSBWTCompGenCython",
     "MSBWTGenCython",
     "MultiStringBWTCython",
+    "MultimergeCython",
     "RLE_BWTCython",
     "LZW_BWTCython",
 ]
-STUB_MODULES = ["CompressToRLE", "GenericMerge", "LCPGen", "MultimergeCython"]
+STUB_MODULES = ["CompressToRLE", "GenericMerge", "LCPGen"]
 
 
 def load_json(path):
