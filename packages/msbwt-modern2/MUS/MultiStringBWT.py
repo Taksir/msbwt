@@ -625,7 +625,7 @@ class CompressedMSBWT(BasicBWT):
             endRange = self.bwt.shape[0]
             returnSize = self.binSize*(endBlock-startBlock)+(self.totalSize % self.binSize)
         else:
-            endRange = self.refFM[endBlock+1]+1
+            endRange = int(self.refFM[endBlock+1])+1
             returnSize = self.binSize*(endBlock-startBlock+1)
             while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):
                 endRange += 1

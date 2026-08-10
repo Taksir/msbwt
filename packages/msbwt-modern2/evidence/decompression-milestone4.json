@@ -1,0 +1,305 @@
+{
+  "build": {
+    "status": "skipped"
+  },
+  "decompression": {
+    "block_boundaries": {
+      "boundary": 1000000,
+      "neighborhood": {
+        "0": {
+          "decoded": 1,
+          "expected": 1,
+          "match": true
+        },
+        "1": {
+          "decoded": 4,
+          "expected": 4,
+          "match": true
+        },
+        "1000000": {
+          "decoded": 0,
+          "expected": 0,
+          "match": true
+        },
+        "1000001": {
+          "decoded": 2,
+          "expected": 2,
+          "match": true
+        },
+        "1000002": {
+          "decoded": 2,
+          "expected": 2,
+          "match": true
+        },
+        "1055998": {
+          "decoded": 5,
+          "expected": 5,
+          "match": true
+        },
+        "1055999": {
+          "decoded": 0,
+          "expected": 0,
+          "match": true
+        },
+        "999998": {
+          "decoded": 0,
+          "expected": 0,
+          "match": true
+        },
+        "999999": {
+          "decoded": 0,
+          "expected": 0,
+          "match": true
+        }
+      },
+      "regions": [
+        [
+          0,
+          1000000
+        ],
+        [
+          1000000,
+          1056000
+        ]
+      ],
+      "worksize": 1000000
+    },
+    "determinism": {
+      "p1_eq_p2": true,
+      "p1_run_a_eq_p1_run_b": true,
+      "p2_run_a_eq_p2_run_b": true,
+      "source_side_effect_determinism": true
+    },
+    "runs": {
+      "p1-run-a": {
+        "destination_files": [
+          "msbwt.npy"
+        ],
+        "dtype": "|u1",
+        "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (1056000,), }                                                      \n",
+        "payload_matches_expectation": true,
+        "payload_sha256": "7c27ccd61dec44ede4a02c883459eef78f5d909b8f30be327584c1a24391cc78",
+        "shape": [
+          1056000
+        ],
+        "source_files": [
+          "comp_fmIndex.npy",
+          "comp_msbwt.npy",
+          "comp_refIndex.npy",
+          "totalCounts.p"
+        ],
+        "symbol_counts": {
+          "$": 176000,
+          "A": 198000,
+          "C": 198000,
+          "G": 198000,
+          "N": 88000,
+          "T": 198000
+        },
+        "whole_sha256": "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35"
+      },
+      "p1-run-b": {
+        "destination_files": [
+          "msbwt.npy"
+        ],
+        "dtype": "|u1",
+        "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (1056000,), }                                                      \n",
+        "payload_matches_expectation": true,
+        "payload_sha256": "7c27ccd61dec44ede4a02c883459eef78f5d909b8f30be327584c1a24391cc78",
+        "shape": [
+          1056000
+        ],
+        "source_files": [
+          "comp_fmIndex.npy",
+          "comp_msbwt.npy",
+          "comp_refIndex.npy",
+          "totalCounts.p"
+        ],
+        "symbol_counts": {
+          "$": 176000,
+          "A": 198000,
+          "C": 198000,
+          "G": 198000,
+          "N": 88000,
+          "T": 198000
+        },
+        "whole_sha256": "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35"
+      },
+      "p2-run-a": {
+        "destination_files": [
+          "msbwt.npy"
+        ],
+        "dtype": "|u1",
+        "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (1056000,), }                                                      \n",
+        "payload_matches_expectation": true,
+        "payload_sha256": "7c27ccd61dec44ede4a02c883459eef78f5d909b8f30be327584c1a24391cc78",
+        "shape": [
+          1056000
+        ],
+        "source_files": [
+          "comp_fmIndex.npy",
+          "comp_msbwt.npy",
+          "comp_refIndex.npy",
+          "totalCounts.p"
+        ],
+        "symbol_counts": {
+          "$": 176000,
+          "A": 198000,
+          "C": 198000,
+          "G": 198000,
+          "N": 88000,
+          "T": 198000
+        },
+        "whole_sha256": "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35"
+      },
+      "p2-run-b": {
+        "destination_files": [
+          "msbwt.npy"
+        ],
+        "dtype": "|u1",
+        "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (1056000,), }                                                      \n",
+        "payload_matches_expectation": true,
+        "payload_sha256": "7c27ccd61dec44ede4a02c883459eef78f5d909b8f30be327584c1a24391cc78",
+        "shape": [
+          1056000
+        ],
+        "source_files": [
+          "comp_fmIndex.npy",
+          "comp_msbwt.npy",
+          "comp_refIndex.npy",
+          "totalCounts.p"
+        ],
+        "symbol_counts": {
+          "$": 176000,
+          "A": 198000,
+          "C": 198000,
+          "G": 198000,
+          "N": 88000,
+          "T": 198000
+        },
+        "whole_sha256": "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35"
+      }
+    }
+  },
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "milestone": "modern2-milestone4-multiblock-decompression",
+    "status": "passed"
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "reader": {
+    "reader-a": {
+      "dollar_count": 176000,
+      "queries": {
+        "A": 198000,
+        "AAAAA": 243,
+        "AAAAAA": 45,
+        "AC": 37125,
+        "ACGTN": 111,
+        "C": 198000,
+        "CG": 37125,
+        "GT": 37125,
+        "GTGGGTTT": 2,
+        "N": 88000,
+        "NACGT": 108,
+        "T": 198000,
+        "TTTTT": 249
+      },
+      "reader_class": "MUSCython.ByteBWTCython.ByteBWT",
+      "side_effects": {
+        "added": [
+          {
+            "path": "fmIndex.npy",
+            "sha256": "16e19742f54504b19ff72d278cea134b6063a0c51eac77f784699659013d8040",
+            "size": 24896
+          },
+          {
+            "path": "totalCounts.npy",
+            "sha256": "e7fe29a99498d61a278845772782b10d22256a9556e865704d75a54e160fe348",
+            "size": 176
+          }
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "total_size": 1056000
+    },
+    "reader-b": {
+      "dollar_count": 176000,
+      "queries": {
+        "A": 198000,
+        "AAAAA": 243,
+        "AAAAAA": 45,
+        "AC": 37125,
+        "ACGTN": 111,
+        "C": 198000,
+        "CG": 37125,
+        "GT": 37125,
+        "GTGGGTTT": 2,
+        "N": 88000,
+        "NACGT": 108,
+        "T": 198000,
+        "TTTTT": 249
+      },
+      "reader_class": "MUSCython.ByteBWTCython.ByteBWT",
+      "side_effects": {
+        "added": [
+          {
+            "path": "fmIndex.npy",
+            "sha256": "16e19742f54504b19ff72d278cea134b6063a0c51eac77f784699659013d8040",
+            "size": 24896
+          },
+          {
+            "path": "totalCounts.npy",
+            "sha256": "e7fe29a99498d61a278845772782b10d22256a9556e865704d75a54e160fe348",
+            "size": 176
+          }
+        ],
+        "changed": [],
+        "removed": []
+      },
+      "total_size": 1056000
+    }
+  },
+  "reader_determinism": {
+    "collection_semantics_not_applicable": true,
+    "deterministic_across_reader_loads": true,
+    "queries": {
+      "A": 198000,
+      "AAAAA": 243,
+      "AAAAAA": 45,
+      "AC": 37125,
+      "ACGTN": 111,
+      "C": 198000,
+      "CG": 37125,
+      "GT": 37125,
+      "GTGGGTTT": 2,
+      "N": 88000,
+      "NACGT": 108,
+      "T": 198000,
+      "TTTTT": 249
+    },
+    "query_counts_are_string_level_fm_counts": true,
+    "side_effects": [
+      {
+        "path": "fmIndex.npy",
+        "sha256": "16e19742f54504b19ff72d278cea134b6063a0c51eac77f784699659013d8040",
+        "size": 24896
+      },
+      {
+        "path": "totalCounts.npy",
+        "sha256": "e7fe29a99498d61a278845772782b10d22256a9556e865704d75a54e160fe348",
+        "size": 176
+      }
+    ]
+  }
+}
