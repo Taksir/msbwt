@@ -24,18 +24,20 @@
 # (compressed-file byte offsets, always integral); only the Python
 # representation changes at the index boundary.
 #
-# DOCUMENTED LEGACY DEFECT (NOT fixed; frozen arithmetic preserved): the
+# LEGACY DEFECT (frozen original preserved; modern2 fixed in milestone 6): the
 # pure-Python CompressedMSBWT.getFullFMAtIndex fill line
 # `ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)`
-# (frozen line 725 == modern2 line 726) raises
+# (frozen line 725 == modern2 line 726 pre-fix) raises
 # `TypeError: Cannot cast ufunc add output from dtype('float64') to
 # dtype('uint64') with casting rule 'same_kind'` whenever more than one run
 # precedes the target position.  np.bincount with weights returns float64 and
 # NumPy 1.16.6 in-place same_kind casting rejects float64 -> uint64; this is
 # independent of the uint64+int promotion (it also fails on the last bin and
-# on the 48-symbol single-bin case).  The compiled RLE_BWT reader (the normal
-# API) implements the same function with typed Cython arithmetic and is fully
-# correct; the pure-Python legacy defect is preserved and asserted read-only.
+# on the 48-symbol single-bin case).  The frozen original still raises the
+# TypeError (asserted below); the modern2 checkout fill line is now
+# `np.add.at(ret, letters[0:x-1], counts[0:x-1])`, the same exact-integer
+# per-symbol accumulation the compiled RLE_BWT reader performs with typed
+# Cython arithmetic (reader-milestone6.sh validates the full FM equality).
 #
 # Gates (all must pass):
 #   1. environment: CPython 2.7, Cython 3.0.x, NumPy 1.16.6, pysam 0.15.4
@@ -341,7 +343,7 @@ def main():
     report['reader']['independent_oracle'] = {
         'fm_counts': fm_counts(expected_payload, KMERS),
         'full_fm_at': {str(p): full_fm_oracle(expected_payload, p)
-                       for p in ORACLE_POSITIONS},
+                       for p in POSITIONS},
     }
 
     # ------------------------------------------------------------------
@@ -407,16 +409,11 @@ def main():
     reader['pure_compressed']['getCharAtIndex'] = {
         str(p): int(pure.getCharAtIndex(p)) for p in POSITIONS}
     ffm = {}
-    for p in ORACLE_POSITIONS:
+    for p in POSITIONS:
+        ret = pure.getFullFMAtIndex(p)
         ffm[str(p)] = {'status': 'ok',
-                       'value': [int(v) for v in pure.getFullFMAtIndex(p)]}
-    for p in LEGACY_POSITIONS:
-        rec = probe_call(lambda p=p: pure.getFullFMAtIndex(p))
-        ffm[str(p)] = {'status': 'failed',
-                       'exception_type': rec['exception_type'],
-                       'exception': rec['exception'],
-                       'legacy_frozen_site': LEGACY_BINCOUNT_ERROR in str(rec['exception']),
-                       'traceback': rec['traceback']}
+                       'value': [int(v) for v in ret],
+                       'dtype': str(ret.dtype)}
     reader['pure_compressed']['getFullFMAtIndex'] = ffm
 
     crle_dir = os.path.join(WORK, 'crle-copy')
@@ -535,18 +532,20 @@ EXPECTED_FM_COUNTS = {
 }
 
 reader = probe['reader']
+POSITIONS_STR = ['0', '1', '2047', '2048', '2049', '999998', '999999',
+                 '1000000', '1000001', '1055998', '1055999']
 gci = reader['pure_compressed']['getCharAtIndex']
 for pos, expected in EXPECTED_BYTES.items():
     assert gci[str(pos)] == expected, (pos, gci[str(pos)])
-for pos in ('0', '1', '2048', '2049'):
+for pos in POSITIONS_STR:
     rec = reader['pure_compressed']['getFullFMAtIndex'][pos]
     assert rec['status'] == 'ok', pos
+    assert rec['dtype'] == 'uint64', (pos, rec.get('dtype'))
     assert rec['value'] == reader['independent_oracle']['full_fm_at'][pos], pos
-for pos in ('2047', '999998', '1000000', '1055999'):
-    rec = reader['pure_compressed']['getFullFMAtIndex'][pos]
-    assert rec['status'] == 'failed', pos
-    assert rec['exception_type'] == 'TypeError', pos
-    assert rec['legacy_frozen_site'], pos
+# the frozen original still raises the documented float64 bincount TypeError
+# at line 725 for positions preceded by more than one run (last bin; non-last
+# bins fail earlier at the pre-fix float64 endRange index); the modern2
+# checkout is fixed (milestone 6).
 for start, end in ((0, 2048), (0, 1000000), (1000000, 1056000),
                    (1054720, 1056000), (0, 1056000)):
     rec = reader['compiled_rle']['getBWTRange']['%d:%d' % (start, end)]

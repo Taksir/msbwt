@@ -723,7 +723,7 @@ class CompressedMSBWT(BasicBWT):
         cs = np.subtract(np.cumsum(counts), counts)
         x = np.searchsorted(cs, dist, 'left')
         if x > 1:
-            ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)
+            np.add.at(ret, letters[0:x-1], counts[0:x-1])
         ret[letters[x-1]] += dist-cs[x-1]
         
         return ret

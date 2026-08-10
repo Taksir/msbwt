@@ -29,17 +29,20 @@ last block.  The int() conversions preserve the exact mathematical value
 (compressed-file byte offsets, always integral) and only change the Python
 representation at the index boundary.
 
-DOCUMENTED LEGACY DEFECT (NOT fixed in this milestone, frozen arithmetic
-unchanged): the pure-Python CompressedMSBWT.getFullFMAtIndex fill line
+FROZEN LEGACY DEFECT (fixed in milestone 6, frozen arithmetic unchanged): the
+pure-Python CompressedMSBWT.getFullFMAtIndex fill line
 `ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)`
-raises `TypeError: Cannot cast ufunc add output from dtype('float64') to
+raised `TypeError: Cannot cast ufunc add output from dtype('float64') to
 dtype('uint64') with casting rule 'same_kind'` whenever more than one run
 precedes the target position (`np.bincount` with weights returns float64 and
-NumPy 1.16.6 in-place same_kind casting rejects float64 -> uint64).  This is
-independent of the uint64+int promotion (it also fails on the last bin and on
-the 48-symbol single-bin case) and is preserved as legacy evidence; the
-compiled RLE_BWT reader (the normal API) implements the same function with
-typed Cython arithmetic and is fully correct.
+NumPy 1.16.6 in-place same_kind casting rejects float64 -> uint64).  The
+modern2 fill line is now `np.add.at(ret, letters[0:x-1], counts[0:x-1])`,
+which performs the same exact-integer per-symbol accumulation as the typed
+Cython RLE_BWT reader (`ret_view[prevChar] += prevCount`).  The frozen
+original source (`MUS/MultiStringBWT.py`) keeps the failing expression as
+historical evidence and still raises the TypeError at line 725; the compiled
+RLE_BWT reader (the normal API) always implemented the same function with
+typed Cython arithmetic.
 
 NOTE on reader semantics: the tiled evidence primary is a byte string, not a
 valid collection BWT, so reader query counts are validated only as
@@ -290,30 +293,54 @@ class ReaderBoundaryTests(unittest.TestCase):
             self.assertEqual([int(v) for v in ret],
                              oracle(self.expected_payload, position), position)
 
-    def test_pure_getFullFMAtIndex_legacy_bincount_defect_preserved(self):
-        """The frozen line-725/726 float64 bincount cast defect is preserved.
+    def test_pure_getFullFMAtIndex_legacy_bincount_defect_fixed(self):
+        """The frozen line-725/726 float64 bincount cast defect is fixed in
+        modern2 and preserved in the frozen original.
 
-        For positions preceded by more than one run the frozen fill line
-        `ret += np.bincount(...)` raises the documented TypeError (float64
-        bincount output cannot be added in-place into the <u8 array under
-        NumPy 1.16.6).  This is independent of the uint64+int promotion and
-        is left as frozen legacy arithmetic; the normal compiled reader is
-        correct.
+        For positions preceded by more than one run the modern2 fill line
+        `np.add.at(ret, letters[0:x-1], counts[0:x-1])` now performs the
+        exact-integer per-symbol accumulation and returns a <u8 FM vector
+        equal to the independent oracle; the FROZEN original fill line
+        `ret += np.bincount(...)` still raises the documented TypeError
+        (float64 bincount output cannot be added in-place into the <u8 array
+        under NumPy 1.16.6).
         """
-        src = self._fresh_rle_copy("legacy")
+        import imp
+        # modern2 checkout: correct integer FM vectors at every position
+        src = self._fresh_rle_copy("legacy-fixed")
         from MUS.MultiStringBWT import CompressedMSBWT
         msbwt = CompressedMSBWT()
         msbwt.loadMsbwt(src, logger=None)
+        oracle = self._full_fm_oracle
         for position in (2047, 999998, 1000000, 1055999):
+            ret = msbwt.getFullFMAtIndex(position)
+            self.assertEqual(ret.dtype, "<u8", position)
+            self.assertEqual([int(v) for v in ret],
+                             oracle(self.expected_payload, position), position)
+        # frozen original: historical TypeError preserved (last-bin positions
+        # reach the line-725 bincount fill; non-last bins fail earlier at the
+        # pre-fix float64 endRange index)
+        frozen_src = self._fresh_rle_copy("legacy-frozen")
+        # the frozen module imports MSBWTGen at module scope; put the modern2
+        # MUS package on the path (loadMsbwt only, no builder code runs)
+        package = os.path.join(REPO, "packages", "msbwt-modern2")
+        sys.path.insert(0, package)
+        sys.path.insert(0, os.path.join(package, "MUS"))
+        frozen = imp.load_source("frozen_msbwt",
+                                 os.path.join(REPO, "MUS",
+                                              "MultiStringBWT.py"))
+        fmsbwt = frozen.CompressedMSBWT()
+        fmsbwt.loadMsbwt(frozen_src, logger=None)
+        for position in (1055998, 1055999):
             try:
-                msbwt.getFullFMAtIndex(position)
+                fmsbwt.getFullFMAtIndex(position)
             except TypeError as exc:
                 self.assertIn(LEGACY_BINCOUNT_ERROR, str(exc), position)
                 self.assertIn("ret += np.bincount", traceback.format_exc(),
                               position)
             else:
-                self.fail("position %d did not raise the documented legacy "
-                          "TypeError" % position)
+                self.fail("frozen position %d did not raise the documented "
+                          "legacy TypeError" % position)
 
     # ------------------------------------------------------------------
     # compiled RLE_BWT reader sites (decompressBlocks / getBWTRange)

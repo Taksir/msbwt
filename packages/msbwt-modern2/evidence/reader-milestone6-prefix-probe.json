@@ -1,0 +1,454 @@
+{
+  "add_ret_plus_bc": {
+    "status": "ok", 
+    "value": [
+      175999.0, 
+      374000.0, 
+      572000.0, 
+      770000.0, 
+      858000.0, 
+      1055997.0
+    ]
+  }, 
+  "checkout_pure_getFullFMAtIndex": {
+    "0": {
+      "status": "ok", 
+      "value": [
+        0, 
+        176000, 
+        374000, 
+        572000, 
+        770000, 
+        858000
+      ]
+    }, 
+    "1": {
+      "status": "ok", 
+      "value": [
+        0, 
+        176001, 
+        374000, 
+        572000, 
+        770000, 
+        858000
+      ]
+    }, 
+    "1000000": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 131, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "1000001": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 131, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "1055998": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 131, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "1055999": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 131, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "2047": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 131, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "2048": {
+      "status": "ok", 
+      "value": [
+        342, 
+        176387, 
+        374384, 
+        572383, 
+        770172, 
+        858380
+      ]
+    }, 
+    "2049": {
+      "status": "ok", 
+      "value": [
+        342, 
+        176387, 
+        374385, 
+        572383, 
+        770172, 
+        858380
+      ]
+    }, 
+    "999998": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 131, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "999999": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 131, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }
+  }, 
+  "checkout_sha": "eb45db9 (pre-fix)", 
+  "collection": {
+    "refFM_shape": [
+      1
+    ], 
+    "total_size": 48
+  }, 
+  "collection_pure_getFullFMAtIndex": {
+    "0": {
+      "status": "ok", 
+      "value": [
+        0, 
+        8, 
+        17, 
+        26, 
+        35, 
+        39
+      ]
+    }, 
+    "1": {
+      "status": "ok", 
+      "value": [
+        0, 
+        9, 
+        17, 
+        26, 
+        35, 
+        39
+      ]
+    }, 
+    "10": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 143, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "2": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 143, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "20": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 143, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "40": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 143, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "47": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 143, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "5": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 143, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/packages/msbwt-modern2/MUS/MultiStringBWT.py\", line 726, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }
+  }, 
+  "compiled_rle_getFullFMAtIndex": {
+    "0": [
+      0, 
+      176000, 
+      374000, 
+      572000, 
+      770000, 
+      858000
+    ], 
+    "1": [
+      0, 
+      176001, 
+      374000, 
+      572000, 
+      770000, 
+      858000
+    ], 
+    "1000000": [
+      166667, 
+      363502, 
+      561498, 
+      759498, 
+      853336, 
+      1045499
+    ], 
+    "1000001": [
+      166668, 
+      363502, 
+      561498, 
+      759498, 
+      853336, 
+      1045499
+    ], 
+    "1055998": [
+      175999, 
+      374000, 
+      572000, 
+      770000, 
+      858000, 
+      1055999
+    ], 
+    "1055999": [
+      175999, 
+      374000, 
+      572000, 
+      770000, 
+      858000, 
+      1056000
+    ], 
+    "2047": [
+      342, 
+      176387, 
+      374383, 
+      572383, 
+      770172, 
+      858380
+    ], 
+    "2048": [
+      342, 
+      176387, 
+      374384, 
+      572383, 
+      770172, 
+      858380
+    ], 
+    "2049": [
+      342, 
+      176387, 
+      374385, 
+      572383, 
+      770172, 
+      858380
+    ], 
+    "999998": [
+      166665, 
+      363502, 
+      561498, 
+      759498, 
+      853336, 
+      1045499
+    ], 
+    "999999": [
+      166666, 
+      363502, 
+      561498, 
+      759498, 
+      853336, 
+      1045499
+    ], 
+    "dtype": "uint64"
+  }, 
+  "dtypes": {
+    "binID": {
+      "dtype": "None", 
+      "name": "binID", 
+      "type": "int", 
+      "value": "515"
+    }, 
+    "bincount_result": {
+      "dtype": "float64", 
+      "name": "np.bincount(...)", 
+      "type": "ndarray", 
+      "value": "[214. 238. 242. 242. 104. 238.]"
+    }, 
+    "bincount_result_sum": 1278, 
+    "bwtIndex": {
+      "dtype": "uint64", 
+      "name": "bwtIndex", 
+      "type": "uint64", 
+      "value": "483414"
+    }, 
+    "counts": {
+      "dtype": "uint64", 
+      "name": "counts", 
+      "type": "ndarray", 
+      "value": "[3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1\n 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3\n 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3\n 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3\n 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1\n 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4\n 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1\n 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1\n 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1\n 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1\n 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1\n 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4\n 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2\n 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3\n 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4\n 1 4 3 1 1 1 3 3 1 1 3 1 1 2 4 1 1 3 4 1 4 4 1 4 3 1 1 1 3 3 1]"
+    }, 
+    "cs": {
+      "dtype": "uint64", 
+      "name": "cs", 
+      "type": "ndarray", 
+      "value": "[   0    3    7    8   12   16   17   21   24   25   26   27   30   33\n   34   35   38   39   40   42   46   47   48   51   55   56   60   64\n   65   69   72   73   74   75   78   81   82   83   86   87   88   90\n   94   95   96   99  103  104  108  112  113  117  120  121  122  123\n  126  129  130  131  134  135  136  138  142  143  144  147  151  152\n  156  160  161  165  168  169  170  171  174  177  178  179  182  183\n  184  186  190  191  192  195  199  200  204  208  209  213  216  217\n  218  219  222  225  226  227  230  231  232  234  238  239  240  243\n  247  248  252  256  257  261  264  265  266  267  270  273  274  275\n  278  279  280  282  286  287  288  291  295  296  300  304  305  309\n  312  313  314  315  318  321  322  323  326  327  328  330  334  335\n  336  339  343  344  348  352  353  357  360  361  362  363  366  369\n  370  371  374  375  376  378  382  383  384  387  391  392  396  400\n  401  405  408  409  410  411  414  417  418  419  422  423  424  426\n  430  431  432  435  439  440  444  448  449  453  456  457  458  459\n  462  465  466  467  470  471  472  474  478  479  480  483  487  488\n  492  496  497  501  504  505  506  507  510  513  514  515  518  519\n  520  522  526  527  528  531  535  536  540  544  545  549  552  553\n  554  555  558  561  562  563  566  567  568  570  574  575  576  579\n  583  584  588  592  593  597  600  601  602  603  606  609  610  611\n  614  615  616  618  622  623  624  627  631  632  636  640  641  645\n  648  649  650  651  654  657  658  659  662  663  664  666  670  671\n  672  675  679  680  684  688  689  693  696  697  698  699  702  705\n  706  707  710  711  712  714  718  719  720  723  727  728  732  736\n  737  741  744  745  746  747  750  753  754  755  758  759  760  762\n  766  767  768  771  775  776  780  784  785  789  792  793  794  795\n  798  801  802  803  806  807  808  810  814  815  816  819  823  824\n  828  832  833  837  840  841  842  843  846  849  850  851  854  855\n  856  858  862  863  864  867  871  872  876  880  881  885  888  889\n  890  891  894  897  898  899  902  903  904  906  910  911  912  915\n  919  920  924  928  929  933  936  937  938  939  942  945  946  947\n  950  951  952  954  958  959  960  963  967  968  972  976  977  981\n  984  985  986  987  990  993  994  995  998  999 1000 1002 1006 1007\n 1008 1011 1015 1016 1020 1024 1025 1029 1032 1033 1034 1035 1038 1041\n 1042 1043 1046 1047 1048 1050 1054 1055 1056 1059 1063 1064 1068 1072\n 1073 1077 1080 1081 1082 1083 1086 1089 1090 1091 1094 1095 1096 1098\n 1102 1103 1104 1107 1111 1112 1116 1120 1121 1125 1128 1129 1130 1131\n 1134 1137 1138 1139 1142 1143 1144 1146 1150 1151 1152 1155 1159 1160\n 1164 1168 1169 1173 1176 1177 1178 1179 1182 1185 1186 1187 1190 1191\n 1192 1194 1198 1199 1200 1203 1207 1208 1212 1216 1217 1221 1224 1225\n 1226 1227 1230 1233 1234 1235 1238 1239 1240 1242 1246 1247 1248 1251\n 1255 1256 1260 1264 1265 1269 1272 1273 1274 1275 1278 1281]"
+    }, 
+    "dist": {
+      "dtype": "float64", 
+      "name": "dist", 
+      "type": "float64", 
+      "value": "1280.0"
+    }, 
+    "index": {
+      "dtype": "None", 
+      "name": "index", 
+      "type": "int", 
+      "value": "1055998"
+    }, 
+    "letters": {
+      "dtype": "uint8", 
+      "name": "letters", 
+      "type": "ndarray", 
+      "value": "[0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1\n 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5\n 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0\n 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4\n 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0\n 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2\n 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2\n 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3\n 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0\n 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3\n 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5\n 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1\n 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5\n 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3\n 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3\n 0 2 5 0 3 5 3 5 0 1 4 2 3 5 1 0 4 0 2 0 1 3 0 2 5 0 3 5 3 5 0]"
+    }, 
+    "letters_slice_dtype": "uint8", 
+    "minlength": 6, 
+    "partialFM_row": {
+      "dtype": "uint64", 
+      "name": "partialFM[binID]", 
+      "type": "memmap", 
+      "value": "[ 175785  373762  571758  769758  857896 1055759]"
+    }, 
+    "ret": {
+      "dtype": "uint64", 
+      "name": "ret", 
+      "type": "ndarray", 
+      "value": "[ 175785  373762  571758  769758  857896 1055759]"
+    }, 
+    "weights_dtype": "uint64", 
+    "x": {
+      "value": 585
+    }
+  }, 
+  "frozen_collection_pure_getFullFMAtIndex": {
+    "2": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 164, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/MUS/MultiStringBWT.py\", line 725, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "20": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 164, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/MUS/MultiStringBWT.py\", line 725, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }
+  }, 
+  "frozen_pure_getFullFMAtIndex": {
+    "1055998": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+      "exception_type": "TypeError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 156, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/MUS/MultiStringBWT.py\", line 725, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    }, 
+    "2048": {
+      "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+      "exception_type": "IndexError", 
+      "status": "failed", 
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 51, in probe_call\n  File \"<stdin>\", line 156, in <lambda>\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/MUS/MultiStringBWT.py\", line 708, in getFullFMAtIndex\n    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):\n  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__\n    res = super(memmap, self).__getitem__(index)\nIndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices\n"
+    }
+  }, 
+  "frozen_source_sha256": "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0", 
+  "inplace_add": {
+    "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+    "exception_type": "TypeError", 
+    "status": "failed"
+  }, 
+  "oracle": {
+    "full_fm_at": {
+      "0": [
+        0, 
+        176000, 
+        374000, 
+        572000, 
+        770000, 
+        858000
+      ], 
+      "1": [
+        0, 
+        176001, 
+        374000, 
+        572000, 
+        770000, 
+        858000
+      ], 
+      "1000000": [
+        166667, 
+        363502, 
+        561498, 
+        759498, 
+        853336, 
+        1045499
+      ], 
+      "1000001": [
+        166668, 
+        363502, 
+        561498, 
+        759498, 
+        853336, 
+        1045499
+      ], 
+      "1055998": [
+        175999, 
+        374000, 
+        572000, 
+        770000, 
+        858000, 
+        1055999
+      ], 
+      "1055999": [
+        175999, 
+        374000, 
+        572000, 
+        770000, 
+        858000, 
+        1056000
+      ], 
+      "2047": [
+        342, 
+        176387, 
+        374383, 
+        572383, 
+        770172, 
+        858380
+      ], 
+      "2048": [
+        342, 
+        176387, 
+        374384, 
+        572383, 
+        770172, 
+        858380
+      ], 
+      "2049": [
+        342, 
+        176387, 
+        374385, 
+        572383, 
+        770172, 
+        858380
+      ], 
+      "999998": [
+        166665, 
+        363502, 
+        561498, 
+        759498, 
+        853336, 
+        1045499
+      ], 
+      "999999": [
+        166666, 
+        363502, 
+        561498, 
+        759498, 
+        853336, 
+        1045499
+      ]
+    }
+  }
+}

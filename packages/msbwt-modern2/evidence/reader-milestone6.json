@@ -1,0 +1,1103 @@
+{
+  "build": {
+    "status": "skipped"
+  },
+  "dataset": {
+    "collection_size": 48,
+    "evidence_primary_sha256": "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35",
+    "rle_bins": 516,
+    "rle_primary_sha256": "681caf56aa0630250234929f8bebee1f0b973b372c2786e48b2d2ad59940eb99",
+    "total_size": 1056000
+  },
+  "dtypes": {
+    "binID": 515,
+    "bincount_dtype": "float64",
+    "bincount_sum": 1278,
+    "bincount_values": [
+      214.0,
+      238.0,
+      242.0,
+      242.0,
+      104.0,
+      238.0
+    ],
+    "counts_dtype": "uint64",
+    "cs_dtype": "uint64",
+    "dist_type": "float64",
+    "index": 1055998,
+    "inplace_add": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'",
+      "exception_type": "TypeError",
+      "status": "failed",
+      "traceback": "Traceback (most recent call last):\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 84, in probe_call\n    value = fn()\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 181, in <lambda>\n    report['dtypes']['inplace_add'] = probe_call(lambda: ret.__iadd__(bc))\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    },
+    "letters_dtype": "uint8",
+    "letters_slice_dtype": "uint8",
+    "math_add_result": [
+      175999.0,
+      374000.0,
+      572000.0,
+      770000.0,
+      858000.0,
+      1055997.0
+    ],
+    "np_add_at": {
+      "dtype": "uint64",
+      "equals_float_math_result": true,
+      "values": [
+        175999,
+        374000,
+        572000,
+        770000,
+        858000,
+        1055997
+      ]
+    },
+    "oracle_last_bin_fm": [
+      175999,
+      374000,
+      572000,
+      770000,
+      858000,
+      1055999
+    ],
+    "ret_dtype": "uint64",
+    "weights_dtype": "uint64",
+    "x": 585
+  },
+  "environment": {
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "milestone": "modern2-milestone6-pure-fm-reader",
+    "status": "passed"
+  },
+  "pre_fix": {
+    "frozen_collection_getFullFMAtIndex": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'",
+      "exception_type": "TypeError",
+      "traceback": "Traceback (most recent call last):\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 84, in probe_call\n    value = fn()\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 216, in <lambda>\n    rec = probe_call(lambda: fcol.getFullFMAtIndex(2))\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/MUS/MultiStringBWT.py\", line 725, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    },
+    "frozen_getFullFMAtIndex_last_bin": {
+      "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'",
+      "exception_type": "TypeError",
+      "traceback": "Traceback (most recent call last):\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 84, in probe_call\n    value = fn()\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 206, in <lambda>\n    rec = probe_call(lambda: fmsbwt.getFullFMAtIndex(TOTAL_SIZE - 2))\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/MUS/MultiStringBWT.py\", line 725, in getFullFMAtIndex\n    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)\nTypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'\n"
+    },
+    "frozen_getFullFMAtIndex_nonlast_bin": {
+      "exception_type": "IndexError",
+      "traceback": "Traceback (most recent call last):\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 84, in probe_call\n    value = fn()\n  File \"/tmp/modern2-milestone6-4j2gAW/probe.py\", line 201, in <lambda>\n    rec = probe_call(lambda: fmsbwt.getFullFMAtIndex(2048))\n  File \"/mnt/d/Google Drive Mythoss/Artificial Intelligence/local ollama models/msBWT/msbwt/MUS/MultiStringBWT.py\", line 708, in getFullFMAtIndex\n    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):\n  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__\n    res = super(memmap, self).__getitem__(index)\nIndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices\n"
+    },
+    "frozen_source_sha256": "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0",
+    "modern2_prefix_probe": {
+      "bincount_dtype": "float64",
+      "bincount_sum": 1278,
+      "checkout_sha": "eb45db9 (pre-fix)",
+      "frozen_source_sha256": "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0",
+      "position_1055998_exception_type": "TypeError",
+      "position_2047_exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'",
+      "position_2047_exception_type": "TypeError",
+      "ret_dtype": "uint64"
+    }
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "reader": {
+    "compiled": {
+      "byte_countOccurrencesOfSeq": {
+        "A": 198000,
+        "AAAAA": 243,
+        "AAAAAA": 45,
+        "AC": 37125,
+        "ACGTN": 111,
+        "C": 198000,
+        "CG": 37125,
+        "GT": 37125,
+        "GTGGGTTT": 2,
+        "N": 88000,
+        "NACGT": 108,
+        "T": 198000,
+        "TTTTT": 249
+      },
+      "byte_side_effects": {
+        "fmIndex.npy": "16e19742f54504b19ff72d278cea134b6063a0c51eac77f784699659013d8040",
+        "totalCounts.npy": "e7fe29a99498d61a278845772782b10d22256a9556e865704d75a54e160fe348"
+      },
+      "rle_countOccurrencesOfSeq": {
+        "A": 198000,
+        "AAAAA": 243,
+        "AAAAAA": 45,
+        "AC": 37125,
+        "ACGTN": 111,
+        "C": 198000,
+        "CG": 37125,
+        "GT": 37125,
+        "GTGGGTTT": 2,
+        "N": 88000,
+        "NACGT": 108,
+        "T": 198000,
+        "TTTTT": 249
+      },
+      "rle_getFullFMAtIndex": {
+        "0": [
+          0,
+          176000,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "1": [
+          0,
+          176001,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "1000000": [
+          166667,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "1000001": [
+          166668,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "1055998": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1055999
+        ],
+        "1055999": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1056000
+        ],
+        "2047": [
+          342,
+          176387,
+          374383,
+          572383,
+          770172,
+          858380
+        ],
+        "2048": [
+          342,
+          176387,
+          374384,
+          572383,
+          770172,
+          858380
+        ],
+        "2049": [
+          342,
+          176387,
+          374385,
+          572383,
+          770172,
+          858380
+        ],
+        "999998": [
+          166665,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "999999": [
+          166666,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ]
+      }
+    },
+    "independent_oracle": {
+      "collection_fm_counts": {
+        "A": 9,
+        "AAAAA": 1,
+        "AAAAAA": 0,
+        "AC": 4,
+        "ACGTN": 3,
+        "C": 9,
+        "CG": 4,
+        "GT": 4,
+        "GTGGGTTT": 0,
+        "N": 4,
+        "NACGT": 1,
+        "T": 9,
+        "TTTTT": 1
+      },
+      "collection_full_fm_at": {
+        "0": [
+          0,
+          8,
+          17,
+          26,
+          35,
+          39
+        ],
+        "1": [
+          0,
+          9,
+          17,
+          26,
+          35,
+          39
+        ],
+        "10": [
+          0,
+          11,
+          18,
+          27,
+          38,
+          41
+        ],
+        "2": [
+          0,
+          9,
+          17,
+          26,
+          36,
+          39
+        ],
+        "20": [
+          4,
+          13,
+          21,
+          27,
+          39,
+          41
+        ],
+        "40": [
+          7,
+          17,
+          26,
+          32,
+          39,
+          44
+        ],
+        "47": [
+          7,
+          17,
+          26,
+          35,
+          39,
+          48
+        ],
+        "5": [
+          0,
+          9,
+          18,
+          26,
+          38,
+          39
+        ]
+      },
+      "fm_counts": {
+        "A": 198000,
+        "AAAAA": 243,
+        "AAAAAA": 45,
+        "AC": 37125,
+        "ACGTN": 111,
+        "C": 198000,
+        "CG": 37125,
+        "GT": 37125,
+        "GTGGGTTT": 2,
+        "N": 88000,
+        "NACGT": 108,
+        "T": 198000,
+        "TTTTT": 249
+      },
+      "full_fm_at": {
+        "0": [
+          0,
+          176000,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "1": [
+          0,
+          176001,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "1000000": [
+          166667,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "1000001": [
+          166668,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "1055998": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1055999
+        ],
+        "1055999": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1056000
+        ],
+        "2047": [
+          342,
+          176387,
+          374383,
+          572383,
+          770172,
+          858380
+        ],
+        "2048": [
+          342,
+          176387,
+          374384,
+          572383,
+          770172,
+          858380
+        ],
+        "2049": [
+          342,
+          176387,
+          374385,
+          572383,
+          770172,
+          858380
+        ],
+        "999998": [
+          166665,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "999999": [
+          166666,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ]
+      }
+    },
+    "pure_compressed": {
+      "all_symbols_represented": {
+        "all_positive": true,
+        "final_fm": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1056000
+        ],
+        "symbol_counts_positive": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "countOccurrencesOfSeq": {
+        "A": 198000,
+        "AAAAA": 243,
+        "AAAAAA": 45,
+        "AC": 37125,
+        "ACGTN": 111,
+        "C": 198000,
+        "CG": 37125,
+        "GT": 37125,
+        "GTGGGTTT": 2,
+        "N": 88000,
+        "NACGT": 108,
+        "T": 198000,
+        "TTTTT": 249
+      },
+      "getCharAtIndex": {
+        "0": 1,
+        "1": 4,
+        "1000000": 0,
+        "1000001": 2,
+        "1055998": 5,
+        "1055999": 0,
+        "2047": 2,
+        "2048": 2,
+        "2049": 2,
+        "999998": 0,
+        "999999": 0
+      },
+      "getFullFMAtIndex": {
+        "0": {
+          "compiled": [
+            0,
+            176000,
+            374000,
+            572000,
+            770000,
+            858000
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            0,
+            176000,
+            374000,
+            572000,
+            770000,
+            858000
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            0,
+            176000,
+            374000,
+            572000,
+            770000,
+            858000
+          ]
+        },
+        "1": {
+          "compiled": [
+            0,
+            176001,
+            374000,
+            572000,
+            770000,
+            858000
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            0,
+            176001,
+            374000,
+            572000,
+            770000,
+            858000
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            0,
+            176001,
+            374000,
+            572000,
+            770000,
+            858000
+          ]
+        },
+        "1000000": {
+          "compiled": [
+            166667,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            166667,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            166667,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ]
+        },
+        "1000001": {
+          "compiled": [
+            166668,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            166668,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            166668,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ]
+        },
+        "1055998": {
+          "compiled": [
+            175999,
+            374000,
+            572000,
+            770000,
+            858000,
+            1055999
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            175999,
+            374000,
+            572000,
+            770000,
+            858000,
+            1055999
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            175999,
+            374000,
+            572000,
+            770000,
+            858000,
+            1055999
+          ]
+        },
+        "1055999": {
+          "compiled": [
+            175999,
+            374000,
+            572000,
+            770000,
+            858000,
+            1056000
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            175999,
+            374000,
+            572000,
+            770000,
+            858000,
+            1056000
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            175999,
+            374000,
+            572000,
+            770000,
+            858000,
+            1056000
+          ]
+        },
+        "2047": {
+          "compiled": [
+            342,
+            176387,
+            374383,
+            572383,
+            770172,
+            858380
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            342,
+            176387,
+            374383,
+            572383,
+            770172,
+            858380
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            342,
+            176387,
+            374383,
+            572383,
+            770172,
+            858380
+          ]
+        },
+        "2048": {
+          "compiled": [
+            342,
+            176387,
+            374384,
+            572383,
+            770172,
+            858380
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            342,
+            176387,
+            374384,
+            572383,
+            770172,
+            858380
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            342,
+            176387,
+            374384,
+            572383,
+            770172,
+            858380
+          ]
+        },
+        "2049": {
+          "compiled": [
+            342,
+            176387,
+            374385,
+            572383,
+            770172,
+            858380
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            342,
+            176387,
+            374385,
+            572383,
+            770172,
+            858380
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            342,
+            176387,
+            374385,
+            572383,
+            770172,
+            858380
+          ]
+        },
+        "999998": {
+          "compiled": [
+            166665,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            166665,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            166665,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ]
+        },
+        "999999": {
+          "compiled": [
+            166666,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            166666,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            166666,
+            363502,
+            561498,
+            759498,
+            853336,
+            1045499
+          ]
+        }
+      }
+    },
+    "valid_collection": {
+      "byte_queries": {
+        "$": 8,
+        "AAAAA": 1,
+        "AAAAAA": 0,
+        "ACGTN": 3,
+        "AGCTA": 0,
+        "CCCCC": 1,
+        "GGGGG": 1,
+        "NACGT": 1,
+        "TTTTT": 1
+      },
+      "byte_reader_side_effects": {
+        "fmIndex.npy": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+        "totalCounts.npy": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b"
+      },
+      "pure_getFullFMAtIndex": {
+        "0": {
+          "compiled": [
+            0,
+            8,
+            17,
+            26,
+            35,
+            39
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            0,
+            8,
+            17,
+            26,
+            35,
+            39
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            0,
+            8,
+            17,
+            26,
+            35,
+            39
+          ]
+        },
+        "1": {
+          "compiled": [
+            0,
+            9,
+            17,
+            26,
+            35,
+            39
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            0,
+            9,
+            17,
+            26,
+            35,
+            39
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            0,
+            9,
+            17,
+            26,
+            35,
+            39
+          ]
+        },
+        "10": {
+          "compiled": [
+            0,
+            11,
+            18,
+            27,
+            38,
+            41
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            0,
+            11,
+            18,
+            27,
+            38,
+            41
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            0,
+            11,
+            18,
+            27,
+            38,
+            41
+          ]
+        },
+        "2": {
+          "compiled": [
+            0,
+            9,
+            17,
+            26,
+            36,
+            39
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            0,
+            9,
+            17,
+            26,
+            36,
+            39
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            0,
+            9,
+            17,
+            26,
+            36,
+            39
+          ]
+        },
+        "20": {
+          "compiled": [
+            4,
+            13,
+            21,
+            27,
+            39,
+            41
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            4,
+            13,
+            21,
+            27,
+            39,
+            41
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            4,
+            13,
+            21,
+            27,
+            39,
+            41
+          ]
+        },
+        "40": {
+          "compiled": [
+            7,
+            17,
+            26,
+            32,
+            39,
+            44
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            7,
+            17,
+            26,
+            32,
+            39,
+            44
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            7,
+            17,
+            26,
+            32,
+            39,
+            44
+          ]
+        },
+        "47": {
+          "compiled": [
+            7,
+            17,
+            26,
+            35,
+            39,
+            48
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            7,
+            17,
+            26,
+            35,
+            39,
+            48
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            7,
+            17,
+            26,
+            35,
+            39,
+            48
+          ]
+        },
+        "5": {
+          "compiled": [
+            0,
+            9,
+            18,
+            26,
+            38,
+            39
+          ],
+          "dtype": "uint64",
+          "oracle": [
+            0,
+            9,
+            18,
+            26,
+            38,
+            39
+          ],
+          "pure_eq_compiled": true,
+          "pure_eq_oracle": true,
+          "status": "ok",
+          "value": [
+            0,
+            9,
+            18,
+            26,
+            38,
+            39
+          ]
+        }
+      },
+      "pure_queries": {
+        "$": 8,
+        "AAAAA": 1,
+        "AAAAAA": 0,
+        "ACGTN": 3,
+        "AGCTA": 0,
+        "CCCCC": 1,
+        "GGGGG": 1,
+        "NACGT": 1,
+        "TTTTT": 1
+      },
+      "recovery": {
+        "byte_rle_recovery_equal": true,
+        "dollar_count": 8,
+        "pure_equals_byte_recovery": true,
+        "pure_recovery": [
+          "AAAAA$",
+          "ACGTN$",
+          "ACGTN$",
+          "ACGTN$",
+          "CCCCC$",
+          "GGGGG$",
+          "NACGT$",
+          "TTTTT$"
+        ]
+      },
+      "rle_queries": {
+        "$": 8,
+        "AAAAA": 1,
+        "AAAAAA": 0,
+        "ACGTN": 3,
+        "AGCTA": 0,
+        "CCCCC": 1,
+        "GGGGG": 1,
+        "NACGT": 1,
+        "TTTTT": 1
+      },
+      "total_size": 48
+    }
+  }
+}
