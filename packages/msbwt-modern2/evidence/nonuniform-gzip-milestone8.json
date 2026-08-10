@@ -1,0 +1,207 @@
+{
+  "build": {
+    "cython": "3.0.12",
+    "language_level": 2,
+    "modules": 9,
+    "status": "ok"
+  },
+  "compress_roundtrip": {
+    "status": "nonuniform byte -> compress -> decompress == byte primary; compressed bytes == committed nonuniform-compress-posthoc golden (9d19222e...)"
+  },
+  "determinism": {
+    "gzip-input": "run-a == run-b byte-identical",
+    "nonuniform-prefix": "run-a == run-b byte-identical"
+  },
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "milestone": "modern2-milestone8-nonuniform-gzip",
+    "status": "passed"
+  },
+  "gzip": {
+    "build_tree": [
+      "da40d02ef42d4cf61d7b4814a2bc2c44c48f3516a53d6111a19bf2fdba8ff33b 182 msbwt.npy",
+      "9f96565f1486a66ea7726b0f8cb68da50871469c1e16f99b2a800573cc1f6194 96 offsets.npy",
+      "605c199e1023112d5e113dc1a4f9761b66d52937d2d56eeeaad4d51521ecf8c9 54 seqs.npy"
+    ],
+    "pre_tree": [
+      "9f96565f1486a66ea7726b0f8cb68da50871469c1e16f99b2a800573cc1f6194 96 offsets.npy",
+      "605c199e1023112d5e113dc1a4f9761b66d52937d2d56eeeaad4d51521ecf8c9 54 seqs.npy"
+    ]
+  },
+  "gzip_plain_equivalence": {
+    "status": "preprocess artifacts byte-identical"
+  },
+  "gzip_primary": {
+    "header_len": 118,
+    "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (54,), }                                                           ",
+    "payload_sha256": "13c687364c3ca7ebae5379d4f8d9814d880616dd23968fdfa2c2697ced9f24ee",
+    "size": 182
+  },
+  "gzip_reader": {
+    "added_files": {
+      "fmIndex.npy": {
+        "sha256": "9207663ec63508a3dd5dfc179f3963ac5aa2b5e046ed84dee6de5fd049cf82d4",
+        "size": 176
+      },
+      "totalCounts.npy": {
+        "sha256": "d5a953fe54e57854b58000639cbc29511f93736abf57819b7ee87f54ea54911f",
+        "size": 176
+      }
+    },
+    "dollar_count": 11,
+    "queries_match_committed": true,
+    "queries_sample": {
+      "A": 13,
+      "AA": 4,
+      "AAA": 3,
+      "AAAA": 2,
+      "AAAAA": 1,
+      "AAAAAAAA": 0,
+      "AC": 7,
+      "ACG": 6,
+      "ACGT": 5,
+      "ACGTN": 3,
+      "C": 7,
+      "CG": 6,
+      "CGT": 5,
+      "CGTN": 3,
+      "G": 6,
+      "GT": 5,
+      "GTN": 3,
+      "N": 5,
+      "NA": 1,
+      "NAC": 1,
+      "NACG": 1,
+      "NACGT": 1,
+      "T": 12,
+      "TN": 3,
+      "TT": 6,
+      "TTT": 5,
+      "TTTT": 4,
+      "TTTTT": 3,
+      "TTTTTT": 2,
+      "TTTTTTT": 1
+    },
+    "reader_class": "MUSCython.ByteBWTCython.ByteBWT",
+    "recovered_strings": [
+      "$A",
+      "$AAAAA",
+      "$AC",
+      "$ACG",
+      "$ACGT",
+      "$ACGTN",
+      "$ACGTN",
+      "$ACGTN",
+      "$N",
+      "$NACGT",
+      "$TTTTTTT"
+    ],
+    "recovery_matches_committed": true,
+    "regeneration_bytes_identical": true,
+    "side_effects_match_committed": true,
+    "total_size": 54
+  },
+  "nonuniform": {
+    "build_tree": [
+      "da28963ca3726568dd7a26eccea35f107bd4cb8b295c909de628374db38dd4b2 158 msbwt.npy",
+      "da7fcb73c1fa0bdc0c84ee2f137e566ce2ba506a15aad58c2358d8c446e6d08e 64 offsets.npy",
+      "f4239e43bfeffcfa48e4439b27faafa670dc6f16b117e8a92b3d3f7a4bbff303 30 seqs.npy"
+    ],
+    "pre_tree": [
+      "da7fcb73c1fa0bdc0c84ee2f137e566ce2ba506a15aad58c2358d8c446e6d08e 64 offsets.npy",
+      "f4239e43bfeffcfa48e4439b27faafa670dc6f16b117e8a92b3d3f7a4bbff303 30 seqs.npy"
+    ]
+  },
+  "nonuniform_primary": {
+    "header_len": 118,
+    "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (30,), }                                                           ",
+    "payload_sha256": "7a97b19addd3c41a79dbd6ce5e43609766eca78a971576e1ab2b32e3df80ca03",
+    "size": 158
+  },
+  "nonuniform_reader": {
+    "added_files": {
+      "fmIndex.npy": {
+        "sha256": "fc626114ba15fd9a1b242c1671aa5ea166492393d76b1ba840ce93859950cd0c",
+        "size": 176
+      },
+      "totalCounts.npy": {
+        "sha256": "2959abbf39535b8c8b4a080d8d3f3458ec0e4eadc9e2aa478156e84361af6f5c",
+        "size": 176
+      }
+    },
+    "dollar_count": 7,
+    "queries_match_committed": true,
+    "queries_sample": {
+      "A": 5,
+      "AAAAAAAA": 0,
+      "AC": 4,
+      "ACG": 3,
+      "ACGT": 2,
+      "ACGTN": 1,
+      "C": 4,
+      "CG": 3,
+      "CGT": 2,
+      "CGTN": 1,
+      "G": 3,
+      "GT": 2,
+      "GTN": 1,
+      "N": 2,
+      "T": 9,
+      "TN": 1,
+      "TT": 6,
+      "TTT": 5,
+      "TTTT": 4,
+      "TTTTT": 3,
+      "TTTTTT": 2,
+      "TTTTTTT": 1
+    },
+    "reader_class": "MUSCython.ByteBWTCython.ByteBWT",
+    "recovered_strings": [
+      "$A",
+      "$AC",
+      "$ACG",
+      "$ACGT",
+      "$ACGTN",
+      "$N",
+      "$TTTTTTT"
+    ],
+    "recovery_matches_committed": true,
+    "regeneration_bytes_identical": true,
+    "side_effects_match_committed": true,
+    "total_size": 30
+  },
+  "oracle": {
+    "gzip-input": {
+      "kmers_checked": 30,
+      "mismatch_count": 0,
+      "mismatches": []
+    },
+    "nonuniform-prefix": {
+      "kmers_checked": 22,
+      "mismatch_count": 0,
+      "mismatches": []
+    }
+  },
+  "p2": {
+    "gzip-input": "byte-identical to -p 1",
+    "nonuniform-prefix": "byte-identical to -p 1"
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "source": {
+    "frozen_MultiStringBWT_py_sha256": "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0",
+    "frozen_MultimergeCython_pyx_sha256": "9c591c05697a662a0f0a7fb78b0afd609e7a567afb4ed182d926fca0726859cb",
+    "pyx_diff_added": [
+      "#cython: language_level=2"
+    ],
+    "pyx_diff_removed": []
+  }
+}

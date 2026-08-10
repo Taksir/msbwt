@@ -26,6 +26,7 @@ EXTENSION_NAMES = [
     'MSBWTCompGenCython',
     'MSBWTGenCython',
     'MultiStringBWTCython',
+    'MultimergeCython',
     'RLE_BWTCython',
     'LZW_BWTCython',
 ]

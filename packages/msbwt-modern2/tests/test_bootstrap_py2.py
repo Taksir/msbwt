@@ -84,15 +84,24 @@ class ImportSurfaceTests(unittest.TestCase):
         import MUSCython.CompressToRLE
         import MUSCython.GenericMerge
         import MUSCython.LCPGen
-        import MUSCython.MultimergeCython
         for module, name in [
             ("MUSCython.CompressToRLE", "compressInput"),
             ("MUSCython.GenericMerge", "mergeTwoMSBWTs"),
             ("MUSCython.LCPGen", "lcpGenerator"),
-            ("MUSCython.MultimergeCython", "interleaveLevelMerge"),
         ]:
             callable_ = getattr(__import__(module, fromlist=[name]), name)
             self.assertRaises(NotImplementedError, callable_, "x")
+
+    def test_muscython_multimerge_migrated(self):
+        # milestone 8: MultimergeCython is the real migrated Cython module
+        # (frozen pyx + language_level=2), not a stub anymore
+        import MUSCython.MultimergeCython
+        self.assertTrue(callable(MUSCython.MultimergeCython.preprocessFastqs))
+        self.assertTrue(callable(MUSCython.MultimergeCython.interleaveLevelMerge))
+        self.assertTrue(callable(MUSCython.MultimergeCython.fastqIterator))
+        self.assertTrue(callable(MUSCython.MultimergeCython.memoryBWT))
+        self.assertFalse(
+            hasattr(MUSCython.MultimergeCython, "_not_implemented"))
 
     def test_load_preference_surface(self):
         from MUSCython import MultiStringBWTCython
