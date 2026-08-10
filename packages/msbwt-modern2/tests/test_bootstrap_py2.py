@@ -81,14 +81,24 @@ class ImportSurfaceTests(unittest.TestCase):
         import MUSCython.RLE_BWTCython
 
     def test_import_muscython_stubs(self):
-        import MUSCython.CompressToRLE
+        # milestone 10: LCPGen is the only remaining stub, classified
+        # DEAD/PRIVATE (no public CLI/API path reaches it); CompressToRLE is
+        # migrated and covered by test_muscython_compress_to_rle_migrated
         import MUSCython.LCPGen
         for module, name in [
-            ("MUSCython.CompressToRLE", "compressInput"),
             ("MUSCython.LCPGen", "lcpGenerator"),
+            ("MUSCython.LCPGen", "linearLcpGenerator"),
         ]:
             callable_ = getattr(__import__(module, fromlist=[name]), name)
-            self.assertRaises(NotImplementedError, callable_, "x")
+            self.assertRaises(NotImplementedError, callable_, "x", 1, None)
+
+    def test_muscython_compress_to_rle_migrated(self):
+        # milestone 10: CompressToRLE is the real migrated Cython module
+        # (frozen pyx + language_level=2), not a stub anymore
+        import MUSCython.CompressToRLE
+        self.assertTrue(callable(MUSCython.CompressToRLE.compressInput))
+        self.assertFalse(
+            hasattr(MUSCython.CompressToRLE, "_not_implemented"))
 
     def test_muscython_multimerge_migrated(self):
         # milestone 8: MultimergeCython is the real migrated Cython module

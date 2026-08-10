@@ -1,0 +1,20 @@
+{
+  "invalid_after_newline": {
+    "contract": "everything after the first newline is silently dropped (currSym stays '\\n' in the pass branch); exit 0; payload is the RLE of the prefix before the newline",
+    "destination_files": [
+      "comp_msbwt.npy"
+    ],
+    "exit_code": 0,
+    "input": "ACGTN\\nX\\nACGTN\\n",
+    "payload_sha256": "6a9cc3bdeb3bdcfe24fbef1b051e63029b82470a73b2dab39524eef580544a6f",
+    "quirk": "DOCUMENTED LEGACY QUIRK",
+    "sanitized_stderr": "[[TIMESTAMP]] INFO: Input: [WORK]/invalid-after-newline.txt\n[[TIMESTAMP]] INFO: Output: [WORK]/dst-invalid-a\n[[TIMESTAMP]] INFO: Beginning conversion...\n[[TIMESTAMP]] INFO: Finished conversion.\n"
+  },
+  "invalid_before_newline": {
+    "contract": "the invalid symbol becomes currSym before any newline, reaching the raise site; the intended Exception is masked by TypeError (PyNumber_Add(str, int) on the C unsigned char under Python 2)",
+    "exception_class": "TypeError",
+    "exit_code": 1,
+    "input": "ACGTX\\nACGTN\\n",
+    "sanitized_stderr": "[[TIMESTAMP]] INFO: Input: [WORK]/invalid-before-newline.txt\n[[TIMESTAMP]] INFO: Output: [WORK]/dst-invalid-b\n[[TIMESTAMP]] INFO: Beginning conversion...\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"MUS/CommandLineInterface.py\", line 242, in mainRun\n    CompressToRLE.compressInput(args.inputTextFN, args.dstDir)\n  File \"MUSCython/CompressToRLE.pyx\", line 77, in MUSCython.CompressToRLE.compressInput\n    raise Exception('UNEXPECTED SYMBOL DETECTED: '+currSym)\nTypeError: cannot concatenate 'str' and 'int' objects\n"
+  }
+}

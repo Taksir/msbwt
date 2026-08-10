@@ -1,0 +1,8 @@
+{
+  "encoding_identical_to_posthoc_compress": true,
+  "nonuniform_converted_payload_sha256": "5566aa4e33bd1952004221c69ef2591d22ef94f38805b68a96f74913f2042363",
+  "nonuniform_posthoc_committed_payload_sha256": "5566aa4e33bd1952004221c69ef2591d22ef94f38805b68a96f74913f2042363",
+  "uniform_converted_payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+  "uniform_posthoc_committed_payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+  "whole_file_differs_from_posthoc_only_by_header": "handcrafted 96-byte numpy v1 header (header_len 86, payload_offset 96) vs np.save header (header_len 118, payload_offset 128)"
+}

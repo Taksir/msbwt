@@ -1,0 +1,79 @@
+{
+  "format": "msbwt-legacy-convert-milestone10-raw-v1",
+  "inputs": {
+    "nonuniform": {
+      "bwt": "ACGTNNT$$$$$AAAACCCT$GTGTTTTT$",
+      "format": "single line with trailing newline",
+      "text_sha256": "db1c6223c879cb0414b09250bf0de63a9f3e30c4dfc83633582fcafb945b2494"
+    },
+    "uniform": {
+      "bwt": "ANNNCGTTAAAA$N$$$CCCC$AAAAGGGG$CCCCTTT$GTGGGTTT$",
+      "format": "single line with trailing newline",
+      "text_sha256": "a422559699a1f7d85ccb10d17c42ef0915e3e2874d210d96676524183d53e9fb"
+    }
+  },
+  "nonuniform": {
+    "npy": {
+      "dtype_descriptor": "|u1",
+      "header_bytes_hex": "7b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202831362c292c207d2020202020202020202020202020202020202020202020202020200a",
+      "header_length": 86,
+      "header_sha256": "d9ec79408ff4eff8b55f3620cde1765f4153bd50456c48449386a4a6b8fe2f17",
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (16,), }                           \n",
+      "magic_hex": "934e554d5059",
+      "payload_offset": 96,
+      "payload_sha256": "5566aa4e33bd1952004221c69ef2591d22ef94f38805b68a96f74913f2042363",
+      "payload_size": 16,
+      "shape": [
+        16
+      ],
+      "shape_literal": "16,",
+      "version": [
+        1,
+        0
+      ]
+    },
+    "path": "comp_msbwt.npy",
+    "sha256": "5fb45204712b0177803104d27a8170f11c159ed4f666c1b2521bc8fc614c7517",
+    "size": 112,
+    "type": "file"
+  },
+  "retained_files_per_destination": [
+    "comp_msbwt.npy"
+  ],
+  "runs": {
+    "nonuniform": {
+      "run-a": "5fb45204712b0177803104d27a8170f11c159ed4f666c1b2521bc8fc614c7517",
+      "run-b": "5fb45204712b0177803104d27a8170f11c159ed4f666c1b2521bc8fc614c7517"
+    },
+    "uniform": {
+      "run-a": "121ffb41838b696ed0c543345794f8dad36525373e4d7427de8a45d298ec009b",
+      "run-b": "121ffb41838b696ed0c543345794f8dad36525373e4d7427de8a45d298ec009b",
+      "stdin": "121ffb41838b696ed0c543345794f8dad36525373e4d7427de8a45d298ec009b"
+    }
+  },
+  "uniform": {
+    "npy": {
+      "dtype_descriptor": "|u1",
+      "header_bytes_hex": "7b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202832322c292c207d2020202020202020202020202020202020202020202020202020200a",
+      "header_length": 86,
+      "header_sha256": "767aec2b8ad5da71879a6d4fa068c4a75c91af93b8cdab4559fddbb2b60c5cde",
+      "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (22,), }                           \n",
+      "magic_hex": "934e554d5059",
+      "payload_offset": 96,
+      "payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+      "payload_size": 22,
+      "shape": [
+        22
+      ],
+      "shape_literal": "22,",
+      "version": [
+        1,
+        0
+      ]
+    },
+    "path": "comp_msbwt.npy",
+    "sha256": "121ffb41838b696ed0c543345794f8dad36525373e4d7427de8a45d298ec009b",
+    "size": 118,
+    "type": "file"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "build_argv": [
+    "setup.py",
+    "build_ext",
+    "--inplace"
+  ],
+  "committed_generated_c_sha256": "8ccecc7a4e7f353cb7a572b153bc38de78b54b944aea7cce1c839f8b75d3c079",
+  "cython_version": "0.29.36",
+  "cythonize_source": "cythonize('MUSCython/CompressToRLE.pyx', include_path=[numpy.get_include()], force=True)",
+  "frozen_manifest": "frozen-source.sha256",
+  "oracle_class": "secondary-regenerated-source",
+  "pyx_sha256": "1ef40aba3d9551ec5e3b656f30cbdc01f1e9c0e750b0830b7bd928d329ff8ab2",
+  "regenerated_c_different_from_committed": true,
+  "regenerated_c_sha256": "1e770078d8baf9433d0d686bb41ebe43767f7cc325b9e67b11bf938f349b0d81"
+}

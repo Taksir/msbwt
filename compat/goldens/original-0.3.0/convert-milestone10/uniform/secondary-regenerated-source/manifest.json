@@ -1,0 +1,31 @@
+{
+  "artifacts": [
+    {
+      "npy": {
+        "dtype_descriptor": "|u1",
+        "header_bytes_hex": "7b276465736372273a20277c7531272c2027666f727472616e5f6f72646572273a2046616c73652c20277368617065273a202832322c292c207d2020202020202020202020202020202020202020202020202020200a",
+        "header_length": 86,
+        "header_sha256": "767aec2b8ad5da71879a6d4fa068c4a75c91af93b8cdab4559fddbb2b60c5cde",
+        "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (22,), }                           \n",
+        "magic_hex": "934e554d5059",
+        "payload_offset": 96,
+        "payload_sha256": "6aadcd547a785e10d8c24304b8084d31e2c5988d6349bef8ce64260f14fb7bcb",
+        "payload_size": 22,
+        "shape": [
+          22
+        ],
+        "shape_literal": "22,",
+        "version": [
+          1,
+          0
+        ]
+      },
+      "path": "comp_msbwt.npy",
+      "sha256": "121ffb41838b696ed0c543345794f8dad36525373e4d7427de8a45d298ec009b",
+      "size": 118,
+      "type": "file"
+    }
+  ],
+  "content_sha256": "5d57ebe97e4af25a0f8089620f4db7bad754bc068d787334bc246f41e3e3b0c2",
+  "format": "msbwt-legacy-artifact-manifest-v1"
+}

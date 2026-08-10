@@ -1,0 +1,6 @@
+{
+  "procedure": "two independent fresh oracle runs produce byte-identical output trees",
+  "run_a": "identical",
+  "run_b": "identical",
+  "stdin": "identical"
+}

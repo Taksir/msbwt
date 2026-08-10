@@ -23,6 +23,7 @@ EXTENSION_NAMES = [
     'AlignmentUtil',
     'BasicBWT',
     'ByteBWTCython',
+    'CompressToRLE',
     'GenericMerge',
     'MSBWTCompGenCython',
     'MSBWTGenCython',

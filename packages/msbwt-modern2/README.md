@@ -26,11 +26,12 @@ validated byte-for-byte against the committed legacy golden:
 - reader (`ByteBWT`) + queries + derived-index side effects
 
 Migrated compiled modules: `AlignmentUtil`, `BasicBWT`, `ByteBWTCython`,
+`CompressToRLE` (milestone 10), `GenericMerge` (milestone 9),
 `MSBWTCompGenCython`, `MSBWTGenCython`, `MultiStringBWTCython`,
-`RLE_BWTCython`, `LZW_BWTCython`.
+`MultimergeCython` (milestone 8), `RLE_BWTCython`, `LZW_BWTCython`.
 
-Not yet migrated (importable stubs raising `NotImplementedError`):
-`CompressToRLE`, `GenericMerge`, `MultimergeCython`, `LCPGen`.
+Not migrated (intentional stub classified DEAD/PRIVATE — no public CLI/API
+path reaches it): `LCPGen`.
 
 Full milestone report: `docs/modernization/MODERN2_BOOTSTRAP_MILESTONE1.md`.
 

@@ -1,0 +1,10 @@
+{
+  "cc": "/home/mytho/.local/share/msbwt-oracle/environments/python27-late-pydeps-clean/bin/x86_64-conda_cos6-linux-gnu-cc", 
+  "cython": "0.29.36", 
+  "host": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-debian-forky-sid", 
+  "numpy": "1.16.6", 
+  "profile_id": "py27-late-05a7d6d83862", 
+  "pysam": "0.15.4", 
+  "python": "2.7.18", 
+  "python_implementation": "CPython"
+}
