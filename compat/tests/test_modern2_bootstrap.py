@@ -23,6 +23,7 @@ MIGRATED_MODULES = [
     "AlignmentUtil",
     "BasicBWT",
     "ByteBWTCython",
+    "CompressToRLE",
     "GenericMerge",
     "MSBWTCompGenCython",
     "MSBWTGenCython",
@@ -31,7 +32,7 @@ MIGRATED_MODULES = [
     "RLE_BWTCython",
     "LZW_BWTCython",
 ]
-STUB_MODULES = ["CompressToRLE", "LCPGen"]
+STUB_MODULES = ["LCPGen"]
 
 
 def load_json(path):
@@ -73,7 +74,8 @@ class PackageLayoutTests(unittest.TestCase):
         for name in STUB_MODULES:
             text = (MUSCYN / (name + ".py")).read_text(encoding="utf-8")
             self.assertIn("NotImplementedError", text)
-            self.assertIn("not yet migrated", text)
+            self.assertIn("DEAD/PRIVATE", text)
+            self.assertIn("MODERN2_MILESTONE10_PUBLIC_SURFACE", text)
 
     def test_no_stale_legacy_generated_c_in_package(self):
         for name in STUB_MODULES:
