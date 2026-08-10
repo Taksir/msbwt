@@ -50,3 +50,50 @@ modified; these deviations exist only in the modern distributions
   for byte; `totalCounts.p`, `comp_fmIndex.npy`, `comp_refIndex.npy` for
   compressed sources) are byte-identical to the legacy reader outputs for
   the same payloads.
+
+## 2. `merge -p 1` CLI numProcs fix (modern2)
+
+- Status: executed and validated — Modern2 Milestone 9 (see
+  `docs/modernization/MODERN2_MILESTONE9_GENERIC_MERGE.md`).
+- Affected command: `msbwt merge -p 1 OUT IN_A IN_B` (and the default
+  `merge` invocation, which defaults `-p` to 1).
+- Affected file: `packages/msbwt-modern2/MUS/CommandLineInterface.py` (the
+  modern2 file differs from the frozen original by exactly one added line:
+  `numProcs = 1` immediately before the `if args.numProcesses > 1:` branch
+  of the `merge` subcommand).
+- Old (frozen) behavior: `merge -p 1` raises
+  `UnboundLocalError: local variable 'numProcs' referenced before
+  assignment` because `numProcs` is bound only inside the
+  `args.numProcesses > 1` branch.  The output directory is created but
+  empty and the inputs are unchanged.  The committed failure evidence
+  (`compat/goldens/original-0.3.0/merge-milestone1/relationship-merge-p1-unboundlocalerror.json`,
+  stderr SHA-256
+  `186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c`) is
+  preserved; the frozen source is not repaired, and the modern2 Python-2
+  suite reproduces the historical failure by executing the frozen CLI
+  source.
+- New (modern2) behavior: `merge -p 1` performs the intended merge exactly
+  like the working multi-process route (`-p 2` also clamps to one process
+  with the same warning).  Both routes call
+  `MUSCython.GenericMerge.mergeTwoMSBWTs(..., 1, logger)`, whose algorithm
+  itself clamps `numProcs > 1` to 1.  `-p 1` and `-p 2` produce
+  byte-identical outputs (merged `msbwt.npy`
+  `dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f`,
+  `|u1`, shape `(48L,)`, payload
+  `75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e`;
+  retained `inter0.npy`
+  `4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6`),
+  byte-identical to the committed secondary regenerated-source oracle and
+  to a clean-from-scratch combined construction.
+- Rationale: genuine CLI correctness defect, explicitly pre-authorized as a
+  LEGACY SOURCE BUG fix by the resolved merge compatibility policy
+  (`docs/modernization/MERGE_INDEXING_PLAN.md`).  The fix is the narrowest
+  possible: binding the same single-process value the working `-p 2` route
+  already binds.  No merge mathematics, persistent format, or output file
+  set changes.
+- Interoperability: the merged output is byte-identical to the committed
+  secondary regenerated-source oracle and loadable by the legacy reader;
+  the frozen `-p 1` failure evidence remains authoritative for the frozen
+  CLI only.  The historical committed `GenericMerge.c` SIGSEGV
+  (LEGACY GENERATED-CODE DEFECT) is a separate preserved defect that
+  modern2 never reproduces.
