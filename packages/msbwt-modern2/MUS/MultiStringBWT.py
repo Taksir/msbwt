@@ -571,7 +571,7 @@ class CompressedMSBWT(BasicBWT):
         if binID == self.refFM.shape[0]-1:
             endRange = self.bwt.shape[0]
         else:
-            endRange = self.refFM[binID+1]+1
+            endRange = int(self.refFM[binID+1])+1
             while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):
                 endRange += 1
         
@@ -705,7 +705,7 @@ class CompressedMSBWT(BasicBWT):
         if binID == self.refFM.shape[0]-1:
             endRange = self.bwt.shape[0]
         else:
-            endRange = self.refFM[binID+1]+1
+            endRange = int(self.refFM[binID+1])+1
             while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):
                 endRange += 1
         

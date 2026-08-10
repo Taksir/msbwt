@@ -1,0 +1,685 @@
+{
+  "compiled_byte_class": "MUSCython.ByteBWTCython.ByteBWT", 
+  "compiled_rle_bwt_shape": [
+    484000
+  ], 
+  "compiled_rle_class": "MUSCython.RLE_BWTCython.RLE_BWT", 
+  "compiled_rle_refFM_shape": [
+    516
+  ], 
+  "environment": {
+    "numpy": "1.16.6", 
+    "python": "2.7.18"
+  }, 
+  "evidence_primary_sha256": "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35", 
+  "oracle_checks": {
+    "char_at": {
+      "0": "\u0001", 
+      "1": "\u0004", 
+      "1000000": "\u0000", 
+      "1000001": "\u0002", 
+      "1055998": "\u0005", 
+      "1055999": "\u0000", 
+      "2047": "\u0002", 
+      "2048": "\u0002", 
+      "2049": "\u0002", 
+      "999998": "\u0000", 
+      "999999": "\u0000"
+    }, 
+    "fm_counts": {
+      "A": 198000, 
+      "AAAAA": 243, 
+      "AAAAAA": 45, 
+      "AC": 37125, 
+      "ACGTN": 111, 
+      "NACGT": 108, 
+      "TTTTT": 249
+    }, 
+    "full_fm_at_1000000": [
+      166667, 
+      363502, 
+      561498, 
+      759498, 
+      853336, 
+      1045499
+    ]
+  }, 
+  "probes": {
+    "compiled_byte_countOccurrencesOfSeq": {
+      "A": {
+        "status": "ok", 
+        "value": "198000L", 
+        "value_type": "long"
+      }, 
+      "AAAAA": {
+        "status": "ok", 
+        "value": "243L", 
+        "value_type": "long"
+      }, 
+      "AAAAAA": {
+        "status": "ok", 
+        "value": "45L", 
+        "value_type": "long"
+      }, 
+      "AC": {
+        "status": "ok", 
+        "value": "37125L", 
+        "value_type": "long"
+      }, 
+      "ACGTN": {
+        "status": "ok", 
+        "value": "111L", 
+        "value_type": "long"
+      }, 
+      "NACGT": {
+        "status": "ok", 
+        "value": "108L", 
+        "value_type": "long"
+      }, 
+      "TTTTT": {
+        "status": "ok", 
+        "value": "249L", 
+        "value_type": "long"
+      }
+    }, 
+    "compiled_byte_getCharAtIndex": {
+      "0": {
+        "status": "ok", 
+        "value": "1L", 
+        "value_type": "long"
+      }, 
+      "1": {
+        "status": "ok", 
+        "value": "4L", 
+        "value_type": "long"
+      }, 
+      "1000000": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }, 
+      "1000001": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "1055998": {
+        "status": "ok", 
+        "value": "5L", 
+        "value_type": "long"
+      }, 
+      "1055999": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }, 
+      "2047": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "2048": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "2049": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "999998": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }, 
+      "999999": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }
+    }, 
+    "compiled_byte_getFullFMAtIndex": {
+      "0": {
+        "status": "ok", 
+        "value": "array([     0, 176000, 374000, 572000, 770000, 858000], dtype=uint64)", 
+        "value_type": "ndarray"
+      }, 
+      "1000000": {
+        "status": "ok", 
+        "value": "array([ 166667,  363502,  561498,  759498,  853336, 1045499], dtype=uint64)", 
+        "value_type": "ndarray"
+      }, 
+      "1055999": {
+        "status": "ok", 
+        "value": "array([ 175999,  374000,  572000,  770000,  858000, 1056000], dtype=uint64)", 
+        "value_type": "ndarray"
+      }, 
+      "2048": {
+        "status": "ok", 
+        "value": "array([   342, 176387, 374384, 572383, 770172, 858380], dtype=uint64)", 
+        "value_type": "ndarray"
+      }
+    }, 
+    "compiled_rle_countOccurrencesOfSeq": {
+      "A": {
+        "status": "ok", 
+        "value": "198000L", 
+        "value_type": "long"
+      }, 
+      "AAAAA": {
+        "status": "ok", 
+        "value": "243L", 
+        "value_type": "long"
+      }, 
+      "AAAAAA": {
+        "status": "ok", 
+        "value": "45L", 
+        "value_type": "long"
+      }, 
+      "AC": {
+        "status": "ok", 
+        "value": "37125L", 
+        "value_type": "long"
+      }, 
+      "ACGTN": {
+        "status": "ok", 
+        "value": "111L", 
+        "value_type": "long"
+      }, 
+      "NACGT": {
+        "status": "ok", 
+        "value": "108L", 
+        "value_type": "long"
+      }, 
+      "TTTTT": {
+        "status": "ok", 
+        "value": "249L", 
+        "value_type": "long"
+      }
+    }, 
+    "compiled_rle_decompressBlocks": {
+      "(0, 0)": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    (lambda blk=blk: crle.decompressBlocks(blk[0], blk[1])))", 
+          "  File \"MUSCython/RLE_BWTCython.pyx\", line 375, in MUSCython.RLE_BWTCython.RLE_BWT.decompressBlocks", 
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & mask) == (self.bwt[endRange-1] & mask):", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "(0, 488)": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    (lambda blk=blk: crle.decompressBlocks(blk[0], blk[1])))", 
+          "  File \"MUSCython/RLE_BWTCython.pyx\", line 375, in MUSCython.RLE_BWTCython.RLE_BWT.decompressBlocks", 
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & mask) == (self.bwt[endRange-1] & mask):", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "(0, 515)": {
+        "status": "ok", 
+        "value": "array([1, 4, 4, ..., 5, 5, 0], dtype=uint8)", 
+        "value_type": "ndarray"
+      }, 
+      "(488, 515)": {
+        "status": "ok", 
+        "value": "array([0, 2, 2, ..., 5, 5, 0], dtype=uint8)", 
+        "value_type": "ndarray"
+      }
+    }, 
+    "compiled_rle_getBWTRange": {
+      "(0, 1000000)": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]", 
+          "  File \"MUSCython/RLE_BWTCython.pyx\", line 375, in MUSCython.RLE_BWTCython.RLE_BWT.decompressBlocks", 
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & mask) == (self.bwt[endRange-1] & mask):", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "(0, 1056000)": {
+        "status": "ok", 
+        "value": "array([1, 4, 4, ..., 5, 5, 0], dtype=uint8)", 
+        "value_type": "ndarray"
+      }, 
+      "(0, 2048)": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]", 
+          "  File \"MUSCython/RLE_BWTCython.pyx\", line 375, in MUSCython.RLE_BWTCython.RLE_BWT.decompressBlocks", 
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & mask) == (self.bwt[endRange-1] & mask):", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "(1000000, 1056000)": {
+        "status": "ok", 
+        "value": "array([0, 2, 2, ..., 5, 5, 0], dtype=uint8)", 
+        "value_type": "ndarray"
+      }, 
+      "(1054720, 1056000)": {
+        "status": "ok", 
+        "value": "array([0, 2, 2, ..., 5, 5, 0], dtype=uint8)", 
+        "value_type": "ndarray"
+      }
+    }, 
+    "compiled_rle_getCharAtIndex": {
+      "0": {
+        "status": "ok", 
+        "value": "1L", 
+        "value_type": "long"
+      }, 
+      "1": {
+        "status": "ok", 
+        "value": "4L", 
+        "value_type": "long"
+      }, 
+      "1000000": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }, 
+      "1000001": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "1055998": {
+        "status": "ok", 
+        "value": "5L", 
+        "value_type": "long"
+      }, 
+      "1055999": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }, 
+      "2047": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "2048": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "2049": {
+        "status": "ok", 
+        "value": "2L", 
+        "value_type": "long"
+      }, 
+      "999998": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }, 
+      "999999": {
+        "status": "ok", 
+        "value": "0L", 
+        "value_type": "long"
+      }
+    }, 
+    "compiled_rle_getFullFMAtIndex": {
+      "0": {
+        "status": "ok", 
+        "value": "array([     0, 176000, 374000, 572000, 770000, 858000], dtype=uint64)", 
+        "value_type": "ndarray"
+      }, 
+      "1000000": {
+        "status": "ok", 
+        "value": "array([ 166667,  363502,  561498,  759498,  853336, 1045499], dtype=uint64)", 
+        "value_type": "ndarray"
+      }, 
+      "1055999": {
+        "status": "ok", 
+        "value": "array([ 175999,  374000,  572000,  770000,  858000, 1056000], dtype=uint64)", 
+        "value_type": "ndarray"
+      }, 
+      "2048": {
+        "status": "ok", 
+        "value": "array([   342, 176387, 374384, 572383, 770172, 858380], dtype=uint64)", 
+        "value_type": "ndarray"
+      }
+    }, 
+    "pure_getCharAtIndex": {
+      "0": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "1": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "1000000": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "1000001": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "1055998": {
+        "status": "ok", 
+        "value": "5", 
+        "value_type": "uint8"
+      }, 
+      "1055999": {
+        "status": "ok", 
+        "value": "0", 
+        "value_type": "uint8"
+      }, 
+      "2047": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "2048": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "2049": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "999998": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "999999": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }
+    }, 
+    "pure_getFullFMAtIndex": {
+      "0": {
+        "status": "ok", 
+        "value": "array([     0, 176000, 374000, 572000, 770000, 858000], dtype=uint64)", 
+        "value_type": "ndarray"
+      }, 
+      "1": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "1000000": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "1000001": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "1055998": {
+        "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+        "exception_type": "TypeError", 
+        "status": "failed", 
+        "traceback": [
+          "    (lambda p=p: pure.getFullFMAtIndex(p)))", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/MUS/MultiStringBWT.py\", line 725, in getFullFMAtIndex", 
+          "    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)", 
+          "TypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'"
+        ]
+      }, 
+      "1055999": {
+        "exception": "Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'", 
+        "exception_type": "TypeError", 
+        "status": "failed", 
+        "traceback": [
+          "    (lambda p=p: pure.getFullFMAtIndex(p)))", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/MUS/MultiStringBWT.py\", line 725, in getFullFMAtIndex", 
+          "    ret += np.bincount(letters[0:x-1], counts[0:x-1], minlength=self.vcLen)", 
+          "TypeError: Cannot cast ufunc add output from dtype('float64') to dtype('uint64') with casting rule 'same_kind'"
+        ]
+      }, 
+      "2047": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "2048": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "2049": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "999998": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }, 
+      "999999": {
+        "exception": "only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices", 
+        "exception_type": "IndexError", 
+        "status": "failed", 
+        "traceback": [
+          "    while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", 
+          "  File \"/home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/numpy/core/memmap.py\", line 331, in __getitem__", 
+          "    res = super(memmap, self).__getitem__(index)", 
+          "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+        ]
+      }
+    }, 
+    "small_valid_collection": {
+      "pure_getCharAtIndex": {
+        "0": {
+          "status": "ok", 
+          "value": "1", 
+          "value_type": "uint8"
+        }, 
+        "10": {
+          "status": "ok", 
+          "value": "1", 
+          "value_type": "uint8"
+        }, 
+        "47": {
+          "status": "ok", 
+          "value": "0", 
+          "value_type": "uint8"
+        }
+      }
+    }
+  }, 
+  "pure_bwt_shape": [
+    484000
+  ], 
+  "pure_refFM_shape": [
+    516
+  ], 
+  "rle_primary_sha256": "681caf56aa0630250234929f8bebee1f0b973b372c2786e48b2d2ad59940eb99", 
+  "sites": {
+    "compiled_rle_decompressBlocks_endRange": {
+      "0": {
+        "refFM[0+1]": {
+          "expression": "ref[0+1]", 
+          "numpy_dtype": "uint64", 
+          "runtime_type": "uint64", 
+          "value": "938"
+        }, 
+        "refFM[0+1]+1": {
+          "expression": "ref[0+1]+1", 
+          "numpy_dtype": "float64", 
+          "runtime_type": "float64", 
+          "value": "939.0"
+        }
+      }, 
+      "488": {
+        "refFM[488+1]": {
+          "expression": "ref[488+1]", 
+          "numpy_dtype": "uint64", 
+          "runtime_type": "uint64", 
+          "value": "459007"
+        }, 
+        "refFM[488+1]+1": {
+          "expression": "ref[488+1]+1", 
+          "numpy_dtype": "float64", 
+          "runtime_type": "float64", 
+          "value": "459008.0"
+        }
+      }
+    }, 
+    "pure_getCharAtIndex_endRange": {
+      "0": {
+        "index-trueIndex": {
+          "expression": "1000000 - trueIndex", 
+          "numpy_dtype": "float64", 
+          "runtime_type": "float64", 
+          "value": "1000000.0"
+        }, 
+        "refFM[binID+1]": {
+          "expression": "pure.refFM[0+1]", 
+          "numpy_dtype": "uint64", 
+          "runtime_type": "uint64", 
+          "value": "938"
+        }, 
+        "refFM[binID+1]+1": {
+          "expression": "pure.refFM[0+1]+1", 
+          "numpy_dtype": "float64", 
+          "runtime_type": "float64", 
+          "value": "939.0"
+        }
+      }, 
+      "488": {
+        "index-trueIndex": {
+          "expression": "1000000 - trueIndex", 
+          "numpy_dtype": "float64", 
+          "runtime_type": "float64", 
+          "value": "578.0"
+        }, 
+        "refFM[binID+1]": {
+          "expression": "pure.refFM[488+1]", 
+          "numpy_dtype": "uint64", 
+          "runtime_type": "uint64", 
+          "value": "459008"
+        }, 
+        "refFM[binID+1]+1": {
+          "expression": "pure.refFM[488+1]+1", 
+          "numpy_dtype": "float64", 
+          "runtime_type": "float64", 
+          "value": "459009.0"
+        }
+      }
+    }
+  }, 
+  "small_rle_refFM_shape": [
+    1
+  ]
+}

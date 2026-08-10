@@ -370,7 +370,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
             endRange = self.bwt.shape[0]
             returnSize = binSize*(endBlock-startBlock)+(self.totalSize % binSize)
         else:
-            endRange = self.refFM[endBlock+1]+1
+            endRange = int(self.refFM[endBlock+1])+1
             returnSize = binSize*(endBlock-startBlock+1)
             while endRange < self.bwt.shape[0] and (self.bwt[endRange] & mask) == (self.bwt[endRange-1] & mask):
                 endRange += 1
