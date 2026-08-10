@@ -1,0 +1,1365 @@
+{
+  "build": {
+    "status": "skipped"
+  },
+  "constructFMIndex": {
+    "countsSoFar_dtype": "float64",
+    "countsSoFar_values": [
+      0.0,
+      8.0,
+      17.0,
+      26.0,
+      35.0,
+      39.0
+    ],
+    "offsetSum": 125,
+    "partialFM_dtype": "uint64",
+    "refFM_dtype": "uint64",
+    "totalCounts_type": "ndarray"
+  },
+  "constructTotalCounts": {
+    "chunk_0": {
+      "after_dtype": "float64",
+      "after_len": 6,
+      "after_type": "ndarray",
+      "before_type": "list",
+      "bincount_dtype": "float64"
+    },
+    "final_dtype": "float64",
+    "final_type": "ndarray",
+    "final_values": [
+      8.0,
+      9.0,
+      9.0,
+      9.0,
+      4.0,
+      9.0
+    ],
+    "initial_len": 6,
+    "initial_type": "list"
+  },
+  "dataset": {
+    "evidence_primary_sha256": "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35",
+    "rle_primary_sha256": "681caf56aa0630250234929f8bebee1f0b973b372c2786e48b2d2ad59940eb99",
+    "total_size": 1056000
+  },
+  "derived": {
+    "big": {
+      "compiled": {
+        "derived_hashes": {
+          "comp_fmIndex.npy": "98fe3d177864202a803733b9239a76d4ea90ac7180b7b9fa3feb43dea670918d",
+          "comp_refIndex.npy": "a051b51d48e868e266f55b4bac2565e577ea78b1595e07d9b3d29bc099c8012f"
+        },
+        "fm_bytes_equal": false,
+        "ref_bytes_equal": false
+      },
+      "created_files": [
+        "comp_fmIndex.npy",
+        "comp_refIndex.npy",
+        "totalCounts.p"
+      ],
+      "determinism": {
+        "hashes_equal": true
+      },
+      "exact_integer_counts": true,
+      "fm": {
+        "dtype": "uint64",
+        "row0": [
+          0,
+          176000,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "shape": [
+          516,
+          6
+        ]
+      },
+      "hashes": {
+        "comp_fmIndex.npy": "597ff836f48076609360be599d0ad77ce0a75e40eb2a4dd7a06f24f432afc6da",
+        "comp_refIndex.npy": "21534369321369f1683eb463ab50e2548fb489768c6b1d3612d33252b03f782b",
+        "totalCounts.p": "ffc16fd955307a6a97ed31fca724d493e70034fd7a64cd537abf562b532614cf"
+      },
+      "ref": {
+        "dtype": "uint64",
+        "row0": 0,
+        "shape": [
+          516
+        ]
+      },
+      "regeneration": {
+        "hashes_equal": true
+      },
+      "totalCounts_p": {
+        "dtype": "float64",
+        "len": 6,
+        "sum": 1056000.0,
+        "type": "ndarray",
+        "values": [
+          176000.0,
+          198000.0,
+          198000.0,
+          198000.0,
+          88000.0,
+          198000.0
+        ]
+      },
+      "totalSize": 1056000
+    },
+    "direct48": {
+      "committed_expected": {
+        "comp_fmIndex.npy": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+        "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+        "totalCounts.p": "c038b778aa21d53a42ba552e59cfe48d036ed7b8f4d6ce77d0ab55ede2638916"
+      },
+      "compiled": {
+        "derived_hashes": {
+          "comp_fmIndex.npy": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+          "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1"
+        },
+        "fm_bytes_equal": true,
+        "ref_bytes_equal": true
+      },
+      "created_files": [
+        "comp_fmIndex.npy",
+        "comp_refIndex.npy",
+        "totalCounts.p"
+      ],
+      "determinism": {
+        "hashes_equal": true
+      },
+      "exact_integer_counts": true,
+      "fm": {
+        "dtype": "uint64",
+        "row0": [
+          0,
+          8,
+          17,
+          26,
+          35,
+          39
+        ],
+        "shape": [
+          1,
+          6
+        ]
+      },
+      "hashes": {
+        "comp_fmIndex.npy": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+        "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+        "totalCounts.p": "c038b778aa21d53a42ba552e59cfe48d036ed7b8f4d6ce77d0ab55ede2638916"
+      },
+      "matches_committed_frozen": true,
+      "ref": {
+        "dtype": "uint64",
+        "row0": 0,
+        "shape": [
+          1
+        ]
+      },
+      "regeneration": {
+        "hashes_equal": true
+      },
+      "totalCounts_p": {
+        "dtype": "float64",
+        "len": 6,
+        "sum": 48.0,
+        "type": "ndarray",
+        "values": [
+          8.0,
+          9.0,
+          9.0,
+          9.0,
+          4.0,
+          9.0
+        ]
+      },
+      "totalSize": 48
+    },
+    "nonuni30": {
+      "committed_expected": {
+        "comp_fmIndex.npy": "d3e57fa28f3b49910012d4fb2a51f48a22f62b112bc773d8fe825a5905c7be55",
+        "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1"
+      },
+      "compiled": {
+        "derived_hashes": {
+          "comp_fmIndex.npy": "d3e57fa28f3b49910012d4fb2a51f48a22f62b112bc773d8fe825a5905c7be55",
+          "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1"
+        },
+        "fm_bytes_equal": true,
+        "ref_bytes_equal": true
+      },
+      "created_files": [
+        "comp_fmIndex.npy",
+        "comp_refIndex.npy",
+        "totalCounts.p"
+      ],
+      "determinism": {
+        "hashes_equal": true
+      },
+      "exact_integer_counts": true,
+      "fm": {
+        "dtype": "uint64",
+        "row0": [
+          0,
+          7,
+          12,
+          16,
+          19,
+          21
+        ],
+        "shape": [
+          1,
+          6
+        ]
+      },
+      "hashes": {
+        "comp_fmIndex.npy": "d3e57fa28f3b49910012d4fb2a51f48a22f62b112bc773d8fe825a5905c7be55",
+        "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+        "totalCounts.p": "46767fe38375d132a9559e3c4e48779d3caad5303305b5bbe6a9a8951944c77e"
+      },
+      "matches_committed_frozen": true,
+      "ref": {
+        "dtype": "uint64",
+        "row0": 0,
+        "shape": [
+          1
+        ]
+      },
+      "regeneration": {
+        "hashes_equal": true
+      },
+      "totalCounts_p": {
+        "dtype": "float64",
+        "len": 6,
+        "sum": 30.0,
+        "type": "ndarray",
+        "values": [
+          7.0,
+          5.0,
+          4.0,
+          3.0,
+          2.0,
+          9.0
+        ]
+      },
+      "totalSize": 30
+    },
+    "posthoc48": {
+      "committed_expected": {
+        "comp_fmIndex.npy": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+        "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+        "totalCounts.p": "c038b778aa21d53a42ba552e59cfe48d036ed7b8f4d6ce77d0ab55ede2638916"
+      },
+      "compiled": {
+        "derived_hashes": {
+          "comp_fmIndex.npy": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+          "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1"
+        },
+        "fm_bytes_equal": true,
+        "ref_bytes_equal": true
+      },
+      "created_files": [
+        "comp_fmIndex.npy",
+        "comp_refIndex.npy",
+        "totalCounts.p"
+      ],
+      "determinism": {
+        "hashes_equal": true
+      },
+      "exact_integer_counts": true,
+      "fm": {
+        "dtype": "uint64",
+        "row0": [
+          0,
+          8,
+          17,
+          26,
+          35,
+          39
+        ],
+        "shape": [
+          1,
+          6
+        ]
+      },
+      "hashes": {
+        "comp_fmIndex.npy": "f6565545114d769fbe6ba6010ce125c8690256f2d97562ceb65064b38d48c881",
+        "comp_refIndex.npy": "30c0c0f336e69b86ee3da30f0f4ce1d9a138d503845c586e993ff31e8003fee1",
+        "totalCounts.p": "c038b778aa21d53a42ba552e59cfe48d036ed7b8f4d6ce77d0ab55ede2638916"
+      },
+      "matches_committed_frozen": true,
+      "ref": {
+        "dtype": "uint64",
+        "row0": 0,
+        "shape": [
+          1
+        ]
+      },
+      "regeneration": {
+        "hashes_equal": true
+      },
+      "totalCounts_p": {
+        "dtype": "float64",
+        "len": 6,
+        "sum": 48.0,
+        "type": "ndarray",
+        "values": [
+          8.0,
+          9.0,
+          9.0,
+          9.0,
+          4.0,
+          9.0
+        ]
+      },
+      "totalSize": 48
+    }
+  },
+  "environment": {
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "milestone": "modern2-milestone7-reader-init",
+    "status": "passed"
+  },
+  "historical": {
+    "frozen_sha256": "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0",
+    "init_constructFMIndex_identical": true,
+    "init_constructTotalCounts_identical": true,
+    "modern2_sha256": "3431703364faa8e5aaaaa9ffb0e8c5efaa5acae68cf712e14115a36963858320"
+  },
+  "independent": {
+    "all_bins": {
+      "bad_bins": [],
+      "bad_count": 0,
+      "bins_ok": 516,
+      "bins_total": 516
+    },
+    "decoded_counts": {
+      "big": [
+        176000,
+        198000,
+        198000,
+        198000,
+        88000,
+        198000
+      ],
+      "direct48": [
+        8,
+        9,
+        9,
+        9,
+        4,
+        9
+      ],
+      "nonuni30": [
+        7,
+        5,
+        4,
+        3,
+        2,
+        9
+      ],
+      "posthoc48": [
+        8,
+        9,
+        9,
+        9,
+        4,
+        9
+      ]
+    },
+    "decoded_counts_total": {
+      "big": 1056000,
+      "direct48": 48,
+      "nonuni30": 30,
+      "posthoc48": 48
+    },
+    "decoded_symbol_counts": {
+      "big": 1056000,
+      "direct48": 48,
+      "nonuni30": 30,
+      "posthoc48": 48
+    },
+    "pure_vs_compiled_bins": {
+      "all_differing_bins_are_tile_boundaries": true,
+      "differing_bin_count": 171,
+      "first_differing_bins": [
+        3,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "pure_fm_lastrow_equal": true,
+      "pure_fm_row0_equal": true,
+      "pure_ref_eq_compiled_ref_minus_1": true
+    }
+  },
+  "interchangeability": {
+    "compiled_on_pure": {
+      "0": [
+        0,
+        176000,
+        374000,
+        572000,
+        770000,
+        858000
+      ],
+      "1000000": [
+        166667,
+        363502,
+        561498,
+        759498,
+        853336,
+        1045499
+      ],
+      "1055998": [
+        175999,
+        374000,
+        572000,
+        770000,
+        858000,
+        1055999
+      ],
+      "2048": [
+        342,
+        176387,
+        374384,
+        572383,
+        770172,
+        858380
+      ],
+      "6144": [
+        1024,
+        177152,
+        375152,
+        573152,
+        770512,
+        859152
+      ],
+      "A": 198000,
+      "AAAAAA": 45,
+      "AC": 37125,
+      "ACGTN": 111,
+      "getCharAtIndex_6144": 1
+    },
+    "pure_on_compiled": {
+      "0": [
+        0,
+        176000,
+        374000,
+        572000,
+        770000,
+        858000
+      ],
+      "1000000": [
+        166667,
+        363502,
+        561498,
+        759498,
+        853336,
+        1045499
+      ],
+      "1055998": [
+        175999,
+        374000,
+        572000,
+        770000,
+        858000,
+        1055999
+      ],
+      "2048": [
+        342,
+        176387,
+        374384,
+        572383,
+        770172,
+        858380
+      ],
+      "6144": [
+        1024,
+        177152,
+        375152,
+        573152,
+        770512,
+        859152
+      ],
+      "A": 198000,
+      "AAAAAA": 45,
+      "AC": 37125,
+      "ACGTN": 111,
+      "getCharAtIndex_6144": 1
+    }
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "reader": {
+    "big": {
+      "getCharAtIndex": {
+        "0": 1,
+        "1": 4,
+        "1000000": 0,
+        "1000001": 2,
+        "1055998": 5,
+        "1055999": 0,
+        "2047": 2,
+        "2048": 2,
+        "2049": 2,
+        "999998": 0,
+        "999999": 0,
+        "compiled_0": 1,
+        "compiled_1": 4,
+        "compiled_1000000": 0,
+        "compiled_1000001": 2,
+        "compiled_1055998": 5,
+        "compiled_1055999": 0,
+        "compiled_2047": 2,
+        "compiled_2048": 2,
+        "compiled_2049": 2,
+        "compiled_999998": 0,
+        "compiled_999999": 0
+      },
+      "getFullFMAtIndex": {
+        "0": [
+          0,
+          176000,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "1": [
+          0,
+          176001,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "1000000": [
+          166667,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "1000001": [
+          166668,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "1055998": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1055999
+        ],
+        "1055999": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1056000
+        ],
+        "2047": [
+          342,
+          176387,
+          374383,
+          572383,
+          770172,
+          858380
+        ],
+        "2048": [
+          342,
+          176387,
+          374384,
+          572383,
+          770172,
+          858380
+        ],
+        "2049": [
+          342,
+          176387,
+          374385,
+          572383,
+          770172,
+          858380
+        ],
+        "999998": [
+          166665,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "999999": [
+          166666,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "compiled_0": [
+          0,
+          176000,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "compiled_1": [
+          0,
+          176001,
+          374000,
+          572000,
+          770000,
+          858000
+        ],
+        "compiled_1000000": [
+          166667,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "compiled_1000001": [
+          166668,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "compiled_1055998": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1055999
+        ],
+        "compiled_1055999": [
+          175999,
+          374000,
+          572000,
+          770000,
+          858000,
+          1056000
+        ],
+        "compiled_2047": [
+          342,
+          176387,
+          374383,
+          572383,
+          770172,
+          858380
+        ],
+        "compiled_2048": [
+          342,
+          176387,
+          374384,
+          572383,
+          770172,
+          858380
+        ],
+        "compiled_2049": [
+          342,
+          176387,
+          374385,
+          572383,
+          770172,
+          858380
+        ],
+        "compiled_999998": [
+          166665,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ],
+        "compiled_999999": [
+          166666,
+          363502,
+          561498,
+          759498,
+          853336,
+          1045499
+        ]
+      },
+      "getOccurrenceOfCharAtIndex": {
+        "0": 0,
+        "1": 0,
+        "1000000": 166667,
+        "1000001": 166668,
+        "1055998": 175999,
+        "1055999": 175999,
+        "2047": 342,
+        "2048": 342,
+        "2049": 342,
+        "999998": 166665,
+        "999999": 166666
+      },
+      "queries": {
+        "A": 198000,
+        "AAAAA": 243,
+        "AAAAAA": 45,
+        "AC": 37125,
+        "ACGTN": 111,
+        "C": 198000,
+        "CG": 37125,
+        "GT": 37125,
+        "GTGGGTTT": 2,
+        "N": 88000,
+        "NACGT": 108,
+        "T": 198000,
+        "TTTTT": 249,
+        "compiled_A": 198000,
+        "compiled_AAAAA": 243,
+        "compiled_AAAAAA": 45,
+        "compiled_AC": 37125,
+        "compiled_ACGTN": 111,
+        "compiled_C": 198000,
+        "compiled_CG": 37125,
+        "compiled_GT": 37125,
+        "compiled_GTGGGTTT": 2,
+        "compiled_N": 88000,
+        "compiled_NACGT": 108,
+        "compiled_T": 198000,
+        "compiled_TTTTT": 249
+      }
+    },
+    "direct48": {
+      "dollar_count": 8,
+      "getCharAtIndex": {
+        "0": 1,
+        "1": 4,
+        "10": 1,
+        "2": 4,
+        "20": 2,
+        "40": 5,
+        "47": 0,
+        "5": 3,
+        "compiled_0": 1,
+        "compiled_1": 4,
+        "compiled_10": 1,
+        "compiled_2": 4,
+        "compiled_20": 2,
+        "compiled_40": 5,
+        "compiled_47": 0,
+        "compiled_5": 3
+      },
+      "getFullFMAtIndex": {
+        "0": [
+          0,
+          8,
+          17,
+          26,
+          35,
+          39
+        ],
+        "1": [
+          0,
+          9,
+          17,
+          26,
+          35,
+          39
+        ],
+        "10": [
+          0,
+          11,
+          18,
+          27,
+          38,
+          41
+        ],
+        "2": [
+          0,
+          9,
+          17,
+          26,
+          36,
+          39
+        ],
+        "20": [
+          4,
+          13,
+          21,
+          27,
+          39,
+          41
+        ],
+        "40": [
+          7,
+          17,
+          26,
+          32,
+          39,
+          44
+        ],
+        "47": [
+          7,
+          17,
+          26,
+          35,
+          39,
+          48
+        ],
+        "5": [
+          0,
+          9,
+          18,
+          26,
+          38,
+          39
+        ],
+        "compiled_0": [
+          0,
+          8,
+          17,
+          26,
+          35,
+          39
+        ],
+        "compiled_1": [
+          0,
+          9,
+          17,
+          26,
+          35,
+          39
+        ],
+        "compiled_10": [
+          0,
+          11,
+          18,
+          27,
+          38,
+          41
+        ],
+        "compiled_2": [
+          0,
+          9,
+          17,
+          26,
+          36,
+          39
+        ],
+        "compiled_20": [
+          4,
+          13,
+          21,
+          27,
+          39,
+          41
+        ],
+        "compiled_40": [
+          7,
+          17,
+          26,
+          32,
+          39,
+          44
+        ],
+        "compiled_47": [
+          7,
+          17,
+          26,
+          35,
+          39,
+          48
+        ],
+        "compiled_5": [
+          0,
+          9,
+          18,
+          26,
+          38,
+          39
+        ]
+      },
+      "getOccurrenceOfCharAtIndex": {
+        "0": 0,
+        "1": 0,
+        "10": 0,
+        "2": 0,
+        "20": 4,
+        "40": 7,
+        "47": 7,
+        "5": 0
+      },
+      "queries": {
+        "$": 8,
+        "AAAAA": 1,
+        "AAAAAA": 0,
+        "ACGTN": 3,
+        "AGCTA": 0,
+        "CCCCC": 1,
+        "GGGGG": 1,
+        "NACGT": 1,
+        "TTTTT": 1,
+        "compiled_$": 8,
+        "compiled_AAAAA": 1,
+        "compiled_AAAAAA": 0,
+        "compiled_ACGTN": 3,
+        "compiled_AGCTA": 0,
+        "compiled_CCCCC": 1,
+        "compiled_GGGGG": 1,
+        "compiled_NACGT": 1,
+        "compiled_TTTTT": 1
+      },
+      "recovery": [
+        "AAAAA$",
+        "ACGTN$",
+        "ACGTN$",
+        "ACGTN$",
+        "CCCCC$",
+        "GGGGG$",
+        "NACGT$",
+        "TTTTT$"
+      ],
+      "recovery_compiled": [
+        "AAAAA$",
+        "ACGTN$",
+        "ACGTN$",
+        "ACGTN$",
+        "CCCCC$",
+        "GGGGG$",
+        "NACGT$",
+        "TTTTT$"
+      ]
+    },
+    "nonuni30": {
+      "dollar_count": 7,
+      "getCharAtIndex": {
+        "0": 1,
+        "1": 2,
+        "10": 0,
+        "2": 3,
+        "20": 0,
+        "29": 0,
+        "5": 4,
+        "compiled_0": 1,
+        "compiled_1": 2,
+        "compiled_10": 0,
+        "compiled_2": 3,
+        "compiled_20": 0,
+        "compiled_29": 0,
+        "compiled_5": 4
+      },
+      "getFullFMAtIndex": {
+        "0": [
+          0,
+          7,
+          12,
+          16,
+          19,
+          21
+        ],
+        "1": [
+          0,
+          8,
+          12,
+          16,
+          19,
+          21
+        ],
+        "10": [
+          3,
+          8,
+          13,
+          17,
+          21,
+          23
+        ],
+        "2": [
+          0,
+          8,
+          13,
+          16,
+          19,
+          21
+        ],
+        "20": [
+          5,
+          12,
+          16,
+          17,
+          21,
+          24
+        ],
+        "29": [
+          6,
+          12,
+          16,
+          19,
+          21,
+          30
+        ],
+        "5": [
+          0,
+          8,
+          13,
+          17,
+          20,
+          22
+        ],
+        "compiled_0": [
+          0,
+          7,
+          12,
+          16,
+          19,
+          21
+        ],
+        "compiled_1": [
+          0,
+          8,
+          12,
+          16,
+          19,
+          21
+        ],
+        "compiled_10": [
+          3,
+          8,
+          13,
+          17,
+          21,
+          23
+        ],
+        "compiled_2": [
+          0,
+          8,
+          13,
+          16,
+          19,
+          21
+        ],
+        "compiled_20": [
+          5,
+          12,
+          16,
+          17,
+          21,
+          24
+        ],
+        "compiled_29": [
+          6,
+          12,
+          16,
+          19,
+          21,
+          30
+        ],
+        "compiled_5": [
+          0,
+          8,
+          13,
+          17,
+          20,
+          22
+        ]
+      },
+      "getOccurrenceOfCharAtIndex": {
+        "0": 0,
+        "1": 0,
+        "10": 3,
+        "2": 0,
+        "20": 5,
+        "29": 6,
+        "5": 0
+      },
+      "queries": {
+        "A": 5,
+        "AAAAAAAA": 0,
+        "AC": 4,
+        "ACG": 3,
+        "ACGT": 2,
+        "ACGTN": 1,
+        "C": 4,
+        "CG": 3,
+        "CGT": 2,
+        "CGTN": 1,
+        "G": 3,
+        "GT": 2,
+        "GTN": 1,
+        "N": 2,
+        "T": 9,
+        "TN": 1,
+        "TT": 6,
+        "TTT": 5,
+        "TTTT": 4,
+        "TTTTT": 3,
+        "TTTTTT": 2,
+        "TTTTTTT": 1,
+        "compiled_A": 5,
+        "compiled_AAAAAAAA": 0,
+        "compiled_AC": 4,
+        "compiled_ACG": 3,
+        "compiled_ACGT": 2,
+        "compiled_ACGTN": 1,
+        "compiled_C": 4,
+        "compiled_CG": 3,
+        "compiled_CGT": 2,
+        "compiled_CGTN": 1,
+        "compiled_G": 3,
+        "compiled_GT": 2,
+        "compiled_GTN": 1,
+        "compiled_N": 2,
+        "compiled_T": 9,
+        "compiled_TN": 1,
+        "compiled_TT": 6,
+        "compiled_TTT": 5,
+        "compiled_TTTT": 4,
+        "compiled_TTTTT": 3,
+        "compiled_TTTTTT": 2,
+        "compiled_TTTTTTT": 1
+      },
+      "recovery": [
+        "A$",
+        "AC$",
+        "ACG$",
+        "ACGT$",
+        "ACGTN$",
+        "N$",
+        "TTTTTTT$"
+      ],
+      "recovery_compiled": [
+        "A$",
+        "AC$",
+        "ACG$",
+        "ACGT$",
+        "ACGTN$",
+        "N$",
+        "TTTTTTT$"
+      ]
+    },
+    "posthoc48": {
+      "dollar_count": 8,
+      "getCharAtIndex": {
+        "0": 1,
+        "1": 4,
+        "10": 1,
+        "2": 4,
+        "20": 2,
+        "40": 5,
+        "47": 0,
+        "5": 3,
+        "compiled_0": 1,
+        "compiled_1": 4,
+        "compiled_10": 1,
+        "compiled_2": 4,
+        "compiled_20": 2,
+        "compiled_40": 5,
+        "compiled_47": 0,
+        "compiled_5": 3
+      },
+      "getFullFMAtIndex": {
+        "0": [
+          0,
+          8,
+          17,
+          26,
+          35,
+          39
+        ],
+        "1": [
+          0,
+          9,
+          17,
+          26,
+          35,
+          39
+        ],
+        "10": [
+          0,
+          11,
+          18,
+          27,
+          38,
+          41
+        ],
+        "2": [
+          0,
+          9,
+          17,
+          26,
+          36,
+          39
+        ],
+        "20": [
+          4,
+          13,
+          21,
+          27,
+          39,
+          41
+        ],
+        "40": [
+          7,
+          17,
+          26,
+          32,
+          39,
+          44
+        ],
+        "47": [
+          7,
+          17,
+          26,
+          35,
+          39,
+          48
+        ],
+        "5": [
+          0,
+          9,
+          18,
+          26,
+          38,
+          39
+        ],
+        "compiled_0": [
+          0,
+          8,
+          17,
+          26,
+          35,
+          39
+        ],
+        "compiled_1": [
+          0,
+          9,
+          17,
+          26,
+          35,
+          39
+        ],
+        "compiled_10": [
+          0,
+          11,
+          18,
+          27,
+          38,
+          41
+        ],
+        "compiled_2": [
+          0,
+          9,
+          17,
+          26,
+          36,
+          39
+        ],
+        "compiled_20": [
+          4,
+          13,
+          21,
+          27,
+          39,
+          41
+        ],
+        "compiled_40": [
+          7,
+          17,
+          26,
+          32,
+          39,
+          44
+        ],
+        "compiled_47": [
+          7,
+          17,
+          26,
+          35,
+          39,
+          48
+        ],
+        "compiled_5": [
+          0,
+          9,
+          18,
+          26,
+          38,
+          39
+        ]
+      },
+      "getOccurrenceOfCharAtIndex": {
+        "0": 0,
+        "1": 0,
+        "10": 0,
+        "2": 0,
+        "20": 4,
+        "40": 7,
+        "47": 7,
+        "5": 0
+      },
+      "queries": {
+        "$": 8,
+        "AAAAA": 1,
+        "AAAAAA": 0,
+        "ACGTN": 3,
+        "AGCTA": 0,
+        "CCCCC": 1,
+        "GGGGG": 1,
+        "NACGT": 1,
+        "TTTTT": 1,
+        "compiled_$": 8,
+        "compiled_AAAAA": 1,
+        "compiled_AAAAAA": 0,
+        "compiled_ACGTN": 3,
+        "compiled_AGCTA": 0,
+        "compiled_CCCCC": 1,
+        "compiled_GGGGG": 1,
+        "compiled_NACGT": 1,
+        "compiled_TTTTT": 1
+      },
+      "recovery": [
+        "AAAAA$",
+        "ACGTN$",
+        "ACGTN$",
+        "ACGTN$",
+        "CCCCC$",
+        "GGGGG$",
+        "NACGT$",
+        "TTTTT$"
+      ],
+      "recovery_compiled": [
+        "AAAAA$",
+        "ACGTN$",
+        "ACGTN$",
+        "ACGTN$",
+        "CCCCC$",
+        "GGGGG$",
+        "NACGT$",
+        "TTTTT$"
+      ]
+    }
+  }
+}
