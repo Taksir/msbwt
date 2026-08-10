@@ -179,6 +179,7 @@ def mainRun():
         logger.info('Inputs:\t'+str(args.inputBwtDirs))
         logger.info('Output:\t'+args.outBwtDir)
         logger.info('Processes:\t'+str(args.numProcesses))
+        numProcs = 1
         if args.numProcesses > 1:
             logger.warning('Multi-processing is not supported at this time, but will be included in a future release.')
             numProcs = 1

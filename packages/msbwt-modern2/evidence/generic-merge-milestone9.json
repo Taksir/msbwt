@@ -1,0 +1,550 @@
+{
+  "build": {
+    "status": "skipped"
+  },
+  "cli_query": {
+    "count_stdout_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+    "count_text": "3",
+    "dump_stdout_sha256": "371f1e7ddd87f61ab174da03a41b1c4d805ea7cc2b84fd20243c4ccacf05c565",
+    "dumped_strings": [
+      "ACGTN",
+      "ACGTN",
+      "ACGTN"
+    ]
+  },
+  "determinism": {
+    "note": "whole output trees byte-identical",
+    "p1_equals_p2": true,
+    "p1_run_a_equals_run_b": true,
+    "p2_run_a_equals_run_b": true
+  },
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "final": {
+    "branch": "codex/modern2",
+    "milestone": "modern2-milestone9-generic-merge",
+    "oracle_class": "secondary-regenerated-source",
+    "status": "passed"
+  },
+  "fixtures": {
+    "nonuniform.fastq": {
+      "sha256": "e19ef01c7683cd81534fada1f8142ddf35710a2e1bf9b70d92bb8de2acb1973e",
+      "size": 246
+    },
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "input_side_effects": {
+    "classification": "lazy reader-derived indexes created by loadBWT(useMemmap=True); inputs otherwise unchanged",
+    "in_a": [
+      "fmIndex.npy",
+      "totalCounts.npy"
+    ],
+    "in_b": [
+      "fmIndex.npy",
+      "totalCounts.npy"
+    ]
+  },
+  "inputs": {
+    "run-a": {
+      "clean_msbwt": "dd91d69e...",
+      "in_a_msbwt": "e277c7e5...",
+      "in_b_msbwt": "15f40b98..."
+    },
+    "run-b": "same"
+  },
+  "interleave": {
+    "dtype_descriptor": "|u1",
+    "header_len": 118,
+    "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (7,), }                                                            ",
+    "payload_sha256": "688c323fa4aed411bb303322c616e6640e31fffdf707d0a596fad2c4f386ca2b",
+    "shape": [
+      7
+    ],
+    "shape_literal": "(7,)",
+    "size": 135,
+    "whole_sha256": "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6"
+  },
+  "merged": {
+    "p1_run_a_tree": [
+      "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6 135 inter0.npy",
+      "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f 176 msbwt.npy"
+    ],
+    "p1_run_b_tree": [
+      "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6 135 inter0.npy",
+      "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f 176 msbwt.npy"
+    ],
+    "p2_run_a_tree": [
+      "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6 135 inter0.npy",
+      "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f 176 msbwt.npy"
+    ],
+    "p2_run_b_tree": [
+      "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6 135 inter0.npy",
+      "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f 176 msbwt.npy"
+    ]
+  },
+  "merged_vs_clean": {
+    "msbwt_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "whole_file_equal": true
+  },
+  "oracle": {
+    "backward_mismatch_count": 0,
+    "backward_mismatches": [],
+    "interleave_verification": {
+      "blocks": [
+        {
+          "end": 1,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "$AAAAA",
+          "start": 0,
+          "zeros": 1
+        },
+        {
+          "end": 4,
+          "expected_bit": null,
+          "matched": true,
+          "ones": 1,
+          "rotation": "$ACGTN",
+          "start": 1,
+          "zeros": 2
+        },
+        {
+          "end": 5,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "$CCCCC",
+          "start": 4,
+          "zeros": 0
+        },
+        {
+          "end": 6,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "$GGGGG",
+          "start": 5,
+          "zeros": 0
+        },
+        {
+          "end": 7,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "$NACGT",
+          "start": 6,
+          "zeros": 1
+        },
+        {
+          "end": 8,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "$TTTTT",
+          "start": 7,
+          "zeros": 0
+        },
+        {
+          "end": 9,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "A$AAAA",
+          "start": 8,
+          "zeros": 1
+        },
+        {
+          "end": 10,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "AA$AAA",
+          "start": 9,
+          "zeros": 1
+        },
+        {
+          "end": 11,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "AAA$AA",
+          "start": 10,
+          "zeros": 1
+        },
+        {
+          "end": 12,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "AAAA$A",
+          "start": 11,
+          "zeros": 1
+        },
+        {
+          "end": 13,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "AAAAA$",
+          "start": 12,
+          "zeros": 1
+        },
+        {
+          "end": 14,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "ACGT$N",
+          "start": 13,
+          "zeros": 1
+        },
+        {
+          "end": 17,
+          "expected_bit": null,
+          "matched": true,
+          "ones": 1,
+          "rotation": "ACGTN$",
+          "start": 14,
+          "zeros": 2
+        },
+        {
+          "end": 18,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "C$CCCC",
+          "start": 17,
+          "zeros": 0
+        },
+        {
+          "end": 19,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "CC$CCC",
+          "start": 18,
+          "zeros": 0
+        },
+        {
+          "end": 20,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "CCC$CC",
+          "start": 19,
+          "zeros": 0
+        },
+        {
+          "end": 21,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "CCCC$C",
+          "start": 20,
+          "zeros": 0
+        },
+        {
+          "end": 22,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "CCCCC$",
+          "start": 21,
+          "zeros": 0
+        },
+        {
+          "end": 23,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "CGT$NA",
+          "start": 22,
+          "zeros": 1
+        },
+        {
+          "end": 26,
+          "expected_bit": null,
+          "matched": true,
+          "ones": 1,
+          "rotation": "CGTN$A",
+          "start": 23,
+          "zeros": 2
+        },
+        {
+          "end": 27,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "G$GGGG",
+          "start": 26,
+          "zeros": 0
+        },
+        {
+          "end": 28,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "GG$GGG",
+          "start": 27,
+          "zeros": 0
+        },
+        {
+          "end": 29,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "GGG$GG",
+          "start": 28,
+          "zeros": 0
+        },
+        {
+          "end": 30,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "GGGG$G",
+          "start": 29,
+          "zeros": 0
+        },
+        {
+          "end": 31,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "GGGGG$",
+          "start": 30,
+          "zeros": 0
+        },
+        {
+          "end": 32,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "GT$NAC",
+          "start": 31,
+          "zeros": 1
+        },
+        {
+          "end": 35,
+          "expected_bit": null,
+          "matched": true,
+          "ones": 1,
+          "rotation": "GTN$AC",
+          "start": 32,
+          "zeros": 2
+        },
+        {
+          "end": 38,
+          "expected_bit": null,
+          "matched": true,
+          "ones": 1,
+          "rotation": "N$ACGT",
+          "start": 35,
+          "zeros": 2
+        },
+        {
+          "end": 39,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "NACGT$",
+          "start": 38,
+          "zeros": 1
+        },
+        {
+          "end": 40,
+          "expected_bit": 0,
+          "matched": true,
+          "ones": 0,
+          "rotation": "T$NACG",
+          "start": 39,
+          "zeros": 1
+        },
+        {
+          "end": 41,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "T$TTTT",
+          "start": 40,
+          "zeros": 0
+        },
+        {
+          "end": 44,
+          "expected_bit": null,
+          "matched": true,
+          "ones": 1,
+          "rotation": "TN$ACG",
+          "start": 41,
+          "zeros": 2
+        },
+        {
+          "end": 45,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "TT$TTT",
+          "start": 44,
+          "zeros": 0
+        },
+        {
+          "end": 46,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "TTT$TT",
+          "start": 45,
+          "zeros": 0
+        },
+        {
+          "end": 47,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "TTTT$T",
+          "start": 46,
+          "zeros": 0
+        },
+        {
+          "end": 48,
+          "expected_bit": 1,
+          "matched": true,
+          "ones": 1,
+          "rotation": "TTTTT$",
+          "start": 47,
+          "zeros": 0
+        }
+      ],
+      "one_count": 24,
+      "tied_positions_count": 18,
+      "unambiguous_mismatches": 0,
+      "unique_a_positions": 12,
+      "unique_b_positions": 18,
+      "zero_count": 24
+    },
+    "kmers_checked": 36,
+    "lf_recovery": [
+      "AAAAA",
+      "ACGTN",
+      "ACGTN",
+      "ACGTN",
+      "CCCCC",
+      "GGGGG",
+      "NACGT",
+      "TTTTT"
+    ],
+    "lf_recovery_matches": true,
+    "merged_reads": [
+      "AAAAA",
+      "ACGTN",
+      "ACGTN",
+      "ACGTN",
+      "CCCCC",
+      "GGGGG",
+      "NACGT",
+      "TTTTT"
+    ],
+    "rotation_prediction_matches": true,
+    "symbol_counts": {
+      "$": 8,
+      "A": 9,
+      "C": 9,
+      "G": 9,
+      "N": 4,
+      "T": 9
+    },
+    "symbol_counts_match": true
+  },
+  "output_files": {
+    "derived_in_output": [],
+    "output_files": [
+      "inter0.npy",
+      "msbwt.npy"
+    ]
+  },
+  "primary": {
+    "dtype_descriptor": "|u1",
+    "header_len": 118,
+    "header_text": "{'descr': '|u1', 'fortran_order': False, 'shape': (48L,), }                                                          ",
+    "payload_sha256": "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d4a358989e",
+    "shape": [
+      48
+    ],
+    "shape_literal": "(48L,)",
+    "size": 176,
+    "whole_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f"
+  },
+  "py2_tests": {
+    "status": "ok"
+  },
+  "reader": {
+    "added_files": {
+      "fmIndex.npy": {
+        "sha256": "a5b4bf06726fcadf535245d03ef65e04a4a5248d368b3aa53639c190028b933f",
+        "size": 176
+      },
+      "totalCounts.npy": {
+        "sha256": "ea104b616fe89d7b786acdff7ca0db61f6339a59c31fbf0fff066ad7384c1c2b",
+        "size": 176
+      }
+    },
+    "classification": {
+      "lazy_deletable_regenerable": [
+        "totalCounts.npy",
+        "fmIndex.npy"
+      ],
+      "merge_provenance_not_reader_required": [
+        "inter0.npy"
+      ],
+      "primary_persistent": [
+        "msbwt.npy"
+      ]
+    },
+    "dollar_count": 8,
+    "interleave_required_by_reader": false,
+    "queries_match_committed": true,
+    "reader_class": "MUSCython.ByteBWTCython.ByteBWT",
+    "recovered_strings": [
+      "$AAAAA",
+      "$ACGTN",
+      "$ACGTN",
+      "$ACGTN",
+      "$CCCCC",
+      "$GGGGG",
+      "$NACGT",
+      "$TTTTT"
+    ],
+    "recovery_matches_committed": true,
+    "regeneration_bytes_identical": true,
+    "side_effects_match_committed": true,
+    "total_size": 48
+  },
+  "source": {
+    "cli_diff_added": [
+      "        numProcs = 1"
+    ],
+    "cli_diff_removed": [],
+    "frozen_CommandLineInterface_py_sha256": "5265558e9a04e41eab33493a4fed440e2c640c1198b99ae493810647d1b23189",
+    "frozen_GenericMerge_pyx_sha256": "fe8b699c73a0e671b63cbbe7f2eeba941b91a321156a02df44bf0e010cedce87",
+    "frozen_MultiStringBWT_py_sha256": "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0",
+    "multistringbwt_added_count": 7,
+    "multistringbwt_removed_count": 6,
+    "pyx_diff_added": [
+      "#cython: language_level=2"
+    ],
+    "pyx_diff_removed": []
+  }
+}

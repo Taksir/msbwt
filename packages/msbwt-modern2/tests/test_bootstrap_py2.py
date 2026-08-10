@@ -82,11 +82,9 @@ class ImportSurfaceTests(unittest.TestCase):
 
     def test_import_muscython_stubs(self):
         import MUSCython.CompressToRLE
-        import MUSCython.GenericMerge
         import MUSCython.LCPGen
         for module, name in [
             ("MUSCython.CompressToRLE", "compressInput"),
-            ("MUSCython.GenericMerge", "mergeTwoMSBWTs"),
             ("MUSCython.LCPGen", "lcpGenerator"),
         ]:
             callable_ = getattr(__import__(module, fromlist=[name]), name)
@@ -102,6 +100,15 @@ class ImportSurfaceTests(unittest.TestCase):
         self.assertTrue(callable(MUSCython.MultimergeCython.memoryBWT))
         self.assertFalse(
             hasattr(MUSCython.MultimergeCython, "_not_implemented"))
+
+    def test_muscython_genericmerge_migrated(self):
+        # milestone 9: GenericMerge is the real migrated Cython module
+        # (frozen pyx + language_level=2), not a stub anymore
+        import MUSCython.GenericMerge
+        self.assertTrue(callable(MUSCython.GenericMerge.mergeTwoMSBWTs))
+        self.assertTrue(callable(MUSCython.GenericMerge.interleaveTwoBwts))
+        self.assertFalse(
+            hasattr(MUSCython.GenericMerge, "_not_implemented"))
 
     def test_load_preference_surface(self):
         from MUSCython import MultiStringBWTCython
