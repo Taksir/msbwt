@@ -152,17 +152,21 @@ class TestReleaseEvidence(unittest.TestCase):
         if not EVIDENCE.is_file():
             self.skipTest("release-candidate.json not committed yet")
         data = json.loads(EVIDENCE.read_text(encoding="utf-8"))
-        for key in ("format", "commit", "python", "cython", "numpy", "pysam",
-                    "compiler", "wheel", "sdist", "install_environments",
-                    "import_paths", "cli_smoke", "workflow_hashes",
-                    "test_counts", "frozen_verification", "q1_evidence",
-                    "release_blockers"):
+        for key in ("format", "commit", "distribution", "version", "branch",
+                    "reference_profile", "sdist", "wheel", "install_environments",
+                    "cli_smoke", "workflow_hashes", "test_counts",
+                    "frozen_verification", "q1_evidence", "release_blockers"):
             self.assertIn(key, data, key)
+        profile = data["reference_profile"]
+        for key in ("python", "cython", "numpy", "pysam", "compiler"):
+            self.assertIn(key, profile, "reference_profile." + key)
         for artifact in ("sdist", "wheel"):
             for key in ("filename", "sha256", "size"):
                 self.assertIn(key, data[artifact], artifact + "." + key)
         self.assertIsInstance(data["release_blockers"], list)
         self.assertEqual(data["release_blockers"], [])
+        for env in data["install_environments"]:
+            self.assertEqual(env["result"].startswith("ALL-PASS"), True, env["id"])
 
 
 class TestBuiltArtifacts(unittest.TestCase):

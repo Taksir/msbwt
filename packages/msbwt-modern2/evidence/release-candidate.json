@@ -1,0 +1,133 @@
+{
+  "format": "msbwt-modern2-release-candidate-evidence-v1",
+  "distribution": "msbwt-modern2",
+  "version": "0.3.0",
+  "branch": "codex/modern2",
+  "commit": "98a336a",
+  "commit_note": "release-candidate commits on codex/modern2: 1cd3fd2 (Q1 hygiene), 24a215b (release tests + fresh-install driver), 98a336a (release README/docs).  Baseline validated: 2f5c0a4 (Q1 audit) + these three commits.",
+  "status": "release-candidate",
+  "reference_profile": {
+    "host": "Ubuntu 26.04 LTS on WSL2 x86-64 (Linux)",
+    "python": "2.7.18 (cp27mu/UCS4, Anaconda build h42bf7aa_3)",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "pip": "20.3.4",
+    "setuptools": "44.1.1",
+    "wheel": "0.37.1",
+    "compiler": "x86_64-conda_cos6-linux-gnu-cc (crosstool-NG 1.23.0.450-d54ae) 7.3.0",
+    "binutils": "2.34",
+    "profile_id": "modern2-python27-3.0.12",
+    "locked_artifacts": "packages/msbwt-modern2/environment/modern2-profile.json + locks/"
+  },
+  "sdist": {
+    "filename": "msbwt-modern2-0.3.0.tar.gz",
+    "sha256": "401e82f522b361000a9783d7ac8bff719bc5b609591fb8bbb89a7d620b3577d4",
+    "size": 2484274,
+    "content_audit": "contains MUS sources, all 11 MUSCython .pyx + .c + BasicBWT.pxd + LCPGen.py + __init__.py, bin/msbwt, setup.py, MANIFEST.in, PKG-INFO, LICENSE, AUTHORS, README.md; does NOT contain tests/evidence/environment/validate"
+  },
+  "wheel": {
+    "filename": "msbwt_modern2-0.3.0-cp27-cp27mu-linux_x86_64.whl",
+    "sha256": "d7137bd0103ba4961c6a7ced2c21f25f1a8cef581bec6b8e3633bbe3fe6a0018",
+    "size": 1673292,
+    "tag": "cp27-cp27mu-linux_x86_64",
+    "content_audit": "MUS py sources, 11 MUSCython .so extensions, BasicBWT.pxd, LCPGen.py, installed console script msbwt, dist-info METADATA/WHEEL/RECORD/LICENSE/AUTHORS; no .pyx/.c sources"
+  },
+  "build": {
+    "commands": [
+      "python setup.py sdist",
+      "python setup.py bdist_wheel"
+    ],
+    "environment": "pinned python27-modern2 prefix (bootstrap-modern2.sh), conda toolchain activation (activate-gcc_linux-64.sh etc.), TZ=UTC PYTHONHASHSEED=0 PYTHONNOUSERSITE=1",
+    "cython_policy": "exactly 3.0.12, language_level=2; generated C committed per modern2 policy",
+    "regenerated_c_vs_committed": "identical except Cython source-path comment prefix (absolute path depth); same Cython 3.0.12 codegen"
+  },
+  "install_environments": [
+    {
+      "id": "fresh-prefix-A (sdist install)",
+      "created_by": "packages/msbwt-modern2/environment/bootstrap-modern2.sh (micromamba 2.8.1, hash-verified)",
+      "artifact_installed": "msbwt-modern2-0.3.0.tar.gz",
+      "result": "ALL-PASS (37 checks)",
+      "imports": {
+        "MUS.__file__": "<prefix>/lib/python2.7/site-packages/MUS/__init__.pyc",
+        "MUSCython.__file__": "<prefix>/lib/python2.7/site-packages/MUSCython/__init__.pyc",
+        "module_failures": [],
+        "sys_path_repo_leak": false
+      }
+    },
+    {
+      "id": "fresh-prefix-B (wheel install)",
+      "created_by": "packages/msbwt-modern2/environment/bootstrap-modern2.sh (micromamba 2.8.1, hash-verified)",
+      "artifact_installed": "msbwt_modern2-0.3.0-cp27-cp27mu-linux_x86_64.whl",
+      "result": "ALL-PASS (37 checks)",
+      "imports": {
+        "MUS.__file__": "<prefix>/lib/python2.7/site-packages/MUS/__init__.pyc",
+        "MUSCython.__file__": "<prefix>/lib/python2.7/site-packages/MUSCython/__init__.pyc",
+        "module_failures": [],
+        "sys_path_repo_leak": false
+      }
+    }
+  ],
+  "cli_smoke": {
+    "msbwt_version_output": "msbwt 0.3.0 in MSBWT 0.3.0",
+    "msbwt_help_exit": 0,
+    "subcommands_executed": ["cffq", "pp", "cfpp", "merge", "query", "massquery", "compress", "decompress", "convert"],
+    "result_per_install": {"sdist": "all pass", "wheel": "all pass"}
+  },
+  "workflow_hashes": {
+    "cfpp_p1_uniform48": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "cfpp_p2_uniform48": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "cffq_p1_uniform48": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "compress_posthoc": "53d82b388a9d565afa96ead611d5db964bee199869fd07f96b8c84258ba099a3",
+    "decompress_modern2_contract": "f536d60f356ed4a34e8253eecdd91e90db8c2ba3430c2e3d3e1855bb49007ef4",
+    "merge_p1_uniform48": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "merge_p2_uniform48": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+    "convert_uniform": "121ffb41838b696ed0c543345794f8dad36525373e4d7427de8a45d298ec009b",
+    "convert_nonuniform": "5fb45204712b0177803104d27a8170f11c159ed4f666c1b2521bc8fc614c7517",
+    "cfpp_nonuniform30": "da28963ca3726568dd7a26eccea35f107bd4cb8b295c909de628374db38dd4b2",
+    "cfpp_gzip54": "da40d02ef42d4cf61d7b4814a2bc2c44c48f3516a53d6111a19bf2fdba8ff33b",
+    "query_counts": {"ACGTN": 3, "AAAAA": 1, "AGCTA": 0},
+    "massquery_csv": "k-mer,counts;ACGTN,3;AAAAA,1;AGCTA,0;AA,4",
+    "isolated_workflow_uniform48": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f"
+  },
+  "test_counts": {
+    "legacy_compatibility_host": 125,
+    "modern2_host": 158,
+    "total_compat_host": 283,
+    "modern2_python2": 133,
+    "q1_harness_host": 24,
+    "release_host": 13,
+    "executed_by": "python -B -m unittest discover -s compat/tests (283 OK); discover -s compat/audit/modern2-q1/tests (24 OK); discover -s compat/tests -p test_modern2_release.py (13 OK); pinned python2 -m unittest discover -s tests (133 OK)"
+  },
+  "frozen_verification": {
+    "script": "reference/original-0.3.0/environment/verify_frozen_source.py --source .",
+    "result": "OK frozen source projection: 40 files",
+    "fixture_check": "compat/fixtures/synthetic/generate_fixtures.py --check OK"
+  },
+  "q1_evidence": {
+    "reference": "compat/audit/modern2-q1/evidence/q1/ and evidence/q1-verify/ (byte-identical)",
+    "summary_sha256": "225af784cc284d3a38c8b250ea30e4ea7a0ca27a7eaa0bade43761cf15de98c3",
+    "collections": 225,
+    "categories": 18,
+    "merge_pairs": 20,
+    "classifications": {"A": 260, "B": 0, "C": 0, "D": 0, "E": 0},
+    "process_count_note": "45/165 constructions exercised -p 2 (all succeeded); committed analyzer recorded no construction p1-vs-p2 payload comparison (record-format limitation, see MODERN2_Q1_AUDIT.md 6.2/6.3/14); merge p1==p2 recorded for all 20 pairs; compress p1==p2 for all 53 cases"
+  },
+  "reproducibility": {
+    "two_builds": "r1 and r2 from separate disposable copies, same pinned env",
+    "sdist_r1": "401e82f522b361000a9783d7ac8bff719bc5b609591fb8bbb89a7d620b3577d4",
+    "sdist_r2": "937bd88a8ea4b1d646fb975d61514a0a92db8fb80d22bf17fd9fee431d57821a",
+    "wheel_r1": "d7137bd0103ba4961c6a7ced2c21f25f1a8cef581bec6b8e3633bbe3fe6a0018",
+    "wheel_r2": "b4baa8f09e4adabfe12d8e29ae470547dba8f3577e65fe09415b85015e31aa03",
+    "characterization": "archive bytes differ only by embedded timestamps (gzip header mtime, tar member mtimes, zip entry DOS timestamps); extracted sdist and wheel contents are byte-identical across r1/r2 (0 diff lines), and compiled .so payloads are byte-identical; therefore: payload-reproducible, not byte-reproducible archives"
+  },
+  "legacy_bug_tracker": {
+    "authority": "docs/modernization/MODERN2_LEGACY_BUG_TRACKER.md",
+    "proven_entries": 8,
+    "fixed": ["decompression float64 slice crash", "multi-block decompression refFM crash", "pure reader refFM index crashes", "pure getFullFMAtIndex weighted-bincount", "merge -p 1 numProcs"],
+    "generated_code_defect_eliminated": ["historical GenericMerge.c SIGSEGV"],
+    "preserved_quirks": ["convert newline truncation", "convert masked TypeError error path"],
+    "readme_consistent": true
+  },
+  "release_blockers": []
+}
