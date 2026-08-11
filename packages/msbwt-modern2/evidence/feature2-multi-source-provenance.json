@@ -1,0 +1,5338 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "atomic_write_probe": {
+      "deterministic_bytes": true,
+      "no_tmp_leftovers": true
+    },
+    "case_mismatches": 0,
+    "corruption_probes": {
+      "bwt_length_mismatch_detected": true,
+      "copied_manifest_detected": true,
+      "missing_interleave_detected": true,
+      "same_length_replaced_bwt_detected": true,
+      "same_length_same_count_replaced_interleave_detected": true,
+      "truncated_manifest_detected": true,
+      "wrong_dtype_interleave_detected": true,
+      "wrong_version_detected": true
+    },
+    "dataset_mismatches": 0,
+    "datasets": [
+      {
+        "case": "random-00",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            3
+          ],
+          [
+            "s1",
+            10
+          ],
+          [
+            "s2",
+            29
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 42,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            3
+          ],
+          [
+            "s1",
+            10
+          ],
+          [
+            "s2",
+            29
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CN"
+          ],
+          [
+            "CTNACAAGT"
+          ],
+          [
+            "GAGTNN",
+            "CGGTNNNT",
+            "NCCATNTTAANT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-01",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            7
+          ],
+          [
+            "s2",
+            34
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 47,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            7
+          ],
+          [
+            "s2",
+            34
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TCGAG"
+          ],
+          [
+            "NTAA",
+            "N"
+          ],
+          [
+            "G",
+            "NA",
+            "CGTGT",
+            "GGAGTCN",
+            "CGCAGNNGN",
+            "NNAG"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-02",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            17
+          ],
+          [
+            "s1",
+            13
+          ],
+          [
+            "s2",
+            61
+          ],
+          [
+            "s3",
+            25
+          ],
+          [
+            "s4",
+            45
+          ],
+          [
+            "s5",
+            19
+          ],
+          [
+            "s6",
+            17
+          ],
+          [
+            "s7",
+            35
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 232,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            17
+          ],
+          [
+            "s1",
+            13
+          ],
+          [
+            "s2",
+            61
+          ],
+          [
+            "s3",
+            25
+          ],
+          [
+            "s4",
+            45
+          ],
+          [
+            "s5",
+            19
+          ],
+          [
+            "s6",
+            17
+          ],
+          [
+            "s7",
+            35
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NANCTANN",
+            "CCGGGGA"
+          ],
+          [
+            "CTAGCNGCGGAT"
+          ],
+          [
+            "GNCTATC",
+            "NGAGGAACNANC",
+            "ACAA",
+            "ACCNGTNAAAGG",
+            "TATGGACTACCG",
+            "NGCCTCNG"
+          ],
+          [
+            "TAACACGNG",
+            "GGT",
+            "CTCANCCNNN"
+          ],
+          [
+            "GGCCGT",
+            "ATNC",
+            "NNAGNNTN",
+            "CTTTGACNAC",
+            "GANATAGGATCN"
+          ],
+          [
+            "GTTCGG",
+            "CNTTNANGGCT"
+          ],
+          [
+            "CAGCNNAGA",
+            "GTTGNN"
+          ],
+          [
+            "GCCGCT",
+            "ATACCNNTTC",
+            "GTAAGTA",
+            "AN",
+            "ANG",
+            "G"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 8,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-03",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            11
+          ],
+          [
+            "s3",
+            10
+          ],
+          [
+            "s4",
+            8
+          ],
+          [
+            "s5",
+            29
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 92,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            11
+          ],
+          [
+            "s3",
+            10
+          ],
+          [
+            "s4",
+            8
+          ],
+          [
+            "s5",
+            29
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "AC",
+            "TCCANT"
+          ],
+          [
+            "ANGCANCNNT",
+            "TGTGATATTCNA"
+          ],
+          [
+            "C",
+            "CGCGTNGA"
+          ],
+          [
+            "NNTGGNGGT"
+          ],
+          [
+            "TGCGGGC"
+          ],
+          [
+            "CT",
+            "TAANG",
+            "NGNCTCN",
+            "AGGCAACGNAN"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 6,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-04",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            21
+          ],
+          [
+            "s2",
+            51
+          ],
+          [
+            "s3",
+            23
+          ],
+          [
+            "s4",
+            39
+          ],
+          [
+            "s5",
+            21
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 161,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            21
+          ],
+          [
+            "s2",
+            51
+          ],
+          [
+            "s3",
+            23
+          ],
+          [
+            "s4",
+            39
+          ],
+          [
+            "s5",
+            21
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "ACCCN"
+          ],
+          [
+            "GAAT",
+            "GCTCCNTCNNTC",
+            "AN"
+          ],
+          [
+            "AAANGANG",
+            "TTGCANCAG",
+            "AC",
+            "NTGACCCNCNGN",
+            "TCAGATGGCNAA",
+            "GN"
+          ],
+          [
+            "TTCNN",
+            "NCNTCGACC",
+            "GCGACC"
+          ],
+          [
+            "ATNATGGCT",
+            "NCNGAATNTGAG",
+            "GGC",
+            "G",
+            "TAGATAATC"
+          ],
+          [
+            "NCAGCNGAG",
+            "CNTGGCTCCC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 6,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-05",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            7
+          ],
+          [
+            "s2",
+            26
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 44,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            7
+          ],
+          [
+            "s2",
+            26
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "ANTGCNTN",
+            "T"
+          ],
+          [
+            "TCACNA"
+          ],
+          [
+            "GTNT",
+            "GCGGNA",
+            "NGACAACTTTA",
+            "N"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-06",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            26
+          ],
+          [
+            "s1",
+            31
+          ],
+          [
+            "s2",
+            18
+          ],
+          [
+            "s3",
+            60
+          ],
+          [
+            "s4",
+            23
+          ],
+          [
+            "s5",
+            49
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 207,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            26
+          ],
+          [
+            "s1",
+            31
+          ],
+          [
+            "s2",
+            18
+          ],
+          [
+            "s3",
+            60
+          ],
+          [
+            "s4",
+            23
+          ],
+          [
+            "s5",
+            49
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GA",
+            "ATATTCAATAG",
+            "TGACANTTCG"
+          ],
+          [
+            "AGCCTNC",
+            "GGACNCTT",
+            "ATCGTGCCCGC",
+            "G"
+          ],
+          [
+            "AT",
+            "ATNNGTTC",
+            "GATGG"
+          ],
+          [
+            "CTCNNATTCA",
+            "CTNAGTGN",
+            "GACNTACTGN",
+            "CNNAATGC",
+            "TNCTGG",
+            "TATTAGAANTGG"
+          ],
+          [
+            "CACGANCTNNN",
+            "TCCGCGTGCG"
+          ],
+          [
+            "A",
+            "TTAATGGGNCCT",
+            "ANGTGTACANC",
+            "CNATCCTA",
+            "NANCN",
+            "ACGACT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 6,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-07",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            22
+          ],
+          [
+            "s1",
+            16
+          ],
+          [
+            "s2",
+            31
+          ],
+          [
+            "s3",
+            54
+          ],
+          [
+            "s4",
+            26
+          ],
+          [
+            "s5",
+            47
+          ],
+          [
+            "s6",
+            35
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 231,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            22
+          ],
+          [
+            "s1",
+            16
+          ],
+          [
+            "s2",
+            31
+          ],
+          [
+            "s3",
+            54
+          ],
+          [
+            "s4",
+            26
+          ],
+          [
+            "s5",
+            47
+          ],
+          [
+            "s6",
+            35
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GAA",
+            "GGATCNG",
+            "NT",
+            "NACAGG"
+          ],
+          [
+            "CTGGG",
+            "TC",
+            "AAGGAA"
+          ],
+          [
+            "ANTATCN",
+            "TCCACACTA",
+            "GCNTTATAGATA"
+          ],
+          [
+            "ANCNNCAATTN",
+            "CATGAA",
+            "CCANGTCCACN",
+            "AAACTNGGCCCC",
+            "CA",
+            "TNCTAC"
+          ],
+          [
+            "GANAAGGCCTAC",
+            "CNAN",
+            "AAAANAC"
+          ],
+          [
+            "NGTTTTTAA",
+            "NTTGTGTAGGG",
+            "CACTCTAGAAGN",
+            "CCANTGTTNGT"
+          ],
+          [
+            "GTCA",
+            "NANCNACTNGT",
+            "NNCACCNAAA",
+            "AGACGC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 7,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-08",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            8
+          ],
+          [
+            "s1",
+            30
+          ],
+          [
+            "s2",
+            38
+          ],
+          [
+            "s3",
+            10
+          ],
+          [
+            "s4",
+            28
+          ],
+          [
+            "s5",
+            32
+          ],
+          [
+            "s6",
+            11
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 157,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            8
+          ],
+          [
+            "s1",
+            30
+          ],
+          [
+            "s2",
+            38
+          ],
+          [
+            "s3",
+            10
+          ],
+          [
+            "s4",
+            28
+          ],
+          [
+            "s5",
+            32
+          ],
+          [
+            "s6",
+            11
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NG",
+            "TCCA"
+          ],
+          [
+            "GTNTANGAGGC",
+            "TTTTAANCCA",
+            "TGNA",
+            "G"
+          ],
+          [
+            "GNTGGCNNAAG",
+            "C",
+            "NTTNAGGG",
+            "NCCCTCGGGG",
+            "CTC"
+          ],
+          [
+            "CCGTNAGNC"
+          ],
+          [
+            "TTTC",
+            "CGCAACTCGCG",
+            "NNAGCNCAAC"
+          ],
+          [
+            "CGCGCNN",
+            "NNGGCTAGACTC",
+            "CAA",
+            "GNTTTA"
+          ],
+          [
+            "GGGTAGGAAT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 7,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-09",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            30
+          ],
+          [
+            "s1",
+            7
+          ],
+          [
+            "s2",
+            12
+          ],
+          [
+            "s3",
+            20
+          ],
+          [
+            "s4",
+            36
+          ],
+          [
+            "s5",
+            51
+          ],
+          [
+            "s6",
+            43
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 199,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            30
+          ],
+          [
+            "s1",
+            7
+          ],
+          [
+            "s2",
+            12
+          ],
+          [
+            "s3",
+            20
+          ],
+          [
+            "s4",
+            36
+          ],
+          [
+            "s5",
+            51
+          ],
+          [
+            "s6",
+            43
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NGCTGNTAAT",
+            "TC",
+            "AGTA",
+            "TTCNTNNTNA"
+          ],
+          [
+            "G",
+            "GCCG"
+          ],
+          [
+            "GTNCCAANTNG"
+          ],
+          [
+            "GAAA",
+            "GGCTANTNNGCA",
+            "A"
+          ],
+          [
+            "CCATTNCN",
+            "TAGGGNC",
+            "NAGGAT",
+            "GTTTNCCACGG"
+          ],
+          [
+            "TNNCNAACAGT",
+            "ACGNNANA",
+            "CAAGAA",
+            "CTGGNN",
+            "TAA",
+            "GAATCNGTTTG"
+          ],
+          [
+            "TCAACAA",
+            "ATATATATGCTA",
+            "NCTGTNAT",
+            "GATCT",
+            "GGGNGT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 7,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-10",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            49
+          ],
+          [
+            "s2",
+            41
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 101,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            49
+          ],
+          [
+            "s2",
+            41
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GCTCCCGTAC"
+          ],
+          [
+            "GTGNGN",
+            "CTGNGGNGTN",
+            "GCCATAGCNTC",
+            "TTAACTTAGC",
+            "NCG",
+            "TCT"
+          ],
+          [
+            "AT",
+            "CNTTANGG",
+            "CTGTGGCAGTT",
+            "GGACAGA",
+            "GGNACNTN"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-11",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            28
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            8
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 69,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            28
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            8
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TGGTN",
+            "NATT",
+            "NGNATGC",
+            "CGTATAGG"
+          ],
+          [
+            "CG",
+            "CTGGACAA",
+            "CCNNTACAN",
+            "ATGTTTCCGC"
+          ],
+          [
+            "CTCTCAN"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-12",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            41
+          ],
+          [
+            "s1",
+            16
+          ],
+          [
+            "s2",
+            18
+          ],
+          [
+            "s3",
+            6
+          ],
+          [
+            "s4",
+            23
+          ],
+          [
+            "s5",
+            45
+          ],
+          [
+            "s6",
+            36
+          ],
+          [
+            "s7",
+            7
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 192,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            41
+          ],
+          [
+            "s1",
+            16
+          ],
+          [
+            "s2",
+            18
+          ],
+          [
+            "s3",
+            6
+          ],
+          [
+            "s4",
+            23
+          ],
+          [
+            "s5",
+            45
+          ],
+          [
+            "s6",
+            36
+          ],
+          [
+            "s7",
+            7
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "AN",
+            "NAAN",
+            "ATGCTN",
+            "NNCACCGCC",
+            "AACTGTACG",
+            "TACCN"
+          ],
+          [
+            "AG",
+            "CTTGCGNCNCNG"
+          ],
+          [
+            "GCCAAT",
+            "ACAGTACTCT"
+          ],
+          [
+            "AGG",
+            "T"
+          ],
+          [
+            "TGCTCGAGGANA",
+            "GTACAACAT"
+          ],
+          [
+            "GNGNNTGAN",
+            "NGTTTACC",
+            "CCCG",
+            "CCTTTAA",
+            "AGGCACA",
+            "CATT"
+          ],
+          [
+            "GGGCT",
+            "CANCNG",
+            "TNCGANAGGGT",
+            "NCGGNCT",
+            "NG"
+          ],
+          [
+            "NCAAGC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 8,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-13",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            16
+          ],
+          [
+            "s1",
+            27
+          ],
+          [
+            "s2",
+            24
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 67,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            16
+          ],
+          [
+            "s1",
+            27
+          ],
+          [
+            "s2",
+            24
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CAGAC",
+            "NTGNTGAAG"
+          ],
+          [
+            "GT",
+            "GTATGGNCT",
+            "ATT",
+            "GGCCNCTTG"
+          ],
+          [
+            "TAGCAAGTAC",
+            "AGNANTGGTNCA"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-14",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            32
+          ],
+          [
+            "s1",
+            8
+          ],
+          [
+            "s2",
+            4
+          ],
+          [
+            "s3",
+            4
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 48,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            32
+          ],
+          [
+            "s1",
+            8
+          ],
+          [
+            "s2",
+            4
+          ],
+          [
+            "s3",
+            4
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GT",
+            "NNTNT",
+            "TATTATGTTTNA",
+            "CCANGTNNG"
+          ],
+          [
+            "N",
+            "CCGGT"
+          ],
+          [
+            "GTT"
+          ],
+          [
+            "CTA"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 4,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-15",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            44
+          ],
+          [
+            "s1",
+            61
+          ],
+          [
+            "s2",
+            17
+          ],
+          [
+            "s3",
+            10
+          ],
+          [
+            "s4",
+            53
+          ],
+          [
+            "s5",
+            54
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 239,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            44
+          ],
+          [
+            "s1",
+            61
+          ],
+          [
+            "s2",
+            17
+          ],
+          [
+            "s3",
+            10
+          ],
+          [
+            "s4",
+            53
+          ],
+          [
+            "s5",
+            54
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "N",
+            "ANAGCCGNC",
+            "CCTTTNATCA",
+            "CTTCNCANCG",
+            "NGA",
+            "GCTCG"
+          ],
+          [
+            "CGGN",
+            "AAGCGGNTAGG",
+            "ATACGGGT",
+            "ACGAATACGGGC",
+            "NCGTGNTN",
+            "AATGNANGGAGA"
+          ],
+          [
+            "TTCGNC",
+            "TTTATGTCT"
+          ],
+          [
+            "GCCGCGTGG"
+          ],
+          [
+            "AGNNTNCNTNAT",
+            "TCAC",
+            "TGGGTCNATC",
+            "CTCCGCNNTGNG",
+            "CGANGGANTC"
+          ],
+          [
+            "TAGATAT",
+            "TAAN",
+            "NAGCANTTG",
+            "GTGNCAAGTCNC",
+            "GATCGACAG",
+            "NAGTCTT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 6,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-16",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            37
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            7
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 77,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            37
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            7
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "AACGTG",
+            "TTAGCG",
+            "ACA",
+            "CAAGCNGA",
+            "CTTCNGANA"
+          ],
+          [
+            "CNNNGAN",
+            "AGCTGGCGTCG",
+            "GTNNGATANATC"
+          ],
+          [
+            "AAGCNG"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-17",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            38
+          ],
+          [
+            "s1",
+            8
+          ],
+          [
+            "s2",
+            40
+          ],
+          [
+            "s3",
+            26
+          ],
+          [
+            "s4",
+            25
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 137,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            38
+          ],
+          [
+            "s1",
+            8
+          ],
+          [
+            "s2",
+            40
+          ],
+          [
+            "s3",
+            26
+          ],
+          [
+            "s4",
+            25
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GAGCATG",
+            "CCCNAN",
+            "ACTA",
+            "AAGCNTT",
+            "CATATCTNA"
+          ],
+          [
+            "TATGCNC"
+          ],
+          [
+            "CCAAGNA",
+            "ACAACN",
+            "TN",
+            "TNCTT",
+            "TAGGGG",
+            "CCTGCCAT"
+          ],
+          [
+            "NTATNTT",
+            "GCCATTGNCC",
+            "TAAAGA"
+          ],
+          [
+            "TGNTNCC",
+            "C",
+            "CGTTATTAAATG",
+            "G"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-18",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            28
+          ],
+          [
+            "s1",
+            56
+          ],
+          [
+            "s2",
+            39
+          ],
+          [
+            "s3",
+            20
+          ],
+          [
+            "s4",
+            18
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 161,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            28
+          ],
+          [
+            "s1",
+            56
+          ],
+          [
+            "s2",
+            39
+          ],
+          [
+            "s3",
+            20
+          ],
+          [
+            "s4",
+            18
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NAAG",
+            "GATCNACGGGC",
+            "G",
+            "GTTAAGAG"
+          ],
+          [
+            "ATTNTNA",
+            "CTCACGTGCT",
+            "CCCAG",
+            "TCGACCGCAGNG",
+            "ANANTTTNTA",
+            "CACANN"
+          ],
+          [
+            "AATAG",
+            "NCNNGNCCC",
+            "GGACCTTTC",
+            "AATTC",
+            "GGGTTG"
+          ],
+          [
+            "CN",
+            "CGNG",
+            "CCCTCAACNTT"
+          ],
+          [
+            "TCCTANCNAANT",
+            "NGNG"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-19",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            36
+          ],
+          [
+            "s1",
+            34
+          ],
+          [
+            "s2",
+            8
+          ],
+          [
+            "s3",
+            38
+          ],
+          [
+            "s4",
+            23
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 139,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            36
+          ],
+          [
+            "s1",
+            34
+          ],
+          [
+            "s2",
+            8
+          ],
+          [
+            "s3",
+            38
+          ],
+          [
+            "s4",
+            23
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "ATN",
+            "CNTA",
+            "GTNTATT",
+            "TAGCA",
+            "GATGATCGANCN"
+          ],
+          [
+            "CNNNGGTACGC",
+            "GGCNGCCAAA",
+            "CTTCGTGCTN"
+          ],
+          [
+            "NTCGGTG"
+          ],
+          [
+            "TTGNTTCAAGN",
+            "ATG",
+            "ANCGATN",
+            "GGGG",
+            "CGGATC",
+            "G"
+          ],
+          [
+            "NGTNC",
+            "CTNG",
+            "AGAGGNCTA",
+            "G"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-20",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            13
+          ],
+          [
+            "s1",
+            37
+          ],
+          [
+            "s2",
+            17
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 67,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            13
+          ],
+          [
+            "s1",
+            37
+          ],
+          [
+            "s2",
+            17
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CGAA",
+            "GA",
+            "CCTC"
+          ],
+          [
+            "CNCGNN",
+            "TTNAGTTTAG",
+            "GCATN",
+            "AA",
+            "ACACNTAGG"
+          ],
+          [
+            "TGTTTACTCGCA",
+            "T",
+            "T"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-21",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            54
+          ],
+          [
+            "s2",
+            29
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 107,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            54
+          ],
+          [
+            "s2",
+            29
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NATTGTAACAGT",
+            "NNGGGGAG",
+            "C"
+          ],
+          [
+            "TGTC",
+            "CCCGTNGACG",
+            "NTGGNNTGGGN",
+            "GTTA",
+            "GCCATCNGCGC",
+            "ACGCCATC"
+          ],
+          [
+            "TA",
+            "TGCNACATCGA",
+            "ATCAN",
+            "NAGTANA"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-22",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            21
+          ],
+          [
+            "s1",
+            13
+          ],
+          [
+            "s2",
+            28
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 62,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            21
+          ],
+          [
+            "s1",
+            13
+          ],
+          [
+            "s2",
+            28
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TCAGACT",
+            "NCTACACNT",
+            "GG"
+          ],
+          [
+            "AGCAGTNCGTAA"
+          ],
+          [
+            "GG",
+            "NTC",
+            "ANATGG",
+            "ANAC",
+            "CGCNACTC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-23",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            23
+          ],
+          [
+            "s1",
+            2
+          ],
+          [
+            "s2",
+            36
+          ],
+          [
+            "s3",
+            27
+          ],
+          [
+            "s4",
+            28
+          ],
+          [
+            "s5",
+            14
+          ],
+          [
+            "s6",
+            36
+          ],
+          [
+            "s7",
+            10
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 176,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            23
+          ],
+          [
+            "s1",
+            2
+          ],
+          [
+            "s2",
+            36
+          ],
+          [
+            "s3",
+            27
+          ],
+          [
+            "s4",
+            28
+          ],
+          [
+            "s5",
+            14
+          ],
+          [
+            "s6",
+            36
+          ],
+          [
+            "s7",
+            10
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TTAGCT",
+            "ACG",
+            "T",
+            "NANCCCGTT"
+          ],
+          [
+            "C"
+          ],
+          [
+            "TNCA",
+            "NCTGCGT",
+            "G",
+            "GTG",
+            "TCNTCCNA",
+            "NAGTNAC"
+          ],
+          [
+            "GNGCTATACNTT",
+            "GTCACAG",
+            "ATACT"
+          ],
+          [
+            "GACCCA",
+            "CTTGNACT",
+            "CCTGGTCAGTT"
+          ],
+          [
+            "AG",
+            "TCGCCN",
+            "NNA"
+          ],
+          [
+            "NTCCG",
+            "TNNCGAACNTT",
+            "TTT",
+            "NCATCT",
+            "TGTCCC"
+          ],
+          [
+            "TN",
+            "NGTACG"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 8,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-24",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            45
+          ],
+          [
+            "s2",
+            38
+          ],
+          [
+            "s3",
+            34
+          ],
+          [
+            "s4",
+            6
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 147,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            45
+          ],
+          [
+            "s2",
+            38
+          ],
+          [
+            "s3",
+            34
+          ],
+          [
+            "s4",
+            6
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CCNGNGAG",
+            "GTCTANAACCN",
+            "GG"
+          ],
+          [
+            "TGNTGTANNCC",
+            "GCTTA",
+            "T",
+            "GCTNG",
+            "NGGAC",
+            "GAGTAAAGANCA"
+          ],
+          [
+            "GAN",
+            "GATNNGTNGGG",
+            "CGCCGGGAGN",
+            "NAGAATATNT"
+          ],
+          [
+            "NTATAAAC",
+            "NGGNNCCATTTN",
+            "AGCNCCGNGCT"
+          ],
+          [
+            "GNACN"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-25",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            27
+          ],
+          [
+            "s1",
+            45
+          ],
+          [
+            "s2",
+            42
+          ],
+          [
+            "s3",
+            31
+          ],
+          [
+            "s4",
+            28
+          ],
+          [
+            "s5",
+            18
+          ],
+          [
+            "s6",
+            31
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 222,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            27
+          ],
+          [
+            "s1",
+            45
+          ],
+          [
+            "s2",
+            42
+          ],
+          [
+            "s3",
+            31
+          ],
+          [
+            "s4",
+            28
+          ],
+          [
+            "s5",
+            18
+          ],
+          [
+            "s6",
+            31
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "AGNAC",
+            "GC",
+            "NTNA",
+            "GTTTGA",
+            "ACCTG"
+          ],
+          [
+            "ATGGTG",
+            "CATTNNACA",
+            "CNGNANNAGTN",
+            "T",
+            "TC",
+            "TACAAGNTTT"
+          ],
+          [
+            "GCNCNACTAT",
+            "TATNGACCGC",
+            "AGTGNCNCATCC",
+            "CNCACG"
+          ],
+          [
+            "AGTNTCCTNGTT",
+            "TT",
+            "GTGAT",
+            "TCATAAAC"
+          ],
+          [
+            "GCAA",
+            "GTCCAACGG",
+            "ATTTACG",
+            "TTGT"
+          ],
+          [
+            "NNANAN",
+            "AT",
+            "TGCG",
+            "TG"
+          ],
+          [
+            "GTTAAC",
+            "AGACCCAAAG",
+            "C",
+            "NGAGNNNCNC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 7,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-26",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            26
+          ],
+          [
+            "s2",
+            25
+          ],
+          [
+            "s3",
+            7
+          ],
+          [
+            "s4",
+            13
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 81,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            26
+          ],
+          [
+            "s2",
+            25
+          ],
+          [
+            "s3",
+            7
+          ],
+          [
+            "s4",
+            13
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GCCGCGTGG"
+          ],
+          [
+            "CTA",
+            "GATAATCNTCN",
+            "NNNACGGGG"
+          ],
+          [
+            "NTACNTAGC",
+            "TCGNGG",
+            "GTGGGGT"
+          ],
+          [
+            "CCCACA"
+          ],
+          [
+            "CATGN",
+            "CCNGTG"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-27",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            41
+          ],
+          [
+            "s1",
+            19
+          ],
+          [
+            "s2",
+            22
+          ],
+          [
+            "s3",
+            14
+          ],
+          [
+            "s4",
+            19
+          ],
+          [
+            "s5",
+            20
+          ],
+          [
+            "s6",
+            26
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 161,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            41
+          ],
+          [
+            "s1",
+            19
+          ],
+          [
+            "s2",
+            22
+          ],
+          [
+            "s3",
+            14
+          ],
+          [
+            "s4",
+            19
+          ],
+          [
+            "s5",
+            20
+          ],
+          [
+            "s6",
+            26
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TNCCCATAC",
+            "GGCGCGCACG",
+            "TAAANNA",
+            "AC",
+            "GA",
+            "TNTNT"
+          ],
+          [
+            "NTTACGNGNGG",
+            "C",
+            "NGNT"
+          ],
+          [
+            "TNA",
+            "CTACANCA",
+            "TGNGTCGG"
+          ],
+          [
+            "TAGGAAAAN",
+            "CAC"
+          ],
+          [
+            "CTTTGAC",
+            "ATNATATNCA"
+          ],
+          [
+            "TT",
+            "A",
+            "NTGG",
+            "GNAAACTCT"
+          ],
+          [
+            "NATGCT",
+            "ACA",
+            "GGNGGACGGGTG",
+            "C"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 7,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-28",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            36
+          ],
+          [
+            "s1",
+            22
+          ],
+          [
+            "s2",
+            2
+          ],
+          [
+            "s3",
+            12
+          ],
+          [
+            "s4",
+            21
+          ],
+          [
+            "s5",
+            40
+          ],
+          [
+            "s6",
+            28
+          ],
+          [
+            "s7",
+            27
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 188,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            36
+          ],
+          [
+            "s1",
+            22
+          ],
+          [
+            "s2",
+            2
+          ],
+          [
+            "s3",
+            12
+          ],
+          [
+            "s4",
+            21
+          ],
+          [
+            "s5",
+            40
+          ],
+          [
+            "s6",
+            28
+          ],
+          [
+            "s7",
+            27
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TGC",
+            "CNTTTC",
+            "G",
+            "NAC",
+            "TANCTNAA",
+            "TTNCNCACG"
+          ],
+          [
+            "CGACNANACCT",
+            "NTGTAGACT"
+          ],
+          [
+            "G"
+          ],
+          [
+            "TNTNCCGNNCA"
+          ],
+          [
+            "GATTGAT",
+            "ACGACCGCTTTT"
+          ],
+          [
+            "AGGG",
+            "A",
+            "GCTANCTCAC",
+            "NGNAGCCANCCT",
+            "NA",
+            "CAGCC"
+          ],
+          [
+            "AGTCTT",
+            "GAAAAGGT",
+            "AAN",
+            "CTATTGA"
+          ],
+          [
+            "TA",
+            "GANTTTAN",
+            "G",
+            "GTGGNACGGGCT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 8,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-29",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            33
+          ],
+          [
+            "s1",
+            39
+          ],
+          [
+            "s2",
+            49
+          ],
+          [
+            "s3",
+            41
+          ],
+          [
+            "s4",
+            12
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 174,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            33
+          ],
+          [
+            "s1",
+            39
+          ],
+          [
+            "s2",
+            49
+          ],
+          [
+            "s3",
+            41
+          ],
+          [
+            "s4",
+            12
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TTTA",
+            "GTG",
+            "TG",
+            "TG",
+            "GTCNA",
+            "NGANTNATTTA"
+          ],
+          [
+            "CCCNATNT",
+            "GCCAA",
+            "GATAAAGGNNG",
+            "NTGTA",
+            "CTCTC"
+          ],
+          [
+            "TANTTCNTCT",
+            "GCACTCGGG",
+            "CCAG",
+            "GTCTNGGGN",
+            "TCCNANGGNCTA"
+          ],
+          [
+            "GNNTCCA",
+            "GTACT",
+            "ACNNTTACAN",
+            "TCGTTG",
+            "ACACANTA"
+          ],
+          [
+            "TTCCTNGNCAT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-30",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            36
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            15
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 84,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            36
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            15
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CGAAGTNCAG",
+            "ACAACAG",
+            "GTTA",
+            "AGNCACCCGAG"
+          ],
+          [
+            "GGTCTNTATGG",
+            "AACCNGTCGCAG",
+            "NAGCCGC"
+          ],
+          [
+            "T",
+            "A",
+            "AG",
+            "CANNACC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-31",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            22
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            12
+          ],
+          [
+            "s3",
+            38
+          ],
+          [
+            "s4",
+            21
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 126,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            22
+          ],
+          [
+            "s1",
+            33
+          ],
+          [
+            "s2",
+            12
+          ],
+          [
+            "s3",
+            38
+          ],
+          [
+            "s4",
+            21
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NT",
+            "GGGTAGCCGG",
+            "NANCAAT"
+          ],
+          [
+            "NAACNGAGNC",
+            "G",
+            "CCAGTNCGNCT",
+            "G",
+            "TGCNT"
+          ],
+          [
+            "ACGGTTACTGC"
+          ],
+          [
+            "TNTTAGG",
+            "NAAAANG",
+            "GCGCCCA",
+            "A",
+            "TGNTNGANNCC"
+          ],
+          [
+            "TNTTATGANACC",
+            "TAAGTAC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-32",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            39
+          ],
+          [
+            "s1",
+            8
+          ],
+          [
+            "s2",
+            8
+          ],
+          [
+            "s3",
+            20
+          ],
+          [
+            "s4",
+            28
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 103,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            39
+          ],
+          [
+            "s1",
+            8
+          ],
+          [
+            "s2",
+            8
+          ],
+          [
+            "s3",
+            20
+          ],
+          [
+            "s4",
+            28
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "TCGTGTGNCTAC",
+            "T",
+            "TCNAN",
+            "ACAGGGGGTTG",
+            "CNGNA"
+          ],
+          [
+            "GGTACTN"
+          ],
+          [
+            "A",
+            "GGAGG"
+          ],
+          [
+            "TCNNANTCGGTT",
+            "NTGGAA"
+          ],
+          [
+            "C",
+            "AGCAAACCACAT",
+            "GCANGNCCNACC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-33",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            14
+          ],
+          [
+            "s1",
+            25
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            30
+          ],
+          [
+            "s4",
+            15
+          ],
+          [
+            "s5",
+            50
+          ],
+          [
+            "s6",
+            38
+          ],
+          [
+            "s7",
+            17
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 216,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            14
+          ],
+          [
+            "s1",
+            25
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            30
+          ],
+          [
+            "s4",
+            15
+          ],
+          [
+            "s5",
+            50
+          ],
+          [
+            "s6",
+            38
+          ],
+          [
+            "s7",
+            17
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "T",
+            "NCAGCA",
+            "CAGT"
+          ],
+          [
+            "NGTGTNCN",
+            "TGCTCANAG",
+            "NANCG"
+          ],
+          [
+            "AACTGGNT",
+            "ANAAAGGNN",
+            "ANCGCTG"
+          ],
+          [
+            "CNAGT",
+            "ATACT",
+            "CAGNN",
+            "C",
+            "GNNAGTTGA"
+          ],
+          [
+            "TNGNNTG",
+            "GTTAGT"
+          ],
+          [
+            "GNG",
+            "CAGCCAGAAT",
+            "CAGAANAAGC",
+            "TTTAGTTCT",
+            "AT",
+            "CACAAGNTCG"
+          ],
+          [
+            "TNAN",
+            "CNGTCNCNATCC",
+            "GACCGTTTANG",
+            "ACNCTNT"
+          ],
+          [
+            "NAAATTAATNC",
+            "TNTA"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 8,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-34",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            47
+          ],
+          [
+            "s2",
+            10
+          ],
+          [
+            "s3",
+            6
+          ],
+          [
+            "s4",
+            25
+          ],
+          [
+            "s5",
+            7
+          ],
+          [
+            "s6",
+            48
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 153,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            47
+          ],
+          [
+            "s2",
+            10
+          ],
+          [
+            "s3",
+            6
+          ],
+          [
+            "s4",
+            25
+          ],
+          [
+            "s5",
+            7
+          ],
+          [
+            "s6",
+            48
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GCTAGGNTG"
+          ],
+          [
+            "CCANAACCCTA",
+            "TNNA",
+            "CGCACCA",
+            "TANTANCT",
+            "ACTNNGCTTNGC"
+          ],
+          [
+            "AAAG",
+            "ACCG"
+          ],
+          [
+            "AGATC"
+          ],
+          [
+            "CCGCANGT",
+            "TGTNGGNGC",
+            "C",
+            "AGC"
+          ],
+          [
+            "CGTCTT"
+          ],
+          [
+            "TAGTTCCN",
+            "ATNCTGAGCC",
+            "TCTCTGG",
+            "CGCGCGNTC",
+            "TGG",
+            "GACCA"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 7,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-35",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            9
+          ],
+          [
+            "s1",
+            22
+          ],
+          [
+            "s2",
+            23
+          ],
+          [
+            "s3",
+            37
+          ],
+          [
+            "s4",
+            32
+          ],
+          [
+            "s5",
+            17
+          ],
+          [
+            "s6",
+            17
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 157,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            9
+          ],
+          [
+            "s1",
+            22
+          ],
+          [
+            "s2",
+            23
+          ],
+          [
+            "s3",
+            37
+          ],
+          [
+            "s4",
+            32
+          ],
+          [
+            "s5",
+            17
+          ],
+          [
+            "s6",
+            17
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GACTGGCC"
+          ],
+          [
+            "TGNGTTA",
+            "NATTCATTAA",
+            "CC"
+          ],
+          [
+            "AAACN",
+            "CCTGCCATGG",
+            "NGTCN"
+          ],
+          [
+            "NANGTAA",
+            "TTATTTNCTTCG",
+            "NTTCT",
+            "CCTCCNNAT"
+          ],
+          [
+            "AAGNCAA",
+            "GCNGA",
+            "AGTN",
+            "TGCGGN",
+            "AGNNC"
+          ],
+          [
+            "GGGCTGT",
+            "ATCGACGT"
+          ],
+          [
+            "NCA",
+            "AGATTGCGTGGT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 7,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-36",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            12
+          ],
+          [
+            "s1",
+            12
+          ],
+          [
+            "s2",
+            51
+          ],
+          [
+            "s3",
+            13
+          ],
+          [
+            "s4",
+            22
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 110,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            12
+          ],
+          [
+            "s1",
+            12
+          ],
+          [
+            "s2",
+            51
+          ],
+          [
+            "s3",
+            13
+          ],
+          [
+            "s4",
+            22
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NGN",
+            "C",
+            "TGNTG"
+          ],
+          [
+            "TTGGC",
+            "GNGTT"
+          ],
+          [
+            "AGTAG",
+            "AGCCTTTTAAN",
+            "TTACCTNNTGN",
+            "TATCCANCGG",
+            "GTACTAACA"
+          ],
+          [
+            "GCCNGGNCGGAA"
+          ],
+          [
+            "NTCNGC",
+            "GA",
+            "CN",
+            "CA",
+            "CTAAT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-37",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            37
+          ],
+          [
+            "s1",
+            47
+          ],
+          [
+            "s2",
+            23
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 107,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            37
+          ],
+          [
+            "s1",
+            47
+          ],
+          [
+            "s2",
+            23
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CGANG",
+            "ATCTCCTCACAT",
+            "AT",
+            "GGTGCCAA",
+            "CGGNG"
+          ],
+          [
+            "CACCGGTCNGGG",
+            "GATAGTTN",
+            "NGG",
+            "AGCC",
+            "CAAAGTATN",
+            "TNATC"
+          ],
+          [
+            "TTATTCGTTG",
+            "NCTGATG",
+            "NGA"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-38",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            54
+          ],
+          [
+            "s1",
+            30
+          ],
+          [
+            "s2",
+            17
+          ],
+          [
+            "s3",
+            41
+          ],
+          [
+            "s4",
+            17
+          ],
+          [
+            "s5",
+            31
+          ],
+          [
+            "s6",
+            5
+          ],
+          [
+            "s7",
+            9
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 204,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            54
+          ],
+          [
+            "s1",
+            30
+          ],
+          [
+            "s2",
+            17
+          ],
+          [
+            "s3",
+            41
+          ],
+          [
+            "s4",
+            17
+          ],
+          [
+            "s5",
+            31
+          ],
+          [
+            "s6",
+            5
+          ],
+          [
+            "s7",
+            9
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CTAA",
+            "TGAACATAGGAT",
+            "NGNAAACGGGCG",
+            "NCNCT",
+            "GGGC",
+            "CTTCCATTCTN"
+          ],
+          [
+            "CCNAA",
+            "GACAACGGATG",
+            "AGAGNTCCAAG"
+          ],
+          [
+            "TAACTA",
+            "TGGGTGTCG"
+          ],
+          [
+            "TGGGANNTCTG",
+            "CAG",
+            "CATNCG",
+            "ATGGNGAT",
+            "GATCCGAT"
+          ],
+          [
+            "TTTT",
+            "ATNCNACTNTA"
+          ],
+          [
+            "CCTTGGAACTTT",
+            "N",
+            "TNTATGAAGA",
+            "ATGT"
+          ],
+          [
+            "GCNG"
+          ],
+          [
+            "CT",
+            "GGT",
+            "T"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 8,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-39",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            13
+          ],
+          [
+            "s1",
+            52
+          ],
+          [
+            "s2",
+            20
+          ],
+          [
+            "s3",
+            42
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 127,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            13
+          ],
+          [
+            "s1",
+            52
+          ],
+          [
+            "s2",
+            20
+          ],
+          [
+            "s3",
+            42
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "CCTNTNAGGAGA"
+          ],
+          [
+            "ATNGAGATTCN",
+            "NNAN",
+            "AGNAATTA",
+            "CCAATATGCAGN",
+            "AGTCGAGNTGTT"
+          ],
+          [
+            "ANT",
+            "NCACAGCG",
+            "ATGCTN"
+          ],
+          [
+            "CCCNAT",
+            "GTT",
+            "GANCTANCANTN",
+            "CGN",
+            "AGNTAG",
+            "NGNATC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20260811,
+        "source_count": 4,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-ten-00",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            9
+          ],
+          [
+            "s2",
+            22
+          ],
+          [
+            "s3",
+            46
+          ],
+          [
+            "s4",
+            32
+          ],
+          [
+            "s5",
+            38
+          ],
+          [
+            "s6",
+            18
+          ],
+          [
+            "s7",
+            36
+          ],
+          [
+            "s8",
+            45
+          ],
+          [
+            "s9",
+            53
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 309,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            9
+          ],
+          [
+            "s2",
+            22
+          ],
+          [
+            "s3",
+            46
+          ],
+          [
+            "s4",
+            32
+          ],
+          [
+            "s5",
+            38
+          ],
+          [
+            "s6",
+            18
+          ],
+          [
+            "s7",
+            36
+          ],
+          [
+            "s8",
+            45
+          ],
+          [
+            "s9",
+            53
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "ACNTATGGN"
+          ],
+          [
+            "NATGNCNT"
+          ],
+          [
+            "TTACAGTC",
+            "GACGC",
+            "CTCNTA"
+          ],
+          [
+            "GGACAC",
+            "GNT",
+            "AGAACTG",
+            "NNTGGANTATNN",
+            "CCTGC",
+            "CGTTCAT"
+          ],
+          [
+            "CCNG",
+            "GNTATNCAC",
+            "CNNNTN",
+            "G",
+            "NCGCNCG"
+          ],
+          [
+            "ANNGNCNCGGT",
+            "TANTN",
+            "ANCGNATGCGGN",
+            "TAANTA"
+          ],
+          [
+            "TTGCGCG",
+            "TAANANNAN"
+          ],
+          [
+            "TNTTCGTCT",
+            "AN",
+            "GGNGATAAGCA",
+            "GAAGNG",
+            "NNG"
+          ],
+          [
+            "GANCNGA",
+            "TA",
+            "AACCTACTCCCC",
+            "NNNTGCGG",
+            "G",
+            "GACTCTTTC"
+          ],
+          [
+            "NANCTATT",
+            "GATTAAGNNNCA",
+            "GCAAGGTNANG",
+            "N",
+            "NCGACA",
+            "AGGGNCTTT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20261811,
+        "source_count": 10,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-ten-01",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            34
+          ],
+          [
+            "s1",
+            62
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            45
+          ],
+          [
+            "s4",
+            25
+          ],
+          [
+            "s5",
+            41
+          ],
+          [
+            "s6",
+            37
+          ],
+          [
+            "s7",
+            47
+          ],
+          [
+            "s8",
+            58
+          ],
+          [
+            "s9",
+            28
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 404,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            34
+          ],
+          [
+            "s1",
+            62
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            45
+          ],
+          [
+            "s4",
+            25
+          ],
+          [
+            "s5",
+            41
+          ],
+          [
+            "s6",
+            37
+          ],
+          [
+            "s7",
+            47
+          ],
+          [
+            "s8",
+            58
+          ],
+          [
+            "s9",
+            28
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "N",
+            "AATCCT",
+            "GGCNTCGCC",
+            "TG",
+            "TATGTGGGCTG"
+          ],
+          [
+            "GAAGGCCAAC",
+            "ATANNTGAN",
+            "GNCCNTANNGA",
+            "TNCTNTACN",
+            "NANCNTC",
+            "TGAATATGTT"
+          ],
+          [
+            "NGANGTTTAG",
+            "TTCNC",
+            "GCGTGGATN"
+          ],
+          [
+            "AN",
+            "GG",
+            "TAGATAGGTAT",
+            "NTGGTGNA",
+            "NTCACGTCG",
+            "GCNNTGN"
+          ],
+          [
+            "TN",
+            "ACGTGNTG",
+            "A",
+            "ATTTCC",
+            "GCG"
+          ],
+          [
+            "CTCATNN",
+            "GANTC",
+            "ATAT",
+            "TCGTNG",
+            "AGG",
+            "NTGGCCATGT"
+          ],
+          [
+            "GTNCATG",
+            "CCNT",
+            "NAGCT",
+            "ACGNNCCTNG",
+            "NANTAC"
+          ],
+          [
+            "AGATANGGTC",
+            "GNAGGGAN",
+            "ACTA",
+            "TTT",
+            "AACC",
+            "GCGATCGCTCCG"
+          ],
+          [
+            "TANANNNA",
+            "GGTAGGATTCG",
+            "GGTNTGGGG",
+            "TGA",
+            "TANTGCAGC",
+            "CCNAATAGGGTC"
+          ],
+          [
+            "AACTNNGNCGNC",
+            "NC",
+            "GCCCT",
+            "GNGGC"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20261811,
+        "source_count": 10,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-ten-02",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            49
+          ],
+          [
+            "s2",
+            53
+          ],
+          [
+            "s3",
+            45
+          ],
+          [
+            "s4",
+            19
+          ],
+          [
+            "s5",
+            60
+          ],
+          [
+            "s6",
+            40
+          ],
+          [
+            "s7",
+            33
+          ],
+          [
+            "s8",
+            6
+          ],
+          [
+            "s9",
+            12
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 328,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            49
+          ],
+          [
+            "s2",
+            53
+          ],
+          [
+            "s3",
+            45
+          ],
+          [
+            "s4",
+            19
+          ],
+          [
+            "s5",
+            60
+          ],
+          [
+            "s6",
+            40
+          ],
+          [
+            "s7",
+            33
+          ],
+          [
+            "s8",
+            6
+          ],
+          [
+            "s9",
+            12
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "NCTACGGCGC"
+          ],
+          [
+            "ANGACGAANGC",
+            "GCCTAGAGG",
+            "GCANTAGNG",
+            "AGNTCCTA",
+            "TCNCNNT"
+          ],
+          [
+            "C",
+            "CCGTCNCGCCN",
+            "TATATT",
+            "CCNNCCNTTCTA",
+            "NTTATAACCN",
+            "GCACCAA"
+          ],
+          [
+            "ANCGCCGCG",
+            "CCCNCNTT",
+            "GTTCCNGAAC",
+            "NCNTTCT",
+            "AGCCTC"
+          ],
+          [
+            "CGT",
+            "TTTGCACCCNC",
+            "CC"
+          ],
+          [
+            "TGNNACTACATC",
+            "TACCTTN",
+            "NTAGG",
+            "AGTCGNTTA",
+            "CATCNCNATTN",
+            "ACANGNATCG"
+          ],
+          [
+            "CTAAATGTTANC",
+            "N",
+            "T",
+            "CNTAN",
+            "CCTGNCCACCNA",
+            "ATG"
+          ],
+          [
+            "CTANTAC",
+            "ACACANATGNN",
+            "GCCGTCATGAAG"
+          ],
+          [
+            "GTTAN"
+          ],
+          [
+            "NAGA",
+            "T",
+            "CATG"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20261811,
+        "source_count": 10,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "random-ten-03",
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            7
+          ],
+          [
+            "s1",
+            47
+          ],
+          [
+            "s2",
+            23
+          ],
+          [
+            "s3",
+            5
+          ],
+          [
+            "s4",
+            17
+          ],
+          [
+            "s5",
+            41
+          ],
+          [
+            "s6",
+            21
+          ],
+          [
+            "s7",
+            49
+          ],
+          [
+            "s8",
+            18
+          ],
+          [
+            "s9",
+            10
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 238,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            7
+          ],
+          [
+            "s1",
+            47
+          ],
+          [
+            "s2",
+            23
+          ],
+          [
+            "s3",
+            5
+          ],
+          [
+            "s4",
+            17
+          ],
+          [
+            "s5",
+            41
+          ],
+          [
+            "s6",
+            21
+          ],
+          [
+            "s7",
+            49
+          ],
+          [
+            "s8",
+            18
+          ],
+          [
+            "s9",
+            10
+          ]
+        ],
+        "reads_per_source": [
+          [
+            "GG",
+            "GGC"
+          ],
+          [
+            "GAATGCACC",
+            "CANACN",
+            "CTCAAG",
+            "ANANACAGGGT",
+            "GCGCGCGNTG"
+          ],
+          [
+            "CTTAGCTG",
+            "GTANAGAC",
+            "CNNN"
+          ],
+          [
+            "TAAT"
+          ],
+          [
+            "GA",
+            "NAGTTNANN",
+            "CAA"
+          ],
+          [
+            "TCNGTGTCTTNT",
+            "CAAGCCCAGA",
+            "NTNGNAGTAT",
+            "CNAGC"
+          ],
+          [
+            "GCCCGNNATCGG",
+            "GC",
+            "CTAA"
+          ],
+          [
+            "GCTCCG",
+            "CAANNNTT",
+            "TNGGGC",
+            "GGCCTGGAGNC",
+            "CTNGG",
+            "NTGCCGA"
+          ],
+          [
+            "TAA",
+            "GCACNACAC",
+            "CAC"
+          ],
+          [
+            "N",
+            "CNANACT"
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "seed": 20261811,
+        "source_count": 10,
+        "tied_rows_multiplicity_checked": 0
+      }
+    ],
+    "deterministic_cases": [
+      {
+        "case": "canonical-two-source",
+        "depth": 1,
+        "exact_rows_checked": 30,
+        "expected_totals": [
+          [
+            "A",
+            24
+          ],
+          [
+            "B",
+            24
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "A",
+            24
+          ],
+          [
+            "B",
+            24
+          ]
+        ],
+        "queries_checked": 0,
+        "query_mismatches": 0,
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 2,
+        "tied_rows_multiplicity_checked": 18
+      },
+      {
+        "case": "three-source-chain",
+        "depth": 2,
+        "exact_rows_checked": 57,
+        "expected_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            27
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 75,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            27
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 18
+      },
+      {
+        "case": "four-source-balanced",
+        "depth": 2,
+        "exact_rows_checked": 66,
+        "expected_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            27
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 102,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            27
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 4,
+        "tied_rows_multiplicity_checked": 36
+      },
+      {
+        "case": "four-source-unbalanced",
+        "depth": 3,
+        "exact_rows_checked": 110,
+        "expected_totals": [
+          [
+            "s0",
+            27
+          ],
+          [
+            "s1",
+            20
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            36
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 110,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "chain",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            27
+          ],
+          [
+            "s1",
+            20
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            36
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 4,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "five-source-balanced",
+        "depth": 3,
+        "exact_rows_checked": 108,
+        "expected_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            27
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            27
+          ],
+          [
+            "s4",
+            21
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 126,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            27
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            27
+          ],
+          [
+            "s4",
+            21
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 5,
+        "tied_rows_multiplicity_checked": 18
+      },
+      {
+        "case": "ten-source-balanced",
+        "depth": 4,
+        "exact_rows_checked": 230,
+        "expected_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            27
+          ],
+          [
+            "s4",
+            27
+          ],
+          [
+            "s5",
+            20
+          ],
+          [
+            "s6",
+            27
+          ],
+          [
+            "s7",
+            36
+          ],
+          [
+            "s8",
+            21
+          ],
+          [
+            "s9",
+            42
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "final_bwt_length": 275,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            27
+          ],
+          [
+            "s3",
+            27
+          ],
+          [
+            "s4",
+            27
+          ],
+          [
+            "s5",
+            20
+          ],
+          [
+            "s6",
+            27
+          ],
+          [
+            "s7",
+            36
+          ],
+          [
+            "s8",
+            21
+          ],
+          [
+            "s9",
+            42
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 10,
+        "tied_rows_multiplicity_checked": 45
+      }
+    ],
+    "edge_corpus": [
+      {
+        "case": "edge-unequal-sizes",
+        "depth": 2,
+        "exact_rows_checked": 39,
+        "expected_totals": [
+          [
+            "s0",
+            30
+          ],
+          [
+            "s1",
+            3
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            30
+          ],
+          [
+            "s1",
+            3
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-duplicates-in-A",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            18
+          ],
+          [
+            "s1",
+            6
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            18
+          ],
+          [
+            "s1",
+            6
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-duplicates-in-B",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            18
+          ],
+          [
+            "s2",
+            4
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            18
+          ],
+          [
+            "s2",
+            4
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-same-reads-both",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            11
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            11
+          ],
+          [
+            "s1",
+            11
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-all-identical",
+        "depth": 2,
+        "exact_rows_checked": 6,
+        "expected_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            10
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            10
+          ],
+          [
+            "s1",
+            10
+          ],
+          [
+            "s2",
+            6
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 20
+      },
+      {
+        "case": "edge-prefix-sharing",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            21
+          ],
+          [
+            "s1",
+            15
+          ],
+          [
+            "s2",
+            8
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            21
+          ],
+          [
+            "s1",
+            15
+          ],
+          [
+            "s2",
+            8
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-suffix-sharing",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            18
+          ],
+          [
+            "s1",
+            13
+          ],
+          [
+            "s2",
+            7
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            18
+          ],
+          [
+            "s1",
+            13
+          ],
+          [
+            "s2",
+            7
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-n-heavy",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            20
+          ],
+          [
+            "s1",
+            11
+          ],
+          [
+            "s2",
+            8
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            20
+          ],
+          [
+            "s1",
+            11
+          ],
+          [
+            "s2",
+            8
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-single-base",
+        "depth": 2,
+        "exact_rows_checked": 11,
+        "expected_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            6
+          ],
+          [
+            "s2",
+            3
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            6
+          ],
+          [
+            "s1",
+            6
+          ],
+          [
+            "s2",
+            3
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 4
+      },
+      {
+        "case": "edge-mixed-lengths",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            23
+          ],
+          [
+            "s1",
+            20
+          ],
+          [
+            "s2",
+            3
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            23
+          ],
+          [
+            "s1",
+            20
+          ],
+          [
+            "s2",
+            3
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-repeated-motifs",
+        "depth": 2,
+        "exact_rows_checked": 0,
+        "expected_totals": [
+          [
+            "s0",
+            25
+          ],
+          [
+            "s1",
+            22
+          ],
+          [
+            "s2",
+            10
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            25
+          ],
+          [
+            "s1",
+            22
+          ],
+          [
+            "s2",
+            10
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": false,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      },
+      {
+        "case": "edge-lexicographic-similar",
+        "depth": 2,
+        "exact_rows_checked": 55,
+        "expected_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            7
+          ]
+        ],
+        "extraction_mismatches": 0,
+        "joint_provenance_consistent": true,
+        "lf_recovered_multiset_matches": true,
+        "merge_tree": "balanced",
+        "mismatch_count": 0,
+        "mismatches": [],
+        "per_source_totals": [
+          [
+            "s0",
+            24
+          ],
+          [
+            "s1",
+            24
+          ],
+          [
+            "s2",
+            7
+          ]
+        ],
+        "reload_ok": true,
+        "rotation_oracle_applicable": true,
+        "source_count": 3,
+        "tied_rows_multiplicity_checked": 0
+      }
+    ],
+    "edge_mismatches": 0,
+    "explicit_ten_source_datasets": 4,
+    "feature1_compatibility": {
+      "queries_compared": 49,
+      "query_mismatches": 0,
+      "row_mismatches": 0,
+      "rows_compared": 48,
+      "source_ids": [
+        "A",
+        "B"
+      ],
+      "two_source_merged": true
+    },
+    "mismatch_count": 0,
+    "performance": {
+      "canonical_bytes_per_row": 23.29,
+      "canonical_extract_one_constituent_s": 0.0022,
+      "canonical_interleaves_bytes": 135,
+      "canonical_load_manifest_s": 0.0015,
+      "canonical_merged_package_bytes": 1781,
+      "canonical_provenance_json_bytes": 983,
+      "canonical_validate_s": 0.0019,
+      "ten_source_bwt_length": 275,
+      "ten_source_bytes_per_row": 29.34,
+      "ten_source_interleaves_bytes": 1277,
+      "ten_source_package_bytes": 8069,
+      "ten_source_provenance_json_bytes": 5874
+    },
+    "randomized_datasets": 40,
+    "seed": 20260811,
+    "source_counts_tested": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10
+    ],
+    "ten_source_fixture": {
+      "depth": 4,
+      "exact_rows_checked": 230,
+      "extraction_mismatches": 0,
+      "final_bwt_length": 275,
+      "per_source_totals": [
+        [
+          "s0",
+          24
+        ],
+        [
+          "s1",
+          24
+        ],
+        [
+          "s2",
+          27
+        ],
+        [
+          "s3",
+          27
+        ],
+        [
+          "s4",
+          27
+        ],
+        [
+          "s5",
+          20
+        ],
+        [
+          "s6",
+          27
+        ],
+        [
+          "s7",
+          36
+        ],
+        [
+          "s8",
+          21
+        ],
+        [
+          "s9",
+          42
+        ]
+      ],
+      "reload_ok": true,
+      "source_count": 10,
+      "tied_rows_multiplicity_checked": 45
+    },
+    "total_merges_real": 252
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 2: Persistent Multi-Source Provenance / Source Indexing",
+    "milestone": "enhanced-modern2-feature2-multi-source-provenance",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-2"
+  },
+  "starting_commit": "25102b4"
+}
