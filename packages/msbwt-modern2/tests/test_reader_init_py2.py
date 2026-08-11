@@ -186,7 +186,19 @@ class PureReaderInitTests(unittest.TestCase):
         return msbwt
 
     def _decode_rle_counts(self, path):
-        """Independent base-32 RLE decoder (no reader code)."""
+        """Independent base-32 RLE decoder (no reader code).
+
+        Digit order: the encoder writes the LEAST significant base-32
+        digit first (``ret[i] = ((delta & mask) << letterBits) + c`` then
+        ``delta /= numPower``, MUSCython/MSBWTGenCython.pyx with
+        letterBits=3, mask=31, numPower=32), so the first digit of a run
+        in the byte stream carries power 32**0 (the RLE reader
+        reconstructs with ``digit * powerMultiple`` where
+        ``powerMultiple *= numPower`` per following digit,
+        MUSCython/RLE_BWTCython.pyx).  The committed golden RLE payloads
+        contain only single-digit runs, so this ordering was not
+        exercised before the multi-digit regression test below.
+        """
         import numpy as np
         raw = np.load(path, "r")
         counts = [0] * 6
@@ -199,8 +211,8 @@ class PureReaderInitTests(unittest.TestCase):
             if sym != prev_sym:
                 if digits:
                     total = 0
-                    for d in digits:
-                        total = total * 32 + d
+                    for power, d in enumerate(digits):
+                        total += d * (32 ** power)
                     counts[prev_sym] += total
                     symbols.extend([prev_sym] * total)
                 digits = []
@@ -208,8 +220,8 @@ class PureReaderInitTests(unittest.TestCase):
             digits.append(digit)
         if digits:
             total = 0
-            for d in digits:
-                total = total * 32 + d
+            for power, d in enumerate(digits):
+                total += d * (32 ** power)
             counts[prev_sym] += total
             symbols.extend([prev_sym] * total)
         return counts, symbols
@@ -530,6 +542,71 @@ class PureReaderInitTests(unittest.TestCase):
                              for pos in dollar_positions]
         self.assertEqual(recovery, COLLECTION_RECOVERY)
         self.assertEqual(recovery, recovery_compiled)
+
+    # ------------------------------------------------------------------
+    # multi-digit RLE regression (Q1 audit hygiene)
+    # ------------------------------------------------------------------
+    def test_multidigit_rle_decode_matches_encoder_semantics(self):
+        """A run whose length needs multiple base-32 digits must decode as
+        LEAST-SIGNIFICANT-DIGIT-FIRST, matching the actual encoder
+        semantics
+
+            byte = ((delta & mask) << letterBits) + sym; delta /= numPower
+
+        (MUSCython/MSBWTGenCython.pyx: letterBits=3, mask=31, numPower=32,
+        base-32 digits) and the reader's decoder power ordering
+        (MUSCython/RLE_BWTCython.pyx: first digit * 32**0, then
+        powerMultiple *= numPower).  The committed golden RLE payloads
+        contain only single-digit runs (all run lengths <= 32), so they
+        cannot distinguish the two digit orders; this regression
+        independently derives the expected bytes from the encoder loop
+        above and the expected counts/symbols from the base-32 digit
+        decomposition.  (An MSB-first decode of the same bytes would
+        return 129 instead of 36 for the T run, 131 instead of 100 for
+        the C run, and 17345 instead of 2000 for the N run.)
+        """
+        import numpy as np
+        # (symbol index, run length) pairs; 36/100/129/2000 need 2-3
+        # base-32 digits (multi-digit), 3 and 1 stay single-digit.
+        runs = [(1, 3), (5, 36), (2, 100), (3, 129), (4, 2000), (5, 1)]
+        expected_counts = [0, 3, 100, 129, 2000, 37]  # order '$ACGNT'
+        expected_length = 3 + 36 + 100 + 129 + 2000 + 1
+
+        # expected digit decomposition derived from delta & mask,
+        # delta /= numPower (least significant first), keyed by run length
+        expected_digits = {36: [4, 1], 100: [4, 3], 129: [1, 4],
+                           2000: [16, 30, 1]}
+        for sym, count in runs:
+            delta = count
+            digits = []
+            while delta > 0:
+                digits.append(delta & 31)
+                delta //= 32
+            if count in expected_digits:
+                self.assertEqual(digits, expected_digits[count],
+                                 "digit decomposition of run %d" % count)
+
+        # encode with the exact encoder semantics
+        bytes_out = []
+        for sym, count in runs:
+            delta = count
+            while delta > 0:
+                bytes_out.append(((delta & 31) << 3) + sym)
+                delta //= 32
+        payload_path = os.path.join(self.work, "multidigit_rle.npy")
+        np.save(payload_path, np.array(bytes_out, dtype=np.uint8))
+
+        counts, symbols = self._decode_rle_counts(payload_path)
+        self.assertEqual(counts, expected_counts)
+        self.assertEqual(len(symbols), expected_length)
+        # the full decoded run expansion must match the input runs
+        expansion = []
+        for sym, count in runs:
+            expansion.extend([sym] * count)
+        self.assertEqual(symbols, expansion)
+        # totalCounts-style check: sum of decoded counts is the payload
+        # length decoded (each byte contributes one run digit)
+        self.assertEqual(sum(counts), expected_length)
 
     # ------------------------------------------------------------------
     # historical classification

@@ -144,11 +144,11 @@ equivalences + 42 cffq routes + 20 merges.
 | Family | Checks | Result |
 |---|---|---|
 | construction | 165 | byte-equal (uniform) / semantic-equal (nonuniform) to the independent oracle on both trees |
-| process-count invariance (`-p 1` == `-p 2`) | 165 | all equal on both trees |
+| process-count subset (`-p 1` vs `-p 2`) | 45 executed | the flagged subset (15 medium + 30 small of the 165) ran `cfpp -p 2` on both trees and every `-p 2` execution succeeded; the remaining 120 cases never ran `-p 2`.  The committed analyzer did NOT record a p1-vs-p2 payload comparison for any case: the successful p2 record lacks an `exit` key, so the analyzer's comparison branch never matched and recorded `failed:None` instead (harness analysis-format limitation; see §6.3 note and §14). |
 | gzip equivalence | 33 | gzip construct == plain construct on both trees |
 | cffq wrapper | 42 | direct wrapper == `pp`+`cfpp` route + oracle semantics |
 | compression round trip | 53 cases | RLE decode == original payload; modern2 decompress == original; frozen decompression expected-failure contract checked 106 times (all matched the documented `MultiStringBWT.py:662` TypeError contract, tracker #1) |
-| merge | 20 pairs | merged == clean union construction (uniform byte-equal; nonuniform semantic-equal); modern2 `-p 1` == `-p 2`; frozen `-p 2` matches |
+| merge | 20 pairs | merged == clean union construction (uniform byte-equal; nonuniform semantic-equal); modern2 `-p 1` == `-p 2` (all 20 recorded true); frozen `-p 2` matches |
 | permute (input-order invariance) | 56 | uniform: byte-equal across permutations; nonuniform: semantic-equal |
 | reader/FM | 165 | getCharAtIndex == payload at sampled positions; getFullFMAtIndex == independent FM ranks; countOccurrencesOfSeq == independent backward search for ~21–29 generated queries per case |
 | recovery | 165 | recovered multiset == input read multiset (duplicates preserved) |
@@ -158,7 +158,23 @@ equivalences + 42 cffq routes + 20 merges.
 ### 6.3 Metamorphic properties
 
 - input-order invariance: PASS (56 permutations);
-- process-count invariance: PASS (165 cases);
+- process-count invariance: the flagged subset of 45 construction cases
+  exercised `-p 2` on both trees and all 45 `-p 2` executions succeeded,
+  but the committed analyzer never recorded the p1-vs-p2 payload
+  comparison (analysis-format limitation: the p2 record dict has no
+  `exit` key, so the analyzer recorded `"failed:None"` instead of
+  comparing payloads).  120 construction cases did not run `-p 2`.  The
+  `-p 1` == `-p 2` claim is NOT recorded for construction; the only
+  recorded p1-vs-p2 payload comparisons are the 20 merge pairs
+  (`modern2_p1_eq_p2` true for all 20) and the 53 compression round-trip
+  cases (`frozen_p1_eq_p2` and `modern2_p1_eq_p2` both true for all 53,
+  on the compressed `comp_msbwt.npy` payload).  The `-p 2` success of
+  the 45 construction executions is proven by the record format itself:
+  a failure would have carried a nonzero `exit`, and the analyzer's
+  `failed:None` value can only come from a successful full npy record.
+  A future re-audit with the analyzer fixed to accept record-style
+  payloads would be required to record construction p1-vs-p2
+  comparisons.
 - compression invariance: PASS (53 cases; RLE decode + decompress both
   reproduce the byte BWT exactly);
 - merge equivalence: PASS (20 pairs);
@@ -186,9 +202,13 @@ Python-2 tests) and the executed evidence, not speculation:
   lengths ≤ 32).  The audit's own first decoder draft misread the
   little-endian digit order precisely because no committed artifact could
   falsify it; the fix is protected by `RleDigitOrderTests`.  The committed
-  py2 helper `_decode_rle_counts` (test_reader_init_py2.py) carries the
-  same latent ordering assumption and is only ever exercised on
-  single-digit-run inputs (unexercised-risk, not a defect).
+  py2 helper `_decode_rle_counts` (test_reader_init_py2.py) carried the
+  same latent ordering assumption and was only ever exercised on
+  single-digit-run inputs; during the release-candidate milestone it was
+  corrected to the least-significant-digit-first decoder power ordering
+  and a focused multi-digit regression
+  (`test_multidigit_rle_decode_matches_encoder_semantics`, run lengths
+  36/100/129/2000) was added to the Python-2 suite.
 - **Query lengths in committed tests**: only lengths {2, 5, 6, 8} appear
   in the committed query tables; length 3/4/7/9+ and broad absent-string
   and N-heavy query coverage are new in this audit.
@@ -300,5 +320,16 @@ families.
    out-of-contract malformed artifacts (e.g., truncated `.npy`) remain
    unexercised-risk for the compiled readers.
 5. The RLE multi-digit-run path is now covered by the audit corpus and
-   harness tests, but the committed golden set still has no multi-digit
-   golden; a future golden refresh could close that gap.
+   harness tests, and (since the release-candidate milestone) by a focused
+   multi-digit regression in the Python-2 suite, but the committed golden
+   set still has no multi-digit golden; a future golden refresh could
+   close that gap.
+6. Harness analysis-format limitation (this audit's own bookkeeping, not a
+   production defect): the analyzer's construction process-count
+   comparison expects a `p2` record with an `exit` key, while the executor
+   records successful p2 runs as bare npy payload records.  The committed
+   evidence therefore records the 45 executed p2 constructions as
+   `failed:None` and never performed the p1-vs-p2 payload comparison for
+   construction (120 cases never ran `-p 2`; see §6.2/§6.3).  Any future
+   re-audit should make `payload_from`-style analysis accept record dicts
+   without `exit` so p1-vs-p2 comparisons are actually recorded.
