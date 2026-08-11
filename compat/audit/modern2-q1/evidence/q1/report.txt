@@ -1,0 +1,6 @@
+MODERN2 QUALITY AUDIT Q1 — randomized differential + invariant stress
+seed: 20260810
+cases: 225 (150 small, 15 medium, 60 merge)
+family_counts: {"cffq": 42, "compress": 53, "construction": 165, "frozen_decompress_contract": 106, "gzip": 33, "merge": 20, "permute": 56, "process_count": 165, "reader": 165, "reader_rle_cross": 10}
+classifications: {"classification_A": 260}
+total_failures: 0

@@ -1,0 +1,5190 @@
+{
+  "cffq": {
+    "c0000": {
+      "category": "uniform-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0004": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0008": {
+      "category": "n-heavy",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0012": {
+      "category": "odd-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0016": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0020": {
+      "category": "duplicates",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0024": {
+      "category": "many-dollars",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0028": {
+      "category": "short-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0032": {
+      "category": "mixed-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0036": {
+      "category": "uniform-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0040": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0044": {
+      "category": "n-heavy",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0048": {
+      "category": "odd-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0052": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0056": {
+      "category": "duplicates",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0060": {
+      "category": "many-dollars",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0064": {
+      "category": "short-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0068": {
+      "category": "mixed-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0072": {
+      "category": "uniform-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0076": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0080": {
+      "category": "n-heavy",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0084": {
+      "category": "odd-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0088": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0092": {
+      "category": "duplicates",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0096": {
+      "category": "many-dollars",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0100": {
+      "category": "short-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0104": {
+      "category": "mixed-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0108": {
+      "category": "uniform-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0112": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0116": {
+      "category": "n-heavy",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0120": {
+      "category": "odd-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0124": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0128": {
+      "category": "duplicates",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0132": {
+      "category": "many-dollars",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0136": {
+      "category": "short-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0140": {
+      "category": "mixed-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0144": {
+      "category": "uniform-reads",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0148": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0152": {
+      "category": "n-heavy",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0156": {
+      "category": "odd-length",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0160": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    },
+    "c0164": {
+      "category": "duplicates",
+      "classification": "A",
+      "frozen_p1_eq_construct": true,
+      "frozen_p2_eq_construct": true,
+      "modern2_p1_eq_construct": true,
+      "modern2_p2_eq_construct": true
+    }
+  },
+  "classification_counts": {
+    "classification_A": 260
+  },
+  "classifications": {},
+  "compress": {
+    "c0000": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0004": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0008": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0012": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0016": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0020": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0024": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0028": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0032": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0036": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0040": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0044": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0048": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0052": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0056": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0060": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0064": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0068": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0072": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0076": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0080": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0084": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0088": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0092": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0096": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0100": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0104": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0108": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0112": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0116": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0120": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0124": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0128": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0132": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0136": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0140": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0144": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0148": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0150": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0151": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0152": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0153": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0154": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0155": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0156": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0157": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0158": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0159": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0160": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0161": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0162": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0163": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    },
+    "c0164": {
+      "frozen_p1_compress_exit": 0,
+      "frozen_p1_decode_ok": true,
+      "frozen_p1_decompress_exit": 1,
+      "frozen_p1_decompress_expected_failure": true,
+      "frozen_p1_eq_p2": true,
+      "frozen_p1_roundtrip_ok": false,
+      "frozen_p2_compress_exit": 0,
+      "frozen_p2_decode_ok": true,
+      "frozen_p2_decompress_exit": 1,
+      "frozen_p2_decompress_expected_failure": true,
+      "frozen_p2_roundtrip_ok": false,
+      "modern2_p1_compress_exit": 0,
+      "modern2_p1_decode_ok": true,
+      "modern2_p1_decompress_exit": 0,
+      "modern2_p1_eq_p2": true,
+      "modern2_p1_roundtrip_ok": true,
+      "modern2_p2_compress_exit": 0,
+      "modern2_p2_decode_ok": true,
+      "modern2_p2_decompress_exit": 0,
+      "modern2_p2_roundtrip_ok": true
+    }
+  },
+  "construction": {
+    "c0000": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0001": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0002": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0003": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0004": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0005": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0006": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0007": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0008": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0009": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0010": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0011": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0012": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0013": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0014": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0015": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0016": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0017": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0018": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0019": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0020": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0021": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0022": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0023": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0024": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0025": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0026": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0027": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0028": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0029": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0030": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0031": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0032": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0033": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0034": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0035": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0036": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0037": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0038": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0039": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0040": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0041": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0042": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0043": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0044": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0045": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0046": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0047": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0048": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0049": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0050": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0051": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0052": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0053": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0054": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0055": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0056": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0057": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0058": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0059": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0060": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0061": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0062": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0063": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0064": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0065": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0066": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0067": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0068": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0069": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0070": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0071": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0072": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0073": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0074": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0075": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0076": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0077": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0078": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0079": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0080": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0081": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0082": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0083": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0084": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0085": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0086": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0087": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0088": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0089": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0090": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0091": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0092": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0093": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0094": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0095": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0096": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0097": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0098": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0099": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0100": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0101": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0102": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0103": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0104": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0105": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0106": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0107": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0108": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0109": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0110": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0111": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0112": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0113": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0114": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0115": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0116": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0117": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0118": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0119": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0120": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0121": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0122": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0123": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0124": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0125": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0126": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0127": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0128": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0129": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0130": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0131": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0132": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0133": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0134": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0135": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0136": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0137": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0138": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0139": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0140": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0141": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0142": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0143": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0144": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0145": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0146": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0147": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "all-identical",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0148": {
+      "category": "prefix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0149": {
+      "category": "suffix-sharing",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0150": {
+      "category": "many-dollars",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0151": {
+      "category": "full-alphabet",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0152": {
+      "category": "n-heavy",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0153": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "single-base",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0154": {
+      "category": "short-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0155": {
+      "category": "moderate-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0156": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "odd-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0157": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "even-length",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0158": {
+      "category": "mixed-length",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0159": {
+      "category": "repeated-motifs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0160": {
+      "category": "revcomp-pairs",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0161": {
+      "category": "lexicographic-similar",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0162": {
+      "byte_3way": "A",
+      "byte_frozen_vs_modern2": true,
+      "byte_frozen_vs_oracle": true,
+      "byte_modern2_vs_oracle": true,
+      "category": "uniform-reads",
+      "classification": "A",
+      "uniform": true
+    },
+    "c0163": {
+      "category": "nonuniform-reads",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    },
+    "c0164": {
+      "category": "duplicates",
+      "classification": "A",
+      "semantic_frozen_ok": true,
+      "semantic_frozen_vs_modern2": true,
+      "semantic_modern2_ok": true,
+      "uniform": false
+    }
+  },
+  "failures": [],
+  "family_counts": {
+    "cffq": 42,
+    "compress": 53,
+    "construction": 165,
+    "frozen_decompress_contract": 106,
+    "gzip": 33,
+    "merge": 20,
+    "permute": 56,
+    "process_count": 165,
+    "reader": 165,
+    "reader_rle_cross": 10
+  },
+  "gzip": {
+    "c0000": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0005": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0010": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0015": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0020": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0025": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0030": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0035": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0040": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0045": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0050": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0055": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0060": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0065": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0070": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0075": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0080": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0085": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0090": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0095": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0100": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0105": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0110": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0115": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0120": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0125": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0130": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0135": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_bytes": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0140": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0145": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0150": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0155": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    },
+    "c0160": {
+      "classification": "A",
+      "frozen_gz_equals_plain": true,
+      "gz_3way_semantics": "A",
+      "modern2_gz_equals_plain": true
+    }
+  },
+  "merge": {
+    "m0000": {
+      "category": "merge-unequal-sizes",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": true
+    },
+    "m0001": {
+      "category": "merge-duplicates-across",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": true
+    },
+    "m0002": {
+      "category": "merge-identical-in-both",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": true
+    },
+    "m0003": {
+      "category": "merge-prefix-sharing",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": true
+    },
+    "m0004": {
+      "category": "merge-n-containing",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": true
+    },
+    "m0005": {
+      "category": "merge-very-short",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": true
+    },
+    "m0006": {
+      "category": "merge-unequal-sizes",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0007": {
+      "category": "merge-duplicates-across",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0008": {
+      "category": "merge-identical-in-both",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0009": {
+      "category": "merge-prefix-sharing",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0010": {
+      "category": "merge-n-containing",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0011": {
+      "category": "merge-very-short",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0012": {
+      "category": "merge-unequal-sizes",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0013": {
+      "category": "merge-duplicates-across",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0014": {
+      "category": "merge-identical-in-both",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0015": {
+      "category": "merge-prefix-sharing",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0016": {
+      "category": "merge-n-containing",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0017": {
+      "category": "merge-very-short",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0018": {
+      "category": "merge-mixed-traits",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    },
+    "m0019": {
+      "category": "merge-mixed-traits",
+      "classification": "A",
+      "frozen_p2_eq_clean": true,
+      "modern2_p1_eq_clean": true,
+      "modern2_p1_eq_p2": true,
+      "modern2_p2_eq_clean": true,
+      "uniform": false
+    }
+  },
+  "permute": {
+    "perm_c0000_v1.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0000_v2.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0001_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0001_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0001_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0002_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0002_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0002_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0003_v1.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0003_v2.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0004_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0004_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0004_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0005_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0005_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0005_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0006_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0006_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0006_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0007_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0007_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0007_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0008_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0008_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0008_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0009_v1.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0009_v2.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0010_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0010_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0010_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0011_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0011_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0011_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0012_v1.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0012_v2.fastq": {
+      "frozen_perm_eq_base": true,
+      "modern2_perm_eq_base": true
+    },
+    "perm_c0014_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0014_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0014_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0015_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0015_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0015_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0016_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0016_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0016_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0017_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0017_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0017_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0019_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0019_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0019_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0020_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0020_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0020_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0022_v1.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0022_v2.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    },
+    "perm_c0022_v3.fastq": {
+      "frozen_perm_semantic_ok": true,
+      "modern2_perm_semantic_ok": true
+    }
+  },
+  "process_count": {
+    "c0000": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0001": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0002": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0003": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0004": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0005": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0006": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0007": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0008": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0009": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0010": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0011": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0012": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0013": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0014": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0015": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0016": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0017": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0018": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0019": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0020": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0021": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0022": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0023": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0024": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0025": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0026": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0027": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0028": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0029": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0030": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0031": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0032": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0033": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0034": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0035": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0036": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0037": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0038": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0039": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0040": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0041": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0042": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0043": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0044": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0045": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0046": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0047": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0048": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0049": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0050": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0051": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0052": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0053": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0054": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0055": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0056": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0057": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0058": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0059": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0060": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0061": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0062": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0063": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0064": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0065": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0066": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0067": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0068": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0069": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0070": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0071": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0072": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0073": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0074": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0075": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0076": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0077": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0078": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0079": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0080": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0081": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0082": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0083": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0084": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0085": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0086": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0087": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0088": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0089": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0090": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0091": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0092": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0093": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0094": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0095": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0096": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0097": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0098": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0099": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0100": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0101": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0102": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0103": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0104": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0105": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0106": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0107": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0108": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0109": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0110": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0111": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0112": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0113": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0114": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0115": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0116": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0117": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0118": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0119": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0120": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0121": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0122": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0123": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0124": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0125": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0126": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0127": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0128": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0129": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0130": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0131": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0132": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0133": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0134": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0135": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0136": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0137": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0138": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0139": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0140": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0141": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0142": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0143": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0144": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0145": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0146": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0147": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0148": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0149": {
+      "frozen": "not-run",
+      "modern2": "not-run"
+    },
+    "c0150": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0151": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0152": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0153": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0154": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0155": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0156": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0157": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0158": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0159": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0160": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0161": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0162": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0163": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    },
+    "c0164": {
+      "frozen": "failed:None",
+      "modern2": "failed:None"
+    }
+  },
+  "reader": {
+    "c0000": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0001": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0002": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0003": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0004": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0005": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0006": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0007": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0008": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0009": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0010": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0011": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0012": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0013": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0014": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0015": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0016": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0017": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "frozen_regen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true,
+      "modern2_regen_ok": true
+    },
+    "c0018": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0019": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0020": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0021": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0022": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0023": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0024": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0025": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0026": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0027": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0028": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0029": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0030": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0031": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0032": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0033": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0034": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0035": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0036": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0037": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0038": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0039": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0040": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0041": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0042": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0043": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0044": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0045": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0046": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0047": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0048": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0049": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0050": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0051": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0052": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0053": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0054": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0055": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0056": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0057": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0058": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0059": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0060": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0061": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0062": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0063": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0064": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0065": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0066": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0067": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0068": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0069": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0070": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0071": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0072": {
+      "byte_vs_rle_queries_same": true,
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0073": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0074": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0075": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0076": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0077": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0078": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0079": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0080": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0081": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0082": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0083": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0084": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0085": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0086": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0087": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0088": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0089": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0090": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0091": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0092": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0093": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0094": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0095": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0096": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0097": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0098": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0099": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0100": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0101": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0102": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0103": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0104": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0105": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0106": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0107": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0108": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0109": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0110": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0111": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0112": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0113": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0114": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0115": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0116": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0117": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0118": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0119": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0120": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0121": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0122": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0123": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0124": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0125": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0126": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0127": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0128": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0129": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0130": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0131": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0132": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0133": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0134": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0135": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0136": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0137": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0138": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0139": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0140": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0141": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0142": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0143": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0144": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0145": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0146": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0147": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0148": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0149": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0150": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0151": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0152": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0153": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0154": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0155": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0156": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0157": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0158": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0159": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0160": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0161": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0162": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0163": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    },
+    "c0164": {
+      "frozen_detail": [],
+      "frozen_ok": true,
+      "modern2_detail": [],
+      "modern2_ok": true
+    }
+  },
+  "total_failures": 0
+}
