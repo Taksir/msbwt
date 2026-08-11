@@ -3,8 +3,8 @@
   "distribution": "msbwt-modern2",
   "version": "0.3.0",
   "branch": "codex/modern2",
-  "commit": "98a336a",
-  "commit_note": "release-candidate commits on codex/modern2: 1cd3fd2 (Q1 hygiene), 24a215b (release tests + fresh-install driver), 98a336a (release README/docs).  Baseline validated: 2f5c0a4 (Q1 audit) + these three commits.",
+  "commit": "bb5a0b0",
+  "commit_note": "release-candidate commits on codex/modern2: 1cd3fd2 (Q1 hygiene), 24a215b (release tests + fresh-install driver), 98a336a (release README/docs), bb5a0b0 (this evidence record).  Baseline validated: 2f5c0a4 (Q1 audit) + these four commits.",
   "status": "release-candidate",
   "reference_profile": {
     "host": "Ubuntu 26.04 LTS on WSL2 x86-64 (Linux)",
