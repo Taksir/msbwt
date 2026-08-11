@@ -1,0 +1,1806 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "cache_same_length_replaced": {
+      "expected": 333,
+      "rank1_after_replace": 333,
+      "stale_cache_detected": true
+    },
+    "canonical_total_rows": 48,
+    "cases": [
+      {
+        "case": "canonical",
+        "interleave": {
+          "case": "canonical",
+          "exact_bits_checked": 30,
+          "expected_ones": 24,
+          "expected_zeros": 24,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 24,
+          "rotation_sort_oracle_applicable": true,
+          "tied_rows_multiplicity_checked": 18,
+          "total_rows": 48,
+          "zeros": 24
+        },
+        "merged_inter0_sha256": "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6",
+        "merged_msbwt_sha256": "dd91d69ee2785c88652790c8c2b892a173e4e1f57b703bfc00f1a2938dc1a15f",
+        "queries": 49
+      },
+      {
+        "case": "unequal-sizes",
+        "interleave": {
+          "case": "unequal-sizes",
+          "exact_bits_checked": 33,
+          "expected_ones": 3,
+          "expected_zeros": 30,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 3,
+          "rotation_sort_oracle_applicable": true,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 33,
+          "zeros": 30
+        },
+        "queries": 30,
+        "reads_a": [
+          "ACGT",
+          "ACGT",
+          "ACGT",
+          "ACGT",
+          "ACGT",
+          "ACGT"
+        ],
+        "reads_b": [
+          "TT"
+        ]
+      },
+      {
+        "case": "duplicates-in-A",
+        "interleave": {
+          "case": "duplicates-in-A",
+          "exact_bits_checked": 0,
+          "expected_ones": 6,
+          "expected_zeros": 18,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 6,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 24,
+          "zeros": 18
+        },
+        "queries": 36,
+        "reads_a": [
+          "ACGT",
+          "ACGT",
+          "ACGT",
+          "GG"
+        ],
+        "reads_b": [
+          "TT",
+          "CC"
+        ]
+      },
+      {
+        "case": "duplicates-in-B",
+        "interleave": {
+          "case": "duplicates-in-B",
+          "exact_bits_checked": 0,
+          "expected_ones": 18,
+          "expected_zeros": 6,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 18,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 24,
+          "zeros": 6
+        },
+        "queries": 36,
+        "reads_a": [
+          "TT",
+          "CC"
+        ],
+        "reads_b": [
+          "ACGT",
+          "ACGT",
+          "ACGT",
+          "GG"
+        ]
+      },
+      {
+        "case": "same-reads-both",
+        "interleave": {
+          "case": "same-reads-both",
+          "exact_bits_checked": 0,
+          "expected_ones": 11,
+          "expected_zeros": 11,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 11,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 22,
+          "zeros": 11
+        },
+        "queries": 33,
+        "reads_a": [
+          "ACGT",
+          "GG",
+          "TT"
+        ],
+        "reads_b": [
+          "ACGT",
+          "GG",
+          "TT"
+        ]
+      },
+      {
+        "case": "all-identical",
+        "interleave": {
+          "case": "all-identical",
+          "exact_bits_checked": 0,
+          "expected_ones": 10,
+          "expected_zeros": 10,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 10,
+          "rotation_sort_oracle_applicable": true,
+          "tied_rows_multiplicity_checked": 20,
+          "total_rows": 20,
+          "zeros": 10
+        },
+        "queries": 21,
+        "reads_a": [
+          "AAAA",
+          "AAAA"
+        ],
+        "reads_b": [
+          "AAAA",
+          "AAAA"
+        ]
+      },
+      {
+        "case": "prefix-sharing",
+        "interleave": {
+          "case": "prefix-sharing",
+          "exact_bits_checked": 0,
+          "expected_ones": 15,
+          "expected_zeros": 21,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 15,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 36,
+          "zeros": 21
+        },
+        "queries": 55,
+        "reads_a": [
+          "AAAAAC",
+          "AAAAAG",
+          "AAAAAT"
+        ],
+        "reads_b": [
+          "AAAAAA",
+          "AAAAACC"
+        ]
+      },
+      {
+        "case": "suffix-sharing",
+        "interleave": {
+          "case": "suffix-sharing",
+          "exact_bits_checked": 0,
+          "expected_ones": 13,
+          "expected_zeros": 18,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 13,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 31,
+          "zeros": 18
+        },
+        "queries": 46,
+        "reads_a": [
+          "CAAAA",
+          "GAAAA",
+          "TAAAA"
+        ],
+        "reads_b": [
+          "AAAAA",
+          "CAAAAA"
+        ]
+      },
+      {
+        "case": "n-heavy",
+        "interleave": {
+          "case": "n-heavy",
+          "exact_bits_checked": 0,
+          "expected_ones": 11,
+          "expected_zeros": 20,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 11,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 31,
+          "zeros": 20
+        },
+        "queries": 72,
+        "reads_a": [
+          "ACNNGT",
+          "NNACGT",
+          "ANNTN"
+        ],
+        "reads_b": [
+          "NNNN",
+          "ACNTN"
+        ]
+      },
+      {
+        "case": "single-base",
+        "interleave": {
+          "case": "single-base",
+          "exact_bits_checked": 8,
+          "expected_ones": 6,
+          "expected_zeros": 6,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 6,
+          "rotation_sort_oracle_applicable": true,
+          "tied_rows_multiplicity_checked": 4,
+          "total_rows": 12,
+          "zeros": 6
+        },
+        "queries": 30,
+        "reads_a": [
+          "A",
+          "C",
+          "G"
+        ],
+        "reads_b": [
+          "T",
+          "A",
+          "N"
+        ]
+      },
+      {
+        "case": "mixed-lengths",
+        "interleave": {
+          "case": "mixed-lengths",
+          "exact_bits_checked": 0,
+          "expected_ones": 20,
+          "expected_zeros": 23,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 20,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 43,
+          "zeros": 23
+        },
+        "queries": 87,
+        "reads_a": [
+          "A",
+          "ACG",
+          "ACGTACGT",
+          "TTGCA",
+          "N"
+        ],
+        "reads_b": [
+          "ACGTACGTACGT",
+          "C",
+          "GGGG"
+        ]
+      },
+      {
+        "case": "repeated-motifs",
+        "interleave": {
+          "case": "repeated-motifs",
+          "exact_bits_checked": 0,
+          "expected_ones": 22,
+          "expected_zeros": 25,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 22,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 47,
+          "zeros": 25
+        },
+        "queries": 77,
+        "reads_a": [
+          "ACGTACGT",
+          "ACGTACGT",
+          "TGTGTG"
+        ],
+        "reads_b": [
+          "ACGTACGTACGT",
+          "TGTGTGTG"
+        ]
+      },
+      {
+        "case": "lexicographic-similar",
+        "interleave": {
+          "case": "lexicographic-similar",
+          "exact_bits_checked": 48,
+          "expected_ones": 24,
+          "expected_zeros": 24,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 24,
+          "rotation_sort_oracle_applicable": true,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 48,
+          "zeros": 24
+        },
+        "queries": 67,
+        "reads_a": [
+          "AAAAA",
+          "AAAAC",
+          "AAAAG",
+          "AAAAT"
+        ],
+        "reads_b": [
+          "AAAAN",
+          "AAACA",
+          "AAAGA",
+          "AACAA"
+        ]
+      },
+      {
+        "case": "random-00",
+        "interleave": {
+          "case": "random-00",
+          "exact_bits_checked": 0,
+          "expected_ones": 23,
+          "expected_zeros": 3,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 23,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 26,
+          "zeros": 3
+        },
+        "queries": 105,
+        "reads_a": [
+          "CA"
+        ],
+        "reads_b": [
+          "CAAGNTCCTNTG",
+          "CCNTGT",
+          "GA"
+        ]
+      },
+      {
+        "case": "random-01",
+        "interleave": {
+          "case": "random-01",
+          "exact_bits_checked": 0,
+          "expected_ones": 41,
+          "expected_zeros": 10,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 41,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 51,
+          "zeros": 10
+        },
+        "queries": 184,
+        "reads_a": [
+          "CTNACAAGT"
+        ],
+        "reads_b": [
+          "TAGNACCTGCN",
+          "TATC",
+          "TGATCTCGTAC",
+          "GATT",
+          "TNGGNG"
+        ]
+      },
+      {
+        "case": "random-02",
+        "interleave": {
+          "case": "random-02",
+          "exact_bits_checked": 0,
+          "expected_ones": 23,
+          "expected_zeros": 29,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 23,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 52,
+          "zeros": 29
+        },
+        "queries": 209,
+        "reads_a": [
+          "GAGTNN",
+          "CGGTNNNT",
+          "NCCATNTTAANT"
+        ],
+        "reads_b": [
+          "GGCNCACGANCC",
+          "AANCCCCGT"
+        ]
+      },
+      {
+        "case": "random-03",
+        "interleave": {
+          "case": "random-03",
+          "exact_bits_checked": 0,
+          "expected_ones": 40,
+          "expected_zeros": 2,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 40,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 42,
+          "zeros": 2
+        },
+        "queries": 132,
+        "reads_a": [
+          "A"
+        ],
+        "reads_b": [
+          "TGNGGTA",
+          "GGNTNTCCGTCC",
+          "CTCC",
+          "NTATT",
+          "CTCAC",
+          "T"
+        ]
+      },
+      {
+        "case": "random-04",
+        "interleave": {
+          "case": "random-04",
+          "exact_bits_checked": 0,
+          "expected_ones": 5,
+          "expected_zeros": 38,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 5,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 43,
+          "zeros": 38
+        },
+        "queries": 125,
+        "reads_a": [
+          "AN",
+          "N",
+          "GCTTCTTT",
+          "NGNNAGAGTCG",
+          "GCGCC",
+          "NGAGA"
+        ],
+        "reads_b": [
+          "ANGN"
+        ]
+      },
+      {
+        "case": "random-05",
+        "interleave": {
+          "case": "random-05",
+          "exact_bits_checked": 0,
+          "expected_ones": 37,
+          "expected_zeros": 15,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 37,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 52,
+          "zeros": 15
+        },
+        "queries": 188,
+        "reads_a": [
+          "N",
+          "NGTTAACTGATC"
+        ],
+        "reads_b": [
+          "TACGTANCC",
+          "CGTTTAGCTAA",
+          "GNA",
+          "TNT",
+          "GCTATN"
+        ]
+      },
+      {
+        "case": "random-06",
+        "interleave": {
+          "case": "random-06",
+          "exact_bits_checked": 0,
+          "expected_ones": 22,
+          "expected_zeros": 50,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 22,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 72,
+          "zeros": 50
+        },
+        "queries": 232,
+        "reads_a": [
+          "AAN",
+          "GTNNNCAGCTTT",
+          "TCC",
+          "TTNTGCG",
+          "ATGGTCATGA",
+          "NTTAGGANG"
+        ],
+        "reads_b": [
+          "CGGAGC",
+          "GTN",
+          "GAGTTTCAGC"
+        ]
+      },
+      {
+        "case": "random-07",
+        "interleave": {
+          "case": "random-07",
+          "exact_bits_checked": 0,
+          "expected_ones": 36,
+          "expected_zeros": 9,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 36,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 45,
+          "zeros": 9
+        },
+        "queries": 168,
+        "reads_a": [
+          "GCGTNAAC"
+        ],
+        "reads_b": [
+          "NCCTGCNG",
+          "TATC",
+          "TTACTATC",
+          "NGAGGAACNANC"
+        ]
+      },
+      {
+        "case": "random-08",
+        "interleave": {
+          "case": "random-08",
+          "exact_bits_checked": 0,
+          "expected_ones": 39,
+          "expected_zeros": 16,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 39,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 55,
+          "zeros": 16
+        },
+        "queries": 182,
+        "reads_a": [
+          "NCA",
+          "TACCNGTNAAA"
+        ],
+        "reads_b": [
+          "GTTNTGGAC",
+          "CNC",
+          "CGNGCCT",
+          "AGGATTNTC",
+          "NNACGT"
+        ]
+      },
+      {
+        "case": "random-09",
+        "interleave": {
+          "case": "random-09",
+          "exact_bits_checked": 0,
+          "expected_ones": 27,
+          "expected_zeros": 24,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 27,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 51,
+          "zeros": 24
+        },
+        "queries": 162,
+        "reads_a": [
+          "AC",
+          "GAAGTGCTC",
+          "ACNNCCN",
+          "NN"
+        ],
+        "reads_b": [
+          "TCCTCCNCGGC",
+          "TCC",
+          "NTNCANAG",
+          "N"
+        ]
+      },
+      {
+        "case": "random-10",
+        "interleave": {
+          "case": "random-10",
+          "exact_bits_checked": 0,
+          "expected_ones": 53,
+          "expected_zeros": 19,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 53,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 72,
+          "zeros": 19
+        },
+        "queries": 250,
+        "reads_a": [
+          "NTCGATTNCN",
+          "GTGANAT"
+        ],
+        "reads_b": [
+          "GGA",
+          "AAGGCTTNGCGC",
+          "CNTNA",
+          "GCNCCG",
+          "CCTATCNTTN",
+          "AGGCTATNNNA"
+        ]
+      },
+      {
+        "case": "random-11",
+        "interleave": {
+          "case": "random-11",
+          "exact_bits_checked": 0,
+          "expected_ones": 44,
+          "expected_zeros": 19,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 44,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 63,
+          "zeros": 19
+        },
+        "queries": 225,
+        "reads_a": [
+          "NNNNCTGGGGC",
+          "TTTGAA"
+        ],
+        "reads_b": [
+          "GTAANAGACTT",
+          "GNNATTCTGAG",
+          "AACG",
+          "GGNTN",
+          "TCGCGGGT"
+        ]
+      },
+      {
+        "case": "random-12",
+        "interleave": {
+          "case": "random-12",
+          "exact_bits_checked": 0,
+          "expected_ones": 27,
+          "expected_zeros": 35,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 27,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 62,
+          "zeros": 35
+        },
+        "queries": 148,
+        "reads_a": [
+          "GCCGCT",
+          "ATACCNNTTC",
+          "GTAAGTA",
+          "AN",
+          "ANG",
+          "G"
+        ],
+        "reads_b": [
+          "ANNCG",
+          "TNCNN",
+          "ACTGN",
+          "AA",
+          "NGGTC"
+        ]
+      },
+      {
+        "case": "random-13",
+        "interleave": {
+          "case": "random-13",
+          "exact_bits_checked": 0,
+          "expected_ones": 24,
+          "expected_zeros": 19,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 24,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 43,
+          "zeros": 19
+        },
+        "queries": 152,
+        "reads_a": [
+          "NAC",
+          "TCCANT",
+          "ACA",
+          "TTC"
+        ],
+        "reads_b": [
+          "ANGCANCNNT",
+          "TGTGATATTCNA"
+        ]
+      },
+      {
+        "case": "random-14",
+        "interleave": {
+          "case": "random-14",
+          "exact_bits_checked": 0,
+          "expected_ones": 11,
+          "expected_zeros": 10,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 11,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 21,
+          "zeros": 10
+        },
+        "queries": 86,
+        "reads_a": [
+          "TGACTNTCG"
+        ],
+        "reads_b": [
+          "C",
+          "CGCGTNGA"
+        ]
+      },
+      {
+        "case": "random-15",
+        "interleave": {
+          "case": "random-15",
+          "exact_bits_checked": 18,
+          "expected_ones": 10,
+          "expected_zeros": 8,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 10,
+          "rotation_sort_oracle_applicable": true,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 18,
+          "zeros": 8
+        },
+        "queries": 78,
+        "reads_a": [
+          "ANCNTCN"
+        ],
+        "reads_b": [
+          "NNTGGNGGT"
+        ]
+      },
+      {
+        "case": "random-16",
+        "interleave": {
+          "case": "random-16",
+          "exact_bits_checked": 0,
+          "expected_ones": 8,
+          "expected_zeros": 28,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 8,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 36,
+          "zeros": 28
+        },
+        "queries": 110,
+        "reads_a": [
+          "TGATNNN",
+          "ACNCNN",
+          "NTCGGCCGA",
+          "AC"
+        ],
+        "reads_b": [
+          "TGCGGGC"
+        ]
+      },
+      {
+        "case": "random-17",
+        "interleave": {
+          "case": "random-17",
+          "exact_bits_checked": 0,
+          "expected_ones": 29,
+          "expected_zeros": 25,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 29,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 54,
+          "zeros": 25
+        },
+        "queries": 174,
+        "reads_a": [
+          "TAAGC",
+          "ATCC",
+          "GCNGTGCNCGC",
+          "C"
+        ],
+        "reads_b": [
+          "CT",
+          "TAANG",
+          "NGNCTCN",
+          "AGGCAACGNAN"
+        ]
+      },
+      {
+        "case": "random-18",
+        "interleave": {
+          "case": "random-18",
+          "exact_bits_checked": 0,
+          "expected_ones": 22,
+          "expected_zeros": 35,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 22,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 57,
+          "zeros": 35
+        },
+        "queries": 203,
+        "reads_a": [
+          "TTANGCAACTGG",
+          "CCCTTGCGTA",
+          "GCC",
+          "AAG",
+          "NT"
+        ],
+        "reads_b": [
+          "T",
+          "CC",
+          "AAT",
+          "TTTACTCTCACN"
+        ]
+      },
+      {
+        "case": "random-19",
+        "interleave": {
+          "case": "random-19",
+          "exact_bits_checked": 0,
+          "expected_ones": 6,
+          "expected_zeros": 21,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 6,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 27,
+          "zeros": 21
+        },
+        "queries": 103,
+        "reads_a": [
+          "GAAT",
+          "GCTCCNTCNNTC",
+          "AN"
+        ],
+        "reads_b": [
+          "GATAN"
+        ]
+      },
+      {
+        "case": "random-20",
+        "interleave": {
+          "case": "random-20",
+          "exact_bits_checked": 0,
+          "expected_ones": 8,
+          "expected_zeros": 51,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 8,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 59,
+          "zeros": 51
+        },
+        "queries": 221,
+        "reads_a": [
+          "AAANGANG",
+          "TTGCANCAG",
+          "AC",
+          "NTGACCCNCNGN",
+          "TCAGATGGCNAA",
+          "GN"
+        ],
+        "reads_b": [
+          "TTCAGCA"
+        ]
+      },
+      {
+        "case": "random-21",
+        "interleave": {
+          "case": "random-21",
+          "exact_bits_checked": 0,
+          "expected_ones": 13,
+          "expected_zeros": 23,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 13,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 36,
+          "zeros": 23
+        },
+        "queries": 96,
+        "reads_a": [
+          "TTCNN",
+          "NCNTCGACC",
+          "GCGACC"
+        ],
+        "reads_b": [
+          "TNCNNCG",
+          "T",
+          "GG"
+        ]
+      },
+      {
+        "case": "random-22",
+        "interleave": {
+          "case": "random-22",
+          "exact_bits_checked": 0,
+          "expected_ones": 57,
+          "expected_zeros": 39,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 57,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 96,
+          "zeros": 39
+        },
+        "queries": 318,
+        "reads_a": [
+          "ATNATGGCT",
+          "NCNGAATNTGAG",
+          "GGC",
+          "G",
+          "TAGATAATC"
+        ],
+        "reads_b": [
+          "CNNCATGT",
+          "AANTACNNGNG",
+          "GAGATGNN",
+          "TTCGG",
+          "TNGNGTAGANT",
+          "NNGTTTGC"
+        ]
+      },
+      {
+        "case": "random-23",
+        "interleave": {
+          "case": "random-23",
+          "exact_bits_checked": 0,
+          "expected_ones": 12,
+          "expected_zeros": 21,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 12,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 33,
+          "zeros": 21
+        },
+        "queries": 130,
+        "reads_a": [
+          "NCAGCNGAG",
+          "CNTGGCTCCC"
+        ],
+        "reads_b": [
+          "GCCACNAT",
+          "TT"
+        ]
+      },
+      {
+        "case": "random-24",
+        "interleave": {
+          "case": "random-24",
+          "exact_bits_checked": 0,
+          "expected_ones": 20,
+          "expected_zeros": 4,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 20,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 24,
+          "zeros": 4
+        },
+        "queries": 105,
+        "reads_a": [
+          "CNN"
+        ],
+        "reads_b": [
+          "GCNTNNTNGAGT",
+          "TACCAT"
+        ]
+      },
+      {
+        "case": "random-25",
+        "interleave": {
+          "case": "random-25",
+          "exact_bits_checked": 0,
+          "expected_ones": 40,
+          "expected_zeros": 4,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 40,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 44,
+          "zeros": 4
+        },
+        "queries": 133,
+        "reads_a": [
+          "A",
+          "A"
+        ],
+        "reads_b": [
+          "GGCCGTNTG",
+          "CGGNAAGAC",
+          "NAC",
+          "TTTNNNCG",
+          "T",
+          "NCAA"
+        ]
+      },
+      {
+        "case": "random-26",
+        "interleave": {
+          "case": "random-26",
+          "exact_bits_checked": 0,
+          "expected_ones": 14,
+          "expected_zeros": 7,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 14,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 21,
+          "zeros": 7
+        },
+        "queries": 52,
+        "reads_a": [
+          "NCGA",
+          "N"
+        ],
+        "reads_b": [
+          "NTGG",
+          "GC",
+          "TCAAA"
+        ]
+      },
+      {
+        "case": "random-27",
+        "interleave": {
+          "case": "random-27",
+          "exact_bits_checked": 0,
+          "expected_ones": 12,
+          "expected_zeros": 38,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 12,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 50,
+          "zeros": 38
+        },
+        "queries": 164,
+        "reads_a": [
+          "ATCATN",
+          "GAGAGNT",
+          "NTTCAATAGA",
+          "GACANTTCGGN"
+        ],
+        "reads_b": [
+          "GANGAGC",
+          "TAT"
+        ]
+      },
+      {
+        "case": "random-28",
+        "interleave": {
+          "case": "random-28",
+          "exact_bits_checked": 0,
+          "expected_ones": 23,
+          "expected_zeros": 5,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 23,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 28,
+          "zeros": 5
+        },
+        "queries": 80,
+        "reads_a": [
+          "TAGN"
+        ],
+        "reads_b": [
+          "CGGTGCGGT",
+          "G",
+          "GCG",
+          "NNNGAC"
+        ]
+      },
+      {
+        "case": "random-29",
+        "interleave": {
+          "case": "random-29",
+          "exact_bits_checked": 0,
+          "expected_ones": 51,
+          "expected_zeros": 32,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 51,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 83,
+          "zeros": 32
+        },
+        "queries": 294,
+        "reads_a": [
+          "GTTGTT",
+          "NCTTTTACTT",
+          "ATCGTGCCCGC",
+          "G"
+        ],
+        "reads_b": [
+          "CACTGGCTCN",
+          "CCCTG",
+          "TCTCCGACGTGT",
+          "ATCTCGG",
+          "AATNTCAACTGT"
+        ]
+      },
+      {
+        "case": "random-30",
+        "interleave": {
+          "case": "random-30",
+          "exact_bits_checked": 0,
+          "expected_ones": 45,
+          "expected_zeros": 18,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 45,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 63,
+          "zeros": 18
+        },
+        "queries": 207,
+        "reads_a": [
+          "AT",
+          "ATNNGTTC",
+          "GATGG"
+        ],
+        "reads_b": [
+          "GCCTGTC",
+          "GTANCTCNA",
+          "GCTNANGNAN",
+          "NTG",
+          "TCGNCTAATNC"
+        ]
+      },
+      {
+        "case": "random-31",
+        "interleave": {
+          "case": "random-31",
+          "exact_bits_checked": 0,
+          "expected_ones": 33,
+          "expected_zeros": 60,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 33,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 93,
+          "zeros": 60
+        },
+        "queries": 330,
+        "reads_a": [
+          "CTCNNATTCA",
+          "CTNAGTGN",
+          "GACNTACTGN",
+          "CNNAATGC",
+          "TNCTGG",
+          "TATTAGAANTGG"
+        ],
+        "reads_b": [
+          "TAAGGTGGCGN",
+          "G",
+          "TATCNT",
+          "CANCCGGGNCC"
+        ]
+      },
+      {
+        "case": "random-32",
+        "interleave": {
+          "case": "random-32",
+          "exact_bits_checked": 0,
+          "expected_ones": 49,
+          "expected_zeros": 23,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 49,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 72,
+          "zeros": 23
+        },
+        "queries": 249,
+        "reads_a": [
+          "CACGANCTNNN",
+          "TCCGCGTGCG"
+        ],
+        "reads_b": [
+          "TAGNAGTC",
+          "CGNGNCA",
+          "TACGTGNNT",
+          "CAACACN",
+          "CNCNAAANGA",
+          "TT"
+        ]
+      },
+      {
+        "case": "random-33",
+        "interleave": {
+          "case": "random-33",
+          "exact_bits_checked": 0,
+          "expected_ones": 11,
+          "expected_zeros": 49,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 11,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 60,
+          "zeros": 49
+        },
+        "queries": 201,
+        "reads_a": [
+          "A",
+          "TTAATGGGNCCT",
+          "ANGTGTACANC",
+          "CNATCCTA",
+          "NANCN",
+          "ACGACT"
+        ],
+        "reads_b": [
+          "NNTAA",
+          "NTGA"
+        ]
+      },
+      {
+        "case": "random-34",
+        "interleave": {
+          "case": "random-34",
+          "exact_bits_checked": 0,
+          "expected_ones": 3,
+          "expected_zeros": 32,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 3,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 35,
+          "zeros": 32
+        },
+        "queries": 99,
+        "reads_a": [
+          "TAGNGGGN",
+          "CAGNN",
+          "CNAC",
+          "TGAATTTG",
+          "TC"
+        ],
+        "reads_b": [
+          "CC"
+        ]
+      },
+      {
+        "case": "random-35",
+        "interleave": {
+          "case": "random-35",
+          "exact_bits_checked": 0,
+          "expected_ones": 5,
+          "expected_zeros": 51,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 5,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 56,
+          "zeros": 51
+        },
+        "queries": 216,
+        "reads_a": [
+          "GGGCTCAAGGAA",
+          "TCTCTNTATN",
+          "CCGAAACCCGTC",
+          "NACCNA",
+          "GAGCNT"
+        ],
+        "reads_b": [
+          "ANGA"
+        ]
+      },
+      {
+        "case": "random-36",
+        "interleave": {
+          "case": "random-36",
+          "exact_bits_checked": 0,
+          "expected_ones": 27,
+          "expected_zeros": 4,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 27,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 31,
+          "zeros": 4
+        },
+        "queries": 71,
+        "reads_a": [
+          "CNT"
+        ],
+        "reads_b": [
+          "NGCCCN",
+          "TNCT",
+          "TGCNTTA",
+          "CN",
+          "TTA"
+        ]
+      },
+      {
+        "case": "random-37",
+        "interleave": {
+          "case": "random-37",
+          "exact_bits_checked": 0,
+          "expected_ones": 26,
+          "expected_zeros": 15,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 26,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 41,
+          "zeros": 15
+        },
+        "queries": 139,
+        "reads_a": [
+          "CCAA",
+          "TGCTCGACT"
+        ],
+        "reads_b": [
+          "NCN",
+          "CA",
+          "GTAGTNTGAAT",
+          "CANGTC"
+        ]
+      },
+      {
+        "case": "random-38",
+        "interleave": {
+          "case": "random-38",
+          "exact_bits_checked": 0,
+          "expected_ones": 31,
+          "expected_zeros": 38,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 31,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 69,
+          "zeros": 38
+        },
+        "queries": 187,
+        "reads_a": [
+          "ACNGNA",
+          "NCTNGG",
+          "GACACAGAC",
+          "CGCNAC",
+          "NNANCT"
+        ],
+        "reads_b": [
+          "NCCTCTA",
+          "CGGNNAAGGC",
+          "TGN",
+          "CCNANAN"
+        ]
+      },
+      {
+        "case": "random-39",
+        "interleave": {
+          "case": "random-39",
+          "exact_bits_checked": 0,
+          "expected_ones": 51,
+          "expected_zeros": 6,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 51,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 57,
+          "zeros": 6
+        },
+        "queries": 223,
+        "reads_a": [
+          "A",
+          "AAC"
+        ],
+        "reads_b": [
+          "ACNTCNANGTN",
+          "GTTACTNANNCA",
+          "TTCANANCTT",
+          "CNTCTGATCC",
+          "CAA"
+        ]
+      },
+      {
+        "case": "random-40",
+        "interleave": {
+          "case": "random-40",
+          "exact_bits_checked": 0,
+          "expected_ones": 19,
+          "expected_zeros": 47,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 19,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 66,
+          "zeros": 47
+        },
+        "queries": 263,
+        "reads_a": [
+          "NGTTTTTAA",
+          "NTTGTGTAGGG",
+          "CACTCTAGAAGN",
+          "CCANTGTTNGT"
+        ],
+        "reads_b": [
+          "GCGCGTANGA",
+          "NTTTGAC"
+        ]
+      },
+      {
+        "case": "random-41",
+        "interleave": {
+          "case": "random-41",
+          "exact_bits_checked": 0,
+          "expected_ones": 42,
+          "expected_zeros": 35,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 42,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 77,
+          "zeros": 35
+        },
+        "queries": 239,
+        "reads_a": [
+          "GTCA",
+          "NANCNACTNGT",
+          "NNCACCNAAA",
+          "AGACGC"
+        ],
+        "reads_b": [
+          "ATC",
+          "TA",
+          "CANGTT",
+          "CGTCT",
+          "AGANCTGCCT",
+          "CTACGAGCAT"
+        ]
+      },
+      {
+        "case": "random-42",
+        "interleave": {
+          "case": "random-42",
+          "exact_bits_checked": 0,
+          "expected_ones": 30,
+          "expected_zeros": 42,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 30,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 72,
+          "zeros": 42
+        },
+        "queries": 254,
+        "reads_a": [
+          "NNG",
+          "TCCA",
+          "CAACNAGTCNGG",
+          "TTTCCANNCN",
+          "ACGGANGC"
+        ],
+        "reads_b": [
+          "GTNTANGAGGC",
+          "TTTTAANCCA",
+          "TGNA",
+          "G"
+        ]
+      },
+      {
+        "case": "random-43",
+        "interleave": {
+          "case": "random-43",
+          "exact_bits_checked": 0,
+          "expected_ones": 38,
+          "expected_zeros": 30,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 38,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 68,
+          "zeros": 30
+        },
+        "queries": 211,
+        "reads_a": [
+          "A",
+          "G",
+          "ATT",
+          "GAA",
+          "TGCTNT",
+          "GTCCAGGANT"
+        ],
+        "reads_b": [
+          "GNTGGCNNAAG",
+          "C",
+          "NTTNAGGG",
+          "NCCCTCGGGG",
+          "CTC"
+        ]
+      },
+      {
+        "case": "random-44",
+        "interleave": {
+          "case": "random-44",
+          "exact_bits_checked": 0,
+          "expected_ones": 10,
+          "expected_zeros": 26,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 10,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 36,
+          "zeros": 26
+        },
+        "queries": 123,
+        "reads_a": [
+          "CCGTCC",
+          "GGANAAA",
+          "CCCGTCTCAA"
+        ],
+        "reads_b": [
+          "CCGTNAGNC"
+        ]
+      },
+      {
+        "case": "random-45",
+        "interleave": {
+          "case": "random-45",
+          "exact_bits_checked": 0,
+          "expected_ones": 28,
+          "expected_zeros": 24,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 28,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 52,
+          "zeros": 24
+        },
+        "queries": 199,
+        "reads_a": [
+          "TAGACACNCNCG",
+          "ANTNNTG",
+          "CT"
+        ],
+        "reads_b": [
+          "TTTC",
+          "CGCAACTCGCG",
+          "NNAGCNCAAC"
+        ]
+      },
+      {
+        "case": "random-46",
+        "interleave": {
+          "case": "random-46",
+          "exact_bits_checked": 0,
+          "expected_ones": 32,
+          "expected_zeros": 11,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 32,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 43,
+          "zeros": 11
+        },
+        "queries": 134,
+        "reads_a": [
+          "TTG",
+          "CA",
+          "GAA"
+        ],
+        "reads_b": [
+          "CGCGCNN",
+          "NNGGCTAGACTC",
+          "CAA",
+          "GNTTTA"
+        ]
+      },
+      {
+        "case": "random-47",
+        "interleave": {
+          "case": "random-47",
+          "exact_bits_checked": 0,
+          "expected_ones": 11,
+          "expected_zeros": 45,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 11,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 56,
+          "zeros": 45
+        },
+        "queries": 214,
+        "reads_a": [
+          "C",
+          "CCNATNCNCN",
+          "TAAAACAGGAT",
+          "CACAGAGCTAC",
+          "GAATTAC"
+        ],
+        "reads_b": [
+          "GGGTAGGAAT"
+        ]
+      },
+      {
+        "case": "random-48",
+        "interleave": {
+          "case": "random-48",
+          "exact_bits_checked": 0,
+          "expected_ones": 42,
+          "expected_zeros": 32,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 42,
+          "rotation_sort_oracle_applicable": false,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 74,
+          "zeros": 32
+        },
+        "queries": 237,
+        "reads_a": [
+          "G",
+          "CT",
+          "CGNGGATTCNTA",
+          "CCGNNA",
+          "AANACT"
+        ],
+        "reads_b": [
+          "AGCTGNT",
+          "TNTNTCGNGTAG",
+          "TCNTNNTNAC",
+          "AANT",
+          "GCTC"
+        ]
+      },
+      {
+        "case": "random-49",
+        "interleave": {
+          "case": "random-49",
+          "exact_bits_checked": 18,
+          "expected_ones": 9,
+          "expected_zeros": 9,
+          "joint_provenance_consistent": true,
+          "lf_recovered_multiset_matches": true,
+          "ones": 9,
+          "rotation_sort_oracle_applicable": true,
+          "tied_rows_multiplicity_checked": 0,
+          "total_rows": 18,
+          "zeros": 9
+        },
+        "queries": 76,
+        "reads_a": [
+          "ATAGGTGT"
+        ],
+        "reads_b": [
+          "GNTATTTC"
+        ]
+      }
+    ],
+    "edge_source_pairs": 12,
+    "given_range_probe": {
+      "feature1_A": 3,
+      "feature1_B": 1,
+      "feature1_interval": [
+        31,
+        35
+      ],
+      "gt_direct": [
+        31,
+        35
+      ],
+      "gt_via_range": [
+        31,
+        35
+      ],
+      "t_interval": [
+        39,
+        48
+      ]
+    },
+    "mismatch_count": 0,
+    "one_search_probe": {
+      "findIndicesOfStr_calls": 4,
+      "queries": 4
+    },
+    "performance": {
+      "canonical_counts_us": 8.35,
+      "canonical_rank1_us": 5.19,
+      "one_megabit_rank1_ns_per_query": 761.82,
+      "rank_prefix_bytes_for_1Mbits": 16392
+    },
+    "query_comparisons": 27960,
+    "random_cases": 50,
+    "randomized_source_pairs": 50,
+    "seed": 20260811,
+    "source_pairs": 63,
+    "total_queries": 9320
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 1: Two-Source Rank-Aware Queries",
+    "milestone": "enhanced-modern2-feature1-two-source-rank",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-1"
+  }
+}
