@@ -1,0 +1,137 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "byte_equality": {
+      "mismatches": 0,
+      "results": [
+        {
+          "byte_equal": true,
+          "nodes_collapsed": 1,
+          "nodes_rewritten": 3,
+          "remove_ids": [
+            "sample09"
+          ],
+          "retained": 9,
+          "rows": 170
+        },
+        {
+          "byte_equal": true,
+          "nodes_collapsed": 1,
+          "nodes_rewritten": 1,
+          "remove_ids": [
+            "sample00"
+          ],
+          "retained": 9,
+          "rows": 171
+        },
+        {
+          "byte_equal": true,
+          "nodes_collapsed": 1,
+          "nodes_rewritten": 3,
+          "remove_ids": [
+            "sample05"
+          ],
+          "retained": 9,
+          "rows": 172
+        },
+        {
+          "byte_equal": true,
+          "nodes_collapsed": 3,
+          "nodes_rewritten": 4,
+          "remove_ids": [
+            "sample08",
+            "sample04",
+            "sample01"
+          ],
+          "retained": 7,
+          "rows": 135
+        },
+        {
+          "byte_equal": true,
+          "nodes_collapsed": 2,
+          "nodes_rewritten": 2,
+          "remove_ids": [
+            "sample09",
+            "sample06",
+            "sample07"
+          ],
+          "retained": 7,
+          "rows": 131
+        },
+        {
+          "byte_equal": true,
+          "nodes_collapsed": 5,
+          "nodes_rewritten": 4,
+          "remove_ids": [
+            "sample09",
+            "sample07",
+            "sample05",
+            "sample03",
+            "sample01"
+          ],
+          "retained": 5,
+          "rows": 93
+        }
+      ],
+      "shapes": 6
+    },
+    "metadata": {
+      "group_removal": true,
+      "predicate_removal": true
+    },
+    "mismatch_count": 0,
+    "notes": [
+      "read-derived fixtures are tiny deterministic corpora; real construction uses pp/cfpp (legacy about.npy) and real merges use compiled GenericMerge through the Feature-2 adapter.",
+      "removal never rebuilds from FASTQ and never modifies the input package; the output is built in a temp sibling directory and atomically published after full validation."
+    ],
+    "oracles": [
+      "independent_suffix_sort_of_retained_reads",
+      "original_standalone_bwt_bytes",
+      "clean_retained_source_control",
+      "real_standalone_counts"
+    ],
+    "randomized": {
+      "cases": 18,
+      "mismatches": 0,
+      "seed": 20260811
+    },
+    "read_provenance": {
+      "expected_read_count": 21,
+      "mates_remapped": true,
+      "read_count": 21
+    },
+    "real_integration": {
+      "comparisons": 351,
+      "mismatches": 0
+    },
+    "seed": 20260811,
+    "single_source_leaf": true
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 10: Source Removal / Unmerge Without FASTQ Rebuild",
+    "milestone": "enhanced-modern2-feature10-source-removal",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-10"
+  },
+  "starting_commit": "4d83f6a"
+}
