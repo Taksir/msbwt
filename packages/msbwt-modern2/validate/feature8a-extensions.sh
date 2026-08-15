@@ -171,5 +171,3 @@ record evidence "$(python3 -c 'import json, sys; print(json.dumps(json.load(open
 record final '{"branch": "enhanced-modern2", "milestone": "enhanced-modern2-feature8a-extensions", "feature": "Feature 8A: Source-Aware Left/Right Sequence Extensions", "status": "passed"}'
 if [ -n "$EVIDENCE" ]; then cp "$RESULT_FILE" "$EVIDENCE"; printf 'Evidence written to %s\n' "$EVIDENCE"; fi
 printf 'feature8a-extensions OK\n'
-
-
