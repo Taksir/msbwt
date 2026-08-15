@@ -1,0 +1,74 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "boundaries": {
+      "comparisons": 190,
+      "count": 190,
+      "dtype": "uint32",
+      "max_lcp": 5,
+      "mismatches": 0
+    },
+    "bwt_unchanged": true,
+    "mismatch_count": 0,
+    "notes": [
+      "lcps.npy preserves the upstream Holt convention: lcps[i] = LCP(SA[i], SA[i+1]), length N-1; canonical LCP[0] = 0.",
+      "stored '$' acts as virtual distinct ordered terminators and contributes 0 symbols to the LCP (duplicate reads never gain an extra terminator symbol).",
+      "construction recovers reads through the existing BWT only: no FASTQ, no BWT rebuild, no re-merge."
+    ],
+    "oracles": [
+      "explicit_adjacent_suffix_comparison_excluding_terminator"
+    ],
+    "query_api": {
+      "comparisons": 806,
+      "mismatches": 0
+    },
+    "randomized": {
+      "cases": 18,
+      "mismatches": 0,
+      "seed": 20260811
+    },
+    "reduced_construction": true,
+    "removal_failsafe": {
+      "drop_lcp": true,
+      "rejected": true
+    },
+    "seed": 20260811,
+    "stale_protection": {
+      "replaced_bwt_rejected": true,
+      "wrong_length_dtype_rejected": true
+    },
+    "tags_quality_unchanged": true,
+    "terminator_semantics": {
+      "duplicates": true,
+      "identical": true,
+      "prefix_suffix_n_mixed": true
+    }
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 11A: Exact Post-Construction LCP Retrofit",
+    "milestone": "enhanced-modern2-feature11a-lcp",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-11A"
+  },
+  "starting_commit": "8ed9ac1"
+}
