@@ -87,6 +87,18 @@ def explicit_lcp(a, b):
     return count
 
 
+def bisect_left(a, x):
+    lo = 0
+    hi = len(a)
+    while lo < hi:
+        mid = (lo + hi) // 2
+        if a[mid] < x:
+            lo = mid + 1
+        else:
+            hi = mid
+    return lo
+
+
 def expected_lcps(directory):
     """Independent LCP array from the explicit sorted suffix rows."""
     suffixes = [row["suffix"] for row in f9.load_rows(directory)]
@@ -138,6 +150,63 @@ class OracleBackedAdapter(object):
 
     def getTotalSize(self):
         return len(self.rows)
+
+    def findIndicesOfStr(self, seq, givenRange=None):
+        if givenRange is not None:
+            raise NotImplementedError(
+                "givenRange not used by the Feature-13A contract tests")
+        pattern = seq.decode("ascii") if isinstance(seq, bytes) else str(seq)
+        low = bisect_left(self.suffixes, pattern)
+        high = bisect_left(self.suffixes, pattern + "\x7f")
+        return low, high
+
+    def countOccurrencesOfSeq(self, seq, givenRange=None):
+        low, high = self.findIndicesOfStr(seq, givenRange)
+        return high - low
+
+    def getCharAtIndex(self, index):
+        """Raw BWT symbol code at one row (access primitive)."""
+        row = self.rows[int(index)]
+        return f9.ALPHABET_CODE[row["bwt"]]
+
+    def getOccurrence(self, symbol, position):
+        """Occ(symbol, position) by direct counting (rank primitive)."""
+        position = int(position)
+        symbol = int(symbol)
+        return sum(
+            1 for row in self.rows[:position]
+            if f9.ALPHABET_CODE[row["bwt"]] == symbol
+        )
+
+    def getSequenceDollarID(self, row_index, returnOffset=False):
+        """Global dollar ID of the read owning a row (oracle-backed)."""
+        row_index = int(row_index)
+        if self.oracle is None:
+            read_id = self.rows[row_index]["read_id"]
+            dollar_row = [
+                i for i, r in enumerate(self.rows)
+                if r["suffix"] == "$" and r["read_id"] == read_id
+            ][0]
+            local_dollar = sum(
+                1 for i, r in enumerate(self.rows)
+                if r["suffix"] == "$" and i < dollar_row
+            )
+            pos = int(self.rows[row_index]["pos"])
+        else:
+            sid, local_row = f9._tree_walk_row(
+                self.directory, load_manifest(self.directory), row_index)
+            leaf_rows = self.oracle.leaf_rows[sid]
+            read_id = leaf_rows[local_row]["read_id"]
+            local_dollar = self.oracle.leaf_dollar_rows[sid][read_id]
+            pos = int(leaf_rows[local_row]["pos"])
+        dollar_id = (
+            local_dollar
+            if self.oracle is None
+            else self.oracle.global_dollar[(sid, local_dollar)]
+        )
+        if returnOffset:
+            return dollar_id, pos
+        return dollar_id
 
     def recoverString(self, dollar_id, withIndex=False):
         if self.oracle is None:
