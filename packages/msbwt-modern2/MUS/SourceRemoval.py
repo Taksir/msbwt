@@ -98,6 +98,10 @@ from MUS.QualitySidecar import (
     filter_quality_sidecar_metadata,
     quality_sidecar_exists,
 )
+from MUS.LCP import (
+    LCPError,
+    lcp_exists,
+)
 from MUS.SourceMetadata import (
     METADATA_FILENAME,
     SourceMetadataCatalog,
@@ -487,6 +491,7 @@ def retain_sources(
     build_rank_indexes=False,
     rank_stride_bytes=64,
     chunk_rows=8 * 1024 * 1024,
+    drop_lcp=False,
 ):
     """Create a new MSBWT containing only ``keep_sources``.
 
@@ -496,6 +501,11 @@ def retain_sources(
     The input package is never mutated.  The output is built in a
     temporary sibling directory and atomically published only after the
     complete package validates.
+
+    Feature-11A LCP is adjacency data, not a row-aligned tag: it cannot be
+    filtered row-for-row.  A removal from an LCP-enabled input therefore
+    FAILS unless ``drop_lcp=True`` explicitly requests a reduced MSBWT
+    without the LCP layer (Feature 11B will add LCP-preserving removal).
     """
     input_dir = str(input_dir)
     output_dir = str(output_dir)
@@ -531,6 +541,17 @@ def retain_sources(
     if os.path.exists(output_dir) and not overwrite:
         raise SourceRemovalError(
             "output already exists: %s" % output_dir
+        )
+
+    # Feature 11A: an LCP layer is adjacency data.  It cannot be filtered
+    # row-for-row, so removal fails safely unless the caller explicitly
+    # requests a reduced package WITHOUT the LCP layer.
+    if lcp_exists(input_dir) and not drop_lcp:
+        raise LCPError(
+            "input package carries a Feature-11A LCP layer, which cannot "
+            "be filtered row-for-row by source removal; Feature 11B is "
+            "required for LCP-preserving removal.  Pass drop_lcp=True to "
+            "explicitly produce a reduced MSBWT without the LCP layer"
         )
 
     metadata_document, _ = _load_metadata_document(
@@ -719,6 +740,7 @@ def remove_sources(
     build_rank_indexes=False,
     rank_stride_bytes=64,
     chunk_rows=8 * 1024 * 1024,
+    drop_lcp=False,
 ):
     """Remove source(s)/group from a merged MSBWT without FASTQ rebuilding."""
     remove_ids = _resolve_selection(
@@ -763,4 +785,5 @@ def remove_sources(
         build_rank_indexes=build_rank_indexes,
         rank_stride_bytes=rank_stride_bytes,
         chunk_rows=chunk_rows,
+        drop_lcp=drop_lcp,
     )

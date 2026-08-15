@@ -86,6 +86,14 @@ def main():
         type=int,
         default=64,
     )
+    parser.add_argument(
+        "--drop-lcp",
+        action="store_true",
+        help=(
+            "explicitly produce a reduced MSBWT without the Feature-11A "
+            "LCP layer (LCP-preserving removal requires Feature 11B)"
+        ),
+    )
 
     args = parser.parse_args()
 
@@ -94,6 +102,7 @@ def main():
         "overwrite": args.overwrite,
         "build_rank_indexes": args.build_ranks,
         "rank_stride_bytes": args.rank_stride_bytes,
+        "drop_lcp": args.drop_lcp,
     }
 
     if args.keep is not None:

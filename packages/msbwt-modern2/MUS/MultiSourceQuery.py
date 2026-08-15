@@ -130,6 +130,11 @@ from MUS.QualitySidecar import (
     QUALITY_TAG_NAME,
     quality_sidecar_exists,
 )
+from MUS.LCP import (
+    LCPError,
+    LCPIndex,
+    lcp_exists,
+)
 
 
 RANK_DIRNAME = "ranks"
@@ -1126,12 +1131,14 @@ class MultiSourceBWT(object):
     methods."""
 
     def __init__(self, bwt, source_index, source_metadata=None,
-                 read_provenance=None, bwt_tags=None, quality_sidecar=None):
+                 read_provenance=None, bwt_tags=None, quality_sidecar=None,
+                 lcp_index=None):
         self.bwt = bwt
         self.source_index = source_index
         self.read_provenance = read_provenance
         self.bwt_tags = bwt_tags
         self.quality_sidecar = quality_sidecar
+        self.lcp_index = lcp_index
         if source_metadata is None:
             source_metadata = SourceMetadataCatalog(
                 source_index.list_sources()
@@ -1217,6 +1224,14 @@ class MultiSourceBWT(object):
                 validate=True,
             )
 
+        lcp_index = None
+        if lcp_exists(merged_bwt_dir):
+            lcp_index = LCPIndex(
+                merged_bwt_dir,
+                mmap=mmap,
+                validate=True,
+            )
+
         return cls(
             bwt,
             source_index,
@@ -1224,6 +1239,7 @@ class MultiSourceBWT(object):
             read_provenance=read_provenance,
             bwt_tags=bwt_tags,
             quality_sidecar=quality_sidecar,
+            lcp_index=lcp_index,
         )
 
     def findIndicesOfStr(self, seq, givenRange=None):
@@ -2317,6 +2333,35 @@ class MultiSourceBWT(object):
             include_rows=include_rows,
             max_rows=max_rows,
         )
+
+    def _require_lcp_index(self):
+        if self.lcp_index is None:
+            raise MultiSourceQueryError(
+                "LCP layer is not available for this MSBWT"
+            )
+        return self.lcp_index
+
+    def hasLCP(self):
+        """True when the Feature-11A LCP layer is loaded."""
+        return self.lcp_index is not None
+
+    def lcpAt(self, row):
+        """Canonical boundary LCP[row]; ``LCP[0] == 0`` always."""
+        return self._require_lcp_index().boundary(row)
+
+    def lcpAdjacent(self, left_row):
+        """``LCP(SA[left_row], SA[left_row + 1])`` (stored convention)."""
+        return self._require_lcp_index().adjacent(left_row)
+
+    def lcpBetweenRows(self, left_row, right_row):
+        """Exact LCP between arbitrary suffix rows via the RMQ identity.
+
+        ``LCP(SA[i], SA[j]) = min(lcps[i:j])`` for ``i < j``; the baseline
+        performs a direct minimum scan (an RMQ accelerator may replace it
+        later without changing semantics).
+        """
+        return self._require_lcp_index().between_rows(
+            left_row, right_row)
 
 
 # PEP-8 aliases for new code; camelCase methods intentionally match the
