@@ -1,0 +1,72 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "mismatch_count": 0,
+    "notes": [
+      "read-derived fixtures are tiny deterministic corpora, not compiled Holt/McMillan replacements; real merges use the compiled GenericMerge through the Feature-2 adapter."
+    ],
+    "oracles": [
+      "standalone_bwt",
+      "point4_sparse_listing",
+      "ranked_sparse_truncation"
+    ],
+    "performance": {
+      "frequency_queries": 20,
+      "top_queries": 20,
+      "wall_seconds": 0.01
+    },
+    "randomized": {
+      "datasets": 4,
+      "mismatches": 0,
+      "queries": 597,
+      "seed": 20260811
+    },
+    "real_integration": {
+      "canonical_two_source": {
+        "mismatches": 0,
+        "queries": 66
+      },
+      "five_source_balanced": {
+        "mismatches": 0,
+        "queries": 14
+      }
+    },
+    "real_queries": 80,
+    "seed": 20260811,
+    "ten_source_fixture": {
+      "count_only_probe": true,
+      "mismatches": 0,
+      "one_search_probe": true,
+      "patterns": 402,
+      "tie_rule_probe": true,
+      "top_k_comparisons": 2814
+    }
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Features 5 & 6: Sample Frequency and Top-k Exact Sources",
+    "milestone": "enhanced-modern2-feature5-6-frequency-topk",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-5/6"
+  },
+  "starting_commit": "51770e6"
+}
