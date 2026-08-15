@@ -1,11 +1,12 @@
 """Constituent-specific queries over a provenance-preserving multi-merged
-MSBWT (Features 3-7, enhanced-modern2).
+MSBWT (Features 3-8A, enhanced-modern2).
 
 This is the additive query layer over the verified Feature-2 provenance tree
 (``MUS.MultiSourceProvenance``) and the verified Feature-1 rank primitive
 (``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the
-Point-3/4/5/6/7 candidates (``research/feature-candidates/3/``, ``4/``,
-``5 and 6/``, ``7/``) into the msbwt-modern2 production tree with:
+Point-3/4/5/6/7/8A candidates (``research/feature-candidates/3/``, ``4/``,
+``5 and 6/``, ``7/``, ``8a/``) into the msbwt-modern2 production tree
+with:
 
 - Python 2.7 compatibility (the candidate used the Python-3-only ``Path``
   type, which does not exist in the Python 2.7 standard library);
@@ -59,6 +60,17 @@ provenance tree once with two pruning modes (skip branches containing no
 selected source; complete-subtree shortcut when every leaf below a node is
 selected).
 
+Feature 8A adds source-aware one-symbol sequence extension WITHOUT a
+reverse FM-index: ``extend`` / ``extendLeft`` / ``extendRight`` with the
+default biological alphabet ``ACGNT``.  Left extension reuses the parent
+interval via ``givenRange`` (1 full search + |alphabet| incremental FM
+steps); right extension performs one ordinary exact search per candidate
+(``P + base``) and honestly reports the asymmetry.  ``$`` is excluded from
+left extension (end-marker/backward-step semantics are cyclic) but allowed
+for right extension with an explicit alphabet.  Any source / subset /
+group / where selection (Features 3 and 7) applies to every candidate
+interval.
+
 The implementation is intentionally pure Python/NumPy and lazy-loads only
 the interleave rank indexes required by queried source paths.  It does not
 modify Holt/McMillan's FM-index or merge algorithm.
@@ -81,6 +93,7 @@ from __future__ import absolute_import
 import hashlib
 import heapq
 import os
+import sys
 import zipfile
 
 import numpy as np
@@ -100,6 +113,13 @@ from MUS.SourceMetadata import (
 RANK_DIRNAME = "ranks"
 RANK_FILE_SUFFIX = ".npz"
 
+# Feature 8A extension alphabet: default biological alphabet; '$' is valid
+# for right extension only (left extension by the end-marker is rejected
+# because MSBWT end-marker/backward-step behavior has cyclic/read-boundary
+# semantics, not ordinary linear left context).
+DEFAULT_EXTENSION_ALPHABET = b"ACGNT"
+VALID_EXTENSION_SYMBOLS = frozenset(ord(symbol) for symbol in "$ACGNT")
+
 # zipfile.BadZipFile (Python 3) / zipfile.BadZipfile (Python 2.7)
 _ZIP_BAD = getattr(zipfile, "BadZipFile", None) or getattr(
     zipfile, "BadZipfile", None
@@ -108,6 +128,57 @@ _ZIP_BAD = getattr(zipfile, "BadZipFile", None) or getattr(
 
 class MultiSourceQueryError(ValueError):
     """Raised when a constituent query cannot be resolved safely."""
+
+
+def _byte_symbol(value):
+    """One-byte string for a byte value (Python-2/3 compatible).
+
+    ``bytes([v])`` is Python-3-only behavior; on Python 2 ``bytes`` is
+    ``str`` and ``str([v])`` is the list repr, not a one-byte string.
+    """
+    if isinstance(value, int):
+        if sys.version_info[0] == 2:
+            return chr(value)
+        return bytes([value])
+    return value
+
+
+def _normalize_extension_alphabet(alphabet, direction):
+    """Validate/normalize an extension alphabet (dedup, symbol check)."""
+    if alphabet is None:
+        alphabet = DEFAULT_EXTENSION_ALPHABET
+    if isinstance(alphabet, str):
+        alphabet = alphabet.encode("ascii")
+    elif isinstance(alphabet, bytearray):
+        alphabet = bytes(alphabet)
+    elif not isinstance(alphabet, bytes):
+        alphabet = bytes(alphabet)
+
+    seen = set()
+    normalized = []
+    for raw in alphabet:
+        # Python 2 iterates str as 1-char strings; Python 3 iterates bytes
+        # as ints.  Normalize to the byte value.
+        value = raw if isinstance(raw, int) else ord(raw)
+        if value not in VALID_EXTENSION_SYMBOLS:
+            raise ValueError(
+                "extension alphabet contains unsupported symbol byte %r"
+                % value
+            )
+        if direction == "left" and value == ord("$"):
+            raise ValueError(
+                "left extension by '$' is intentionally disabled because "
+                "the MSBWT end-marker has cyclic/boundary semantics; use "
+                "DNA symbols A/C/G/N/T for linear left context"
+            )
+        if value not in seen:
+            normalized.append(value)
+            seen.add(value)
+    if not normalized:
+        raise ValueError("extension alphabet cannot be empty")
+    if sys.version_info[0] == 2:
+        return "".join(chr(value) for value in normalized)
+    return bytes(normalized)
 
 
 def _normalize_sequence(seq):
@@ -1393,6 +1464,184 @@ class MultiSourceBWT(object):
             include_intervals=include_intervals,
             include_stats=include_stats,
         )
+
+    def _extension_selection(self, source=None, sources=None, group=None,
+                             where=None):
+        """Resolve exactly one extension selection mode."""
+        modes = (
+            int(source is not None)
+            + int(sources is not None)
+            + int(group is not None)
+            + int(where is not None)
+        )
+        if modes > 1:
+            raise ValueError(
+                "use only one of source, sources, group, or where for an "
+                "extension query"
+            )
+        if source is not None:
+            return ("source", self.source_index.resolve_source(source))
+        if sources is not None:
+            return ("subset", self.source_index.resolve_source_ids(sources))
+        if group is not None:
+            return ("subset", self.source_metadata.group_sources(group))
+        if where is not None:
+            if not isinstance(where, dict):
+                raise ValueError("where must be a mapping")
+            return ("subset", self.source_metadata.select_where(**where))
+        return ("merged", None)
+
+    def _count_extension_interval(self, interval, selection):
+        low, high = interval
+        mode, payload = selection
+        if mode == "merged":
+            return int(high - low), None
+        if mode == "source":
+            source_interval = self.source_index.project_interval(
+                payload,
+                low,
+                high,
+            )
+            return int(source_interval[1] - source_interval[0]), (
+                source_interval)
+        if mode == "subset":
+            return int(
+                self.source_index.subset_count_interval(
+                    low,
+                    high,
+                    payload,
+                    include_stats=False,
+                )
+            ), None
+        raise AssertionError("unknown extension selection mode")
+
+    def extend(
+        self,
+        seq,
+        direction="left",
+        alphabet=None,
+        source=None,
+        sources=None,
+        group=None,
+        where=None,
+        include_zero=True,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        """Return exact one-symbol extensions using the existing one-way
+        MSBWT.
+
+        ``direction='left'`` uses one full FM search for ``seq`` followed
+        by incremental backward-search steps (``givenRange``) from the
+        returned interval: cost = 1 full search + |alphabet| FM steps.
+
+        ``direction='right'`` does not require a reverse FM-index: each
+        candidate ``seq + base`` is searched independently with the
+        ordinary forward MSBWT: cost = |alphabet| full searches.  Exact,
+        but honestly asymmetric.
+
+        Selection modes: ``source`` (one constituent), ``sources`` /
+        ``group`` / ``where`` (subset aggregation, Feature 7), or merged
+        (whole index).  Exactly one selector is allowed.
+        """
+        seq = _normalize_sequence(seq)
+        if not isinstance(seq, bytes) or len(seq) == 0:
+            raise ValueError(
+                "extension queries require a non-empty byte/string pattern")
+
+        direction = str(direction).lower()
+        if direction not in ("left", "right"):
+            raise ValueError("direction must be 'left' or 'right'")
+
+        alphabet = _normalize_extension_alphabet(alphabet, direction)
+        selection = self._extension_selection(
+            source=source,
+            sources=sources,
+            group=group,
+            where=where,
+        )
+
+        full_searches = 0
+        incremental_extension_calls = 0
+        extensions = []
+        parent_interval = None
+
+        if direction == "left":
+            parent_interval = self.findIndicesOfStr(seq)
+            full_searches = 1
+            candidate_intervals = []
+            for base_value in alphabet:
+                base = _byte_symbol(base_value)
+                interval = self.findIndicesOfStr(
+                    base, givenRange=parent_interval)
+                incremental_extension_calls += 1
+                candidate_intervals.append((base, interval))
+        else:
+            candidate_intervals = []
+            for base_value in alphabet:
+                base = _byte_symbol(base_value)
+                interval = self.findIndicesOfStr(seq + base)
+                full_searches += 1
+                candidate_intervals.append((base, interval))
+
+        for base, interval in candidate_intervals:
+            count, source_interval = self._count_extension_interval(
+                interval,
+                selection,
+            )
+            if not include_zero and count == 0:
+                continue
+
+            extended = base + seq if direction == "left" else seq + base
+            record = {
+                "base": base,
+                "sequence": extended,
+                "count": int(count),
+            }
+            if include_intervals:
+                record["merged_interval"] = (
+                    int(interval[0]), int(interval[1]))
+                record["merged_count"] = int(interval[1] - interval[0])
+                if source_interval is not None:
+                    record["source_interval"] = (
+                        int(source_interval[0]),
+                        int(source_interval[1]),
+                    )
+            extensions.append(record)
+
+        result = {
+            "pattern": seq,
+            "direction": direction,
+            "alphabet": alphabet,
+            "selection_mode": selection[0],
+            "extensions": extensions,
+        }
+        if selection[0] == "source":
+            result["source_id"] = selection[1]
+        elif selection[0] == "subset":
+            result["selected_source_ids"] = list(selection[1])
+
+        if include_stats:
+            result["stats"] = {
+                "full_fm_searches": full_searches,
+                "incremental_extension_calls": incremental_extension_calls,
+                "candidate_extensions": len(alphabet),
+                "extensions_returned": len(extensions),
+                "parent_interval": (
+                    (int(parent_interval[0]), int(parent_interval[1]))
+                    if parent_interval is not None
+                    else None
+                ),
+            }
+        return result
+
+    def extendLeft(self, seq, **kwargs):
+        kwargs["direction"] = "left"
+        return self.extend(seq, **kwargs)
+
+    def extendRight(self, seq, **kwargs):
+        kwargs["direction"] = "right"
+        return self.extend(seq, **kwargs)
 
     def querySource(self, seq, source, givenRange=None, include_trace=False):
         """Return a rich constituent-specific exact-query result."""

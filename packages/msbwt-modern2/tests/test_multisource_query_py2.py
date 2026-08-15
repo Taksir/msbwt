@@ -194,15 +194,38 @@ class NaiveSuffixBWT(object):
             pattern = seq.decode("ascii")
         else:
             pattern = str(seq)
-        if givenRange is not None:
+        if givenRange is None:
+            low = self._bisect_left(pattern)
+            # All observed suffix characters (DNA/N/$) are ASCII < 0x7F, so
+            # any continuation of the pattern sorts below pattern + DEL on
+            # both Python 2 and Python 3.
+            high = self._bisect_left(pattern + "\x7f")
+            return low, high
+        return self._backward_step(pattern, givenRange)
+
+    def _backward_step(self, symbol, given_range):
+        """FM backward step: interval(cP) = [C(c) + rank_c(l),
+        C(c) + rank_c(h)) where ``given_range = [l, h)`` is the interval
+        of P.  Computed with plain counting over the naive rows (single-
+        symbol extension only, like the real BasicBWT usage in the
+        extension API)."""
+        if len(symbol) != 1:
             raise NotImplementedError(
-                "naive fixture does not implement givenRange")
-        low = self._bisect_left(pattern)
-        # All observed suffix characters (DNA/N/$) are ASCII < 0x7F, so any
-        # continuation of the pattern sorts below pattern + DEL on both
-        # Python 2 and Python 3.
-        high = self._bisect_left(pattern + "\x7f")
-        return low, high
+                "naive fixture givenRange supports single symbols only")
+        low, high = given_range
+        # C(c) = number of rows whose first character sorts below c
+        c_first = 0
+        rank_l = 0
+        rank_h = 0
+        for index, row in enumerate(self.rows):
+            first = row["suffix"][0]
+            if first < symbol:
+                c_first += 1
+            if index < low and row["bwt"] == symbol:
+                rank_l += 1
+            if index < high and row["bwt"] == symbol:
+                rank_h += 1
+        return (c_first + rank_l, c_first + rank_h)
 
     def _bisect_left(self, pattern):
         lo = 0

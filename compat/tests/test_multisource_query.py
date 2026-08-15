@@ -176,9 +176,24 @@ class NaiveSuffixBWT(object):
     def findIndicesOfStr(self, seq, givenRange=None):
         self.search_calls += 1
         pattern = seq.decode("ascii") if isinstance(seq, bytes) else str(seq)
-        if givenRange is not None:
-            raise NotImplementedError("naive fixture has no givenRange")
-        return self._bisect(pattern), self._bisect(pattern + "\x7f")
+        if givenRange is None:
+            return self._bisect(pattern), self._bisect(pattern + "\x7f")
+        if len(pattern) != 1:
+            raise NotImplementedError(
+                "naive fixture givenRange supports single symbols only")
+        low, high = givenRange
+        c_first = 0
+        rank_l = 0
+        rank_h = 0
+        for index, row in enumerate(self.rows):
+            first = row["suffix"][0]
+            if first < pattern:
+                c_first += 1
+            if index < low and row["bwt"] == pattern:
+                rank_l += 1
+            if index < high and row["bwt"] == pattern:
+                rank_h += 1
+        return (c_first + rank_l, c_first + rank_h)
 
     def _bisect(self, pattern):
         lo, hi = 0, len(self.suffixes)
