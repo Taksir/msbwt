@@ -1,0 +1,65 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "mismatch_count": 0,
+    "notes": [
+      "read-derived fixtures are tiny deterministic corpora; real merges use compiled GenericMerge through the Feature-2 adapter."
+    ],
+    "oracles": [
+      "standalone_bwt",
+      "direct_exact_search"
+    ],
+    "performance": {
+      "left_queries": 10,
+      "right_queries": 10,
+      "wall_seconds": 0.008
+    },
+    "randomized": {
+      "datasets": 3,
+      "mismatches": 0,
+      "queries": 2290,
+      "seed": 20260811
+    },
+    "real_integration": {
+      "canonical_two_source": {
+        "mismatches": 0,
+        "queries": 200
+      }
+    },
+    "seed": 20260811,
+    "ten_source_fixture": {
+      "asymmetry_probe": true,
+      "comparisons": 2400,
+      "dollar_probe": true,
+      "mismatches": 0,
+      "patterns": 165
+    }
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 8A: Source-Aware Left/Right Sequence Extensions",
+    "milestone": "enhanced-modern2-feature8a-extensions",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-8A"
+  },
+  "starting_commit": "373541a"
+}
