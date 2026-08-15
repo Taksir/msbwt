@@ -1,0 +1,72 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "mismatch_count": 0,
+    "notes": [
+      "read-derived fixtures are tiny deterministic corpora; real construction uses pp/cfpp (legacy about.npy) and real merges use compiled GenericMerge through the Feature-2 adapter.",
+      "read provenance is AUTHORITATIVE; read_provenance.json binds format/version/read count/source metadata and the validated msbwt_sha256 of the current BWT."
+    ],
+    "oracles": [
+      "naive_suffix_rows_plus_tree_walk",
+      "per_read_naive_pattern_counts",
+      "legacy_about_npy",
+      "real_getSequenceDollarID_lf_walk"
+    ],
+    "performance": {
+      "lf_walks_with_filter": 5,
+      "lf_walks_without_filter": 47,
+      "source_prefilter_skips": 42,
+      "wall_seconds": 0.083
+    },
+    "randomized": {
+      "datasets": 3,
+      "mismatches": 0,
+      "queries": 1022,
+      "seed": 20260811
+    },
+    "real_integration": {
+      "comparisons": 655,
+      "mismatches": 0,
+      "reads": 8,
+      "record_bytes": 20,
+      "sources": 2
+    },
+    "seed": 20260811,
+    "ten_source_fixture": {
+      "comparisons": 2653,
+      "mismatches": 0,
+      "one_sided_rejection": true,
+      "patterns": 185,
+      "reads": 30,
+      "record_bytes": 20,
+      "sources": 10
+    }
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 9: Exact Read-Level Provenance",
+    "milestone": "enhanced-modern2-feature9-read-provenance",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-9"
+  },
+  "starting_commit": "ce8e66b"
+}
