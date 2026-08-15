@@ -124,6 +124,12 @@ from MUS.BWTTags import (
     BWTTagStore,
     tags_exist,
 )
+from MUS.QualitySidecar import (
+    QualitySidecar,
+    QualitySidecarError,
+    QUALITY_TAG_NAME,
+    quality_sidecar_exists,
+)
 
 
 RANK_DIRNAME = "ranks"
@@ -1120,11 +1126,12 @@ class MultiSourceBWT(object):
     methods."""
 
     def __init__(self, bwt, source_index, source_metadata=None,
-                 read_provenance=None, bwt_tags=None):
+                 read_provenance=None, bwt_tags=None, quality_sidecar=None):
         self.bwt = bwt
         self.source_index = source_index
         self.read_provenance = read_provenance
         self.bwt_tags = bwt_tags
+        self.quality_sidecar = quality_sidecar
         if source_metadata is None:
             source_metadata = SourceMetadataCatalog(
                 source_index.list_sources()
@@ -1202,12 +1209,21 @@ class MultiSourceBWT(object):
                 validate=True,
             )
 
+        quality_sidecar = None
+        if quality_sidecar_exists(merged_bwt_dir):
+            quality_sidecar = QualitySidecar(
+                merged_bwt_dir,
+                mmap=mmap,
+                validate=True,
+            )
+
         return cls(
             bwt,
             source_index,
             source_metadata=source_metadata,
             read_provenance=read_provenance,
             bwt_tags=bwt_tags,
+            quality_sidecar=quality_sidecar,
         )
 
     def findIndicesOfStr(self, seq, givenRange=None):
@@ -1843,6 +1859,7 @@ class MultiSourceBWT(object):
         where=None,
         givenRange=None,
         include_sequence=False,
+        include_quality=False,
         include_rows=False,
         max_occurrences=None,
     ):
@@ -1964,6 +1981,14 @@ class MultiSourceBWT(object):
                     int(record["dollar_id"])
                 )
                 record["sequence"] = recovered
+
+        if include_quality:
+            quality_sidecar = self._require_quality_sidecar()
+            for record in reads:
+                record["quality"] = quality_sidecar.recover_quality(
+                    self.bwt,
+                    int(record["dollar_id"]),
+                )
 
         return {
             "sequence": seq,
@@ -2216,6 +2241,82 @@ class MultiSourceBWT(object):
             for value, count in zip(unique, counts)
         ]
         return result
+
+    def _require_quality_sidecar(self):
+        if self.quality_sidecar is None:
+            raise MultiSourceQueryError(
+                "exact FASTQ quality sidecar is not available for this "
+                "MSBWT"
+            )
+        return self.quality_sidecar
+
+    def hasQuality(self):
+        """True when the exact FASTQ quality sidecar is loaded."""
+        return self.quality_sidecar is not None
+
+    def qualityForRow(self, row_index):
+        """Return the exact FASTQ quality byte for one suffix-start row."""
+        return self._require_quality_sidecar().quality_for_row(
+            row_index
+        )
+
+    def readQuality(self, dollar_id):
+        """Recover one read's exact original FASTQ quality line."""
+        return self._require_quality_sidecar().recover_quality(
+            self.bwt,
+            int(dollar_id),
+        )
+
+    def readSequenceAndQuality(self, dollar_id):
+        """Recover exact biological sequence and FASTQ quality bytes."""
+        return (
+            self._require_quality_sidecar()
+            .recover_sequence_and_quality(
+                self.bwt,
+                int(dollar_id),
+            )
+        )
+
+    def readFastqData(self, dollar_id):
+        """Return sequence, quality and Feature-9 provenance when available."""
+        sidecar = self._require_quality_sidecar()
+        return sidecar.record(
+            self.bwt,
+            int(dollar_id),
+            read_provenance=self.read_provenance,
+        )
+
+    def qualityValues(
+        self,
+        seq,
+        source=None,
+        sources=None,
+        group=None,
+        where=None,
+        givenRange=None,
+        include_rows=False,
+        max_rows=None,
+    ):
+        """Return quality of the first base of each matching suffix
+        occurrence.
+
+        Because Q1 quality is suffix-start aligned, a normal FM interval
+        for pattern ``P`` directly indexes the quality byte of ``P``'s
+        first base.  The Feature-3/7 selectors apply through the Feature-12
+        tag-query machinery.
+        """
+        self._require_quality_sidecar()
+        return self.tagValues(
+            seq,
+            QUALITY_TAG_NAME,
+            source=source,
+            sources=sources,
+            group=group,
+            where=where,
+            givenRange=givenRange,
+            include_rows=include_rows,
+            max_rows=max_rows,
+        )
 
 
 # PEP-8 aliases for new code; camelCase methods intentionally match the

@@ -94,6 +94,10 @@ from MUS.BWTTags import (
     filter_tag_arrays,
     tags_exist,
 )
+from MUS.QualitySidecar import (
+    filter_quality_sidecar_metadata,
+    quality_sidecar_exists,
+)
 from MUS.SourceMetadata import (
     METADATA_FILENAME,
     SourceMetadataCatalog,
@@ -556,6 +560,7 @@ def retain_sources(
         "read_provenance_preserved": False,
         "bwt_tags_preserved": False,
         "bwt_tag_count": 0,
+        "quality_sidecar_preserved": False,
         "rank_indexes_built": 0,
     }
 
@@ -657,6 +662,16 @@ def retain_sources(
                 dollar_keep_mask,
             )
             stats["read_provenance_preserved"] = True
+
+        # Q1: regenerate the quality sidecar metadata for the reduced
+        # package (the quality tag itself was already filtered with the
+        # exact BWT survival mask above).
+        if quality_sidecar_exists(input_dir):
+            filter_quality_sidecar_metadata(
+                input_dir,
+                temp_dir,
+            )
+            stats["quality_sidecar_preserved"] = True
 
         _save_filtered_metadata(
             temp_dir,

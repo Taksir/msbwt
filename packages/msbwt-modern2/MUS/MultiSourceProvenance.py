@@ -639,6 +639,15 @@ def merge_two_with_provenance(
             "read provenance is not silently lost"
         )
 
+    # Q1: exact FASTQ quality is a strict Point-12 tag specialization.  It
+    # must exist on both children or neither; one-sided synthesis would
+    # violate lossless quality preservation.
+    from MUS.QualitySidecar import preflight_quality_merge
+    quality_merge_enabled = preflight_quality_merge(
+        left_dir,
+        right_dir,
+    )
+
     # Feature 12: validate BWT-row tag schemas before the expensive BWT
     # merge.  One-sided tags are permitted only when the tag explicitly
     # declares a missing value; otherwise the merge fails rather than
@@ -706,6 +715,14 @@ def merge_two_with_provenance(
             right_dir,
             output_dir,
             plan=tag_merge_plan,
+        )
+
+    if quality_merge_enabled:
+        from MUS.QualitySidecar import merge_quality_sidecar_metadata
+        merge_quality_sidecar_metadata(
+            left_dir,
+            right_dir,
+            output_dir,
         )
 
     return manifest
