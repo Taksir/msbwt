@@ -1,0 +1,575 @@
+"""Constituent-specific queries over a provenance-preserving multi-merged
+MSBWT (Feature 3, enhanced-modern2).
+
+This is the additive query layer over the verified Feature-2 provenance tree
+(``MUS.MultiSourceProvenance``) and the verified Feature-1 rank primitive
+(``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the Point-3
+candidate (``research/feature-candidates/3/MultiSourceQuery.py``) into the
+msbwt-modern2 production tree with:
+
+- Python 2.7 compatibility (the candidate used the Python-3-only ``Path``
+  type, which does not exist in the Python 2.7 standard library);
+- hardened rank-cache identity: persisted rank samples carry the interleave
+  content digest and total 1-bit count so a same-length replaced interleave
+  can never silently consume a stale cache (mirrors the verified Feature-1
+  cache contract);
+- the strict sequence-normalization contract of ``MUS.SourceIndex``.
+
+Algorithm
+---------
+
+For a merged FM interval ``[l, r)`` and a requested constituent source, the
+interval is projected down the source's root-to-leaf path.  At a left edge::
+
+    [l, r) -> [rank0(l), rank0(r))
+
+and at a right edge::
+
+    [l, r) -> [rank1(l), rank1(r))
+
+Because every two-way merge is a stable interleaving of the child
+suffix/BWT orders (verified in Features 1-2), the final interval is the
+constituent-local FM interval and its length is the exact number of
+occurrences of the pattern in that constituent.  For a balanced tree with
+``F`` sources a single constituent query costs one merged FM search plus
+O(log F) rank projections.
+
+The implementation is intentionally pure Python/NumPy and lazy-loads only
+the interleave rank indexes required by queried source paths.  It does not
+modify Holt/McMillan's FM-index or merge algorithm.
+
+Persistence classification (per the enhanced-modern2 persistence rule):
+
+- ``provenance.json`` + ``provenance/interleaves/<node-id>.npy`` +
+  ``inter0.npy`` -- AUTHORITATIVE (Feature 2); this module only reads them.
+- ``provenance/ranks/<node-id>.npz`` -- DERIVED / REBUILDABLE rank samples.
+  They can always be rebuilt from the authoritative interleaves; a stale,
+  corrupt, truncated, or identity-mismatching cache is silently rebuilt and
+  never used to produce counts.
+
+Python 2.7 compatibility is required (CPython 2.7.18 / NumPy 1.16.6); this
+module also runs unchanged under Python 3 for host-side testing.
+"""
+
+from __future__ import absolute_import
+
+import hashlib
+import os
+import zipfile
+
+import numpy as np
+
+from MUS.MultiSourceProvenance import (
+    ProvenanceError,
+    load_manifest,
+)
+from MUS.SourceIndex import TwoSourceInterleaveIndex, _POPCOUNT
+
+
+RANK_DIRNAME = "ranks"
+RANK_FILE_SUFFIX = ".npz"
+
+# zipfile.BadZipFile (Python 3) / zipfile.BadZipfile (Python 2.7)
+_ZIP_BAD = getattr(zipfile, "BadZipFile", None) or getattr(
+    zipfile, "BadZipfile", None
+)
+
+
+class MultiSourceQueryError(ValueError):
+    """Raised when a constituent query cannot be resolved safely."""
+
+
+def _normalize_sequence(seq):
+    """Explicit Python-2-compatible normalization (contract of SourceIndex).
+
+    ``bytes`` (Python 2 ``str``) is returned unchanged; ``str`` (Python 3)
+    and ``unicode`` (Python 2) are encoded as ASCII (non-ASCII raises
+    ``UnicodeEncodeError``); anything else raises ``TypeError``.
+    """
+    if isinstance(seq, bytes):
+        return seq
+    if not hasattr(seq, "encode"):
+        raise TypeError(
+            "sequence must be bytes/str (or ASCII unicode), got %s"
+            % type(seq).__name__
+        )
+    return seq.encode("ascii")
+
+
+class MultiSourceQueryIndex(object):
+    """Project merged FM intervals into any constituent source.
+
+    Parameters
+    ----------
+    merged_bwt_dir : str
+        Final Feature-2 merged BWT directory containing ``provenance.json``
+        and the saved internal-node interleaves.
+    rank_stride_bytes : int, optional
+        Sampling stride used by ``TwoSourceInterleaveIndex``.
+    mmap : bool, optional
+        Memory-map interleave arrays instead of eagerly copying them.
+    use_saved_rank : bool, optional
+        Load per-node rank caches from ``provenance/ranks`` when available
+        and identity-valid.
+    validate_manifest : bool, optional
+        Validate the provenance manifest (digests, tree lengths) on load.
+
+    Notes
+    -----
+    The object precomputes only source -> branch-path metadata.  Rank
+    indexes are loaded lazily as source paths are queried, which matters for
+    large provenance trees when an application accesses only a few
+    constituents.
+    """
+
+    def __init__(
+        self,
+        merged_bwt_dir,
+        rank_stride_bytes=64,
+        mmap=True,
+        use_saved_rank=True,
+        validate_manifest=True,
+    ):
+        self.merged_bwt_dir = str(merged_bwt_dir)
+        self.rank_stride_bytes = int(rank_stride_bytes)
+        self.mmap = bool(mmap)
+        self.use_saved_rank = bool(use_saved_rank)
+
+        if self.rank_stride_bytes <= 0:
+            raise ValueError("rank_stride_bytes must be positive")
+
+        self.manifest = load_manifest(
+            self.merged_bwt_dir,
+            validate=validate_manifest,
+        )
+        self.total_bits = int(self.manifest["root"]["length"])
+
+        self._sources_by_id = {}
+        self._source_ids_by_name = {}
+        for source in self.manifest["sources"]:
+            sid = str(source["id"])
+            name = str(source.get("name", sid))
+            self._sources_by_id[sid] = source
+            self._source_ids_by_name.setdefault(name, []).append(sid)
+
+        self._paths = {}
+        self._nodes_by_id = {}
+        self._build_paths(self.manifest["root"], [])
+
+        # Lazy cache: node_id -> TwoSourceInterleaveIndex.
+        self._rank_indexes = {}
+
+    @property
+    def source_count(self):
+        return len(self._sources_by_id)
+
+    @property
+    def loaded_rank_node_count(self):
+        """Number of internal-node rank indexes materialized so far."""
+        return len(self._rank_indexes)
+
+    def list_sources(self):
+        return list(self.manifest["sources"])
+
+    def resolve_source(self, source):
+        """Resolve a stable source ID or an unambiguous source name."""
+        source = str(source)
+        if source in self._sources_by_id:
+            return source
+
+        matches = self._source_ids_by_name.get(source, [])
+        if len(matches) == 1:
+            return matches[0]
+        if len(matches) > 1:
+            raise MultiSourceQueryError(
+                "source name %r is ambiguous; use a stable source ID" % source
+            )
+        raise KeyError("unknown source ID/name: %s" % source)
+
+    def source_record(self, source):
+        sid = self.resolve_source(source)
+        return dict(self._sources_by_id[sid])
+
+    def source_path(self, source):
+        """Return a copy of the source's root-to-leaf branch path.
+
+        Each item is ``(node_id, branch)`` where branch 0 selects the left
+        child and branch 1 selects the right child.
+        """
+        sid = self.resolve_source(source)
+        return list(self._paths[sid])
+
+    def _build_paths(self, node, path):
+        node_type = node["type"]
+        if node_type == "leaf":
+            sid = str(node["source_id"])
+            if sid in self._paths:
+                raise ProvenanceError(
+                    "duplicate leaf source ID in tree: %s" % sid
+                )
+            self._paths[sid] = list(path)
+            return
+
+        if node_type != "merge":
+            raise ProvenanceError(
+                "unknown provenance node type: %r" % node_type
+            )
+
+        node_id = str(node["node_id"])
+        if node_id in self._nodes_by_id:
+            raise ProvenanceError("duplicate internal node ID: %s" % node_id)
+        self._nodes_by_id[node_id] = node
+
+        self._build_paths(node["left"], path + [(node_id, 0)])
+        self._build_paths(node["right"], path + [(node_id, 1)])
+
+    def _rank_cache_path(self, node_id):
+        return os.path.join(
+            self.merged_bwt_dir,
+            "provenance",
+            RANK_DIRNAME,
+            str(node_id) + RANK_FILE_SUFFIX,
+        )
+
+    @staticmethod
+    def _array_sha256(array):
+        """Content digest of the full stored interleave array bytes."""
+        return hashlib.sha256(
+            np.ascontiguousarray(array).tobytes()
+        ).hexdigest()
+
+    def _load_saved_rank(self, node_id, expected_bits, packed):
+        """Load a saved rank cache only when it provably matches this node.
+
+        Identity is bound to the authoritative interleave content (digest of
+        the full stored array) and the total 1-bit count over the valid
+        storage bytes.  A stale, corrupt, truncated, or incompatible cache is
+        DERIVED data: it is silently ignored (rebuilt from the interleave)
+        and can never produce wrong counts.
+        """
+        if not self.use_saved_rank:
+            return None
+        path = self._rank_cache_path(node_id)
+        if not os.path.exists(path):
+            return None
+        try:
+            saved = np.load(path, allow_pickle=False)
+            saved_total_bits = int(saved["total_bits"][0])
+            saved_stride = int(saved["rank_stride_bytes"][0])
+            if (
+                saved_total_bits != int(expected_bits)
+                or saved_stride != self.rank_stride_bytes
+            ):
+                return None
+            try:
+                digest_key = saved["interleave_sha256"]
+                ones_key = saved["interleave_total_ones"]
+            except KeyError:
+                # Pre-identity caches cannot prove they belong to this
+                # interleave; treat them as incompatible and rebuild.
+                return None
+            saved_digest = bytes(digest_key.flat[0])
+            if isinstance(saved_digest, bytes):
+                saved_digest = saved_digest.decode("ascii")
+            if saved_digest != self._array_sha256(packed):
+                return None
+            needed_bytes = (int(expected_bits) + 7) // 8
+            if int(ones_key[0]) != self._count_ones(packed, needed_bytes):
+                return None
+            prefix = np.asarray(saved["rank_prefix"], dtype=np.uint64)
+            num_blocks = self._rank_block_count(needed_bytes,
+                                                self.rank_stride_bytes)
+            if not self._prefix_consistent(prefix, num_blocks, int(ones_key[0])):
+                return None
+            return prefix
+        except (
+            IOError,
+            OSError,
+            KeyError,
+            ValueError,
+            TypeError,
+            _ZIP_BAD,
+        ):
+            # Derived cache only.  A corrupt/stale file should never make the
+            # primary provenance structure unusable.
+            return None
+
+    @staticmethod
+    def _count_ones(packed, used_bytes):
+        """Total 1 bits over the first ``used_bytes`` stored bytes."""
+        return int(
+            _POPCOUNT[np.ascontiguousarray(packed)[:used_bytes]].sum(
+                dtype=np.uint64
+            )
+        )
+
+    @staticmethod
+    def _rank_block_count(used_bytes, stride):
+        if used_bytes == 0:
+            return 0
+        return (used_bytes + stride - 1) // stride
+
+    @staticmethod
+    def _prefix_consistent(prefix, num_blocks, expected_total_ones):
+        if prefix.ndim != 1:
+            return False
+        if prefix.shape[0] != num_blocks + 1:
+            return False
+        if int(prefix[0]) != 0:
+            return False
+        if int(prefix[-1]) != expected_total_ones:
+            return False
+        prev = 0
+        for value in prefix:
+            cur = int(value)
+            if cur < prev:
+                return False
+            prev = cur
+        return True
+
+    def _get_rank_index(self, node_id):
+        node_id = str(node_id)
+        if node_id in self._rank_indexes:
+            return self._rank_indexes[node_id]
+
+        node = self._nodes_by_id[node_id]
+        interleave_path = os.path.join(
+            self.merged_bwt_dir, str(node["interleave"])
+        )
+        mmap_mode = "r" if self.mmap else None
+        packed = np.load(interleave_path, mmap_mode=mmap_mode)
+        total_bits = int(node["length"])
+        rank_prefix = self._load_saved_rank(node_id, total_bits, packed)
+
+        rank_index = TwoSourceInterleaveIndex(
+            packed,
+            total_bits=total_bits,
+            rank_stride_bytes=self.rank_stride_bytes,
+            rank_prefix=rank_prefix,
+        )
+        self._rank_indexes[node_id] = rank_index
+        return rank_index
+
+    def save_loaded_rank_indexes(self):
+        """Persist rank samples for internal nodes loaded by queries.
+
+        Only nodes already touched by source queries are written.  This keeps
+        preprocessing incremental for very large multi-source trees.
+
+        Persisted fields (``provenance/ranks/<node-id>.npz``, an uncompressed
+        zip of .npy members):
+
+        - ``rank_prefix``: uint64 array of sampled 1-bit counts;
+        - ``total_bits``: uint64 scalar, the node's row count;
+        - ``rank_stride_bytes``: uint64 scalar, the sampling stride;
+        - ``interleave_sha256``: S64 ASCII hex digest of the full stored
+          interleave array bytes (cache identity);
+        - ``interleave_total_ones``: uint64 scalar, total 1 bits over the
+          valid storage bytes (cache identity + prefix consistency).
+
+        The file is DERIVED / REBUILDABLE.  Deleting it never destroys
+        information; it is deterministically rebuilt from the authoritative
+        interleave plus the manifest length.
+        """
+        rank_dir = os.path.join(
+            self.merged_bwt_dir, "provenance", RANK_DIRNAME
+        )
+        if not os.path.isdir(rank_dir):
+            os.makedirs(rank_dir)
+        written = []
+        for node_id, rank_index in self._rank_indexes.items():
+            path = self._rank_cache_path(node_id)
+            packed = rank_index.packed_bits
+            used_bytes = (rank_index.total_bits + 7) // 8
+            np.savez(
+                path,
+                rank_prefix=rank_index.rank_prefix,
+                total_bits=np.asarray([rank_index.total_bits], dtype=np.uint64),
+                rank_stride_bytes=np.asarray(
+                    [rank_index.rank_stride_bytes], dtype=np.uint64
+                ),
+                interleave_sha256=np.asarray(
+                    [self._array_sha256(packed)], dtype="S64"
+                ),
+                interleave_total_ones=np.asarray(
+                    [self._count_ones(packed, used_bytes)], dtype=np.uint64
+                ),
+            )
+            written.append(path)
+        return written
+
+    def _check_interval(self, start, end):
+        start = int(start)
+        end = int(end)
+        if start < 0 or end < start or end > self.total_bits:
+            raise IndexError(
+                "merged interval [%d, %d) outside [0, %d)"
+                % (start, end, self.total_bits)
+            )
+        return start, end
+
+    def project_interval(self, source, start, end, trace=False):
+        """Project merged interval ``[start, end)`` to one constituent.
+
+        Returns
+        -------
+        tuple
+            ``(local_start, local_end)`` by default.
+
+        If ``trace=True`` returns ``((local_start, local_end), steps)`` where
+        each step records the interval before/after one provenance-tree rank
+        projection.  The trace is useful for tests/debugging and is not
+        needed for normal queries.
+        """
+        sid = self.resolve_source(source)
+        start, end = self._check_interval(start, end)
+
+        l = start
+        r = end
+        steps = []
+        for node_id, branch in self._paths[sid]:
+            rank_index = self._get_rank_index(node_id)
+            before = (l, r)
+            if branch == 0:
+                l = rank_index.rank0(l)
+                r = rank_index.rank0(r)
+            else:
+                l = rank_index.rank1(l)
+                r = rank_index.rank1(r)
+
+            if trace:
+                steps.append(
+                    {
+                        "node_id": node_id,
+                        "branch": branch,
+                        "before": before,
+                        "after": (int(l), int(r)),
+                    }
+                )
+
+        result = (int(l), int(r))
+        if trace:
+            return result, steps
+        return result
+
+    def count_interval(self, source, start, end):
+        local_start, local_end = self.project_interval(source, start, end)
+        return local_end - local_start
+
+
+class MultiSourceBWT(object):
+    """Wrap a Feature-2 merged MSBWT with constituent-specific query
+    methods."""
+
+    def __init__(self, bwt, source_index):
+        self.bwt = bwt
+        self.source_index = source_index
+        if hasattr(bwt, "getTotalSize"):
+            bwt_size = int(bwt.getTotalSize())
+            if bwt_size != source_index.total_bits:
+                raise MultiSourceQueryError(
+                    "BWT has %d rows but provenance root has %d rows"
+                    % (bwt_size, source_index.total_bits)
+                )
+
+    @classmethod
+    def load(
+        cls,
+        merged_bwt_dir,
+        rank_stride_bytes=64,
+        mmap=True,
+        use_saved_rank=True,
+        logger=None,
+    ):
+        """Load a real Holt/McMillan MSBWT plus Feature-2 provenance."""
+        from MUSCython import MultiStringBWTCython as MultiStringBWT
+
+        bwt = MultiStringBWT.loadBWT(
+            str(merged_bwt_dir),
+            useMemmap=mmap,
+            logger=logger,
+        )
+        source_index = MultiSourceQueryIndex(
+            merged_bwt_dir,
+            rank_stride_bytes=rank_stride_bytes,
+            mmap=mmap,
+            use_saved_rank=use_saved_rank,
+        )
+        return cls(bwt, source_index)
+
+    def findIndicesOfStr(self, seq, givenRange=None):
+        seq = _normalize_sequence(seq)
+        if givenRange is None:
+            return self.bwt.findIndicesOfStr(seq)
+        return self.bwt.findIndicesOfStr(seq, givenRange)
+
+    def findIndicesForSource(self, seq, source, givenRange=None):
+        """Return the constituent-local FM interval for ``seq``."""
+        merged_interval = self.findIndicesOfStr(seq, givenRange=givenRange)
+        return self.source_index.project_interval(
+            source,
+            merged_interval[0],
+            merged_interval[1],
+        )
+
+    def countOccurrencesForSource(self, seq, source, givenRange=None):
+        """Count ``seq`` in one constituent using one merged FM search."""
+        low, high = self.findIndicesForSource(
+            seq,
+            source,
+            givenRange=givenRange,
+        )
+        return int(high - low)
+
+    def querySource(self, seq, source, givenRange=None, include_trace=False):
+        """Return a rich constituent-specific exact-query result."""
+        seq = _normalize_sequence(seq)
+        source_id = self.source_index.resolve_source(source)
+        source_record = self.source_index.source_record(source_id)
+
+        merged_low, merged_high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+
+        if include_trace:
+            source_interval, trace = self.source_index.project_interval(
+                source_id,
+                merged_low,
+                merged_high,
+                trace=True,
+            )
+        else:
+            source_interval = self.source_index.project_interval(
+                source_id,
+                merged_low,
+                merged_high,
+            )
+            trace = None
+
+        source_low, source_high = source_interval
+        source_count = int(source_high - source_low)
+        merged_count = int(merged_high - merged_low)
+
+        result = {
+            "sequence": seq,
+            "source_id": source_id,
+            "source_name": str(source_record.get("name", source_id)),
+            "source_interval": (int(source_low), int(source_high)),
+            "count": source_count,
+            "present": bool(source_count),
+            "merged_interval": (int(merged_low), int(merged_high)),
+            "merged_count": merged_count,
+            "fraction_of_merged_occurrences": (
+                float(source_count) / merged_count if merged_count else 0.0
+            ),
+            "path_depth": len(self.source_index.source_path(source_id)),
+        }
+        if include_trace:
+            result["projection_trace"] = trace
+        return result
+
+
+# PEP-8 aliases for new code; camelCase methods intentionally match the
+# repository's existing API style.
+MultiSourceQuery = MultiSourceBWT
