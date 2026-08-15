@@ -1,10 +1,10 @@
 """Constituent-specific queries over a provenance-preserving multi-merged
-MSBWT (Feature 3, enhanced-modern2).
+MSBWT (Features 3-4, enhanced-modern2).
 
 This is the additive query layer over the verified Feature-2 provenance tree
 (``MUS.MultiSourceProvenance``) and the verified Feature-1 rank primitive
-(``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the Point-3
-candidate (``research/feature-candidates/3/MultiSourceQuery.py``) into the
+(``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the Point-3 and
+Point-4 candidates (``research/feature-candidates/3/`` and ``4/``) into the
 msbwt-modern2 production tree with:
 
 - Python 2.7 compatibility (the candidate used the Python-3-only ``Path``
@@ -33,6 +33,14 @@ constituent-local FM interval and its length is the exact number of
 occurrences of the pattern in that constituent.  For a balanced tree with
 ``F`` sources a single constituent query costs one merged FM search plus
 O(log F) rank projections.
+
+Feature 4 adds the sparse source-listing layer: ``nonzeroSources`` /
+``listSourcesWithOccurrences`` perform ONE merged FM search and then
+descend the provenance tree once, projecting the interval to both children
+at every internal node and pruning empty subtrees, so only constituents
+with positive counts are materialized (exact counts, deterministic
+provenance/input order, optional constituent-local intervals and traversal
+statistics).
 
 The implementation is intentionally pure Python/NumPy and lazy-loads only
 the interleave rank indexes required by queried source paths.  It does not
@@ -456,6 +464,117 @@ class MultiSourceQueryIndex(object):
         local_start, local_end = self.project_interval(source, start, end)
         return local_end - local_start
 
+    def nonzero_sources_interval(
+        self,
+        start,
+        end,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        """List only constituents with nonzero counts in ``[start, end)``.
+
+        This is the Feature-4 sparse document/source-listing primitive.
+        Instead of projecting the same merged interval independently down
+        every source path, it descends the provenance tree once.  At each
+        internal node, the parent interval is projected to the left and
+        right child using rank0 and rank1.  A child whose projected interval
+        is empty is pruned immediately, so no rank structures below that
+        branch are touched.
+
+        Parameters
+        ----------
+        start, end : int
+            Merged-BWT interval ``[start, end)``.
+        include_intervals : bool, optional
+            Include each leaf's exact constituent-local FM interval.
+        include_stats : bool, optional
+            Return ``(results, stats)`` with traversal counters useful for
+            testing/profiling.  These counters are descriptive only and do
+            not alter query behavior.
+
+        Returns
+        -------
+        list of dict
+            One record per nonzero source, in provenance/input order.  Every
+            record contains ``source_id``, ``source_name`` and exact
+            ``count``.
+        """
+        start, end = self._check_interval(start, end)
+
+        stats = {
+            "root_interval_size": int(end - start),
+            "internal_nodes_visited": 0,
+            "branches_pruned": 0,
+            "leaves_reported": 0,
+            "rank_nodes_loaded_before": self.loaded_rank_node_count,
+        }
+        results = []
+
+        if start == end:
+            stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+            stats["rank_nodes_loaded_for_query"] = 0
+            if include_stats:
+                return results, stats
+            return results
+
+        def descend(node, l, r):
+            if l == r:
+                # This guard is normally reached before recursion, but
+                # keeping it here makes the pruning invariant explicit and
+                # robust.
+                stats["branches_pruned"] += 1
+                return
+
+            node_type = node["type"]
+            if node_type == "leaf":
+                sid = str(node["source_id"])
+                source = self._sources_by_id[sid]
+                record = {
+                    "source_id": sid,
+                    "source_name": str(source.get("name", sid)),
+                    "count": int(r - l),
+                }
+                if include_intervals:
+                    record["source_interval"] = (int(l), int(r))
+                results.append(record)
+                stats["leaves_reported"] += 1
+                return
+
+            if node_type != "merge":
+                raise ProvenanceError(
+                    "unknown provenance node type: %r" % node_type
+                )
+
+            stats["internal_nodes_visited"] += 1
+            rank_index = self._get_rank_index(str(node["node_id"]))
+
+            left_l = rank_index.rank0(l)
+            left_r = rank_index.rank0(r)
+            right_l = rank_index.rank1(l)
+            right_r = rank_index.rank1(r)
+
+            if left_l == left_r:
+                stats["branches_pruned"] += 1
+            else:
+                descend(node["left"], left_l, left_r)
+
+            if right_l == right_r:
+                stats["branches_pruned"] += 1
+            else:
+                descend(node["right"], right_l, right_r)
+
+        descend(self.manifest["root"], start, end)
+
+        stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+        stats["rank_nodes_loaded_for_query"] = (
+            stats["rank_nodes_loaded_after"]
+            - stats["rank_nodes_loaded_before"]
+        )
+
+        if include_stats:
+            return results, stats
+        return results
+
 
 class MultiSourceBWT(object):
     """Wrap a Feature-2 merged MSBWT with constituent-specific query
@@ -520,6 +639,58 @@ class MultiSourceBWT(object):
             givenRange=givenRange,
         )
         return int(high - low)
+
+    def nonzeroSources(
+        self,
+        seq,
+        givenRange=None,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        """Search once and return only sources containing ``seq``.
+
+        Each returned source has its exact occurrence count.  Empty
+        provenance branches are pruned during descent, so this does not
+        materialize an F-length vector of zero counts.
+        """
+        seq = _normalize_sequence(seq)
+        merged_low, merged_high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+
+        if include_stats:
+            sources, stats = self.source_index.nonzero_sources_interval(
+                merged_low,
+                merged_high,
+                include_intervals=include_intervals,
+                include_stats=True,
+            )
+            stats.update(
+                {
+                    "merged_interval": (int(merged_low), int(merged_high)),
+                    "merged_count": int(merged_high - merged_low),
+                    "sources_reported": len(sources),
+                }
+            )
+            return {
+                "sequence": seq,
+                "merged_interval": (int(merged_low), int(merged_high)),
+                "merged_count": int(merged_high - merged_low),
+                "sources": sources,
+                "stats": stats,
+            }
+
+        sources = self.source_index.nonzero_sources_interval(
+            merged_low,
+            merged_high,
+            include_intervals=include_intervals,
+            include_stats=False,
+        )
+        return sources
+
+    # More explicit synonym for callers who prefer the roadmap terminology.
+    listSourcesWithOccurrences = nonzeroSources
 
     def querySource(self, seq, source, givenRange=None, include_trace=False):
         """Return a rich constituent-specific exact-query result."""
