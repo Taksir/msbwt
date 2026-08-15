@@ -90,6 +90,10 @@ from MUS.ReadProvenance import (
     filter_read_provenance,
     read_provenance_exists,
 )
+from MUS.BWTTags import (
+    filter_tag_arrays,
+    tags_exist,
+)
 from MUS.SourceMetadata import (
     METADATA_FILENAME,
     SourceMetadataCatalog,
@@ -550,6 +554,8 @@ def retain_sources(
         "nodes_collapsed": 0,
         "nodes_rewritten": 0,
         "read_provenance_preserved": False,
+        "bwt_tags_preserved": False,
+        "bwt_tag_count": 0,
         "rank_indexes_built": 0,
     }
 
@@ -624,6 +630,18 @@ def retain_sources(
                 os.path.join(temp_dir, str(prune.node["interleave"])),
                 root_interleave,
             )
+
+        # Feature 12: every BWT-row tag is filtered with the exact same
+        # survival mask as msbwt.npy, preserving 1:1 row alignment.
+        if tags_exist(input_dir):
+            tag_store = filter_tag_arrays(
+                input_dir,
+                temp_dir,
+                root_mask,
+                chunk_rows=chunk_rows,
+            )
+            stats["bwt_tags_preserved"] = True
+            stats["bwt_tag_count"] = len(tag_store.list_tags())
 
         # Filter Feature-9 read provenance using the '$'-row prefix.
         if read_provenance_exists(input_dir):

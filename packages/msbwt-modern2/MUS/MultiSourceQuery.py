@@ -119,6 +119,11 @@ from MUS.SourceMetadata import (
     SourceMetadataCatalog,
     SourceMetadataError,
 )
+from MUS.BWTTags import (
+    BWTTagError,
+    BWTTagStore,
+    tags_exist,
+)
 
 
 RANK_DIRNAME = "ranks"
@@ -1115,10 +1120,11 @@ class MultiSourceBWT(object):
     methods."""
 
     def __init__(self, bwt, source_index, source_metadata=None,
-                 read_provenance=None):
+                 read_provenance=None, bwt_tags=None):
         self.bwt = bwt
         self.source_index = source_index
         self.read_provenance = read_provenance
+        self.bwt_tags = bwt_tags
         if source_metadata is None:
             source_metadata = SourceMetadataCatalog(
                 source_index.list_sources()
@@ -1188,11 +1194,20 @@ class MultiSourceBWT(object):
                 source_index=source_index,
             )
 
+        bwt_tags = None
+        if tags_exist(merged_bwt_dir):
+            bwt_tags = BWTTagStore(
+                merged_bwt_dir,
+                mmap=mmap,
+                validate=True,
+            )
+
         return cls(
             bwt,
             source_index,
             source_metadata=source_metadata,
             read_provenance=read_provenance,
+            bwt_tags=bwt_tags,
         )
 
     def findIndicesOfStr(self, seq, givenRange=None):
@@ -1979,6 +1994,228 @@ class MultiSourceBWT(object):
                 ),
             },
         }
+
+    def _require_bwt_tags(self):
+        if self.bwt_tags is None:
+            raise MultiSourceQueryError(
+                "BWT-aligned tags are not available for this MSBWT"
+            )
+        return self.bwt_tags
+
+    def listTags(self):
+        """Return registered Feature-12 BWT-row tag names."""
+        return self._require_bwt_tags().list_tags()
+
+    def tagSchema(self, name):
+        return self._require_bwt_tags().schema(name)
+
+    def rowTag(self, row_index, name):
+        """Return one tag value aligned to one merged BWT row."""
+        row_index = int(row_index)
+        if row_index < 0 or row_index >= self.source_index.total_bits:
+            raise IndexError(
+                "row index %d outside [0,%d)"
+                % (row_index, self.source_index.total_bits)
+            )
+        return self._require_bwt_tags().array(name)[row_index]
+
+    def tagInterval(self, name, start, end):
+        """Return a direct view of a contiguous merged BWT interval."""
+        return self._require_bwt_tags().interval(name, start, end)
+
+    def _resolve_tag_selection(
+        self,
+        source=None,
+        sources=None,
+        group=None,
+        where=None,
+    ):
+        modes = (
+            int(source is not None)
+            + int(sources is not None)
+            + int(group is not None)
+            + int(where is not None)
+        )
+        if modes > 1:
+            raise ValueError(
+                "use only one of source, sources, group, or where"
+            )
+
+        if source is not None:
+            return (
+                "source",
+                frozenset(
+                    [self.source_index.resolve_source(source)]
+                ),
+            )
+        if sources is not None:
+            return (
+                "subset",
+                frozenset(
+                    self.source_index.resolve_source_ids(sources)
+                ),
+            )
+        if group is not None:
+            return (
+                "group",
+                frozenset(
+                    self.source_metadata.group_sources(group)
+                ),
+            )
+        if where is not None:
+            return (
+                "where",
+                frozenset(
+                    self.source_metadata.resolve_selection(where=where)
+                ),
+            )
+        return "merged", None
+
+    def tagValues(
+        self,
+        seq,
+        name,
+        source=None,
+        sources=None,
+        group=None,
+        where=None,
+        givenRange=None,
+        include_rows=False,
+        max_rows=None,
+    ):
+        """Return exact tag values on BWT rows matching ``seq``.
+
+        Without a source/group selector, the FM interval is contiguous and
+        this operation is a direct tag-array slice.  With a selector,
+        candidate rows are source-filtered through the provenance tree and
+        only retained row indices are gathered (Feature 12).
+        """
+        store = self._require_bwt_tags()
+        if not store.has_tag(name):
+            raise KeyError("unknown tag: %s" % name)
+
+        seq = _normalize_sequence(seq)
+        low, high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+        low = int(low)
+        high = int(high)
+
+        selection_mode, selected = self._resolve_tag_selection(
+            source=source,
+            sources=sources,
+            group=group,
+            where=where,
+        )
+
+        if max_rows is not None:
+            max_rows = int(max_rows)
+            if max_rows < 0:
+                raise ValueError("max_rows must be non-negative")
+
+        arr = store.array(name)
+
+        if selected is None:
+            end = high
+            truncated = False
+            if max_rows is not None and end - low > max_rows:
+                end = low + max_rows
+                truncated = True
+            values = arr[low:end]
+            rows = (
+                np.arange(low, end, dtype=np.int64)
+                if include_rows
+                else None
+            )
+            scanned = int(end - low)
+        else:
+            row_list = []
+            scanned = 0
+            truncated = False
+            for row in range(low, high):
+                scanned += 1
+                sid, _ = self.source_index.locate_row_source(row)
+                if sid not in selected:
+                    continue
+                if (
+                    max_rows is not None
+                    and len(row_list) >= max_rows
+                ):
+                    truncated = True
+                    break
+                row_list.append(row)
+
+            rows_array = np.asarray(row_list, dtype=np.int64)
+            values = arr[rows_array]
+            rows = rows_array if include_rows else None
+
+        result = {
+            "sequence": seq,
+            "tag": str(name),
+            "schema": store.schema(name),
+            "merged_interval": (low, high),
+            "merged_occurrences": int(high - low),
+            "selection_mode": selection_mode,
+            "selected_source_ids": (
+                None
+                if selected is None
+                else sorted(
+                    selected,
+                    key=self.source_index._source_order.__getitem__,
+                )
+            ),
+            "value_count": int(values.shape[0]),
+            "values": values,
+            "stats": {
+                "candidate_rows_scanned": int(scanned),
+                "truncated": bool(truncated),
+            },
+        }
+        if include_rows:
+            result["rows"] = rows
+        return result
+
+    def tagValueCounts(
+        self,
+        seq,
+        name,
+        source=None,
+        sources=None,
+        group=None,
+        where=None,
+        givenRange=None,
+    ):
+        """Count exact values of a scalar tag over matching/selected rows."""
+        result = self.tagValues(
+            seq,
+            name,
+            source=source,
+            sources=sources,
+            group=group,
+            where=where,
+            givenRange=givenRange,
+            include_rows=False,
+        )
+        values = result["values"]
+        if values.ndim != 1:
+            raise BWTTagError(
+                "tagValueCounts requires scalar tag %s; got tail shape %r"
+                % (name, values.shape[1:])
+            )
+        unique, counts = np.unique(values, return_counts=True)
+        result = dict(result)
+        result.pop("values")
+        result["counts"] = [
+            {
+                "value": value.item()
+                if isinstance(value, np.generic)
+                else value,
+                "count": int(count),
+            }
+            for value, count in zip(unique, counts)
+        ]
+        return result
 
 
 # PEP-8 aliases for new code; camelCase methods intentionally match the

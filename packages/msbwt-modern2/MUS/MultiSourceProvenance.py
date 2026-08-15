@@ -639,6 +639,16 @@ def merge_two_with_provenance(
             "read provenance is not silently lost"
         )
 
+    # Feature 12: validate BWT-row tag schemas before the expensive BWT
+    # merge.  One-sided tags are permitted only when the tag explicitly
+    # declares a missing value; otherwise the merge fails rather than
+    # silently dropping or fabricating annotation values.
+    from MUS.BWTTags import validate_tag_merge_compatibility
+    tag_merge_plan = validate_tag_merge_compatibility(
+        left_dir,
+        right_dir,
+    )
+
     if os.path.exists(output_dir):
         if os.listdir(output_dir):
             raise ProvenanceError(
@@ -688,6 +698,15 @@ def merge_two_with_provenance(
 
     if left_has_read_provenance and right_has_read_provenance:
         merge_two_read_provenance(left_dir, right_dir, output_dir)
+
+    if tag_merge_plan:
+        from MUS.BWTTags import merge_two_tag_arrays
+        merge_two_tag_arrays(
+            left_dir,
+            right_dir,
+            output_dir,
+            plan=tag_merge_plan,
+        )
 
     return manifest
 
