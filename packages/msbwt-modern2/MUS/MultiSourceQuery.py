@@ -1,5 +1,5 @@
 """Constituent-specific queries over a provenance-preserving multi-merged
-MSBWT (Features 3-8A, enhanced-modern2).
+MSBWT (Features 3-9, enhanced-modern2).
 
 This is the additive query layer over the verified Feature-2 provenance tree
 (``MUS.MultiSourceProvenance``) and the verified Feature-1 rank primitive
@@ -70,6 +70,17 @@ left extension (end-marker/backward-step semantics are cyclic) but allowed
 for right extension with an explicit alphabet.  Any source / subset /
 group / where selection (Features 3 and 7) applies to every candidate
 interval.
+
+Feature 9 adds read-level provenance: ``locate_row_source`` maps any merged
+BWT row to ``(source_id, source_local_row)`` through the provenance tree
+(the row-level analogue of interval projection), and ``MultiSourceBWT``
+gains ``readProvenance`` / ``rowReadProvenance`` / ``readMate`` /
+``readsContaining`` over the verified ``MUS.ReadProvenance`` layer
+(Feature 9).  ``readsContaining`` returns unique reads (duplicate
+identities preserved) with exact per-read occurrence counts, optionally
+restricted to one source / subset / metadata group / predicate, with
+provenance-tree row prefiltering before LF walks for selected-source
+queries.
 
 The implementation is intentionally pure Python/NumPy and lazy-loads only
 the interleave rank indexes required by queried source paths.  It does not
@@ -607,6 +618,59 @@ class MultiSourceQueryIndex(object):
             return result, steps
         return result
 
+    def locate_row_source(self, row_index, trace=False):
+        """Map one merged BWT row to ``(source_id, source_local_row)``.
+
+        This is the row-level analogue of interval projection (Feature 3).
+        At each merge node the interleave bit selects the child; the rank of
+        that bit gives the child's local row index.  Returns
+        ``(source_id, source_local_row)``, or with ``trace=True`` the same
+        pair plus the per-node step records.
+        """
+        row_index = int(row_index)
+        if row_index < 0 or row_index >= self.total_bits:
+            raise IndexError(
+                "row index %d outside [0,%d)"
+                % (row_index, self.total_bits)
+            )
+
+        node = self.manifest["root"]
+        local_index = row_index
+        steps = []
+
+        while node["type"] != "leaf":
+            node_id = str(node["node_id"])
+            rank_index = self._get_rank_index(node_id)
+            branch = int(rank_index.source_at(local_index))
+
+            if branch == 0:
+                child_index = int(rank_index.rank0(local_index))
+                child = node["left"]
+            else:
+                child_index = int(rank_index.rank1(local_index))
+                child = node["right"]
+
+            if trace:
+                steps.append(
+                    {
+                        "node_id": node_id,
+                        "branch": branch,
+                        "parent_row": int(local_index),
+                        "child_row": int(child_index),
+                    }
+                )
+
+            local_index = child_index
+            node = child
+
+        result = (
+            str(node["source_id"]),
+            int(local_index),
+        )
+        if trace:
+            return result[0], result[1], steps
+        return result
+
     def count_interval(self, source, start, end):
         local_start, local_end = self.project_interval(source, start, end)
         return local_end - local_start
@@ -1050,9 +1114,11 @@ class MultiSourceBWT(object):
     """Wrap a Feature-2 merged MSBWT with constituent-specific query
     methods."""
 
-    def __init__(self, bwt, source_index, source_metadata=None):
+    def __init__(self, bwt, source_index, source_metadata=None,
+                 read_provenance=None):
         self.bwt = bwt
         self.source_index = source_index
+        self.read_provenance = read_provenance
         if source_metadata is None:
             source_metadata = SourceMetadataCatalog(
                 source_index.list_sources()
@@ -1081,6 +1147,9 @@ class MultiSourceBWT(object):
         ``source_metadata.json`` inside the merged directory is loaded
         automatically (if present); an external metadata file can be
         supplied explicitly via ``source_metadata_path``.
+
+        Feature-9 ``read_provenance.npy`` / ``read_provenance.json`` are
+        loaded automatically when present.
         """
         from MUSCython import MultiStringBWTCython as MultiStringBWT
 
@@ -1106,7 +1175,25 @@ class MultiSourceBWT(object):
                 source_metadata_path,
                 source_index.list_sources(),
             )
-        return cls(bwt, source_index, source_metadata=source_metadata)
+
+        read_provenance = None
+        from MUS.ReadProvenance import ReadProvenanceIndex
+        from MUS.ReadProvenance import read_provenance_exists
+
+        if read_provenance_exists(merged_bwt_dir):
+            read_provenance = ReadProvenanceIndex(
+                merged_bwt_dir,
+                mmap=mmap,
+                validate=True,
+                source_index=source_index,
+            )
+
+        return cls(
+            bwt,
+            source_index,
+            source_metadata=source_metadata,
+            read_provenance=read_provenance,
+        )
 
     def findIndicesOfStr(self, seq, givenRange=None):
         seq = _normalize_sequence(seq)
@@ -1690,6 +1777,208 @@ class MultiSourceBWT(object):
         if include_trace:
             result["projection_trace"] = trace
         return result
+
+    def _require_read_provenance(self):
+        if self.read_provenance is None:
+            raise MultiSourceQueryError(
+                "read-level provenance is not available for this MSBWT; "
+                "initialize/retrofit Feature-9 read_provenance first"
+            )
+        return self.read_provenance
+
+    def readProvenance(self, dollar_id):
+        """Return stable source/origin metadata for one MSBWT dollar ID."""
+        return self._require_read_provenance().record(dollar_id)
+
+    def rowReadProvenance(self, row_index, include_offset=False):
+        """Resolve one BWT row to its owning read and provenance record.
+
+        Internally ``getSequenceDollarID`` (an LF walk) maps the row to its
+        dollar ID, then the read-provenance record is returned.  With
+        ``include_offset=True`` the LF offset (position of the row within
+        its read) is also returned as ``lf_offset``.
+        """
+        provenance = self._require_read_provenance()
+
+        if include_offset:
+            dollar_id, offset = self.bwt.getSequenceDollarID(
+                int(row_index),
+                True,
+            )
+        else:
+            dollar_id = self.bwt.getSequenceDollarID(int(row_index))
+            offset = None
+
+        record = provenance.record(int(dollar_id))
+        record["row_index"] = int(row_index)
+        if include_offset:
+            record["lf_offset"] = int(offset)
+        return record
+
+    def readMate(self, dollar_id):
+        """Return mate provenance record or ``None`` when unpaired."""
+        return self._require_read_provenance().mate(dollar_id)
+
+    def readsContaining(
+        self,
+        seq,
+        source=None,
+        sources=None,
+        group=None,
+        where=None,
+        givenRange=None,
+        include_sequence=False,
+        include_rows=False,
+        max_occurrences=None,
+    ):
+        """Return unique reads containing ``seq`` with exact occurrence
+        counts.
+
+        This is the correctness-first Feature-9 baseline.  It enumerates the
+        merged FM interval and calls ``getSequenceDollarID`` for matching
+        rows.  For source/group/where filters it first resolves each
+        candidate row through the provenance tree
+        (``MultiSourceQueryIndex.locate_row_source``) and discards rows from
+        unselected sources BEFORE the LF walk.
+
+        Duplicate reads are preserved as distinct read identities (identical
+        sequences never collapse).  The method is exact but output-sensitive
+        in the number of merged occurrences; a future locate/select
+        acceleration can replace the internals without changing this API.
+        """
+        read_index = self._require_read_provenance()
+        seq = _normalize_sequence(seq)
+        merged_low, merged_high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+
+        modes = (
+            int(source is not None)
+            + int(sources is not None)
+            + int(group is not None)
+            + int(where is not None)
+        )
+        if modes > 1:
+            raise ValueError(
+                "use only one of source, sources, group, or where"
+            )
+
+        selected = None
+        selection_mode = "merged"
+        if source is not None:
+            selected = frozenset(
+                [self.source_index.resolve_source(source)]
+            )
+            selection_mode = "source"
+        elif sources is not None:
+            selected = frozenset(
+                self.source_index.resolve_source_ids(sources)
+            )
+            selection_mode = "subset"
+        elif group is not None:
+            selected = frozenset(
+                self.source_metadata.group_sources(group)
+            )
+            selection_mode = "group"
+        elif where is not None:
+            selected = frozenset(
+                self.source_metadata.resolve_selection(where=where)
+            )
+            selection_mode = "where"
+
+        if max_occurrences is not None:
+            max_occurrences = int(max_occurrences)
+            if max_occurrences < 0:
+                raise ValueError("max_occurrences must be non-negative")
+
+        found = {}
+        scanned = 0
+        lf_walks = 0
+        source_prefilter_skips = 0
+
+        for row_index in range(int(merged_low), int(merged_high)):
+            if max_occurrences is not None and scanned >= max_occurrences:
+                break
+            scanned += 1
+
+            row_source = None
+            if selected is not None:
+                row_source, _ = self.source_index.locate_row_source(
+                    row_index
+                )
+                if row_source not in selected:
+                    source_prefilter_skips += 1
+                    continue
+
+            dollar_id = int(self.bwt.getSequenceDollarID(row_index))
+            lf_walks += 1
+            record = read_index.record(dollar_id)
+
+            if row_source is not None and record["source_id"] != row_source:
+                raise MultiSourceQueryError(
+                    "row provenance and read provenance disagree at row "
+                    "%d: %s != %s"
+                    % (
+                        row_index,
+                        row_source,
+                        record["source_id"],
+                    )
+                )
+
+            entry = found.get(dollar_id)
+            if entry is None:
+                entry = dict(record)
+                entry["occurrence_count"] = 0
+                if include_rows:
+                    entry["rows"] = []
+                found[dollar_id] = entry
+
+            entry["occurrence_count"] += 1
+            if include_rows:
+                entry["rows"].append(int(row_index))
+
+        reads = [
+            found[dollar_id]
+            for dollar_id in sorted(found)
+        ]
+
+        if include_sequence:
+            for record in reads:
+                recovered = self.bwt.recoverString(
+                    int(record["dollar_id"])
+                )
+                record["sequence"] = recovered
+
+        return {
+            "sequence": seq,
+            "merged_interval": (
+                int(merged_low),
+                int(merged_high),
+            ),
+            "merged_occurrences": int(merged_high - merged_low),
+            "selection_mode": selection_mode,
+            "selected_source_ids": (
+                None if selected is None else sorted(
+                    selected,
+                    key=self.source_index._source_order.__getitem__,
+                )
+            ),
+            "reads": reads,
+            "unique_read_count": len(reads),
+            "reported_occurrences": int(
+                sum(r["occurrence_count"] for r in reads)
+            ),
+            "stats": {
+                "interval_rows_scanned": int(scanned),
+                "lf_walks": int(lf_walks),
+                "source_prefilter_skips": int(source_prefilter_skips),
+                "truncated": bool(
+                    max_occurrences is not None
+                    and scanned < int(merged_high - merged_low)
+                ),
+            },
+        }
 
 
 # PEP-8 aliases for new code; camelCase methods intentionally match the

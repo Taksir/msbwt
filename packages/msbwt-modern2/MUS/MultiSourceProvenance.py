@@ -623,6 +623,22 @@ def merge_two_with_provenance(
             % ", ".join(overlap)
         )
 
+    # Feature 9: never silently discard read-level provenance.  If both
+    # children carry it, merge it automatically after the BWT/provenance
+    # merge; if only one child has it, fail before the expensive merge.
+    from MUS.ReadProvenance import (
+        merge_two_read_provenance,
+        read_provenance_exists,
+    )
+    left_has_read_provenance = read_provenance_exists(left_dir)
+    right_has_read_provenance = read_provenance_exists(right_dir)
+    if left_has_read_provenance != right_has_read_provenance:
+        raise ProvenanceError(
+            "read-level provenance is present on only one merge input; "
+            "initialize/retrofit both children before merging so "
+            "read provenance is not silently lost"
+        )
+
     if os.path.exists(output_dir):
         if os.listdir(output_dir):
             raise ProvenanceError(
@@ -669,6 +685,10 @@ def merge_two_with_provenance(
                 os.path.join(output_dir, BWT_FILENAME), mmap_mode="r"))))
     save_manifest(output_dir, manifest)
     validate_manifest(output_dir, manifest)
+
+    if left_has_read_provenance and right_has_read_provenance:
+        merge_two_read_provenance(left_dir, right_dir, output_dir)
+
     return manifest
 
 
