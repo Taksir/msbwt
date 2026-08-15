@@ -1,0 +1,74 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "merge_lifecycle": {
+      "comparisons": 191,
+      "mismatches": 0,
+      "rows": 191,
+      "two_way_exact": true
+    },
+    "mismatch_count": 0,
+    "notes": [
+      "read-derived fixtures are tiny deterministic corpora; tag arrays are ordinary mmap-able .npy files under bwt_tags/, with the registry binding filename (hash of the logical name), dtype, tail shape, description, and missing-value policy.",
+      "tags never change BWT bytes; merge/retrofit/removal keep tag[x] traveling exactly with BWT[x]."
+    ],
+    "one_sided_policies": {
+      "with_missing": true,
+      "without_missing": true
+    },
+    "oracles": [
+      "independent_row_identity_tree_walk",
+      "independent_suffix_sort",
+      "naive_per_row_value_counts"
+    ],
+    "queries": {
+      "comparisons": 67,
+      "mismatches": 0
+    },
+    "randomized": {
+      "cases": 18,
+      "mismatches": 0,
+      "seed": 20260811
+    },
+    "removal": {
+      "comparisons": 133,
+      "mismatches": 0,
+      "rows": 133,
+      "single_source_equals_leaf": true
+    },
+    "retrofit": {
+      "bwt_unchanged": true,
+      "comparisons": 191,
+      "mismatches": 0,
+      "rows": 191
+    },
+    "seed": 20260811
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 12: Generic BWT-Aligned Tag Arrays",
+    "milestone": "enhanced-modern2-feature12-bwt-tags",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-12"
+  },
+  "starting_commit": "4e9cc4a"
+}
