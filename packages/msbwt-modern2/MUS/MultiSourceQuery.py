@@ -1,11 +1,11 @@
 """Constituent-specific queries over a provenance-preserving multi-merged
-MSBWT (Features 3-4, enhanced-modern2).
+MSBWT (Features 3-6, enhanced-modern2).
 
 This is the additive query layer over the verified Feature-2 provenance tree
 (``MUS.MultiSourceProvenance``) and the verified Feature-1 rank primitive
-(``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the Point-3 and
-Point-4 candidates (``research/feature-candidates/3/`` and ``4/``) into the
-msbwt-modern2 production tree with:
+(``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the Point-3/4/5/6
+candidates (``research/feature-candidates/3/``, ``4/``, ``5 and 6/``) into
+the msbwt-modern2 production tree with:
 
 - Python 2.7 compatibility (the candidate used the Python-3-only ``Path``
   type, which does not exist in the Python 2.7 standard library);
@@ -42,6 +42,14 @@ with positive counts are materialized (exact counts, deterministic
 provenance/input order, optional constituent-local intervals and traversal
 statistics).
 
+Features 5-6 add the aggregate layers: ``sourceFrequency`` /
+``countSourcesWithOccurrences`` (Feature 5) is a count-only traversal that
+returns the number of constituents containing the pattern without
+materializing source dictionaries, and ``topSources`` /
+``topSourcesByAbundance`` (Feature 6) returns the exact top-k constituents
+by occurrence count from the Feature-4 sparse candidates with deterministic
+tie-breaking (larger count first, then provenance/input source order).
+
 The implementation is intentionally pure Python/NumPy and lazy-loads only
 the interleave rank indexes required by queried source paths.  It does not
 modify Holt/McMillan's FM-index or merge algorithm.
@@ -62,6 +70,7 @@ module also runs unchanged under Python 3 for host-side testing.
 from __future__ import absolute_import
 
 import hashlib
+import heapq
 import os
 import zipfile
 
@@ -163,6 +172,13 @@ class MultiSourceQueryIndex(object):
         self._paths = {}
         self._nodes_by_id = {}
         self._build_paths(self.manifest["root"], [])
+
+        # provenance/input order index, the deterministic tie-breaker for
+        # equal-abundance top-k results (Feature 5/6)
+        self._source_order = {
+            str(source["id"]): i
+            for i, source in enumerate(self.manifest["sources"])
+        }
 
         # Lazy cache: node_id -> TwoSourceInterleaveIndex.
         self._rank_indexes = {}
@@ -575,6 +591,162 @@ class MultiSourceQueryIndex(object):
             return results, stats
         return results
 
+    def source_frequency_interval(
+        self,
+        start,
+        end,
+        include_stats=False,
+    ):
+        """Count how many constituent sources are nonzero in ``[start, end)``.
+
+        This is the Feature-5 count-only document/source-frequency
+        primitive.  It uses the same sparse provenance traversal as
+        ``nonzero_sources_interval`` but does not allocate source-result
+        dictionaries or materialize source IDs: at each nonempty leaf it
+        increments one integer.
+
+        The count is exact.  Empty child intervals are pruned immediately.
+        """
+        start, end = self._check_interval(start, end)
+
+        stats = {
+            "root_interval_size": int(end - start),
+            "internal_nodes_visited": 0,
+            "branches_pruned": 0,
+            "nonzero_leaves": 0,
+            "rank_nodes_loaded_before": self.loaded_rank_node_count,
+        }
+
+        if start == end:
+            stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+            stats["rank_nodes_loaded_for_query"] = 0
+            if include_stats:
+                return 0, stats
+            return 0
+
+        def count_nonzero(node, l, r):
+            if l == r:
+                stats["branches_pruned"] += 1
+                return 0
+
+            node_type = node["type"]
+            if node_type == "leaf":
+                stats["nonzero_leaves"] += 1
+                return 1
+
+            if node_type != "merge":
+                raise ProvenanceError(
+                    "unknown provenance node type: %r" % node_type
+                )
+
+            stats["internal_nodes_visited"] += 1
+            rank_index = self._get_rank_index(str(node["node_id"]))
+
+            left_l = rank_index.rank0(l)
+            left_r = rank_index.rank0(r)
+            right_l = rank_index.rank1(l)
+            right_r = rank_index.rank1(r)
+
+            total = 0
+            if left_l == left_r:
+                stats["branches_pruned"] += 1
+            else:
+                total += count_nonzero(node["left"], left_l, left_r)
+
+            if right_l == right_r:
+                stats["branches_pruned"] += 1
+            else:
+                total += count_nonzero(node["right"], right_l, right_r)
+
+            return total
+
+        frequency = int(count_nonzero(self.manifest["root"], start, end))
+
+        stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+        stats["rank_nodes_loaded_for_query"] = (
+            stats["rank_nodes_loaded_after"]
+            - stats["rank_nodes_loaded_before"]
+        )
+
+        if include_stats:
+            return frequency, stats
+        return frequency
+
+    def top_sources_interval(
+        self,
+        start,
+        end,
+        k,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        """Return the exact top-k nonzero sources for merged interval.
+
+        Feature 6 intentionally uses the already-correct Feature-4 sparse
+        listing as its baseline.  Selection is bounded by ``k`` via
+        ``heapq.nlargest`` rather than sorting an F-length zero-filled
+        vector.
+
+        Ordering is deterministic:
+
+        1. larger exact occurrence count first;
+        2. provenance/input source order for ties.
+        """
+        start, end = self._check_interval(start, end)
+        k = int(k)
+        if k < 0:
+            raise ValueError("k must be non-negative")
+
+        if include_stats:
+            sources, sparse_stats = self.nonzero_sources_interval(
+                start,
+                end,
+                include_intervals=include_intervals,
+                include_stats=True,
+            )
+        else:
+            sources = self.nonzero_sources_interval(
+                start,
+                end,
+                include_intervals=include_intervals,
+                include_stats=False,
+            )
+            sparse_stats = None
+
+        if k == 0 or not sources:
+            top = []
+        elif k >= len(sources):
+            # Feature-4 results are in stable provenance order, so this
+            # produces the desired count-descending / source-order tie
+            # break.
+            top = sorted(
+                sources,
+                key=lambda rec: (
+                    -int(rec["count"]),
+                    self._source_order[str(rec["source_id"])],
+                ),
+            )
+        else:
+            indexed = list(enumerate(sources))
+            selected = heapq.nlargest(
+                k,
+                indexed,
+                key=lambda item: (int(item[1]["count"]), -item[0]),
+            )
+            top = [item[1] for item in selected]
+
+        if include_stats:
+            stats = dict(sparse_stats)
+            stats.update(
+                {
+                    "k": k,
+                    "nonzero_sources_considered": len(sources),
+                    "sources_returned": len(top),
+                }
+            )
+            return top, stats
+        return top
+
 
 class MultiSourceBWT(object):
     """Wrap a Feature-2 merged MSBWT with constituent-specific query
@@ -691,6 +863,110 @@ class MultiSourceBWT(object):
 
     # More explicit synonym for callers who prefer the roadmap terminology.
     listSourcesWithOccurrences = nonzeroSources
+
+    def sourceFrequency(
+        self,
+        seq,
+        givenRange=None,
+        include_stats=False,
+    ):
+        """Return number of constituent sources containing ``seq`` exactly.
+
+        Feature 5: a dedicated count-only provenance traversal (no sparse
+        source-dictionary materialization).  One merged FM search.
+        """
+        seq = _normalize_sequence(seq)
+        merged_low, merged_high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+
+        if include_stats:
+            frequency, stats = self.source_index.source_frequency_interval(
+                merged_low,
+                merged_high,
+                include_stats=True,
+            )
+            stats.update(
+                {
+                    "merged_interval": (int(merged_low), int(merged_high)),
+                    "merged_count": int(merged_high - merged_low),
+                    "source_frequency": int(frequency),
+                }
+            )
+            return {
+                "sequence": seq,
+                "merged_interval": (int(merged_low), int(merged_high)),
+                "merged_count": int(merged_high - merged_low),
+                "source_frequency": int(frequency),
+                "source_count": int(self.source_index.source_count),
+                "stats": stats,
+            }
+
+        return int(
+            self.source_index.source_frequency_interval(
+                merged_low,
+                merged_high,
+                include_stats=False,
+            )
+        )
+
+    # Synonym for callers who prefer the roadmap terminology.
+    countSourcesWithOccurrences = sourceFrequency
+
+    def topSources(
+        self,
+        seq,
+        k=10,
+        givenRange=None,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        """Return the exact top-k constituent sources by occurrence count.
+
+        Feature 6: one merged FM search, Feature-4 sparse candidates,
+        bounded top-k selection (heapq.nlargest when k < support size).
+        Ties are broken by provenance/input source order.
+        """
+        seq = _normalize_sequence(seq)
+        merged_low, merged_high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+
+        if include_stats:
+            sources, stats = self.source_index.top_sources_interval(
+                merged_low,
+                merged_high,
+                k,
+                include_intervals=include_intervals,
+                include_stats=True,
+            )
+            stats.update(
+                {
+                    "merged_interval": (int(merged_low), int(merged_high)),
+                    "merged_count": int(merged_high - merged_low),
+                }
+            )
+            return {
+                "sequence": seq,
+                "merged_interval": (int(merged_low), int(merged_high)),
+                "merged_count": int(merged_high - merged_low),
+                "k": int(k),
+                "sources": sources,
+                "stats": stats,
+            }
+
+        return self.source_index.top_sources_interval(
+            merged_low,
+            merged_high,
+            k,
+            include_intervals=include_intervals,
+            include_stats=False,
+        )
+
+    # Synonym for callers who prefer the roadmap terminology.
+    topSourcesByAbundance = topSources
 
     def querySource(self, seq, source, givenRange=None, include_trace=False):
         """Return a rich constituent-specific exact-query result."""
