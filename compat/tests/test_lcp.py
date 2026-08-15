@@ -136,10 +136,25 @@ class OracleBackedAdapter(object):
         return len(self.rows)
 
     def findIndicesOfStr(self, seq, givenRange=None):
-        if givenRange is not None:
-            raise NotImplementedError(
-                "givenRange not used by the Feature-13A contract tests")
         pattern = seq.decode("ascii") if isinstance(seq, bytes) else str(seq)
+        if givenRange is not None:
+            # FM backward step for a single symbol by direct counting.
+            if len(pattern) != 1:
+                raise NotImplementedError(
+                    "givenRange supports single symbols only")
+            low, high = givenRange
+            c_first = 0
+            rank_l = 0
+            rank_h = 0
+            for index, row in enumerate(self.rows):
+                first = row["suffix"][0]
+                if first < pattern:
+                    c_first += 1
+                if index < low and row["bwt"] == pattern:
+                    rank_l += 1
+                if index < high and row["bwt"] == pattern:
+                    rank_h += 1
+            return (c_first + rank_l, c_first + rank_h)
         lo = 0
         hi = len(self.suffixes)
         while lo < hi:
