@@ -37,6 +37,7 @@ and is developed on the `enhanced-modern2` branch.
 | 10 | Source removal / unmerge without FASTQ rebuild (`MUS.SourceRemoval`: `remove_sources` / `retain_sources` — surviving rows kept in existing order, provenance tree pruned with reuse/collapse/filter cases, output BYTE-equal to independent retained rebuild, read-provenance filtering with mate remapping, metadata pruning with group intersection, atomic temp-build publish, digest-bound output manifest, never copies stale rank caches) | VERIFIED-CORRECT (production-deployable) | [FEATURE10_SOURCE_REMOVAL.md](FEATURE10_SOURCE_REMOVAL.md) | `packages/msbwt-modern2/evidence/feature10-source-removal.json` |
 | 12 | Generic BWT-aligned tag arrays (`MUS.BWTTags`: `bwt_tags.json` + `bwt_tags/tag_<hash>.npy`, hash-safe filenames, primitive-dtype policy, missing-value one-sided merge policy failing before the BWT merge, automatic stable-interleave merge, out-of-core chunked retrofit and Feature-10 mask filtering, `listTags`/`tagSchema`/`rowTag`/`tagInterval`/`tagValues`/`tagValueCounts`) | VERIFIED-CORRECT (production-deployable) | [FEATURE12_BWT_TAGS.md](FEATURE12_BWT_TAGS.md) | `packages/msbwt-modern2/evidence/feature12-bwt-tags.json` |
 | Q1 | Exact lossless FASTQ quality sidecar (`MUS.QualitySidecar`, strict Point-12 specialization: reserved uint8 tag `fastq_quality_ascii`, suffix-first-base alignment with terminal-`$` sentinel 255, byte-exact no-Phred storage, disk-backed FASTQ retrofit with independent sequence verification, strict one-sided merge rejection, merge/removal lifecycle, `readQuality`/`readSequenceAndQuality`/`readFastqData`/`qualityValues`/`readsContaining(include_quality=True)`) | VERIFIED-CORRECT (production-deployable) | [Q1_QUALITY_SIDECAR.md](Q1_QUALITY_SIDECAR.md) | `packages/msbwt-modern2/evidence/q1-quality-sidecar.json` |
+| 11A | Exact post-construction LCP retrofit (`MUS.LCP`: `lcps.npy` + `lcp.json` in the upstream Holt convention `lcps[i] = LCP(SA[i], SA[i+1])`, distinct-virtual-terminator semantics (duplicates never gain +1), read recovery + generalized Kasai with O(N) mmap working storage, no FASTQ/no BWT rebuild, BWT-identity-bound staleness rejection, `lcpAt`/`lcpAdjacent`/`lcpBetweenRows` RMQ queries, Feature-10 LCP fail-safe with explicit `drop_lcp`) | VERIFIED-CORRECT (production-deployable) | [FEATURE11A_LCP.md](FEATURE11A_LCP.md) | `packages/msbwt-modern2/evidence/feature11a-lcp.json` |
 
 ## Layout
 
@@ -128,12 +129,23 @@ and is developed on the `enhanced-modern2` branch.
 - `packages/msbwt-modern2/validate/q1-quality-sidecar.sh` +
   `q1_quality_sidecar_evidence.py` — Q1 validation driver and evidence
   generator.
+- `packages/msbwt-modern2/MUS/LCP.py` + `tools/lcp.py` — Feature-11A
+  production module and LCP CLI (pure Python, additive).
+- `packages/msbwt-modern2/tests/test_lcp_py2.py` — Feature-11A
+  Python-2 tests (real merges).
+- `compat/tests/test_lcp.py` — Feature-11A host tests
+  (explicit-suffix oracle, terminator semantics, staleness, query API,
+  randomized differentials, evidence-record consistency).
+- `packages/msbwt-modern2/validate/feature11a-lcp.sh` +
+  `feature11a_lcp_evidence.py` — Feature-11A validation driver and
+  evidence generator.
 
 ## Roadmap
 
-- Features 3, 4, 5&6, 7, 8A, 9, 10, 12, and Q1 (query layer, sparse
+- Features 3, 4, 5&6, 7, 8A, 9, 10, 12, Q1, and 11A (query layer, sparse
   listing, frequency + top-k, subsets/groups/predicates, left/right
   extensions, read-level provenance, source removal, BWT-aligned tags,
-  exact FASTQ quality sidecar) are implemented and verified on this
-  branch.
-- Features 11A and 13A are future milestones on this branch.
+  exact FASTQ quality sidecar, post-construction LCP) are implemented
+  and verified on this branch.
+- Feature 13A (whole-index benchmark harness + backend contract) is the
+  final milestone on this branch.
