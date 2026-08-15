@@ -36,6 +36,7 @@ and is developed on the `enhanced-modern2` branch.
 | 9 | Exact read-level provenance (`MUS.ReadProvenance`: one packed 20-byte record per read — origin file/read IDs + merged mate dollar ID — indexed by `getSequenceDollarID` dollar ID; automatic merge preservation and one-sided rejection; retrofit without BWT rebuild; `ReadProvenanceIndex`; `readsContaining` with duplicate preservation and source-prefiltered LF walks; BWT-identity-bound persistence) | VERIFIED-CORRECT (production-deployable) | [FEATURE9_READ_PROVENANCE.md](FEATURE9_READ_PROVENANCE.md) | `packages/msbwt-modern2/evidence/feature9-read-provenance.json` |
 | 10 | Source removal / unmerge without FASTQ rebuild (`MUS.SourceRemoval`: `remove_sources` / `retain_sources` — surviving rows kept in existing order, provenance tree pruned with reuse/collapse/filter cases, output BYTE-equal to independent retained rebuild, read-provenance filtering with mate remapping, metadata pruning with group intersection, atomic temp-build publish, digest-bound output manifest, never copies stale rank caches) | VERIFIED-CORRECT (production-deployable) | [FEATURE10_SOURCE_REMOVAL.md](FEATURE10_SOURCE_REMOVAL.md) | `packages/msbwt-modern2/evidence/feature10-source-removal.json` |
 | 12 | Generic BWT-aligned tag arrays (`MUS.BWTTags`: `bwt_tags.json` + `bwt_tags/tag_<hash>.npy`, hash-safe filenames, primitive-dtype policy, missing-value one-sided merge policy failing before the BWT merge, automatic stable-interleave merge, out-of-core chunked retrofit and Feature-10 mask filtering, `listTags`/`tagSchema`/`rowTag`/`tagInterval`/`tagValues`/`tagValueCounts`) | VERIFIED-CORRECT (production-deployable) | [FEATURE12_BWT_TAGS.md](FEATURE12_BWT_TAGS.md) | `packages/msbwt-modern2/evidence/feature12-bwt-tags.json` |
+| Q1 | Exact lossless FASTQ quality sidecar (`MUS.QualitySidecar`, strict Point-12 specialization: reserved uint8 tag `fastq_quality_ascii`, suffix-first-base alignment with terminal-`$` sentinel 255, byte-exact no-Phred storage, disk-backed FASTQ retrofit with independent sequence verification, strict one-sided merge rejection, merge/removal lifecycle, `readQuality`/`readSequenceAndQuality`/`readFastqData`/`qualityValues`/`readsContaining(include_quality=True)`) | VERIFIED-CORRECT (production-deployable) | [Q1_QUALITY_SIDECAR.md](Q1_QUALITY_SIDECAR.md) | `packages/msbwt-modern2/evidence/q1-quality-sidecar.json` |
 
 ## Layout
 
@@ -115,12 +116,24 @@ and is developed on the `enhanced-modern2` branch.
 - `packages/msbwt-modern2/validate/feature12-bwt-tags.sh` +
   `feature12_bwt_tags_evidence.py` — Feature-12 validation driver and
   evidence generator.
+- `packages/msbwt-modern2/MUS/QualitySidecar.py` + `tools/quality_sidecar.py` —
+  Q1 production module and quality CLI (strict Point-12 specialization;
+  pure Python, additive).
+- `packages/msbwt-modern2/tests/test_quality_sidecar_py2.py` — Q1
+  Python-2 tests (real merges).
+- `compat/tests/test_quality_sidecar.py` — Q1 host tests
+  (suffix-start alignment oracle, FASTQ retrofit, merge/removal
+  lifecycle, query APIs, randomized differentials, evidence-record
+  consistency).
+- `packages/msbwt-modern2/validate/q1-quality-sidecar.sh` +
+  `q1_quality_sidecar_evidence.py` — Q1 validation driver and evidence
+  generator.
 
 ## Roadmap
 
-- Features 3, 4, 5&6, 7, 8A, 9, 10, and 12 (query layer, sparse listing,
-  frequency + top-k, subsets/groups/predicates, left/right extensions,
-  read-level provenance, source removal, BWT-aligned tags) are
-  implemented and verified on this branch.
-- Q1 (quality sidecar), 11A, and 13A are future milestones on this
+- Features 3, 4, 5&6, 7, 8A, 9, 10, 12, and Q1 (query layer, sparse
+  listing, frequency + top-k, subsets/groups/predicates, left/right
+  extensions, read-level provenance, source removal, BWT-aligned tags,
+  exact FASTQ quality sidecar) are implemented and verified on this
   branch.
+- Features 11A and 13A are future milestones on this branch.
