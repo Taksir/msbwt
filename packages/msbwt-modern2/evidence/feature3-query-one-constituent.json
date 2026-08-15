@@ -1,0 +1,88 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "cache_hardening_probes": {
+      "corrupt_cache_rebuilt": true,
+      "legacy_cache_without_identity_rebuilt": true,
+      "stale_same_length_replaced_interleave_detected": true,
+      "wrong_stride_cache_rebuilt": true
+    },
+    "mismatch_count": 0,
+    "notes": [
+      "read-derived fixtures are tiny deterministic corpora, not compiled Holt/McMillan replacements; real merges use the compiled GenericMerge through the Feature-2 adapter."
+    ],
+    "oracles": [
+      "standalone_bwt",
+      "naive_project_interval"
+    ],
+    "performance": {
+      "projection_steps_total": 60,
+      "rank_nodes_touched": 5,
+      "storage_bytes_rank_cache": 5560,
+      "wall_seconds": 0.01
+    },
+    "randomized": {
+      "datasets": 6,
+      "mismatches": 0,
+      "queries": 3512,
+      "seed": 20260811
+    },
+    "real_integration": {
+      "canonical_two_source": {
+        "mismatches": 0,
+        "queries": 132
+      },
+      "five_source_balanced": {
+        "mismatches": 0,
+        "queries": 70
+      },
+      "four_source_unbalanced_chain": {
+        "mismatches": 0,
+        "queries": 40
+      },
+      "given_range_delegation": true,
+      "one_search_per_query_real": true
+    },
+    "real_queries": 242,
+    "seed": 20260811,
+    "ten_source_fixture": {
+      "depth": 4,
+      "interval_comparisons": 4020,
+      "lazy_loading_probe": true,
+      "mismatches": 0,
+      "naive_comparisons": 4020,
+      "one_search_probe": true,
+      "patterns": 402,
+      "rank_cache_round_trip": true,
+      "rich_query_probe": true,
+      "source_count": 10
+    }
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 3: Query One Constituent Inside a Multi-Merged MSBWT",
+    "milestone": "enhanced-modern2-feature3-query-one-constituent",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-3"
+  },
+  "starting_commit": "3cc8b3a"
+}
