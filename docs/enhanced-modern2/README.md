@@ -35,6 +35,7 @@ and is developed on the `enhanced-modern2` branch.
 | 5&6 | Sample frequency + top-k exact sources (`MUS.MultiSourceQuery.sourceFrequency` / `countSourcesWithOccurrences` — count-only traversal without listing materialization; `topSources` / `topSourcesByAbundance` — exact top-k from Feature-4 sparse candidates, bounded heap selection, deterministic (-count, provenance-order) ties; one merged FM search per operation) | VERIFIED-CORRECT (production-deployable) | [FEATURE5_6_FREQUENCY_TOPK.md](FEATURE5_6_FREQUENCY_TOPK.md) | `packages/msbwt-modern2/evidence/feature5-6-frequency-topk.json` |
 | 9 | Exact read-level provenance (`MUS.ReadProvenance`: one packed 20-byte record per read — origin file/read IDs + merged mate dollar ID — indexed by `getSequenceDollarID` dollar ID; automatic merge preservation and one-sided rejection; retrofit without BWT rebuild; `ReadProvenanceIndex`; `readsContaining` with duplicate preservation and source-prefiltered LF walks; BWT-identity-bound persistence) | VERIFIED-CORRECT (production-deployable) | [FEATURE9_READ_PROVENANCE.md](FEATURE9_READ_PROVENANCE.md) | `packages/msbwt-modern2/evidence/feature9-read-provenance.json` |
 | 10 | Source removal / unmerge without FASTQ rebuild (`MUS.SourceRemoval`: `remove_sources` / `retain_sources` — surviving rows kept in existing order, provenance tree pruned with reuse/collapse/filter cases, output BYTE-equal to independent retained rebuild, read-provenance filtering with mate remapping, metadata pruning with group intersection, atomic temp-build publish, digest-bound output manifest, never copies stale rank caches) | VERIFIED-CORRECT (production-deployable) | [FEATURE10_SOURCE_REMOVAL.md](FEATURE10_SOURCE_REMOVAL.md) | `packages/msbwt-modern2/evidence/feature10-source-removal.json` |
+| 12 | Generic BWT-aligned tag arrays (`MUS.BWTTags`: `bwt_tags.json` + `bwt_tags/tag_<hash>.npy`, hash-safe filenames, primitive-dtype policy, missing-value one-sided merge policy failing before the BWT merge, automatic stable-interleave merge, out-of-core chunked retrofit and Feature-10 mask filtering, `listTags`/`tagSchema`/`rowTag`/`tagInterval`/`tagValues`/`tagValueCounts`) | VERIFIED-CORRECT (production-deployable) | [FEATURE12_BWT_TAGS.md](FEATURE12_BWT_TAGS.md) | `packages/msbwt-modern2/evidence/feature12-bwt-tags.json` |
 
 ## Layout
 
@@ -103,11 +104,23 @@ and is developed on the `enhanced-modern2` branch.
 - `packages/msbwt-modern2/validate/feature10-source-removal.sh` +
   `feature10_source_removal_evidence.py` — Feature-10 validation driver
   and evidence generator.
+- `packages/msbwt-modern2/MUS/BWTTags.py` + `tools/bwt_tags.py` —
+  Feature-12 production module and tag CLI (pure Python, additive).
+- `packages/msbwt-modern2/tests/test_bwt_tags_py2.py` — Feature-12
+  Python-2 tests (real merges).
+- `compat/tests/test_bwt_tags.py` — Feature-12 host tests
+  (row-identity oracle, one-sided policies, retrofit/removal alignment,
+  query lifecycle, randomized differentials, evidence-record
+  consistency).
+- `packages/msbwt-modern2/validate/feature12-bwt-tags.sh` +
+  `feature12_bwt_tags_evidence.py` — Feature-12 validation driver and
+  evidence generator.
 
 ## Roadmap
 
-- Features 3, 4, 5&6, 7, 8A, 9, and 10 (query layer, sparse listing,
+- Features 3, 4, 5&6, 7, 8A, 9, 10, and 12 (query layer, sparse listing,
   frequency + top-k, subsets/groups/predicates, left/right extensions,
-  read-level provenance, source removal) are implemented and verified on
-  this branch.
-- Features 12, Q1, 11A, and 13A are future milestones on this branch.
+  read-level provenance, source removal, BWT-aligned tags) are
+  implemented and verified on this branch.
+- Q1 (quality sidecar), 11A, and 13A are future milestones on this
+  branch.
