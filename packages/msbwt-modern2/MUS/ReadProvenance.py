@@ -932,3 +932,102 @@ class ReadProvenanceIndex(object):
     def source_metadata(self, source):
         sid = self._resolve_source(source)
         return dict(self.table.source_metadata.get(sid, {}))
+
+
+def filter_read_provenance(
+    input_bwt_dir,
+    output_bwt_dir,
+    keep_dollar_mask,
+):
+    """Filter Feature-9 read provenance to surviving merged dollar rows.
+
+    ``keep_dollar_mask`` is aligned to the *input* MSBWT dollar-ID order.
+    Output records preserve that stable relative order.  Global mate dollar
+    IDs are translated into the output dollar-ID space; mates whose partner
+    was removed become ``UINT64_UNKNOWN`` (unpaired).
+
+    Source/local read identity is not rewritten here because Feature 9
+    derives it from the output provenance tree (Feature 10's filtered
+    tree).
+
+    The output table is re-validated against the output package (read
+    count vs ``$`` rows, source metadata vs the output manifest, and the
+    output BWT identity binding), so a wrong mask can never silently
+    produce a mismatched table.
+    """
+    input_bwt_dir = str(input_bwt_dir)
+    output_bwt_dir = str(output_bwt_dir)
+
+    table = _load_table(
+        input_bwt_dir,
+        mmap=True,
+        validate=True,
+    )
+    mask = np.asarray(keep_dollar_mask, dtype=np.bool_)
+    if mask.ndim != 1 or mask.shape[0] != table.read_count:
+        raise ReadProvenanceError(
+            "keep_dollar_mask length %d != input read count %d"
+            % (
+                mask.shape[0] if mask.ndim == 1 else -1,
+                table.read_count,
+            )
+        )
+
+    kept_old_ids = np.flatnonzero(mask).astype(np.int64)
+    old_to_new = np.full(table.read_count, -1, dtype=np.int64)
+    old_to_new[kept_old_ids] = np.arange(
+        kept_old_ids.shape[0],
+        dtype=np.int64,
+    )
+
+    output_records = np.asarray(
+        table.records[mask],
+        dtype=READ_DTYPE,
+    ).copy()
+
+    mates = np.asarray(
+        output_records["mate_dollar_id"],
+        dtype=np.uint64,
+    )
+    known = mates != np.uint64(UINT64_UNKNOWN)
+    if np.any(known):
+        old_mates = mates[known].astype(np.int64)
+        if (
+            int(old_mates.min()) < 0
+            or int(old_mates.max()) >= table.read_count
+        ):
+            raise ReadProvenanceError(
+                "input mate dollar ID outside input read range"
+            )
+
+        translated = old_to_new[old_mates]
+        output_values = np.full(
+            translated.shape[0],
+            np.uint64(UINT64_UNKNOWN),
+            dtype=np.uint64,
+        )
+        survive = translated >= 0
+        output_values[survive] = translated[survive].astype(
+            np.uint64
+        )
+        output_records["mate_dollar_id"][known] = output_values
+
+    output_manifest = load_manifest(
+        output_bwt_dir,
+        validate=True,
+    )
+    kept_source_ids = {
+        str(source["id"])
+        for source in output_manifest["sources"]
+    }
+    output_metadata = {
+        sid: dict(record)
+        for sid, record in table.source_metadata.items()
+        if sid in kept_source_ids
+    }
+
+    output_table = _ReadTable(
+        output_records,
+        source_metadata=output_metadata,
+    )
+    _save_table(output_bwt_dir, output_table)
