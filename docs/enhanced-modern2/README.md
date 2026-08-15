@@ -38,6 +38,7 @@ and is developed on the `enhanced-modern2` branch.
 | 12 | Generic BWT-aligned tag arrays (`MUS.BWTTags`: `bwt_tags.json` + `bwt_tags/tag_<hash>.npy`, hash-safe filenames, primitive-dtype policy, missing-value one-sided merge policy failing before the BWT merge, automatic stable-interleave merge, out-of-core chunked retrofit and Feature-10 mask filtering, `listTags`/`tagSchema`/`rowTag`/`tagInterval`/`tagValues`/`tagValueCounts`) | VERIFIED-CORRECT (production-deployable) | [FEATURE12_BWT_TAGS.md](FEATURE12_BWT_TAGS.md) | `packages/msbwt-modern2/evidence/feature12-bwt-tags.json` |
 | Q1 | Exact lossless FASTQ quality sidecar (`MUS.QualitySidecar`, strict Point-12 specialization: reserved uint8 tag `fastq_quality_ascii`, suffix-first-base alignment with terminal-`$` sentinel 255, byte-exact no-Phred storage, disk-backed FASTQ retrofit with independent sequence verification, strict one-sided merge rejection, merge/removal lifecycle, `readQuality`/`readSequenceAndQuality`/`readFastqData`/`qualityValues`/`readsContaining(include_quality=True)`) | VERIFIED-CORRECT (production-deployable) | [Q1_QUALITY_SIDECAR.md](Q1_QUALITY_SIDECAR.md) | `packages/msbwt-modern2/evidence/q1-quality-sidecar.json` |
 | 11A | Exact post-construction LCP retrofit (`MUS.LCP`: `lcps.npy` + `lcp.json` in the upstream Holt convention `lcps[i] = LCP(SA[i], SA[i+1])`, distinct-virtual-terminator semantics (duplicates never gain +1), read recovery + generalized Kasai with O(N) mmap working storage, no FASTQ/no BWT rebuild, BWT-identity-bound staleness rejection, `lcpAt`/`lcpAdjacent`/`lcpBetweenRows` RMQ queries, Feature-10 LCP fail-safe with explicit `drop_lcp`) | VERIFIED-CORRECT (production-deployable) | [FEATURE11A_LCP.md](FEATURE11A_LCP.md) | `packages/msbwt-modern2/evidence/feature11a-lcp.json` |
+| 13A | Whole-index benchmark harness + backend contract (`MUS.Benchmarking`: exact N/r/r-N run metrics, per-layer disk accounting verified against an independent filesystem oracle, provenance/read/tag/Q1-quality/LCP accounting with single-counted quality payload, naive run-encoding model with honest negative result, query + build benchmarks, comparison tool; `MUS.BackendContract`: machine-readable backend primitives (13B.1/2/3), framework capability contract for all verified features, `LegacyBWTAdapter`; no new backend implemented) | VERIFIED-CORRECT (production-deployable) | [FEATURE13A_BENCHMARK.md](FEATURE13A_BENCHMARK.md) | `packages/msbwt-modern2/evidence/feature13a-benchmark.json` |
 
 ## Layout
 
@@ -139,13 +140,24 @@ and is developed on the `enhanced-modern2` branch.
 - `packages/msbwt-modern2/validate/feature11a-lcp.sh` +
   `feature11a_lcp_evidence.py` — Feature-11A validation driver and
   evidence generator.
+- `packages/msbwt-modern2/MUS/Benchmarking.py` +
+  `MUS/BackendContract.py` + `tools/benchmark_index.py` — Feature-13A
+  production modules and benchmark CLI (pure Python, additive).
+- `packages/msbwt-modern2/tests/test_benchmarking_py2.py` — Feature-13A
+  Python-2 tests (real merges).
+- `compat/tests/test_benchmarking.py` — Feature-13A host tests
+  (independent filesystem/run oracles, layer classification, contract
+  tiers, query/build benchmarks, evidence-record consistency).
+- `packages/msbwt-modern2/validate/feature13a-benchmark.sh` +
+  `feature13a_benchmark_evidence.py` — Feature-13A validation driver and
+  evidence generator.
 
 ## Roadmap
 
-- Features 3, 4, 5&6, 7, 8A, 9, 10, 12, Q1, and 11A (query layer, sparse
-  listing, frequency + top-k, subsets/groups/predicates, left/right
-  extensions, read-level provenance, source removal, BWT-aligned tags,
-  exact FASTQ quality sidecar, post-construction LCP) are implemented
-  and verified on this branch.
-- Feature 13A (whole-index benchmark harness + backend contract) is the
-  final milestone on this branch.
+- Features 3, 4, 5&6, 7, 8A, 9, 10, 12, Q1, 11A, and 13A (query layer,
+  sparse listing, frequency + top-k, subsets/groups/predicates,
+  left/right extensions, read-level provenance, source removal,
+  BWT-aligned tags, exact FASTQ quality sidecar, post-construction LCP,
+  whole-index benchmark + backend contract) are implemented and verified
+  on this branch.  The enhanced-modern2 feature implementation track is
+  COMPLETE.
