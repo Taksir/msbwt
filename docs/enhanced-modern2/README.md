@@ -30,6 +30,7 @@ and is developed on the `enhanced-modern2` branch.
 | 2 | Persistent multi-source provenance / source indexing (`MUS.MultiSourceProvenance`: identity-preserving multi-stage merges of any number of sources, `provenance.json` manifest + per-merge interleave store, digest-validated, Feature-1 compatible) | VERIFIED-CORRECT (production-deployable) | [FEATURE2_MULTI_SOURCE_PROVENANCE.md](FEATURE2_MULTI_SOURCE_PROVENANCE.md) | `packages/msbwt-modern2/evidence/feature2-multi-source-provenance.json` |
 | 3 | Query one constituent inside a multi-merged MSBWT (`MUS.MultiSourceQuery`: one merged FM search + rank projection down the source's root-to-leaf path; exact standalone interval/count identity; lazy rank loading; identity-bound derived rank caches) | VERIFIED-CORRECT (production-deployable) | [FEATURE3_QUERY_ONE_CONSTITUENT.md](FEATURE3_QUERY_ONE_CONSTITUENT.md) | `packages/msbwt-modern2/evidence/feature3-query-one-constituent.json` |
 | 4 | Sparse nonzero-source listing with exact counts (`MUS.MultiSourceQuery.nonzeroSources` / `listSourcesWithOccurrences`: ONE merged FM search + single provenance-tree descent with rank0/rank1 projection and empty-child pruning; exact counts/intervals, deterministic order, traversal stats) | VERIFIED-CORRECT (production-deployable) | [FEATURE4_SPARSE_SOURCE_LISTING.md](FEATURE4_SPARSE_SOURCE_LISTING.md) | `packages/msbwt-modern2/evidence/feature4-sparse-source-listing.json` |
+| 8A | Source-aware left/right sequence extensions (`MUS.MultiSourceQuery.extend` / `extendLeft` / `extendRight`: NO reverse FM-index; left = 1 full search + |alphabet| incremental `givenRange` backward steps; right = |alphabet| full searches, asymmetry explicit; default alphabet `ACGNT`, `$` right-only; source/subset/group/where selection per candidate) | VERIFIED-CORRECT (production-deployable) | [FEATURE8A_EXTENSIONS.md](FEATURE8A_EXTENSIONS.md) | `packages/msbwt-modern2/evidence/feature8a-extensions.json` |
 | 7 | Source subsets / metadata groups / predicates (MUS.SourceMetadata: mutable labels in source_metadata.json / external files, never in the BWT; countSubset/querySubset/countGroup/queryGroup/countWhere/queryWhere — one merged FM search + provenance descent with unselected-branch pruning and complete-subtree shortcut) | VERIFIED-CORRECT (production-deployable) | [FEATURE7_SUBSET_GROUPS.md](FEATURE7_SUBSET_GROUPS.md) | packages/msbwt-modern2/evidence/feature7-subset-groups.json |
 | 5&6 | Sample frequency + top-k exact sources (`MUS.MultiSourceQuery.sourceFrequency` / `countSourcesWithOccurrences` — count-only traversal without listing materialization; `topSources` / `topSourcesByAbundance` — exact top-k from Feature-4 sparse candidates, bounded heap selection, deterministic (-count, provenance-order) ties; one merged FM search per operation) | VERIFIED-CORRECT (production-deployable) | [FEATURE5_6_FREQUENCY_TOPK.md](FEATURE5_6_FREQUENCY_TOPK.md) | `packages/msbwt-modern2/evidence/feature5-6-frequency-topk.json` |
 
@@ -83,7 +84,7 @@ and is developed on the `enhanced-modern2` branch.
 
 ## Roadmap
 
-- Features 3, 4, 5&6, and 7 (query layer, sparse listing, frequency +
-  top-k, subsets/groups/predicates) are implemented and verified on this
-  branch.
-- Features 8+ are future milestones on this branch.
+- Features 3, 4, 5&6, 7, and 8A (query layer, sparse listing, frequency
+  + top-k, subsets/groups/predicates, left/right extensions) are
+  implemented and verified on this branch.
+- Features 9+ are future milestones on this branch.
