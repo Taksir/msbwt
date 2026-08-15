@@ -1,0 +1,109 @@
+{
+  "environment": {
+    "cc": "/home/mytho/.local/share/msbwt-modern2/python27-modern2/bin/x86_64-conda_cos6-linux-gnu-cc",
+    "cython": "3.0.12",
+    "numpy": "1.16.6",
+    "pysam": "0.15.4",
+    "python": "2.7.18"
+  },
+  "evidence": {
+    "backend_contract": {
+      "contract_version": 1,
+      "framework_all_features": true,
+      "locate_absent": true,
+      "navigation_tier_missing_lf": true,
+      "search_core_satisfied": true
+    },
+    "comparison": {
+      "rows": [
+        {
+          "N": 133,
+          "bytes_per_bwt_row": 67.5187969924812,
+          "label": "seven",
+          "lcp_payload_bytes_per_bwt_row": 0,
+          "mean_run_length": 1.2547169811320755,
+          "production_bytes": 8980,
+          "provenance_bits_per_bwt_row": 3.293233082706767,
+          "quality_payload_bytes_per_bwt_row": 1.0,
+          "r": 106,
+          "r_over_N": 0.7969924812030075,
+          "rank_cache_bytes": 0,
+          "read_provenance_bytes": 1541,
+          "tag_payload_bytes_per_bwt_row": 5.0
+        },
+        {
+          "N": 191,
+          "bytes_per_bwt_row": 73.10471204188482,
+          "label": "ten",
+          "lcp_payload_bytes_per_bwt_row": 3.979057591623037,
+          "mean_run_length": 1.3263888888888888,
+          "production_bytes": 13963,
+          "provenance_bits_per_bwt_row": 3.5916230366492146,
+          "quality_payload_bytes_per_bwt_row": 1.0,
+          "r": 144,
+          "r_over_N": 0.7539267015706806,
+          "rank_cache_bytes": 0,
+          "read_provenance_bytes": 1976,
+          "tag_payload_bytes_per_bwt_row": 5.0
+        }
+      ],
+      "seven_N": 133,
+      "ten_N": 191
+    },
+    "decision_summary": {},
+    "mismatch_count": 0,
+    "notes": [
+      "the 10-source package is a deliberately tiny correctness fixture; naive RLE would EXPAND it, so no compressed-backend selection is implied by these numbers.",
+      "Q1 quality physically resides as a Point-12 tag; its payload is reported semantically and NEVER added to storage totals twice.",
+      "Feature 13A does not implement a new backend; the contract documents semantics any future backend must preserve."
+    ],
+    "oracles": [
+      "independent_bwt_run_scan",
+      "independent_filesystem_traversal",
+      "independent_provenance_tree_walk",
+      "direct_array_size_accounting"
+    ],
+    "query_benchmark": {
+      "operations": 8,
+      "repeats": 3
+    },
+    "reduced": {
+      "N": 133,
+      "filesystem_oracle_exact": true,
+      "run_oracle_exact": true
+    },
+    "seed": 20260811,
+    "structural": {
+      "N": 191,
+      "filesystem_oracle_exact": true,
+      "lcp_boundaries": 190,
+      "lcp_payload_bytes": 760,
+      "naive_u32_rle_smaller": false,
+      "provenance_bits_oracle_exact": true,
+      "quality_single_counted": true,
+      "r": 144,
+      "run_oracle_exact": true
+    }
+  },
+  "final": {
+    "branch": "enhanced-modern2",
+    "feature": "Feature 13A: Whole-Index Benchmark Harness + Backend Contract",
+    "milestone": "enhanced-modern2-feature13a-benchmark",
+    "status": "passed"
+  },
+  "fixtures": {
+    "uniform-a.fastq": {
+      "sha256": "da3466b992e0ba4ef4da2d0731062661f13e66b83ec154b56471ec4286798180",
+      "size": 173
+    },
+    "uniform-b.fastq": {
+      "sha256": "04124b73a3dde82da5cd70d9d244180d6e076a952dda404e4746b1e9388e1029",
+      "size": 162
+    }
+  },
+  "py2_tests": {
+    "status": "ok",
+    "suite": "packages/msbwt-modern2 tests, including Feature-13A"
+  },
+  "starting_commit": "f6e71f1"
+}
