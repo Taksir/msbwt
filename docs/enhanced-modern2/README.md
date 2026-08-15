@@ -28,6 +28,7 @@ and is developed on the `enhanced-modern2` branch.
 |---|---|---|---|---|
 | 1 | Two-source rank-aware queries (`MUS.SourceIndex`, one merged FM search + provenance rank over `inter0.npy`) | VERIFIED-CORRECT (production-deployable) | [FEATURE1_TWO_SOURCE_RANK.md](FEATURE1_TWO_SOURCE_RANK.md) | `packages/msbwt-modern2/evidence/feature1-two-source-rank.json` |
 | 2 | Persistent multi-source provenance / source indexing (`MUS.MultiSourceProvenance`: identity-preserving multi-stage merges of any number of sources, `provenance.json` manifest + per-merge interleave store, digest-validated, Feature-1 compatible) | VERIFIED-CORRECT (production-deployable) | [FEATURE2_MULTI_SOURCE_PROVENANCE.md](FEATURE2_MULTI_SOURCE_PROVENANCE.md) | `packages/msbwt-modern2/evidence/feature2-multi-source-provenance.json` |
+| 3 | Query one constituent inside a multi-merged MSBWT (`MUS.MultiSourceQuery`: one merged FM search + rank projection down the source's root-to-leaf path; exact standalone interval/count identity; lazy rank loading; identity-bound derived rank caches) | VERIFIED-CORRECT (production-deployable) | [FEATURE3_QUERY_ONE_CONSTITUENT.md](FEATURE3_QUERY_ONE_CONSTITUENT.md) | `packages/msbwt-modern2/evidence/feature3-query-one-constituent.json` |
 
 ## Layout
 
@@ -36,23 +37,33 @@ and is developed on the `enhanced-modern2` branch.
   (pure Python, additive).
 - `packages/msbwt-modern2/MUS/MultiSourceProvenance.py` — Feature-2
   production module (pure Python, additive).
+- `packages/msbwt-modern2/MUS/MultiSourceQuery.py` — Feature-3 production
+  module (pure Python, additive).
 - `packages/msbwt-modern2/tests/test_source_index_py2.py` — Feature-1
   Python-2 tests (real merges).
 - `packages/msbwt-modern2/tests/test_multisource_provenance_py2.py` —
   Feature-2 Python-2 tests (real merges).
+- `packages/msbwt-modern2/tests/test_multisource_query_py2.py` — Feature-3
+  Python-2 tests (real merges).
 - `compat/tests/test_feature1_source_index.py` — Feature-1 host tests
   (rank/cache/API, evidence-record consistency).
 - `compat/tests/test_multisource_provenance.py` — Feature-2 host tests
   (format/corruption/randomized differential, evidence-record consistency).
+- `compat/tests/test_multisource_query.py` — Feature-3 host tests
+  (naive/synthetic differentials, cache hardening, evidence-record
+  consistency).
 - `packages/msbwt-modern2/validate/feature1-two-source-rank.sh` +
   `feature1_two_source_evidence.py` — Feature-1 validation driver and
   evidence generator.
 - `packages/msbwt-modern2/validate/feature2-multi-source-provenance.sh` +
   `feature2_multi_source_evidence.py` — Feature-2 validation driver and
   evidence generator.
+- `packages/msbwt-modern2/validate/feature3-query-one-constituent.sh` +
+  `feature3_query_one_constituent_evidence.py` — Feature-3 validation
+  driver and evidence generator.
 
 ## Roadmap
 
 - Feature 3 (query layer: per-source rank projection over the Feature-2
-  provenance tree) is NOT implemented; Feature 2 exposes only provenance.
-- Features 3+ are future milestones on this branch.
+  provenance tree) is implemented and verified on this branch.
+- Features 4+ are future milestones on this branch.
