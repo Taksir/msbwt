@@ -34,6 +34,7 @@ and is developed on the `enhanced-modern2` branch.
 | 7 | Source subsets / metadata groups / predicates (MUS.SourceMetadata: mutable labels in source_metadata.json / external files, never in the BWT; countSubset/querySubset/countGroup/queryGroup/countWhere/queryWhere — one merged FM search + provenance descent with unselected-branch pruning and complete-subtree shortcut) | VERIFIED-CORRECT (production-deployable) | [FEATURE7_SUBSET_GROUPS.md](FEATURE7_SUBSET_GROUPS.md) | packages/msbwt-modern2/evidence/feature7-subset-groups.json |
 | 5&6 | Sample frequency + top-k exact sources (`MUS.MultiSourceQuery.sourceFrequency` / `countSourcesWithOccurrences` — count-only traversal without listing materialization; `topSources` / `topSourcesByAbundance` — exact top-k from Feature-4 sparse candidates, bounded heap selection, deterministic (-count, provenance-order) ties; one merged FM search per operation) | VERIFIED-CORRECT (production-deployable) | [FEATURE5_6_FREQUENCY_TOPK.md](FEATURE5_6_FREQUENCY_TOPK.md) | `packages/msbwt-modern2/evidence/feature5-6-frequency-topk.json` |
 | 9 | Exact read-level provenance (`MUS.ReadProvenance`: one packed 20-byte record per read — origin file/read IDs + merged mate dollar ID — indexed by `getSequenceDollarID` dollar ID; automatic merge preservation and one-sided rejection; retrofit without BWT rebuild; `ReadProvenanceIndex`; `readsContaining` with duplicate preservation and source-prefiltered LF walks; BWT-identity-bound persistence) | VERIFIED-CORRECT (production-deployable) | [FEATURE9_READ_PROVENANCE.md](FEATURE9_READ_PROVENANCE.md) | `packages/msbwt-modern2/evidence/feature9-read-provenance.json` |
+| 10 | Source removal / unmerge without FASTQ rebuild (`MUS.SourceRemoval`: `remove_sources` / `retain_sources` — surviving rows kept in existing order, provenance tree pruned with reuse/collapse/filter cases, output BYTE-equal to independent retained rebuild, read-provenance filtering with mate remapping, metadata pruning with group intersection, atomic temp-build publish, digest-bound output manifest, never copies stale rank caches) | VERIFIED-CORRECT (production-deployable) | [FEATURE10_SOURCE_REMOVAL.md](FEATURE10_SOURCE_REMOVAL.md) | `packages/msbwt-modern2/evidence/feature10-source-removal.json` |
 
 ## Layout
 
@@ -92,11 +93,21 @@ and is developed on the `enhanced-modern2` branch.
 - `packages/msbwt-modern2/validate/feature9-read-provenance.sh` +
   `feature9_read_provenance_evidence.py` — Feature-9 validation driver and
   evidence generator.
+- `packages/msbwt-modern2/MUS/SourceRemoval.py` + `tools/remove_sources.py` —
+  Feature-10 production module and removal CLI (pure Python, additive).
+- `packages/msbwt-modern2/tests/test_source_removal_py2.py` — Feature-10
+  Python-2 tests (real merges).
+- `compat/tests/test_source_removal.py` — Feature-10 host tests
+  (byte equality, clean-control equivalence, safety, randomized
+  differentials, evidence-record consistency).
+- `packages/msbwt-modern2/validate/feature10-source-removal.sh` +
+  `feature10_source_removal_evidence.py` — Feature-10 validation driver
+  and evidence generator.
 
 ## Roadmap
 
-- Features 3, 4, 5&6, 7, 8A, and 9 (query layer, sparse listing,
+- Features 3, 4, 5&6, 7, 8A, 9, and 10 (query layer, sparse listing,
   frequency + top-k, subsets/groups/predicates, left/right extensions,
-  read-level provenance) are implemented and verified on this branch.
-- Features 10, 12, Q1, 11A, and 13A are future milestones on this
-  branch.
+  read-level provenance, source removal) are implemented and verified on
+  this branch.
+- Features 12, Q1, 11A, and 13A are future milestones on this branch.
