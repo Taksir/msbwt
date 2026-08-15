@@ -1,11 +1,11 @@
 """Constituent-specific queries over a provenance-preserving multi-merged
-MSBWT (Features 3-6, enhanced-modern2).
+MSBWT (Features 3-7, enhanced-modern2).
 
 This is the additive query layer over the verified Feature-2 provenance tree
 (``MUS.MultiSourceProvenance``) and the verified Feature-1 rank primitive
-(``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the Point-3/4/5/6
-candidates (``research/feature-candidates/3/``, ``4/``, ``5 and 6/``) into
-the msbwt-modern2 production tree with:
+(``MUS.SourceIndex.TwoSourceInterleaveIndex``).  It adapts the
+Point-3/4/5/6/7 candidates (``research/feature-candidates/3/``, ``4/``,
+``5 and 6/``, ``7/``) into the msbwt-modern2 production tree with:
 
 - Python 2.7 compatibility (the candidate used the Python-3-only ``Path``
   type, which does not exist in the Python 2.7 standard library);
@@ -50,6 +50,15 @@ materializing source dictionaries, and ``topSources`` /
 by occurrence count from the Feature-4 sparse candidates with deterministic
 tie-breaking (larger count first, then provenance/input source order).
 
+Feature 7 adds subset/group/predicate selection: mutable biological labels
+live in ``MUS.SourceMetadata`` (``source_metadata.json`` or an external
+file), never in the BWT or ``provenance.json``; ``countSubset`` /
+``querySubset`` / ``countGroup`` / ``queryGroup`` / ``countWhere`` /
+``queryWhere`` resolve a selection to stable source IDs and descend the
+provenance tree once with two pruning modes (skip branches containing no
+selected source; complete-subtree shortcut when every leaf below a node is
+selected).
+
 The implementation is intentionally pure Python/NumPy and lazy-loads only
 the interleave rank indexes required by queried source paths.  It does not
 modify Holt/McMillan's FM-index or merge algorithm.
@@ -81,6 +90,11 @@ from MUS.MultiSourceProvenance import (
     load_manifest,
 )
 from MUS.SourceIndex import TwoSourceInterleaveIndex, _POPCOUNT
+from MUS.SourceMetadata import (
+    METADATA_FILENAME,
+    SourceMetadataCatalog,
+    SourceMetadataError,
+)
 
 
 RANK_DIRNAME = "ranks"
@@ -180,6 +194,11 @@ class MultiSourceQueryIndex(object):
             for i, source in enumerate(self.manifest["sources"])
         }
 
+        # subtree source sets (Feature 7): frozenset of constituent IDs
+        # below every node, keyed by node identity
+        self._subtree_sources = {}
+        self._index_subtree_sources(self.manifest["root"])
+
         # Lazy cache: node_id -> TwoSourceInterleaveIndex.
         self._rank_indexes = {}
 
@@ -222,6 +241,47 @@ class MultiSourceQueryIndex(object):
         """
         sid = self.resolve_source(source)
         return list(self._paths[sid])
+
+    def _node_cache_key(self, node):
+        if node["type"] == "leaf":
+            return ("leaf", str(node["source_id"]))
+        return ("merge", str(node["node_id"]))
+
+    def _index_subtree_sources(self, node):
+        """Return/cache the frozenset of constituent IDs below ``node``."""
+        node_type = node["type"]
+        key = self._node_cache_key(node)
+
+        if node_type == "leaf":
+            result = frozenset([str(node["source_id"])])
+        elif node_type == "merge":
+            result = (
+                self._index_subtree_sources(node["left"])
+                | self._index_subtree_sources(node["right"])
+            )
+        else:
+            raise ProvenanceError(
+                "unknown provenance node type: %r" % node_type
+            )
+
+        self._subtree_sources[key] = result
+        return result
+
+    def subtree_sources(self, node):
+        return self._subtree_sources[self._node_cache_key(node)]
+
+    def resolve_source_ids(self, sources):
+        """Resolve/deduplicate arbitrary source IDs/names in provenance
+        order."""
+        seen = set()
+        resolved = []
+        for source in sources:
+            sid = self.resolve_source(source)
+            if sid not in seen:
+                resolved.append(sid)
+                seen.add(sid)
+        resolved.sort(key=self._source_order.__getitem__)
+        return resolved
 
     def _build_paths(self, node, path):
         node_type = node["type"]
@@ -747,14 +807,186 @@ class MultiSourceQueryIndex(object):
             return top, stats
         return top
 
+    def subset_count_interval(
+        self,
+        start,
+        end,
+        sources,
+        include_stats=False,
+    ):
+        """Return the exact aggregate count for an arbitrary source subset.
+
+        The traversal has two pruning modes (Feature 7):
+
+        * a provenance branch containing no selected source is skipped;
+        * if *all* leaves below a node are selected, ``r-l`` is returned
+          directly without descending farther (complete-subtree shortcut).
+
+        The second rule lets metadata groups aligned with provenance
+        subtrees aggregate in fewer rank operations than summing Point-3
+        queries.
+        """
+        start, end = self._check_interval(start, end)
+        selected = frozenset(self.resolve_source_ids(sources))
+
+        stats = {
+            "root_interval_size": int(end - start),
+            "selected_sources": len(selected),
+            "internal_nodes_visited": 0,
+            "branches_pruned_empty_interval": 0,
+            "branches_pruned_unselected": 0,
+            "subtree_shortcuts": 0,
+            "rank_nodes_loaded_before": self.loaded_rank_node_count,
+        }
+
+        if not selected or start == end:
+            stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+            stats["rank_nodes_loaded_for_query"] = 0
+            if include_stats:
+                return 0, stats
+            return 0
+
+        def descend(node, l, r):
+            if l == r:
+                stats["branches_pruned_empty_interval"] += 1
+                return 0
+
+            node_sources = self.subtree_sources(node)
+            overlap = node_sources & selected
+            if not overlap:
+                stats["branches_pruned_unselected"] += 1
+                return 0
+
+            # Every source under this node is selected, so the node's
+            # interval is already the exact aggregate count for that whole
+            # subtree.
+            if node_sources <= selected:
+                stats["subtree_shortcuts"] += 1
+                return int(r - l)
+
+            if node["type"] == "leaf":
+                return int(r - l)
+
+            stats["internal_nodes_visited"] += 1
+            rank_index = self._get_rank_index(str(node["node_id"]))
+
+            left_l = rank_index.rank0(l)
+            left_r = rank_index.rank0(r)
+            right_l = rank_index.rank1(l)
+            right_r = rank_index.rank1(r)
+
+            return (
+                descend(node["left"], left_l, left_r)
+                + descend(node["right"], right_l, right_r)
+            )
+
+        count = int(descend(self.manifest["root"], start, end))
+
+        stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+        stats["rank_nodes_loaded_for_query"] = (
+            stats["rank_nodes_loaded_after"]
+            - stats["rank_nodes_loaded_before"]
+        )
+
+        if include_stats:
+            return count, stats
+        return count
+
+    def subset_counts_interval(
+        self,
+        start,
+        end,
+        sources,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        """Return exact nonzero per-source counts inside a requested
+        subset."""
+        start, end = self._check_interval(start, end)
+        selected_ids = self.resolve_source_ids(sources)
+        selected = frozenset(selected_ids)
+
+        stats = {
+            "root_interval_size": int(end - start),
+            "selected_sources": len(selected),
+            "internal_nodes_visited": 0,
+            "branches_pruned_empty_interval": 0,
+            "branches_pruned_unselected": 0,
+            "leaves_reported": 0,
+            "rank_nodes_loaded_before": self.loaded_rank_node_count,
+        }
+        results = []
+
+        if not selected or start == end:
+            stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+            stats["rank_nodes_loaded_for_query"] = 0
+            if include_stats:
+                return results, stats
+            return results
+
+        def descend(node, l, r):
+            if l == r:
+                stats["branches_pruned_empty_interval"] += 1
+                return
+
+            node_sources = self.subtree_sources(node)
+            if not (node_sources & selected):
+                stats["branches_pruned_unselected"] += 1
+                return
+
+            if node["type"] == "leaf":
+                sid = str(node["source_id"])
+                if sid not in selected:
+                    stats["branches_pruned_unselected"] += 1
+                    return
+                source = self._sources_by_id[sid]
+                record = {
+                    "source_id": sid,
+                    "source_name": str(source.get("name", sid)),
+                    "count": int(r - l),
+                }
+                if include_intervals:
+                    record["source_interval"] = (int(l), int(r))
+                results.append(record)
+                stats["leaves_reported"] += 1
+                return
+
+            stats["internal_nodes_visited"] += 1
+            rank_index = self._get_rank_index(str(node["node_id"]))
+
+            left_l = rank_index.rank0(l)
+            left_r = rank_index.rank0(r)
+            right_l = rank_index.rank1(l)
+            right_r = rank_index.rank1(r)
+
+            descend(node["left"], left_l, left_r)
+            descend(node["right"], right_l, right_r)
+
+        descend(self.manifest["root"], start, end)
+
+        stats["rank_nodes_loaded_after"] = self.loaded_rank_node_count
+        stats["rank_nodes_loaded_for_query"] = (
+            stats["rank_nodes_loaded_after"]
+            - stats["rank_nodes_loaded_before"]
+        )
+
+        if include_stats:
+            return results, stats
+        return results
+
 
 class MultiSourceBWT(object):
     """Wrap a Feature-2 merged MSBWT with constituent-specific query
     methods."""
 
-    def __init__(self, bwt, source_index):
+    def __init__(self, bwt, source_index, source_metadata=None):
         self.bwt = bwt
         self.source_index = source_index
+        if source_metadata is None:
+            source_metadata = SourceMetadataCatalog(
+                source_index.list_sources()
+            )
+        self.source_metadata = source_metadata
         if hasattr(bwt, "getTotalSize"):
             bwt_size = int(bwt.getTotalSize())
             if bwt_size != source_index.total_bits:
@@ -771,8 +1003,14 @@ class MultiSourceBWT(object):
         mmap=True,
         use_saved_rank=True,
         logger=None,
+        source_metadata_path=None,
     ):
-        """Load a real Holt/McMillan MSBWT plus Feature-2 provenance."""
+        """Load a real Holt/McMillan MSBWT plus Feature-2 provenance.
+
+        ``source_metadata.json`` inside the merged directory is loaded
+        automatically (if present); an external metadata file can be
+        supplied explicitly via ``source_metadata_path``.
+        """
         from MUSCython import MultiStringBWTCython as MultiStringBWT
 
         bwt = MultiStringBWT.loadBWT(
@@ -786,7 +1024,18 @@ class MultiSourceBWT(object):
             mmap=mmap,
             use_saved_rank=use_saved_rank,
         )
-        return cls(bwt, source_index)
+        if source_metadata_path is None:
+            source_metadata = SourceMetadataCatalog.load(
+                merged_bwt_dir,
+                source_index.list_sources(),
+                required=False,
+            )
+        else:
+            source_metadata = SourceMetadataCatalog.from_file(
+                source_metadata_path,
+                source_index.list_sources(),
+            )
+        return cls(bwt, source_index, source_metadata=source_metadata)
 
     def findIndicesOfStr(self, seq, givenRange=None):
         seq = _normalize_sequence(seq)
@@ -967,6 +1216,183 @@ class MultiSourceBWT(object):
 
     # Synonym for callers who prefer the roadmap terminology.
     topSourcesByAbundance = topSources
+
+    def _resolve_subset_selection(
+        self,
+        sources=None,
+        group=None,
+        where=None,
+    ):
+        if sources is not None:
+            # Accept source names as well as IDs for the direct subset API.
+            resolved = self.source_index.resolve_source_ids(sources)
+            return resolved
+
+        return self.source_metadata.resolve_selection(
+            group=group,
+            where=where,
+        )
+
+    def countSubset(
+        self,
+        seq,
+        sources=None,
+        group=None,
+        where=None,
+        givenRange=None,
+        include_stats=False,
+    ):
+        """Count exact occurrences across an arbitrary source subset/group."""
+        selected = self._resolve_subset_selection(
+            sources=sources,
+            group=group,
+            where=where,
+        )
+        seq = _normalize_sequence(seq)
+        merged_low, merged_high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+
+        if include_stats:
+            count, stats = self.source_index.subset_count_interval(
+                merged_low,
+                merged_high,
+                selected,
+                include_stats=True,
+            )
+            return {
+                "sequence": seq,
+                "merged_interval": (int(merged_low), int(merged_high)),
+                "merged_count": int(merged_high - merged_low),
+                "selected_source_ids": list(selected),
+                "selected_source_count": len(selected),
+                "count": int(count),
+                "stats": stats,
+            }
+
+        return int(
+            self.source_index.subset_count_interval(
+                merged_low,
+                merged_high,
+                selected,
+                include_stats=False,
+            )
+        )
+
+    def querySubset(
+        self,
+        seq,
+        sources=None,
+        group=None,
+        where=None,
+        givenRange=None,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        """Return aggregate and exact nonzero constituent counts for a
+        subset."""
+        selected = self._resolve_subset_selection(
+            sources=sources,
+            group=group,
+            where=where,
+        )
+        seq = _normalize_sequence(seq)
+        merged_low, merged_high = self.findIndicesOfStr(
+            seq,
+            givenRange=givenRange,
+        )
+
+        if include_stats:
+            records, stats = self.source_index.subset_counts_interval(
+                merged_low,
+                merged_high,
+                selected,
+                include_intervals=include_intervals,
+                include_stats=True,
+            )
+        else:
+            records = self.source_index.subset_counts_interval(
+                merged_low,
+                merged_high,
+                selected,
+                include_intervals=include_intervals,
+                include_stats=False,
+            )
+            stats = None
+
+        result = {
+            "sequence": seq,
+            "merged_interval": (int(merged_low), int(merged_high)),
+            "merged_count": int(merged_high - merged_low),
+            "selected_source_ids": list(selected),
+            "selected_source_count": len(selected),
+            "count": int(sum(record["count"] for record in records)),
+            "sources": records,
+        }
+        if include_stats:
+            result["stats"] = stats
+        return result
+
+    def countGroup(
+        self,
+        seq,
+        group,
+        givenRange=None,
+        include_stats=False,
+    ):
+        return self.countSubset(
+            seq,
+            group=group,
+            givenRange=givenRange,
+            include_stats=include_stats,
+        )
+
+    def queryGroup(
+        self,
+        seq,
+        group,
+        givenRange=None,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        return self.querySubset(
+            seq,
+            group=group,
+            givenRange=givenRange,
+            include_intervals=include_intervals,
+            include_stats=include_stats,
+        )
+
+    def countWhere(
+        self,
+        seq,
+        where,
+        givenRange=None,
+        include_stats=False,
+    ):
+        return self.countSubset(
+            seq,
+            where=where,
+            givenRange=givenRange,
+            include_stats=include_stats,
+        )
+
+    def queryWhere(
+        self,
+        seq,
+        where,
+        givenRange=None,
+        include_intervals=False,
+        include_stats=False,
+    ):
+        return self.querySubset(
+            seq,
+            where=where,
+            givenRange=givenRange,
+            include_intervals=include_intervals,
+            include_stats=include_stats,
+        )
 
     def querySource(self, seq, source, givenRange=None, include_trace=False):
         """Return a rich constituent-specific exact-query result."""
