@@ -138,11 +138,7 @@ setup(name='msbwt-modern2',
       # BAM input is intentionally unavailable on native Windows.
       install_requires=['numpy', 'pysam; sys_platform != "win32"'],
       scripts=['bin/msbwt'],
-<<<<<<< HEAD
       entry_points={'console_scripts': ENHANCED_CONSOLE_SCRIPTS},
-=======
-      entry_points={'console_scripts': ['msbwt = MUS.CommandLineInterface:mainRun']},
->>>>>>> af6bf28 (windows: make pysam optional so Windows installs without --no-deps)
       zip_safe=False,
       ext_modules=extModules,
       cmdclass=cmdClass)
