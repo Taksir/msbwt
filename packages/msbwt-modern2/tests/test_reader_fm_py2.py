@@ -376,6 +376,9 @@ class PureFMReaderTests(unittest.TestCase):
     # ------------------------------------------------------------------
     # historical failure evidence preserved (frozen original)
     # ------------------------------------------------------------------
+    @unittest.skipIf(sys.platform.startswith("win"),
+                     "frozen reader loads MUS.MultiStringBWT which imports "
+                     "pysam at module scope; pysam unavailable on Windows")
     def test_frozen_original_still_raises_bincount_typeerror(self):
         """The FROZEN original source keeps the failing
         `ret += np.bincount(...)` expression and still raises the documented

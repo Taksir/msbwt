@@ -131,9 +131,18 @@ setup(name='msbwt-modern2',
       license='MIT',
       packages=['MUS', 'MUSCython', 'tools'],
       package_data={'MUSCython': ['BasicBWT.pxd']},
-      install_requires=['pysam', 'numpy'],
+      # pysam is required on Linux/WSL for BAM preprocessing, but has no
+      # CPython 2.7 Windows distribution (no cp27 win_amd64 wheel exists
+      # on PyPI for any version).  The PEP 508 marker excludes it from
+      # installation on Windows; FASTQ/MSBWT operations work without it.
+      # BAM input is intentionally unavailable on native Windows.
+      install_requires=['numpy', 'pysam; sys_platform != "win32"'],
       scripts=['bin/msbwt'],
+<<<<<<< HEAD
       entry_points={'console_scripts': ENHANCED_CONSOLE_SCRIPTS},
+=======
+      entry_points={'console_scripts': ['msbwt = MUS.CommandLineInterface:mainRun']},
+>>>>>>> af6bf28 (windows: make pysam optional so Windows installs without --no-deps)
       zip_safe=False,
       ext_modules=extModules,
       cmdclass=cmdClass)

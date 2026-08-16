@@ -295,6 +295,9 @@ class ReaderBoundaryTests(unittest.TestCase):
             self.assertEqual([int(v) for v in ret],
                              oracle(self.expected_payload, position), position)
 
+    @unittest.skipIf(sys.platform.startswith("win"),
+                     "frozen reader loads MUS.MultiStringBWT which imports "
+                     "pysam at module scope; pysam unavailable on Windows")
     def test_pure_getFullFMAtIndex_legacy_bincount_defect_fixed(self):
         """The frozen line-725/726 float64 bincount cast defect is fixed in
         modern2 and preserved in the frozen original.

@@ -62,17 +62,20 @@ class BootstrapEnvironmentTests(unittest.TestCase):
 
     def test_numpy_and_pysam_are_pinned(self):
         import numpy
-        import pysam
         self.assertEqual(numpy.__version__, "1.16.6")
-        if sys.platform.startswith("win"):
-            # pysam has no CPython-2.7 Windows distribution (no cp27
-            # win_amd64 wheel exists on PyPI for any version and conda-forge
-            # has no py27 win-64 build); the documented Windows validation
-            # environment provides a shim that only marks BAM input as
-            # unsupported.  FASTQ paths never import pysam.
-            self.assertEqual(pysam.__version__, "0.15.4-shim-win32")
-        else:
+        if not sys.platform.startswith("win"):
+            import pysam
             self.assertEqual(pysam.__version__, "0.15.4")
+        else:
+            # pysam has no CPython-2.7 Windows distribution; it is not
+            # an install requirement on Windows.  BAM preprocessing is
+            # intentionally unavailable.
+            try:
+                import pysam  # noqa: F401
+            except ImportError:
+                pass  # expected on Windows
+            else:
+                self.fail("pysam should not be installed on Windows")
 
 
 class ImportSurfaceTests(unittest.TestCase):
