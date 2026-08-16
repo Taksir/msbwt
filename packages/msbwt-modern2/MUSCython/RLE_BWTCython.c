@@ -1517,7 +1517,7 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "MUSCython/RLE_BWTCython.pyx",
+  "MUSCython\\\\RLE_BWTCython.pyx",
   "<stringsource>",
   "__init__.pxd",
   "type.pxd",
@@ -1666,7 +1666,7 @@ typedef struct {
 
 /* #### Code section: numeric_typedefs ### */
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":736
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":736
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1675,7 +1675,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":737
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":737
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1684,7 +1684,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":738
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":738
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1693,7 +1693,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":739
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":739
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1702,7 +1702,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":743
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":743
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1711,7 +1711,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":744
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":744
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1720,7 +1720,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":745
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":745
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1729,7 +1729,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":746
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":746
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1738,7 +1738,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":750
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":750
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1747,7 +1747,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":751
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":751
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1756,7 +1756,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":760
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":760
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1765,7 +1765,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":761
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":761
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1774,7 +1774,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":763
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":763
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1783,7 +1783,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":764
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":764
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1792,7 +1792,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":766
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":766
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1801,7 +1801,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":767
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":767
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1810,7 +1810,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":769
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":769
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1819,7 +1819,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":770
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":770
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1828,7 +1828,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":771
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1866,12 +1866,13 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 /*--- Type declarations ---*/
 struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT;
 struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT;
+struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr;
 struct __pyx_array_obj;
 struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":773
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":773
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1880,7 +1881,7 @@ struct __pyx_memoryviewslice_obj;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":774
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":774
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1889,7 +1890,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":775
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":775
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1898,7 +1899,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":777
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -2024,7 +2025,7 @@ struct __pyx_opt_args_9MUSCython_8BasicBWT_8BasicBWT_countOccurrencesOfSeq_c {
   unsigned long mc;
 };
 
-/* "MUSCython/RLE_BWTCython.pyx":20
+/* "MUSCython/RLE_BWTCython.pyx":26
  * from cython.operator cimport preincrement as inc
  * 
  * cdef enum:             # <<<<<<<<<<<<<<
@@ -2082,7 +2083,7 @@ struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT {
 };
 
 
-/* "MUSCython/RLE_BWTCython.pyx":31
+/* "MUSCython/RLE_BWTCython.pyx":37
  *     vcLen = 6      #defined
  * 
  * cdef class RLE_BWT(BasicBWT.BasicBWT):             # <<<<<<<<<<<<<<
@@ -2099,6 +2100,23 @@ struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT {
   __Pyx_memviewslice refFM_view;
   unsigned long offsetSum;
   int useMemmapRLE;
+};
+
+
+/* "MUSCython/RLE_BWTCython.pyx":19
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):
+ *     return tuple(int(x) for x in shape)             # <<<<<<<<<<<<<<
+ * 
+ * cimport BasicBWT
+ */
+struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr {
+  PyObject_HEAD
+  PyObject *__pyx_genexpr_arg_0;
+  PyObject *__pyx_v_x;
+  PyObject *__pyx_t_0;
+  Py_ssize_t __pyx_t_1;
+  PyObject *(*__pyx_t_2)(PyObject *);
 };
 
 
@@ -2226,7 +2244,7 @@ struct __pyx_vtabstruct_9MUSCython_8BasicBWT_BasicBWT {
 static struct __pyx_vtabstruct_9MUSCython_8BasicBWT_BasicBWT *__pyx_vtabptr_9MUSCython_8BasicBWT_BasicBWT;
 
 
-/* "MUSCython/RLE_BWTCython.pyx":31
+/* "MUSCython/RLE_BWTCython.pyx":37
  *     vcLen = 6      #defined
  * 
  * cdef class RLE_BWT(BasicBWT.BasicBWT):             # <<<<<<<<<<<<<<
@@ -2875,6 +2893,14 @@ static PyObject* __Pyx_ImportFrom(PyObject* module, PyObject* name);
 /* HasAttr.proto */
 static CYTHON_INLINE int __Pyx_HasAttr(PyObject *, PyObject *);
 
+/* SliceObject.proto */
+#define __Pyx_PyObject_DelSlice(obj, cstart, cstop, py_start, py_stop, py_slice, has_cstart, has_cstop, wraparound)\
+    __Pyx_PyObject_SetSlice(obj, (PyObject*)NULL, cstart, cstop, py_start, py_stop, py_slice, has_cstart, has_cstop, wraparound)
+static CYTHON_INLINE int __Pyx_PyObject_SetSlice(
+        PyObject* obj, PyObject* value, Py_ssize_t cstart, Py_ssize_t cstop,
+        PyObject** py_start, PyObject** py_stop, PyObject** py_slice,
+        int has_cstart, int has_cstop, int wraparound);
+
 /* IsLittleEndian.proto */
 static CYTHON_INLINE int __Pyx_Is_Little_Endian(void);
 
@@ -2922,14 +2948,6 @@ static PyObject* __Pyx_PyInt_SubtractObjC(PyObject *op1, PyObject *op2, long int
 #endif
 
 #define __Pyx_BufPtrCContig1d(type, buf, i0, s0) ((type)buf + i0)
-/* SliceObject.proto */
-#define __Pyx_PyObject_DelSlice(obj, cstart, cstop, py_start, py_stop, py_slice, has_cstart, has_cstop, wraparound)\
-    __Pyx_PyObject_SetSlice(obj, (PyObject*)NULL, cstart, cstop, py_start, py_stop, py_slice, has_cstart, has_cstop, wraparound)
-static CYTHON_INLINE int __Pyx_PyObject_SetSlice(
-        PyObject* obj, PyObject* value, Py_ssize_t cstart, Py_ssize_t cstop,
-        PyObject** py_start, PyObject** py_stop, PyObject** py_slice,
-        int has_cstart, int has_cstop, int wraparound);
-
 /* IterFinish.proto */
 static CYTHON_INLINE int __Pyx_IterFinish(void);
 
@@ -3520,6 +3538,88 @@ typedef const char *__Pyx_TypeName;
 #define __Pyx_DECREF_TypeName(obj)
 #endif
 
+/* PyObjectCall2Args.proto */
+static CYTHON_INLINE PyObject* __Pyx_PyObject_Call2Args(PyObject* function, PyObject* arg1, PyObject* arg2);
+
+/* PyObjectCallMethod1.proto */
+static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name, PyObject* arg);
+
+/* CoroutineBase.proto */
+struct __pyx_CoroutineObject;
+typedef PyObject *(*__pyx_coroutine_body_t)(struct __pyx_CoroutineObject *, PyThreadState *, PyObject *);
+#if CYTHON_USE_EXC_INFO_STACK
+#define __Pyx_ExcInfoStruct  _PyErr_StackItem
+#else
+typedef struct {
+    PyObject *exc_type;
+    PyObject *exc_value;
+    PyObject *exc_traceback;
+} __Pyx_ExcInfoStruct;
+#endif
+typedef struct __pyx_CoroutineObject {
+    PyObject_HEAD
+    __pyx_coroutine_body_t body;
+    PyObject *closure;
+    __Pyx_ExcInfoStruct gi_exc_state;
+    PyObject *gi_weakreflist;
+    PyObject *classobj;
+    PyObject *yieldfrom;
+    PyObject *gi_name;
+    PyObject *gi_qualname;
+    PyObject *gi_modulename;
+    PyObject *gi_code;
+    PyObject *gi_frame;
+    int resume_label;
+    char is_running;
+} __pyx_CoroutineObject;
+static __pyx_CoroutineObject *__Pyx__Coroutine_New(
+    PyTypeObject *type, __pyx_coroutine_body_t body, PyObject *code, PyObject *closure,
+    PyObject *name, PyObject *qualname, PyObject *module_name);
+static __pyx_CoroutineObject *__Pyx__Coroutine_NewInit(
+            __pyx_CoroutineObject *gen, __pyx_coroutine_body_t body, PyObject *code, PyObject *closure,
+            PyObject *name, PyObject *qualname, PyObject *module_name);
+static CYTHON_INLINE void __Pyx_Coroutine_ExceptionClear(__Pyx_ExcInfoStruct *self);
+static int __Pyx_Coroutine_clear(PyObject *self);
+static PyObject *__Pyx_Coroutine_Send(PyObject *self, PyObject *value);
+static PyObject *__Pyx_Coroutine_Close(PyObject *self);
+static PyObject *__Pyx_Coroutine_Throw(PyObject *gen, PyObject *args);
+#if CYTHON_USE_EXC_INFO_STACK
+#define __Pyx_Coroutine_SwapException(self)
+#define __Pyx_Coroutine_ResetAndClearException(self)  __Pyx_Coroutine_ExceptionClear(&(self)->gi_exc_state)
+#else
+#define __Pyx_Coroutine_SwapException(self) {\
+    __Pyx_ExceptionSwap(&(self)->gi_exc_state.exc_type, &(self)->gi_exc_state.exc_value, &(self)->gi_exc_state.exc_traceback);\
+    __Pyx_Coroutine_ResetFrameBackpointer(&(self)->gi_exc_state);\
+    }
+#define __Pyx_Coroutine_ResetAndClearException(self) {\
+    __Pyx_ExceptionReset((self)->gi_exc_state.exc_type, (self)->gi_exc_state.exc_value, (self)->gi_exc_state.exc_traceback);\
+    (self)->gi_exc_state.exc_type = (self)->gi_exc_state.exc_value = (self)->gi_exc_state.exc_traceback = NULL;\
+    }
+#endif
+#if CYTHON_FAST_THREAD_STATE
+#define __Pyx_PyGen_FetchStopIterationValue(pvalue)\
+    __Pyx_PyGen__FetchStopIterationValue(__pyx_tstate, pvalue)
+#else
+#define __Pyx_PyGen_FetchStopIterationValue(pvalue)\
+    __Pyx_PyGen__FetchStopIterationValue(__Pyx_PyThreadState_Current, pvalue)
+#endif
+static int __Pyx_PyGen__FetchStopIterationValue(PyThreadState *tstate, PyObject **pvalue);
+static CYTHON_INLINE void __Pyx_Coroutine_ResetFrameBackpointer(__Pyx_ExcInfoStruct *exc_state);
+
+/* PatchModuleWithCoroutine.proto */
+static PyObject* __Pyx_Coroutine_patch_module(PyObject* module, const char* py_code);
+
+/* PatchGeneratorABC.proto */
+static int __Pyx_patch_abc(void);
+
+/* Generator.proto */
+#define __Pyx_Generator_USED
+#define __Pyx_Generator_CheckExact(obj) __Pyx_IS_TYPE(obj, __pyx_GeneratorType)
+#define __Pyx_Generator_New(body, code, closure, name, qualname, module_name)\
+    __Pyx__Coroutine_New(__pyx_GeneratorType, body, code, closure, name, qualname, module_name)
+static PyObject *__Pyx_Generator_Next(PyObject *self);
+static int __pyx_Generator_init(PyObject *module);
+
 /* CheckBinaryVersion.proto */
 static unsigned long __Pyx_get_runtime_version(void);
 static int __Pyx_check_binary_version(unsigned long ct_version, unsigned long rt_version, int allow_newer);
@@ -3662,12 +3762,13 @@ static const char __pyx_k__7[] = ")";
 static const char __pyx_k_fp[] = "fp";
 static const char __pyx_k_gc[] = "gc";
 static const char __pyx_k_id[] = "id";
+static const char __pyx_k_mm[] = "_mm";
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_os[] = "os";
 static const char __pyx_k_u1[] = "<u1";
 static const char __pyx_k_u8[] = "<u8";
 static const char __pyx_k__13[] = "$";
-static const char __pyx_k__56[] = "?";
+static const char __pyx_k__58[] = "?";
 static const char __pyx_k_abc[] = "abc";
 static const char __pyx_k_and[] = " and ";
 static const char __pyx_k_end[] = "end";
@@ -3680,6 +3781,7 @@ static const char __pyx_k_seq[] = "seq";
 static const char __pyx_k_sum[] = "sum";
 static const char __pyx_k_sym[] = "sym";
 static const char __pyx_k_sys[] = "sys";
+static const char __pyx_k_args[] = "args";
 static const char __pyx_k_base[] = "base";
 static const char __pyx_k_ceil[] = "ceil";
 static const char __pyx_k_dict[] = "__dict__";
@@ -3697,8 +3799,8 @@ static const char __pyx_k_ndim[] = "ndim";
 static const char __pyx_k_pack[] = "pack";
 static const char __pyx_k_path[] = "path";
 static const char __pyx_k_same[] = "same";
-static const char __pyx_k_save[] = "save";
 static const char __pyx_k_self[] = "self";
+static const char __pyx_k_send[] = "send";
 static const char __pyx_k_size[] = "size";
 static const char __pyx_k_sort[] = "sort";
 static const char __pyx_k_spec[] = "__spec__";
@@ -3709,6 +3811,7 @@ static const char __pyx_k_ASCII[] = "ASCII";
 static const char __pyx_k_abtFN[] = "abtFN";
 static const char __pyx_k_binID[] = "binID";
 static const char __pyx_k_class[] = "__class__";
+static const char __pyx_k_close[] = "close";
 static const char __pyx_k_count[] = "count";
 static const char __pyx_k_dtype[] = "dtype";
 static const char __pyx_k_empty[] = "empty";
@@ -3722,6 +3825,7 @@ static const char __pyx_k_range[] = "range";
 static const char __pyx_k_shape[] = "shape";
 static const char __pyx_k_start[] = "start";
 static const char __pyx_k_state[] = "state";
+static const char __pyx_k_throw[] = "throw";
 static const char __pyx_k_zeros[] = "zeros";
 static const char __pyx_k_binEnd[] = "binEnd";
 static const char __pyx_k_counts[] = "counts";
@@ -3751,6 +3855,7 @@ static const char __pyx_k_dirName[] = "dirName";
 static const char __pyx_k_disable[] = "disable";
 static const char __pyx_k_fmRefFN[] = "fmRefFN";
 static const char __pyx_k_fortran[] = "fortran";
+static const char __pyx_k_genexpr[] = "genexpr";
 static const char __pyx_k_letters[] = "letters";
 static const char __pyx_k_memview[] = "memview";
 static const char __pyx_k_prevSym[] = "prevSym";
@@ -3779,6 +3884,7 @@ static const char __pyx_k_currIndex[] = "currIndex";
 static const char __pyx_k_enumerate[] = "enumerate";
 static const char __pyx_k_fmIndexFN[] = "fmIndexFN";
 static const char __pyx_k_indexByte[] = "indexByte";
+static const char __pyx_k_int_shape[] = "_int_shape";
 static const char __pyx_k_isenabled[] = "isenabled";
 static const char __pyx_k_loadMsbwt[] = "loadMsbwt";
 static const char __pyx_k_prevStart[] = "prevStart";
@@ -3880,12 +3986,13 @@ static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>
 static const char __pyx_k_RLE_BWT_constructFMIndex[] = "RLE_BWT.constructFMIndex";
 static const char __pyx_k_RLE_BWT_decompressBlocks[] = "RLE_BWT.decompressBlocks";
 static const char __pyx_k_RLE_BWT_getFullFMAtIndex[] = "RLE_BWT.getFullFMAtIndex";
+static const char __pyx_k_int_shape_locals_genexpr[] = "_int_shape.<locals>.genexpr";
 static const char __pyx_k_Dimension_d_is_not_direct[] = "Dimension %d is not direct";
 static const char __pyx_k_RLE_BWT___setstate_cython[] = "RLE_BWT.__setstate_cython__";
 static const char __pyx_k_Index_out_of_bounds_axis_d[] = "Index out of bounds (axis %d)";
 static const char __pyx_k_getOccurrenceOfCharAtIndex[] = "getOccurrenceOfCharAtIndex";
 static const char __pyx_k_First_time_calculation_of_s[] = "First time calculation of '%s'";
-static const char __pyx_k_MUSCython_RLE_BWTCython_pyx[] = "MUSCython/RLE_BWTCython.pyx";
+static const char __pyx_k_MUSCython_RLE_BWTCython_pyx[] = "MUSCython\\RLE_BWTCython.pyx";
 static const char __pyx_k_Step_may_not_be_zero_axis_d[] = "Step may not be zero (axis %d)";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_RLE_BWT_constructTotalCounts[] = "RLE_BWT.constructTotalCounts";
@@ -3961,6 +4068,8 @@ static void __pyx_memoryviewslice___pyx_pf_15View_dot_MemoryView_16_memoryviewsl
 static PyObject *__pyx_pf___pyx_memoryviewslice___reduce_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf___pyx_memoryviewslice_2__setstate_cython__(CYTHON_UNUSED struct __pyx_memoryviewslice_obj *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_15View_dot_MemoryView___pyx_unpickle_Enum(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_10_int_shape_genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0); /* proto */
+static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython__int_shape(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_shape); /* proto */
 static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCompSize(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *__pyx_v_self, char *__pyx_v_dirName, int __pyx_v_useMemmap, PyObject *__pyx_v_logger); /* proto */
 static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCounts(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *__pyx_v_self, PyObject *__pyx_v_logger); /* proto */
@@ -3976,8 +4085,9 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_22findReadsMatchin
 static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_24findReadsMatchingSeqWithError2(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *__pyx_v_self, PyObject *__pyx_v_seq, unsigned long __pyx_v_strLen); /* proto */
 static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_26__reduce_cython__(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_28__setstate_cython__(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython___pyx_unpickle_RLE_BWT(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_2__pyx_unpickle_RLE_BWT(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_9MUSCython_13RLE_BWTCython_RLE_BWT(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_array(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_Enum(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_memoryview(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -4049,12 +4159,14 @@ typedef struct {
   PyTypeObject *__pyx_ptype_9MUSCython_8BasicBWT_BasicBWT;
   #if CYTHON_USE_MODULE_STATE
   PyObject *__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT;
+  PyObject *__pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr;
   PyObject *__pyx_type___pyx_array;
   PyObject *__pyx_type___pyx_MemviewEnum;
   PyObject *__pyx_type___pyx_memoryview;
   PyObject *__pyx_type___pyx_memoryviewslice;
   #endif
   PyTypeObject *__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT;
+  PyTypeObject *__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr;
   PyTypeObject *__pyx_array_type;
   PyTypeObject *__pyx_MemviewEnum_type;
   PyTypeObject *__pyx_memoryview_type;
@@ -4122,7 +4234,7 @@ typedef struct {
   PyObject *__pyx_kp_s__13;
   PyObject *__pyx_kp_u__2;
   PyObject *__pyx_n_s__3;
-  PyObject *__pyx_n_s__56;
+  PyObject *__pyx_n_s__58;
   PyObject *__pyx_kp_u__6;
   PyObject *__pyx_kp_u__7;
   PyObject *__pyx_n_s_abc;
@@ -4130,6 +4242,7 @@ typedef struct {
   PyObject *__pyx_n_s_alignChanges;
   PyObject *__pyx_n_s_allocate_buffer;
   PyObject *__pyx_kp_u_and;
+  PyObject *__pyx_n_s_args;
   PyObject *__pyx_n_s_asyncio_coroutines;
   PyObject *__pyx_n_s_base;
   PyObject *__pyx_n_s_binEnd;
@@ -4143,6 +4256,7 @@ typedef struct {
   PyObject *__pyx_n_s_class_getitem;
   PyObject *__pyx_n_s_clearAuxiliaryData;
   PyObject *__pyx_n_s_cline_in_traceback;
+  PyObject *__pyx_n_s_close;
   PyObject *__pyx_n_s_collections;
   PyObject *__pyx_kp_s_collections_abc;
   PyObject *__pyx_kp_s_comp_fmIndex_npy;
@@ -4202,6 +4316,7 @@ typedef struct {
   PyObject *__pyx_n_s_fp;
   PyObject *__pyx_kp_s_from_the_file_system_manual_rem;
   PyObject *__pyx_kp_u_gc;
+  PyObject *__pyx_n_s_genexpr;
   PyObject *__pyx_n_s_getBWTRange;
   PyObject *__pyx_n_s_getCharAtIndex;
   PyObject *__pyx_n_s_getCompSize;
@@ -4217,6 +4332,8 @@ typedef struct {
   PyObject *__pyx_n_s_indexByte;
   PyObject *__pyx_n_s_info;
   PyObject *__pyx_n_s_initializing;
+  PyObject *__pyx_n_s_int_shape;
+  PyObject *__pyx_n_s_int_shape_locals_genexpr;
   PyObject *__pyx_n_s_is_coroutine;
   PyObject *__pyx_kp_s_is_too_large_to_be_a_string_ID;
   PyObject *__pyx_kp_u_isenabled;
@@ -4236,6 +4353,7 @@ typedef struct {
   PyObject *__pyx_n_s_math;
   PyObject *__pyx_n_s_memmap;
   PyObject *__pyx_n_s_memview;
+  PyObject *__pyx_n_s_mm;
   PyObject *__pyx_n_s_mode;
   PyObject *__pyx_n_s_name;
   PyObject *__pyx_n_s_name_2;
@@ -4284,8 +4402,8 @@ typedef struct {
   PyObject *__pyx_n_s_s;
   PyObject *__pyx_n_s_same;
   PyObject *__pyx_n_s_samplingSize;
-  PyObject *__pyx_n_s_save;
   PyObject *__pyx_n_s_self;
+  PyObject *__pyx_n_s_send;
   PyObject *__pyx_n_s_seq;
   PyObject *__pyx_n_s_setstate;
   PyObject *__pyx_n_s_setstate_cython;
@@ -4313,6 +4431,7 @@ typedef struct {
   PyObject *__pyx_n_s_tempIndexArray;
   PyObject *__pyx_n_s_tempIndexArray_view;
   PyObject *__pyx_n_s_test;
+  PyObject *__pyx_n_s_throw;
   PyObject *__pyx_n_s_totalCharCount;
   PyObject *__pyx_n_s_totalCounted;
   PyObject *__pyx_kp_s_totalCounts_npy;
@@ -4365,7 +4484,7 @@ typedef struct {
   PyObject *__pyx_tuple__26;
   PyObject *__pyx_tuple__28;
   PyObject *__pyx_tuple__30;
-  PyObject *__pyx_tuple__31;
+  PyObject *__pyx_tuple__32;
   PyObject *__pyx_tuple__33;
   PyObject *__pyx_tuple__35;
   PyObject *__pyx_tuple__37;
@@ -4374,12 +4493,13 @@ typedef struct {
   PyObject *__pyx_tuple__43;
   PyObject *__pyx_tuple__45;
   PyObject *__pyx_tuple__47;
-  PyObject *__pyx_tuple__51;
+  PyObject *__pyx_tuple__49;
   PyObject *__pyx_tuple__53;
+  PyObject *__pyx_tuple__55;
   PyObject *__pyx_codeobj__25;
   PyObject *__pyx_codeobj__27;
   PyObject *__pyx_codeobj__29;
-  PyObject *__pyx_codeobj__32;
+  PyObject *__pyx_codeobj__31;
   PyObject *__pyx_codeobj__34;
   PyObject *__pyx_codeobj__36;
   PyObject *__pyx_codeobj__38;
@@ -4388,11 +4508,12 @@ typedef struct {
   PyObject *__pyx_codeobj__44;
   PyObject *__pyx_codeobj__46;
   PyObject *__pyx_codeobj__48;
-  PyObject *__pyx_codeobj__49;
   PyObject *__pyx_codeobj__50;
+  PyObject *__pyx_codeobj__51;
   PyObject *__pyx_codeobj__52;
   PyObject *__pyx_codeobj__54;
-  PyObject *__pyx_codeobj__55;
+  PyObject *__pyx_codeobj__56;
+  PyObject *__pyx_codeobj__57;
 } __pyx_mstate;
 
 #if CYTHON_USE_MODULE_STATE
@@ -4454,6 +4575,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_ptype_9MUSCython_8BasicBWT_BasicBWT);
   Py_CLEAR(clear_module_state->__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
   Py_CLEAR(clear_module_state->__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT);
+  Py_CLEAR(clear_module_state->__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr);
+  Py_CLEAR(clear_module_state->__pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr);
   Py_CLEAR(clear_module_state->__pyx_array_type);
   Py_CLEAR(clear_module_state->__pyx_type___pyx_array);
   Py_CLEAR(clear_module_state->__pyx_MemviewEnum_type);
@@ -4525,7 +4648,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_s__13);
   Py_CLEAR(clear_module_state->__pyx_kp_u__2);
   Py_CLEAR(clear_module_state->__pyx_n_s__3);
-  Py_CLEAR(clear_module_state->__pyx_n_s__56);
+  Py_CLEAR(clear_module_state->__pyx_n_s__58);
   Py_CLEAR(clear_module_state->__pyx_kp_u__6);
   Py_CLEAR(clear_module_state->__pyx_kp_u__7);
   Py_CLEAR(clear_module_state->__pyx_n_s_abc);
@@ -4533,6 +4656,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_alignChanges);
   Py_CLEAR(clear_module_state->__pyx_n_s_allocate_buffer);
   Py_CLEAR(clear_module_state->__pyx_kp_u_and);
+  Py_CLEAR(clear_module_state->__pyx_n_s_args);
   Py_CLEAR(clear_module_state->__pyx_n_s_asyncio_coroutines);
   Py_CLEAR(clear_module_state->__pyx_n_s_base);
   Py_CLEAR(clear_module_state->__pyx_n_s_binEnd);
@@ -4546,6 +4670,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_class_getitem);
   Py_CLEAR(clear_module_state->__pyx_n_s_clearAuxiliaryData);
   Py_CLEAR(clear_module_state->__pyx_n_s_cline_in_traceback);
+  Py_CLEAR(clear_module_state->__pyx_n_s_close);
   Py_CLEAR(clear_module_state->__pyx_n_s_collections);
   Py_CLEAR(clear_module_state->__pyx_kp_s_collections_abc);
   Py_CLEAR(clear_module_state->__pyx_kp_s_comp_fmIndex_npy);
@@ -4605,6 +4730,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_fp);
   Py_CLEAR(clear_module_state->__pyx_kp_s_from_the_file_system_manual_rem);
   Py_CLEAR(clear_module_state->__pyx_kp_u_gc);
+  Py_CLEAR(clear_module_state->__pyx_n_s_genexpr);
   Py_CLEAR(clear_module_state->__pyx_n_s_getBWTRange);
   Py_CLEAR(clear_module_state->__pyx_n_s_getCharAtIndex);
   Py_CLEAR(clear_module_state->__pyx_n_s_getCompSize);
@@ -4620,6 +4746,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_indexByte);
   Py_CLEAR(clear_module_state->__pyx_n_s_info);
   Py_CLEAR(clear_module_state->__pyx_n_s_initializing);
+  Py_CLEAR(clear_module_state->__pyx_n_s_int_shape);
+  Py_CLEAR(clear_module_state->__pyx_n_s_int_shape_locals_genexpr);
   Py_CLEAR(clear_module_state->__pyx_n_s_is_coroutine);
   Py_CLEAR(clear_module_state->__pyx_kp_s_is_too_large_to_be_a_string_ID);
   Py_CLEAR(clear_module_state->__pyx_kp_u_isenabled);
@@ -4639,6 +4767,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_math);
   Py_CLEAR(clear_module_state->__pyx_n_s_memmap);
   Py_CLEAR(clear_module_state->__pyx_n_s_memview);
+  Py_CLEAR(clear_module_state->__pyx_n_s_mm);
   Py_CLEAR(clear_module_state->__pyx_n_s_mode);
   Py_CLEAR(clear_module_state->__pyx_n_s_name);
   Py_CLEAR(clear_module_state->__pyx_n_s_name_2);
@@ -4687,8 +4816,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_s);
   Py_CLEAR(clear_module_state->__pyx_n_s_same);
   Py_CLEAR(clear_module_state->__pyx_n_s_samplingSize);
-  Py_CLEAR(clear_module_state->__pyx_n_s_save);
   Py_CLEAR(clear_module_state->__pyx_n_s_self);
+  Py_CLEAR(clear_module_state->__pyx_n_s_send);
   Py_CLEAR(clear_module_state->__pyx_n_s_seq);
   Py_CLEAR(clear_module_state->__pyx_n_s_setstate);
   Py_CLEAR(clear_module_state->__pyx_n_s_setstate_cython);
@@ -4716,6 +4845,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_tempIndexArray);
   Py_CLEAR(clear_module_state->__pyx_n_s_tempIndexArray_view);
   Py_CLEAR(clear_module_state->__pyx_n_s_test);
+  Py_CLEAR(clear_module_state->__pyx_n_s_throw);
   Py_CLEAR(clear_module_state->__pyx_n_s_totalCharCount);
   Py_CLEAR(clear_module_state->__pyx_n_s_totalCounted);
   Py_CLEAR(clear_module_state->__pyx_kp_s_totalCounts_npy);
@@ -4768,7 +4898,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_tuple__26);
   Py_CLEAR(clear_module_state->__pyx_tuple__28);
   Py_CLEAR(clear_module_state->__pyx_tuple__30);
-  Py_CLEAR(clear_module_state->__pyx_tuple__31);
+  Py_CLEAR(clear_module_state->__pyx_tuple__32);
   Py_CLEAR(clear_module_state->__pyx_tuple__33);
   Py_CLEAR(clear_module_state->__pyx_tuple__35);
   Py_CLEAR(clear_module_state->__pyx_tuple__37);
@@ -4777,12 +4907,13 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_tuple__43);
   Py_CLEAR(clear_module_state->__pyx_tuple__45);
   Py_CLEAR(clear_module_state->__pyx_tuple__47);
-  Py_CLEAR(clear_module_state->__pyx_tuple__51);
+  Py_CLEAR(clear_module_state->__pyx_tuple__49);
   Py_CLEAR(clear_module_state->__pyx_tuple__53);
+  Py_CLEAR(clear_module_state->__pyx_tuple__55);
   Py_CLEAR(clear_module_state->__pyx_codeobj__25);
   Py_CLEAR(clear_module_state->__pyx_codeobj__27);
   Py_CLEAR(clear_module_state->__pyx_codeobj__29);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__32);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__31);
   Py_CLEAR(clear_module_state->__pyx_codeobj__34);
   Py_CLEAR(clear_module_state->__pyx_codeobj__36);
   Py_CLEAR(clear_module_state->__pyx_codeobj__38);
@@ -4791,11 +4922,12 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_codeobj__44);
   Py_CLEAR(clear_module_state->__pyx_codeobj__46);
   Py_CLEAR(clear_module_state->__pyx_codeobj__48);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__49);
   Py_CLEAR(clear_module_state->__pyx_codeobj__50);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__51);
   Py_CLEAR(clear_module_state->__pyx_codeobj__52);
   Py_CLEAR(clear_module_state->__pyx_codeobj__54);
-  Py_CLEAR(clear_module_state->__pyx_codeobj__55);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__56);
+  Py_CLEAR(clear_module_state->__pyx_codeobj__57);
   return 0;
 }
 #endif
@@ -4835,6 +4967,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_ptype_9MUSCython_8BasicBWT_BasicBWT);
   Py_VISIT(traverse_module_state->__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
   Py_VISIT(traverse_module_state->__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT);
+  Py_VISIT(traverse_module_state->__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr);
+  Py_VISIT(traverse_module_state->__pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr);
   Py_VISIT(traverse_module_state->__pyx_array_type);
   Py_VISIT(traverse_module_state->__pyx_type___pyx_array);
   Py_VISIT(traverse_module_state->__pyx_MemviewEnum_type);
@@ -4906,7 +5040,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_s__13);
   Py_VISIT(traverse_module_state->__pyx_kp_u__2);
   Py_VISIT(traverse_module_state->__pyx_n_s__3);
-  Py_VISIT(traverse_module_state->__pyx_n_s__56);
+  Py_VISIT(traverse_module_state->__pyx_n_s__58);
   Py_VISIT(traverse_module_state->__pyx_kp_u__6);
   Py_VISIT(traverse_module_state->__pyx_kp_u__7);
   Py_VISIT(traverse_module_state->__pyx_n_s_abc);
@@ -4914,6 +5048,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_alignChanges);
   Py_VISIT(traverse_module_state->__pyx_n_s_allocate_buffer);
   Py_VISIT(traverse_module_state->__pyx_kp_u_and);
+  Py_VISIT(traverse_module_state->__pyx_n_s_args);
   Py_VISIT(traverse_module_state->__pyx_n_s_asyncio_coroutines);
   Py_VISIT(traverse_module_state->__pyx_n_s_base);
   Py_VISIT(traverse_module_state->__pyx_n_s_binEnd);
@@ -4927,6 +5062,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_class_getitem);
   Py_VISIT(traverse_module_state->__pyx_n_s_clearAuxiliaryData);
   Py_VISIT(traverse_module_state->__pyx_n_s_cline_in_traceback);
+  Py_VISIT(traverse_module_state->__pyx_n_s_close);
   Py_VISIT(traverse_module_state->__pyx_n_s_collections);
   Py_VISIT(traverse_module_state->__pyx_kp_s_collections_abc);
   Py_VISIT(traverse_module_state->__pyx_kp_s_comp_fmIndex_npy);
@@ -4986,6 +5122,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_fp);
   Py_VISIT(traverse_module_state->__pyx_kp_s_from_the_file_system_manual_rem);
   Py_VISIT(traverse_module_state->__pyx_kp_u_gc);
+  Py_VISIT(traverse_module_state->__pyx_n_s_genexpr);
   Py_VISIT(traverse_module_state->__pyx_n_s_getBWTRange);
   Py_VISIT(traverse_module_state->__pyx_n_s_getCharAtIndex);
   Py_VISIT(traverse_module_state->__pyx_n_s_getCompSize);
@@ -5001,6 +5138,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_indexByte);
   Py_VISIT(traverse_module_state->__pyx_n_s_info);
   Py_VISIT(traverse_module_state->__pyx_n_s_initializing);
+  Py_VISIT(traverse_module_state->__pyx_n_s_int_shape);
+  Py_VISIT(traverse_module_state->__pyx_n_s_int_shape_locals_genexpr);
   Py_VISIT(traverse_module_state->__pyx_n_s_is_coroutine);
   Py_VISIT(traverse_module_state->__pyx_kp_s_is_too_large_to_be_a_string_ID);
   Py_VISIT(traverse_module_state->__pyx_kp_u_isenabled);
@@ -5020,6 +5159,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_math);
   Py_VISIT(traverse_module_state->__pyx_n_s_memmap);
   Py_VISIT(traverse_module_state->__pyx_n_s_memview);
+  Py_VISIT(traverse_module_state->__pyx_n_s_mm);
   Py_VISIT(traverse_module_state->__pyx_n_s_mode);
   Py_VISIT(traverse_module_state->__pyx_n_s_name);
   Py_VISIT(traverse_module_state->__pyx_n_s_name_2);
@@ -5068,8 +5208,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_s);
   Py_VISIT(traverse_module_state->__pyx_n_s_same);
   Py_VISIT(traverse_module_state->__pyx_n_s_samplingSize);
-  Py_VISIT(traverse_module_state->__pyx_n_s_save);
   Py_VISIT(traverse_module_state->__pyx_n_s_self);
+  Py_VISIT(traverse_module_state->__pyx_n_s_send);
   Py_VISIT(traverse_module_state->__pyx_n_s_seq);
   Py_VISIT(traverse_module_state->__pyx_n_s_setstate);
   Py_VISIT(traverse_module_state->__pyx_n_s_setstate_cython);
@@ -5097,6 +5237,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_tempIndexArray);
   Py_VISIT(traverse_module_state->__pyx_n_s_tempIndexArray_view);
   Py_VISIT(traverse_module_state->__pyx_n_s_test);
+  Py_VISIT(traverse_module_state->__pyx_n_s_throw);
   Py_VISIT(traverse_module_state->__pyx_n_s_totalCharCount);
   Py_VISIT(traverse_module_state->__pyx_n_s_totalCounted);
   Py_VISIT(traverse_module_state->__pyx_kp_s_totalCounts_npy);
@@ -5149,7 +5290,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_tuple__26);
   Py_VISIT(traverse_module_state->__pyx_tuple__28);
   Py_VISIT(traverse_module_state->__pyx_tuple__30);
-  Py_VISIT(traverse_module_state->__pyx_tuple__31);
+  Py_VISIT(traverse_module_state->__pyx_tuple__32);
   Py_VISIT(traverse_module_state->__pyx_tuple__33);
   Py_VISIT(traverse_module_state->__pyx_tuple__35);
   Py_VISIT(traverse_module_state->__pyx_tuple__37);
@@ -5158,12 +5299,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_tuple__43);
   Py_VISIT(traverse_module_state->__pyx_tuple__45);
   Py_VISIT(traverse_module_state->__pyx_tuple__47);
-  Py_VISIT(traverse_module_state->__pyx_tuple__51);
+  Py_VISIT(traverse_module_state->__pyx_tuple__49);
   Py_VISIT(traverse_module_state->__pyx_tuple__53);
+  Py_VISIT(traverse_module_state->__pyx_tuple__55);
   Py_VISIT(traverse_module_state->__pyx_codeobj__25);
   Py_VISIT(traverse_module_state->__pyx_codeobj__27);
   Py_VISIT(traverse_module_state->__pyx_codeobj__29);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__32);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__31);
   Py_VISIT(traverse_module_state->__pyx_codeobj__34);
   Py_VISIT(traverse_module_state->__pyx_codeobj__36);
   Py_VISIT(traverse_module_state->__pyx_codeobj__38);
@@ -5172,11 +5314,12 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_codeobj__44);
   Py_VISIT(traverse_module_state->__pyx_codeobj__46);
   Py_VISIT(traverse_module_state->__pyx_codeobj__48);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__49);
   Py_VISIT(traverse_module_state->__pyx_codeobj__50);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__51);
   Py_VISIT(traverse_module_state->__pyx_codeobj__52);
   Py_VISIT(traverse_module_state->__pyx_codeobj__54);
-  Py_VISIT(traverse_module_state->__pyx_codeobj__55);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__56);
+  Py_VISIT(traverse_module_state->__pyx_codeobj__57);
   return 0;
 }
 #endif
@@ -5244,12 +5387,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_ptype_9MUSCython_8BasicBWT_BasicBWT __pyx_mstate_global->__pyx_ptype_9MUSCython_8BasicBWT_BasicBWT
 #if CYTHON_USE_MODULE_STATE
 #define __pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT __pyx_mstate_global->__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT
+#define __pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr __pyx_mstate_global->__pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr
 #define __pyx_type___pyx_array __pyx_mstate_global->__pyx_type___pyx_array
 #define __pyx_type___pyx_MemviewEnum __pyx_mstate_global->__pyx_type___pyx_MemviewEnum
 #define __pyx_type___pyx_memoryview __pyx_mstate_global->__pyx_type___pyx_memoryview
 #define __pyx_type___pyx_memoryviewslice __pyx_mstate_global->__pyx_type___pyx_memoryviewslice
 #endif
 #define __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT __pyx_mstate_global->__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT
+#define __pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr __pyx_mstate_global->__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr
 #define __pyx_array_type __pyx_mstate_global->__pyx_array_type
 #define __pyx_MemviewEnum_type __pyx_mstate_global->__pyx_MemviewEnum_type
 #define __pyx_memoryview_type __pyx_mstate_global->__pyx_memoryview_type
@@ -5317,7 +5462,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_s__13 __pyx_mstate_global->__pyx_kp_s__13
 #define __pyx_kp_u__2 __pyx_mstate_global->__pyx_kp_u__2
 #define __pyx_n_s__3 __pyx_mstate_global->__pyx_n_s__3
-#define __pyx_n_s__56 __pyx_mstate_global->__pyx_n_s__56
+#define __pyx_n_s__58 __pyx_mstate_global->__pyx_n_s__58
 #define __pyx_kp_u__6 __pyx_mstate_global->__pyx_kp_u__6
 #define __pyx_kp_u__7 __pyx_mstate_global->__pyx_kp_u__7
 #define __pyx_n_s_abc __pyx_mstate_global->__pyx_n_s_abc
@@ -5325,6 +5470,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_alignChanges __pyx_mstate_global->__pyx_n_s_alignChanges
 #define __pyx_n_s_allocate_buffer __pyx_mstate_global->__pyx_n_s_allocate_buffer
 #define __pyx_kp_u_and __pyx_mstate_global->__pyx_kp_u_and
+#define __pyx_n_s_args __pyx_mstate_global->__pyx_n_s_args
 #define __pyx_n_s_asyncio_coroutines __pyx_mstate_global->__pyx_n_s_asyncio_coroutines
 #define __pyx_n_s_base __pyx_mstate_global->__pyx_n_s_base
 #define __pyx_n_s_binEnd __pyx_mstate_global->__pyx_n_s_binEnd
@@ -5338,6 +5484,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_class_getitem __pyx_mstate_global->__pyx_n_s_class_getitem
 #define __pyx_n_s_clearAuxiliaryData __pyx_mstate_global->__pyx_n_s_clearAuxiliaryData
 #define __pyx_n_s_cline_in_traceback __pyx_mstate_global->__pyx_n_s_cline_in_traceback
+#define __pyx_n_s_close __pyx_mstate_global->__pyx_n_s_close
 #define __pyx_n_s_collections __pyx_mstate_global->__pyx_n_s_collections
 #define __pyx_kp_s_collections_abc __pyx_mstate_global->__pyx_kp_s_collections_abc
 #define __pyx_kp_s_comp_fmIndex_npy __pyx_mstate_global->__pyx_kp_s_comp_fmIndex_npy
@@ -5397,6 +5544,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_fp __pyx_mstate_global->__pyx_n_s_fp
 #define __pyx_kp_s_from_the_file_system_manual_rem __pyx_mstate_global->__pyx_kp_s_from_the_file_system_manual_rem
 #define __pyx_kp_u_gc __pyx_mstate_global->__pyx_kp_u_gc
+#define __pyx_n_s_genexpr __pyx_mstate_global->__pyx_n_s_genexpr
 #define __pyx_n_s_getBWTRange __pyx_mstate_global->__pyx_n_s_getBWTRange
 #define __pyx_n_s_getCharAtIndex __pyx_mstate_global->__pyx_n_s_getCharAtIndex
 #define __pyx_n_s_getCompSize __pyx_mstate_global->__pyx_n_s_getCompSize
@@ -5412,6 +5560,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_indexByte __pyx_mstate_global->__pyx_n_s_indexByte
 #define __pyx_n_s_info __pyx_mstate_global->__pyx_n_s_info
 #define __pyx_n_s_initializing __pyx_mstate_global->__pyx_n_s_initializing
+#define __pyx_n_s_int_shape __pyx_mstate_global->__pyx_n_s_int_shape
+#define __pyx_n_s_int_shape_locals_genexpr __pyx_mstate_global->__pyx_n_s_int_shape_locals_genexpr
 #define __pyx_n_s_is_coroutine __pyx_mstate_global->__pyx_n_s_is_coroutine
 #define __pyx_kp_s_is_too_large_to_be_a_string_ID __pyx_mstate_global->__pyx_kp_s_is_too_large_to_be_a_string_ID
 #define __pyx_kp_u_isenabled __pyx_mstate_global->__pyx_kp_u_isenabled
@@ -5431,6 +5581,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_math __pyx_mstate_global->__pyx_n_s_math
 #define __pyx_n_s_memmap __pyx_mstate_global->__pyx_n_s_memmap
 #define __pyx_n_s_memview __pyx_mstate_global->__pyx_n_s_memview
+#define __pyx_n_s_mm __pyx_mstate_global->__pyx_n_s_mm
 #define __pyx_n_s_mode __pyx_mstate_global->__pyx_n_s_mode
 #define __pyx_n_s_name __pyx_mstate_global->__pyx_n_s_name
 #define __pyx_n_s_name_2 __pyx_mstate_global->__pyx_n_s_name_2
@@ -5479,8 +5630,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_s __pyx_mstate_global->__pyx_n_s_s
 #define __pyx_n_s_same __pyx_mstate_global->__pyx_n_s_same
 #define __pyx_n_s_samplingSize __pyx_mstate_global->__pyx_n_s_samplingSize
-#define __pyx_n_s_save __pyx_mstate_global->__pyx_n_s_save
 #define __pyx_n_s_self __pyx_mstate_global->__pyx_n_s_self
+#define __pyx_n_s_send __pyx_mstate_global->__pyx_n_s_send
 #define __pyx_n_s_seq __pyx_mstate_global->__pyx_n_s_seq
 #define __pyx_n_s_setstate __pyx_mstate_global->__pyx_n_s_setstate
 #define __pyx_n_s_setstate_cython __pyx_mstate_global->__pyx_n_s_setstate_cython
@@ -5508,6 +5659,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_tempIndexArray __pyx_mstate_global->__pyx_n_s_tempIndexArray
 #define __pyx_n_s_tempIndexArray_view __pyx_mstate_global->__pyx_n_s_tempIndexArray_view
 #define __pyx_n_s_test __pyx_mstate_global->__pyx_n_s_test
+#define __pyx_n_s_throw __pyx_mstate_global->__pyx_n_s_throw
 #define __pyx_n_s_totalCharCount __pyx_mstate_global->__pyx_n_s_totalCharCount
 #define __pyx_n_s_totalCounted __pyx_mstate_global->__pyx_n_s_totalCounted
 #define __pyx_kp_s_totalCounts_npy __pyx_mstate_global->__pyx_kp_s_totalCounts_npy
@@ -5560,7 +5712,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_tuple__26 __pyx_mstate_global->__pyx_tuple__26
 #define __pyx_tuple__28 __pyx_mstate_global->__pyx_tuple__28
 #define __pyx_tuple__30 __pyx_mstate_global->__pyx_tuple__30
-#define __pyx_tuple__31 __pyx_mstate_global->__pyx_tuple__31
+#define __pyx_tuple__32 __pyx_mstate_global->__pyx_tuple__32
 #define __pyx_tuple__33 __pyx_mstate_global->__pyx_tuple__33
 #define __pyx_tuple__35 __pyx_mstate_global->__pyx_tuple__35
 #define __pyx_tuple__37 __pyx_mstate_global->__pyx_tuple__37
@@ -5569,12 +5721,13 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_tuple__43 __pyx_mstate_global->__pyx_tuple__43
 #define __pyx_tuple__45 __pyx_mstate_global->__pyx_tuple__45
 #define __pyx_tuple__47 __pyx_mstate_global->__pyx_tuple__47
-#define __pyx_tuple__51 __pyx_mstate_global->__pyx_tuple__51
+#define __pyx_tuple__49 __pyx_mstate_global->__pyx_tuple__49
 #define __pyx_tuple__53 __pyx_mstate_global->__pyx_tuple__53
+#define __pyx_tuple__55 __pyx_mstate_global->__pyx_tuple__55
 #define __pyx_codeobj__25 __pyx_mstate_global->__pyx_codeobj__25
 #define __pyx_codeobj__27 __pyx_mstate_global->__pyx_codeobj__27
 #define __pyx_codeobj__29 __pyx_mstate_global->__pyx_codeobj__29
-#define __pyx_codeobj__32 __pyx_mstate_global->__pyx_codeobj__32
+#define __pyx_codeobj__31 __pyx_mstate_global->__pyx_codeobj__31
 #define __pyx_codeobj__34 __pyx_mstate_global->__pyx_codeobj__34
 #define __pyx_codeobj__36 __pyx_mstate_global->__pyx_codeobj__36
 #define __pyx_codeobj__38 __pyx_mstate_global->__pyx_codeobj__38
@@ -5583,11 +5736,12 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__44 __pyx_mstate_global->__pyx_codeobj__44
 #define __pyx_codeobj__46 __pyx_mstate_global->__pyx_codeobj__46
 #define __pyx_codeobj__48 __pyx_mstate_global->__pyx_codeobj__48
-#define __pyx_codeobj__49 __pyx_mstate_global->__pyx_codeobj__49
 #define __pyx_codeobj__50 __pyx_mstate_global->__pyx_codeobj__50
+#define __pyx_codeobj__51 __pyx_mstate_global->__pyx_codeobj__51
 #define __pyx_codeobj__52 __pyx_mstate_global->__pyx_codeobj__52
 #define __pyx_codeobj__54 __pyx_mstate_global->__pyx_codeobj__54
-#define __pyx_codeobj__55 __pyx_mstate_global->__pyx_codeobj__55
+#define __pyx_codeobj__56 __pyx_mstate_global->__pyx_codeobj__56
+#define __pyx_codeobj__57 __pyx_mstate_global->__pyx_codeobj__57
 /* #### Code section: module_code ### */
 
 /* "View.MemoryView":131
@@ -19218,7 +19372,7 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":250
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":250
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -19229,7 +19383,7 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *__
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject *__pyx_v_self) {
   PyObject *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":253
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":253
  *             """Returns a borrowed reference to the object owning the data/memory.
  *             """
  *             return PyArray_BASE(self)             # <<<<<<<<<<<<<<
@@ -19239,7 +19393,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   __pyx_r = PyArray_BASE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":250
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":250
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -19252,7 +19406,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":256
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":256
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -19266,7 +19420,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   PyArray_Descr *__pyx_t_1;
   __Pyx_RefNannySetupContext("descr", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":259
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *             """Returns an owned reference to the dtype of the array.
  *             """
  *             return <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -19279,7 +19433,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   __pyx_r = ((PyArray_Descr *)__pyx_t_1);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":256
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":256
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -19294,7 +19448,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":262
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":262
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -19305,7 +19459,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
 static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx_v_self) {
   int __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":265
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":265
  *             """Returns the number of dimensions in the array.
  *             """
  *             return PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -19315,7 +19469,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   __pyx_r = PyArray_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":262
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":262
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -19328,7 +19482,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":268
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -19339,7 +19493,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":273
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":273
  *             Can return NULL for 0-dimensional arrays.
  *             """
  *             return PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -19349,7 +19503,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   __pyx_r = PyArray_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":268
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -19362,7 +19516,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":276
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -19373,7 +19527,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *             The number of elements matches the number of dimensions of the array (ndim).
  *             """
  *             return PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -19383,7 +19537,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   __pyx_r = PyArray_STRIDES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":276
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -19396,7 +19550,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":283
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -19407,7 +19561,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":286
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":286
  *             """Returns the total size (in number of elements) of the array.
  *             """
  *             return PyArray_SIZE(self)             # <<<<<<<<<<<<<<
@@ -19417,7 +19571,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   __pyx_r = PyArray_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":283
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -19430,7 +19584,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":289
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -19441,7 +19595,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self) {
   char *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":295
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":295
  *             of `PyArray_DATA()` instead, which returns a 'void*'.
  *             """
  *             return PyArray_BYTES(self)             # <<<<<<<<<<<<<<
@@ -19451,7 +19605,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   __pyx_r = PyArray_BYTES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":289
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -19464,7 +19618,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":779
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":779
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19481,7 +19635,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":780
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -19495,7 +19649,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":779
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":779
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19514,7 +19668,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":782
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19531,7 +19685,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -19545,7 +19699,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":782
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19564,7 +19718,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":785
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19581,7 +19735,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":786
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":786
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -19595,7 +19749,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":785
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19614,7 +19768,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":788
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":788
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19631,7 +19785,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":789
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":789
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -19645,7 +19799,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":788
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":788
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19664,7 +19818,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":791
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":791
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19681,7 +19835,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":792
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":792
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -19695,7 +19849,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":791
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":791
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19714,7 +19868,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":794
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -19728,7 +19882,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":795
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":795
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -19738,7 +19892,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = PyDataType_HASSUBARRAY(__pyx_v_d);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":796
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":796
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -19750,7 +19904,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":795
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":795
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -19759,7 +19913,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":798
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":798
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -19773,7 +19927,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":794
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -19788,7 +19942,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":975
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":975
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -19798,7 +19952,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
 
 static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_arr, PyObject *__pyx_v_base) {
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":976
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":976
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -19807,7 +19961,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":977
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":977
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -19816,7 +19970,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":975
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":975
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -19827,7 +19981,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   /* function exit code */
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -19842,7 +19996,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":980
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":980
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -19851,7 +20005,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":981
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":981
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -19861,7 +20015,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = (__pyx_v_base == NULL);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":982
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":982
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -19872,7 +20026,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":981
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":981
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -19881,7 +20035,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":983
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":983
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -19893,7 +20047,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -19908,7 +20062,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":987
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":987
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -19932,7 +20086,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":988
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":988
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19948,7 +20102,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":989
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":989
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -19957,7 +20111,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 989, __pyx_L3_error)
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":988
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":988
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19971,7 +20125,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":990
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":990
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -19986,7 +20140,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":991
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -20001,7 +20155,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":988
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":988
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20017,7 +20171,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":987
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":987
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -20040,7 +20194,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":993
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":993
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -20064,7 +20218,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":994
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":994
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20080,7 +20234,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":995
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":995
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -20089,7 +20243,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 995, __pyx_L3_error)
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":994
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":994
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20103,7 +20257,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":996
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":996
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20118,7 +20272,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":997
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -20133,7 +20287,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":994
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":994
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20149,7 +20303,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":993
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":993
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -20172,7 +20326,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":999
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":999
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -20196,7 +20350,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20212,7 +20366,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1001
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1001
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -20221,7 +20375,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 1001, __pyx_L3_error)
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20235,7 +20389,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1002
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1002
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -20250,7 +20404,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1003
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1003
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -20265,7 +20419,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -20281,7 +20435,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":999
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":999
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -20304,7 +20458,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1006
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20315,7 +20469,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1018
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1018
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -20325,7 +20479,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1006
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20338,7 +20492,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1021
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20349,7 +20503,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
 static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1033
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1033
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -20359,7 +20513,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1021
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20372,7 +20526,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1036
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1036
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20383,7 +20537,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1043
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1043
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -20393,7 +20547,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1036
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1036
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20406,7 +20560,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1046
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20417,7 +20571,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1050
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1050
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -20427,7 +20581,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1046
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20440,7 +20594,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1053
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1053
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20451,7 +20605,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1057
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1057
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -20459,7 +20613,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1053
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1053
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20472,7 +20626,335 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":49
+/* "MUSCython/RLE_BWTCython.pyx":18
+ * # headers on Windows; normalize to ints so headers are byte-identical to
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):             # <<<<<<<<<<<<<<
+ *     return tuple(int(x) for x in shape)
+ * 
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_9MUSCython_13RLE_BWTCython_1_int_shape(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+); /*proto*/
+static PyMethodDef __pyx_mdef_9MUSCython_13RLE_BWTCython_1_int_shape = {"_int_shape", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_9MUSCython_13RLE_BWTCython_1_int_shape, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9MUSCython_13RLE_BWTCython_1_int_shape(PyObject *__pyx_self, 
+#if CYTHON_METH_FASTCALL
+PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
+#else
+PyObject *__pyx_args, PyObject *__pyx_kwds
+#endif
+) {
+  PyObject *__pyx_v_shape = 0;
+  #if !CYTHON_METH_FASTCALL
+  CYTHON_UNUSED Py_ssize_t __pyx_nargs;
+  #endif
+  CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
+  PyObject* values[1] = {0};
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("_int_shape (wrapper)", 0);
+  #if !CYTHON_METH_FASTCALL
+  #if CYTHON_ASSUME_SAFE_MACROS
+  __pyx_nargs = PyTuple_GET_SIZE(__pyx_args);
+  #else
+  __pyx_nargs = PyTuple_Size(__pyx_args); if (unlikely(__pyx_nargs < 0)) return NULL;
+  #endif
+  #endif
+  __pyx_kwvalues = __Pyx_KwValues_FASTCALL(__pyx_args, __pyx_nargs);
+  {
+    PyObject **__pyx_pyargnames[] = {&__pyx_n_s_shape,0};
+    if (__pyx_kwds) {
+      Py_ssize_t kw_args;
+      switch (__pyx_nargs) {
+        case  1: values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = __Pyx_NumKwargs_FASTCALL(__pyx_kwds);
+      switch (__pyx_nargs) {
+        case  0:
+        if (likely((values[0] = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_shape)) != 0)) {
+          (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
+          kw_args--;
+        }
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 18, __pyx_L3_error)
+        else goto __pyx_L5_argtuple_error;
+      }
+      if (unlikely(kw_args > 0)) {
+        const Py_ssize_t kwd_pos_args = __pyx_nargs;
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "_int_shape") < 0)) __PYX_ERR(0, 18, __pyx_L3_error)
+      }
+    } else if (unlikely(__pyx_nargs != 1)) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
+    }
+    __pyx_v_shape = values[0];
+  }
+  goto __pyx_L6_skip;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("_int_shape", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 18, __pyx_L3_error)
+  __pyx_L6_skip:;
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L3_error:;
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_AddTraceback("MUSCython.RLE_BWTCython._int_shape", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_9MUSCython_13RLE_BWTCython__int_shape(__pyx_self, __pyx_v_shape);
+
+  /* function exit code */
+  {
+    Py_ssize_t __pyx_temp;
+    for (__pyx_temp=0; __pyx_temp < (Py_ssize_t)(sizeof(values)/sizeof(values[0])); ++__pyx_temp) {
+      __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
+    }
+  }
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+static PyObject *__pyx_gb_9MUSCython_13RLE_BWTCython_10_int_shape_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
+
+/* "MUSCython/RLE_BWTCython.pyx":19
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):
+ *     return tuple(int(x) for x in shape)             # <<<<<<<<<<<<<<
+ * 
+ * cimport BasicBWT
+ */
+
+static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_10_int_shape_genexpr(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_genexpr_arg_0) {
+  struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *__pyx_cur_scope;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("genexpr", 0);
+  __pyx_cur_scope = (struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *)__pyx_tp_new_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr(__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr, __pyx_empty_tuple, NULL);
+  if (unlikely(!__pyx_cur_scope)) {
+    __pyx_cur_scope = ((struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *)Py_None);
+    __Pyx_INCREF(Py_None);
+    __PYX_ERR(0, 19, __pyx_L1_error)
+  } else {
+    __Pyx_GOTREF((PyObject *)__pyx_cur_scope);
+  }
+  __pyx_cur_scope->__pyx_genexpr_arg_0 = __pyx_genexpr_arg_0;
+  __Pyx_INCREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
+  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_genexpr_arg_0);
+  {
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_9MUSCython_13RLE_BWTCython_10_int_shape_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_int_shape_locals_genexpr, __pyx_n_s_MUSCython_RLE_BWTCython); if (unlikely(!gen)) __PYX_ERR(0, 19, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_cur_scope);
+    __Pyx_RefNannyFinishContext();
+    return (PyObject *) gen;
+  }
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_AddTraceback("MUSCython.RLE_BWTCython._int_shape.genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __Pyx_DECREF((PyObject *)__pyx_cur_scope);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_gb_9MUSCython_13RLE_BWTCython_10_int_shape_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value) /* generator body */
+{
+  struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *__pyx_cur_scope = ((struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *)__pyx_generator->closure);
+  PyObject *__pyx_r = NULL;
+  PyObject *__pyx_t_1 = NULL;
+  Py_ssize_t __pyx_t_2;
+  PyObject *(*__pyx_t_3)(PyObject *);
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("genexpr", 0);
+  switch (__pyx_generator->resume_label) {
+    case 0: goto __pyx_L3_first_run;
+    case 1: goto __pyx_L6_resume_from_yield;
+    default: /* CPython raises the right error here */
+    __Pyx_RefNannyFinishContext();
+    return NULL;
+  }
+  __pyx_L3_first_run:;
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_genexpr_arg_0)) { __Pyx_RaiseUnboundLocalError(".0"); __PYX_ERR(0, 19, __pyx_L1_error) }
+  if (likely(PyList_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) || PyTuple_CheckExact(__pyx_cur_scope->__pyx_genexpr_arg_0)) {
+    __pyx_t_1 = __pyx_cur_scope->__pyx_genexpr_arg_0; __Pyx_INCREF(__pyx_t_1);
+    __pyx_t_2 = 0;
+    __pyx_t_3 = NULL;
+  } else {
+    __pyx_t_2 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_cur_scope->__pyx_genexpr_arg_0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_3 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 19, __pyx_L1_error)
+  }
+  for (;;) {
+    if (likely(!__pyx_t_3)) {
+      if (likely(PyList_CheckExact(__pyx_t_1))) {
+        {
+          Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
+          #if !CYTHON_ASSUME_SAFE_MACROS
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 19, __pyx_L1_error)
+          #endif
+          if (__pyx_t_2 >= __pyx_temp) break;
+        }
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_4 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 19, __pyx_L1_error)
+        #else
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 19, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
+        #endif
+      } else {
+        {
+          Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
+          #if !CYTHON_ASSUME_SAFE_MACROS
+          if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 19, __pyx_L1_error)
+          #endif
+          if (__pyx_t_2 >= __pyx_temp) break;
+        }
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_4); __pyx_t_2++; if (unlikely((0 < 0))) __PYX_ERR(0, 19, __pyx_L1_error)
+        #else
+        __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 19, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_4);
+        #endif
+      }
+    } else {
+      __pyx_t_4 = __pyx_t_3(__pyx_t_1);
+      if (unlikely(!__pyx_t_4)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 19, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_4);
+    }
+    __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_x);
+    __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_x, __pyx_t_4);
+    __Pyx_GIVEREF(__pyx_t_4);
+    __pyx_t_4 = 0;
+    __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_cur_scope->__pyx_v_x); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 19, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_r = __pyx_t_4;
+    __pyx_t_4 = 0;
+    __Pyx_XGIVEREF(__pyx_t_1);
+    __pyx_cur_scope->__pyx_t_0 = __pyx_t_1;
+    __pyx_cur_scope->__pyx_t_1 = __pyx_t_2;
+    __pyx_cur_scope->__pyx_t_2 = __pyx_t_3;
+    __Pyx_XGIVEREF(__pyx_r);
+    __Pyx_RefNannyFinishContext();
+    __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
+    /* return from generator, yielding value */
+    __pyx_generator->resume_label = 1;
+    return __pyx_r;
+    __pyx_L6_resume_from_yield:;
+    __pyx_t_1 = __pyx_cur_scope->__pyx_t_0;
+    __pyx_cur_scope->__pyx_t_0 = 0;
+    __Pyx_XGOTREF(__pyx_t_1);
+    __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
+    __pyx_t_3 = __pyx_cur_scope->__pyx_t_2;
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 19, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
+
+  /* function exit code */
+  PyErr_SetNone(PyExc_StopIteration);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_AddTraceback("genexpr", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_r); __pyx_r = 0;
+  #if !CYTHON_USE_EXC_INFO_STACK
+  __Pyx_Coroutine_ResetAndClearException(__pyx_generator);
+  #endif
+  __pyx_generator->resume_label = -1;
+  __Pyx_Coroutine_clear((PyObject*)__pyx_generator);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "MUSCython/RLE_BWTCython.pyx":18
+ * # headers on Windows; normalize to ints so headers are byte-identical to
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):             # <<<<<<<<<<<<<<
+ *     return tuple(int(x) for x in shape)
+ * 
+ */
+
+static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython__int_shape(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_shape) {
+  PyObject *__pyx_gb_9MUSCython_13RLE_BWTCython_10_int_shape_2generator = 0;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
+  __Pyx_RefNannySetupContext("_int_shape", 1);
+
+  /* "MUSCython/RLE_BWTCython.pyx":19
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):
+ *     return tuple(int(x) for x in shape)             # <<<<<<<<<<<<<<
+ * 
+ * cimport BasicBWT
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __pyx_pf_9MUSCython_13RLE_BWTCython_10_int_shape_genexpr(NULL, __pyx_v_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PySequence_Tuple(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
+  goto __pyx_L0;
+
+  /* "MUSCython/RLE_BWTCython.pyx":18
+ * # headers on Windows; normalize to ints so headers are byte-identical to
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):             # <<<<<<<<<<<<<<
+ *     return tuple(int(x) for x in shape)
+ * 
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_AddTraceback("MUSCython.RLE_BWTCython._int_shape", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_gb_9MUSCython_13RLE_BWTCython_10_int_shape_2generator);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "MUSCython/RLE_BWTCython.pyx":55
  *     cdef bint useMemmapRLE
  * 
  *     def getCompSize(RLE_BWT self):             # <<<<<<<<<<<<<<
@@ -20531,7 +21013,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCompSize(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getCompSize", 1);
 
-  /* "MUSCython/RLE_BWTCython.pyx":50
+  /* "MUSCython/RLE_BWTCython.pyx":56
  * 
  *     def getCompSize(RLE_BWT self):
  *         return self.bwt.shape[0]             # <<<<<<<<<<<<<<
@@ -20541,15 +21023,15 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCompSize(struct
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = ((PyObject *)__pyx_v_self->__pyx_base.bwt);
   __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_1)); if (unlikely(__pyx_t_2 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_1)); if (unlikely(__pyx_t_2 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyInt_FromSsize_t((__pyx_t_2[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 50, __pyx_L1_error)
+  __pyx_t_1 = PyInt_FromSsize_t((__pyx_t_2[0])); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":49
+  /* "MUSCython/RLE_BWTCython.pyx":55
  *     cdef bint useMemmapRLE
  * 
  *     def getCompSize(RLE_BWT self):             # <<<<<<<<<<<<<<
@@ -20568,7 +21050,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCompSize(struct
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":52
+/* "MUSCython/RLE_BWTCython.pyx":58
  *         return self.bwt.shape[0]
  * 
  *     def loadMsbwt(RLE_BWT self, char * dirName, bint useMemmap=True, logger=None):             # <<<<<<<<<<<<<<
@@ -20637,26 +21119,26 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_useMemmap);
           if (value) { values[1] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_logger);
           if (value) { values[2] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "loadMsbwt") < 0)) __PYX_ERR(0, 52, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "loadMsbwt") < 0)) __PYX_ERR(0, 58, __pyx_L3_error)
       }
     } else {
       switch (__pyx_nargs) {
@@ -20669,9 +21151,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_dirName = __Pyx_PyObject_AsWritableString(values[0]); if (unlikely((!__pyx_v_dirName) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
+    __pyx_v_dirName = __Pyx_PyObject_AsWritableString(values[0]); if (unlikely((!__pyx_v_dirName) && PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
     if (values[1]) {
-      __pyx_v_useMemmap = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_useMemmap == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 52, __pyx_L3_error)
+      __pyx_v_useMemmap = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_useMemmap == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 58, __pyx_L3_error)
     } else {
       __pyx_v_useMemmap = ((int)1);
     }
@@ -20679,7 +21161,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("loadMsbwt", 0, 1, 3, __pyx_nargs); __PYX_ERR(0, 52, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("loadMsbwt", 0, 1, 3, __pyx_nargs); __PYX_ERR(0, 58, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -20721,7 +21203,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("loadMsbwt", 1);
 
-  /* "MUSCython/RLE_BWTCython.pyx":58
+  /* "MUSCython/RLE_BWTCython.pyx":64
  *         '''
  *         #open the file with our BWT in it
  *         self.dirName = dirName             # <<<<<<<<<<<<<<
@@ -20730,7 +21212,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
  */
   __pyx_v_self->__pyx_base.dirName = __pyx_v_dirName;
 
-  /* "MUSCython/RLE_BWTCython.pyx":59
+  /* "MUSCython/RLE_BWTCython.pyx":65
  *         #open the file with our BWT in it
  *         self.dirName = dirName
  *         self.useMemmapRLE = useMemmap             # <<<<<<<<<<<<<<
@@ -20739,7 +21221,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
  */
   __pyx_v_self->useMemmapRLE = __pyx_v_useMemmap;
 
-  /* "MUSCython/RLE_BWTCython.pyx":60
+  /* "MUSCython/RLE_BWTCython.pyx":66
  *         self.dirName = dirName
  *         self.useMemmapRLE = useMemmap
  *         if useMemmap:             # <<<<<<<<<<<<<<
@@ -20748,21 +21230,21 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
  */
   if (__pyx_v_useMemmap) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":61
+    /* "MUSCython/RLE_BWTCython.pyx":67
  *         self.useMemmapRLE = useMemmap
  *         if useMemmap:
  *             self.bwt = np.load(self.dirName+'/comp_msbwt.npy', 'r+')             # <<<<<<<<<<<<<<
  *         else:
  *             self.bwt = np.load(self.dirName+'/comp_msbwt.npy')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 61, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_load); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_load); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 61, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_comp_msbwt_npy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L1_error)
+    __pyx_t_4 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_comp_msbwt_npy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 67, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -20784,18 +21266,18 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_5, 2+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 61, __pyx_L1_error)
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 67, __pyx_L1_error)
     __Pyx_GIVEREF(__pyx_t_1);
     __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __pyx_v_self->__pyx_base.bwt = ((PyArrayObject *)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":60
+    /* "MUSCython/RLE_BWTCython.pyx":66
  *         self.dirName = dirName
  *         self.useMemmapRLE = useMemmap
  *         if useMemmap:             # <<<<<<<<<<<<<<
@@ -20805,7 +21287,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
     goto __pyx_L3;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":63
+  /* "MUSCython/RLE_BWTCython.pyx":69
  *             self.bwt = np.load(self.dirName+'/comp_msbwt.npy', 'r+')
  *         else:
  *             self.bwt = np.load(self.dirName+'/comp_msbwt.npy')             # <<<<<<<<<<<<<<
@@ -20813,14 +21295,14 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
  * 
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_comp_msbwt_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_comp_msbwt_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -20842,11 +21324,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 63, __pyx_L1_error)
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 69, __pyx_L1_error)
     __Pyx_GIVEREF(__pyx_t_1);
     __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.bwt);
@@ -20855,27 +21337,27 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
   }
   __pyx_L3:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":64
+  /* "MUSCython/RLE_BWTCython.pyx":70
  *         else:
  *             self.bwt = np.load(self.dirName+'/comp_msbwt.npy')
  *         self.bwt_view = self.bwt             # <<<<<<<<<<<<<<
  * 
  *         #build auxiliary structures
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_self->__pyx_base.bwt), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_self->__pyx_base.bwt), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 70, __pyx_L1_error)
   __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->__pyx_base.bwt_view, 0);
   __pyx_v_self->__pyx_base.bwt_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":67
+  /* "MUSCython/RLE_BWTCython.pyx":73
  * 
  *         #build auxiliary structures
  *         self.constructTotalCounts(logger)             # <<<<<<<<<<<<<<
  *         self.constructIndexing()
  *         self.constructFMIndex(logger)
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_constructTotalCounts); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_constructTotalCounts); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_2 = NULL;
   __pyx_t_5 = 0;
@@ -20895,29 +21377,29 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
     PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_logger};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 67, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":68
+  /* "MUSCython/RLE_BWTCython.pyx":74
  *         #build auxiliary structures
  *         self.constructTotalCounts(logger)
  *         self.constructIndexing()             # <<<<<<<<<<<<<<
  *         self.constructFMIndex(logger)
  * 
  */
-  ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.constructIndexing(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 68, __pyx_L1_error)
+  ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.constructIndexing(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 74, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":69
+  /* "MUSCython/RLE_BWTCython.pyx":75
  *         self.constructTotalCounts(logger)
  *         self.constructIndexing()
  *         self.constructFMIndex(logger)             # <<<<<<<<<<<<<<
  * 
  *         if os.path.exists(self.dirName+'/lcps.npy'):
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_constructFMIndex); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_constructFMIndex); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_2 = NULL;
   __pyx_t_5 = 0;
@@ -20937,30 +21419,30 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
     PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_logger};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 69, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":71
+  /* "MUSCython/RLE_BWTCython.pyx":77
  *         self.constructFMIndex(logger)
  * 
  *         if os.path.exists(self.dirName+'/lcps.npy'):             # <<<<<<<<<<<<<<
  *             self.lcpsPresent = True
  *             self.lcps = np.load(self.dirName+'/lcps.npy', 'r+')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_exists); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_exists); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_lcps_npy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_lcps_npy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -20982,15 +21464,15 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 71, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
-  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_7) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":72
+    /* "MUSCython/RLE_BWTCython.pyx":78
  * 
  *         if os.path.exists(self.dirName+'/lcps.npy'):
  *             self.lcpsPresent = True             # <<<<<<<<<<<<<<
@@ -20999,21 +21481,21 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
  */
     __pyx_v_self->__pyx_base.lcpsPresent = 1;
 
-    /* "MUSCython/RLE_BWTCython.pyx":73
+    /* "MUSCython/RLE_BWTCython.pyx":79
  *         if os.path.exists(self.dirName+'/lcps.npy'):
  *             self.lcpsPresent = True
  *             self.lcps = np.load(self.dirName+'/lcps.npy', 'r+')             # <<<<<<<<<<<<<<
  *             self.lcps_view = self.lcps
  *         else:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 79, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 79, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 79, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = PyNumber_Add(__pyx_t_4, __pyx_kp_s_lcps_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_t_4, __pyx_kp_s_lcps_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -21035,31 +21517,31 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_5, 2+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
-    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 73, __pyx_L1_error)
+    if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 79, __pyx_L1_error)
     __Pyx_GIVEREF(__pyx_t_1);
     __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.lcps);
     __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.lcps);
     __pyx_v_self->__pyx_base.lcps = ((PyArrayObject *)__pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":74
+    /* "MUSCython/RLE_BWTCython.pyx":80
  *             self.lcpsPresent = True
  *             self.lcps = np.load(self.dirName+'/lcps.npy', 'r+')
  *             self.lcps_view = self.lcps             # <<<<<<<<<<<<<<
  *         else:
  *             self.lcpsPresent = False
  */
-    __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_self->__pyx_base.lcps), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 74, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_self->__pyx_base.lcps), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 80, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->__pyx_base.lcps_view, 0);
     __pyx_v_self->__pyx_base.lcps_view = __pyx_t_6;
     __pyx_t_6.memview = NULL;
     __pyx_t_6.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":71
+    /* "MUSCython/RLE_BWTCython.pyx":77
  *         self.constructFMIndex(logger)
  * 
  *         if os.path.exists(self.dirName+'/lcps.npy'):             # <<<<<<<<<<<<<<
@@ -21069,7 +21551,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
     goto __pyx_L4;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":76
+  /* "MUSCython/RLE_BWTCython.pyx":82
  *             self.lcps_view = self.lcps
  *         else:
  *             self.lcpsPresent = False             # <<<<<<<<<<<<<<
@@ -21081,7 +21563,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
   }
   __pyx_L4:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":52
+  /* "MUSCython/RLE_BWTCython.pyx":58
  *         return self.bwt.shape[0]
  * 
  *     def loadMsbwt(RLE_BWT self, char * dirName, bint useMemmap=True, logger=None):             # <<<<<<<<<<<<<<
@@ -21106,7 +21588,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_2loadMsbwt(struct 
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":78
+/* "MUSCython/RLE_BWTCython.pyx":84
  *             self.lcpsPresent = False
  * 
  *     def constructTotalCounts(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
@@ -21168,12 +21650,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "constructTotalCounts") < 0)) __PYX_ERR(0, 78, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "constructTotalCounts") < 0)) __PYX_ERR(0, 84, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
@@ -21184,7 +21666,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("constructTotalCounts", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 78, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("constructTotalCounts", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 84, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21219,6 +21701,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
   unsigned long __pyx_v_currentCount;
   unsigned long __pyx_v_powerMultiple;
   PyObject *__pyx_v_abtFN = 0;
+  PyObject *__pyx_v__mm = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -21233,39 +21716,42 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
   unsigned long __pyx_t_10;
   unsigned long __pyx_t_11;
   size_t __pyx_t_12;
+  PyObject *__pyx_t_13 = NULL;
+  PyObject *__pyx_t_14 = NULL;
+  PyObject *__pyx_t_15 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("constructTotalCounts", 1);
 
-  /* "MUSCython/RLE_BWTCython.pyx":95
+  /* "MUSCython/RLE_BWTCython.pyx":101
  *         #self.mask = 255 >> self.numberBits
  * 
  *         cdef str abtFN = self.dirName+'/totalCounts.npy'             # <<<<<<<<<<<<<<
  *         if os.path.exists(abtFN):
  *             if self.useMemmapRLE:
  */
-  __pyx_t_1 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_totalCounts_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_totalCounts_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_abtFN = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":96
+  /* "MUSCython/RLE_BWTCython.pyx":102
  * 
  *         cdef str abtFN = self.dirName+'/totalCounts.npy'
  *         if os.path.exists(abtFN):             # <<<<<<<<<<<<<<
  *             if self.useMemmapRLE:
  *                 self.totalCounts = np.load(abtFN, 'r+')
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_os); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_os); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_exists); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_exists); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -21286,15 +21772,15 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
     PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_abtFN};
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 96, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 102, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_5) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":97
+    /* "MUSCython/RLE_BWTCython.pyx":103
  *         cdef str abtFN = self.dirName+'/totalCounts.npy'
  *         if os.path.exists(abtFN):
  *             if self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -21303,16 +21789,16 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  */
     if (__pyx_v_self->useMemmapRLE) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":98
+      /* "MUSCython/RLE_BWTCython.pyx":104
  *         if os.path.exists(abtFN):
  *             if self.useMemmapRLE:
  *                 self.totalCounts = np.load(abtFN, 'r+')             # <<<<<<<<<<<<<<
  *             else:
  *                 self.totalCounts = np.load(abtFN)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_load); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_load); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_1 = NULL;
@@ -21333,18 +21819,18 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
         PyObject *__pyx_callargs[3] = {__pyx_t_1, __pyx_v_abtFN, __pyx_kp_s_r};
         __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
-      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 98, __pyx_L1_error)
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 104, __pyx_L1_error)
       __Pyx_GIVEREF(__pyx_t_2);
       __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.totalCounts);
       __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.totalCounts);
       __pyx_v_self->__pyx_base.totalCounts = ((PyArrayObject *)__pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":97
+      /* "MUSCython/RLE_BWTCython.pyx":103
  *         cdef str abtFN = self.dirName+'/totalCounts.npy'
  *         if os.path.exists(abtFN):
  *             if self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -21354,7 +21840,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
       goto __pyx_L4;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":100
+    /* "MUSCython/RLE_BWTCython.pyx":106
  *                 self.totalCounts = np.load(abtFN, 'r+')
  *             else:
  *                 self.totalCounts = np.load(abtFN)             # <<<<<<<<<<<<<<
@@ -21362,9 +21848,9 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  *         else:
  */
     /*else*/ {
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 100, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
@@ -21385,11 +21871,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
         PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_abtFN};
         __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 100, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
-      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 100, __pyx_L1_error)
+      if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 106, __pyx_L1_error)
       __Pyx_GIVEREF(__pyx_t_2);
       __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.totalCounts);
       __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.totalCounts);
@@ -21398,20 +21884,20 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
     }
     __pyx_L4:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":101
+    /* "MUSCython/RLE_BWTCython.pyx":107
  *             else:
  *                 self.totalCounts = np.load(abtFN)
  *             self.totalCounts_view = self.totalCounts             # <<<<<<<<<<<<<<
  *         else:
  *             if logger != None:
  */
-    __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.totalCounts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 101, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.totalCounts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 107, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->__pyx_base.totalCounts_view, 0);
     __pyx_v_self->__pyx_base.totalCounts_view = __pyx_t_6;
     __pyx_t_6.memview = NULL;
     __pyx_t_6.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":96
+    /* "MUSCython/RLE_BWTCython.pyx":102
  * 
  *         cdef str abtFN = self.dirName+'/totalCounts.npy'
  *         if os.path.exists(abtFN):             # <<<<<<<<<<<<<<
@@ -21421,7 +21907,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
     goto __pyx_L3;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":103
+  /* "MUSCython/RLE_BWTCython.pyx":109
  *             self.totalCounts_view = self.totalCounts
  *         else:
  *             if logger != None:             # <<<<<<<<<<<<<<
@@ -21429,21 +21915,21 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  * 
  */
   /*else*/ {
-    __pyx_t_2 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 103, __pyx_L1_error)
-    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_5 < 0))) __PYX_ERR(0, 109, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_5) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":104
+      /* "MUSCython/RLE_BWTCython.pyx":110
  *         else:
  *             if logger != None:
  *                 logger.info('First time calculation of \'%s\'' % abtFN)             # <<<<<<<<<<<<<<
  * 
  *             self.totalCounts = np.zeros(dtype='<u8', shape=(vcLen, ))
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_3 = __Pyx_PyString_Format(__pyx_kp_s_First_time_calculation_of_s, __pyx_v_abtFN); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyString_Format(__pyx_kp_s_First_time_calculation_of_s, __pyx_v_abtFN); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_7 = NULL;
       __pyx_t_4 = 0;
@@ -21464,13 +21950,13 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
         __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 104, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":103
+      /* "MUSCython/RLE_BWTCython.pyx":109
  *             self.totalCounts_view = self.totalCounts
  *         else:
  *             if logger != None:             # <<<<<<<<<<<<<<
@@ -21479,55 +21965,55 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  */
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":106
+    /* "MUSCython/RLE_BWTCython.pyx":112
  *                 logger.info('First time calculation of \'%s\'' % abtFN)
  * 
  *             self.totalCounts = np.zeros(dtype='<u8', shape=(vcLen, ))             # <<<<<<<<<<<<<<
  *             self.totalCounts_view = self.totalCounts
  *             numBytes = self.bwt.shape[0]
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 106, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
-    __pyx_t_3 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_7 = PyTuple_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 106, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_3);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error);
     __pyx_t_3 = 0;
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_shape, __pyx_t_7) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_shape, __pyx_t_7) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 106, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 106, __pyx_L1_error)
+    if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 112, __pyx_L1_error)
     __Pyx_GIVEREF(__pyx_t_7);
     __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.totalCounts);
     __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.totalCounts);
     __pyx_v_self->__pyx_base.totalCounts = ((PyArrayObject *)__pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":107
+    /* "MUSCython/RLE_BWTCython.pyx":113
  * 
  *             self.totalCounts = np.zeros(dtype='<u8', shape=(vcLen, ))
  *             self.totalCounts_view = self.totalCounts             # <<<<<<<<<<<<<<
  *             numBytes = self.bwt.shape[0]
  *             prevChar = 255
  */
-    __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.totalCounts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 107, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.totalCounts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 113, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->__pyx_base.totalCounts_view, 0);
     __pyx_v_self->__pyx_base.totalCounts_view = __pyx_t_6;
     __pyx_t_6.memview = NULL;
     __pyx_t_6.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":108
+    /* "MUSCython/RLE_BWTCython.pyx":114
  *             self.totalCounts = np.zeros(dtype='<u8', shape=(vcLen, ))
  *             self.totalCounts_view = self.totalCounts
  *             numBytes = self.bwt.shape[0]             # <<<<<<<<<<<<<<
@@ -21536,11 +22022,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  */
     __pyx_t_7 = ((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __Pyx_INCREF(__pyx_t_7);
-    __pyx_t_8 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_7)); if (unlikely(__pyx_t_8 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L1_error)
+    __pyx_t_8 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_7)); if (unlikely(__pyx_t_8 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_numBytes = (__pyx_t_8[0]);
 
-    /* "MUSCython/RLE_BWTCython.pyx":109
+    /* "MUSCython/RLE_BWTCython.pyx":115
  *             self.totalCounts_view = self.totalCounts
  *             numBytes = self.bwt.shape[0]
  *             prevChar = 255             # <<<<<<<<<<<<<<
@@ -21549,7 +22035,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  */
     __pyx_v_prevChar = 0xFF;
 
-    /* "MUSCython/RLE_BWTCython.pyx":110
+    /* "MUSCython/RLE_BWTCython.pyx":116
  *             numBytes = self.bwt.shape[0]
  *             prevChar = 255
  *             powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -21558,7 +22044,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  */
     __pyx_v_powerMultiple = 1;
 
-    /* "MUSCython/RLE_BWTCython.pyx":112
+    /* "MUSCython/RLE_BWTCython.pyx":118
  *             powerMultiple = 1
  * 
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -21574,7 +22060,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
         #endif
         /*try:*/ {
 
-          /* "MUSCython/RLE_BWTCython.pyx":113
+          /* "MUSCython/RLE_BWTCython.pyx":119
  * 
  *             with nogil:
  *                 for i in range(0, numBytes):             # <<<<<<<<<<<<<<
@@ -21586,7 +22072,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
           for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
             __pyx_v_i = __pyx_t_11;
 
-            /* "MUSCython/RLE_BWTCython.pyx":114
+            /* "MUSCython/RLE_BWTCython.pyx":120
  *             with nogil:
  *                 for i in range(0, numBytes):
  *                     currentChar = self.bwt_view[i] & mask             # <<<<<<<<<<<<<<
@@ -21596,7 +22082,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
             __pyx_t_12 = __pyx_v_i;
             __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_12 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-            /* "MUSCython/RLE_BWTCython.pyx":115
+            /* "MUSCython/RLE_BWTCython.pyx":121
  *                 for i in range(0, numBytes):
  *                     currentChar = self.bwt_view[i] & mask
  *                     if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -21606,7 +22092,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
             __pyx_t_5 = (__pyx_v_currentChar == __pyx_v_prevChar);
             if (__pyx_t_5) {
 
-              /* "MUSCython/RLE_BWTCython.pyx":116
+              /* "MUSCython/RLE_BWTCython.pyx":122
  *                     currentChar = self.bwt_view[i] & mask
  *                     if currentChar == prevChar:
  *                         powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -21615,7 +22101,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  */
               __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-              /* "MUSCython/RLE_BWTCython.pyx":115
+              /* "MUSCython/RLE_BWTCython.pyx":121
  *                 for i in range(0, numBytes):
  *                     currentChar = self.bwt_view[i] & mask
  *                     if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -21625,7 +22111,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
               goto __pyx_L11;
             }
 
-            /* "MUSCython/RLE_BWTCython.pyx":118
+            /* "MUSCython/RLE_BWTCython.pyx":124
  *                         powerMultiple *= numPower
  *                     else:
  *                         powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -21637,7 +22123,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
             }
             __pyx_L11:;
 
-            /* "MUSCython/RLE_BWTCython.pyx":119
+            /* "MUSCython/RLE_BWTCython.pyx":125
  *                     else:
  *                         powerMultiple = 1
  *                     prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -21646,7 +22132,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
  */
             __pyx_v_prevChar = __pyx_v_currentChar;
 
-            /* "MUSCython/RLE_BWTCython.pyx":121
+            /* "MUSCython/RLE_BWTCython.pyx":127
  *                     prevChar = currentChar
  * 
  *                     currentCount = (self.bwt_view[i] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -21656,19 +22142,19 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
             __pyx_t_12 = __pyx_v_i;
             __pyx_v_currentCount = (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_12 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple);
 
-            /* "MUSCython/RLE_BWTCython.pyx":122
+            /* "MUSCython/RLE_BWTCython.pyx":128
  * 
  *                     currentCount = (self.bwt_view[i] >> letterBits) * powerMultiple
  *                     self.totalCounts_view[currentChar] += currentCount             # <<<<<<<<<<<<<<
  * 
- *             np.save(abtFN, self.totalCounts)
+ *             # (Windows portability) np.save() writes py2-long shape elements
  */
             __pyx_t_12 = __pyx_v_currentChar;
             *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.totalCounts_view.data + __pyx_t_12 * __pyx_v_self->__pyx_base.totalCounts_view.strides[0]) )) += __pyx_v_currentCount;
           }
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":112
+        /* "MUSCython/RLE_BWTCython.pyx":118
  *             powerMultiple = 1
  * 
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -21687,26 +22173,69 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
         }
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":124
- *                     self.totalCounts_view[currentChar] += currentCount
- * 
- *             np.save(abtFN, self.totalCounts)             # <<<<<<<<<<<<<<
- * 
- *         self.totalSize = int(np.sum(self.totalCounts))
+    /* "MUSCython/RLE_BWTCython.pyx":134
+ *             # diverging from the Linux byte contract; open_memmap() with a
+ *             # normalized int shape writes byte-identical headers everywhere.
+ *             _mm = np.lib.format.open_memmap(abtFN, 'w+', self.totalCounts.dtype,             # <<<<<<<<<<<<<<
+ *                                             _int_shape((<object>self.totalCounts).shape))
+ *             _mm[:] = self.totalCounts
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 124, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_save); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_lib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = NULL;
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.totalCounts), __pyx_n_s_dtype); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+
+    /* "MUSCython/RLE_BWTCython.pyx":135
+ *             # normalized int shape writes byte-identical headers everywhere.
+ *             _mm = np.lib.format.open_memmap(abtFN, 'w+', self.totalCounts.dtype,
+ *                                             _int_shape((<object>self.totalCounts).shape))             # <<<<<<<<<<<<<<
+ *             _mm[:] = self.totalCounts
+ *             del _mm
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_int_shape); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 135, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self->__pyx_base.totalCounts), __pyx_n_s_shape); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 135, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    __pyx_t_15 = NULL;
     __pyx_t_4 = 0;
     #if CYTHON_UNPACK_METHODS
-    if (unlikely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_2)) {
+    if (unlikely(PyMethod_Check(__pyx_t_13))) {
+      __pyx_t_15 = PyMethod_GET_SELF(__pyx_t_13);
+      if (likely(__pyx_t_15)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
+        __Pyx_INCREF(__pyx_t_15);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_13, function);
+        __pyx_t_4 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_15, __pyx_t_14};
+      __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+      __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
+      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 135, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    }
+    __pyx_t_13 = NULL;
+    __pyx_t_4 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (likely(PyMethod_Check(__pyx_t_1))) {
+      __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_13)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_13);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
         __pyx_t_4 = 1;
@@ -21714,59 +22243,83 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
     }
     #endif
     {
-      PyObject *__pyx_callargs[3] = {__pyx_t_2, __pyx_v_abtFN, ((PyObject *)__pyx_v_self->__pyx_base.totalCounts)};
-      __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 124, __pyx_L1_error)
+      PyObject *__pyx_callargs[5] = {__pyx_t_13, __pyx_v_abtFN, __pyx_kp_s_w, __pyx_t_2, __pyx_t_3};
+      __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 4+__pyx_t_4);
+      __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 134, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
+    __pyx_v__mm = __pyx_t_7;
+    __pyx_t_7 = 0;
+
+    /* "MUSCython/RLE_BWTCython.pyx":136
+ *             _mm = np.lib.format.open_memmap(abtFN, 'w+', self.totalCounts.dtype,
+ *                                             _int_shape((<object>self.totalCounts).shape))
+ *             _mm[:] = self.totalCounts             # <<<<<<<<<<<<<<
+ *             del _mm
+ * 
+ */
+    __pyx_t_7 = ((PyObject *)__pyx_v_self->__pyx_base.totalCounts);
+    __Pyx_INCREF(__pyx_t_7);
+    if (__Pyx_PyObject_SetSlice(__pyx_v__mm, __pyx_t_7, 0, 0, NULL, NULL, &__pyx_slice__5, 0, 0, 0) < 0) __PYX_ERR(0, 136, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+
+    /* "MUSCython/RLE_BWTCython.pyx":137
+ *                                             _int_shape((<object>self.totalCounts).shape))
+ *             _mm[:] = self.totalCounts
+ *             del _mm             # <<<<<<<<<<<<<<
+ * 
+ *         self.totalSize = int(np.sum(self.totalCounts))
+ */
+    __Pyx_DECREF(__pyx_v__mm); __pyx_v__mm = 0;
   }
   __pyx_L3:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":126
- *             np.save(abtFN, self.totalCounts)
+  /* "MUSCython/RLE_BWTCython.pyx":139
+ *             del _mm
  * 
  *         self.totalSize = int(np.sum(self.totalCounts))             # <<<<<<<<<<<<<<
  * 
  *     def constructFMIndex(RLE_BWT self, logger):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_sum); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 126, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_sum); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
   __pyx_t_4 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+  if (unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
     if (likely(__pyx_t_1)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
       __pyx_t_4 = 1;
     }
   }
   #endif
   {
     PyObject *__pyx_callargs[2] = {__pyx_t_1, ((PyObject *)__pyx_v_self->__pyx_base.totalCounts)};
-    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 126, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 126, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_9 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_9 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_9 = __Pyx_PyInt_As_unsigned_long(__pyx_t_3); if (unlikely((__pyx_t_9 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_self->__pyx_base.totalSize = __pyx_t_9;
 
-  /* "MUSCython/RLE_BWTCython.pyx":78
+  /* "MUSCython/RLE_BWTCython.pyx":84
  *             self.lcpsPresent = False
  * 
  *     def constructTotalCounts(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
@@ -21783,16 +22336,20 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_4constructTotalCou
   __Pyx_XDECREF(__pyx_t_3);
   __PYX_XCLEAR_MEMVIEW(&__pyx_t_6, 1);
   __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_13);
+  __Pyx_XDECREF(__pyx_t_14);
+  __Pyx_XDECREF(__pyx_t_15);
   __Pyx_AddTraceback("MUSCython.RLE_BWTCython.RLE_BWT.constructTotalCounts", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_abtFN);
+  __Pyx_XDECREF(__pyx_v__mm);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":128
+/* "MUSCython/RLE_BWTCython.pyx":141
  *         self.totalSize = int(np.sum(self.totalCounts))
  * 
  *     def constructFMIndex(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
@@ -21854,12 +22411,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "constructFMIndex") < 0)) __PYX_ERR(0, 128, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "constructFMIndex") < 0)) __PYX_ERR(0, 141, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
@@ -21870,7 +22427,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("constructFMIndex", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 128, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("constructFMIndex", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 141, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -21951,49 +22508,49 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
   __pyx_pybuffernd_countsSoFar.data = NULL;
   __pyx_pybuffernd_countsSoFar.rcbuffer = &__pyx_pybuffer_countsSoFar;
 
-  /* "MUSCython/RLE_BWTCython.pyx":157
+  /* "MUSCython/RLE_BWTCython.pyx":170
  *         cdef np.uint64_t [:] countsSoFar_view
  * 
  *         cdef str fmIndexFN = self.dirName+'/comp_fmIndex.npy'             # <<<<<<<<<<<<<<
  *         cdef str fmRefFN = self.dirName+'/comp_refIndex.npy'
  * 
  */
-  __pyx_t_1 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_comp_fmIndex_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_comp_fmIndex_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_fmIndexFN = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":158
+  /* "MUSCython/RLE_BWTCython.pyx":171
  * 
  *         cdef str fmIndexFN = self.dirName+'/comp_fmIndex.npy'
  *         cdef str fmRefFN = self.dirName+'/comp_refIndex.npy'             # <<<<<<<<<<<<<<
  * 
  *         if os.path.exists(fmIndexFN) and os.path.exists(fmRefFN):
  */
-  __pyx_t_2 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_comp_refIndex_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_comp_refIndex_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_fmRefFN = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":160
+  /* "MUSCython/RLE_BWTCython.pyx":173
  *         cdef str fmRefFN = self.dirName+'/comp_refIndex.npy'
  * 
  *         if os.path.exists(fmIndexFN) and os.path.exists(fmRefFN):             # <<<<<<<<<<<<<<
  *             #both exist, just memmap them
  *             if self.useMemmapRLE:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -22014,23 +22571,23 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
     PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_fmIndexFN};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
   } else {
     __pyx_t_3 = __pyx_t_6;
     goto __pyx_L4_bool_binop_done;
   }
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -22051,17 +22608,17 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
     PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_fmRefFN};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = __pyx_t_6;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":162
+    /* "MUSCython/RLE_BWTCython.pyx":175
  *         if os.path.exists(fmIndexFN) and os.path.exists(fmRefFN):
  *             #both exist, just memmap them
  *             if self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -22070,16 +22627,16 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     if (__pyx_v_self->useMemmapRLE) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":163
+      /* "MUSCython/RLE_BWTCython.pyx":176
  *             #both exist, just memmap them
  *             if self.useMemmapRLE:
  *                 self.partialFM = np.load(fmIndexFN, 'r+')             # <<<<<<<<<<<<<<
  *             else:
  *                 self.partialFM = np.load(fmIndexFN)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_load); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_load); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = NULL;
@@ -22100,18 +22657,18 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
         PyObject *__pyx_callargs[3] = {__pyx_t_2, __pyx_v_fmIndexFN, __pyx_kp_s_r};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 2+__pyx_t_5);
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 163, __pyx_L1_error)
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 176, __pyx_L1_error)
       __Pyx_GIVEREF(__pyx_t_1);
       __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.partialFM);
       __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.partialFM);
       __pyx_v_self->__pyx_base.partialFM = ((PyArrayObject *)__pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":162
+      /* "MUSCython/RLE_BWTCython.pyx":175
  *         if os.path.exists(fmIndexFN) and os.path.exists(fmRefFN):
  *             #both exist, just memmap them
  *             if self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -22121,7 +22678,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
       goto __pyx_L6;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":165
+    /* "MUSCython/RLE_BWTCython.pyx":178
  *                 self.partialFM = np.load(fmIndexFN, 'r+')
  *             else:
  *                 self.partialFM = np.load(fmIndexFN)             # <<<<<<<<<<<<<<
@@ -22129,9 +22686,9 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  * 
  */
     /*else*/ {
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -22152,11 +22709,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
         PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_fmIndexFN};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       }
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 165, __pyx_L1_error)
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 178, __pyx_L1_error)
       __Pyx_GIVEREF(__pyx_t_1);
       __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.partialFM);
       __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.partialFM);
@@ -22165,20 +22722,20 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
     }
     __pyx_L6:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":166
+    /* "MUSCython/RLE_BWTCython.pyx":179
  *             else:
  *                 self.partialFM = np.load(fmIndexFN)
  *             self.partialFM_view = self.partialFM             # <<<<<<<<<<<<<<
  * 
  *             if self.useMemmapRLE:
  */
-    __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.partialFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 166, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.partialFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 179, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->__pyx_base.partialFM_view, 0);
     __pyx_v_self->__pyx_base.partialFM_view = __pyx_t_7;
     __pyx_t_7.memview = NULL;
     __pyx_t_7.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":168
+    /* "MUSCython/RLE_BWTCython.pyx":181
  *             self.partialFM_view = self.partialFM
  * 
  *             if self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -22187,16 +22744,16 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     if (__pyx_v_self->useMemmapRLE) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":169
+      /* "MUSCython/RLE_BWTCython.pyx":182
  * 
  *             if self.useMemmapRLE:
  *                 self.refFM = np.load(fmRefFN, 'r+')             # <<<<<<<<<<<<<<
  *             else:
  *                 self.refFM = np.load(fmRefFN)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_load); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_load); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 182, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = NULL;
@@ -22217,18 +22774,18 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
         PyObject *__pyx_callargs[3] = {__pyx_t_2, __pyx_v_fmRefFN, __pyx_kp_s_r};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 2+__pyx_t_5);
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 169, __pyx_L1_error)
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 182, __pyx_L1_error)
       __Pyx_GIVEREF(__pyx_t_1);
       __Pyx_GOTREF((PyObject *)__pyx_v_self->refFM);
       __Pyx_DECREF((PyObject *)__pyx_v_self->refFM);
       __pyx_v_self->refFM = ((PyArrayObject *)__pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":168
+      /* "MUSCython/RLE_BWTCython.pyx":181
  *             self.partialFM_view = self.partialFM
  * 
  *             if self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -22238,7 +22795,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
       goto __pyx_L7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":171
+    /* "MUSCython/RLE_BWTCython.pyx":184
  *                 self.refFM = np.load(fmRefFN, 'r+')
  *             else:
  *                 self.refFM = np.load(fmRefFN)             # <<<<<<<<<<<<<<
@@ -22246,9 +22803,9 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  *         else:
  */
     /*else*/ {
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 171, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -22269,11 +22826,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
         PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_fmRefFN};
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       }
-      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 171, __pyx_L1_error)
+      if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GIVEREF(__pyx_t_1);
       __Pyx_GOTREF((PyObject *)__pyx_v_self->refFM);
       __Pyx_DECREF((PyObject *)__pyx_v_self->refFM);
@@ -22282,20 +22839,20 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
     }
     __pyx_L7:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":172
+    /* "MUSCython/RLE_BWTCython.pyx":185
  *             else:
  *                 self.refFM = np.load(fmRefFN)
  *             self.refFM_view = self.refFM             # <<<<<<<<<<<<<<
  *         else:
  *             if logger != None:
  */
-    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->refFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 172, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->refFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 185, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->refFM_view, 0);
     __pyx_v_self->refFM_view = __pyx_t_8;
     __pyx_t_8.memview = NULL;
     __pyx_t_8.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":160
+    /* "MUSCython/RLE_BWTCython.pyx":173
  *         cdef str fmRefFN = self.dirName+'/comp_refIndex.npy'
  * 
  *         if os.path.exists(fmIndexFN) and os.path.exists(fmRefFN):             # <<<<<<<<<<<<<<
@@ -22305,7 +22862,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
     goto __pyx_L3;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":174
+  /* "MUSCython/RLE_BWTCython.pyx":187
  *             self.refFM_view = self.refFM
  *         else:
  *             if logger != None:             # <<<<<<<<<<<<<<
@@ -22313,21 +22870,21 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  * 
  */
   /*else*/ {
-    __pyx_t_1 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_3 < 0))) __PYX_ERR(0, 174, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_3 < 0))) __PYX_ERR(0, 187, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_3) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":175
+      /* "MUSCython/RLE_BWTCython.pyx":188
  *         else:
  *             if logger != None:
  *                 logger.info('First time calculation of \'%s\'' % fmIndexFN)             # <<<<<<<<<<<<<<
  * 
  *             #pre-allocate space
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_First_time_calculation_of_s, __pyx_v_fmIndexFN); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_First_time_calculation_of_s, __pyx_v_fmIndexFN); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 188, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_9 = NULL;
       __pyx_t_5 = 0;
@@ -22348,13 +22905,13 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
         __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       }
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":174
+      /* "MUSCython/RLE_BWTCython.pyx":187
  *             self.refFM_view = self.refFM
  *         else:
  *             if logger != None:             # <<<<<<<<<<<<<<
@@ -22363,23 +22920,23 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":178
+    /* "MUSCython/RLE_BWTCython.pyx":191
  * 
  *             #pre-allocate space
  *             samplingSize = int(math.ceil(float(self.totalSize+1)/binSize))             # <<<<<<<<<<<<<<
  *             self.partialFM = np.lib.format.open_memmap(fmIndexFN, 'w+', '<u8', (samplingSize, vcLen))
  *             self.partialFM_view = self.partialFM
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_math); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_math); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ceil); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_ceil); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (unlikely(__pyx_e_9MUSCython_13RLE_BWTCython_binSize == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 178, __pyx_L1_error)
+      __PYX_ERR(0, 191, __pyx_L1_error)
     }
-    __pyx_t_2 = PyFloat_FromDouble((((double)(__pyx_v_self->__pyx_base.totalSize + 1)) / __pyx_e_9MUSCython_13RLE_BWTCython_binSize)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_2 = PyFloat_FromDouble((((double)(__pyx_v_self->__pyx_base.totalSize + 1)) / __pyx_e_9MUSCython_13RLE_BWTCython_binSize)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_9 = NULL;
     __pyx_t_5 = 0;
@@ -22400,43 +22957,43 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
-    __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_samplingSize = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":179
+    /* "MUSCython/RLE_BWTCython.pyx":192
  *             #pre-allocate space
  *             samplingSize = int(math.ceil(float(self.totalSize+1)/binSize))
  *             self.partialFM = np.lib.format.open_memmap(fmIndexFN, 'w+', '<u8', (samplingSize, vcLen))             # <<<<<<<<<<<<<<
  *             self.partialFM_view = self.partialFM
  *             self.refFM = np.lib.format.open_memmap(fmRefFN, 'w+', '<u8', (samplingSize,))
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_lib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_lib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_INCREF(__pyx_v_samplingSize);
     __Pyx_GIVEREF(__pyx_v_samplingSize);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_v_samplingSize)) __PYX_ERR(0, 179, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_v_samplingSize)) __PYX_ERR(0, 192, __pyx_L1_error);
     __Pyx_GIVEREF(__pyx_t_1);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error);
     __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
     __pyx_t_5 = 0;
@@ -22457,53 +23014,53 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
       __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 4+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 179, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 192, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
-    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 179, __pyx_L1_error)
+    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GIVEREF(__pyx_t_4);
     __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.partialFM);
     __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.partialFM);
     __pyx_v_self->__pyx_base.partialFM = ((PyArrayObject *)__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":180
+    /* "MUSCython/RLE_BWTCython.pyx":193
  *             samplingSize = int(math.ceil(float(self.totalSize+1)/binSize))
  *             self.partialFM = np.lib.format.open_memmap(fmIndexFN, 'w+', '<u8', (samplingSize, vcLen))
  *             self.partialFM_view = self.partialFM             # <<<<<<<<<<<<<<
  *             self.refFM = np.lib.format.open_memmap(fmRefFN, 'w+', '<u8', (samplingSize,))
  *             self.refFM_view = self.refFM
  */
-    __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.partialFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 180, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->__pyx_base.partialFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 193, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->__pyx_base.partialFM_view, 0);
     __pyx_v_self->__pyx_base.partialFM_view = __pyx_t_7;
     __pyx_t_7.memview = NULL;
     __pyx_t_7.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":181
+    /* "MUSCython/RLE_BWTCython.pyx":194
  *             self.partialFM = np.lib.format.open_memmap(fmIndexFN, 'w+', '<u8', (samplingSize, vcLen))
  *             self.partialFM_view = self.partialFM
  *             self.refFM = np.lib.format.open_memmap(fmRefFN, 'w+', '<u8', (samplingSize,))             # <<<<<<<<<<<<<<
  *             self.refFM_view = self.refFM
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_lib); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_lib); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_format); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_samplingSize);
     __Pyx_GIVEREF(__pyx_v_samplingSize);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_samplingSize)) __PYX_ERR(0, 181, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_samplingSize)) __PYX_ERR(0, 194, __pyx_L1_error);
     __pyx_t_1 = NULL;
     __pyx_t_5 = 0;
     #if CYTHON_UNPACK_METHODS
@@ -22523,31 +23080,31 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
       __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+1-__pyx_t_5, 4+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 181, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     }
-    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 181, __pyx_L1_error)
+    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GIVEREF(__pyx_t_4);
     __Pyx_GOTREF((PyObject *)__pyx_v_self->refFM);
     __Pyx_DECREF((PyObject *)__pyx_v_self->refFM);
     __pyx_v_self->refFM = ((PyArrayObject *)__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":182
+    /* "MUSCython/RLE_BWTCython.pyx":195
  *             self.partialFM_view = self.partialFM
  *             self.refFM = np.lib.format.open_memmap(fmRefFN, 'w+', '<u8', (samplingSize,))
  *             self.refFM_view = self.refFM             # <<<<<<<<<<<<<<
  * 
  *             numBytes = self.bwt.shape[0]
  */
-    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->refFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_self->refFM), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 195, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->refFM_view, 0);
     __pyx_v_self->refFM_view = __pyx_t_8;
     __pyx_t_8.memview = NULL;
     __pyx_t_8.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":184
+    /* "MUSCython/RLE_BWTCython.pyx":197
  *             self.refFM_view = self.refFM
  * 
  *             numBytes = self.bwt.shape[0]             # <<<<<<<<<<<<<<
@@ -22556,11 +23113,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_t_4 = ((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __Pyx_INCREF(__pyx_t_4);
-    __pyx_t_10 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_4)); if (unlikely(__pyx_t_10 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 184, __pyx_L1_error)
+    __pyx_t_10 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_4)); if (unlikely(__pyx_t_10 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 197, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_numBytes = (__pyx_t_10[0]);
 
-    /* "MUSCython/RLE_BWTCython.pyx":185
+    /* "MUSCython/RLE_BWTCython.pyx":198
  * 
  *             numBytes = self.bwt.shape[0]
  *             prevChar = 0             # <<<<<<<<<<<<<<
@@ -22569,7 +23126,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_v_prevChar = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":186
+    /* "MUSCython/RLE_BWTCython.pyx":199
  *             numBytes = self.bwt.shape[0]
  *             prevChar = 0
  *             totalCharCount = 0             # <<<<<<<<<<<<<<
@@ -22578,7 +23135,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_v_totalCharCount = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":187
+    /* "MUSCython/RLE_BWTCython.pyx":200
  *             prevChar = 0
  *             totalCharCount = 0
  *             powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -22587,7 +23144,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_v_powerMultiple = 1;
 
-    /* "MUSCython/RLE_BWTCython.pyx":188
+    /* "MUSCython/RLE_BWTCython.pyx":201
  *             totalCharCount = 0
  *             powerMultiple = 1
  *             binEnd = 0             # <<<<<<<<<<<<<<
@@ -22596,7 +23153,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_v_binEnd = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":189
+    /* "MUSCython/RLE_BWTCython.pyx":202
  *             powerMultiple = 1
  *             binEnd = 0
  *             binID = 0             # <<<<<<<<<<<<<<
@@ -22605,7 +23162,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_v_binID = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":190
+    /* "MUSCython/RLE_BWTCython.pyx":203
  *             binEnd = 0
  *             binID = 0
  *             bwtIndex = 0             # <<<<<<<<<<<<<<
@@ -22614,7 +23171,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_v_bwtIndex = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":191
+    /* "MUSCython/RLE_BWTCython.pyx":204
  *             binID = 0
  *             bwtIndex = 0
  *             prevStart = 0             # <<<<<<<<<<<<<<
@@ -22623,16 +23180,16 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
     __pyx_v_prevStart = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":193
+    /* "MUSCython/RLE_BWTCython.pyx":206
  *             prevStart = 0
  * 
  *             countsSoFar = np.cumsum(self.totalCounts)-self.totalCounts             # <<<<<<<<<<<<<<
  *             countsSoFar_view = countsSoFar
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_cumsum); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_cumsum); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_t_9 = NULL;
@@ -22653,14 +23210,14 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
       PyObject *__pyx_callargs[2] = {__pyx_t_9, ((PyObject *)__pyx_v_self->__pyx_base.totalCounts)};
       __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 193, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
-    __pyx_t_2 = PyNumber_Subtract(__pyx_t_4, ((PyObject *)__pyx_v_self->__pyx_base.totalCounts)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Subtract(__pyx_t_4, ((PyObject *)__pyx_v_self->__pyx_base.totalCounts)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 193, __pyx_L1_error)
+    if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 206, __pyx_L1_error)
     __pyx_t_11 = ((PyArrayObject *)__pyx_t_2);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -22677,25 +23234,25 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
         __pyx_t_13 = __pyx_t_14 = __pyx_t_15 = 0;
       }
       __pyx_pybuffernd_countsSoFar.diminfo[0].strides = __pyx_pybuffernd_countsSoFar.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_countsSoFar.diminfo[0].shape = __pyx_pybuffernd_countsSoFar.rcbuffer->pybuffer.shape[0];
-      if (unlikely((__pyx_t_12 < 0))) __PYX_ERR(0, 193, __pyx_L1_error)
+      if (unlikely((__pyx_t_12 < 0))) __PYX_ERR(0, 206, __pyx_L1_error)
     }
     __pyx_t_11 = 0;
     __pyx_v_countsSoFar = ((PyArrayObject *)__pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":194
+    /* "MUSCython/RLE_BWTCython.pyx":207
  * 
  *             countsSoFar = np.cumsum(self.totalCounts)-self.totalCounts
  *             countsSoFar_view = countsSoFar             # <<<<<<<<<<<<<<
  * 
  *             with nogil:
  */
-    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_countsSoFar), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 194, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_countsSoFar), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 207, __pyx_L1_error)
     __pyx_v_countsSoFar_view = __pyx_t_8;
     __pyx_t_8.memview = NULL;
     __pyx_t_8.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":196
+    /* "MUSCython/RLE_BWTCython.pyx":209
  *             countsSoFar_view = countsSoFar
  * 
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -22711,7 +23268,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
         #endif
         /*try:*/ {
 
-          /* "MUSCython/RLE_BWTCython.pyx":198
+          /* "MUSCython/RLE_BWTCython.pyx":211
  *             with nogil:
  *                 #go through each byte, we'll determine when to save inside the loop
  *                 for i in range(0, numBytes):             # <<<<<<<<<<<<<<
@@ -22723,7 +23280,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
           for (__pyx_t_18 = 0; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
             __pyx_v_i = __pyx_t_18;
 
-            /* "MUSCython/RLE_BWTCython.pyx":199
+            /* "MUSCython/RLE_BWTCython.pyx":212
  *                 #go through each byte, we'll determine when to save inside the loop
  *                 for i in range(0, numBytes):
  *                     currentChar = self.bwt_view[i] & mask             # <<<<<<<<<<<<<<
@@ -22733,7 +23290,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
             __pyx_t_19 = __pyx_v_i;
             __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_19 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-            /* "MUSCython/RLE_BWTCython.pyx":200
+            /* "MUSCython/RLE_BWTCython.pyx":213
  *                 for i in range(0, numBytes):
  *                     currentChar = self.bwt_view[i] & mask
  *                     if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -22743,7 +23300,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
             __pyx_t_3 = (__pyx_v_currentChar == __pyx_v_prevChar);
             if (__pyx_t_3) {
 
-              /* "MUSCython/RLE_BWTCython.pyx":201
+              /* "MUSCython/RLE_BWTCython.pyx":214
  *                     currentChar = self.bwt_view[i] & mask
  *                     if currentChar == prevChar:
  *                         totalCharCount += (self.bwt_view[i] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -22753,7 +23310,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
               __pyx_t_19 = __pyx_v_i;
               __pyx_v_totalCharCount = (__pyx_v_totalCharCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_19 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple));
 
-              /* "MUSCython/RLE_BWTCython.pyx":202
+              /* "MUSCython/RLE_BWTCython.pyx":215
  *                     if currentChar == prevChar:
  *                         totalCharCount += (self.bwt_view[i] >> letterBits) * powerMultiple
  *                         powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -22762,7 +23319,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
               __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-              /* "MUSCython/RLE_BWTCython.pyx":200
+              /* "MUSCython/RLE_BWTCython.pyx":213
  *                 for i in range(0, numBytes):
  *                     currentChar = self.bwt_view[i] & mask
  *                     if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -22772,7 +23329,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
               goto __pyx_L14;
             }
 
-            /* "MUSCython/RLE_BWTCython.pyx":205
+            /* "MUSCython/RLE_BWTCython.pyx":218
  *                     else:
  *                         #first save this count
  *                         while bwtIndex + totalCharCount >= binEnd:             # <<<<<<<<<<<<<<
@@ -22784,7 +23341,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
                 __pyx_t_3 = ((__pyx_v_bwtIndex + __pyx_v_totalCharCount) >= __pyx_v_binEnd);
                 if (!__pyx_t_3) break;
 
-                /* "MUSCython/RLE_BWTCython.pyx":206
+                /* "MUSCython/RLE_BWTCython.pyx":219
  *                         #first save this count
  *                         while bwtIndex + totalCharCount >= binEnd:
  *                             self.refFM_view[binID] = prevStart             # <<<<<<<<<<<<<<
@@ -22794,7 +23351,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
                 __pyx_t_19 = __pyx_v_binID;
                 *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_19 * __pyx_v_self->refFM_view.strides[0]) )) = __pyx_v_prevStart;
 
-                /* "MUSCython/RLE_BWTCython.pyx":207
+                /* "MUSCython/RLE_BWTCython.pyx":220
  *                         while bwtIndex + totalCharCount >= binEnd:
  *                             self.refFM_view[binID] = prevStart
  *                             for j in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -22806,7 +23363,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
                 for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_21; __pyx_t_22+=1) {
                   __pyx_v_j = __pyx_t_22;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":208
+                  /* "MUSCython/RLE_BWTCython.pyx":221
  *                             self.refFM_view[binID] = prevStart
  *                             for j in range(0, vcLen):
  *                                 self.partialFM_view[binID,j] = countsSoFar_view[j]             # <<<<<<<<<<<<<<
@@ -22819,7 +23376,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
                   *((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_23 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_24 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) )) = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_countsSoFar_view.data + __pyx_t_19 * __pyx_v_countsSoFar_view.strides[0]) )));
                 }
 
-                /* "MUSCython/RLE_BWTCython.pyx":209
+                /* "MUSCython/RLE_BWTCython.pyx":222
  *                             for j in range(0, vcLen):
  *                                 self.partialFM_view[binID,j] = countsSoFar_view[j]
  *                             binEnd += binSize             # <<<<<<<<<<<<<<
@@ -22828,7 +23385,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
                 __pyx_v_binEnd = (__pyx_v_binEnd + __pyx_e_9MUSCython_13RLE_BWTCython_binSize);
 
-                /* "MUSCython/RLE_BWTCython.pyx":210
+                /* "MUSCython/RLE_BWTCython.pyx":223
  *                                 self.partialFM_view[binID,j] = countsSoFar_view[j]
  *                             binEnd += binSize
  *                             inc(binID)             # <<<<<<<<<<<<<<
@@ -22838,7 +23395,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
                 (void)((++__pyx_v_binID));
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":213
+              /* "MUSCython/RLE_BWTCython.pyx":226
  * 
  *                         #add the previous
  *                         countsSoFar_view[prevChar] += totalCharCount             # <<<<<<<<<<<<<<
@@ -22848,7 +23405,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
               __pyx_t_19 = __pyx_v_prevChar;
               *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_countsSoFar_view.data + __pyx_t_19 * __pyx_v_countsSoFar_view.strides[0]) )) += __pyx_v_totalCharCount;
 
-              /* "MUSCython/RLE_BWTCython.pyx":214
+              /* "MUSCython/RLE_BWTCython.pyx":227
  *                         #add the previous
  *                         countsSoFar_view[prevChar] += totalCharCount
  *                         bwtIndex += totalCharCount             # <<<<<<<<<<<<<<
@@ -22857,7 +23414,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
               __pyx_v_bwtIndex = (__pyx_v_bwtIndex + __pyx_v_totalCharCount);
 
-              /* "MUSCython/RLE_BWTCython.pyx":216
+              /* "MUSCython/RLE_BWTCython.pyx":229
  *                         bwtIndex += totalCharCount
  * 
  *                         prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -22866,7 +23423,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
               __pyx_v_prevChar = __pyx_v_currentChar;
 
-              /* "MUSCython/RLE_BWTCython.pyx":217
+              /* "MUSCython/RLE_BWTCython.pyx":230
  * 
  *                         prevChar = currentChar
  *                         prevStart = i             # <<<<<<<<<<<<<<
@@ -22875,7 +23432,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
               __pyx_v_prevStart = __pyx_v_i;
 
-              /* "MUSCython/RLE_BWTCython.pyx":218
+              /* "MUSCython/RLE_BWTCython.pyx":231
  *                         prevChar = currentChar
  *                         prevStart = i
  *                         totalCharCount = (self.bwt_view[i] >> letterBits)             # <<<<<<<<<<<<<<
@@ -22885,7 +23442,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
               __pyx_t_19 = __pyx_v_i;
               __pyx_v_totalCharCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_19 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-              /* "MUSCython/RLE_BWTCython.pyx":219
+              /* "MUSCython/RLE_BWTCython.pyx":232
  *                         prevStart = i
  *                         totalCharCount = (self.bwt_view[i] >> letterBits)
  *                         powerMultiple = numPower             # <<<<<<<<<<<<<<
@@ -22897,7 +23454,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
             __pyx_L14:;
           }
 
-          /* "MUSCython/RLE_BWTCython.pyx":221
+          /* "MUSCython/RLE_BWTCython.pyx":234
  *                         powerMultiple = numPower
  * 
  *                 while bwtIndex + totalCharCount >= binEnd:             # <<<<<<<<<<<<<<
@@ -22908,7 +23465,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
             __pyx_t_3 = ((__pyx_v_bwtIndex + __pyx_v_totalCharCount) >= __pyx_v_binEnd);
             if (!__pyx_t_3) break;
 
-            /* "MUSCython/RLE_BWTCython.pyx":222
+            /* "MUSCython/RLE_BWTCython.pyx":235
  * 
  *                 while bwtIndex + totalCharCount >= binEnd:
  *                     self.refFM_view[binID] = prevStart             # <<<<<<<<<<<<<<
@@ -22918,7 +23475,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
             __pyx_t_19 = __pyx_v_binID;
             *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_19 * __pyx_v_self->refFM_view.strides[0]) )) = __pyx_v_prevStart;
 
-            /* "MUSCython/RLE_BWTCython.pyx":223
+            /* "MUSCython/RLE_BWTCython.pyx":236
  *                 while bwtIndex + totalCharCount >= binEnd:
  *                     self.refFM_view[binID] = prevStart
  *                     for j in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -22930,7 +23487,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
             for (__pyx_t_18 = 0; __pyx_t_18 < __pyx_t_21; __pyx_t_18+=1) {
               __pyx_v_j = __pyx_t_18;
 
-              /* "MUSCython/RLE_BWTCython.pyx":224
+              /* "MUSCython/RLE_BWTCython.pyx":237
  *                     self.refFM_view[binID] = prevStart
  *                     for j in range(0, vcLen):
  *                         self.partialFM_view[binID,j] = countsSoFar_view[j]             # <<<<<<<<<<<<<<
@@ -22943,7 +23500,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
               *((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_24 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_23 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) )) = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_countsSoFar_view.data + __pyx_t_19 * __pyx_v_countsSoFar_view.strides[0]) )));
             }
 
-            /* "MUSCython/RLE_BWTCython.pyx":225
+            /* "MUSCython/RLE_BWTCython.pyx":238
  *                     for j in range(0, vcLen):
  *                         self.partialFM_view[binID,j] = countsSoFar_view[j]
  *                     binEnd += binSize             # <<<<<<<<<<<<<<
@@ -22952,7 +23509,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
  */
             __pyx_v_binEnd = (__pyx_v_binEnd + __pyx_e_9MUSCython_13RLE_BWTCython_binSize);
 
-            /* "MUSCython/RLE_BWTCython.pyx":226
+            /* "MUSCython/RLE_BWTCython.pyx":239
  *                         self.partialFM_view[binID,j] = countsSoFar_view[j]
  *                     binEnd += binSize
  *                     inc(binID)             # <<<<<<<<<<<<<<
@@ -22963,7 +23520,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
           }
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":196
+        /* "MUSCython/RLE_BWTCython.pyx":209
  *             countsSoFar_view = countsSoFar
  * 
  *             with nogil:             # <<<<<<<<<<<<<<
@@ -22984,19 +23541,19 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
   }
   __pyx_L3:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":229
+  /* "MUSCython/RLE_BWTCython.pyx":242
  * 
  *         #we'll use this later when we do lookups
  *         self.offsetSum = np.sum(self.partialFM[0])             # <<<<<<<<<<<<<<
  * 
  *     cpdef unsigned long getCharAtIndex(RLE_BWT self, unsigned long index):# nogil:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_sum); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_sum); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->__pyx_base.partialFM), 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->__pyx_base.partialFM), 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_1 = NULL;
   __pyx_t_5 = 0;
@@ -23017,15 +23574,15 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
     __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 229, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   }
-  __pyx_t_18 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_18 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_18 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_18 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_self->offsetSum = __pyx_t_18;
 
-  /* "MUSCython/RLE_BWTCython.pyx":128
+  /* "MUSCython/RLE_BWTCython.pyx":141
  *         self.totalSize = int(np.sum(self.totalCounts))
  * 
  *     def constructFMIndex(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
@@ -23065,7 +23622,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_6constructFMIndex(
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":231
+/* "MUSCython/RLE_BWTCython.pyx":244
  *         self.offsetSum = np.sum(self.partialFM[0])
  * 
  *     cpdef unsigned long getCharAtIndex(RLE_BWT self, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
@@ -23116,10 +23673,10 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getCharAtIndex); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getCharAtIndex); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_9MUSCython_13RLE_BWTCython_7RLE_BWT_9getCharAtIndex)) {
-        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_index); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -23141,11 +23698,11 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 244, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_7 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_7 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_7 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_7;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -23164,7 +23721,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     #endif
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":239
+  /* "MUSCython/RLE_BWTCython.pyx":252
  *         '''
  *         #get the bin we should start from
  *         cdef unsigned long binID = index >> bitPower             # <<<<<<<<<<<<<<
@@ -23173,7 +23730,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
  */
   __pyx_v_binID = (__pyx_v_index >> __pyx_e_9MUSCython_13RLE_BWTCython_bitPower);
 
-  /* "MUSCython/RLE_BWTCython.pyx":240
+  /* "MUSCython/RLE_BWTCython.pyx":253
  *         #get the bin we should start from
  *         cdef unsigned long binID = index >> bitPower
  *         cdef unsigned long bwtIndex = self.refFM_view[binID]             # <<<<<<<<<<<<<<
@@ -23183,7 +23740,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
   __pyx_t_8 = __pyx_v_binID;
   __pyx_v_bwtIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_8 * __pyx_v_self->refFM_view.strides[0]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":243
+  /* "MUSCython/RLE_BWTCython.pyx":256
  * 
  *         #these are the values that indicate how far in we really are
  *         cdef unsigned long trueIndex = 0             # <<<<<<<<<<<<<<
@@ -23192,7 +23749,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
  */
   __pyx_v_trueIndex = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":245
+  /* "MUSCython/RLE_BWTCython.pyx":258
  *         cdef unsigned long trueIndex = 0
  *         cdef unsigned long i
  *         for i in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -23204,7 +23761,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
   for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_10; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "MUSCython/RLE_BWTCython.pyx":246
+    /* "MUSCython/RLE_BWTCython.pyx":259
  *         cdef unsigned long i
  *         for i in range(0, vcLen):
  *             trueIndex += self.partialFM_view[binID,i]             # <<<<<<<<<<<<<<
@@ -23216,7 +23773,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     __pyx_v_trueIndex = (__pyx_v_trueIndex + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_8 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_11 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) ))));
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":247
+  /* "MUSCython/RLE_BWTCython.pyx":260
  *         for i in range(0, vcLen):
  *             trueIndex += self.partialFM_view[binID,i]
  *         trueIndex -= self.offsetSum             # <<<<<<<<<<<<<<
@@ -23225,7 +23782,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
  */
   __pyx_v_trueIndex = (__pyx_v_trueIndex - __pyx_v_self->offsetSum);
 
-  /* "MUSCython/RLE_BWTCython.pyx":249
+  /* "MUSCython/RLE_BWTCython.pyx":262
  *         trueIndex -= self.offsetSum
  * 
  *         cdef unsigned long prevChar = self.bwt_view[bwtIndex] & mask             # <<<<<<<<<<<<<<
@@ -23235,7 +23792,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
   __pyx_t_11 = __pyx_v_bwtIndex;
   __pyx_v_prevChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_11 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-  /* "MUSCython/RLE_BWTCython.pyx":251
+  /* "MUSCython/RLE_BWTCython.pyx":264
  *         cdef unsigned long prevChar = self.bwt_view[bwtIndex] & mask
  *         cdef unsigned long currentChar
  *         cdef unsigned long prevCount = self.bwt_view[bwtIndex] >> letterBits             # <<<<<<<<<<<<<<
@@ -23245,7 +23802,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
   __pyx_t_11 = __pyx_v_bwtIndex;
   __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_11 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-  /* "MUSCython/RLE_BWTCython.pyx":252
+  /* "MUSCython/RLE_BWTCython.pyx":265
  *         cdef unsigned long currentChar
  *         cdef unsigned long prevCount = self.bwt_view[bwtIndex] >> letterBits
  *         cdef unsigned long powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -23254,7 +23811,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
  */
   __pyx_v_powerMultiple = 1;
 
-  /* "MUSCython/RLE_BWTCython.pyx":254
+  /* "MUSCython/RLE_BWTCython.pyx":267
  *         cdef unsigned long powerMultiple = 1
  * 
  *         while trueIndex + prevCount <= index:             # <<<<<<<<<<<<<<
@@ -23265,7 +23822,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     __pyx_t_12 = ((__pyx_v_trueIndex + __pyx_v_prevCount) <= __pyx_v_index);
     if (!__pyx_t_12) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":255
+    /* "MUSCython/RLE_BWTCython.pyx":268
  * 
  *         while trueIndex + prevCount <= index:
  *             trueIndex += prevCount             # <<<<<<<<<<<<<<
@@ -23274,7 +23831,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
  */
     __pyx_v_trueIndex = (__pyx_v_trueIndex + __pyx_v_prevCount);
 
-    /* "MUSCython/RLE_BWTCython.pyx":256
+    /* "MUSCython/RLE_BWTCython.pyx":269
  *         while trueIndex + prevCount <= index:
  *             trueIndex += prevCount
  *             bwtIndex += 1             # <<<<<<<<<<<<<<
@@ -23283,7 +23840,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
  */
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex + 1);
 
-    /* "MUSCython/RLE_BWTCython.pyx":258
+    /* "MUSCython/RLE_BWTCython.pyx":271
  *             bwtIndex += 1
  * 
  *             currentChar = self.bwt_view[bwtIndex] & mask             # <<<<<<<<<<<<<<
@@ -23293,7 +23850,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     __pyx_t_11 = __pyx_v_bwtIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_11 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":259
+    /* "MUSCython/RLE_BWTCython.pyx":272
  * 
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -23303,7 +23860,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     __pyx_t_12 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_12) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":260
+      /* "MUSCython/RLE_BWTCython.pyx":273
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -23312,7 +23869,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":261
+      /* "MUSCython/RLE_BWTCython.pyx":274
  *             if currentChar == prevChar:
  *                 powerMultiple *= numPower
  *                 prevCount = (self.bwt_view[bwtIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -23322,7 +23879,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
       __pyx_t_11 = __pyx_v_bwtIndex;
       __pyx_v_prevCount = (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_11 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple);
 
-      /* "MUSCython/RLE_BWTCython.pyx":259
+      /* "MUSCython/RLE_BWTCython.pyx":272
  * 
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -23332,7 +23889,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
       goto __pyx_L7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":263
+    /* "MUSCython/RLE_BWTCython.pyx":276
  *                 prevCount = (self.bwt_view[bwtIndex] >> letterBits) * powerMultiple
  *             else:
  *                 powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -23342,7 +23899,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     /*else*/ {
       __pyx_v_powerMultiple = 1;
 
-      /* "MUSCython/RLE_BWTCython.pyx":264
+      /* "MUSCython/RLE_BWTCython.pyx":277
  *             else:
  *                 powerMultiple = 1
  *                 prevCount = self.bwt_view[bwtIndex] >> letterBits             # <<<<<<<<<<<<<<
@@ -23354,7 +23911,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     }
     __pyx_L7:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":266
+    /* "MUSCython/RLE_BWTCython.pyx":279
  *                 prevCount = self.bwt_view[bwtIndex] >> letterBits
  * 
  *             prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -23364,7 +23921,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
     __pyx_v_prevChar = __pyx_v_currentChar;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":268
+  /* "MUSCython/RLE_BWTCython.pyx":281
  *             prevChar = currentChar
  * 
  *         return prevChar             # <<<<<<<<<<<<<<
@@ -23374,7 +23931,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(
   __pyx_r = __pyx_v_prevChar;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":231
+  /* "MUSCython/RLE_BWTCython.pyx":244
  *         self.offsetSum = np.sum(self.partialFM[0])
  * 
  *     cpdef unsigned long getCharAtIndex(RLE_BWT self, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
@@ -23450,23 +24007,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getCharAtIndex") < 0)) __PYX_ERR(0, 231, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getCharAtIndex") < 0)) __PYX_ERR(0, 244, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_index = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_index == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L3_error)
+    __pyx_v_index = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_index == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getCharAtIndex", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 231, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getCharAtIndex", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 244, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -23503,8 +24060,8 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_8getCharAtIndex(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getCharAtIndex", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(__pyx_v_self, __pyx_v_index, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 231, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getCharAtIndex(__pyx_v_self, __pyx_v_index, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -23521,7 +24078,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_8getCharAtIndex(st
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":270
+/* "MUSCython/RLE_BWTCython.pyx":283
  *         return prevChar
  * 
  *     cdef void fillBin(RLE_BWT self, np.uint8_t [:] binToFill, unsigned long binID) nogil:             # <<<<<<<<<<<<<<
@@ -23550,7 +24107,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   int __pyx_t_7;
   size_t __pyx_t_8;
 
-  /* "MUSCython/RLE_BWTCython.pyx":278
+  /* "MUSCython/RLE_BWTCython.pyx":291
  *         '''
  *         cdef unsigned long x
  *         cdef unsigned long startIndex = binID*binSize             # <<<<<<<<<<<<<<
@@ -23559,7 +24116,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
   __pyx_v_startIndex = (__pyx_v_binID * __pyx_e_9MUSCython_13RLE_BWTCython_binSize);
 
-  /* "MUSCython/RLE_BWTCython.pyx":279
+  /* "MUSCython/RLE_BWTCython.pyx":292
  *         cdef unsigned long x
  *         cdef unsigned long startIndex = binID*binSize
  *         cdef unsigned long endIndex = min((binID+1)*binSize, self.totalSize)             # <<<<<<<<<<<<<<
@@ -23576,7 +24133,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   }
   __pyx_v_endIndex = __pyx_t_3;
 
-  /* "MUSCython/RLE_BWTCython.pyx":282
+  /* "MUSCython/RLE_BWTCython.pyx":295
  * 
  *         #get the bin we should start from
  *         cdef unsigned long bwtIndex = self.refFM_view[binID]             # <<<<<<<<<<<<<<
@@ -23586,7 +24143,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   __pyx_t_5 = __pyx_v_binID;
   __pyx_v_bwtIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_5 * __pyx_v_self->refFM_view.strides[0]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":285
+  /* "MUSCython/RLE_BWTCython.pyx":298
  * 
  *         #these are the values that indicate how far in we really are
  *         cdef unsigned long trueIndex = 0             # <<<<<<<<<<<<<<
@@ -23595,7 +24152,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
   __pyx_v_trueIndex = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":287
+  /* "MUSCython/RLE_BWTCython.pyx":300
  *         cdef unsigned long trueIndex = 0
  *         cdef unsigned long i
  *         for i in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -23607,7 +24164,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_7; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "MUSCython/RLE_BWTCython.pyx":288
+    /* "MUSCython/RLE_BWTCython.pyx":301
  *         cdef unsigned long i
  *         for i in range(0, vcLen):
  *             trueIndex += self.partialFM_view[binID,i]             # <<<<<<<<<<<<<<
@@ -23619,7 +24176,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_v_trueIndex = (__pyx_v_trueIndex + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_8 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) ))));
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":289
+  /* "MUSCython/RLE_BWTCython.pyx":302
  *         for i in range(0, vcLen):
  *             trueIndex += self.partialFM_view[binID,i]
  *         trueIndex -= self.offsetSum             # <<<<<<<<<<<<<<
@@ -23628,7 +24185,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
   __pyx_v_trueIndex = (__pyx_v_trueIndex - __pyx_v_self->offsetSum);
 
-  /* "MUSCython/RLE_BWTCython.pyx":291
+  /* "MUSCython/RLE_BWTCython.pyx":304
  *         trueIndex -= self.offsetSum
  * 
  *         cdef unsigned long prevChar = self.bwt_view[bwtIndex] & mask             # <<<<<<<<<<<<<<
@@ -23638,7 +24195,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   __pyx_t_8 = __pyx_v_bwtIndex;
   __pyx_v_prevChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_8 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-  /* "MUSCython/RLE_BWTCython.pyx":293
+  /* "MUSCython/RLE_BWTCython.pyx":306
  *         cdef unsigned long prevChar = self.bwt_view[bwtIndex] & mask
  *         cdef unsigned long currentChar
  *         cdef unsigned long prevCount = self.bwt_view[bwtIndex] >> letterBits             # <<<<<<<<<<<<<<
@@ -23648,7 +24205,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   __pyx_t_8 = __pyx_v_bwtIndex;
   __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_8 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-  /* "MUSCython/RLE_BWTCython.pyx":294
+  /* "MUSCython/RLE_BWTCython.pyx":307
  *         cdef unsigned long currentChar
  *         cdef unsigned long prevCount = self.bwt_view[bwtIndex] >> letterBits
  *         cdef unsigned powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -23657,7 +24214,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
   __pyx_v_powerMultiple = 1;
 
-  /* "MUSCython/RLE_BWTCython.pyx":297
+  /* "MUSCython/RLE_BWTCython.pyx":310
  * 
  *         #first, we may need to skip ahead some
  *         while trueIndex + prevCount < startIndex:             # <<<<<<<<<<<<<<
@@ -23668,7 +24225,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_t_4 = ((__pyx_v_trueIndex + __pyx_v_prevCount) < __pyx_v_startIndex);
     if (!__pyx_t_4) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":298
+    /* "MUSCython/RLE_BWTCython.pyx":311
  *         #first, we may need to skip ahead some
  *         while trueIndex + prevCount < startIndex:
  *             trueIndex += prevCount             # <<<<<<<<<<<<<<
@@ -23677,7 +24234,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
     __pyx_v_trueIndex = (__pyx_v_trueIndex + __pyx_v_prevCount);
 
-    /* "MUSCython/RLE_BWTCython.pyx":300
+    /* "MUSCython/RLE_BWTCython.pyx":313
  *             trueIndex += prevCount
  *             #inc(bwtIndex)
  *             bwtIndex += 1             # <<<<<<<<<<<<<<
@@ -23686,7 +24243,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex + 1);
 
-    /* "MUSCython/RLE_BWTCython.pyx":302
+    /* "MUSCython/RLE_BWTCython.pyx":315
  *             bwtIndex += 1
  * 
  *             currentChar = self.bwt_view[bwtIndex] & mask             # <<<<<<<<<<<<<<
@@ -23696,7 +24253,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_t_8 = __pyx_v_bwtIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_8 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":303
+    /* "MUSCython/RLE_BWTCython.pyx":316
  * 
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -23706,7 +24263,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_t_4 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_4) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":304
+      /* "MUSCython/RLE_BWTCython.pyx":317
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -23715,7 +24272,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":305
+      /* "MUSCython/RLE_BWTCython.pyx":318
  *             if currentChar == prevChar:
  *                 powerMultiple *= numPower
  *                 prevCount = (self.bwt_view[bwtIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -23725,7 +24282,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
       __pyx_t_8 = __pyx_v_bwtIndex;
       __pyx_v_prevCount = (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_8 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple);
 
-      /* "MUSCython/RLE_BWTCython.pyx":303
+      /* "MUSCython/RLE_BWTCython.pyx":316
  * 
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -23735,7 +24292,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
       goto __pyx_L7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":307
+    /* "MUSCython/RLE_BWTCython.pyx":320
  *                 prevCount = (self.bwt_view[bwtIndex] >> letterBits) * powerMultiple
  *             else:
  *                 powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -23745,7 +24302,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     /*else*/ {
       __pyx_v_powerMultiple = 1;
 
-      /* "MUSCython/RLE_BWTCython.pyx":308
+      /* "MUSCython/RLE_BWTCython.pyx":321
  *             else:
  *                 powerMultiple = 1
  *                 prevCount = self.bwt_view[bwtIndex] >> letterBits             # <<<<<<<<<<<<<<
@@ -23757,7 +24314,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     }
     __pyx_L7:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":309
+    /* "MUSCython/RLE_BWTCython.pyx":322
  *                 powerMultiple = 1
  *                 prevCount = self.bwt_view[bwtIndex] >> letterBits
  *             prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -23767,7 +24324,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_v_prevChar = __pyx_v_currentChar;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":312
+  /* "MUSCython/RLE_BWTCython.pyx":325
  * 
  *         #now we actually do the same loop only with some writes
  *         cdef unsigned long realStart = 0             # <<<<<<<<<<<<<<
@@ -23776,7 +24333,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
   __pyx_v_realStart = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":313
+  /* "MUSCython/RLE_BWTCython.pyx":326
  *         #now we actually do the same loop only with some writes
  *         cdef unsigned long realStart = 0
  *         while trueIndex + prevCount < endIndex:             # <<<<<<<<<<<<<<
@@ -23787,7 +24344,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_t_4 = ((__pyx_v_trueIndex + __pyx_v_prevCount) < __pyx_v_endIndex);
     if (!__pyx_t_4) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":315
+    /* "MUSCython/RLE_BWTCython.pyx":328
  *         while trueIndex + prevCount < endIndex:
  *             #first fill in any values from this bin
  *             for x in range(realStart, trueIndex+prevCount-startIndex):             # <<<<<<<<<<<<<<
@@ -23799,7 +24356,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     for (__pyx_t_2 = __pyx_v_realStart; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
       __pyx_v_x = __pyx_t_2;
 
-      /* "MUSCython/RLE_BWTCython.pyx":316
+      /* "MUSCython/RLE_BWTCython.pyx":329
  *             #first fill in any values from this bin
  *             for x in range(realStart, trueIndex+prevCount-startIndex):
  *                 binToFill[x] = prevChar             # <<<<<<<<<<<<<<
@@ -23810,7 +24367,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
       *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_binToFill.data + __pyx_t_8 * __pyx_v_binToFill.strides[0]) )) = __pyx_v_prevChar;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":317
+    /* "MUSCython/RLE_BWTCython.pyx":330
  *             for x in range(realStart, trueIndex+prevCount-startIndex):
  *                 binToFill[x] = prevChar
  *             realStart = trueIndex+prevCount-startIndex             # <<<<<<<<<<<<<<
@@ -23819,7 +24376,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
     __pyx_v_realStart = ((__pyx_v_trueIndex + __pyx_v_prevCount) - __pyx_v_startIndex);
 
-    /* "MUSCython/RLE_BWTCython.pyx":320
+    /* "MUSCython/RLE_BWTCython.pyx":333
  * 
  *             #now do normal upkeep stuff
  *             trueIndex += prevCount             # <<<<<<<<<<<<<<
@@ -23828,7 +24385,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
     __pyx_v_trueIndex = (__pyx_v_trueIndex + __pyx_v_prevCount);
 
-    /* "MUSCython/RLE_BWTCython.pyx":322
+    /* "MUSCython/RLE_BWTCython.pyx":335
  *             trueIndex += prevCount
  *             #inc(bwtIndex)
  *             bwtIndex += 1             # <<<<<<<<<<<<<<
@@ -23837,7 +24394,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex + 1);
 
-    /* "MUSCython/RLE_BWTCython.pyx":325
+    /* "MUSCython/RLE_BWTCython.pyx":338
  * 
  *             #pull out the char and update powers/counts
  *             currentChar = self.bwt_view[bwtIndex] & mask             # <<<<<<<<<<<<<<
@@ -23847,7 +24404,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_t_8 = __pyx_v_bwtIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_8 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":326
+    /* "MUSCython/RLE_BWTCython.pyx":339
  *             #pull out the char and update powers/counts
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -23857,7 +24414,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_t_4 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_4) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":327
+      /* "MUSCython/RLE_BWTCython.pyx":340
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -23866,7 +24423,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":328
+      /* "MUSCython/RLE_BWTCython.pyx":341
  *             if currentChar == prevChar:
  *                 powerMultiple *= numPower
  *                 prevCount = (self.bwt_view[bwtIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -23876,7 +24433,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
       __pyx_t_8 = __pyx_v_bwtIndex;
       __pyx_v_prevCount = (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_8 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple);
 
-      /* "MUSCython/RLE_BWTCython.pyx":326
+      /* "MUSCython/RLE_BWTCython.pyx":339
  *             #pull out the char and update powers/counts
  *             currentChar = self.bwt_view[bwtIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -23886,7 +24443,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
       goto __pyx_L12;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":330
+    /* "MUSCython/RLE_BWTCython.pyx":343
  *                 prevCount = (self.bwt_view[bwtIndex] >> letterBits) * powerMultiple
  *             else:
  *                 powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -23896,7 +24453,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     /*else*/ {
       __pyx_v_powerMultiple = 1;
 
-      /* "MUSCython/RLE_BWTCython.pyx":331
+      /* "MUSCython/RLE_BWTCython.pyx":344
  *             else:
  *                 powerMultiple = 1
  *                 prevCount = self.bwt_view[bwtIndex] >> letterBits             # <<<<<<<<<<<<<<
@@ -23908,7 +24465,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     }
     __pyx_L12:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":332
+    /* "MUSCython/RLE_BWTCython.pyx":345
  *                 powerMultiple = 1
  *                 prevCount = self.bwt_view[bwtIndex] >> letterBits
  *             prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -23918,7 +24475,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     __pyx_v_prevChar = __pyx_v_currentChar;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":335
+  /* "MUSCython/RLE_BWTCython.pyx":348
  * 
  *         #finally fill in the remaining stuff
  *         for x in range(realStart, endIndex-startIndex):             # <<<<<<<<<<<<<<
@@ -23930,7 +24487,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   for (__pyx_t_2 = __pyx_v_realStart; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_x = __pyx_t_2;
 
-    /* "MUSCython/RLE_BWTCython.pyx":336
+    /* "MUSCython/RLE_BWTCython.pyx":349
  *         #finally fill in the remaining stuff
  *         for x in range(realStart, endIndex-startIndex):
  *             binToFill[x] = prevChar             # <<<<<<<<<<<<<<
@@ -23941,7 +24498,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
     *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_binToFill.data + __pyx_t_8 * __pyx_v_binToFill.strides[0]) )) = __pyx_v_prevChar;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":270
+  /* "MUSCython/RLE_BWTCython.pyx":283
  *         return prevChar
  * 
  *     cdef void fillBin(RLE_BWT self, np.uint8_t [:] binToFill, unsigned long binID) nogil:             # <<<<<<<<<<<<<<
@@ -23952,7 +24509,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillBin(struct __pyx_obj
   /* function exit code */
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":338
+/* "MUSCython/RLE_BWTCython.pyx":351
  *             binToFill[x] = prevChar
  * 
  *     def getBWTRange(RLE_BWT self, unsigned long start, unsigned long end):             # <<<<<<<<<<<<<<
@@ -24017,7 +24574,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 338, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 351, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -24025,14 +24582,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 338, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 351, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("getBWTRange", 1, 2, 2, 1); __PYX_ERR(0, 338, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("getBWTRange", 1, 2, 2, 1); __PYX_ERR(0, 351, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getBWTRange") < 0)) __PYX_ERR(0, 338, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getBWTRange") < 0)) __PYX_ERR(0, 351, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -24040,12 +24597,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_start = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_start == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 338, __pyx_L3_error)
-    __pyx_v_end = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_end == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 338, __pyx_L3_error)
+    __pyx_v_start = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_start == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 351, __pyx_L3_error)
+    __pyx_v_end = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_end == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 351, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getBWTRange", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 338, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getBWTRange", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 351, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -24088,35 +24645,35 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_10getBWTRange(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getBWTRange", 1);
 
-  /* "MUSCython/RLE_BWTCython.pyx":347
+  /* "MUSCython/RLE_BWTCython.pyx":360
  *         '''
  *         #set aside an array block to fill
  *         startBlockIndex = start >> bitPower             # <<<<<<<<<<<<<<
  *         endBlockIndex = int(math.floor(float(end)/binSize))
  *         trueStart = startBlockIndex*binSize
  */
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_long((__pyx_v_start >> __pyx_e_9MUSCython_13RLE_BWTCython_bitPower)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_long((__pyx_v_start >> __pyx_e_9MUSCython_13RLE_BWTCython_bitPower)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_startBlockIndex = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":348
+  /* "MUSCython/RLE_BWTCython.pyx":361
  *         #set aside an array block to fill
  *         startBlockIndex = start >> bitPower
  *         endBlockIndex = int(math.floor(float(end)/binSize))             # <<<<<<<<<<<<<<
  *         trueStart = startBlockIndex*binSize
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_math); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_math); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_e_9MUSCython_13RLE_BWTCython_binSize == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 348, __pyx_L1_error)
+    __PYX_ERR(0, 361, __pyx_L1_error)
   }
-  __pyx_t_2 = PyFloat_FromDouble((((double)__pyx_v_end) / __pyx_e_9MUSCython_13RLE_BWTCython_binSize)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble((((double)__pyx_v_end) / __pyx_e_9MUSCython_13RLE_BWTCython_binSize)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -24137,32 +24694,32 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_10getBWTRange(stru
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_endBlockIndex = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":349
+  /* "MUSCython/RLE_BWTCython.pyx":362
  *         startBlockIndex = start >> bitPower
  *         endBlockIndex = int(math.floor(float(end)/binSize))
  *         trueStart = startBlockIndex*binSize             # <<<<<<<<<<<<<<
  * 
  *         #first we will extract the range of blocks
  */
-  __pyx_t_3 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_binSize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_binSize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_startBlockIndex, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_startBlockIndex, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_trueStart = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":352
+  /* "MUSCython/RLE_BWTCython.pyx":365
  * 
  *         #first we will extract the range of blocks
  *         return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]             # <<<<<<<<<<<<<<
@@ -24170,7 +24727,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_10getBWTRange(stru
  *     def decompressBlocks(RLE_BWT self, unsigned long startBlock, unsigned long endBlock):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_decompressBlocks); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_decompressBlocks); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = NULL;
   __pyx_t_5 = 0;
@@ -24190,21 +24747,21 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_10getBWTRange(stru
     PyObject *__pyx_callargs[3] = {__pyx_t_2, __pyx_v_startBlockIndex, __pyx_v_endBlockIndex};
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_5, 2+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 365, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_start); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_start); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_v_trueStart); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_v_trueStart); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_end); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_end); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyNumber_Subtract(__pyx_t_3, __pyx_v_trueStart); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Subtract(__pyx_t_3, __pyx_v_trueStart); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_t_1, 0, 0, &__pyx_t_2, &__pyx_t_4, NULL, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_t_1, 0, 0, &__pyx_t_2, &__pyx_t_4, NULL, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -24213,7 +24770,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_10getBWTRange(stru
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":338
+  /* "MUSCython/RLE_BWTCython.pyx":351
  *             binToFill[x] = prevChar
  * 
  *     def getBWTRange(RLE_BWT self, unsigned long start, unsigned long end):             # <<<<<<<<<<<<<<
@@ -24238,7 +24795,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_10getBWTRange(stru
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":354
+/* "MUSCython/RLE_BWTCython.pyx":367
  *         return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]
  * 
  *     def decompressBlocks(RLE_BWT self, unsigned long startBlock, unsigned long endBlock):             # <<<<<<<<<<<<<<
@@ -24303,7 +24860,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 354, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 367, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -24311,14 +24868,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 354, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 367, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("decompressBlocks", 1, 2, 2, 1); __PYX_ERR(0, 354, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("decompressBlocks", 1, 2, 2, 1); __PYX_ERR(0, 367, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "decompressBlocks") < 0)) __PYX_ERR(0, 354, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "decompressBlocks") < 0)) __PYX_ERR(0, 367, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -24326,12 +24883,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_startBlock = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_startBlock == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 354, __pyx_L3_error)
-    __pyx_v_endBlock = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_endBlock == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 354, __pyx_L3_error)
+    __pyx_v_startBlock = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_startBlock == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 367, __pyx_L3_error)
+    __pyx_v_endBlock = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_endBlock == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 367, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("decompressBlocks", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 354, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("decompressBlocks", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 367, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -24398,31 +24955,31 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
   __pyx_pybuffernd_counts.data = NULL;
   __pyx_pybuffernd_counts.rcbuffer = &__pyx_pybuffer_counts;
 
-  /* "MUSCython/RLE_BWTCython.pyx":363
+  /* "MUSCython/RLE_BWTCython.pyx":376
  *         @return - an array of size blockSize*(endBlock-startBlock+1), interpreting that block is up to getBWTRange(...)
  *         '''
  *         expectedIndex = startBlock*binSize             # <<<<<<<<<<<<<<
  *         trueIndex = np.sum(self.partialFM[startBlock])-self.offsetSum
  *         dist = expectedIndex - trueIndex
  */
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_long((__pyx_v_startBlock * __pyx_e_9MUSCython_13RLE_BWTCython_binSize)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_long((__pyx_v_startBlock * __pyx_e_9MUSCython_13RLE_BWTCython_binSize)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_expectedIndex = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":364
+  /* "MUSCython/RLE_BWTCython.pyx":377
  *         '''
  *         expectedIndex = startBlock*binSize
  *         trueIndex = np.sum(self.partialFM[startBlock])-self.offsetSum             # <<<<<<<<<<<<<<
  *         dist = expectedIndex - trueIndex
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_sum); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 364, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_sum); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->__pyx_base.partialFM), __pyx_v_startBlock, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->__pyx_base.partialFM), __pyx_v_startBlock, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -24443,44 +25000,44 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_self->offsetSum); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 364, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_self->offsetSum); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_trueIndex = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":365
+  /* "MUSCython/RLE_BWTCython.pyx":378
  *         expectedIndex = startBlock*binSize
  *         trueIndex = np.sum(self.partialFM[startBlock])-self.offsetSum
  *         dist = expectedIndex - trueIndex             # <<<<<<<<<<<<<<
  * 
  *         #find the end of the region of interest
  */
-  __pyx_t_2 = PyNumber_Subtract(__pyx_v_expectedIndex, __pyx_v_trueIndex); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_v_expectedIndex, __pyx_v_trueIndex); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 378, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_dist = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":368
+  /* "MUSCython/RLE_BWTCython.pyx":381
  * 
  *         #find the end of the region of interest
  *         startRange = self.refFM[startBlock]             # <<<<<<<<<<<<<<
  *         if endBlock >= self.refFM.shape[0]-1:
  *             endRange = self.bwt.shape[0]
  */
-  __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->refFM), __pyx_v_startBlock, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->refFM), __pyx_v_startBlock, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_v_startRange = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":369
+  /* "MUSCython/RLE_BWTCython.pyx":382
  *         #find the end of the region of interest
  *         startRange = self.refFM[startBlock]
  *         if endBlock >= self.refFM.shape[0]-1:             # <<<<<<<<<<<<<<
@@ -24489,12 +25046,12 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
   __pyx_t_2 = ((PyObject *)__pyx_v_self->refFM);
   __Pyx_INCREF(__pyx_t_2);
-  __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_2)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_2)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 382, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_7 = (__pyx_v_endBlock >= ((__pyx_t_6[0]) - 1));
   if (__pyx_t_7) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":370
+    /* "MUSCython/RLE_BWTCython.pyx":383
  *         startRange = self.refFM[startBlock]
  *         if endBlock >= self.refFM.shape[0]-1:
  *             endRange = self.bwt.shape[0]             # <<<<<<<<<<<<<<
@@ -24503,14 +25060,14 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
     __pyx_t_2 = ((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __Pyx_INCREF(__pyx_t_2);
-    __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_2)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 370, __pyx_L1_error)
+    __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_2)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 383, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyInt_FromSsize_t((__pyx_t_6[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 370, __pyx_L1_error)
+    __pyx_t_2 = PyInt_FromSsize_t((__pyx_t_6[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_v_endRange = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":371
+    /* "MUSCython/RLE_BWTCython.pyx":384
  *         if endBlock >= self.refFM.shape[0]-1:
  *             endRange = self.bwt.shape[0]
  *             returnSize = binSize*(endBlock-startBlock)+(self.totalSize % binSize)             # <<<<<<<<<<<<<<
@@ -24519,11 +25076,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
     if (unlikely(__pyx_e_9MUSCython_13RLE_BWTCython_binSize == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-      __PYX_ERR(0, 371, __pyx_L1_error)
+      __PYX_ERR(0, 384, __pyx_L1_error)
     }
     __pyx_v_returnSize = ((__pyx_e_9MUSCython_13RLE_BWTCython_binSize * (__pyx_v_endBlock - __pyx_v_startBlock)) + (__pyx_v_self->__pyx_base.totalSize % __pyx_e_9MUSCython_13RLE_BWTCython_binSize));
 
-    /* "MUSCython/RLE_BWTCython.pyx":369
+    /* "MUSCython/RLE_BWTCython.pyx":382
  *         #find the end of the region of interest
  *         startRange = self.refFM[startBlock]
  *         if endBlock >= self.refFM.shape[0]-1:             # <<<<<<<<<<<<<<
@@ -24533,7 +25090,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     goto __pyx_L3;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":373
+  /* "MUSCython/RLE_BWTCython.pyx":386
  *             returnSize = binSize*(endBlock-startBlock)+(self.totalSize % binSize)
  *         else:
  *             endRange = int(self.refFM[endBlock+1])+1             # <<<<<<<<<<<<<<
@@ -24542,18 +25099,18 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
   /*else*/ {
     __pyx_t_8 = (__pyx_v_endBlock + 1);
-    __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->refFM), __pyx_t_8, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 373, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(((PyObject *)__pyx_v_self->refFM), __pyx_t_8, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 373, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_endRange = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":374
+    /* "MUSCython/RLE_BWTCython.pyx":387
  *         else:
  *             endRange = int(self.refFM[endBlock+1])+1
  *             returnSize = binSize*(endBlock-startBlock+1)             # <<<<<<<<<<<<<<
@@ -24562,7 +25119,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
     __pyx_v_returnSize = (__pyx_e_9MUSCython_13RLE_BWTCython_binSize * ((__pyx_v_endBlock - __pyx_v_startBlock) + 1));
 
-    /* "MUSCython/RLE_BWTCython.pyx":375
+    /* "MUSCython/RLE_BWTCython.pyx":388
  *             endRange = int(self.refFM[endBlock+1])+1
  *             returnSize = binSize*(endBlock-startBlock+1)
  *             while endRange < self.bwt.shape[0] and (self.bwt[endRange] & mask) == (self.bwt[endRange-1] & mask):             # <<<<<<<<<<<<<<
@@ -24572,55 +25129,55 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     while (1) {
       __pyx_t_2 = ((PyObject *)__pyx_v_self->__pyx_base.bwt);
       __Pyx_INCREF(__pyx_t_2);
-      __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_2)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_6 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_2)); if (unlikely(__pyx_t_6 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyInt_FromSsize_t((__pyx_t_6[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_2 = PyInt_FromSsize_t((__pyx_t_6[0])); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = PyObject_RichCompare(__pyx_v_endRange, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_v_endRange, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_9) {
       } else {
         __pyx_t_7 = __pyx_t_9;
         goto __pyx_L6_bool_binop_done;
       }
-      __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->__pyx_base.bwt), __pyx_v_endRange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->__pyx_base.bwt), __pyx_v_endRange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_mask); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_mask); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = PyNumber_And(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_And(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyInt_SubtractObjC(__pyx_v_endRange, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_SubtractObjC(__pyx_v_endRange, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->__pyx_base.bwt), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_self->__pyx_base.bwt), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_mask); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_mask); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = PyNumber_And(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_4 = PyNumber_And(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_t_4, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 375, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_7 = __pyx_t_9;
       __pyx_L6_bool_binop_done:;
       if (!__pyx_t_7) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":376
+      /* "MUSCython/RLE_BWTCython.pyx":389
  *             returnSize = binSize*(endBlock-startBlock+1)
  *             while endRange < self.bwt.shape[0] and (self.bwt[endRange] & mask) == (self.bwt[endRange-1] & mask):
  *                 endRange += 1             # <<<<<<<<<<<<<<
  * 
  *         ret = np.zeros(dtype='<u1', shape=(returnSize,))
  */
-      __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_v_endRange, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_v_endRange, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 389, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF_SET(__pyx_v_endRange, __pyx_t_2);
       __pyx_t_2 = 0;
@@ -24628,76 +25185,76 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
   }
   __pyx_L3:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":378
+  /* "MUSCython/RLE_BWTCython.pyx":391
  *                 endRange += 1
  * 
  *         ret = np.zeros(dtype='<u1', shape=(returnSize,))             # <<<<<<<<<<<<<<
  * 
  *         startRange = int(startRange)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 378, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_returnSize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 391, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_returnSize); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error);
   __pyx_t_1 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_shape, __pyx_t_3) < 0) __PYX_ERR(0, 378, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_shape, __pyx_t_3) < 0) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_ret = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":380
+  /* "MUSCython/RLE_BWTCython.pyx":393
  *         ret = np.zeros(dtype='<u1', shape=(returnSize,))
  * 
  *         startRange = int(startRange)             # <<<<<<<<<<<<<<
  *         endRange = int(endRange)
  * 
  */
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_v_startRange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_v_startRange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 393, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_startRange, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":381
+  /* "MUSCython/RLE_BWTCython.pyx":394
  * 
  *         startRange = int(startRange)
  *         endRange = int(endRange)             # <<<<<<<<<<<<<<
  * 
  *         #split the letters and numbers in the compressed bwt
  */
-  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_v_endRange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_v_endRange); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF_SET(__pyx_v_endRange, __pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":384
+  /* "MUSCython/RLE_BWTCython.pyx":397
  * 
  *         #split the letters and numbers in the compressed bwt
  *         letters = np.bitwise_and(self.bwt[startRange:endRange], mask)             # <<<<<<<<<<<<<<
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] counts = np.right_shift(self.bwt[startRange:endRange], letterBits, dtype='<u8')
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_bitwise_and); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_bitwise_and); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_self->__pyx_base.bwt), 0, 0, &__pyx_v_startRange, &__pyx_v_endRange, NULL, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_self->__pyx_base.bwt), 0, 0, &__pyx_v_startRange, &__pyx_v_endRange, NULL, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_mask); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_mask); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_10 = NULL;
   __pyx_t_5 = 0;
@@ -24719,52 +25276,52 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __pyx_v_letters = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":385
+  /* "MUSCython/RLE_BWTCython.pyx":398
  *         #split the letters and numbers in the compressed bwt
  *         letters = np.bitwise_and(self.bwt[startRange:endRange], mask)
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] counts = np.right_shift(self.bwt[startRange:endRange], letterBits, dtype='<u8')             # <<<<<<<<<<<<<<
  * 
  *         #multiply counts where needed
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_right_shift); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_right_shift); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_self->__pyx_base.bwt), 0, 0, &__pyx_v_startRange, &__pyx_v_endRange, NULL, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetSlice(((PyObject *)__pyx_v_self->__pyx_base.bwt), 0, 0, &__pyx_v_startRange, &__pyx_v_endRange, NULL, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_letterBits); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_letterBits); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1)) __PYX_ERR(0, 385, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 385, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 385, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 398, __pyx_L1_error)
   __pyx_t_11 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_counts.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_counts = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 385, __pyx_L1_error)
+      __PYX_ERR(0, 398, __pyx_L1_error)
     } else {__pyx_pybuffernd_counts.diminfo[0].strides = __pyx_pybuffernd_counts.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_counts.diminfo[0].shape = __pyx_pybuffernd_counts.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -24772,7 +25329,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
   __pyx_v_counts = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":388
+  /* "MUSCython/RLE_BWTCython.pyx":401
  * 
  *         #multiply counts where needed
  *         i = 1             # <<<<<<<<<<<<<<
@@ -24782,33 +25339,33 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
   __Pyx_INCREF(__pyx_int_1);
   __pyx_v_i = __pyx_int_1;
 
-  /* "MUSCython/RLE_BWTCython.pyx":390
+  /* "MUSCython/RLE_BWTCython.pyx":403
  *         i = 1
  *         #same = (letters[0:-1] == letters[1:])
  *         same = (letters[0:letters.shape[0]-1] == letters[1:])             # <<<<<<<<<<<<<<
  *         while np.count_nonzero(same) > 0:
  *             (counts[i:])[same] *= numPower
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_letters, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_letters, __pyx_n_s_shape); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_t_1, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_SubtractObjC(__pyx_t_1, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetSlice(__pyx_v_letters, 0, 0, NULL, &__pyx_t_3, NULL, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetSlice(__pyx_v_letters, 0, 0, NULL, &__pyx_t_3, NULL, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_v_letters, 1, 0, NULL, NULL, &__pyx_slice__11, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetSlice(__pyx_v_letters, 1, 0, NULL, NULL, &__pyx_slice__11, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_same = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":391
+  /* "MUSCython/RLE_BWTCython.pyx":404
  *         #same = (letters[0:-1] == letters[1:])
  *         same = (letters[0:letters.shape[0]-1] == letters[1:])
  *         while np.count_nonzero(same) > 0:             # <<<<<<<<<<<<<<
@@ -24816,9 +25373,9 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  *             i += 1
  */
   while (1) {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_count_nonzero); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_count_nonzero); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -24839,79 +25396,79 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
       PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_same};
       __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_5, 1+__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 391, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 404, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 391, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (!__pyx_t_7) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":392
+    /* "MUSCython/RLE_BWTCython.pyx":405
  *         same = (letters[0:letters.shape[0]-1] == letters[1:])
  *         while np.count_nonzero(same) > 0:
  *             (counts[i:])[same] *= numPower             # <<<<<<<<<<<<<<
  *             i += 1
  *             #same = np.bitwise_and(same[0:-1], same[1:])
  */
-    __pyx_t_1 = PySlice_New(__pyx_v_i, Py_None, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __pyx_t_1 = PySlice_New(__pyx_v_i, Py_None, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 405, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_counts), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_counts), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 405, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_INCREF(__pyx_v_same);
     __pyx_t_1 = __pyx_v_same;
-    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 405, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_numPower); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_numPower); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 405, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_10 = PyNumber_InPlaceMultiply(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 392, __pyx_L1_error)
+    __pyx_t_10 = PyNumber_InPlaceMultiply(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 405, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely((PyObject_SetItem(__pyx_t_2, __pyx_t_1, __pyx_t_10) < 0))) __PYX_ERR(0, 392, __pyx_L1_error)
+    if (unlikely((PyObject_SetItem(__pyx_t_2, __pyx_t_1, __pyx_t_10) < 0))) __PYX_ERR(0, 405, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":393
+    /* "MUSCython/RLE_BWTCython.pyx":406
  *         while np.count_nonzero(same) > 0:
  *             (counts[i:])[same] *= numPower
  *             i += 1             # <<<<<<<<<<<<<<
  *             #same = np.bitwise_and(same[0:-1], same[1:])
  *             same = np.bitwise_and(same[0:same.shape[0]-1], same[1:])
  */
-    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_v_i, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 393, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_v_i, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 406, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF_SET(__pyx_v_i, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":395
+    /* "MUSCython/RLE_BWTCython.pyx":408
  *             i += 1
  *             #same = np.bitwise_and(same[0:-1], same[1:])
  *             same = np.bitwise_and(same[0:same.shape[0]-1], same[1:])             # <<<<<<<<<<<<<<
  * 
  *         #now I have letters and counts, time to fill in the array
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_bitwise_and); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_bitwise_and); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_same, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_same, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyInt_SubtractObjC(__pyx_t_4, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_SubtractObjC(__pyx_t_4, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_v_same, 0, 0, NULL, &__pyx_t_1, NULL, 1, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_v_same, 0, 0, NULL, &__pyx_t_1, NULL, 1, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetSlice(__pyx_v_same, 1, 0, NULL, NULL, &__pyx_slice__11, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetSlice(__pyx_v_same, 1, 0, NULL, NULL, &__pyx_slice__11, 1, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 408, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_3 = NULL;
     __pyx_t_5 = 0;
@@ -24933,7 +25490,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 408, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     }
@@ -24941,7 +25498,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     __pyx_t_2 = 0;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":398
+  /* "MUSCython/RLE_BWTCython.pyx":411
  * 
  *         #now I have letters and counts, time to fill in the array
  *         cdef unsigned long s = 0             # <<<<<<<<<<<<<<
@@ -24950,7 +25507,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
   __pyx_v_s = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":399
+  /* "MUSCython/RLE_BWTCython.pyx":412
  *         #now I have letters and counts, time to fill in the array
  *         cdef unsigned long s = 0
  *         cdef unsigned long lInd = 0             # <<<<<<<<<<<<<<
@@ -24959,7 +25516,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
   __pyx_v_lInd = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":400
+  /* "MUSCython/RLE_BWTCython.pyx":413
  *         cdef unsigned long s = 0
  *         cdef unsigned long lInd = 0
  *         while dist > 0:             # <<<<<<<<<<<<<<
@@ -24967,12 +25524,12 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  *                 dist -= counts[lInd]
  */
   while (1) {
-    __pyx_t_2 = PyObject_RichCompare(__pyx_v_dist, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 400, __pyx_L1_error)
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 400, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_dist, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 413, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 413, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (!__pyx_t_7) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":401
+    /* "MUSCython/RLE_BWTCython.pyx":414
  *         cdef unsigned long lInd = 0
  *         while dist > 0:
  *             if counts[lInd] < dist:             # <<<<<<<<<<<<<<
@@ -24980,15 +25537,15 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  *                 lInd += 1
  */
     __pyx_t_12 = __pyx_v_lInd;
-    __pyx_t_2 = __Pyx_PyInt_From_npy_uint64((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_npy_uint64((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 414, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_10 = PyObject_RichCompare(__pyx_t_2, __pyx_v_dist, Py_LT); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 401, __pyx_L1_error)
+    __pyx_t_10 = PyObject_RichCompare(__pyx_t_2, __pyx_v_dist, Py_LT); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 414, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 401, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 414, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     if (__pyx_t_7) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":402
+      /* "MUSCython/RLE_BWTCython.pyx":415
  *         while dist > 0:
  *             if counts[lInd] < dist:
  *                 dist -= counts[lInd]             # <<<<<<<<<<<<<<
@@ -24996,15 +25553,15 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  *             else:
  */
       __pyx_t_12 = __pyx_v_lInd;
-      __pyx_t_10 = __Pyx_PyInt_From_npy_uint64((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides))); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 402, __pyx_L1_error)
+      __pyx_t_10 = __Pyx_PyInt_From_npy_uint64((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides))); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 415, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_2 = PyNumber_InPlaceSubtract(__pyx_v_dist, __pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 402, __pyx_L1_error)
+      __pyx_t_2 = PyNumber_InPlaceSubtract(__pyx_v_dist, __pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF_SET(__pyx_v_dist, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":403
+      /* "MUSCython/RLE_BWTCython.pyx":416
  *             if counts[lInd] < dist:
  *                 dist -= counts[lInd]
  *                 lInd += 1             # <<<<<<<<<<<<<<
@@ -25013,7 +25570,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  */
       __pyx_v_lInd = (__pyx_v_lInd + 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":401
+      /* "MUSCython/RLE_BWTCython.pyx":414
  *         cdef unsigned long lInd = 0
  *         while dist > 0:
  *             if counts[lInd] < dist:             # <<<<<<<<<<<<<<
@@ -25023,7 +25580,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
       goto __pyx_L12;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":405
+    /* "MUSCython/RLE_BWTCython.pyx":418
  *                 lInd += 1
  *             else:
  *                 counts[lInd] -= dist             # <<<<<<<<<<<<<<
@@ -25031,11 +25588,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  * 
  */
     /*else*/ {
-      __pyx_t_13 = __Pyx_PyInt_As_npy_uint64(__pyx_v_dist); if (unlikely((__pyx_t_13 == ((npy_uint64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 405, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyInt_As_npy_uint64(__pyx_v_dist); if (unlikely((__pyx_t_13 == ((npy_uint64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 418, __pyx_L1_error)
       __pyx_t_12 = __pyx_v_lInd;
       *__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides) -= __pyx_t_13;
 
-      /* "MUSCython/RLE_BWTCython.pyx":406
+      /* "MUSCython/RLE_BWTCython.pyx":419
  *             else:
  *                 counts[lInd] -= dist
  *                 dist = 0             # <<<<<<<<<<<<<<
@@ -25048,7 +25605,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     __pyx_L12:;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":409
+  /* "MUSCython/RLE_BWTCython.pyx":422
  * 
  *         #we're at the correct letter index now
  *         while s < ret.shape[0]:             # <<<<<<<<<<<<<<
@@ -25056,56 +25613,56 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
  *                 pass
  */
   while (1) {
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_s); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_s); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_ret, __pyx_n_s_shape); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_ret, __pyx_n_s_shape); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 422, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_10, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_10, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 422, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_10 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_10 = PyObject_RichCompare(__pyx_t_2, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 422, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 422, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     if (!__pyx_t_7) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":410
+    /* "MUSCython/RLE_BWTCython.pyx":423
  *         #we're at the correct letter index now
  *         while s < ret.shape[0]:
  *             if lInd >= letters.shape[0]:             # <<<<<<<<<<<<<<
  *                 pass
  *             ret[s:s+counts[lInd]] = letters[lInd]
  */
-    __pyx_t_10 = __Pyx_PyInt_From_unsigned_long(__pyx_v_lInd); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 410, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyInt_From_unsigned_long(__pyx_v_lInd); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 423, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_letters, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 410, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_letters, __pyx_n_s_shape); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 410, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 423, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_10, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 410, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_10, __pyx_t_2, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 410, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 423, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_7) {
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":412
+    /* "MUSCython/RLE_BWTCython.pyx":425
  *             if lInd >= letters.shape[0]:
  *                 pass
  *             ret[s:s+counts[lInd]] = letters[lInd]             # <<<<<<<<<<<<<<
  *             s += counts[lInd]
  *             lInd += 1
  */
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_letters, __pyx_v_lInd, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 412, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_letters, __pyx_v_lInd, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_12 = __pyx_v_lInd;
-    if (__Pyx_PyObject_SetSlice(__pyx_v_ret, __pyx_t_1, __pyx_v_s, (__pyx_v_s + (*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides))), NULL, NULL, NULL, 1, 1, 0) < 0) __PYX_ERR(0, 412, __pyx_L1_error)
+    if (__Pyx_PyObject_SetSlice(__pyx_v_ret, __pyx_t_1, __pyx_v_s, (__pyx_v_s + (*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides))), NULL, NULL, NULL, 1, 1, 0) < 0) __PYX_ERR(0, 425, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":413
+    /* "MUSCython/RLE_BWTCython.pyx":426
  *                 pass
  *             ret[s:s+counts[lInd]] = letters[lInd]
  *             s += counts[lInd]             # <<<<<<<<<<<<<<
@@ -25115,7 +25672,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     __pyx_t_12 = __pyx_v_lInd;
     __pyx_v_s = (__pyx_v_s + (*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint64_t *, __pyx_pybuffernd_counts.rcbuffer->pybuffer.buf, __pyx_t_12, __pyx_pybuffernd_counts.diminfo[0].strides)));
 
-    /* "MUSCython/RLE_BWTCython.pyx":414
+    /* "MUSCython/RLE_BWTCython.pyx":427
  *             ret[s:s+counts[lInd]] = letters[lInd]
  *             s += counts[lInd]
  *             lInd += 1             # <<<<<<<<<<<<<<
@@ -25125,7 +25682,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
     __pyx_v_lInd = (__pyx_v_lInd + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":416
+  /* "MUSCython/RLE_BWTCython.pyx":429
  *             lInd += 1
  * 
  *         return ret             # <<<<<<<<<<<<<<
@@ -25137,7 +25694,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":354
+  /* "MUSCython/RLE_BWTCython.pyx":367
  *         return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]
  * 
  *     def decompressBlocks(RLE_BWT self, unsigned long startBlock, unsigned long endBlock):             # <<<<<<<<<<<<<<
@@ -25179,7 +25736,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_12decompressBlocks
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":418
+/* "MUSCython/RLE_BWTCython.pyx":431
  *         return ret
  * 
  *     cpdef unsigned long getOccurrenceOfCharAtIndex(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
@@ -25232,12 +25789,12 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getOccurrenceOfCharAtIndex); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_getOccurrenceOfCharAtIndex); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_9MUSCython_13RLE_BWTCython_7RLE_BWT_15getOccurrenceOfCharAtIndex)) {
-        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_sym); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 418, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_sym); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 431, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_4 = __Pyx_PyInt_From_unsigned_long(__pyx_v_index); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 418, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyInt_From_unsigned_long(__pyx_v_index); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 431, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_5 = __pyx_t_1; __pyx_t_6 = NULL;
@@ -25260,11 +25817,11 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
           __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 431, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         }
-        __pyx_t_8 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_8 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 418, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_8 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_r = __pyx_t_8;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -25283,7 +25840,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     #endif
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":425
+  /* "MUSCython/RLE_BWTCython.pyx":438
  *         @return - the number of occurrences of char before the specified index
  *         '''
  *         cdef unsigned long binID = index >> bitPower             # <<<<<<<<<<<<<<
@@ -25292,7 +25849,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_binID = (__pyx_v_index >> __pyx_e_9MUSCython_13RLE_BWTCython_bitPower);
 
-  /* "MUSCython/RLE_BWTCython.pyx":426
+  /* "MUSCython/RLE_BWTCython.pyx":439
  *         '''
  *         cdef unsigned long binID = index >> bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]             # <<<<<<<<<<<<<<
@@ -25302,7 +25859,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_t_9 = __pyx_v_binID;
   __pyx_v_compressedIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_9 * __pyx_v_self->refFM_view.strides[0]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":427
+  /* "MUSCython/RLE_BWTCython.pyx":440
  *         cdef unsigned long binID = index >> bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]
  *         cdef unsigned long bwtIndex = 0             # <<<<<<<<<<<<<<
@@ -25311,7 +25868,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_bwtIndex = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":429
+  /* "MUSCython/RLE_BWTCython.pyx":442
  *         cdef unsigned long bwtIndex = 0
  *         cdef unsigned long j
  *         for j in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -25323,7 +25880,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_11; __pyx_t_8+=1) {
     __pyx_v_j = __pyx_t_8;
 
-    /* "MUSCython/RLE_BWTCython.pyx":430
+    /* "MUSCython/RLE_BWTCython.pyx":443
  *         cdef unsigned long j
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]             # <<<<<<<<<<<<<<
@@ -25335,7 +25892,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_9 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_12 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) ))));
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":431
+  /* "MUSCython/RLE_BWTCython.pyx":444
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]
  *         bwtIndex -= self.offsetSum             # <<<<<<<<<<<<<<
@@ -25344,7 +25901,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_bwtIndex = (__pyx_v_bwtIndex - __pyx_v_self->offsetSum);
 
-  /* "MUSCython/RLE_BWTCython.pyx":433
+  /* "MUSCython/RLE_BWTCython.pyx":446
  *         bwtIndex -= self.offsetSum
  * 
  *         cdef unsigned long ret = self.partialFM_view[binID,sym]             # <<<<<<<<<<<<<<
@@ -25355,7 +25912,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_t_9 = __pyx_v_sym;
   __pyx_v_ret = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_12 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_9 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":435
+  /* "MUSCython/RLE_BWTCython.pyx":448
  *         cdef unsigned long ret = self.partialFM_view[binID,sym]
  * 
  *         cdef np.uint8_t prevChar = 255             # <<<<<<<<<<<<<<
@@ -25364,7 +25921,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_prevChar = 0xFF;
 
-  /* "MUSCython/RLE_BWTCython.pyx":437
+  /* "MUSCython/RLE_BWTCython.pyx":450
  *         cdef np.uint8_t prevChar = 255
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = 0             # <<<<<<<<<<<<<<
@@ -25373,7 +25930,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_prevCount = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":438
+  /* "MUSCython/RLE_BWTCython.pyx":451
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = 0
  *         cdef unsigned long powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -25382,7 +25939,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_powerMultiple = 1;
 
-  /* "MUSCython/RLE_BWTCython.pyx":441
+  /* "MUSCython/RLE_BWTCython.pyx":454
  *         #cdef unsigned long powerMultiple = 0
  * 
  *         while bwtIndex + prevCount < index:             # <<<<<<<<<<<<<<
@@ -25393,7 +25950,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_t_13 = ((__pyx_v_bwtIndex + __pyx_v_prevCount) < __pyx_v_index);
     if (!__pyx_t_13) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":442
+    /* "MUSCython/RLE_BWTCython.pyx":455
  * 
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask             # <<<<<<<<<<<<<<
@@ -25403,7 +25960,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_t_9 = __pyx_v_compressedIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_9 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":443
+    /* "MUSCython/RLE_BWTCython.pyx":456
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -25413,7 +25970,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_t_13 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_13) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":444
+      /* "MUSCython/RLE_BWTCython.pyx":457
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -25423,7 +25980,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       __pyx_t_9 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = (__pyx_v_prevCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_9 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple));
 
-      /* "MUSCython/RLE_BWTCython.pyx":445
+      /* "MUSCython/RLE_BWTCython.pyx":458
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -25432,7 +25989,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":443
+      /* "MUSCython/RLE_BWTCython.pyx":456
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -25442,7 +25999,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       goto __pyx_L7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":449
+    /* "MUSCython/RLE_BWTCython.pyx":462
  *                 #powerMultiple += numberBits
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -25453,7 +26010,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       __pyx_t_13 = (__pyx_v_prevChar == __pyx_v_sym);
       if (__pyx_t_13) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":450
+        /* "MUSCython/RLE_BWTCython.pyx":463
  *             else:
  *                 if prevChar == sym:
  *                     ret += prevCount             # <<<<<<<<<<<<<<
@@ -25462,7 +26019,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
         __pyx_v_ret = (__pyx_v_ret + __pyx_v_prevCount);
 
-        /* "MUSCython/RLE_BWTCython.pyx":449
+        /* "MUSCython/RLE_BWTCython.pyx":462
  *                 #powerMultiple += numberBits
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -25471,7 +26028,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":452
+      /* "MUSCython/RLE_BWTCython.pyx":465
  *                     ret += prevCount
  * 
  *                 bwtIndex += prevCount             # <<<<<<<<<<<<<<
@@ -25480,7 +26037,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       __pyx_v_bwtIndex = (__pyx_v_bwtIndex + __pyx_v_prevCount);
 
-      /* "MUSCython/RLE_BWTCython.pyx":453
+      /* "MUSCython/RLE_BWTCython.pyx":466
  * 
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)             # <<<<<<<<<<<<<<
@@ -25490,7 +26047,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       __pyx_t_9 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_9 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-      /* "MUSCython/RLE_BWTCython.pyx":454
+      /* "MUSCython/RLE_BWTCython.pyx":467
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -25499,7 +26056,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       __pyx_v_prevChar = __pyx_v_currentChar;
 
-      /* "MUSCython/RLE_BWTCython.pyx":455
+      /* "MUSCython/RLE_BWTCython.pyx":468
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar
  *                 powerMultiple = numPower             # <<<<<<<<<<<<<<
@@ -25510,7 +26067,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     }
     __pyx_L7:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":458
+    /* "MUSCython/RLE_BWTCython.pyx":471
  *                 #powerMultiple = numberBits
  * 
  *             compressedIndex += 1             # <<<<<<<<<<<<<<
@@ -25520,7 +26077,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_v_compressedIndex = (__pyx_v_compressedIndex + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":460
+  /* "MUSCython/RLE_BWTCython.pyx":473
  *             compressedIndex += 1
  * 
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -25530,7 +26087,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_t_13 = (__pyx_v_prevChar == __pyx_v_sym);
   if (__pyx_t_13) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":461
+    /* "MUSCython/RLE_BWTCython.pyx":474
  * 
  *         if prevChar == sym:
  *             ret += index-bwtIndex             # <<<<<<<<<<<<<<
@@ -25539,7 +26096,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
     __pyx_v_ret = (__pyx_v_ret + (__pyx_v_index - __pyx_v_bwtIndex));
 
-    /* "MUSCython/RLE_BWTCython.pyx":460
+    /* "MUSCython/RLE_BWTCython.pyx":473
  *             compressedIndex += 1
  * 
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -25548,7 +26105,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":463
+  /* "MUSCython/RLE_BWTCython.pyx":476
  *             ret += index-bwtIndex
  * 
  *         return ret             # <<<<<<<<<<<<<<
@@ -25558,7 +26115,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":418
+  /* "MUSCython/RLE_BWTCython.pyx":431
  *         return ret
  * 
  *     cpdef unsigned long getOccurrenceOfCharAtIndex(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
@@ -25638,7 +26195,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 418, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -25646,14 +26203,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 418, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("getOccurrenceOfCharAtIndex", 1, 2, 2, 1); __PYX_ERR(0, 418, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("getOccurrenceOfCharAtIndex", 1, 2, 2, 1); __PYX_ERR(0, 431, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getOccurrenceOfCharAtIndex") < 0)) __PYX_ERR(0, 418, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getOccurrenceOfCharAtIndex") < 0)) __PYX_ERR(0, 431, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -25661,12 +26218,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
-    __pyx_v_sym = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_sym == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 418, __pyx_L3_error)
-    __pyx_v_index = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_index == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 418, __pyx_L3_error)
+    __pyx_v_sym = __Pyx_PyInt_As_unsigned_long(values[0]); if (unlikely((__pyx_v_sym == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L3_error)
+    __pyx_v_index = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_index == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getOccurrenceOfCharAtIndex", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 418, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getOccurrenceOfCharAtIndex", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 431, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -25703,8 +26260,8 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_14getOccurrenceOfC
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getOccurrenceOfCharAtIndex", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOfCharAtIndex(__pyx_v_self, __pyx_v_sym, __pyx_v_index, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 418, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOfCharAtIndex(__pyx_v_self, __pyx_v_sym, __pyx_v_index, 1); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
@@ -25721,7 +26278,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_14getOccurrenceOfC
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":465
+/* "MUSCython/RLE_BWTCython.pyx":478
  *         return ret
  * 
  *     cdef unsigned long getOccurrenceOfCharAtIndex_c(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
@@ -25747,7 +26304,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   size_t __pyx_t_5;
   int __pyx_t_6;
 
-  /* "MUSCython/RLE_BWTCython.pyx":472
+  /* "MUSCython/RLE_BWTCython.pyx":485
  *         @return - the number of occurrences of char before the specified index
  *         '''
  *         cdef unsigned long binID = index >> bitPower             # <<<<<<<<<<<<<<
@@ -25756,7 +26313,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_binID = (__pyx_v_index >> __pyx_e_9MUSCython_13RLE_BWTCython_bitPower);
 
-  /* "MUSCython/RLE_BWTCython.pyx":473
+  /* "MUSCython/RLE_BWTCython.pyx":486
  *         '''
  *         cdef unsigned long binID = index >> bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]             # <<<<<<<<<<<<<<
@@ -25766,7 +26323,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_t_1 = __pyx_v_binID;
   __pyx_v_compressedIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_1 * __pyx_v_self->refFM_view.strides[0]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":474
+  /* "MUSCython/RLE_BWTCython.pyx":487
  *         cdef unsigned long binID = index >> bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]
  *         cdef unsigned long bwtIndex = 0             # <<<<<<<<<<<<<<
@@ -25775,7 +26332,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_bwtIndex = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":476
+  /* "MUSCython/RLE_BWTCython.pyx":489
  *         cdef unsigned long bwtIndex = 0
  *         cdef unsigned long j
  *         for j in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -25787,7 +26344,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_j = __pyx_t_4;
 
-    /* "MUSCython/RLE_BWTCython.pyx":477
+    /* "MUSCython/RLE_BWTCython.pyx":490
  *         cdef unsigned long j
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]             # <<<<<<<<<<<<<<
@@ -25799,7 +26356,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) ))));
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":478
+  /* "MUSCython/RLE_BWTCython.pyx":491
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]
  *         bwtIndex -= self.offsetSum             # <<<<<<<<<<<<<<
@@ -25808,7 +26365,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_bwtIndex = (__pyx_v_bwtIndex - __pyx_v_self->offsetSum);
 
-  /* "MUSCython/RLE_BWTCython.pyx":480
+  /* "MUSCython/RLE_BWTCython.pyx":493
  *         bwtIndex -= self.offsetSum
  * 
  *         cdef unsigned long ret = self.partialFM_view[binID,sym]             # <<<<<<<<<<<<<<
@@ -25819,7 +26376,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_t_1 = __pyx_v_sym;
   __pyx_v_ret = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":482
+  /* "MUSCython/RLE_BWTCython.pyx":495
  *         cdef unsigned long ret = self.partialFM_view[binID,sym]
  * 
  *         cdef np.uint8_t prevChar = 255             # <<<<<<<<<<<<<<
@@ -25828,7 +26385,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_prevChar = 0xFF;
 
-  /* "MUSCython/RLE_BWTCython.pyx":484
+  /* "MUSCython/RLE_BWTCython.pyx":497
  *         cdef np.uint8_t prevChar = 255
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = 0             # <<<<<<<<<<<<<<
@@ -25837,7 +26394,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_prevCount = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":485
+  /* "MUSCython/RLE_BWTCython.pyx":498
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = 0
  *         cdef unsigned long powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -25846,7 +26403,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   __pyx_v_powerMultiple = 1;
 
-  /* "MUSCython/RLE_BWTCython.pyx":488
+  /* "MUSCython/RLE_BWTCython.pyx":501
  *         #cdef unsigned long powerMultiple = 0
  * 
  *         while bwtIndex + prevCount < index:             # <<<<<<<<<<<<<<
@@ -25857,7 +26414,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_t_6 = ((__pyx_v_bwtIndex + __pyx_v_prevCount) < __pyx_v_index);
     if (!__pyx_t_6) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":489
+    /* "MUSCython/RLE_BWTCython.pyx":502
  * 
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask             # <<<<<<<<<<<<<<
@@ -25867,7 +26424,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_t_1 = __pyx_v_compressedIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":490
+    /* "MUSCython/RLE_BWTCython.pyx":503
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -25877,7 +26434,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_t_6 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_6) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":491
+      /* "MUSCython/RLE_BWTCython.pyx":504
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -25887,7 +26444,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = (__pyx_v_prevCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple));
 
-      /* "MUSCython/RLE_BWTCython.pyx":492
+      /* "MUSCython/RLE_BWTCython.pyx":505
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -25896,7 +26453,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":490
+      /* "MUSCython/RLE_BWTCython.pyx":503
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -25906,7 +26463,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       goto __pyx_L7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":496
+    /* "MUSCython/RLE_BWTCython.pyx":509
  *                 #powerMultiple += numberBits
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -25917,7 +26474,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       __pyx_t_6 = (__pyx_v_prevChar == __pyx_v_sym);
       if (__pyx_t_6) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":497
+        /* "MUSCython/RLE_BWTCython.pyx":510
  *             else:
  *                 if prevChar == sym:
  *                     ret += prevCount             # <<<<<<<<<<<<<<
@@ -25926,7 +26483,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
         __pyx_v_ret = (__pyx_v_ret + __pyx_v_prevCount);
 
-        /* "MUSCython/RLE_BWTCython.pyx":496
+        /* "MUSCython/RLE_BWTCython.pyx":509
  *                 #powerMultiple += numberBits
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -25935,7 +26492,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":499
+      /* "MUSCython/RLE_BWTCython.pyx":512
  *                     ret += prevCount
  * 
  *                 bwtIndex += prevCount             # <<<<<<<<<<<<<<
@@ -25944,7 +26501,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       __pyx_v_bwtIndex = (__pyx_v_bwtIndex + __pyx_v_prevCount);
 
-      /* "MUSCython/RLE_BWTCython.pyx":500
+      /* "MUSCython/RLE_BWTCython.pyx":513
  * 
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)             # <<<<<<<<<<<<<<
@@ -25954,7 +26511,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-      /* "MUSCython/RLE_BWTCython.pyx":501
+      /* "MUSCython/RLE_BWTCython.pyx":514
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -25963,7 +26520,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
       __pyx_v_prevChar = __pyx_v_currentChar;
 
-      /* "MUSCython/RLE_BWTCython.pyx":502
+      /* "MUSCython/RLE_BWTCython.pyx":515
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar
  *                 powerMultiple = numPower             # <<<<<<<<<<<<<<
@@ -25974,7 +26531,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     }
     __pyx_L7:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":505
+    /* "MUSCython/RLE_BWTCython.pyx":518
  *                 #powerMultiple = numberBits
  * 
  *             compressedIndex += 1             # <<<<<<<<<<<<<<
@@ -25984,7 +26541,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
     __pyx_v_compressedIndex = (__pyx_v_compressedIndex + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":507
+  /* "MUSCython/RLE_BWTCython.pyx":520
  *             compressedIndex += 1
  * 
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -25994,7 +26551,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_t_6 = (__pyx_v_prevChar == __pyx_v_sym);
   if (__pyx_t_6) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":508
+    /* "MUSCython/RLE_BWTCython.pyx":521
  * 
  *         if prevChar == sym:
  *             ret += index-bwtIndex             # <<<<<<<<<<<<<<
@@ -26003,7 +26560,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
     __pyx_v_ret = (__pyx_v_ret + (__pyx_v_index - __pyx_v_bwtIndex));
 
-    /* "MUSCython/RLE_BWTCython.pyx":507
+    /* "MUSCython/RLE_BWTCython.pyx":520
  *             compressedIndex += 1
  * 
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26012,7 +26569,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":510
+  /* "MUSCython/RLE_BWTCython.pyx":523
  *             ret += index-bwtIndex
  * 
  *         return ret             # <<<<<<<<<<<<<<
@@ -26022,7 +26579,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":465
+  /* "MUSCython/RLE_BWTCython.pyx":478
  *         return ret
  * 
  *     cdef unsigned long getOccurrenceOfCharAtIndex_c(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
@@ -26035,7 +26592,7 @@ static unsigned long __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_getOccurrenceOf
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":512
+/* "MUSCython/RLE_BWTCython.pyx":525
  *         return ret
  * 
  *     cdef BasicBWT.bwtRange getOccurrenceOfCharAtRange(RLE_BWT self, unsigned long sym, BasicBWT.bwtRange inRange) nogil:             # <<<<<<<<<<<<<<
@@ -26063,7 +26620,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   size_t __pyx_t_5;
   int __pyx_t_6;
 
-  /* "MUSCython/RLE_BWTCython.pyx":519
+  /* "MUSCython/RLE_BWTCython.pyx":532
  *         @return - the number of occurrences of char before the specified index
  *         '''
  *         cdef unsigned long binID = inRange.l >> self.bitPower             # <<<<<<<<<<<<<<
@@ -26072,7 +26629,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   __pyx_v_binID = (__pyx_v_inRange.l >> __pyx_v_self->__pyx_base.bitPower);
 
-  /* "MUSCython/RLE_BWTCython.pyx":520
+  /* "MUSCython/RLE_BWTCython.pyx":533
  *         '''
  *         cdef unsigned long binID = inRange.l >> self.bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]             # <<<<<<<<<<<<<<
@@ -26082,7 +26639,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   __pyx_t_1 = __pyx_v_binID;
   __pyx_v_compressedIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_1 * __pyx_v_self->refFM_view.strides[0]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":521
+  /* "MUSCython/RLE_BWTCython.pyx":534
  *         cdef unsigned long binID = inRange.l >> self.bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]
  *         cdef unsigned long bwtIndex = 0             # <<<<<<<<<<<<<<
@@ -26091,7 +26648,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   __pyx_v_bwtIndex = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":523
+  /* "MUSCython/RLE_BWTCython.pyx":536
  *         cdef unsigned long bwtIndex = 0
  *         cdef unsigned long j
  *         for j in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -26103,7 +26660,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_j = __pyx_t_4;
 
-    /* "MUSCython/RLE_BWTCython.pyx":524
+    /* "MUSCython/RLE_BWTCython.pyx":537
  *         cdef unsigned long j
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]             # <<<<<<<<<<<<<<
@@ -26115,7 +26672,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) ))));
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":525
+  /* "MUSCython/RLE_BWTCython.pyx":538
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]
  *         bwtIndex -= self.offsetSum             # <<<<<<<<<<<<<<
@@ -26124,7 +26681,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   __pyx_v_bwtIndex = (__pyx_v_bwtIndex - __pyx_v_self->offsetSum);
 
-  /* "MUSCython/RLE_BWTCython.pyx":528
+  /* "MUSCython/RLE_BWTCython.pyx":541
  * 
  *         cdef BasicBWT.bwtRange ret
  *         ret.l = self.partialFM_view[binID,sym]             # <<<<<<<<<<<<<<
@@ -26135,7 +26692,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   __pyx_t_1 = __pyx_v_sym;
   __pyx_v_ret.l = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":530
+  /* "MUSCython/RLE_BWTCython.pyx":543
  *         ret.l = self.partialFM_view[binID,sym]
  * 
  *         cdef np.uint8_t prevChar = 255             # <<<<<<<<<<<<<<
@@ -26144,7 +26701,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   __pyx_v_prevChar = 0xFF;
 
-  /* "MUSCython/RLE_BWTCython.pyx":532
+  /* "MUSCython/RLE_BWTCython.pyx":545
  *         cdef np.uint8_t prevChar = 255
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = 0             # <<<<<<<<<<<<<<
@@ -26153,7 +26710,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   __pyx_v_prevCount = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":533
+  /* "MUSCython/RLE_BWTCython.pyx":546
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = 0
  *         cdef unsigned long powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -26162,7 +26719,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   __pyx_v_powerMultiple = 1;
 
-  /* "MUSCython/RLE_BWTCython.pyx":535
+  /* "MUSCython/RLE_BWTCython.pyx":548
  *         cdef unsigned long powerMultiple = 1
  * 
  *         while bwtIndex + prevCount < inRange.l:             # <<<<<<<<<<<<<<
@@ -26173,7 +26730,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_6 = ((__pyx_v_bwtIndex + __pyx_v_prevCount) < __pyx_v_inRange.l);
     if (!__pyx_t_6) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":536
+    /* "MUSCython/RLE_BWTCython.pyx":549
  * 
  *         while bwtIndex + prevCount < inRange.l:
  *             currentChar = self.bwt_view[compressedIndex] & mask             # <<<<<<<<<<<<<<
@@ -26183,7 +26740,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_1 = __pyx_v_compressedIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":537
+    /* "MUSCython/RLE_BWTCython.pyx":550
  *         while bwtIndex + prevCount < inRange.l:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -26193,7 +26750,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_6 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_6) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":538
+      /* "MUSCython/RLE_BWTCython.pyx":551
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -26203,7 +26760,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = (__pyx_v_prevCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple));
 
-      /* "MUSCython/RLE_BWTCython.pyx":539
+      /* "MUSCython/RLE_BWTCython.pyx":552
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -26212,7 +26769,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":537
+      /* "MUSCython/RLE_BWTCython.pyx":550
  *         while bwtIndex + prevCount < inRange.l:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -26222,7 +26779,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       goto __pyx_L7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":541
+    /* "MUSCython/RLE_BWTCython.pyx":554
  *                 powerMultiple *= numPower
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26233,7 +26790,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       __pyx_t_6 = (__pyx_v_prevChar == __pyx_v_sym);
       if (__pyx_t_6) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":542
+        /* "MUSCython/RLE_BWTCython.pyx":555
  *             else:
  *                 if prevChar == sym:
  *                     ret.l += prevCount             # <<<<<<<<<<<<<<
@@ -26242,7 +26799,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
         __pyx_v_ret.l = (__pyx_v_ret.l + __pyx_v_prevCount);
 
-        /* "MUSCython/RLE_BWTCython.pyx":541
+        /* "MUSCython/RLE_BWTCython.pyx":554
  *                 powerMultiple *= numPower
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26251,7 +26808,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":544
+      /* "MUSCython/RLE_BWTCython.pyx":557
  *                     ret.l += prevCount
  * 
  *                 bwtIndex += prevCount             # <<<<<<<<<<<<<<
@@ -26260,7 +26817,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       __pyx_v_bwtIndex = (__pyx_v_bwtIndex + __pyx_v_prevCount);
 
-      /* "MUSCython/RLE_BWTCython.pyx":545
+      /* "MUSCython/RLE_BWTCython.pyx":558
  * 
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)             # <<<<<<<<<<<<<<
@@ -26270,7 +26827,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-      /* "MUSCython/RLE_BWTCython.pyx":546
+      /* "MUSCython/RLE_BWTCython.pyx":559
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -26279,7 +26836,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       __pyx_v_prevChar = __pyx_v_currentChar;
 
-      /* "MUSCython/RLE_BWTCython.pyx":547
+      /* "MUSCython/RLE_BWTCython.pyx":560
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar
  *                 powerMultiple = numPower             # <<<<<<<<<<<<<<
@@ -26290,7 +26847,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     }
     __pyx_L7:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":549
+    /* "MUSCython/RLE_BWTCython.pyx":562
  *                 powerMultiple = numPower
  * 
  *             compressedIndex += 1             # <<<<<<<<<<<<<<
@@ -26300,7 +26857,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_v_compressedIndex = (__pyx_v_compressedIndex + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":551
+  /* "MUSCython/RLE_BWTCython.pyx":564
  *             compressedIndex += 1
  * 
  *         cdef unsigned long tempC = ret.l             # <<<<<<<<<<<<<<
@@ -26310,7 +26867,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   __pyx_t_4 = __pyx_v_ret.l;
   __pyx_v_tempC = __pyx_t_4;
 
-  /* "MUSCython/RLE_BWTCython.pyx":552
+  /* "MUSCython/RLE_BWTCython.pyx":565
  * 
  *         cdef unsigned long tempC = ret.l
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26320,7 +26877,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   __pyx_t_6 = (__pyx_v_prevChar == __pyx_v_sym);
   if (__pyx_t_6) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":553
+    /* "MUSCython/RLE_BWTCython.pyx":566
  *         cdef unsigned long tempC = ret.l
  *         if prevChar == sym:
  *             ret.l += inRange.l-bwtIndex             # <<<<<<<<<<<<<<
@@ -26329,7 +26886,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
     __pyx_v_ret.l = (__pyx_v_ret.l + (__pyx_v_inRange.l - __pyx_v_bwtIndex));
 
-    /* "MUSCython/RLE_BWTCython.pyx":552
+    /* "MUSCython/RLE_BWTCython.pyx":565
  * 
  *         cdef unsigned long tempC = ret.l
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26338,7 +26895,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":555
+  /* "MUSCython/RLE_BWTCython.pyx":568
  *             ret.l += inRange.l-bwtIndex
  * 
  *         cdef unsigned long binID_h = inRange.h >> bitPower             # <<<<<<<<<<<<<<
@@ -26347,7 +26904,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   __pyx_v_binID_h = (__pyx_v_inRange.h >> __pyx_e_9MUSCython_13RLE_BWTCython_bitPower);
 
-  /* "MUSCython/RLE_BWTCython.pyx":556
+  /* "MUSCython/RLE_BWTCython.pyx":569
  * 
  *         cdef unsigned long binID_h = inRange.h >> bitPower
  *         if binID == binID_h:             # <<<<<<<<<<<<<<
@@ -26357,7 +26914,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   __pyx_t_6 = (__pyx_v_binID == __pyx_v_binID_h);
   if (__pyx_t_6) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":558
+    /* "MUSCython/RLE_BWTCython.pyx":571
  *         if binID == binID_h:
  *             #we can continue, just set this value
  *             ret.h = tempC             # <<<<<<<<<<<<<<
@@ -26366,7 +26923,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
     __pyx_v_ret.h = __pyx_v_tempC;
 
-    /* "MUSCython/RLE_BWTCython.pyx":556
+    /* "MUSCython/RLE_BWTCython.pyx":569
  * 
  *         cdef unsigned long binID_h = inRange.h >> bitPower
  *         if binID == binID_h:             # <<<<<<<<<<<<<<
@@ -26376,7 +26933,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     goto __pyx_L10;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":561
+  /* "MUSCython/RLE_BWTCython.pyx":574
  *         else:
  *             #we need to load everything
  *             compressedIndex = self.refFM_view[binID_h]             # <<<<<<<<<<<<<<
@@ -26387,7 +26944,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_1 = __pyx_v_binID_h;
     __pyx_v_compressedIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_1 * __pyx_v_self->refFM_view.strides[0]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":562
+    /* "MUSCython/RLE_BWTCython.pyx":575
  *             #we need to load everything
  *             compressedIndex = self.refFM_view[binID_h]
  *             bwtIndex = 0             # <<<<<<<<<<<<<<
@@ -26396,7 +26953,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
     __pyx_v_bwtIndex = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":563
+    /* "MUSCython/RLE_BWTCython.pyx":576
  *             compressedIndex = self.refFM_view[binID_h]
  *             bwtIndex = 0
  *             for j in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -26408,7 +26965,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
       __pyx_v_j = __pyx_t_4;
 
-      /* "MUSCython/RLE_BWTCython.pyx":564
+      /* "MUSCython/RLE_BWTCython.pyx":577
  *             bwtIndex = 0
  *             for j in range(0, vcLen):
  *                 bwtIndex += self.partialFM_view[binID_h,j]             # <<<<<<<<<<<<<<
@@ -26420,7 +26977,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       __pyx_v_bwtIndex = (__pyx_v_bwtIndex + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) ))));
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":565
+    /* "MUSCython/RLE_BWTCython.pyx":578
  *             for j in range(0, vcLen):
  *                 bwtIndex += self.partialFM_view[binID_h,j]
  *             bwtIndex -= self.offsetSum             # <<<<<<<<<<<<<<
@@ -26429,7 +26986,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex - __pyx_v_self->offsetSum);
 
-    /* "MUSCython/RLE_BWTCython.pyx":567
+    /* "MUSCython/RLE_BWTCython.pyx":580
  *             bwtIndex -= self.offsetSum
  * 
  *             ret.h = self.partialFM_view[binID_h,sym]             # <<<<<<<<<<<<<<
@@ -26440,7 +26997,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_1 = __pyx_v_sym;
     __pyx_v_ret.h = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":569
+    /* "MUSCython/RLE_BWTCython.pyx":582
  *             ret.h = self.partialFM_view[binID_h,sym]
  * 
  *             prevChar = 255             # <<<<<<<<<<<<<<
@@ -26449,7 +27006,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
     __pyx_v_prevChar = 0xFF;
 
-    /* "MUSCython/RLE_BWTCython.pyx":570
+    /* "MUSCython/RLE_BWTCython.pyx":583
  * 
  *             prevChar = 255
  *             prevCount = 0             # <<<<<<<<<<<<<<
@@ -26458,7 +27015,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
     __pyx_v_prevCount = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":571
+    /* "MUSCython/RLE_BWTCython.pyx":584
  *             prevChar = 255
  *             prevCount = 0
  *             powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -26469,7 +27026,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   }
   __pyx_L10:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":573
+  /* "MUSCython/RLE_BWTCython.pyx":586
  *             powerMultiple = 1
  * 
  *         while bwtIndex + prevCount < inRange.h:             # <<<<<<<<<<<<<<
@@ -26480,7 +27037,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_6 = ((__pyx_v_bwtIndex + __pyx_v_prevCount) < __pyx_v_inRange.h);
     if (!__pyx_t_6) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":574
+    /* "MUSCython/RLE_BWTCython.pyx":587
  * 
  *         while bwtIndex + prevCount < inRange.h:
  *             currentChar = self.bwt_view[compressedIndex] & mask             # <<<<<<<<<<<<<<
@@ -26490,7 +27047,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_1 = __pyx_v_compressedIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":575
+    /* "MUSCython/RLE_BWTCython.pyx":588
  *         while bwtIndex + prevCount < inRange.h:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -26500,7 +27057,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_t_6 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_6) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":576
+      /* "MUSCython/RLE_BWTCython.pyx":589
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -26510,7 +27067,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = (__pyx_v_prevCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple));
 
-      /* "MUSCython/RLE_BWTCython.pyx":577
+      /* "MUSCython/RLE_BWTCython.pyx":590
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -26519,7 +27076,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":575
+      /* "MUSCython/RLE_BWTCython.pyx":588
  *         while bwtIndex + prevCount < inRange.h:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -26529,7 +27086,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       goto __pyx_L15;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":579
+    /* "MUSCython/RLE_BWTCython.pyx":592
  *                 powerMultiple *= numPower
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26540,7 +27097,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       __pyx_t_6 = (__pyx_v_prevChar == __pyx_v_sym);
       if (__pyx_t_6) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":580
+        /* "MUSCython/RLE_BWTCython.pyx":593
  *             else:
  *                 if prevChar == sym:
  *                     ret.h += prevCount             # <<<<<<<<<<<<<<
@@ -26549,7 +27106,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
         __pyx_v_ret.h = (__pyx_v_ret.h + __pyx_v_prevCount);
 
-        /* "MUSCython/RLE_BWTCython.pyx":579
+        /* "MUSCython/RLE_BWTCython.pyx":592
  *                 powerMultiple *= numPower
  *             else:
  *                 if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26558,7 +27115,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":582
+      /* "MUSCython/RLE_BWTCython.pyx":595
  *                     ret.h += prevCount
  * 
  *                 bwtIndex += prevCount             # <<<<<<<<<<<<<<
@@ -26567,7 +27124,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       __pyx_v_bwtIndex = (__pyx_v_bwtIndex + __pyx_v_prevCount);
 
-      /* "MUSCython/RLE_BWTCython.pyx":583
+      /* "MUSCython/RLE_BWTCython.pyx":596
  * 
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)             # <<<<<<<<<<<<<<
@@ -26577,7 +27134,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-      /* "MUSCython/RLE_BWTCython.pyx":584
+      /* "MUSCython/RLE_BWTCython.pyx":597
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -26586,7 +27143,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
       __pyx_v_prevChar = __pyx_v_currentChar;
 
-      /* "MUSCython/RLE_BWTCython.pyx":585
+      /* "MUSCython/RLE_BWTCython.pyx":598
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar
  *                 powerMultiple = numPower             # <<<<<<<<<<<<<<
@@ -26597,7 +27154,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     }
     __pyx_L15:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":587
+    /* "MUSCython/RLE_BWTCython.pyx":600
  *                 powerMultiple = numPower
  * 
  *             compressedIndex += 1             # <<<<<<<<<<<<<<
@@ -26607,7 +27164,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
     __pyx_v_compressedIndex = (__pyx_v_compressedIndex + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":589
+  /* "MUSCython/RLE_BWTCython.pyx":602
  *             compressedIndex += 1
  * 
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26617,7 +27174,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   __pyx_t_6 = (__pyx_v_prevChar == __pyx_v_sym);
   if (__pyx_t_6) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":590
+    /* "MUSCython/RLE_BWTCython.pyx":603
  * 
  *         if prevChar == sym:
  *             ret.h += inRange.h-bwtIndex             # <<<<<<<<<<<<<<
@@ -26626,7 +27183,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
     __pyx_v_ret.h = (__pyx_v_ret.h + (__pyx_v_inRange.h - __pyx_v_bwtIndex));
 
-    /* "MUSCython/RLE_BWTCython.pyx":589
+    /* "MUSCython/RLE_BWTCython.pyx":602
  *             compressedIndex += 1
  * 
  *         if prevChar == sym:             # <<<<<<<<<<<<<<
@@ -26635,7 +27192,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":592
+  /* "MUSCython/RLE_BWTCython.pyx":605
  *             ret.h += inRange.h-bwtIndex
  * 
  *         return ret             # <<<<<<<<<<<<<<
@@ -26645,7 +27202,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":512
+  /* "MUSCython/RLE_BWTCython.pyx":525
  *         return ret
  * 
  *     cdef BasicBWT.bwtRange getOccurrenceOfCharAtRange(RLE_BWT self, unsigned long sym, BasicBWT.bwtRange inRange) nogil:             # <<<<<<<<<<<<<<
@@ -26658,7 +27215,7 @@ static struct __pyx_t_9MUSCython_8BasicBWT_bwtRange __pyx_f_9MUSCython_13RLE_BWT
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":594
+/* "MUSCython/RLE_BWTCython.pyx":607
  *         return ret
  * 
  *     def getFullFMAtIndex(RLE_BWT self, np.uint64_t index):             # <<<<<<<<<<<<<<
@@ -26719,23 +27276,23 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 594, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 607, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getFullFMAtIndex") < 0)) __PYX_ERR(0, 594, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "getFullFMAtIndex") < 0)) __PYX_ERR(0, 607, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = __Pyx_Arg_FASTCALL(__pyx_args, 0);
     }
-    __pyx_v_index = __Pyx_PyInt_As_npy_uint64(values[0]); if (unlikely((__pyx_v_index == ((npy_uint64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 594, __pyx_L3_error)
+    __pyx_v_index = __Pyx_PyInt_As_npy_uint64(values[0]); if (unlikely((__pyx_v_index == ((npy_uint64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 607, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getFullFMAtIndex", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 594, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getFullFMAtIndex", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 607, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -26784,41 +27341,41 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_16getFullFMAtIndex
   __pyx_pybuffernd_ret.data = NULL;
   __pyx_pybuffernd_ret.rcbuffer = &__pyx_pybuffer_ret;
 
-  /* "MUSCython/RLE_BWTCython.pyx":595
+  /* "MUSCython/RLE_BWTCython.pyx":608
  * 
  *     def getFullFMAtIndex(RLE_BWT self, np.uint64_t index):
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.empty(dtype='<u8', shape=(vcLen, ))             # <<<<<<<<<<<<<<
  *         cdef np.uint64_t [:] ret_view = ret
  *         self.fillFmAtIndex(ret_view, index)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 595, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 608, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 608, __pyx_L1_error);
   __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 595, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 608, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 595, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 608, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_ret.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_ret = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_ret.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 595, __pyx_L1_error)
+      __PYX_ERR(0, 608, __pyx_L1_error)
     } else {__pyx_pybuffernd_ret.diminfo[0].strides = __pyx_pybuffernd_ret.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_ret.diminfo[0].shape = __pyx_pybuffernd_ret.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -26826,28 +27383,28 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_16getFullFMAtIndex
   __pyx_v_ret = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":596
+  /* "MUSCython/RLE_BWTCython.pyx":609
  *     def getFullFMAtIndex(RLE_BWT self, np.uint64_t index):
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.empty(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] ret_view = ret             # <<<<<<<<<<<<<<
  *         self.fillFmAtIndex(ret_view, index)
  *         return ret
  */
-  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_ret), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_ret), PyBUF_WRITABLE); if (unlikely(!__pyx_t_6.memview)) __PYX_ERR(0, 609, __pyx_L1_error)
   __pyx_v_ret_view = __pyx_t_6;
   __pyx_t_6.memview = NULL;
   __pyx_t_6.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":597
+  /* "MUSCython/RLE_BWTCython.pyx":610
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.empty(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] ret_view = ret
  *         self.fillFmAtIndex(ret_view, index)             # <<<<<<<<<<<<<<
  *         return ret
  * 
  */
-  ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_ret_view, __pyx_v_index); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 597, __pyx_L1_error)
+  ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_ret_view, __pyx_v_index); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 610, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":598
+  /* "MUSCython/RLE_BWTCython.pyx":611
  *         cdef np.uint64_t [:] ret_view = ret
  *         self.fillFmAtIndex(ret_view, index)
  *         return ret             # <<<<<<<<<<<<<<
@@ -26859,7 +27416,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_16getFullFMAtIndex
   __pyx_r = ((PyObject *)__pyx_v_ret);
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":594
+  /* "MUSCython/RLE_BWTCython.pyx":607
  *         return ret
  * 
  *     def getFullFMAtIndex(RLE_BWT self, np.uint64_t index):             # <<<<<<<<<<<<<<
@@ -26893,7 +27450,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_16getFullFMAtIndex
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":600
+/* "MUSCython/RLE_BWTCython.pyx":613
  *         return ret
  * 
  *     cdef void fillFmAtIndex(RLE_BWT self, np.uint64_t [:] ret_view, unsigned long index):             # <<<<<<<<<<<<<<
@@ -26918,7 +27475,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
   size_t __pyx_t_6;
   int __pyx_t_7;
 
-  /* "MUSCython/RLE_BWTCython.pyx":612
+  /* "MUSCython/RLE_BWTCython.pyx":625
  *         @return - the above information in the form of an array that already incorporates the offset value into the counts
  *         '''
  *         cdef unsigned long binID = index >> bitPower             # <<<<<<<<<<<<<<
@@ -26927,7 +27484,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
   __pyx_v_binID = (__pyx_v_index >> __pyx_e_9MUSCython_13RLE_BWTCython_bitPower);
 
-  /* "MUSCython/RLE_BWTCython.pyx":613
+  /* "MUSCython/RLE_BWTCython.pyx":626
  *         '''
  *         cdef unsigned long binID = index >> bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]             # <<<<<<<<<<<<<<
@@ -26937,7 +27494,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
   __pyx_t_1 = __pyx_v_binID;
   __pyx_v_compressedIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->refFM_view.data + __pyx_t_1 * __pyx_v_self->refFM_view.strides[0]) )));
 
-  /* "MUSCython/RLE_BWTCython.pyx":614
+  /* "MUSCython/RLE_BWTCython.pyx":627
  *         cdef unsigned long binID = index >> bitPower
  *         cdef unsigned long compressedIndex = self.refFM_view[binID]
  *         cdef unsigned long bwtIndex = 0             # <<<<<<<<<<<<<<
@@ -26946,7 +27503,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
   __pyx_v_bwtIndex = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":617
+  /* "MUSCython/RLE_BWTCython.pyx":630
  *         cdef unsigned long j
  * 
  *         for j in range(0, vcLen):             # <<<<<<<<<<<<<<
@@ -26958,7 +27515,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_j = __pyx_t_4;
 
-    /* "MUSCython/RLE_BWTCython.pyx":618
+    /* "MUSCython/RLE_BWTCython.pyx":631
  * 
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]             # <<<<<<<<<<<<<<
@@ -26969,7 +27526,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
     __pyx_t_5 = __pyx_v_j;
     __pyx_v_bwtIndex = (__pyx_v_bwtIndex + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) ))));
 
-    /* "MUSCython/RLE_BWTCython.pyx":619
+    /* "MUSCython/RLE_BWTCython.pyx":632
  *         for j in range(0, vcLen):
  *             bwtIndex += self.partialFM_view[binID,j]
  *             ret_view[j] = self.partialFM_view[binID,j]             # <<<<<<<<<<<<<<
@@ -26982,7 +27539,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
     *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_ret_view.data + __pyx_t_6 * __pyx_v_ret_view.strides[0]) )) = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_self->__pyx_base.partialFM_view.data + __pyx_t_5 * __pyx_v_self->__pyx_base.partialFM_view.strides[0]) ) + __pyx_t_1 * __pyx_v_self->__pyx_base.partialFM_view.strides[1]) )));
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":620
+  /* "MUSCython/RLE_BWTCython.pyx":633
  *             bwtIndex += self.partialFM_view[binID,j]
  *             ret_view[j] = self.partialFM_view[binID,j]
  *         bwtIndex -= self.offsetSum             # <<<<<<<<<<<<<<
@@ -26991,7 +27548,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
   __pyx_v_bwtIndex = (__pyx_v_bwtIndex - __pyx_v_self->offsetSum);
 
-  /* "MUSCython/RLE_BWTCython.pyx":622
+  /* "MUSCython/RLE_BWTCython.pyx":635
  *         bwtIndex -= self.offsetSum
  * 
  *         cdef np.uint8_t prevChar = self.bwt_view[compressedIndex] & mask             # <<<<<<<<<<<<<<
@@ -27001,7 +27558,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
   __pyx_t_1 = __pyx_v_compressedIndex;
   __pyx_v_prevChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-  /* "MUSCython/RLE_BWTCython.pyx":624
+  /* "MUSCython/RLE_BWTCython.pyx":637
  *         cdef np.uint8_t prevChar = self.bwt_view[compressedIndex] & mask
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = self.bwt_view[compressedIndex] >> letterBits             # <<<<<<<<<<<<<<
@@ -27011,7 +27568,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
   __pyx_t_1 = __pyx_v_compressedIndex;
   __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-  /* "MUSCython/RLE_BWTCython.pyx":625
+  /* "MUSCython/RLE_BWTCython.pyx":638
  *         cdef np.uint8_t currentChar
  *         cdef unsigned long prevCount = self.bwt_view[compressedIndex] >> letterBits
  *         cdef unsigned long powerMultiple = numPower             # <<<<<<<<<<<<<<
@@ -27020,7 +27577,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
   __pyx_v_powerMultiple = __pyx_e_9MUSCython_13RLE_BWTCython_numPower;
 
-  /* "MUSCython/RLE_BWTCython.pyx":626
+  /* "MUSCython/RLE_BWTCython.pyx":639
  *         cdef unsigned long prevCount = self.bwt_view[compressedIndex] >> letterBits
  *         cdef unsigned long powerMultiple = numPower
  *         compressedIndex += 1             # <<<<<<<<<<<<<<
@@ -27029,7 +27586,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
   __pyx_v_compressedIndex = (__pyx_v_compressedIndex + 1);
 
-  /* "MUSCython/RLE_BWTCython.pyx":628
+  /* "MUSCython/RLE_BWTCython.pyx":641
  *         compressedIndex += 1
  * 
  *         while bwtIndex + prevCount < index:             # <<<<<<<<<<<<<<
@@ -27040,7 +27597,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
     __pyx_t_7 = ((__pyx_v_bwtIndex + __pyx_v_prevCount) < __pyx_v_index);
     if (!__pyx_t_7) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":629
+    /* "MUSCython/RLE_BWTCython.pyx":642
  * 
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask             # <<<<<<<<<<<<<<
@@ -27050,7 +27607,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
     __pyx_t_1 = __pyx_v_compressedIndex;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":630
+    /* "MUSCython/RLE_BWTCython.pyx":643
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -27060,7 +27617,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
     __pyx_t_7 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_7) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":631
+      /* "MUSCython/RLE_BWTCython.pyx":644
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple             # <<<<<<<<<<<<<<
@@ -27070,7 +27627,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = (__pyx_v_prevCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple));
 
-      /* "MUSCython/RLE_BWTCython.pyx":632
+      /* "MUSCython/RLE_BWTCython.pyx":645
  *             if currentChar == prevChar:
  *                 prevCount += (self.bwt_view[compressedIndex] >> letterBits) * powerMultiple
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -27079,7 +27636,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":630
+      /* "MUSCython/RLE_BWTCython.pyx":643
  *         while bwtIndex + prevCount < index:
  *             currentChar = self.bwt_view[compressedIndex] & mask
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -27089,7 +27646,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
       goto __pyx_L7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":634
+    /* "MUSCython/RLE_BWTCython.pyx":647
  *                 powerMultiple *= numPower
  *             else:
  *                 ret_view[prevChar] += prevCount             # <<<<<<<<<<<<<<
@@ -27100,7 +27657,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
       __pyx_t_1 = __pyx_v_prevChar;
       *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_ret_view.data + __pyx_t_1 * __pyx_v_ret_view.strides[0]) )) += __pyx_v_prevCount;
 
-      /* "MUSCython/RLE_BWTCython.pyx":636
+      /* "MUSCython/RLE_BWTCython.pyx":649
  *                 ret_view[prevChar] += prevCount
  * 
  *                 bwtIndex += prevCount             # <<<<<<<<<<<<<<
@@ -27109,7 +27666,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
       __pyx_v_bwtIndex = (__pyx_v_bwtIndex + __pyx_v_prevCount);
 
-      /* "MUSCython/RLE_BWTCython.pyx":637
+      /* "MUSCython/RLE_BWTCython.pyx":650
  * 
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)             # <<<<<<<<<<<<<<
@@ -27119,7 +27676,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
       __pyx_t_1 = __pyx_v_compressedIndex;
       __pyx_v_prevCount = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_1 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-      /* "MUSCython/RLE_BWTCython.pyx":638
+      /* "MUSCython/RLE_BWTCython.pyx":651
  *                 bwtIndex += prevCount
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -27128,7 +27685,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
  */
       __pyx_v_prevChar = __pyx_v_currentChar;
 
-      /* "MUSCython/RLE_BWTCython.pyx":639
+      /* "MUSCython/RLE_BWTCython.pyx":652
  *                 prevCount = (self.bwt_view[compressedIndex] >> letterBits)
  *                 prevChar = currentChar
  *                 powerMultiple = numPower             # <<<<<<<<<<<<<<
@@ -27139,7 +27696,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
     }
     __pyx_L7:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":641
+    /* "MUSCython/RLE_BWTCython.pyx":654
  *                 powerMultiple = numPower
  * 
  *             compressedIndex += 1             # <<<<<<<<<<<<<<
@@ -27149,7 +27706,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
     __pyx_v_compressedIndex = (__pyx_v_compressedIndex + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":643
+  /* "MUSCython/RLE_BWTCython.pyx":656
  *             compressedIndex += 1
  * 
  *         ret_view[prevChar] += index-bwtIndex             # <<<<<<<<<<<<<<
@@ -27159,7 +27716,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
   __pyx_t_1 = __pyx_v_prevChar;
   *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_ret_view.data + __pyx_t_1 * __pyx_v_ret_view.strides[0]) )) += (__pyx_v_index - __pyx_v_bwtIndex);
 
-  /* "MUSCython/RLE_BWTCython.pyx":600
+  /* "MUSCython/RLE_BWTCython.pyx":613
  *         return ret
  * 
  *     cdef void fillFmAtIndex(RLE_BWT self, np.uint64_t [:] ret_view, unsigned long index):             # <<<<<<<<<<<<<<
@@ -27170,7 +27727,7 @@ static void __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_fillFmAtIndex(struct __p
   /* function exit code */
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":647
+/* "MUSCython/RLE_BWTCython.pyx":660
  *         #return ret
  * 
  *     cdef np.uint8_t iterNext_cython(RLE_BWT self) nogil:             # <<<<<<<<<<<<<<
@@ -27186,7 +27743,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
   __pyx_t_5numpy_uint8_t __pyx_t_2;
   size_t __pyx_t_3;
 
-  /* "MUSCython/RLE_BWTCython.pyx":656
+  /* "MUSCython/RLE_BWTCython.pyx":669
  *         #print (self.iterCount, self.iterCurrCount, self.iterIndex, self.fileSize, sym)
  * 
  *         if self.iterCount < self.iterCurrCount:             # <<<<<<<<<<<<<<
@@ -27196,7 +27753,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
   __pyx_t_1 = (__pyx_v_self->__pyx_base.iterCount < __pyx_v_self->__pyx_base.iterCurrCount);
   if (__pyx_t_1) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":658
+    /* "MUSCython/RLE_BWTCython.pyx":671
  *         if self.iterCount < self.iterCurrCount:
  *             #we are still in the same byte of storage, increment and return the symbol there
  *             ret = self.iterCurrChar             # <<<<<<<<<<<<<<
@@ -27206,7 +27763,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     __pyx_t_2 = __pyx_v_self->__pyx_base.iterCurrChar;
     __pyx_v_ret = __pyx_t_2;
 
-    /* "MUSCython/RLE_BWTCython.pyx":659
+    /* "MUSCython/RLE_BWTCython.pyx":672
  *             #we are still in the same byte of storage, increment and return the symbol there
  *             ret = self.iterCurrChar
  *             inc(self.iterCount)             # <<<<<<<<<<<<<<
@@ -27215,7 +27772,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
  */
     (void)((++__pyx_v_self->__pyx_base.iterCount));
 
-    /* "MUSCython/RLE_BWTCython.pyx":656
+    /* "MUSCython/RLE_BWTCython.pyx":669
  *         #print (self.iterCount, self.iterCurrCount, self.iterIndex, self.fileSize, sym)
  * 
  *         if self.iterCount < self.iterCurrCount:             # <<<<<<<<<<<<<<
@@ -27225,7 +27782,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     goto __pyx_L3;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":660
+  /* "MUSCython/RLE_BWTCython.pyx":673
  *             ret = self.iterCurrChar
  *             inc(self.iterCount)
  *         elif self.iterIndex < self.fileSize:             # <<<<<<<<<<<<<<
@@ -27235,7 +27792,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
   __pyx_t_1 = (__pyx_v_self->__pyx_base.iterIndex < __pyx_v_self->__pyx_base.fileSize);
   if (__pyx_t_1) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":662
+    /* "MUSCython/RLE_BWTCython.pyx":675
  *         elif self.iterIndex < self.fileSize:
  *             #we have more bytes to process
  *             sym = self.bwt_view[self.iterIndex] & mask             # <<<<<<<<<<<<<<
@@ -27245,7 +27802,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     __pyx_t_3 = __pyx_v_self->__pyx_base.iterIndex;
     __pyx_v_sym = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_3 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":665
+    /* "MUSCython/RLE_BWTCython.pyx":678
  * 
  *             #increment our power if necessary
  *             if sym == self.iterCurrChar:             # <<<<<<<<<<<<<<
@@ -27255,7 +27812,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     __pyx_t_1 = (__pyx_v_sym == __pyx_v_self->__pyx_base.iterCurrChar);
     if (__pyx_t_1) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":666
+      /* "MUSCython/RLE_BWTCython.pyx":679
  *             #increment our power if necessary
  *             if sym == self.iterCurrChar:
  *                 inc(self.iterPower)             # <<<<<<<<<<<<<<
@@ -27264,7 +27821,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
  */
       (void)((++__pyx_v_self->__pyx_base.iterPower));
 
-      /* "MUSCython/RLE_BWTCython.pyx":665
+      /* "MUSCython/RLE_BWTCython.pyx":678
  * 
  *             #increment our power if necessary
  *             if sym == self.iterCurrChar:             # <<<<<<<<<<<<<<
@@ -27274,7 +27831,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
       goto __pyx_L4;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":668
+    /* "MUSCython/RLE_BWTCython.pyx":681
  *                 inc(self.iterPower)
  *             else:
  *                 self.iterCount = 0             # <<<<<<<<<<<<<<
@@ -27284,7 +27841,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     /*else*/ {
       __pyx_v_self->__pyx_base.iterCount = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":669
+      /* "MUSCython/RLE_BWTCython.pyx":682
  *             else:
  *                 self.iterCount = 0
  *                 self.iterCurrCount = 0             # <<<<<<<<<<<<<<
@@ -27293,7 +27850,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
  */
       __pyx_v_self->__pyx_base.iterCurrCount = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":670
+      /* "MUSCython/RLE_BWTCython.pyx":683
  *                 self.iterCount = 0
  *                 self.iterCurrCount = 0
  *                 self.iterPower = 0             # <<<<<<<<<<<<<<
@@ -27302,7 +27859,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
  */
       __pyx_v_self->__pyx_base.iterPower = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":671
+      /* "MUSCython/RLE_BWTCython.pyx":684
  *                 self.iterCurrCount = 0
  *                 self.iterPower = 0
  *                 self.iterCurrChar = sym             # <<<<<<<<<<<<<<
@@ -27313,7 +27870,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     }
     __pyx_L4:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":674
+    /* "MUSCython/RLE_BWTCython.pyx":687
  * 
  *             #pull out the number of counts here and reset our counting
  *             self.iterCurrCount += (self.bwt_view[self.iterIndex] >> letterBits) * (numPower**self.iterPower)             # <<<<<<<<<<<<<<
@@ -27323,7 +27880,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     __pyx_t_3 = __pyx_v_self->__pyx_base.iterIndex;
     __pyx_v_self->__pyx_base.iterCurrCount = (__pyx_v_self->__pyx_base.iterCurrCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_3 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __Pyx_pow_unsigned_long(((unsigned long)__pyx_e_9MUSCython_13RLE_BWTCython_numPower), __pyx_v_self->__pyx_base.iterPower)));
 
-    /* "MUSCython/RLE_BWTCython.pyx":675
+    /* "MUSCython/RLE_BWTCython.pyx":688
  *             #pull out the number of counts here and reset our counting
  *             self.iterCurrCount += (self.bwt_view[self.iterIndex] >> letterBits) * (numPower**self.iterPower)
  *             inc(self.iterCount)             # <<<<<<<<<<<<<<
@@ -27332,7 +27889,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
  */
     (void)((++__pyx_v_self->__pyx_base.iterCount));
 
-    /* "MUSCython/RLE_BWTCython.pyx":676
+    /* "MUSCython/RLE_BWTCython.pyx":689
  *             self.iterCurrCount += (self.bwt_view[self.iterIndex] >> letterBits) * (numPower**self.iterPower)
  *             inc(self.iterCount)
  *             ret = self.iterCurrChar             # <<<<<<<<<<<<<<
@@ -27342,7 +27899,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     __pyx_t_2 = __pyx_v_self->__pyx_base.iterCurrChar;
     __pyx_v_ret = __pyx_t_2;
 
-    /* "MUSCython/RLE_BWTCython.pyx":677
+    /* "MUSCython/RLE_BWTCython.pyx":690
  *             inc(self.iterCount)
  *             ret = self.iterCurrChar
  *             inc(self.iterIndex)             # <<<<<<<<<<<<<<
@@ -27351,7 +27908,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
  */
     (void)((++__pyx_v_self->__pyx_base.iterIndex));
 
-    /* "MUSCython/RLE_BWTCython.pyx":660
+    /* "MUSCython/RLE_BWTCython.pyx":673
  *             ret = self.iterCurrChar
  *             inc(self.iterCount)
  *         elif self.iterIndex < self.fileSize:             # <<<<<<<<<<<<<<
@@ -27361,7 +27918,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
     goto __pyx_L3;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":680
+  /* "MUSCython/RLE_BWTCython.pyx":693
  *         else:
  *             #we have run out of stuff
  *             ret = 255             # <<<<<<<<<<<<<<
@@ -27373,7 +27930,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
   }
   __pyx_L3:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":682
+  /* "MUSCython/RLE_BWTCython.pyx":695
  *             ret = 255
  * 
  *         return ret             # <<<<<<<<<<<<<<
@@ -27383,7 +27940,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":647
+  /* "MUSCython/RLE_BWTCython.pyx":660
  *         #return ret
  * 
  *     cdef np.uint8_t iterNext_cython(RLE_BWT self) nogil:             # <<<<<<<<<<<<<<
@@ -27396,7 +27953,7 @@ static __pyx_t_5numpy_uint8_t __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_iterNe
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":684
+/* "MUSCython/RLE_BWTCython.pyx":697
  *         return ret
  * 
  *     def removeStrings(RLE_BWT self, set delSet, bint reloadBWT=True, logger=None):             # <<<<<<<<<<<<<<
@@ -27465,26 +28022,26 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 684, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 697, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_reloadBWT);
           if (value) { values[1] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 684, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 697, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (kw_args > 0) {
           PyObject* value = __Pyx_GetKwValue_FASTCALL(__pyx_kwds, __pyx_kwvalues, __pyx_n_s_logger);
           if (value) { values[2] = __Pyx_Arg_NewRef_FASTCALL(value); kw_args--; }
-          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 684, __pyx_L3_error)
+          else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 697, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "removeStrings") < 0)) __PYX_ERR(0, 684, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "removeStrings") < 0)) __PYX_ERR(0, 697, __pyx_L3_error)
       }
     } else {
       switch (__pyx_nargs) {
@@ -27499,7 +28056,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     }
     __pyx_v_delSet = ((PyObject*)values[0]);
     if (values[1]) {
-      __pyx_v_reloadBWT = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_reloadBWT == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 684, __pyx_L3_error)
+      __pyx_v_reloadBWT = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_reloadBWT == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 697, __pyx_L3_error)
     } else {
       __pyx_v_reloadBWT = ((int)1);
     }
@@ -27507,7 +28064,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("removeStrings", 0, 1, 3, __pyx_nargs); __PYX_ERR(0, 684, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("removeStrings", 0, 1, 3, __pyx_nargs); __PYX_ERR(0, 697, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -27521,7 +28078,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_delSet), (&PySet_Type), 1, "delSet", 1))) __PYX_ERR(0, 684, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_delSet), (&PySet_Type), 1, "delSet", 1))) __PYX_ERR(0, 697, __pyx_L1_error)
   __pyx_r = __pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(((struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self), __pyx_v_delSet, __pyx_v_reloadBWT, __pyx_v_logger);
 
   /* function exit code */
@@ -27621,7 +28178,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   __pyx_pybuffernd_delIndices.data = NULL;
   __pyx_pybuffernd_delIndices.rcbuffer = &__pyx_pybuffer_delIndices;
 
-  /* "MUSCython/RLE_BWTCython.pyx":692
+  /* "MUSCython/RLE_BWTCython.pyx":705
  *         @return None
  *         '''
  *         if len(delSet) == 0:             # <<<<<<<<<<<<<<
@@ -27630,13 +28187,13 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   if (unlikely(__pyx_v_delSet == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 692, __pyx_L1_error)
+    __PYX_ERR(0, 705, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PySet_GET_SIZE(__pyx_v_delSet); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 692, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PySet_GET_SIZE(__pyx_v_delSet); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 705, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 == 0);
   if (__pyx_t_2) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":693
+    /* "MUSCython/RLE_BWTCython.pyx":706
  *         '''
  *         if len(delSet) == 0:
  *             return             # <<<<<<<<<<<<<<
@@ -27647,7 +28204,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":692
+    /* "MUSCython/RLE_BWTCython.pyx":705
  *         @return None
  *         '''
  *         if len(delSet) == 0:             # <<<<<<<<<<<<<<
@@ -27656,7 +28213,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":696
+  /* "MUSCython/RLE_BWTCython.pyx":709
  * 
  *         #make sure we are actually modifying the file
  *         if not self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -27666,21 +28223,21 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   __pyx_t_2 = (!__pyx_v_self->useMemmapRLE);
   if (__pyx_t_2) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":697
+    /* "MUSCython/RLE_BWTCython.pyx":710
  *         #make sure we are actually modifying the file
  *         if not self.useMemmapRLE:
  *             self.bwt = np.load(self.dirName+'/comp_msbwt.npy', 'r+')             # <<<<<<<<<<<<<<
  *             self.bwt_view = self.bwt
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 697, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 710, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 697, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 710, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 697, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 710, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = PyNumber_Add(__pyx_t_4, __pyx_kp_s_comp_msbwt_npy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 697, __pyx_L1_error)
+    __pyx_t_6 = PyNumber_Add(__pyx_t_4, __pyx_kp_s_comp_msbwt_npy); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 710, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -27702,31 +28259,31 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_7, 2+__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 697, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 710, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 697, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 710, __pyx_L1_error)
     __Pyx_GIVEREF(__pyx_t_3);
     __Pyx_GOTREF((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __Pyx_DECREF((PyObject *)__pyx_v_self->__pyx_base.bwt);
     __pyx_v_self->__pyx_base.bwt = ((PyArrayObject *)__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":698
+    /* "MUSCython/RLE_BWTCython.pyx":711
  *         if not self.useMemmapRLE:
  *             self.bwt = np.load(self.dirName+'/comp_msbwt.npy', 'r+')
  *             self.bwt_view = self.bwt             # <<<<<<<<<<<<<<
  * 
  *         #first, go through each id in the set and pull out the indices of all associated bases to add to a master deletion list
  */
-    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_self->__pyx_base.bwt), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_self->__pyx_base.bwt), PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 711, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_self->__pyx_base.bwt_view, 0);
     __pyx_v_self->__pyx_base.bwt_view = __pyx_t_8;
     __pyx_t_8.memview = NULL;
     __pyx_t_8.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":696
+    /* "MUSCython/RLE_BWTCython.pyx":709
  * 
  *         #make sure we are actually modifying the file
  *         if not self.useMemmapRLE:             # <<<<<<<<<<<<<<
@@ -27735,33 +28292,33 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":704
+  /* "MUSCython/RLE_BWTCython.pyx":717
  *         cdef unsigned long readID
  * 
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] tempIndexArray = np.zeros(dtype='<u8', shape=(1, ))             # <<<<<<<<<<<<<<
  *         cdef np.uint64_t [:] tempIndexArray_view = tempIndexArray
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 704, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 717, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 704, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 717, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 704, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 717, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 704, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 704, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 704, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 717, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 717, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 717, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 704, __pyx_L1_error)
+  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 717, __pyx_L1_error)
   __pyx_t_9 = ((PyArrayObject *)__pyx_t_6);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_tempIndexArray.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_tempIndexArray = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_tempIndexArray.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 704, __pyx_L1_error)
+      __PYX_ERR(0, 717, __pyx_L1_error)
     } else {__pyx_pybuffernd_tempIndexArray.diminfo[0].strides = __pyx_pybuffernd_tempIndexArray.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tempIndexArray.diminfo[0].shape = __pyx_pybuffernd_tempIndexArray.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -27769,63 +28326,63 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   __pyx_v_tempIndexArray = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":705
+  /* "MUSCython/RLE_BWTCython.pyx":718
  * 
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] tempIndexArray = np.zeros(dtype='<u8', shape=(1, ))
  *         cdef np.uint64_t [:] tempIndexArray_view = tempIndexArray             # <<<<<<<<<<<<<<
  * 
  *         cdef str deletionFN = self.dirName+'/deletion_indices.dat'
  */
-  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_tempIndexArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 705, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_tempIndexArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 718, __pyx_L1_error)
   __pyx_v_tempIndexArray_view = __pyx_t_10;
   __pyx_t_10.memview = NULL;
   __pyx_t_10.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":707
+  /* "MUSCython/RLE_BWTCython.pyx":720
  *         cdef np.uint64_t [:] tempIndexArray_view = tempIndexArray
  * 
  *         cdef str deletionFN = self.dirName+'/deletion_indices.dat'             # <<<<<<<<<<<<<<
- *         cdef FILE * fp = fopen(deletionFN, 'w+')
- * 
+ *         # binary mode: on Windows the C runtime would otherwise translate
+ *         # 0x0A bytes inside the binary index data into '\r\n' pairs.
  */
-  __pyx_t_6 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 707, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 720, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_3 = PyNumber_Add(__pyx_t_6, __pyx_kp_s_deletion_indices_dat); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 707, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_6, __pyx_kp_s_deletion_indices_dat); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 720, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_v_deletionFN = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":708
- * 
- *         cdef str deletionFN = self.dirName+'/deletion_indices.dat'
- *         cdef FILE * fp = fopen(deletionFN, 'w+')             # <<<<<<<<<<<<<<
+  /* "MUSCython/RLE_BWTCython.pyx":723
+ *         # binary mode: on Windows the C runtime would otherwise translate
+ *         # 0x0A bytes inside the binary index data into '\r\n' pairs.
+ *         cdef FILE * fp = fopen(deletionFN, 'w+b')             # <<<<<<<<<<<<<<
  * 
  *         cdef unsigned long x, copyIndex
  */
-  __pyx_t_11 = __Pyx_PyObject_AsString(__pyx_v_deletionFN); if (unlikely((!__pyx_t_11) && PyErr_Occurred())) __PYX_ERR(0, 708, __pyx_L1_error)
-  __pyx_v_fp = fopen(__pyx_t_11, ((char const *)"w+"));
+  __pyx_t_11 = __Pyx_PyObject_AsString(__pyx_v_deletionFN); if (unlikely((!__pyx_t_11) && PyErr_Occurred())) __PYX_ERR(0, 723, __pyx_L1_error)
+  __pyx_v_fp = fopen(__pyx_t_11, ((char const *)"w+b"));
 
-  /* "MUSCython/RLE_BWTCython.pyx":713
+  /* "MUSCython/RLE_BWTCython.pyx":728
  *         cdef np.uint8_t indexByte
  * 
  *         if logger != None:             # <<<<<<<<<<<<<<
  *             logger.info('Identifying indices for deletion...')
  * 
  */
-  __pyx_t_3 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 713, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 713, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 728, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 728, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":714
+    /* "MUSCython/RLE_BWTCython.pyx":729
  * 
  *         if logger != None:
  *             logger.info('Identifying indices for deletion...')             # <<<<<<<<<<<<<<
  * 
  *         cdef unsigned long prevSym, currIndex
  */
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 714, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 729, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_5 = NULL;
     __pyx_t_7 = 0;
@@ -27845,13 +28402,13 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_kp_s_Identifying_indices_for_deletion};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_6, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 714, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 729, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":713
+    /* "MUSCython/RLE_BWTCython.pyx":728
  *         cdef np.uint8_t indexByte
  * 
  *         if logger != None:             # <<<<<<<<<<<<<<
@@ -27860,7 +28417,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":718
+  /* "MUSCython/RLE_BWTCython.pyx":733
  *         cdef unsigned long prevSym, currIndex
  * 
  *         for readID in delSet:             # <<<<<<<<<<<<<<
@@ -27868,7 +28425,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  *             if readID >= self.totalCounts_view[0]:
  */
   __pyx_t_1 = 0;
-  __pyx_t_6 = __Pyx_set_iterator(__pyx_v_delSet, 1, (&__pyx_t_12), (&__pyx_t_13)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 718, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_set_iterator(__pyx_v_delSet, 1, (&__pyx_t_12), (&__pyx_t_13)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_3);
   __pyx_t_3 = __pyx_t_6;
@@ -27876,13 +28433,13 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   while (1) {
     __pyx_t_14 = __Pyx_set_iter_next(__pyx_t_3, __pyx_t_12, &__pyx_t_1, &__pyx_t_6, __pyx_t_13);
     if (unlikely(__pyx_t_14 == 0)) break;
-    if (unlikely(__pyx_t_14 == -1)) __PYX_ERR(0, 718, __pyx_L1_error)
+    if (unlikely(__pyx_t_14 == -1)) __PYX_ERR(0, 733, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_15 = __Pyx_PyInt_As_unsigned_long(__pyx_t_6); if (unlikely((__pyx_t_15 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 718, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyInt_As_unsigned_long(__pyx_t_6); if (unlikely((__pyx_t_15 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 733, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_readID = __pyx_t_15;
 
-    /* "MUSCython/RLE_BWTCython.pyx":720
+    /* "MUSCython/RLE_BWTCython.pyx":735
  *         for readID in delSet:
  *             #verify this is a valid read ID
  *             if readID >= self.totalCounts_view[0]:             # <<<<<<<<<<<<<<
@@ -27893,42 +28450,42 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_2 = (__pyx_v_readID >= (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.totalCounts_view.data + __pyx_t_16 * __pyx_v_self->__pyx_base.totalCounts_view.strides[0]) ))));
     if (unlikely(__pyx_t_2)) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":721
+      /* "MUSCython/RLE_BWTCython.pyx":736
  *             #verify this is a valid read ID
  *             if readID >= self.totalCounts_view[0]:
  *                 raise Exception(str(readID)+' is too large to be a string ID in BWT with '+str(self.totalCounts_view[0])+' strings.')             # <<<<<<<<<<<<<<
  * 
  *             #now pull out all the associated indices
  */
-      __pyx_t_6 = __Pyx_PyInt_From_unsigned_long(__pyx_v_readID); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyInt_From_unsigned_long(__pyx_v_readID); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_5 = __Pyx_PyObject_Str(__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Str(__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_5, __pyx_kp_s_is_too_large_to_be_a_string_ID); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_6 = PyNumber_Add(__pyx_t_5, __pyx_kp_s_is_too_large_to_be_a_string_ID); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_16 = 0;
-      __pyx_t_5 = __Pyx_PyInt_From_npy_uint64((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.totalCounts_view.data + __pyx_t_16 * __pyx_v_self->__pyx_base.totalCounts_view.strides[0]) )))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyInt_From_npy_uint64((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.totalCounts_view.data + __pyx_t_16 * __pyx_v_self->__pyx_base.totalCounts_view.strides[0]) )))); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_4 = __Pyx_PyObject_Str(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Str(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = PyNumber_Add(__pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_5 = PyNumber_Add(__pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyNumber_Add(__pyx_t_5, __pyx_kp_s_strings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_4 = PyNumber_Add(__pyx_t_5, __pyx_kp_s_strings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 721, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_CallOneArg(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 736, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_Raise(__pyx_t_5, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __PYX_ERR(0, 721, __pyx_L1_error)
+      __PYX_ERR(0, 736, __pyx_L1_error)
 
-      /* "MUSCython/RLE_BWTCython.pyx":720
+      /* "MUSCython/RLE_BWTCython.pyx":735
  *         for readID in delSet:
  *             #verify this is a valid read ID
  *             if readID >= self.totalCounts_view[0]:             # <<<<<<<<<<<<<<
@@ -27937,27 +28494,27 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":725
+    /* "MUSCython/RLE_BWTCython.pyx":740
  *             #now pull out all the associated indices
  *             #figure out the first hop backwards
  *             prevSym = self.getCharAtIndex(readID)             # <<<<<<<<<<<<<<
  *             currIndex = self.getOccurrenceOfCharAtIndex(prevSym, readID)
  * 
  */
-    __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_readID, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 725, __pyx_L1_error)
+    __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_readID, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 740, __pyx_L1_error)
     __pyx_v_prevSym = __pyx_t_15;
 
-    /* "MUSCython/RLE_BWTCython.pyx":726
+    /* "MUSCython/RLE_BWTCython.pyx":741
  *             #figure out the first hop backwards
  *             prevSym = self.getCharAtIndex(readID)
  *             currIndex = self.getOccurrenceOfCharAtIndex(prevSym, readID)             # <<<<<<<<<<<<<<
  * 
  *             #while we haven't looped back to the start
  */
-    __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_prevSym, __pyx_v_readID, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 726, __pyx_L1_error)
+    __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_prevSym, __pyx_v_readID, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 741, __pyx_L1_error)
     __pyx_v_currIndex = __pyx_t_15;
 
-    /* "MUSCython/RLE_BWTCython.pyx":729
+    /* "MUSCython/RLE_BWTCython.pyx":744
  * 
  *             #while we haven't looped back to the start
  *             while currIndex != readID:             # <<<<<<<<<<<<<<
@@ -27968,7 +28525,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_t_2 = (__pyx_v_currIndex != __pyx_v_readID);
       if (!__pyx_t_2) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":732
+      /* "MUSCython/RLE_BWTCython.pyx":747
  *                 #write the index
  *                 #fwrite(&currIndex, 8, 1, fp)
  *                 copyIndex = currIndex             # <<<<<<<<<<<<<<
@@ -27977,7 +28534,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_copyIndex = __pyx_v_currIndex;
 
-      /* "MUSCython/RLE_BWTCython.pyx":733
+      /* "MUSCython/RLE_BWTCython.pyx":748
  *                 #fwrite(&currIndex, 8, 1, fp)
  *                 copyIndex = currIndex
  *                 for x in range(0, 8):             # <<<<<<<<<<<<<<
@@ -27987,7 +28544,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       for (__pyx_t_15 = 0; __pyx_t_15 < 8; __pyx_t_15+=1) {
         __pyx_v_x = __pyx_t_15;
 
-        /* "MUSCython/RLE_BWTCython.pyx":734
+        /* "MUSCython/RLE_BWTCython.pyx":749
  *                 copyIndex = currIndex
  *                 for x in range(0, 8):
  *                     indexByte = copyIndex & 0xFF             # <<<<<<<<<<<<<<
@@ -27996,7 +28553,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
         __pyx_v_indexByte = (__pyx_v_copyIndex & 0xFF);
 
-        /* "MUSCython/RLE_BWTCython.pyx":735
+        /* "MUSCython/RLE_BWTCython.pyx":750
  *                 for x in range(0, 8):
  *                     indexByte = copyIndex & 0xFF
  *                     fwrite(&indexByte, 1, 1, fp)             # <<<<<<<<<<<<<<
@@ -28005,7 +28562,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
         (void)(fwrite((&__pyx_v_indexByte), 1, 1, __pyx_v_fp));
 
-        /* "MUSCython/RLE_BWTCython.pyx":736
+        /* "MUSCython/RLE_BWTCython.pyx":751
  *                     indexByte = copyIndex & 0xFF
  *                     fwrite(&indexByte, 1, 1, fp)
  *                     copyIndex = copyIndex >> 8             # <<<<<<<<<<<<<<
@@ -28015,28 +28572,28 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_v_copyIndex = (__pyx_v_copyIndex >> 8);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":739
+      /* "MUSCython/RLE_BWTCython.pyx":754
  * 
  *                 #figure out where to go from here
  *                 prevSym = self.getCharAtIndex(currIndex)             # <<<<<<<<<<<<<<
  *                 currIndex = self.getOccurrenceOfCharAtIndex(prevSym, currIndex)
  * 
  */
-      __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_currIndex, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 739, __pyx_L1_error)
+      __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_currIndex, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 754, __pyx_L1_error)
       __pyx_v_prevSym = __pyx_t_15;
 
-      /* "MUSCython/RLE_BWTCython.pyx":740
+      /* "MUSCython/RLE_BWTCython.pyx":755
  *                 #figure out where to go from here
  *                 prevSym = self.getCharAtIndex(currIndex)
  *                 currIndex = self.getOccurrenceOfCharAtIndex(prevSym, currIndex)             # <<<<<<<<<<<<<<
  * 
  *             #write the read ID, which was the first index we found
  */
-      __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_prevSym, __pyx_v_currIndex, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 740, __pyx_L1_error)
+      __pyx_t_15 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_prevSym, __pyx_v_currIndex, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 755, __pyx_L1_error)
       __pyx_v_currIndex = __pyx_t_15;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":743
+    /* "MUSCython/RLE_BWTCython.pyx":758
  * 
  *             #write the read ID, which was the first index we found
  *             fwrite(&readID, 8, 1, fp)             # <<<<<<<<<<<<<<
@@ -28047,7 +28604,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":745
+  /* "MUSCython/RLE_BWTCython.pyx":760
  *             fwrite(&readID, 8, 1, fp)
  * 
  *         fclose(fp)             # <<<<<<<<<<<<<<
@@ -28056,38 +28613,38 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   (void)(fclose(__pyx_v_fp));
 
-  /* "MUSCython/RLE_BWTCython.pyx":747
+  /* "MUSCython/RLE_BWTCython.pyx":762
  *         fclose(fp)
  * 
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] delIndices = np.memmap(deletionFN, dtype='<u8')             # <<<<<<<<<<<<<<
  * 
  *         if logger != None:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 747, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 762, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_memmap); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 747, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_memmap); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 762, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 747, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 762, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_deletionFN);
   __Pyx_GIVEREF(__pyx_v_deletionFN);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_deletionFN)) __PYX_ERR(0, 747, __pyx_L1_error);
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 747, __pyx_L1_error)
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_deletionFN)) __PYX_ERR(0, 762, __pyx_L1_error);
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 762, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 747, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 747, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 762, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 762, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 747, __pyx_L1_error)
+  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 762, __pyx_L1_error)
   __pyx_t_17 = ((PyArrayObject *)__pyx_t_6);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_delIndices.rcbuffer->pybuffer, (PyObject*)__pyx_t_17, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_delIndices = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_delIndices.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 747, __pyx_L1_error)
+      __PYX_ERR(0, 762, __pyx_L1_error)
     } else {__pyx_pybuffernd_delIndices.diminfo[0].strides = __pyx_pybuffernd_delIndices.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_delIndices.diminfo[0].shape = __pyx_pybuffernd_delIndices.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -28095,26 +28652,26 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   __pyx_v_delIndices = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":749
+  /* "MUSCython/RLE_BWTCython.pyx":764
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] delIndices = np.memmap(deletionFN, dtype='<u8')
  * 
  *         if logger != None:             # <<<<<<<<<<<<<<
  *             logger.info('Sorting indices for deletion...')
  * 
  */
-  __pyx_t_6 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 749, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 749, __pyx_L1_error)
+  __pyx_t_6 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 764, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 764, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   if (__pyx_t_2) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":750
+    /* "MUSCython/RLE_BWTCython.pyx":765
  * 
  *         if logger != None:
  *             logger.info('Sorting indices for deletion...')             # <<<<<<<<<<<<<<
  * 
  *         delIndices.sort()
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 750, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 765, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_3 = NULL;
     __pyx_t_7 = 0;
@@ -28134,13 +28691,13 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_kp_s_Sorting_indices_for_deletion};
       __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 750, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 765, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":749
+    /* "MUSCython/RLE_BWTCython.pyx":764
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] delIndices = np.memmap(deletionFN, dtype='<u8')
  * 
  *         if logger != None:             # <<<<<<<<<<<<<<
@@ -28149,14 +28706,14 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":752
+  /* "MUSCython/RLE_BWTCython.pyx":767
  *             logger.info('Sorting indices for deletion...')
  * 
  *         delIndices.sort()             # <<<<<<<<<<<<<<
  *         #second, sort the list and then go through in order modifying our file for our compressed BWT
  *         #deletionIndices.sort()
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_delIndices), __pyx_n_s_sort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 752, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_delIndices), __pyx_n_s_sort); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_3 = NULL;
   __pyx_t_7 = 0;
@@ -28176,25 +28733,25 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     PyObject *__pyx_callargs[2] = {__pyx_t_3, NULL};
     __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_7, 0+__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 752, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 767, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":756
+  /* "MUSCython/RLE_BWTCython.pyx":771
  *         #deletionIndices.sort()
  *         #cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] delIndices = np.array(deletionIndices, dtype='<u8')
  *         cdef np.uint64_t [:] delIndices_view = delIndices             # <<<<<<<<<<<<<<
  *         cdef unsigned long currDel = 0
  *         cdef unsigned long totalDels = delIndices.shape[0]
  */
-  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_delIndices), PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 756, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_delIndices), PyBUF_WRITABLE); if (unlikely(!__pyx_t_10.memview)) __PYX_ERR(0, 771, __pyx_L1_error)
   __pyx_v_delIndices_view = __pyx_t_10;
   __pyx_t_10.memview = NULL;
   __pyx_t_10.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":757
+  /* "MUSCython/RLE_BWTCython.pyx":772
  *         #cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] delIndices = np.array(deletionIndices, dtype='<u8')
  *         cdef np.uint64_t [:] delIndices_view = delIndices
  *         cdef unsigned long currDel = 0             # <<<<<<<<<<<<<<
@@ -28203,17 +28760,17 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_currDel = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":758
+  /* "MUSCython/RLE_BWTCython.pyx":773
  *         cdef np.uint64_t [:] delIndices_view = delIndices
  *         cdef unsigned long currDel = 0
  *         cdef unsigned long totalDels = delIndices.shape[0]             # <<<<<<<<<<<<<<
  * 
  *         #go through each entry in the BWT
  */
-  __pyx_t_18 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_delIndices)); if (unlikely(__pyx_t_18 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 758, __pyx_L1_error)
+  __pyx_t_18 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_delIndices)); if (unlikely(__pyx_t_18 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 773, __pyx_L1_error)
   __pyx_v_totalDels = (__pyx_t_18[0]);
 
-  /* "MUSCython/RLE_BWTCython.pyx":761
+  /* "MUSCython/RLE_BWTCython.pyx":776
  * 
  *         #go through each entry in the BWT
  *         cdef unsigned long numBytes = self.bwt.shape[0]             # <<<<<<<<<<<<<<
@@ -28222,11 +28779,11 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_t_6 = ((PyObject *)__pyx_v_self->__pyx_base.bwt);
   __Pyx_INCREF(__pyx_t_6);
-  __pyx_t_18 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_6)); if (unlikely(__pyx_t_18 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_18 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_6)); if (unlikely(__pyx_t_18 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 776, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_v_numBytes = (__pyx_t_18[0]);
 
-  /* "MUSCython/RLE_BWTCython.pyx":765
+  /* "MUSCython/RLE_BWTCython.pyx":780
  *         #currentChar is the symbol we just read, prevChar is in the byte right before it
  *         cdef np.uint8_t currentChar
  *         cdef np.uint8_t prevChar = 255             # <<<<<<<<<<<<<<
@@ -28235,7 +28792,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_prevChar = 0xFF;
 
-  /* "MUSCython/RLE_BWTCython.pyx":768
+  /* "MUSCython/RLE_BWTCython.pyx":783
  * 
  *         #the position we are currently writing
  *         cdef unsigned long writeByte = 0             # <<<<<<<<<<<<<<
@@ -28244,7 +28801,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_writeByte = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":771
+  /* "MUSCython/RLE_BWTCython.pyx":786
  * 
  *         #the last run symbol and the last run count
  *         cdef np.uint8_t lastRunSym = 255             # <<<<<<<<<<<<<<
@@ -28253,7 +28810,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_lastRunSym = 0xFF;
 
-  /* "MUSCython/RLE_BWTCython.pyx":772
+  /* "MUSCython/RLE_BWTCython.pyx":787
  *         #the last run symbol and the last run count
  *         cdef np.uint8_t lastRunSym = 255
  *         cdef unsigned long lastRunCount = 0             # <<<<<<<<<<<<<<
@@ -28262,7 +28819,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_lastRunCount = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":775
+  /* "MUSCython/RLE_BWTCython.pyx":790
  * 
  *         #these values are related to the current run we're looking at
  *         cdef unsigned long currentCount = 0             # <<<<<<<<<<<<<<
@@ -28271,7 +28828,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_currentCount = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":776
+  /* "MUSCython/RLE_BWTCython.pyx":791
  *         #these values are related to the current run we're looking at
  *         cdef unsigned long currentCount = 0
  *         cdef unsigned long powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -28280,7 +28837,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_powerMultiple = 1;
 
-  /* "MUSCython/RLE_BWTCython.pyx":777
+  /* "MUSCython/RLE_BWTCython.pyx":792
  *         cdef unsigned long currentCount = 0
  *         cdef unsigned long powerMultiple = 1
  *         cdef unsigned long totalCounted = 0             # <<<<<<<<<<<<<<
@@ -28289,7 +28846,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_totalCounted = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":778
+  /* "MUSCython/RLE_BWTCython.pyx":793
  *         cdef unsigned long powerMultiple = 1
  *         cdef unsigned long totalCounted = 0
  *         cdef np.uint8_t NUM_MASK = (0xFF >> letterBits)#0x1F             # <<<<<<<<<<<<<<
@@ -28298,26 +28855,26 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_NUM_MASK = (0xFF >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits);
 
-  /* "MUSCython/RLE_BWTCython.pyx":780
+  /* "MUSCython/RLE_BWTCython.pyx":795
  *         cdef np.uint8_t NUM_MASK = (0xFF >> letterBits)#0x1F
  * 
  *         if logger != None:             # <<<<<<<<<<<<<<
  *             logger.info('Deleting indices...')
  * 
  */
-  __pyx_t_6 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 780, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 780, __pyx_L1_error)
+  __pyx_t_6 = PyObject_RichCompare(__pyx_v_logger, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 795, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 795, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   if (__pyx_t_2) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":781
+    /* "MUSCython/RLE_BWTCython.pyx":796
  * 
  *         if logger != None:
  *             logger.info('Deleting indices...')             # <<<<<<<<<<<<<<
  * 
  *         #i = the read byte index for this part of the code
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 781, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 796, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_3 = NULL;
     __pyx_t_7 = 0;
@@ -28337,13 +28894,13 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_kp_s_Deleting_indices};
       __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 781, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 796, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":780
+    /* "MUSCython/RLE_BWTCython.pyx":795
  *         cdef np.uint8_t NUM_MASK = (0xFF >> letterBits)#0x1F
  * 
  *         if logger != None:             # <<<<<<<<<<<<<<
@@ -28352,7 +28909,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":787
+  /* "MUSCython/RLE_BWTCython.pyx":802
  * 
  *         #go through each byte in the BWT
  *         for i in range(0, numBytes):             # <<<<<<<<<<<<<<
@@ -28364,7 +28921,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   for (__pyx_t_20 = 0; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
     __pyx_v_i = __pyx_t_20;
 
-    /* "MUSCython/RLE_BWTCython.pyx":789
+    /* "MUSCython/RLE_BWTCython.pyx":804
  *         for i in range(0, numBytes):
  *             #figure out which character is in this run
  *             currentChar = self.bwt_view[i] & mask             # <<<<<<<<<<<<<<
@@ -28374,7 +28931,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_21 = __pyx_v_i;
     __pyx_v_currentChar = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) & __pyx_e_9MUSCython_13RLE_BWTCython_mask);
 
-    /* "MUSCython/RLE_BWTCython.pyx":792
+    /* "MUSCython/RLE_BWTCython.pyx":807
  * 
  *             #compare the currentChar to the prevChar, tells us if a run is going on
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -28384,7 +28941,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_2 = (__pyx_v_currentChar == __pyx_v_prevChar);
     if (__pyx_t_2) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":794
+      /* "MUSCython/RLE_BWTCython.pyx":809
  *             if currentChar == prevChar:
  *                 #this is a continuation, so increment the power
  *                 powerMultiple *= numPower             # <<<<<<<<<<<<<<
@@ -28393,7 +28950,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_powerMultiple = (__pyx_v_powerMultiple * __pyx_e_9MUSCython_13RLE_BWTCython_numPower);
 
-      /* "MUSCython/RLE_BWTCython.pyx":792
+      /* "MUSCython/RLE_BWTCython.pyx":807
  * 
  *             #compare the currentChar to the prevChar, tells us if a run is going on
  *             if currentChar == prevChar:             # <<<<<<<<<<<<<<
@@ -28403,7 +28960,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       goto __pyx_L17;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":797
+    /* "MUSCython/RLE_BWTCython.pyx":812
  *             else:
  *                 #increase the number of counted symbols
  *                 totalCounted += currentCount             # <<<<<<<<<<<<<<
@@ -28413,7 +28970,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     /*else*/ {
       __pyx_v_totalCounted = (__pyx_v_totalCounted + __pyx_v_currentCount);
 
-      /* "MUSCython/RLE_BWTCython.pyx":800
+      /* "MUSCython/RLE_BWTCython.pyx":815
  * 
  *                 #while we still have deletions and those deletions are in this range, reduce the count and delete the string
  *                 while currDel < totalDels and delIndices_view[currDel] < totalCounted:             # <<<<<<<<<<<<<<
@@ -28433,7 +28990,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_L20_bool_binop_done:;
         if (!__pyx_t_2) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":801
+        /* "MUSCython/RLE_BWTCython.pyx":816
  *                 #while we still have deletions and those deletions are in this range, reduce the count and delete the string
  *                 while currDel < totalDels and delIndices_view[currDel] < totalCounted:
  *                     currentCount -= 1             # <<<<<<<<<<<<<<
@@ -28442,7 +28999,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
         __pyx_v_currentCount = (__pyx_v_currentCount - 1);
 
-        /* "MUSCython/RLE_BWTCython.pyx":802
+        /* "MUSCython/RLE_BWTCython.pyx":817
  *                 while currDel < totalDels and delIndices_view[currDel] < totalCounted:
  *                     currentCount -= 1
  *                     currDel += 1             # <<<<<<<<<<<<<<
@@ -28452,7 +29009,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_v_currDel = (__pyx_v_currDel + 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":804
+      /* "MUSCython/RLE_BWTCython.pyx":819
  *                     currDel += 1
  * 
  *                 if currentCount > 0:             # <<<<<<<<<<<<<<
@@ -28462,7 +29019,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_t_2 = (__pyx_v_currentCount > 0);
       if (__pyx_t_2) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":805
+        /* "MUSCython/RLE_BWTCython.pyx":820
  * 
  *                 if currentCount > 0:
  *                     if prevChar == lastRunSym:             # <<<<<<<<<<<<<<
@@ -28472,7 +29029,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_t_2 = (__pyx_v_prevChar == __pyx_v_lastRunSym);
         if (__pyx_t_2) {
 
-          /* "MUSCython/RLE_BWTCython.pyx":807
+          /* "MUSCython/RLE_BWTCython.pyx":822
  *                     if prevChar == lastRunSym:
  *                         #we are basically extending a previously discovered run, so just add the counts on in
  *                         lastRunCount += currentCount             # <<<<<<<<<<<<<<
@@ -28481,7 +29038,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
           __pyx_v_lastRunCount = (__pyx_v_lastRunCount + __pyx_v_currentCount);
 
-          /* "MUSCython/RLE_BWTCython.pyx":805
+          /* "MUSCython/RLE_BWTCython.pyx":820
  * 
  *                 if currentCount > 0:
  *                     if prevChar == lastRunSym:             # <<<<<<<<<<<<<<
@@ -28491,7 +29048,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
           goto __pyx_L23;
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":810
+        /* "MUSCython/RLE_BWTCython.pyx":825
  *                     else:
  *                         #symbols are different, time to write out our previous run
  *                         while lastRunCount > 0:             # <<<<<<<<<<<<<<
@@ -28503,7 +29060,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
             __pyx_t_2 = (__pyx_v_lastRunCount > 0);
             if (!__pyx_t_2) break;
 
-            /* "MUSCython/RLE_BWTCython.pyx":811
+            /* "MUSCython/RLE_BWTCython.pyx":826
  *                         #symbols are different, time to write out our previous run
  *                         while lastRunCount > 0:
  *                             self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym             # <<<<<<<<<<<<<<
@@ -28513,7 +29070,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
             __pyx_t_21 = __pyx_v_writeByte;
             *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) )) = (((__pyx_v_lastRunCount & __pyx_v_NUM_MASK) << __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) | __pyx_v_lastRunSym);
 
-            /* "MUSCython/RLE_BWTCython.pyx":812
+            /* "MUSCython/RLE_BWTCython.pyx":827
  *                         while lastRunCount > 0:
  *                             self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym
  *                             lastRunCount = lastRunCount >> numberBits             # <<<<<<<<<<<<<<
@@ -28522,7 +29079,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
             __pyx_v_lastRunCount = (__pyx_v_lastRunCount >> __pyx_e_9MUSCython_13RLE_BWTCython_numberBits);
 
-            /* "MUSCython/RLE_BWTCython.pyx":813
+            /* "MUSCython/RLE_BWTCython.pyx":828
  *                             self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym
  *                             lastRunCount = lastRunCount >> numberBits
  *                             writeByte += 1             # <<<<<<<<<<<<<<
@@ -28532,7 +29089,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
             __pyx_v_writeByte = (__pyx_v_writeByte + 1);
           }
 
-          /* "MUSCython/RLE_BWTCython.pyx":816
+          /* "MUSCython/RLE_BWTCython.pyx":831
  * 
  *                         #now store the next run
  *                         lastRunSym = prevChar             # <<<<<<<<<<<<<<
@@ -28541,7 +29098,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
           __pyx_v_lastRunSym = __pyx_v_prevChar;
 
-          /* "MUSCython/RLE_BWTCython.pyx":817
+          /* "MUSCython/RLE_BWTCython.pyx":832
  *                         #now store the next run
  *                         lastRunSym = prevChar
  *                         lastRunCount = currentCount             # <<<<<<<<<<<<<<
@@ -28552,7 +29109,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         }
         __pyx_L23:;
 
-        /* "MUSCython/RLE_BWTCython.pyx":804
+        /* "MUSCython/RLE_BWTCython.pyx":819
  *                     currDel += 1
  * 
  *                 if currentCount > 0:             # <<<<<<<<<<<<<<
@@ -28562,7 +29119,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         goto __pyx_L22;
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":820
+      /* "MUSCython/RLE_BWTCython.pyx":835
  *                 else:
  *                     #no reason to change anything I think
  *                     pass             # <<<<<<<<<<<<<<
@@ -28573,7 +29130,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       }
       __pyx_L22:;
 
-      /* "MUSCython/RLE_BWTCython.pyx":823
+      /* "MUSCython/RLE_BWTCython.pyx":838
  * 
  *                 #reset our read count stuff
  *                 powerMultiple = 1             # <<<<<<<<<<<<<<
@@ -28582,7 +29139,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_powerMultiple = 1;
 
-      /* "MUSCython/RLE_BWTCython.pyx":824
+      /* "MUSCython/RLE_BWTCython.pyx":839
  *                 #reset our read count stuff
  *                 powerMultiple = 1
  *                 currentCount = 0             # <<<<<<<<<<<<<<
@@ -28591,7 +29148,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_currentCount = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":825
+      /* "MUSCython/RLE_BWTCython.pyx":840
  *                 powerMultiple = 1
  *                 currentCount = 0
  *                 prevChar = currentChar             # <<<<<<<<<<<<<<
@@ -28602,7 +29159,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     }
     __pyx_L17:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":828
+    /* "MUSCython/RLE_BWTCython.pyx":843
  * 
  *             #add the count based on the current multiple
  *             currentCount += (self.bwt_view[i] >> letterBits)*powerMultiple             # <<<<<<<<<<<<<<
@@ -28613,7 +29170,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_v_currentCount = (__pyx_v_currentCount + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) ))) >> __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) * __pyx_v_powerMultiple));
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":831
+  /* "MUSCython/RLE_BWTCython.pyx":846
  * 
  *         #do this one last time in case there's a late deletion
  *         totalCounted += currentCount             # <<<<<<<<<<<<<<
@@ -28622,7 +29179,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   __pyx_v_totalCounted = (__pyx_v_totalCounted + __pyx_v_currentCount);
 
-  /* "MUSCython/RLE_BWTCython.pyx":832
+  /* "MUSCython/RLE_BWTCython.pyx":847
  *         #do this one last time in case there's a late deletion
  *         totalCounted += currentCount
  *         while currDel < totalDels and delIndices_view[currDel] < totalCounted:             # <<<<<<<<<<<<<<
@@ -28642,7 +29199,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_L28_bool_binop_done:;
     if (!__pyx_t_2) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":833
+    /* "MUSCython/RLE_BWTCython.pyx":848
  *         totalCounted += currentCount
  *         while currDel < totalDels and delIndices_view[currDel] < totalCounted:
  *             currentCount -= 1             # <<<<<<<<<<<<<<
@@ -28651,7 +29208,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_v_currentCount = (__pyx_v_currentCount - 1);
 
-    /* "MUSCython/RLE_BWTCython.pyx":834
+    /* "MUSCython/RLE_BWTCython.pyx":849
  *         while currDel < totalDels and delIndices_view[currDel] < totalCounted:
  *             currentCount -= 1
  *             currDel += 1             # <<<<<<<<<<<<<<
@@ -28661,7 +29218,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_v_currDel = (__pyx_v_currDel + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":837
+  /* "MUSCython/RLE_BWTCython.pyx":852
  * 
  *         #first, check if there's something in the run that *may* need to be sucked into a previous run
  *         if currentCount > 0:             # <<<<<<<<<<<<<<
@@ -28671,7 +29228,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   __pyx_t_2 = (__pyx_v_currentCount > 0);
   if (__pyx_t_2) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":838
+    /* "MUSCython/RLE_BWTCython.pyx":853
  *         #first, check if there's something in the run that *may* need to be sucked into a previous run
  *         if currentCount > 0:
  *             if prevChar == lastRunSym:             # <<<<<<<<<<<<<<
@@ -28681,7 +29238,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_2 = (__pyx_v_prevChar == __pyx_v_lastRunSym);
     if (__pyx_t_2) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":840
+      /* "MUSCython/RLE_BWTCython.pyx":855
  *             if prevChar == lastRunSym:
  *                 #we are basically extending a previously discovered run, so just add the counts on in
  *                 lastRunCount += currentCount             # <<<<<<<<<<<<<<
@@ -28690,7 +29247,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_lastRunCount = (__pyx_v_lastRunCount + __pyx_v_currentCount);
 
-      /* "MUSCython/RLE_BWTCython.pyx":838
+      /* "MUSCython/RLE_BWTCython.pyx":853
  *         #first, check if there's something in the run that *may* need to be sucked into a previous run
  *         if currentCount > 0:
  *             if prevChar == lastRunSym:             # <<<<<<<<<<<<<<
@@ -28700,7 +29257,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       goto __pyx_L31;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":843
+    /* "MUSCython/RLE_BWTCython.pyx":858
  *             else:
  *                 #symbols are different, time to write out our previous run
  *                 while lastRunCount > 0:             # <<<<<<<<<<<<<<
@@ -28712,7 +29269,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_t_2 = (__pyx_v_lastRunCount > 0);
         if (!__pyx_t_2) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":844
+        /* "MUSCython/RLE_BWTCython.pyx":859
  *                 #symbols are different, time to write out our previous run
  *                 while lastRunCount > 0:
  *                     self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym             # <<<<<<<<<<<<<<
@@ -28722,7 +29279,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_t_21 = __pyx_v_writeByte;
         *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) )) = (((__pyx_v_lastRunCount & __pyx_v_NUM_MASK) << __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) | __pyx_v_lastRunSym);
 
-        /* "MUSCython/RLE_BWTCython.pyx":845
+        /* "MUSCython/RLE_BWTCython.pyx":860
  *                 while lastRunCount > 0:
  *                     self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym
  *                     lastRunCount = lastRunCount >> numberBits             # <<<<<<<<<<<<<<
@@ -28731,7 +29288,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
         __pyx_v_lastRunCount = (__pyx_v_lastRunCount >> __pyx_e_9MUSCython_13RLE_BWTCython_numberBits);
 
-        /* "MUSCython/RLE_BWTCython.pyx":846
+        /* "MUSCython/RLE_BWTCython.pyx":861
  *                     self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym
  *                     lastRunCount = lastRunCount >> numberBits
  *                     writeByte += 1             # <<<<<<<<<<<<<<
@@ -28741,7 +29298,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_v_writeByte = (__pyx_v_writeByte + 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":849
+      /* "MUSCython/RLE_BWTCython.pyx":864
  * 
  *                 #now store the next run
  *                 lastRunSym = prevChar             # <<<<<<<<<<<<<<
@@ -28750,7 +29307,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_lastRunSym = __pyx_v_prevChar;
 
-      /* "MUSCython/RLE_BWTCython.pyx":850
+      /* "MUSCython/RLE_BWTCython.pyx":865
  *                 #now store the next run
  *                 lastRunSym = prevChar
  *                 lastRunCount = currentCount             # <<<<<<<<<<<<<<
@@ -28761,7 +29318,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     }
     __pyx_L31:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":837
+    /* "MUSCython/RLE_BWTCython.pyx":852
  * 
  *         #first, check if there's something in the run that *may* need to be sucked into a previous run
  *         if currentCount > 0:             # <<<<<<<<<<<<<<
@@ -28770,7 +29327,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":853
+  /* "MUSCython/RLE_BWTCython.pyx":868
  * 
  *         #now write out the final run which we know is there
  *         while lastRunCount > 0:             # <<<<<<<<<<<<<<
@@ -28781,7 +29338,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_2 = (__pyx_v_lastRunCount > 0);
     if (!__pyx_t_2) break;
 
-    /* "MUSCython/RLE_BWTCython.pyx":854
+    /* "MUSCython/RLE_BWTCython.pyx":869
  *         #now write out the final run which we know is there
  *         while lastRunCount > 0:
  *             self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym             # <<<<<<<<<<<<<<
@@ -28791,7 +29348,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_21 = __pyx_v_writeByte;
     *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) )) = (((__pyx_v_lastRunCount & __pyx_v_NUM_MASK) << __pyx_e_9MUSCython_13RLE_BWTCython_letterBits) | __pyx_v_lastRunSym);
 
-    /* "MUSCython/RLE_BWTCython.pyx":855
+    /* "MUSCython/RLE_BWTCython.pyx":870
  *         while lastRunCount > 0:
  *             self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym
  *             lastRunCount = lastRunCount >> numberBits             # <<<<<<<<<<<<<<
@@ -28800,7 +29357,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_v_lastRunCount = (__pyx_v_lastRunCount >> __pyx_e_9MUSCython_13RLE_BWTCython_numberBits);
 
-    /* "MUSCython/RLE_BWTCython.pyx":856
+    /* "MUSCython/RLE_BWTCython.pyx":871
  *             self.bwt_view[writeByte] = ((lastRunCount & NUM_MASK) << letterBits) | lastRunSym
  *             lastRunCount = lastRunCount >> numberBits
  *             writeByte += 1             # <<<<<<<<<<<<<<
@@ -28810,7 +29367,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_v_writeByte = (__pyx_v_writeByte + 1);
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":859
+  /* "MUSCython/RLE_BWTCython.pyx":874
  * 
  *         #finally, clear out everything from the current write byte to the maximum array size
  *         for j in range(writeByte, numBytes):             # <<<<<<<<<<<<<<
@@ -28822,7 +29379,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   for (__pyx_t_20 = __pyx_v_writeByte; __pyx_t_20 < __pyx_t_19; __pyx_t_20+=1) {
     __pyx_v_j = __pyx_t_20;
 
-    /* "MUSCython/RLE_BWTCython.pyx":860
+    /* "MUSCython/RLE_BWTCython.pyx":875
  *         #finally, clear out everything from the current write byte to the maximum array size
  *         for j in range(writeByte, numBytes):
  *             self.bwt_view[j] = 0x00             # <<<<<<<<<<<<<<
@@ -28833,7 +29390,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.bwt_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.bwt_view.strides[0]) )) = 0x00;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":865
+  /* "MUSCython/RLE_BWTCython.pyx":880
  *         cdef unsigned long writeLcp
  *         cdef unsigned long readLcp
  *         if self.lcpsPresent:             # <<<<<<<<<<<<<<
@@ -28842,7 +29399,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   if (__pyx_v_self->__pyx_base.lcpsPresent) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":867
+    /* "MUSCython/RLE_BWTCython.pyx":882
  *         if self.lcpsPresent:
  *             #initialize
  *             writeLcp = 0             # <<<<<<<<<<<<<<
@@ -28851,7 +29408,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_v_writeLcp = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":868
+    /* "MUSCython/RLE_BWTCython.pyx":883
  *             #initialize
  *             writeLcp = 0
  *             readLcp = 0             # <<<<<<<<<<<<<<
@@ -28860,7 +29417,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_v_readLcp = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":869
+    /* "MUSCython/RLE_BWTCython.pyx":884
  *             writeLcp = 0
  *             readLcp = 0
  *             currDel = 0             # <<<<<<<<<<<<<<
@@ -28869,7 +29426,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_v_currDel = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":872
+    /* "MUSCython/RLE_BWTCython.pyx":887
  * 
  *             #skip over deletions in the beginning
  *             while currDel < totalDels and delIndices_view[currDel] == readLcp:             # <<<<<<<<<<<<<<
@@ -28889,7 +29446,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_L41_bool_binop_done:;
       if (!__pyx_t_2) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":873
+      /* "MUSCython/RLE_BWTCython.pyx":888
  *             #skip over deletions in the beginning
  *             while currDel < totalDels and delIndices_view[currDel] == readLcp:
  *                 currDel += 1             # <<<<<<<<<<<<<<
@@ -28898,7 +29455,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_currDel = (__pyx_v_currDel + 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":874
+      /* "MUSCython/RLE_BWTCython.pyx":889
  *             while currDel < totalDels and delIndices_view[currDel] == readLcp:
  *                 currDel += 1
  *                 readLcp += 1             # <<<<<<<<<<<<<<
@@ -28908,7 +29465,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_v_readLcp = (__pyx_v_readLcp + 1);
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":877
+    /* "MUSCython/RLE_BWTCython.pyx":892
  * 
  *             #writeLcp will always be one past what we just wrote, readLcp is the same
  *             self.lcps_view[writeLcp] = self.lcps_view[readLcp]             # <<<<<<<<<<<<<<
@@ -28919,7 +29476,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_23 = __pyx_v_writeLcp;
     *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.lcps_view.data + __pyx_t_23 * __pyx_v_self->__pyx_base.lcps_view.strides[0]) )) = (*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.lcps_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.lcps_view.strides[0]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":878
+    /* "MUSCython/RLE_BWTCython.pyx":893
  *             #writeLcp will always be one past what we just wrote, readLcp is the same
  *             self.lcps_view[writeLcp] = self.lcps_view[readLcp]
  *             writeLcp += 1             # <<<<<<<<<<<<<<
@@ -28928,7 +29485,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_v_writeLcp = (__pyx_v_writeLcp + 1);
 
-    /* "MUSCython/RLE_BWTCython.pyx":879
+    /* "MUSCython/RLE_BWTCython.pyx":894
  *             self.lcps_view[writeLcp] = self.lcps_view[readLcp]
  *             writeLcp += 1
  *             readLcp += 1             # <<<<<<<<<<<<<<
@@ -28937,7 +29494,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_v_readLcp = (__pyx_v_readLcp + 1);
 
-    /* "MUSCython/RLE_BWTCython.pyx":882
+    /* "MUSCython/RLE_BWTCython.pyx":897
  * 
  *             #while we have more deletions
  *             while currDel < totalDels:             # <<<<<<<<<<<<<<
@@ -28948,7 +29505,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_t_2 = (__pyx_v_currDel < __pyx_v_totalDels);
       if (!__pyx_t_2) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":884
+      /* "MUSCython/RLE_BWTCython.pyx":899
  *             while currDel < totalDels:
  *                 #iterate straight to the next deletion
  *                 for x in range(readLcp, delIndices_view[currDel]):             # <<<<<<<<<<<<<<
@@ -28961,7 +29518,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       for (__pyx_t_15 = __pyx_v_readLcp; __pyx_t_15 < __pyx_t_25; __pyx_t_15+=1) {
         __pyx_v_x = __pyx_t_15;
 
-        /* "MUSCython/RLE_BWTCython.pyx":885
+        /* "MUSCython/RLE_BWTCython.pyx":900
  *                 #iterate straight to the next deletion
  *                 for x in range(readLcp, delIndices_view[currDel]):
  *                     self.lcps_view[writeLcp] = self.lcps_view[readLcp]             # <<<<<<<<<<<<<<
@@ -28972,7 +29529,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_t_23 = __pyx_v_writeLcp;
         *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.lcps_view.data + __pyx_t_23 * __pyx_v_self->__pyx_base.lcps_view.strides[0]) )) = (*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.lcps_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.lcps_view.strides[0]) )));
 
-        /* "MUSCython/RLE_BWTCython.pyx":886
+        /* "MUSCython/RLE_BWTCython.pyx":901
  *                 for x in range(readLcp, delIndices_view[currDel]):
  *                     self.lcps_view[writeLcp] = self.lcps_view[readLcp]
  *                     writeLcp += 1             # <<<<<<<<<<<<<<
@@ -28981,7 +29538,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
         __pyx_v_writeLcp = (__pyx_v_writeLcp + 1);
 
-        /* "MUSCython/RLE_BWTCython.pyx":887
+        /* "MUSCython/RLE_BWTCython.pyx":902
  *                     self.lcps_view[writeLcp] = self.lcps_view[readLcp]
  *                     writeLcp += 1
  *                     readLcp += 1             # <<<<<<<<<<<<<<
@@ -28991,7 +29548,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
         __pyx_v_readLcp = (__pyx_v_readLcp + 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":891
+      /* "MUSCython/RLE_BWTCython.pyx":906
  *                 #if we are deleting index 'x', then our write goes in index 'x-1' AND
  *                 #is the minimum that 'x-1' shares with 'x' and 'x' shares with 'x+1'
  *                 self.lcps_view[writeLcp-1] = min(self.lcps_view[writeLcp-1], self.lcps_view[readLcp])             # <<<<<<<<<<<<<<
@@ -29011,7 +29568,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_t_21 = (__pyx_v_writeLcp - 1);
       *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.lcps_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.lcps_view.strides[0]) )) = __pyx_t_28;
 
-      /* "MUSCython/RLE_BWTCython.pyx":892
+      /* "MUSCython/RLE_BWTCython.pyx":907
  *                 #is the minimum that 'x-1' shares with 'x' and 'x' shares with 'x+1'
  *                 self.lcps_view[writeLcp-1] = min(self.lcps_view[writeLcp-1], self.lcps_view[readLcp])
  *                 readLcp += 1             # <<<<<<<<<<<<<<
@@ -29020,7 +29577,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
       __pyx_v_readLcp = (__pyx_v_readLcp + 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":893
+      /* "MUSCython/RLE_BWTCython.pyx":908
  *                 self.lcps_view[writeLcp-1] = min(self.lcps_view[writeLcp-1], self.lcps_view[readLcp])
  *                 readLcp += 1
  *                 currDel += 1             # <<<<<<<<<<<<<<
@@ -29030,7 +29587,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       __pyx_v_currDel = (__pyx_v_currDel + 1);
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":896
+    /* "MUSCython/RLE_BWTCython.pyx":911
  * 
  *             #now clear out all that remains
  *             for x in range(writeLcp, self.lcps.shape[0]):             # <<<<<<<<<<<<<<
@@ -29039,14 +29596,14 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     __pyx_t_6 = ((PyObject *)__pyx_v_self->__pyx_base.lcps);
     __Pyx_INCREF(__pyx_t_6);
-    __pyx_t_18 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_6)); if (unlikely(__pyx_t_18 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 896, __pyx_L1_error)
+    __pyx_t_18 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_t_6)); if (unlikely(__pyx_t_18 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 911, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_29 = (__pyx_t_18[0]);
     __pyx_t_30 = __pyx_t_29;
     for (__pyx_t_15 = __pyx_v_writeLcp; __pyx_t_15 < __pyx_t_30; __pyx_t_15+=1) {
       __pyx_v_x = __pyx_t_15;
 
-      /* "MUSCython/RLE_BWTCython.pyx":897
+      /* "MUSCython/RLE_BWTCython.pyx":912
  *             #now clear out all that remains
  *             for x in range(writeLcp, self.lcps.shape[0]):
  *                 self.lcps_view[x] = 0x00             # <<<<<<<<<<<<<<
@@ -29057,7 +29614,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
       *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.lcps_view.data + __pyx_t_21 * __pyx_v_self->__pyx_base.lcps_view.strides[0]) )) = 0x00;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":865
+    /* "MUSCython/RLE_BWTCython.pyx":880
  *         cdef unsigned long writeLcp
  *         cdef unsigned long readLcp
  *         if self.lcpsPresent:             # <<<<<<<<<<<<<<
@@ -29066,19 +29623,19 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":900
+  /* "MUSCython/RLE_BWTCython.pyx":915
  * 
  *         #clear Auxiliary data
  *         MSBWTGen.clearAuxiliaryData(self.dirName)             # <<<<<<<<<<<<<<
- *         try:
- *             os.remove(deletionFN)
+ *         # (Windows portability) close the deletion-index mapping first;
+ *         # os.remove() fails on Windows while a memory mapping is open.
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_MSBWTGen); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_MSBWTGen); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 915, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_clearAuxiliaryData); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_clearAuxiliaryData); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 915, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 900, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 915, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_7 = 0;
@@ -29099,15 +29656,73 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 900, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 915, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":901
- *         #clear Auxiliary data
- *         MSBWTGen.clearAuxiliaryData(self.dirName)
+  /* "MUSCython/RLE_BWTCython.pyx":918
+ *         # (Windows portability) close the deletion-index mapping first;
+ *         # os.remove() fails on Windows while a memory mapping is open.
+ *         if (<object>delIndices).base is not None:             # <<<<<<<<<<<<<<
+ *             (<object>delIndices).base.close()
+ *         try:
+ */
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_delIndices), __pyx_n_s_base); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 918, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_2 = (__pyx_t_6 != Py_None);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (__pyx_t_2) {
+
+    /* "MUSCython/RLE_BWTCython.pyx":919
+ *         # os.remove() fails on Windows while a memory mapping is open.
+ *         if (<object>delIndices).base is not None:
+ *             (<object>delIndices).base.close()             # <<<<<<<<<<<<<<
+ *         try:
+ *             os.remove(deletionFN)
+ */
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_delIndices), __pyx_n_s_base); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 919, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_close); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 919, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = NULL;
+    __pyx_t_7 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (likely(PyMethod_Check(__pyx_t_4))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_4);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+        __Pyx_INCREF(__pyx_t_3);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_4, function);
+        __pyx_t_7 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_3, NULL};
+      __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_7, 0+__pyx_t_7);
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 919, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+    /* "MUSCython/RLE_BWTCython.pyx":918
+ *         # (Windows portability) close the deletion-index mapping first;
+ *         # os.remove() fails on Windows while a memory mapping is open.
+ *         if (<object>delIndices).base is not None:             # <<<<<<<<<<<<<<
+ *             (<object>delIndices).base.close()
+ *         try:
+ */
+  }
+
+  /* "MUSCython/RLE_BWTCython.pyx":920
+ *         if (<object>delIndices).base is not None:
+ *             (<object>delIndices).base.close()
  *         try:             # <<<<<<<<<<<<<<
  *             os.remove(deletionFN)
  *         except:
@@ -29121,45 +29736,45 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __Pyx_XGOTREF(__pyx_t_33);
     /*try:*/ {
 
-      /* "MUSCython/RLE_BWTCython.pyx":902
- *         MSBWTGen.clearAuxiliaryData(self.dirName)
+      /* "MUSCython/RLE_BWTCython.pyx":921
+ *             (<object>delIndices).base.close()
  *         try:
  *             os.remove(deletionFN)             # <<<<<<<<<<<<<<
  *         except:
  *             print 'Failed to remove '+deletionFN+' from the file system, manual removal necessary.'
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_os); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 902, __pyx_L49_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_remove); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 902, __pyx_L49_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 921, __pyx_L50_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = NULL;
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_remove); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 921, __pyx_L50_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = NULL;
       __pyx_t_7 = 0;
       #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_4))) {
-        __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_4);
-        if (likely(__pyx_t_3)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-          __Pyx_INCREF(__pyx_t_3);
+      if (unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_4);
           __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_4, function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
           __pyx_t_7 = 1;
         }
       }
       #endif
       {
-        PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_deletionFN};
-        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
-        __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 902, __pyx_L49_error)
+        PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_deletionFN};
+        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_7, 1+__pyx_t_7);
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 921, __pyx_L50_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":901
- *         #clear Auxiliary data
- *         MSBWTGen.clearAuxiliaryData(self.dirName)
+      /* "MUSCython/RLE_BWTCython.pyx":920
+ *         if (<object>delIndices).base is not None:
+ *             (<object>delIndices).base.close()
  *         try:             # <<<<<<<<<<<<<<
  *             os.remove(deletionFN)
  *         except:
@@ -29168,8 +29783,8 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __Pyx_XDECREF(__pyx_t_31); __pyx_t_31 = 0;
     __Pyx_XDECREF(__pyx_t_32); __pyx_t_32 = 0;
     __Pyx_XDECREF(__pyx_t_33); __pyx_t_33 = 0;
-    goto __pyx_L54_try_end;
-    __pyx_L49_error:;
+    goto __pyx_L55_try_end;
+    __pyx_L50_error:;
     __PYX_XCLEAR_MEMVIEW(&__pyx_t_10, 1);
     __pyx_t_10.memview = NULL; __pyx_t_10.data = NULL;
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -29179,7 +29794,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
     __PYX_XCLEAR_MEMVIEW(&__pyx_t_8, 1);
     __pyx_t_8.memview = NULL; __pyx_t_8.data = NULL;
 
-    /* "MUSCython/RLE_BWTCython.pyx":903
+    /* "MUSCython/RLE_BWTCython.pyx":922
  *         try:
  *             os.remove(deletionFN)
  *         except:             # <<<<<<<<<<<<<<
@@ -29188,53 +29803,53 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
     /*except:*/ {
       __Pyx_AddTraceback("MUSCython.RLE_BWTCython.RLE_BWT.removeStrings", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_4, &__pyx_t_3) < 0) __PYX_ERR(0, 903, __pyx_L51_except_error)
+      if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_3, &__pyx_t_4) < 0) __PYX_ERR(0, 922, __pyx_L52_except_error)
       __Pyx_XGOTREF(__pyx_t_6);
-      __Pyx_XGOTREF(__pyx_t_4);
       __Pyx_XGOTREF(__pyx_t_3);
+      __Pyx_XGOTREF(__pyx_t_4);
 
-      /* "MUSCython/RLE_BWTCython.pyx":904
+      /* "MUSCython/RLE_BWTCython.pyx":923
  *             os.remove(deletionFN)
  *         except:
  *             print 'Failed to remove '+deletionFN+' from the file system, manual removal necessary.'             # <<<<<<<<<<<<<<
  * 
  *         #reload if specified (by default, we will reload)
  */
-      __pyx_t_5 = __Pyx_PyStr_Concat(__pyx_kp_s_Failed_to_remove, __pyx_v_deletionFN); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 904, __pyx_L51_except_error)
+      __pyx_t_5 = __Pyx_PyStr_Concat(__pyx_kp_s_Failed_to_remove, __pyx_v_deletionFN); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 923, __pyx_L52_except_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_34 = __Pyx_PyStr_ConcatInPlace(__pyx_t_5, __pyx_kp_s_from_the_file_system_manual_rem); if (unlikely(!__pyx_t_34)) __PYX_ERR(0, 904, __pyx_L51_except_error)
+      __pyx_t_34 = __Pyx_PyStr_ConcatInPlace(__pyx_t_5, __pyx_kp_s_from_the_file_system_manual_rem); if (unlikely(!__pyx_t_34)) __PYX_ERR(0, 923, __pyx_L52_except_error)
       __Pyx_GOTREF(__pyx_t_34);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (__Pyx_PrintOne(0, __pyx_t_34) < 0) __PYX_ERR(0, 904, __pyx_L51_except_error)
+      if (__Pyx_PrintOne(0, __pyx_t_34) < 0) __PYX_ERR(0, 923, __pyx_L52_except_error)
       __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      goto __pyx_L50_exception_handled;
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      goto __pyx_L51_exception_handled;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":901
- *         #clear Auxiliary data
- *         MSBWTGen.clearAuxiliaryData(self.dirName)
+    /* "MUSCython/RLE_BWTCython.pyx":920
+ *         if (<object>delIndices).base is not None:
+ *             (<object>delIndices).base.close()
  *         try:             # <<<<<<<<<<<<<<
  *             os.remove(deletionFN)
  *         except:
  */
-    __pyx_L51_except_error:;
+    __pyx_L52_except_error:;
     __Pyx_XGIVEREF(__pyx_t_31);
     __Pyx_XGIVEREF(__pyx_t_32);
     __Pyx_XGIVEREF(__pyx_t_33);
     __Pyx_ExceptionReset(__pyx_t_31, __pyx_t_32, __pyx_t_33);
     goto __pyx_L1_error;
-    __pyx_L50_exception_handled:;
+    __pyx_L51_exception_handled:;
     __Pyx_XGIVEREF(__pyx_t_31);
     __Pyx_XGIVEREF(__pyx_t_32);
     __Pyx_XGIVEREF(__pyx_t_33);
     __Pyx_ExceptionReset(__pyx_t_31, __pyx_t_32, __pyx_t_33);
-    __pyx_L54_try_end:;
+    __pyx_L55_try_end:;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":907
+  /* "MUSCython/RLE_BWTCython.pyx":926
  * 
  *         #reload if specified (by default, we will reload)
  *         if reloadBWT:             # <<<<<<<<<<<<<<
@@ -29243,56 +29858,56 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   if (__pyx_v_reloadBWT) {
 
-    /* "MUSCython/RLE_BWTCython.pyx":909
+    /* "MUSCython/RLE_BWTCython.pyx":928
  *         if reloadBWT:
  *             #reload the bwt from the same directory, use whatever method was prescribed before
  *             self.loadMsbwt(self.dirName, self.useMemmapRLE, None)             # <<<<<<<<<<<<<<
  *         else:
  *             #USER IS RESPONSIBLE FOR RELOADING THE BWT
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_loadMsbwt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 909, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 909, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_loadMsbwt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 928, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_6 = __Pyx_PyBytes_FromString(__pyx_v_self->__pyx_base.dirName); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 928, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_34 = __Pyx_PyBool_FromLong(__pyx_v_self->useMemmapRLE); if (unlikely(!__pyx_t_34)) __PYX_ERR(0, 909, __pyx_L1_error)
+    __pyx_t_34 = __Pyx_PyBool_FromLong(__pyx_v_self->useMemmapRLE); if (unlikely(!__pyx_t_34)) __PYX_ERR(0, 928, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_34);
     __pyx_t_5 = NULL;
     __pyx_t_7 = 0;
     #if CYTHON_UNPACK_METHODS
-    if (likely(PyMethod_Check(__pyx_t_4))) {
-      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
       if (likely(__pyx_t_5)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_5);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_4, function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
         __pyx_t_7 = 1;
       }
     }
     #endif
     {
       PyObject *__pyx_callargs[4] = {__pyx_t_5, __pyx_t_6, __pyx_t_34, Py_None};
-      __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_7, 3+__pyx_t_7);
+      __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_7, 3+__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_34); __pyx_t_34 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 909, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 928, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "MUSCython/RLE_BWTCython.pyx":907
+    /* "MUSCython/RLE_BWTCython.pyx":926
  * 
  *         #reload if specified (by default, we will reload)
  *         if reloadBWT:             # <<<<<<<<<<<<<<
  *             #reload the bwt from the same directory, use whatever method was prescribed before
  *             self.loadMsbwt(self.dirName, self.useMemmapRLE, None)
  */
-    goto __pyx_L57;
+    goto __pyx_L58;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":912
+  /* "MUSCython/RLE_BWTCython.pyx":931
  *         else:
  *             #USER IS RESPONSIBLE FOR RELOADING THE BWT
  *             pass             # <<<<<<<<<<<<<<
@@ -29301,9 +29916,9 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
  */
   /*else*/ {
   }
-  __pyx_L57:;
+  __pyx_L58:;
 
-  /* "MUSCython/RLE_BWTCython.pyx":684
+  /* "MUSCython/RLE_BWTCython.pyx":697
  *         return ret
  * 
  *     def removeStrings(RLE_BWT self, set delSet, bint reloadBWT=True, logger=None):             # <<<<<<<<<<<<<<
@@ -29346,7 +29961,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_18removeStrings(st
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":914
+/* "MUSCython/RLE_BWTCython.pyx":933
  *             pass
  * 
  *     cpdef set findReadsMatchingSeq(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
@@ -29404,11 +30019,11 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_findReadsMatchingSeq); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 914, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_findReadsMatchingSeq); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 933, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_9MUSCython_13RLE_BWTCython_7RLE_BWT_21findReadsMatchingSeq)) {
         __Pyx_XDECREF(__pyx_r);
-        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_strLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 914, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_strLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 933, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -29430,11 +30045,11 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 914, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 933, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        if (!(likely(PySet_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("set", __pyx_t_2))) __PYX_ERR(0, 914, __pyx_L1_error)
+        if (!(likely(PySet_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("set", __pyx_t_2))) __PYX_ERR(0, 933, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -29453,7 +30068,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     #endif
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":923
+  /* "MUSCython/RLE_BWTCython.pyx":942
  *         '''
  *         #currLen = the length of the l-h k-mer at all time
  *         cdef unsigned long currLen = 0             # <<<<<<<<<<<<<<
@@ -29462,19 +30077,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_currLen = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":924
+  /* "MUSCython/RLE_BWTCython.pyx":943
  *         #currLen = the length of the l-h k-mer at all time
  *         cdef unsigned long currLen = 0
  *         cdef set readSet = set([])             # <<<<<<<<<<<<<<
  * 
  *         cdef unsigned long l = 0
  */
-  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 924, __pyx_L1_error)
+  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 943, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_readSet = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":926
+  /* "MUSCython/RLE_BWTCython.pyx":945
  *         cdef set readSet = set([])
  * 
  *         cdef unsigned long l = 0             # <<<<<<<<<<<<<<
@@ -29483,7 +30098,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_l = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":927
+  /* "MUSCython/RLE_BWTCython.pyx":946
  * 
  *         cdef unsigned long l = 0
  *         cdef unsigned long h = self.totalSize             # <<<<<<<<<<<<<<
@@ -29493,7 +30108,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
   __pyx_v_h = __pyx_t_7;
 
-  /* "MUSCython/RLE_BWTCython.pyx":928
+  /* "MUSCython/RLE_BWTCython.pyx":947
  *         cdef unsigned long l = 0
  *         cdef unsigned long h = self.totalSize
  *         cdef unsigned long s = len(seq)             # <<<<<<<<<<<<<<
@@ -29502,12 +30117,12 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   if (unlikely(__pyx_v_seq == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 928, __pyx_L1_error)
+    __PYX_ERR(0, 947, __pyx_L1_error)
   }
-  __pyx_t_8 = __Pyx_PyBytes_GET_SIZE(__pyx_v_seq); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 928, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyBytes_GET_SIZE(__pyx_v_seq); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 947, __pyx_L1_error)
   __pyx_v_s = __pyx_t_8;
 
-  /* "MUSCython/RLE_BWTCython.pyx":936
+  /* "MUSCython/RLE_BWTCython.pyx":955
  * 
  *         #create a view of the sequence that can be used in a nogil region
  *         cdef unsigned char * seq_view = seq             # <<<<<<<<<<<<<<
@@ -29516,12 +30131,12 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   if (unlikely(__pyx_v_seq == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 936, __pyx_L1_error)
+    __PYX_ERR(0, 955, __pyx_L1_error)
   }
-  __pyx_t_9 = __Pyx_PyBytes_AsWritableUString(__pyx_v_seq); if (unlikely((!__pyx_t_9) && PyErr_Occurred())) __PYX_ERR(0, 936, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyBytes_AsWritableUString(__pyx_v_seq); if (unlikely((!__pyx_t_9) && PyErr_Occurred())) __PYX_ERR(0, 955, __pyx_L1_error)
   __pyx_v_seq_view = __pyx_t_9;
 
-  /* "MUSCython/RLE_BWTCython.pyx":939
+  /* "MUSCython/RLE_BWTCython.pyx":958
  * 
  *         #with nogil:
  *         for x in range(s-1, -1, -1):             # <<<<<<<<<<<<<<
@@ -29531,7 +30146,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   for (__pyx_t_10 = (__pyx_v_s - 1); __pyx_t_10 > -1L; __pyx_t_10-=1) {
     __pyx_v_x = __pyx_t_10;
 
-    /* "MUSCython/RLE_BWTCython.pyx":941
+    /* "MUSCython/RLE_BWTCython.pyx":960
  *         for x in range(s-1, -1, -1):
  *             #get the character from the sequence, then search at both high and low
  *             c = self.charToNum_view[seq_view[x]]             # <<<<<<<<<<<<<<
@@ -29541,27 +30156,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_t_11 = (__pyx_v_seq_view[__pyx_v_x]);
     __pyx_v_c = (*((unsigned char *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.charToNum_view.data + __pyx_t_11 * __pyx_v_self->__pyx_base.charToNum_view.strides[0]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":942
+    /* "MUSCython/RLE_BWTCython.pyx":961
  *             #get the character from the sequence, then search at both high and low
  *             c = self.charToNum_view[seq_view[x]]
  *             newL = self.getOccurrenceOfCharAtIndex(c, l)             # <<<<<<<<<<<<<<
  *             newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 942, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 961, __pyx_L1_error)
     __pyx_v_newL = __pyx_t_7;
 
-    /* "MUSCython/RLE_BWTCython.pyx":943
+    /* "MUSCython/RLE_BWTCython.pyx":962
  *             c = self.charToNum_view[seq_view[x]]
  *             newL = self.getOccurrenceOfCharAtIndex(c, l)
  *             newH = self.getOccurrenceOfCharAtIndex(c, h)             # <<<<<<<<<<<<<<
  * 
  *             #currLen = the length of the l-h k-mer
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 943, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 962, __pyx_L1_error)
     __pyx_v_newH = __pyx_t_7;
 
-    /* "MUSCython/RLE_BWTCython.pyx":948
+    /* "MUSCython/RLE_BWTCython.pyx":967
  * 
  *             #while the new low and high are the same and we still have some length on the base k-mer
  *             while newL == newH and currLen > 0:             # <<<<<<<<<<<<<<
@@ -29580,7 +30195,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_L7_bool_binop_done:;
       if (!__pyx_t_12) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":950
+      /* "MUSCython/RLE_BWTCython.pyx":969
  *             while newL == newH and currLen > 0:
  *                 #decrease currLen and loosen the k-mers to match it
  *                 currLen -= 1             # <<<<<<<<<<<<<<
@@ -29589,7 +30204,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_currLen = (__pyx_v_currLen - 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":951
+      /* "MUSCython/RLE_BWTCython.pyx":970
  *                 #decrease currLen and loosen the k-mers to match it
  *                 currLen -= 1
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -29609,7 +30224,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L11_bool_binop_done:;
         if (!__pyx_t_12) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":952
+        /* "MUSCython/RLE_BWTCython.pyx":971
  *                 currLen -= 1
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:
  *                     l -= 1             # <<<<<<<<<<<<<<
@@ -29619,7 +30234,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_l = (__pyx_v_l - 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":953
+      /* "MUSCython/RLE_BWTCython.pyx":972
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:
  *                     l -= 1
  *                 while h < self.totalSize and self.lcps_view[h-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -29639,7 +30254,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L15_bool_binop_done:;
         if (!__pyx_t_12) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":954
+        /* "MUSCython/RLE_BWTCython.pyx":973
  *                     l -= 1
  *                 while h < self.totalSize and self.lcps_view[h-1] >= currLen:
  *                     h += 1             # <<<<<<<<<<<<<<
@@ -29649,28 +30264,28 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_h = (__pyx_v_h + 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":957
+      /* "MUSCython/RLE_BWTCython.pyx":976
  * 
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, l)             # <<<<<<<<<<<<<<
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 957, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 976, __pyx_L1_error)
       __pyx_v_newL = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":958
+      /* "MUSCython/RLE_BWTCython.pyx":977
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, l)
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)             # <<<<<<<<<<<<<<
  * 
  *             if currLen == 0 and newL == newH:
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 958, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 977, __pyx_L1_error)
       __pyx_v_newH = __pyx_t_7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":960
+    /* "MUSCython/RLE_BWTCython.pyx":979
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  *             if currLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -29688,7 +30303,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_L18_bool_binop_done:;
     if (__pyx_t_12) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":962
+      /* "MUSCython/RLE_BWTCython.pyx":981
  *             if currLen == 0 and newL == newH:
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 l = 0             # <<<<<<<<<<<<<<
@@ -29697,7 +30312,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_l = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":963
+      /* "MUSCython/RLE_BWTCython.pyx":982
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 l = 0
  *                 h = self.totalSize             # <<<<<<<<<<<<<<
@@ -29707,7 +30322,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
       __pyx_v_h = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":960
+      /* "MUSCython/RLE_BWTCython.pyx":979
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  *             if currLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -29717,7 +30332,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       goto __pyx_L17;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":966
+    /* "MUSCython/RLE_BWTCython.pyx":985
  *             else:
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 l = newL             # <<<<<<<<<<<<<<
@@ -29727,7 +30342,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     /*else*/ {
       __pyx_v_l = __pyx_v_newL;
 
-      /* "MUSCython/RLE_BWTCython.pyx":967
+      /* "MUSCython/RLE_BWTCython.pyx":986
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 l = newL
  *                 h = newH             # <<<<<<<<<<<<<<
@@ -29736,7 +30351,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_h = __pyx_v_newH;
 
-      /* "MUSCython/RLE_BWTCython.pyx":968
+      /* "MUSCython/RLE_BWTCython.pyx":987
  *                 l = newL
  *                 h = newH
  *                 currLen += 1             # <<<<<<<<<<<<<<
@@ -29745,7 +30360,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_currLen = (__pyx_v_currLen + 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":971
+      /* "MUSCython/RLE_BWTCython.pyx":990
  * 
  *                 #also, we now check if we are at the read length
  *                 if currLen == strLen:             # <<<<<<<<<<<<<<
@@ -29755,27 +30370,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_12 = (__pyx_v_currLen == __pyx_v_strLen);
       if (__pyx_t_12) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":973
+        /* "MUSCython/RLE_BWTCython.pyx":992
  *                 if currLen == strLen:
  *                     #get all reads that match up
  *                     newL = self.getOccurrenceOfCharAtIndex(0, l)             # <<<<<<<<<<<<<<
  *                     newH = self.getOccurrenceOfCharAtIndex(0, h)
  * 
  */
-        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 973, __pyx_L1_error)
+        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 992, __pyx_L1_error)
         __pyx_v_newL = __pyx_t_7;
 
-        /* "MUSCython/RLE_BWTCython.pyx":974
+        /* "MUSCython/RLE_BWTCython.pyx":993
  *                     #get all reads that match up
  *                     newL = self.getOccurrenceOfCharAtIndex(0, l)
  *                     newH = self.getOccurrenceOfCharAtIndex(0, h)             # <<<<<<<<<<<<<<
  * 
  *                     #add each read on in
  */
-        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 974, __pyx_L1_error)
+        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 993, __pyx_L1_error)
         __pyx_v_newH = __pyx_t_7;
 
-        /* "MUSCython/RLE_BWTCython.pyx":977
+        /* "MUSCython/RLE_BWTCython.pyx":996
  * 
  *                     #add each read on in
  *                     for y in xrange(newL, newH):             # <<<<<<<<<<<<<<
@@ -29787,20 +30402,20 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         for (__pyx_t_15 = __pyx_v_newL; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
           __pyx_v_y = __pyx_t_15;
 
-          /* "MUSCython/RLE_BWTCython.pyx":978
+          /* "MUSCython/RLE_BWTCython.pyx":997
  *                     #add each read on in
  *                     for y in xrange(newL, newH):
  *                         readSet.add(y)             # <<<<<<<<<<<<<<
  * 
  *                     #now reduce the currLen and loosen
  */
-          __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 978, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 997, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_16 = PySet_Add(__pyx_v_readSet, __pyx_t_1); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 978, __pyx_L1_error)
+          __pyx_t_16 = PySet_Add(__pyx_v_readSet, __pyx_t_1); if (unlikely(__pyx_t_16 == ((int)-1))) __PYX_ERR(0, 997, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":981
+        /* "MUSCython/RLE_BWTCython.pyx":1000
  * 
  *                     #now reduce the currLen and loosen
  *                     currLen -= 1             # <<<<<<<<<<<<<<
@@ -29809,7 +30424,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_currLen = (__pyx_v_currLen - 1);
 
-        /* "MUSCython/RLE_BWTCython.pyx":982
+        /* "MUSCython/RLE_BWTCython.pyx":1001
  *                     #now reduce the currLen and loosen
  *                     currLen -= 1
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -29829,7 +30444,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L25_bool_binop_done:;
           if (!__pyx_t_12) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":983
+          /* "MUSCython/RLE_BWTCython.pyx":1002
  *                     currLen -= 1
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:
  *                         l -= 1             # <<<<<<<<<<<<<<
@@ -29839,7 +30454,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_l = (__pyx_v_l - 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":984
+        /* "MUSCython/RLE_BWTCython.pyx":1003
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:
  *                         l -= 1
  *                     while h < self.totalSize and self.lcps_view[h-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -29859,7 +30474,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L29_bool_binop_done:;
           if (!__pyx_t_12) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":985
+          /* "MUSCython/RLE_BWTCython.pyx":1004
  *                         l -= 1
  *                     while h < self.totalSize and self.lcps_view[h-1] >= currLen:
  *                         h += 1             # <<<<<<<<<<<<<<
@@ -29869,7 +30484,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_h = (__pyx_v_h + 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":971
+        /* "MUSCython/RLE_BWTCython.pyx":990
  * 
  *                 #also, we now check if we are at the read length
  *                 if currLen == strLen:             # <<<<<<<<<<<<<<
@@ -29881,7 +30496,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_L17:;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":988
+  /* "MUSCython/RLE_BWTCython.pyx":1007
  * 
  *         #return the readSet
  *         return readSet             # <<<<<<<<<<<<<<
@@ -29893,7 +30508,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_r = __pyx_v_readSet;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":914
+  /* "MUSCython/RLE_BWTCython.pyx":933
  *             pass
  * 
  *     cpdef set findReadsMatchingSeq(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
@@ -29974,7 +30589,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 914, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 933, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -29982,14 +30597,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 914, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 933, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeq", 1, 2, 2, 1); __PYX_ERR(0, 914, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeq", 1, 2, 2, 1); __PYX_ERR(0, 933, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "findReadsMatchingSeq") < 0)) __PYX_ERR(0, 914, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "findReadsMatchingSeq") < 0)) __PYX_ERR(0, 933, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -29998,11 +30613,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_seq = ((PyObject*)values[0]);
-    __pyx_v_strLen = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_strLen == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 914, __pyx_L3_error)
+    __pyx_v_strLen = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_strLen == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 933, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeq", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 914, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeq", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 933, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -30016,7 +30631,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq), (&PyBytes_Type), 1, "seq", 1))) __PYX_ERR(0, 914, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq), (&PyBytes_Type), 1, "seq", 1))) __PYX_ERR(0, 933, __pyx_L1_error)
   __pyx_r = __pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_20findReadsMatchingSeq(((struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self), __pyx_v_seq, __pyx_v_strLen);
 
   /* function exit code */
@@ -30043,7 +30658,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_20findReadsMatchin
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("findReadsMatchingSeq", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeq(__pyx_v_self, __pyx_v_seq, __pyx_v_strLen, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 914, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeq(__pyx_v_self, __pyx_v_seq, __pyx_v_strLen, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 933, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -30060,7 +30675,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_20findReadsMatchin
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":990
+/* "MUSCython/RLE_BWTCython.pyx":1009
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
@@ -30148,11 +30763,11 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_findReadsMatchingSeqWithError); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_findReadsMatchingSeqWithError); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_9MUSCython_13RLE_BWTCython_7RLE_BWT_23findReadsMatchingSeqWithError)) {
         __Pyx_XDECREF(__pyx_r);
-        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_strLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 990, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_strLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1009, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -30174,11 +30789,11 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 990, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1009, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        if (!(likely(PySet_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("set", __pyx_t_2))) __PYX_ERR(0, 990, __pyx_L1_error)
+        if (!(likely(PySet_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("set", __pyx_t_2))) __PYX_ERR(0, 1009, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -30197,7 +30812,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     #endif
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":1001
+  /* "MUSCython/RLE_BWTCython.pyx":1020
  *         '''
  *         #currLen = the length of the l-h k-mer at all time
  *         cdef unsigned long currLen = 0             # <<<<<<<<<<<<<<
@@ -30206,19 +30821,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_currLen = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1002
+  /* "MUSCython/RLE_BWTCython.pyx":1021
  *         #currLen = the length of the l-h k-mer at all time
  *         cdef unsigned long currLen = 0
  *         cdef set readSet = set([])             # <<<<<<<<<<<<<<
  * 
  *         cdef unsigned long l = 0
  */
-  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1002, __pyx_L1_error)
+  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1021, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_readSet = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1004
+  /* "MUSCython/RLE_BWTCython.pyx":1023
  *         cdef set readSet = set([])
  * 
  *         cdef unsigned long l = 0             # <<<<<<<<<<<<<<
@@ -30227,7 +30842,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_l = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1005
+  /* "MUSCython/RLE_BWTCython.pyx":1024
  * 
  *         cdef unsigned long l = 0
  *         cdef unsigned long h = self.totalSize             # <<<<<<<<<<<<<<
@@ -30237,7 +30852,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
   __pyx_v_h = __pyx_t_7;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1008
+  /* "MUSCython/RLE_BWTCython.pyx":1027
  *         cdef unsigned long lc, hc
  * 
  *         cdef unsigned long s = len(seq)             # <<<<<<<<<<<<<<
@@ -30246,12 +30861,12 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   if (unlikely(__pyx_v_seq == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 1008, __pyx_L1_error)
+    __PYX_ERR(0, 1027, __pyx_L1_error)
   }
-  __pyx_t_8 = __Pyx_PyBytes_GET_SIZE(__pyx_v_seq); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1008, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyBytes_GET_SIZE(__pyx_v_seq); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1027, __pyx_L1_error)
   __pyx_v_s = __pyx_t_8;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1024
+  /* "MUSCython/RLE_BWTCython.pyx":1043
  * 
  *         #create a view of the sequence that can be used in a nogil region
  *         cdef unsigned char * seq_view = seq             # <<<<<<<<<<<<<<
@@ -30260,46 +30875,46 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   if (unlikely(__pyx_v_seq == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 1024, __pyx_L1_error)
+    __PYX_ERR(0, 1043, __pyx_L1_error)
   }
-  __pyx_t_9 = __Pyx_PyBytes_AsWritableUString(__pyx_v_seq); if (unlikely((!__pyx_t_9) && PyErr_Occurred())) __PYX_ERR(0, 1024, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyBytes_AsWritableUString(__pyx_v_seq); if (unlikely((!__pyx_t_9) && PyErr_Occurred())) __PYX_ERR(0, 1043, __pyx_L1_error)
   __pyx_v_seq_view = __pyx_t_9;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1027
+  /* "MUSCython/RLE_BWTCython.pyx":1046
  * 
  *         #arrays for the fm-indices
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(vcLen, ))             # <<<<<<<<<<<<<<
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] lowArray_view = lowArray
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1027, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1027, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1027, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1027, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1027, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1046, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1027, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 1027, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 1046, __pyx_L1_error);
   __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_shape, __pyx_t_3) < 0) __PYX_ERR(0, 1027, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_shape, __pyx_t_3) < 0) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1027, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1046, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1027, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1046, __pyx_L1_error)
   __pyx_t_10 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_lowArray.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_lowArray = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_lowArray.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 1027, __pyx_L1_error)
+      __PYX_ERR(0, 1046, __pyx_L1_error)
     } else {__pyx_pybuffernd_lowArray.diminfo[0].strides = __pyx_pybuffernd_lowArray.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_lowArray.diminfo[0].shape = __pyx_pybuffernd_lowArray.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -30307,41 +30922,41 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_v_lowArray = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1028
+  /* "MUSCython/RLE_BWTCython.pyx":1047
  *         #arrays for the fm-indices
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))             # <<<<<<<<<<<<<<
  *         cdef np.uint64_t [:] lowArray_view = lowArray
  *         cdef np.uint64_t [:] highArray_view = highArray
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1028, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1028, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1028, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1028, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1028, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1047, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1028, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 1028, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 1047, __pyx_L1_error);
   __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 1028, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1028, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1047, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1028, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1047, __pyx_L1_error)
   __pyx_t_11 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_highArray.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_highArray = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_highArray.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 1028, __pyx_L1_error)
+      __PYX_ERR(0, 1047, __pyx_L1_error)
     } else {__pyx_pybuffernd_highArray.diminfo[0].strides = __pyx_pybuffernd_highArray.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_highArray.diminfo[0].shape = __pyx_pybuffernd_highArray.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -30349,31 +30964,31 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_v_highArray = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1029
+  /* "MUSCython/RLE_BWTCython.pyx":1048
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] lowArray_view = lowArray             # <<<<<<<<<<<<<<
  *         cdef np.uint64_t [:] highArray_view = highArray
  * 
  */
-  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_lowArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1029, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_lowArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1048, __pyx_L1_error)
   __pyx_v_lowArray_view = __pyx_t_12;
   __pyx_t_12.memview = NULL;
   __pyx_t_12.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1030
+  /* "MUSCython/RLE_BWTCython.pyx":1049
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] lowArray_view = lowArray
  *         cdef np.uint64_t [:] highArray_view = highArray             # <<<<<<<<<<<<<<
  * 
  *         cdef unsigned long halfLen = strLen/2
  */
-  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_highArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1030, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_highArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1049, __pyx_L1_error)
   __pyx_v_highArray_view = __pyx_t_12;
   __pyx_t_12.memview = NULL;
   __pyx_t_12.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1032
+  /* "MUSCython/RLE_BWTCython.pyx":1051
  *         cdef np.uint64_t [:] highArray_view = highArray
  * 
  *         cdef unsigned long halfLen = strLen/2             # <<<<<<<<<<<<<<
@@ -30382,7 +30997,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_halfLen = (__pyx_v_strLen / 2);
 
-  /* "MUSCython/RLE_BWTCython.pyx":1034
+  /* "MUSCython/RLE_BWTCython.pyx":1053
  *         cdef unsigned long halfLen = strLen/2
  * 
  *         for x in range(s-1, -1, -1):             # <<<<<<<<<<<<<<
@@ -30392,7 +31007,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   for (__pyx_t_13 = (__pyx_v_s - 1); __pyx_t_13 > -1L; __pyx_t_13-=1) {
     __pyx_v_x = __pyx_t_13;
 
-    /* "MUSCython/RLE_BWTCython.pyx":1036
+    /* "MUSCython/RLE_BWTCython.pyx":1055
  *         for x in range(s-1, -1, -1):
  *             #get the character from the sequence, then search at both high and low
  *             c = self.charToNum_view[seq_view[x]]             # <<<<<<<<<<<<<<
@@ -30402,25 +31017,25 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_t_14 = (__pyx_v_seq_view[__pyx_v_x]);
     __pyx_v_c = (*((unsigned char *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.charToNum_view.data + __pyx_t_14 * __pyx_v_self->__pyx_base.charToNum_view.strides[0]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":1037
+    /* "MUSCython/RLE_BWTCython.pyx":1056
  *             #get the character from the sequence, then search at both high and low
  *             c = self.charToNum_view[seq_view[x]]
  *             self.fillFmAtIndex(lowArray_view, l)             # <<<<<<<<<<<<<<
  *             self.fillFmAtIndex(highArray_view, h)
  * 
  */
-    ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_lowArray_view, __pyx_v_l); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1037, __pyx_L1_error)
+    ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_lowArray_view, __pyx_v_l); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1056, __pyx_L1_error)
 
-    /* "MUSCython/RLE_BWTCython.pyx":1038
+    /* "MUSCython/RLE_BWTCython.pyx":1057
  *             c = self.charToNum_view[seq_view[x]]
  *             self.fillFmAtIndex(lowArray_view, l)
  *             self.fillFmAtIndex(highArray_view, h)             # <<<<<<<<<<<<<<
  * 
  *             for c2 in xrange(1, vcLen):
  */
-    ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_highArray_view, __pyx_v_h); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1038, __pyx_L1_error)
+    ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_highArray_view, __pyx_v_h); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1057, __pyx_L1_error)
 
-    /* "MUSCython/RLE_BWTCython.pyx":1040
+    /* "MUSCython/RLE_BWTCython.pyx":1059
  *             self.fillFmAtIndex(highArray_view, h)
  * 
  *             for c2 in xrange(1, vcLen):             # <<<<<<<<<<<<<<
@@ -30432,7 +31047,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     for (__pyx_t_7 = 1; __pyx_t_7 < __pyx_t_16; __pyx_t_7+=1) {
       __pyx_v_c2 = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1041
+      /* "MUSCython/RLE_BWTCython.pyx":1060
  * 
  *             for c2 in xrange(1, vcLen):
  *                 if c2 != c:# and (x < halfLen or currLen >= halfLen):#<---if you do this, need a different function below             # <<<<<<<<<<<<<<
@@ -30442,7 +31057,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_17 = (__pyx_v_c2 != __pyx_v_c);
       if (__pyx_t_17) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":1044
+        /* "MUSCython/RLE_BWTCython.pyx":1063
  *                     #BEGIN SNP CHECK
  *                     #copy x into y, and set the altPos at -1 since it isn't actually added yet
  *                     y = x             # <<<<<<<<<<<<<<
@@ -30451,7 +31066,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_y = __pyx_v_x;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1046
+        /* "MUSCython/RLE_BWTCython.pyx":1065
  *                     y = x
  *                     #altPos = <long>-1
  *                     altPos = currLen+1             # <<<<<<<<<<<<<<
@@ -30460,7 +31075,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_altPos = (__pyx_v_currLen + 1);
 
-        /* "MUSCython/RLE_BWTCython.pyx":1049
+        /* "MUSCython/RLE_BWTCython.pyx":1068
  * 
  *                     #first copy into a temp area
  *                     lc = l             # <<<<<<<<<<<<<<
@@ -30469,7 +31084,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_lc = __pyx_v_l;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1050
+        /* "MUSCython/RLE_BWTCython.pyx":1069
  *                     #first copy into a temp area
  *                     lc = l
  *                     hc = h             # <<<<<<<<<<<<<<
@@ -30478,7 +31093,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_hc = __pyx_v_h;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1051
+        /* "MUSCython/RLE_BWTCython.pyx":1070
  *                     lc = l
  *                     hc = h
  *                     altCurrLen = currLen             # <<<<<<<<<<<<<<
@@ -30487,7 +31102,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_altCurrLen = __pyx_v_currLen;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1055
+        /* "MUSCython/RLE_BWTCython.pyx":1074
  *                     #while we have seq left AND we haven't rotated our alternate symbol out
  *                     #while y >= 0 and altPos < <long>altCurrLen:
  *                     while y >= 0 and altPos > 0:             # <<<<<<<<<<<<<<
@@ -30506,7 +31121,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L10_bool_binop_done:;
           if (!__pyx_t_17) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1056
+          /* "MUSCython/RLE_BWTCython.pyx":1075
  *                     #while y >= 0 and altPos < <long>altCurrLen:
  *                     while y >= 0 and altPos > 0:
  *                         if y == x:             # <<<<<<<<<<<<<<
@@ -30516,7 +31131,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_t_17 = (__pyx_v_y == __pyx_v_x);
           if (__pyx_t_17) {
 
-            /* "MUSCython/RLE_BWTCython.pyx":1058
+            /* "MUSCython/RLE_BWTCython.pyx":1077
  *                         if y == x:
  *                             #first one is actually a different character
  *                             altC = c2             # <<<<<<<<<<<<<<
@@ -30525,7 +31140,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
             __pyx_v_altC = __pyx_v_c2;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1059
+            /* "MUSCython/RLE_BWTCython.pyx":1078
  *                             #first one is actually a different character
  *                             altC = c2
  *                             newL = lowArray_view[altC]             # <<<<<<<<<<<<<<
@@ -30535,7 +31150,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             __pyx_t_14 = __pyx_v_altC;
             __pyx_v_newL = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_lowArray_view.data + __pyx_t_14 * __pyx_v_lowArray_view.strides[0]) )));
 
-            /* "MUSCython/RLE_BWTCython.pyx":1060
+            /* "MUSCython/RLE_BWTCython.pyx":1079
  *                             altC = c2
  *                             newL = lowArray_view[altC]
  *                             newH = highArray_view[altC]             # <<<<<<<<<<<<<<
@@ -30545,7 +31160,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             __pyx_t_14 = __pyx_v_altC;
             __pyx_v_newH = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_highArray_view.data + __pyx_t_14 * __pyx_v_highArray_view.strides[0]) )));
 
-            /* "MUSCython/RLE_BWTCython.pyx":1056
+            /* "MUSCython/RLE_BWTCython.pyx":1075
  *                     #while y >= 0 and altPos < <long>altCurrLen:
  *                     while y >= 0 and altPos > 0:
  *                         if y == x:             # <<<<<<<<<<<<<<
@@ -30555,7 +31170,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             goto __pyx_L12;
           }
 
-          /* "MUSCython/RLE_BWTCython.pyx":1063
+          /* "MUSCython/RLE_BWTCython.pyx":1082
  *                         else:
  *                             #these are matching symbols now
  *                             altC = self.charToNum_view[seq_view[y]]             # <<<<<<<<<<<<<<
@@ -30566,29 +31181,29 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             __pyx_t_14 = (__pyx_v_seq_view[__pyx_v_y]);
             __pyx_v_altC = (*((unsigned char *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.charToNum_view.data + __pyx_t_14 * __pyx_v_self->__pyx_base.charToNum_view.strides[0]) )));
 
-            /* "MUSCython/RLE_BWTCython.pyx":1064
+            /* "MUSCython/RLE_BWTCython.pyx":1083
  *                             #these are matching symbols now
  *                             altC = self.charToNum_view[seq_view[y]]
  *                             newL = self.getOccurrenceOfCharAtIndex(altC, lc)             # <<<<<<<<<<<<<<
  *                             newH = self.getOccurrenceOfCharAtIndex(altC, hc)
  * 
  */
-            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_lc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1064, __pyx_L1_error)
+            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_lc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1083, __pyx_L1_error)
             __pyx_v_newL = __pyx_t_19;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1065
+            /* "MUSCython/RLE_BWTCython.pyx":1084
  *                             altC = self.charToNum_view[seq_view[y]]
  *                             newL = self.getOccurrenceOfCharAtIndex(altC, lc)
  *                             newH = self.getOccurrenceOfCharAtIndex(altC, hc)             # <<<<<<<<<<<<<<
  * 
  *                         #while our new range is length 0, and the altCurrLen > 0, and we haven't shifted our symbol out
  */
-            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_hc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1065, __pyx_L1_error)
+            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_hc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1084, __pyx_L1_error)
             __pyx_v_newH = __pyx_t_19;
           }
           __pyx_L12:;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1069
+          /* "MUSCython/RLE_BWTCython.pyx":1088
  *                         #while our new range is length 0, and the altCurrLen > 0, and we haven't shifted our symbol out
  *                         #while newL == newH and altCurrLen > 0 and altPos < <long>altCurrLen:
  *                         while newL == newH and altCurrLen > 0 and altPos > 0:             # <<<<<<<<<<<<<<
@@ -30613,7 +31228,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             __pyx_L15_bool_binop_done:;
             if (!__pyx_t_17) break;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1071
+            /* "MUSCython/RLE_BWTCython.pyx":1090
  *                         while newL == newH and altCurrLen > 0 and altPos > 0:
  *                             #loosening time
  *                             altCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -30622,7 +31237,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
             __pyx_v_altCurrLen = (__pyx_v_altCurrLen - 1);
 
-            /* "MUSCython/RLE_BWTCython.pyx":1072
+            /* "MUSCython/RLE_BWTCython.pyx":1091
  *                             #loosening time
  *                             altCurrLen -= 1
  *                             altPos -= 1             # <<<<<<<<<<<<<<
@@ -30631,7 +31246,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
             __pyx_v_altPos = (__pyx_v_altPos - 1);
 
-            /* "MUSCython/RLE_BWTCython.pyx":1073
+            /* "MUSCython/RLE_BWTCython.pyx":1092
  *                             altCurrLen -= 1
  *                             altPos -= 1
  *                             while lc > 0 and self.lcps_view[lc-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -30651,7 +31266,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_L20_bool_binop_done:;
               if (!__pyx_t_17) break;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1074
+              /* "MUSCython/RLE_BWTCython.pyx":1093
  *                             altPos -= 1
  *                             while lc > 0 and self.lcps_view[lc-1] >= altCurrLen:
  *                                 lc -= 1             # <<<<<<<<<<<<<<
@@ -30661,7 +31276,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_v_lc = (__pyx_v_lc - 1);
             }
 
-            /* "MUSCython/RLE_BWTCython.pyx":1075
+            /* "MUSCython/RLE_BWTCython.pyx":1094
  *                             while lc > 0 and self.lcps_view[lc-1] >= altCurrLen:
  *                                 lc -= 1
  *                             while hc < self.totalSize and self.lcps_view[hc-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -30681,7 +31296,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_L24_bool_binop_done:;
               if (!__pyx_t_17) break;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1076
+              /* "MUSCython/RLE_BWTCython.pyx":1095
  *                                 lc -= 1
  *                             while hc < self.totalSize and self.lcps_view[hc-1] >= altCurrLen:
  *                                 hc += 1             # <<<<<<<<<<<<<<
@@ -30691,28 +31306,28 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_v_hc = (__pyx_v_hc + 1);
             }
 
-            /* "MUSCython/RLE_BWTCython.pyx":1079
+            /* "MUSCython/RLE_BWTCython.pyx":1098
  * 
  *                             #retry the search with the loosened parameters
  *                             newL = self.getOccurrenceOfCharAtIndex(altC, lc)             # <<<<<<<<<<<<<<
  *                             newH = self.getOccurrenceOfCharAtIndex(altC, hc)
  * 
  */
-            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_lc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1079, __pyx_L1_error)
+            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_lc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1098, __pyx_L1_error)
             __pyx_v_newL = __pyx_t_19;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1080
+            /* "MUSCython/RLE_BWTCython.pyx":1099
  *                             #retry the search with the loosened parameters
  *                             newL = self.getOccurrenceOfCharAtIndex(altC, lc)
  *                             newH = self.getOccurrenceOfCharAtIndex(altC, hc)             # <<<<<<<<<<<<<<
  * 
  *                         if altCurrLen == 0 and newL == newH:
  */
-            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_hc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1080, __pyx_L1_error)
+            __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_altC, __pyx_v_hc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1099, __pyx_L1_error)
             __pyx_v_newH = __pyx_t_19;
           }
 
-          /* "MUSCython/RLE_BWTCython.pyx":1082
+          /* "MUSCython/RLE_BWTCython.pyx":1101
  *                             newH = self.getOccurrenceOfCharAtIndex(altC, hc)
  * 
  *                         if altCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -30730,7 +31345,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L27_bool_binop_done:;
           if (__pyx_t_17) {
 
-            /* "MUSCython/RLE_BWTCython.pyx":1084
+            /* "MUSCython/RLE_BWTCython.pyx":1103
  *                         if altCurrLen == 0 and newL == newH:
  *                             #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                             lc = 0             # <<<<<<<<<<<<<<
@@ -30739,7 +31354,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
             __pyx_v_lc = 0;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1085
+            /* "MUSCython/RLE_BWTCython.pyx":1104
  *                             #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                             lc = 0
  *                             hc = self.totalSize             # <<<<<<<<<<<<<<
@@ -30749,7 +31364,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             __pyx_t_19 = __pyx_v_self->__pyx_base.totalSize;
             __pyx_v_hc = __pyx_t_19;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1086
+            /* "MUSCython/RLE_BWTCython.pyx":1105
  *                             lc = 0
  *                             hc = self.totalSize
  *                             altPos = 0             # <<<<<<<<<<<<<<
@@ -30758,7 +31373,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
             __pyx_v_altPos = 0;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1082
+            /* "MUSCython/RLE_BWTCython.pyx":1101
  *                             newH = self.getOccurrenceOfCharAtIndex(altC, hc)
  * 
  *                         if altCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -30768,7 +31383,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             goto __pyx_L26;
           }
 
-          /* "MUSCython/RLE_BWTCython.pyx":1089
+          /* "MUSCython/RLE_BWTCython.pyx":1108
  *                         else:
  *                             #else, we set our l/h to newL/newH and increment the length
  *                             lc = newL             # <<<<<<<<<<<<<<
@@ -30778,7 +31393,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           /*else*/ {
             __pyx_v_lc = __pyx_v_newL;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1090
+            /* "MUSCython/RLE_BWTCython.pyx":1109
  *                             #else, we set our l/h to newL/newH and increment the length
  *                             lc = newL
  *                             hc = newH             # <<<<<<<<<<<<<<
@@ -30787,7 +31402,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
             __pyx_v_hc = __pyx_v_newH;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1091
+            /* "MUSCython/RLE_BWTCython.pyx":1110
  *                             lc = newL
  *                             hc = newH
  *                             altCurrLen += 1             # <<<<<<<<<<<<<<
@@ -30796,7 +31411,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
             __pyx_v_altCurrLen = (__pyx_v_altCurrLen + 1);
 
-            /* "MUSCython/RLE_BWTCython.pyx":1095
+            /* "MUSCython/RLE_BWTCython.pyx":1114
  * 
  *                             #also, we now check if we are at the read length
  *                             if altCurrLen == strLen:             # <<<<<<<<<<<<<<
@@ -30806,27 +31421,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             __pyx_t_17 = (__pyx_v_altCurrLen == __pyx_v_strLen);
             if (__pyx_t_17) {
 
-              /* "MUSCython/RLE_BWTCython.pyx":1097
+              /* "MUSCython/RLE_BWTCython.pyx":1116
  *                             if altCurrLen == strLen:
  *                                 #get all reads that match up
  *                                 newL = self.getOccurrenceOfCharAtIndex(0, lc)             # <<<<<<<<<<<<<<
  *                                 newH = self.getOccurrenceOfCharAtIndex(0, hc)
  * 
  */
-              __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_lc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1097, __pyx_L1_error)
+              __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_lc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1116, __pyx_L1_error)
               __pyx_v_newL = __pyx_t_19;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1098
+              /* "MUSCython/RLE_BWTCython.pyx":1117
  *                                 #get all reads that match up
  *                                 newL = self.getOccurrenceOfCharAtIndex(0, lc)
  *                                 newH = self.getOccurrenceOfCharAtIndex(0, hc)             # <<<<<<<<<<<<<<
  * 
  *                                 #add each read on in
  */
-              __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_hc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1098, __pyx_L1_error)
+              __pyx_t_19 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_hc, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1117, __pyx_L1_error)
               __pyx_v_newH = __pyx_t_19;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1101
+              /* "MUSCython/RLE_BWTCython.pyx":1120
  * 
  *                                 #add each read on in
  *                                 for z in xrange(newL, newH):             # <<<<<<<<<<<<<<
@@ -30838,20 +31453,20 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               for (__pyx_t_21 = __pyx_v_newL; __pyx_t_21 < __pyx_t_20; __pyx_t_21+=1) {
                 __pyx_v_z = __pyx_t_21;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1102
+                /* "MUSCython/RLE_BWTCython.pyx":1121
  *                                 #add each read on in
  *                                 for z in xrange(newL, newH):
  *                                     readSet.add(z)             # <<<<<<<<<<<<<<
  * 
  *                                 #now reduce the currLen and loosen
  */
-                __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_z); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1102, __pyx_L1_error)
+                __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_z); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1121, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_4);
-                __pyx_t_22 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_22 == ((int)-1))) __PYX_ERR(0, 1102, __pyx_L1_error)
+                __pyx_t_22 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_22 == ((int)-1))) __PYX_ERR(0, 1121, __pyx_L1_error)
                 __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":1105
+              /* "MUSCython/RLE_BWTCython.pyx":1124
  * 
  *                                 #now reduce the currLen and loosen
  *                                 altCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -30860,7 +31475,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
               __pyx_v_altCurrLen = (__pyx_v_altCurrLen - 1);
 
-              /* "MUSCython/RLE_BWTCython.pyx":1106
+              /* "MUSCython/RLE_BWTCython.pyx":1125
  *                                 #now reduce the currLen and loosen
  *                                 altCurrLen -= 1
  *                                 altPos -= 1             # <<<<<<<<<<<<<<
@@ -30869,7 +31484,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
               __pyx_v_altPos = (__pyx_v_altPos - 1);
 
-              /* "MUSCython/RLE_BWTCython.pyx":1107
+              /* "MUSCython/RLE_BWTCython.pyx":1126
  *                                 altCurrLen -= 1
  *                                 altPos -= 1
  *                                 while lc > 0 and self.lcps_view[lc-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -30889,7 +31504,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_L34_bool_binop_done:;
                 if (!__pyx_t_17) break;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1108
+                /* "MUSCython/RLE_BWTCython.pyx":1127
  *                                 altPos -= 1
  *                                 while lc > 0 and self.lcps_view[lc-1] >= altCurrLen:
  *                                     lc -= 1             # <<<<<<<<<<<<<<
@@ -30899,7 +31514,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_v_lc = (__pyx_v_lc - 1);
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":1109
+              /* "MUSCython/RLE_BWTCython.pyx":1128
  *                                 while lc > 0 and self.lcps_view[lc-1] >= altCurrLen:
  *                                     lc -= 1
  *                                 while hc < self.totalSize and self.lcps_view[hc-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -30919,7 +31534,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_L38_bool_binop_done:;
                 if (!__pyx_t_17) break;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1110
+                /* "MUSCython/RLE_BWTCython.pyx":1129
  *                                     lc -= 1
  *                                 while hc < self.totalSize and self.lcps_view[hc-1] >= altCurrLen:
  *                                     hc += 1             # <<<<<<<<<<<<<<
@@ -30929,7 +31544,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_v_hc = (__pyx_v_hc + 1);
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":1095
+              /* "MUSCython/RLE_BWTCython.pyx":1114
  * 
  *                             #also, we now check if we are at the read length
  *                             if altCurrLen == strLen:             # <<<<<<<<<<<<<<
@@ -30940,7 +31555,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           }
           __pyx_L26:;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1113
+          /* "MUSCython/RLE_BWTCython.pyx":1132
  * 
  *                         #now get the next symbol
  *                         y -= 1             # <<<<<<<<<<<<<<
@@ -30950,7 +31565,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_y = (__pyx_v_y - 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1041
+        /* "MUSCython/RLE_BWTCython.pyx":1060
  * 
  *             for c2 in xrange(1, vcLen):
  *                 if c2 != c:# and (x < halfLen or currLen >= halfLen):#<---if you do this, need a different function below             # <<<<<<<<<<<<<<
@@ -30960,7 +31575,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       }
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":1119
+    /* "MUSCython/RLE_BWTCython.pyx":1138
  * 
  *             #set these to match the true symbol
  *             newL = lowArray_view[c]             # <<<<<<<<<<<<<<
@@ -30970,7 +31585,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_t_14 = __pyx_v_c;
     __pyx_v_newL = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_lowArray_view.data + __pyx_t_14 * __pyx_v_lowArray_view.strides[0]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":1120
+    /* "MUSCython/RLE_BWTCython.pyx":1139
  *             #set these to match the true symbol
  *             newL = lowArray_view[c]
  *             newH = highArray_view[c]             # <<<<<<<<<<<<<<
@@ -30980,7 +31595,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_t_14 = __pyx_v_c;
     __pyx_v_newH = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_highArray_view.data + __pyx_t_14 * __pyx_v_highArray_view.strides[0]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":1123
+    /* "MUSCython/RLE_BWTCython.pyx":1142
  * 
  *             #while the new low and high are the same and we still have some length on the base k-mer
  *             while newL == newH and currLen > 0:             # <<<<<<<<<<<<<<
@@ -30999,7 +31614,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_L42_bool_binop_done:;
       if (!__pyx_t_17) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1125
+      /* "MUSCython/RLE_BWTCython.pyx":1144
  *             while newL == newH and currLen > 0:
  *                 #decrease currLen and loosen the k-mers to match it
  *                 currLen -= 1             # <<<<<<<<<<<<<<
@@ -31008,7 +31623,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_currLen = (__pyx_v_currLen - 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":1126
+      /* "MUSCython/RLE_BWTCython.pyx":1145
  *                 #decrease currLen and loosen the k-mers to match it
  *                 currLen -= 1
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -31028,7 +31643,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L46_bool_binop_done:;
         if (!__pyx_t_17) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1127
+        /* "MUSCython/RLE_BWTCython.pyx":1146
  *                 currLen -= 1
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:
  *                     l -= 1             # <<<<<<<<<<<<<<
@@ -31038,7 +31653,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_l = (__pyx_v_l - 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":1128
+      /* "MUSCython/RLE_BWTCython.pyx":1147
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:
  *                     l -= 1
  *                 while h < self.totalSize and self.lcps_view[h-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -31058,7 +31673,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L50_bool_binop_done:;
         if (!__pyx_t_17) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1129
+        /* "MUSCython/RLE_BWTCython.pyx":1148
  *                     l -= 1
  *                 while h < self.totalSize and self.lcps_view[h-1] >= currLen:
  *                     h += 1             # <<<<<<<<<<<<<<
@@ -31068,28 +31683,28 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_h = (__pyx_v_h + 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":1132
+      /* "MUSCython/RLE_BWTCython.pyx":1151
  * 
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, l)             # <<<<<<<<<<<<<<
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1132, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1151, __pyx_L1_error)
       __pyx_v_newL = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1133
+      /* "MUSCython/RLE_BWTCython.pyx":1152
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, l)
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)             # <<<<<<<<<<<<<<
  * 
  *             if currLen == 0 and newL == newH:
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1133, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1152, __pyx_L1_error)
       __pyx_v_newH = __pyx_t_7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":1135
+    /* "MUSCython/RLE_BWTCython.pyx":1154
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  *             if currLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -31107,7 +31722,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_L53_bool_binop_done:;
     if (__pyx_t_17) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":1137
+      /* "MUSCython/RLE_BWTCython.pyx":1156
  *             if currLen == 0 and newL == newH:
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 l = 0             # <<<<<<<<<<<<<<
@@ -31116,7 +31731,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_l = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1138
+      /* "MUSCython/RLE_BWTCython.pyx":1157
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 l = 0
  *                 h = self.totalSize             # <<<<<<<<<<<<<<
@@ -31126,7 +31741,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
       __pyx_v_h = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1135
+      /* "MUSCython/RLE_BWTCython.pyx":1154
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  *             if currLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -31136,7 +31751,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       goto __pyx_L52;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":1141
+    /* "MUSCython/RLE_BWTCython.pyx":1160
  *             else:
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 l = newL             # <<<<<<<<<<<<<<
@@ -31146,7 +31761,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     /*else*/ {
       __pyx_v_l = __pyx_v_newL;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1142
+      /* "MUSCython/RLE_BWTCython.pyx":1161
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 l = newL
  *                 h = newH             # <<<<<<<<<<<<<<
@@ -31155,7 +31770,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_h = __pyx_v_newH;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1143
+      /* "MUSCython/RLE_BWTCython.pyx":1162
  *                 l = newL
  *                 h = newH
  *                 currLen += 1             # <<<<<<<<<<<<<<
@@ -31164,7 +31779,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_currLen = (__pyx_v_currLen + 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":1146
+      /* "MUSCython/RLE_BWTCython.pyx":1165
  * 
  *                 #also, we now check if we are at the read length
  *                 if currLen == strLen:             # <<<<<<<<<<<<<<
@@ -31174,27 +31789,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_17 = (__pyx_v_currLen == __pyx_v_strLen);
       if (__pyx_t_17) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":1148
+        /* "MUSCython/RLE_BWTCython.pyx":1167
  *                 if currLen == strLen:
  *                     #get all reads that match up
  *                     newL = self.getOccurrenceOfCharAtIndex(0, l)             # <<<<<<<<<<<<<<
  *                     newH = self.getOccurrenceOfCharAtIndex(0, h)
  * 
  */
-        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1148, __pyx_L1_error)
+        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1167, __pyx_L1_error)
         __pyx_v_newL = __pyx_t_7;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1149
+        /* "MUSCython/RLE_BWTCython.pyx":1168
  *                     #get all reads that match up
  *                     newL = self.getOccurrenceOfCharAtIndex(0, l)
  *                     newH = self.getOccurrenceOfCharAtIndex(0, h)             # <<<<<<<<<<<<<<
  * 
  *                     #add each read on in
  */
-        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1149, __pyx_L1_error)
+        __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1168, __pyx_L1_error)
         __pyx_v_newH = __pyx_t_7;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1152
+        /* "MUSCython/RLE_BWTCython.pyx":1171
  * 
  *                     #add each read on in
  *                     for y in xrange(newL, newH):             # <<<<<<<<<<<<<<
@@ -31206,20 +31821,20 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         for (__pyx_t_21 = __pyx_v_newL; __pyx_t_21 < __pyx_t_19; __pyx_t_21+=1) {
           __pyx_v_y = __pyx_t_21;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1153
+          /* "MUSCython/RLE_BWTCython.pyx":1172
  *                     #add each read on in
  *                     for y in xrange(newL, newH):
  *                         readSet.add(y)             # <<<<<<<<<<<<<<
  * 
  *                     #now reduce the currLen and loosen
  */
-          __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1153, __pyx_L1_error)
+          __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1172, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_22 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_22 == ((int)-1))) __PYX_ERR(0, 1153, __pyx_L1_error)
+          __pyx_t_22 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_22 == ((int)-1))) __PYX_ERR(0, 1172, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1156
+        /* "MUSCython/RLE_BWTCython.pyx":1175
  * 
  *                     #now reduce the currLen and loosen
  *                     currLen -= 1             # <<<<<<<<<<<<<<
@@ -31228,7 +31843,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_currLen = (__pyx_v_currLen - 1);
 
-        /* "MUSCython/RLE_BWTCython.pyx":1157
+        /* "MUSCython/RLE_BWTCython.pyx":1176
  *                     #now reduce the currLen and loosen
  *                     currLen -= 1
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -31248,7 +31863,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L60_bool_binop_done:;
           if (!__pyx_t_17) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1158
+          /* "MUSCython/RLE_BWTCython.pyx":1177
  *                     currLen -= 1
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:
  *                         l -= 1             # <<<<<<<<<<<<<<
@@ -31258,7 +31873,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_l = (__pyx_v_l - 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1159
+        /* "MUSCython/RLE_BWTCython.pyx":1178
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:
  *                         l -= 1
  *                     while h < self.totalSize and self.lcps_view[h-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -31278,7 +31893,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L64_bool_binop_done:;
           if (!__pyx_t_17) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1160
+          /* "MUSCython/RLE_BWTCython.pyx":1179
  *                         l -= 1
  *                     while h < self.totalSize and self.lcps_view[h-1] >= currLen:
  *                         h += 1             # <<<<<<<<<<<<<<
@@ -31288,7 +31903,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_h = (__pyx_v_h + 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1146
+        /* "MUSCython/RLE_BWTCython.pyx":1165
  * 
  *                 #also, we now check if we are at the read length
  *                 if currLen == strLen:             # <<<<<<<<<<<<<<
@@ -31300,7 +31915,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_L52:;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":1163
+  /* "MUSCython/RLE_BWTCython.pyx":1182
  * 
  *         #return the readSet
  *         return readSet             # <<<<<<<<<<<<<<
@@ -31312,7 +31927,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_r = __pyx_v_readSet;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":990
+  /* "MUSCython/RLE_BWTCython.pyx":1009
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
@@ -31409,7 +32024,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 990, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1009, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -31417,14 +32032,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 990, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1009, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError", 1, 2, 2, 1); __PYX_ERR(0, 990, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError", 1, 2, 2, 1); __PYX_ERR(0, 1009, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "findReadsMatchingSeqWithError") < 0)) __PYX_ERR(0, 990, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "findReadsMatchingSeqWithError") < 0)) __PYX_ERR(0, 1009, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -31433,11 +32048,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_seq = ((PyObject*)values[0]);
-    __pyx_v_strLen = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_strLen == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 990, __pyx_L3_error)
+    __pyx_v_strLen = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_strLen == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1009, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 990, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 1009, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -31451,7 +32066,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq), (&PyBytes_Type), 1, "seq", 1))) __PYX_ERR(0, 990, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq), (&PyBytes_Type), 1, "seq", 1))) __PYX_ERR(0, 1009, __pyx_L1_error)
   __pyx_r = __pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_22findReadsMatchingSeqWithError(((struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self), __pyx_v_seq, __pyx_v_strLen);
 
   /* function exit code */
@@ -31478,7 +32093,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_22findReadsMatchin
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("findReadsMatchingSeqWithError", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeqWithError(__pyx_v_self, __pyx_v_seq, __pyx_v_strLen, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 990, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeqWithError(__pyx_v_self, __pyx_v_seq, __pyx_v_strLen, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1009, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -31495,7 +32110,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_22findReadsMatchin
   return __pyx_r;
 }
 
-/* "MUSCython/RLE_BWTCython.pyx":1165
+/* "MUSCython/RLE_BWTCython.pyx":1184
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError2(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
@@ -31600,11 +32215,11 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     if (unlikely(!__Pyx_object_dict_version_matches(((PyObject *)__pyx_v_self), __pyx_tp_dict_version, __pyx_obj_dict_version))) {
       PY_UINT64_T __pyx_typedict_guard = __Pyx_get_tp_dict_version(((PyObject *)__pyx_v_self));
       #endif
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_findReadsMatchingSeqWithError2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1165, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_findReadsMatchingSeqWithError2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       if (!__Pyx_IsSameCFunction(__pyx_t_1, (void*) __pyx_pw_9MUSCython_13RLE_BWTCython_7RLE_BWT_25findReadsMatchingSeqWithError2)) {
         __Pyx_XDECREF(__pyx_r);
-        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_strLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1165, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_strLen); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1184, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_INCREF(__pyx_t_1);
         __pyx_t_4 = __pyx_t_1; __pyx_t_5 = NULL;
@@ -31626,11 +32241,11 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1165, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1184, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        if (!(likely(PySet_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("set", __pyx_t_2))) __PYX_ERR(0, 1165, __pyx_L1_error)
+        if (!(likely(PySet_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None) || __Pyx_RaiseUnexpectedTypeError("set", __pyx_t_2))) __PYX_ERR(0, 1184, __pyx_L1_error)
         __pyx_r = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -31649,7 +32264,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     #endif
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":1175
+  /* "MUSCython/RLE_BWTCython.pyx":1194
  *         '''
  *         #currLen = the length of the l-h k-mer at all time
  *         cdef unsigned long currLen = 0             # <<<<<<<<<<<<<<
@@ -31658,19 +32273,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_currLen = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1176
+  /* "MUSCython/RLE_BWTCython.pyx":1195
  *         #currLen = the length of the l-h k-mer at all time
  *         cdef unsigned long currLen = 0
  *         cdef set readSet = set([])             # <<<<<<<<<<<<<<
  * 
  *         cdef unsigned long l = 0
  */
-  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1176, __pyx_L1_error)
+  __pyx_t_1 = PySet_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1195, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_readSet = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1178
+  /* "MUSCython/RLE_BWTCython.pyx":1197
  *         cdef set readSet = set([])
  * 
  *         cdef unsigned long l = 0             # <<<<<<<<<<<<<<
@@ -31679,7 +32294,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_l = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1179
+  /* "MUSCython/RLE_BWTCython.pyx":1198
  * 
  *         cdef unsigned long l = 0
  *         cdef unsigned long h = self.totalSize             # <<<<<<<<<<<<<<
@@ -31689,7 +32304,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
   __pyx_v_h = __pyx_t_7;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1180
+  /* "MUSCython/RLE_BWTCython.pyx":1199
  *         cdef unsigned long l = 0
  *         cdef unsigned long h = self.totalSize
  *         cdef unsigned long s = len(seq)             # <<<<<<<<<<<<<<
@@ -31698,12 +32313,12 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   if (unlikely(__pyx_v_seq == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 1180, __pyx_L1_error)
+    __PYX_ERR(0, 1199, __pyx_L1_error)
   }
-  __pyx_t_8 = __Pyx_PyBytes_GET_SIZE(__pyx_v_seq); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1180, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyBytes_GET_SIZE(__pyx_v_seq); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 1199, __pyx_L1_error)
   __pyx_v_s = __pyx_t_8;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1188
+  /* "MUSCython/RLE_BWTCython.pyx":1207
  * 
  *         #create a view of the sequence that can be used in a nogil region
  *         cdef unsigned char * seq_view = seq             # <<<<<<<<<<<<<<
@@ -31712,12 +32327,12 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   if (unlikely(__pyx_v_seq == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "expected bytes, NoneType found");
-    __PYX_ERR(0, 1188, __pyx_L1_error)
+    __PYX_ERR(0, 1207, __pyx_L1_error)
   }
-  __pyx_t_9 = __Pyx_PyBytes_AsWritableUString(__pyx_v_seq); if (unlikely((!__pyx_t_9) && PyErr_Occurred())) __PYX_ERR(0, 1188, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyBytes_AsWritableUString(__pyx_v_seq); if (unlikely((!__pyx_t_9) && PyErr_Occurred())) __PYX_ERR(0, 1207, __pyx_L1_error)
   __pyx_v_seq_view = __pyx_t_9;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1191
+  /* "MUSCython/RLE_BWTCython.pyx":1210
  * 
  *         #this will round down, which is fine
  *         cdef unsigned long halfLen = strLen/2             # <<<<<<<<<<<<<<
@@ -31726,7 +32341,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_halfLen = (__pyx_v_strLen / 2);
 
-  /* "MUSCython/RLE_BWTCython.pyx":1192
+  /* "MUSCython/RLE_BWTCython.pyx":1211
  *         #this will round down, which is fine
  *         cdef unsigned long halfLen = strLen/2
  *         cdef unsigned long hL = 0             # <<<<<<<<<<<<<<
@@ -31735,7 +32350,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_hL = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1193
+  /* "MUSCython/RLE_BWTCython.pyx":1212
  *         cdef unsigned long halfLen = strLen/2
  *         cdef unsigned long hL = 0
  *         cdef unsigned long hH = self.totalSize             # <<<<<<<<<<<<<<
@@ -31745,7 +32360,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
   __pyx_v_hH = __pyx_t_7;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1194
+  /* "MUSCython/RLE_BWTCython.pyx":1213
  *         cdef unsigned long hL = 0
  *         cdef unsigned long hH = self.totalSize
  *         cdef unsigned long hCurrLen = 0             # <<<<<<<<<<<<<<
@@ -31754,7 +32369,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_hCurrLen = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1196
+  /* "MUSCython/RLE_BWTCython.pyx":1215
  *         cdef unsigned long hCurrLen = 0
  * 
  *         cdef bint isExactEntries = False             # <<<<<<<<<<<<<<
@@ -31763,41 +32378,41 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
   __pyx_v_isExactEntries = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1207
+  /* "MUSCython/RLE_BWTCython.pyx":1226
  * 
  *         #arrays for the fm-indices
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(vcLen, ))             # <<<<<<<<<<<<<<
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] lowArray_view = lowArray
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1207, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1207, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1207, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1207, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1207, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1226, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1207, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 1207, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 1226, __pyx_L1_error);
   __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_shape, __pyx_t_3) < 0) __PYX_ERR(0, 1207, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_shape, __pyx_t_3) < 0) __PYX_ERR(0, 1226, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1207, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1207, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1226, __pyx_L1_error)
   __pyx_t_10 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_lowArray.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_lowArray = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_lowArray.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 1207, __pyx_L1_error)
+      __PYX_ERR(0, 1226, __pyx_L1_error)
     } else {__pyx_pybuffernd_lowArray.diminfo[0].strides = __pyx_pybuffernd_lowArray.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_lowArray.diminfo[0].shape = __pyx_pybuffernd_lowArray.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -31805,41 +32420,41 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_v_lowArray = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1208
+  /* "MUSCython/RLE_BWTCython.pyx":1227
  *         #arrays for the fm-indices
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))             # <<<<<<<<<<<<<<
  *         cdef np.uint64_t [:] lowArray_view = lowArray
  *         cdef np.uint64_t [:] highArray_view = highArray
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1208, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1208, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1208, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1208, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1208, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 1227, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From___pyx_anon_enum(__pyx_e_9MUSCython_13RLE_BWTCython_vcLen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1208, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 1208, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 1227, __pyx_L1_error);
   __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 1208, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 1227, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1208, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1208, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 1227, __pyx_L1_error)
   __pyx_t_11 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_highArray.rcbuffer->pybuffer, (PyObject*)__pyx_t_11, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_highArray = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_highArray.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 1208, __pyx_L1_error)
+      __PYX_ERR(0, 1227, __pyx_L1_error)
     } else {__pyx_pybuffernd_highArray.diminfo[0].strides = __pyx_pybuffernd_highArray.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_highArray.diminfo[0].shape = __pyx_pybuffernd_highArray.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -31847,31 +32462,31 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_v_highArray = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1209
+  /* "MUSCython/RLE_BWTCython.pyx":1228
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] lowArray_view = lowArray             # <<<<<<<<<<<<<<
  *         cdef np.uint64_t [:] highArray_view = highArray
  * 
  */
-  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_lowArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1209, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_lowArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1228, __pyx_L1_error)
   __pyx_v_lowArray_view = __pyx_t_12;
   __pyx_t_12.memview = NULL;
   __pyx_t_12.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1210
+  /* "MUSCython/RLE_BWTCython.pyx":1229
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] highArray = np.zeros(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] lowArray_view = lowArray
  *         cdef np.uint64_t [:] highArray_view = highArray             # <<<<<<<<<<<<<<
  * 
  *         cdef unsigned long altL, altH
  */
-  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_highArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1210, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_highArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_12.memview)) __PYX_ERR(0, 1229, __pyx_L1_error)
   __pyx_v_highArray_view = __pyx_t_12;
   __pyx_t_12.memview = NULL;
   __pyx_t_12.data = NULL;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1221
+  /* "MUSCython/RLE_BWTCython.pyx":1240
  * 
  *         #with nogil:
  *         for x in range(s-1, -1, -1):             # <<<<<<<<<<<<<<
@@ -31881,7 +32496,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   for (__pyx_t_13 = (__pyx_v_s - 1); __pyx_t_13 > -1L; __pyx_t_13-=1) {
     __pyx_v_x = __pyx_t_13;
 
-    /* "MUSCython/RLE_BWTCython.pyx":1223
+    /* "MUSCython/RLE_BWTCython.pyx":1242
  *         for x in range(s-1, -1, -1):
  *             #get the character from the sequence, then search at both high and low
  *             c = self.charToNum_view[seq_view[x]]             # <<<<<<<<<<<<<<
@@ -31891,27 +32506,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_t_14 = (__pyx_v_seq_view[__pyx_v_x]);
     __pyx_v_c = (*((unsigned char *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.charToNum_view.data + __pyx_t_14 * __pyx_v_self->__pyx_base.charToNum_view.strides[0]) )));
 
-    /* "MUSCython/RLE_BWTCython.pyx":1224
+    /* "MUSCython/RLE_BWTCython.pyx":1243
  *             #get the character from the sequence, then search at both high and low
  *             c = self.charToNum_view[seq_view[x]]
  *             newL = self.getOccurrenceOfCharAtIndex(c, l)             # <<<<<<<<<<<<<<
  *             newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1224, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1243, __pyx_L1_error)
     __pyx_v_newL = __pyx_t_7;
 
-    /* "MUSCython/RLE_BWTCython.pyx":1225
+    /* "MUSCython/RLE_BWTCython.pyx":1244
  *             c = self.charToNum_view[seq_view[x]]
  *             newL = self.getOccurrenceOfCharAtIndex(c, l)
  *             newH = self.getOccurrenceOfCharAtIndex(c, h)             # <<<<<<<<<<<<<<
  * 
  *             #while the new low and high are the same and we still have some length on the base k-mer
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1225, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1244, __pyx_L1_error)
     __pyx_v_newH = __pyx_t_7;
 
-    /* "MUSCython/RLE_BWTCython.pyx":1228
+    /* "MUSCython/RLE_BWTCython.pyx":1247
  * 
  *             #while the new low and high are the same and we still have some length on the base k-mer
  *             while newL == newH and currLen > 0:             # <<<<<<<<<<<<<<
@@ -31930,7 +32545,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_L7_bool_binop_done:;
       if (!__pyx_t_15) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1230
+      /* "MUSCython/RLE_BWTCython.pyx":1249
  *             while newL == newH and currLen > 0:
  *                 #decrease currLen and loosen the k-mers to match it
  *                 currLen -= 1             # <<<<<<<<<<<<<<
@@ -31939,7 +32554,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_currLen = (__pyx_v_currLen - 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":1231
+      /* "MUSCython/RLE_BWTCython.pyx":1250
  *                 #decrease currLen and loosen the k-mers to match it
  *                 currLen -= 1
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -31959,7 +32574,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L11_bool_binop_done:;
         if (!__pyx_t_15) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1232
+        /* "MUSCython/RLE_BWTCython.pyx":1251
  *                 currLen -= 1
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:
  *                     l -= 1             # <<<<<<<<<<<<<<
@@ -31969,7 +32584,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_l = (__pyx_v_l - 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":1233
+      /* "MUSCython/RLE_BWTCython.pyx":1252
  *                 while l > 0 and self.lcps_view[l-1] >= currLen:
  *                     l -= 1
  *                 while h < self.totalSize and self.lcps_view[h-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -31989,7 +32604,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L15_bool_binop_done:;
         if (!__pyx_t_15) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1234
+        /* "MUSCython/RLE_BWTCython.pyx":1253
  *                     l -= 1
  *                 while h < self.totalSize and self.lcps_view[h-1] >= currLen:
  *                     h += 1             # <<<<<<<<<<<<<<
@@ -31999,28 +32614,28 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_h = (__pyx_v_h + 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":1237
+      /* "MUSCython/RLE_BWTCython.pyx":1256
  * 
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, l)             # <<<<<<<<<<<<<<
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1237, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1256, __pyx_L1_error)
       __pyx_v_newL = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1238
+      /* "MUSCython/RLE_BWTCython.pyx":1257
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, l)
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)             # <<<<<<<<<<<<<<
  * 
  *             if currLen == 0 and newL == newH:
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1238, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1257, __pyx_L1_error)
       __pyx_v_newH = __pyx_t_7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":1240
+    /* "MUSCython/RLE_BWTCython.pyx":1259
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  *             if currLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -32038,7 +32653,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_L18_bool_binop_done:;
     if (__pyx_t_15) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":1242
+      /* "MUSCython/RLE_BWTCython.pyx":1261
  *             if currLen == 0 and newL == newH:
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 l = 0             # <<<<<<<<<<<<<<
@@ -32047,7 +32662,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_l = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1243
+      /* "MUSCython/RLE_BWTCython.pyx":1262
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 l = 0
  *                 h = self.totalSize             # <<<<<<<<<<<<<<
@@ -32057,7 +32672,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
       __pyx_v_h = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1244
+      /* "MUSCython/RLE_BWTCython.pyx":1263
  *                 l = 0
  *                 h = self.totalSize
  *                 isExactEntries = False             # <<<<<<<<<<<<<<
@@ -32066,7 +32681,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_isExactEntries = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1240
+      /* "MUSCython/RLE_BWTCython.pyx":1259
  *                 newH = self.getOccurrenceOfCharAtIndex(c, h)
  * 
  *             if currLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -32076,7 +32691,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       goto __pyx_L17;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":1247
+    /* "MUSCython/RLE_BWTCython.pyx":1266
  *             else:
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 l = newL             # <<<<<<<<<<<<<<
@@ -32086,7 +32701,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     /*else*/ {
       __pyx_v_l = __pyx_v_newL;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1248
+      /* "MUSCython/RLE_BWTCython.pyx":1267
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 l = newL
  *                 h = newH             # <<<<<<<<<<<<<<
@@ -32095,7 +32710,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_h = __pyx_v_newH;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1249
+      /* "MUSCython/RLE_BWTCython.pyx":1268
  *                 l = newL
  *                 h = newH
  *                 currLen += 1             # <<<<<<<<<<<<<<
@@ -32104,27 +32719,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_currLen = (__pyx_v_currLen + 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":1251
+      /* "MUSCython/RLE_BWTCython.pyx":1270
  *                 currLen += 1
  * 
  *                 exactMatchLow = self.getOccurrenceOfCharAtIndex(0, l)             # <<<<<<<<<<<<<<
  *                 exactMatchHigh = self.getOccurrenceOfCharAtIndex(0, h)
  * 
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1251, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_l, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1270, __pyx_L1_error)
       __pyx_v_exactMatchLow = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1252
+      /* "MUSCython/RLE_BWTCython.pyx":1271
  * 
  *                 exactMatchLow = self.getOccurrenceOfCharAtIndex(0, l)
  *                 exactMatchHigh = self.getOccurrenceOfCharAtIndex(0, h)             # <<<<<<<<<<<<<<
  * 
  *                 #also, we now check if we are at the read length
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1252, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_h, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1271, __pyx_L1_error)
       __pyx_v_exactMatchHigh = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1255
+      /* "MUSCython/RLE_BWTCython.pyx":1274
  * 
  *                 #also, we now check if we are at the read length
  *                 if currLen == strLen:             # <<<<<<<<<<<<<<
@@ -32134,7 +32749,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_15 = (__pyx_v_currLen == __pyx_v_strLen);
       if (__pyx_t_15) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":1259
+        /* "MUSCython/RLE_BWTCython.pyx":1278
  *                     #newL = self.getOccurrenceOfCharAtIndex(0, l)
  *                     #newH = self.getOccurrenceOfCharAtIndex(0, h)
  *                     newL = exactMatchLow             # <<<<<<<<<<<<<<
@@ -32143,7 +32758,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_newL = __pyx_v_exactMatchLow;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1260
+        /* "MUSCython/RLE_BWTCython.pyx":1279
  *                     #newH = self.getOccurrenceOfCharAtIndex(0, h)
  *                     newL = exactMatchLow
  *                     newH = exactMatchHigh             # <<<<<<<<<<<<<<
@@ -32152,7 +32767,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_newH = __pyx_v_exactMatchHigh;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1263
+        /* "MUSCython/RLE_BWTCython.pyx":1282
  * 
  *                     #add each read on in
  *                     for y in xrange(newL, newH):             # <<<<<<<<<<<<<<
@@ -32164,20 +32779,20 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         for (__pyx_t_18 = __pyx_v_newL; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
           __pyx_v_y = __pyx_t_18;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1264
+          /* "MUSCython/RLE_BWTCython.pyx":1283
  *                     #add each read on in
  *                     for y in xrange(newL, newH):
  *                         readSet.add(y)             # <<<<<<<<<<<<<<
  * 
  *                     #now reduce the currLen and loosen
  */
-          __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1264, __pyx_L1_error)
+          __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1283, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1264, __pyx_L1_error)
+          __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1283, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1267
+        /* "MUSCython/RLE_BWTCython.pyx":1286
  * 
  *                     #now reduce the currLen and loosen
  *                     currLen -= 1             # <<<<<<<<<<<<<<
@@ -32186,7 +32801,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_currLen = (__pyx_v_currLen - 1);
 
-        /* "MUSCython/RLE_BWTCython.pyx":1268
+        /* "MUSCython/RLE_BWTCython.pyx":1287
  *                     #now reduce the currLen and loosen
  *                     currLen -= 1
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -32206,7 +32821,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L25_bool_binop_done:;
           if (!__pyx_t_15) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1269
+          /* "MUSCython/RLE_BWTCython.pyx":1288
  *                     currLen -= 1
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:
  *                         l -= 1             # <<<<<<<<<<<<<<
@@ -32216,7 +32831,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_l = (__pyx_v_l - 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1270
+        /* "MUSCython/RLE_BWTCython.pyx":1289
  *                     while l > 0 and self.lcps_view[l-1] >= currLen:
  *                         l -= 1
  *                     while h < self.totalSize and self.lcps_view[h-1] >= currLen:             # <<<<<<<<<<<<<<
@@ -32236,7 +32851,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L29_bool_binop_done:;
           if (!__pyx_t_15) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1271
+          /* "MUSCython/RLE_BWTCython.pyx":1290
  *                         l -= 1
  *                     while h < self.totalSize and self.lcps_view[h-1] >= currLen:
  *                         h += 1             # <<<<<<<<<<<<<<
@@ -32246,7 +32861,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_h = (__pyx_v_h + 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1273
+        /* "MUSCython/RLE_BWTCython.pyx":1292
  *                         h += 1
  * 
  *                     isExactEntries = True             # <<<<<<<<<<<<<<
@@ -32255,7 +32870,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_isExactEntries = 1;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1255
+        /* "MUSCython/RLE_BWTCython.pyx":1274
  * 
  *                 #also, we now check if we are at the read length
  *                 if currLen == strLen:             # <<<<<<<<<<<<<<
@@ -32265,7 +32880,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         goto __pyx_L20;
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":1275
+      /* "MUSCython/RLE_BWTCython.pyx":1294
  *                     isExactEntries = True
  *                 else:
  *                     isExactEntries = False             # <<<<<<<<<<<<<<
@@ -32279,27 +32894,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     }
     __pyx_L17:;
 
-    /* "MUSCython/RLE_BWTCython.pyx":1280
+    /* "MUSCython/RLE_BWTCython.pyx":1299
  * 
  *             #Now we do everything again, but for the half length
  *             newL = self.getOccurrenceOfCharAtIndex(c, hL)             # <<<<<<<<<<<<<<
  *             newH = self.getOccurrenceOfCharAtIndex(c, hH)
  * 
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1280, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1299, __pyx_L1_error)
     __pyx_v_newL = __pyx_t_7;
 
-    /* "MUSCython/RLE_BWTCython.pyx":1281
+    /* "MUSCython/RLE_BWTCython.pyx":1300
  *             #Now we do everything again, but for the half length
  *             newL = self.getOccurrenceOfCharAtIndex(c, hL)
  *             newH = self.getOccurrenceOfCharAtIndex(c, hH)             # <<<<<<<<<<<<<<
  * 
  *             #while the new low and high are the same and we still have some length on the base k-mer
  */
-    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1281, __pyx_L1_error)
+    __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1300, __pyx_L1_error)
     __pyx_v_newH = __pyx_t_7;
 
-    /* "MUSCython/RLE_BWTCython.pyx":1284
+    /* "MUSCython/RLE_BWTCython.pyx":1303
  * 
  *             #while the new low and high are the same and we still have some length on the base k-mer
  *             while newL == newH and hCurrLen > 0:             # <<<<<<<<<<<<<<
@@ -32318,7 +32933,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_L33_bool_binop_done:;
       if (!__pyx_t_15) break;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1286
+      /* "MUSCython/RLE_BWTCython.pyx":1305
  *             while newL == newH and hCurrLen > 0:
  *                 #decrease currLen and loosen the k-mers to match it
  *                 hCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -32327,7 +32942,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_hCurrLen = (__pyx_v_hCurrLen - 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":1287
+      /* "MUSCython/RLE_BWTCython.pyx":1306
  *                 #decrease currLen and loosen the k-mers to match it
  *                 hCurrLen -= 1
  *                 while hL > 0 and self.lcps_view[hL-1] >= hCurrLen:             # <<<<<<<<<<<<<<
@@ -32347,7 +32962,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L37_bool_binop_done:;
         if (!__pyx_t_15) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1288
+        /* "MUSCython/RLE_BWTCython.pyx":1307
  *                 hCurrLen -= 1
  *                 while hL > 0 and self.lcps_view[hL-1] >= hCurrLen:
  *                     hL -= 1             # <<<<<<<<<<<<<<
@@ -32357,7 +32972,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_hL = (__pyx_v_hL - 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":1289
+      /* "MUSCython/RLE_BWTCython.pyx":1308
  *                 while hL > 0 and self.lcps_view[hL-1] >= hCurrLen:
  *                     hL -= 1
  *                 while hH < self.totalSize and self.lcps_view[hH-1] >= hCurrLen:             # <<<<<<<<<<<<<<
@@ -32377,7 +32992,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_L41_bool_binop_done:;
         if (!__pyx_t_15) break;
 
-        /* "MUSCython/RLE_BWTCython.pyx":1290
+        /* "MUSCython/RLE_BWTCython.pyx":1309
  *                     hL -= 1
  *                 while hH < self.totalSize and self.lcps_view[hH-1] >= hCurrLen:
  *                     hH += 1             # <<<<<<<<<<<<<<
@@ -32387,28 +33002,28 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_v_hH = (__pyx_v_hH + 1);
       }
 
-      /* "MUSCython/RLE_BWTCython.pyx":1293
+      /* "MUSCython/RLE_BWTCython.pyx":1312
  * 
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, hL)             # <<<<<<<<<<<<<<
  *                 newH = self.getOccurrenceOfCharAtIndex(c, hH)
  * 
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1293, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1312, __pyx_L1_error)
       __pyx_v_newL = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1294
+      /* "MUSCython/RLE_BWTCython.pyx":1313
  *                 #retry the search with the loosened parameters
  *                 newL = self.getOccurrenceOfCharAtIndex(c, hL)
  *                 newH = self.getOccurrenceOfCharAtIndex(c, hH)             # <<<<<<<<<<<<<<
  * 
  *             if hCurrLen == 0 and newL == newH:
  */
-      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1294, __pyx_L1_error)
+      __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c, __pyx_v_hH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1313, __pyx_L1_error)
       __pyx_v_newH = __pyx_t_7;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":1296
+    /* "MUSCython/RLE_BWTCython.pyx":1315
  *                 newH = self.getOccurrenceOfCharAtIndex(c, hH)
  * 
  *             if hCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -32426,7 +33041,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_L44_bool_binop_done:;
     if (__pyx_t_15) {
 
-      /* "MUSCython/RLE_BWTCython.pyx":1298
+      /* "MUSCython/RLE_BWTCython.pyx":1317
  *             if hCurrLen == 0 and newL == newH:
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 hL = 0             # <<<<<<<<<<<<<<
@@ -32435,7 +33050,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_hL = 0;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1299
+      /* "MUSCython/RLE_BWTCython.pyx":1318
  *                 #if we have no current length and there's nothing in the search range, we basically skip this letter
  *                 hL = 0
  *                 hH = self.totalSize             # <<<<<<<<<<<<<<
@@ -32445,7 +33060,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_7 = __pyx_v_self->__pyx_base.totalSize;
       __pyx_v_hH = __pyx_t_7;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1296
+      /* "MUSCython/RLE_BWTCython.pyx":1315
  *                 newH = self.getOccurrenceOfCharAtIndex(c, hH)
  * 
  *             if hCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -32455,7 +33070,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       goto __pyx_L43;
     }
 
-    /* "MUSCython/RLE_BWTCython.pyx":1302
+    /* "MUSCython/RLE_BWTCython.pyx":1321
  *             else:
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 hL = newL             # <<<<<<<<<<<<<<
@@ -32465,7 +33080,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     /*else*/ {
       __pyx_v_hL = __pyx_v_newL;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1303
+      /* "MUSCython/RLE_BWTCython.pyx":1322
  *                 #else, we set our l/h to newL/newH and increment the length
  *                 hL = newL
  *                 hH = newH             # <<<<<<<<<<<<<<
@@ -32474,7 +33089,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_hH = __pyx_v_newH;
 
-      /* "MUSCython/RLE_BWTCython.pyx":1304
+      /* "MUSCython/RLE_BWTCython.pyx":1323
  *                 hL = newL
  *                 hH = newH
  *                 hCurrLen += 1             # <<<<<<<<<<<<<<
@@ -32483,7 +33098,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
       __pyx_v_hCurrLen = (__pyx_v_hCurrLen + 1);
 
-      /* "MUSCython/RLE_BWTCython.pyx":1307
+      /* "MUSCython/RLE_BWTCython.pyx":1326
  * 
  *                 #also, we now check if we are at the half read length
  *                 if hCurrLen == halfLen:             # <<<<<<<<<<<<<<
@@ -32493,7 +33108,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
       __pyx_t_15 = (__pyx_v_hCurrLen == __pyx_v_halfLen);
       if (__pyx_t_15) {
 
-        /* "MUSCython/RLE_BWTCython.pyx":1311
+        /* "MUSCython/RLE_BWTCython.pyx":1330
  *                     #1 - take 50-mer range and find $+50-mer, then exclude those which exactly match,
  *                     #    recover the string and local align the string
  *                     if x+strLen <= s:             # <<<<<<<<<<<<<<
@@ -32503,27 +33118,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_t_15 = ((__pyx_v_x + __pyx_v_strLen) <= __pyx_v_s);
         if (__pyx_t_15) {
 
-          /* "MUSCython/RLE_BWTCython.pyx":1313
+          /* "MUSCython/RLE_BWTCython.pyx":1332
  *                     if x+strLen <= s:
  *                         #first, we need to find those with a '$' before them
  *                         newL = self.getOccurrenceOfCharAtIndex(0, hL)             # <<<<<<<<<<<<<<
  *                         newH = self.getOccurrenceOfCharAtIndex(0, hH)
  * 
  */
-          __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_hL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1313, __pyx_L1_error)
+          __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_hL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1332, __pyx_L1_error)
           __pyx_v_newL = __pyx_t_7;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1314
+          /* "MUSCython/RLE_BWTCython.pyx":1333
  *                         #first, we need to find those with a '$' before them
  *                         newL = self.getOccurrenceOfCharAtIndex(0, hL)
  *                         newH = self.getOccurrenceOfCharAtIndex(0, hH)             # <<<<<<<<<<<<<<
  * 
  *                         #TODO: is this complicated 'if' necessary when we are also checking for "y in readSet"?
  */
-          __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_hH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1314, __pyx_L1_error)
+          __pyx_t_7 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_hH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1333, __pyx_L1_error)
           __pyx_v_newH = __pyx_t_7;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1317
+          /* "MUSCython/RLE_BWTCython.pyx":1336
  * 
  *                         #TODO: is this complicated 'if' necessary when we are also checking for "y in readSet"?
  *                         if isExactEntries:             # <<<<<<<<<<<<<<
@@ -32532,7 +33147,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
           if (__pyx_v_isExactEntries) {
 
-            /* "MUSCython/RLE_BWTCython.pyx":1318
+            /* "MUSCython/RLE_BWTCython.pyx":1337
  *                         #TODO: is this complicated 'if' necessary when we are also checking for "y in readSet"?
  *                         if isExactEntries:
  *                             for y in range(newL, exactMatchLow):             # <<<<<<<<<<<<<<
@@ -32544,20 +33159,20 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             for (__pyx_t_18 = __pyx_v_newL; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
               __pyx_v_y = __pyx_t_18;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1319
+              /* "MUSCython/RLE_BWTCython.pyx":1338
  *                         if isExactEntries:
  *                             for y in range(newL, exactMatchLow):
  *                                 if y in readSet:             # <<<<<<<<<<<<<<
  *                                     continue
  *                                 else:
  */
-              __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1319, __pyx_L1_error)
+              __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1338, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_4);
-              __pyx_t_15 = (__Pyx_PySet_ContainsTF(__pyx_t_4, __pyx_v_readSet, Py_EQ)); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 1319, __pyx_L1_error)
+              __pyx_t_15 = (__Pyx_PySet_ContainsTF(__pyx_t_4, __pyx_v_readSet, Py_EQ)); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 1338, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               if (__pyx_t_15) {
 
-                /* "MUSCython/RLE_BWTCython.pyx":1320
+                /* "MUSCython/RLE_BWTCython.pyx":1339
  *                             for y in range(newL, exactMatchLow):
  *                                 if y in readSet:
  *                                     continue             # <<<<<<<<<<<<<<
@@ -32566,7 +33181,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 goto __pyx_L49_continue;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1319
+                /* "MUSCython/RLE_BWTCython.pyx":1338
  *                         if isExactEntries:
  *                             for y in range(newL, exactMatchLow):
  *                                 if y in readSet:             # <<<<<<<<<<<<<<
@@ -32575,7 +33190,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":1322
+              /* "MUSCython/RLE_BWTCython.pyx":1341
  *                                     continue
  *                                 else:
  *                                     recoveredString = self.recoverString(y)             # <<<<<<<<<<<<<<
@@ -32583,35 +33198,35 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  *                                     if alignScore <= 1:
  */
               /*else*/ {
-                __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1322, __pyx_L1_error)
+                __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1341, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_4);
-                if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1322, __pyx_L1_error)
+                if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1341, __pyx_L1_error)
                 __Pyx_XDECREF_SET(__pyx_v_recoveredString, ((PyObject*)__pyx_t_4));
                 __pyx_t_4 = 0;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1323
+                /* "MUSCython/RLE_BWTCython.pyx":1342
  *                                 else:
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])             # <<<<<<<<<<<<<<
  *                                     if alignScore <= 1:
  *                                         readSet.add(y)
  */
-                __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1323, __pyx_L1_error)
+                __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1342, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1323, __pyx_L1_error)
+                __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1342, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_1);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 if (unlikely(__pyx_v_seq == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 1323, __pyx_L1_error)
+                  __PYX_ERR(0, 1342, __pyx_L1_error)
                 }
-                __pyx_t_3 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), (__pyx_v_x + __pyx_v_strLen)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1323, __pyx_L1_error)
+                __pyx_t_3 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), (__pyx_v_x + __pyx_v_strLen)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1342, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 if (unlikely(__pyx_v_recoveredString == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 1323, __pyx_L1_error)
+                  __PYX_ERR(0, 1342, __pyx_L1_error)
                 }
-                __pyx_t_2 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1323, __pyx_L1_error)
+                __pyx_t_2 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1342, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __pyx_t_5 = NULL;
                 __pyx_t_6 = 0;
@@ -32633,15 +33248,15 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1323, __pyx_L1_error)
+                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1342, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
                   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
                 }
-                __pyx_t_20 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_20 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1323, __pyx_L1_error)
+                __pyx_t_20 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_20 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1342, __pyx_L1_error)
                 __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 __pyx_v_alignScore = __pyx_t_20;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1324
+                /* "MUSCython/RLE_BWTCython.pyx":1343
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -32651,19 +33266,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_t_15 = (__pyx_v_alignScore <= 1);
                 if (__pyx_t_15) {
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1325
+                  /* "MUSCython/RLE_BWTCython.pyx":1344
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:
  *                                         readSet.add(y)             # <<<<<<<<<<<<<<
  *                             for y in range(exactMatchHigh, newH):
  *                                 if y in readSet:
  */
-                  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1325, __pyx_L1_error)
+                  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1344, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
-                  __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1325, __pyx_L1_error)
+                  __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1344, __pyx_L1_error)
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1324
+                  /* "MUSCython/RLE_BWTCython.pyx":1343
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -32675,7 +33290,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_L49_continue:;
             }
 
-            /* "MUSCython/RLE_BWTCython.pyx":1326
+            /* "MUSCython/RLE_BWTCython.pyx":1345
  *                                     if alignScore <= 1:
  *                                         readSet.add(y)
  *                             for y in range(exactMatchHigh, newH):             # <<<<<<<<<<<<<<
@@ -32687,20 +33302,20 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             for (__pyx_t_18 = __pyx_v_exactMatchHigh; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
               __pyx_v_y = __pyx_t_18;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1327
+              /* "MUSCython/RLE_BWTCython.pyx":1346
  *                                         readSet.add(y)
  *                             for y in range(exactMatchHigh, newH):
  *                                 if y in readSet:             # <<<<<<<<<<<<<<
  *                                     continue
  *                                 else:
  */
-              __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1327, __pyx_L1_error)
+              __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1346, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_4);
-              __pyx_t_15 = (__Pyx_PySet_ContainsTF(__pyx_t_4, __pyx_v_readSet, Py_EQ)); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 1327, __pyx_L1_error)
+              __pyx_t_15 = (__Pyx_PySet_ContainsTF(__pyx_t_4, __pyx_v_readSet, Py_EQ)); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 1346, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               if (__pyx_t_15) {
 
-                /* "MUSCython/RLE_BWTCython.pyx":1328
+                /* "MUSCython/RLE_BWTCython.pyx":1347
  *                             for y in range(exactMatchHigh, newH):
  *                                 if y in readSet:
  *                                     continue             # <<<<<<<<<<<<<<
@@ -32709,7 +33324,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 goto __pyx_L53_continue;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1327
+                /* "MUSCython/RLE_BWTCython.pyx":1346
  *                                         readSet.add(y)
  *                             for y in range(exactMatchHigh, newH):
  *                                 if y in readSet:             # <<<<<<<<<<<<<<
@@ -32718,7 +33333,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":1330
+              /* "MUSCython/RLE_BWTCython.pyx":1349
  *                                     continue
  *                                 else:
  *                                     recoveredString = self.recoverString(y)             # <<<<<<<<<<<<<<
@@ -32726,35 +33341,35 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  *                                     if alignScore <= 1:
  */
               /*else*/ {
-                __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1330, __pyx_L1_error)
+                __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1349, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_4);
-                if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1330, __pyx_L1_error)
+                if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1349, __pyx_L1_error)
                 __Pyx_XDECREF_SET(__pyx_v_recoveredString, ((PyObject*)__pyx_t_4));
                 __pyx_t_4 = 0;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1331
+                /* "MUSCython/RLE_BWTCython.pyx":1350
  *                                 else:
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])             # <<<<<<<<<<<<<<
  *                                     if alignScore <= 1:
  *                                         readSet.add(y)
  */
-                __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1331, __pyx_L1_error)
+                __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1350, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_1);
-                __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1331, __pyx_L1_error)
+                __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1350, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
                 if (unlikely(__pyx_v_seq == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 1331, __pyx_L1_error)
+                  __PYX_ERR(0, 1350, __pyx_L1_error)
                 }
-                __pyx_t_1 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), (__pyx_v_x + __pyx_v_strLen)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1331, __pyx_L1_error)
+                __pyx_t_1 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), (__pyx_v_x + __pyx_v_strLen)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1350, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_1);
                 if (unlikely(__pyx_v_recoveredString == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 1331, __pyx_L1_error)
+                  __PYX_ERR(0, 1350, __pyx_L1_error)
                 }
-                __pyx_t_3 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1331, __pyx_L1_error)
+                __pyx_t_3 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1350, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __pyx_t_5 = NULL;
                 __pyx_t_6 = 0;
@@ -32776,15 +33391,15 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
                   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1331, __pyx_L1_error)
+                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1350, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 }
-                __pyx_t_20 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_20 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1331, __pyx_L1_error)
+                __pyx_t_20 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_20 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1350, __pyx_L1_error)
                 __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 __pyx_v_alignScore = __pyx_t_20;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1332
+                /* "MUSCython/RLE_BWTCython.pyx":1351
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -32794,19 +33409,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_t_15 = (__pyx_v_alignScore <= 1);
                 if (__pyx_t_15) {
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1333
+                  /* "MUSCython/RLE_BWTCython.pyx":1352
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:
  *                                         readSet.add(y)             # <<<<<<<<<<<<<<
  * 
  *                         else:
  */
-                  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1333, __pyx_L1_error)
+                  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1352, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
-                  __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1333, __pyx_L1_error)
+                  __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1352, __pyx_L1_error)
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1332
+                  /* "MUSCython/RLE_BWTCython.pyx":1351
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -32818,7 +33433,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_L53_continue:;
             }
 
-            /* "MUSCython/RLE_BWTCython.pyx":1317
+            /* "MUSCython/RLE_BWTCython.pyx":1336
  * 
  *                         #TODO: is this complicated 'if' necessary when we are also checking for "y in readSet"?
  *                         if isExactEntries:             # <<<<<<<<<<<<<<
@@ -32828,7 +33443,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             goto __pyx_L48;
           }
 
-          /* "MUSCython/RLE_BWTCython.pyx":1337
+          /* "MUSCython/RLE_BWTCython.pyx":1356
  *                         else:
  *                             #we have no exact matching entries, so we start with everything
  *                             for y in range(newL, newH):             # <<<<<<<<<<<<<<
@@ -32841,20 +33456,20 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             for (__pyx_t_18 = __pyx_v_newL; __pyx_t_18 < __pyx_t_17; __pyx_t_18+=1) {
               __pyx_v_y = __pyx_t_18;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1338
+              /* "MUSCython/RLE_BWTCython.pyx":1357
  *                             #we have no exact matching entries, so we start with everything
  *                             for y in range(newL, newH):
  *                                 if y in readSet:             # <<<<<<<<<<<<<<
  *                                     continue
  *                                 if not isExactEntries or y < exactMatchLow or y >= exactMatchHigh:
  */
-              __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1338, __pyx_L1_error)
+              __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1357, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_4);
-              __pyx_t_15 = (__Pyx_PySet_ContainsTF(__pyx_t_4, __pyx_v_readSet, Py_EQ)); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 1338, __pyx_L1_error)
+              __pyx_t_15 = (__Pyx_PySet_ContainsTF(__pyx_t_4, __pyx_v_readSet, Py_EQ)); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 1357, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
               if (__pyx_t_15) {
 
-                /* "MUSCython/RLE_BWTCython.pyx":1339
+                /* "MUSCython/RLE_BWTCython.pyx":1358
  *                             for y in range(newL, newH):
  *                                 if y in readSet:
  *                                     continue             # <<<<<<<<<<<<<<
@@ -32863,7 +33478,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 goto __pyx_L57_continue;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1338
+                /* "MUSCython/RLE_BWTCython.pyx":1357
  *                             #we have no exact matching entries, so we start with everything
  *                             for y in range(newL, newH):
  *                                 if y in readSet:             # <<<<<<<<<<<<<<
@@ -32872,7 +33487,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":1340
+              /* "MUSCython/RLE_BWTCython.pyx":1359
  *                                 if y in readSet:
  *                                     continue
  *                                 if not isExactEntries or y < exactMatchLow or y >= exactMatchHigh:             # <<<<<<<<<<<<<<
@@ -32896,42 +33511,42 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_L61_bool_binop_done:;
               if (__pyx_t_15) {
 
-                /* "MUSCython/RLE_BWTCython.pyx":1342
+                /* "MUSCython/RLE_BWTCython.pyx":1361
  *                                 if not isExactEntries or y < exactMatchLow or y >= exactMatchHigh:
  *                                     #not in the exact match range so handle it
  *                                     recoveredString = self.recoverString(y)             # <<<<<<<<<<<<<<
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:
  */
-                __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1342, __pyx_L1_error)
+                __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1361, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_4);
-                if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1342, __pyx_L1_error)
+                if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1361, __pyx_L1_error)
                 __Pyx_XDECREF_SET(__pyx_v_recoveredString, ((PyObject*)__pyx_t_4));
                 __pyx_t_4 = 0;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1343
+                /* "MUSCython/RLE_BWTCython.pyx":1362
  *                                     #not in the exact match range so handle it
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])             # <<<<<<<<<<<<<<
  *                                     if alignScore <= 1:
  *                                         readSet.add(y)
  */
-                __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1343, __pyx_L1_error)
+                __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1362, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_2);
-                __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1343, __pyx_L1_error)
+                __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1362, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 if (unlikely(__pyx_v_seq == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 1343, __pyx_L1_error)
+                  __PYX_ERR(0, 1362, __pyx_L1_error)
                 }
-                __pyx_t_2 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), (__pyx_v_x + __pyx_v_strLen)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1343, __pyx_L1_error)
+                __pyx_t_2 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), (__pyx_v_x + __pyx_v_strLen)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1362, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 if (unlikely(__pyx_v_recoveredString == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 1343, __pyx_L1_error)
+                  __PYX_ERR(0, 1362, __pyx_L1_error)
                 }
-                __pyx_t_1 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1343, __pyx_L1_error)
+                __pyx_t_1 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1362, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_1);
                 __pyx_t_5 = NULL;
                 __pyx_t_6 = 0;
@@ -32953,15 +33568,15 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1343, __pyx_L1_error)
+                  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1362, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 }
-                __pyx_t_20 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_20 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1343, __pyx_L1_error)
+                __pyx_t_20 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_20 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1362, __pyx_L1_error)
                 __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 __pyx_v_alignScore = __pyx_t_20;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1344
+                /* "MUSCython/RLE_BWTCython.pyx":1363
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -32971,19 +33586,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_t_15 = (__pyx_v_alignScore <= 1);
                 if (__pyx_t_15) {
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1345
+                  /* "MUSCython/RLE_BWTCython.pyx":1364
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:
  *                                         readSet.add(y)             # <<<<<<<<<<<<<<
  * 
  *                     #2 - take max level range, loosen until we have a c2+k-mer where c2 != nextC and k >= 50#
  */
-                  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1345, __pyx_L1_error)
+                  __pyx_t_4 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1364, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
-                  __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1345, __pyx_L1_error)
+                  __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_4); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1364, __pyx_L1_error)
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1344
+                  /* "MUSCython/RLE_BWTCython.pyx":1363
  *                                     recoveredString = self.recoverString(y)
  *                                     alignScore = AlignmentUtil.alignChanges(seq[x+halfLen:x+strLen], recoveredString[1+halfLen:])
  *                                     if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -32992,7 +33607,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 }
 
-                /* "MUSCython/RLE_BWTCython.pyx":1340
+                /* "MUSCython/RLE_BWTCython.pyx":1359
  *                                 if y in readSet:
  *                                     continue
  *                                 if not isExactEntries or y < exactMatchLow or y >= exactMatchHigh:             # <<<<<<<<<<<<<<
@@ -33005,7 +33620,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           }
           __pyx_L48:;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1311
+          /* "MUSCython/RLE_BWTCython.pyx":1330
  *                     #1 - take 50-mer range and find $+50-mer, then exclude those which exactly match,
  *                     #    recover the string and local align the string
  *                     if x+strLen <= s:             # <<<<<<<<<<<<<<
@@ -33014,7 +33629,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1349
+        /* "MUSCython/RLE_BWTCython.pyx":1368
  *                     #2 - take max level range, loosen until we have a c2+k-mer where c2 != nextC and k >= 50#
  *                     #    then crawl until we cycle the 'c2' out
  *                     if x > 0:             # <<<<<<<<<<<<<<
@@ -33024,7 +33639,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
         __pyx_t_15 = (__pyx_v_x > 0);
         if (__pyx_t_15) {
 
-          /* "MUSCython/RLE_BWTCython.pyx":1351
+          /* "MUSCython/RLE_BWTCython.pyx":1370
  *                     if x > 0:
  *                         #get the next symbol and the f-index at this position
  *                         nextC = self.charToNum_view[seq_view[x-1]]             # <<<<<<<<<<<<<<
@@ -33034,25 +33649,25 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_t_14 = (__pyx_v_seq_view[(__pyx_v_x - 1)]);
           __pyx_v_nextC = (*((unsigned char *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.charToNum_view.data + __pyx_t_14 * __pyx_v_self->__pyx_base.charToNum_view.strides[0]) )));
 
-          /* "MUSCython/RLE_BWTCython.pyx":1352
+          /* "MUSCython/RLE_BWTCython.pyx":1371
  *                         #get the next symbol and the f-index at this position
  *                         nextC = self.charToNum_view[seq_view[x-1]]
  *                         self.fillFmAtIndex(lowArray_view, hL)             # <<<<<<<<<<<<<<
  *                         self.fillFmAtIndex(highArray_view, hH)
  * 
  */
-          ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_lowArray_view, __pyx_v_hL); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1352, __pyx_L1_error)
+          ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_lowArray_view, __pyx_v_hL); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1371, __pyx_L1_error)
 
-          /* "MUSCython/RLE_BWTCython.pyx":1353
+          /* "MUSCython/RLE_BWTCython.pyx":1372
  *                         nextC = self.charToNum_view[seq_view[x-1]]
  *                         self.fillFmAtIndex(lowArray_view, hL)
  *                         self.fillFmAtIndex(highArray_view, hH)             # <<<<<<<<<<<<<<
  * 
  *                         #for all other symbols
  */
-          ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_highArray_view, __pyx_v_hH); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1353, __pyx_L1_error)
+          ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.fillFmAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_highArray_view, __pyx_v_hH); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1372, __pyx_L1_error)
 
-          /* "MUSCython/RLE_BWTCython.pyx":1356
+          /* "MUSCython/RLE_BWTCython.pyx":1375
  * 
  *                         #for all other symbols
  *                         for c2 in range(1, vcLen):             # <<<<<<<<<<<<<<
@@ -33064,7 +33679,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           for (__pyx_t_7 = 1; __pyx_t_7 < __pyx_t_22; __pyx_t_7+=1) {
             __pyx_v_c2 = __pyx_t_7;
 
-            /* "MUSCython/RLE_BWTCython.pyx":1357
+            /* "MUSCython/RLE_BWTCython.pyx":1376
  *                         #for all other symbols
  *                         for c2 in range(1, vcLen):
  *                             if nextC != c2:             # <<<<<<<<<<<<<<
@@ -33074,7 +33689,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             __pyx_t_15 = (__pyx_v_nextC != __pyx_v_c2);
             if (__pyx_t_15) {
 
-              /* "MUSCython/RLE_BWTCython.pyx":1358
+              /* "MUSCython/RLE_BWTCython.pyx":1377
  *                         for c2 in range(1, vcLen):
  *                             if nextC != c2:
  *                                 if highArray_view[c2] - lowArray_view[c2] <= 1:             # <<<<<<<<<<<<<<
@@ -33086,7 +33701,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               __pyx_t_15 = (((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_highArray_view.data + __pyx_t_14 * __pyx_v_highArray_view.strides[0]) ))) - (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_lowArray_view.data + __pyx_t_23 * __pyx_v_lowArray_view.strides[0]) )))) <= 1);
               if (__pyx_t_15) {
 
-                /* "MUSCython/RLE_BWTCython.pyx":1361
+                /* "MUSCython/RLE_BWTCython.pyx":1380
  *                                     #THIS METHOD WORKS WELL WHEN THERE ARE SPARSE ERRORS
  *                                     #basically local align the one-of reads
  *                                     for y in range(lowArray_view[c2], highArray_view[c2]):             # <<<<<<<<<<<<<<
@@ -33100,33 +33715,33 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 for (__pyx_t_18 = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_lowArray_view.data + __pyx_t_23 * __pyx_v_lowArray_view.strides[0]) ))); __pyx_t_18 < __pyx_t_25; __pyx_t_18+=1) {
                   __pyx_v_y = __pyx_t_18;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1362
+                  /* "MUSCython/RLE_BWTCython.pyx":1381
  *                                     #basically local align the one-of reads
  *                                     for y in range(lowArray_view[c2], highArray_view[c2]):
  *                                         recoveredString = self.recoverString(y)             # <<<<<<<<<<<<<<
  *                                         dollarIndex = recoveredString.find('$')
  *                                         #number of symbols before k-mer = 1+(strLen-dollarIndex)
  */
-                  __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1362, __pyx_L1_error)
+                  __pyx_t_4 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.recoverString(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1381, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
-                  if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1362, __pyx_L1_error)
+                  if (!(likely(PyString_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None) || __Pyx_RaiseUnexpectedTypeError("str", __pyx_t_4))) __PYX_ERR(0, 1381, __pyx_L1_error)
                   __Pyx_XDECREF_SET(__pyx_v_recoveredString, ((PyObject*)__pyx_t_4));
                   __pyx_t_4 = 0;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1363
+                  /* "MUSCython/RLE_BWTCython.pyx":1382
  *                                     for y in range(lowArray_view[c2], highArray_view[c2]):
  *                                         recoveredString = self.recoverString(y)
  *                                         dollarIndex = recoveredString.find('$')             # <<<<<<<<<<<<<<
  *                                         #number of symbols before k-mer = 1+(strLen-dollarIndex)
  *                                         symBefore = 1+strLen-dollarIndex
  */
-                  __pyx_t_4 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PyString_Type_find, __pyx_v_recoveredString, __pyx_kp_s__13); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1363, __pyx_L1_error)
+                  __pyx_t_4 = __Pyx_CallUnboundCMethod1(&__pyx_umethod_PyString_Type_find, __pyx_v_recoveredString, __pyx_kp_s__13); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1382, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_4);
-                  __pyx_t_17 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_17 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1363, __pyx_L1_error)
+                  __pyx_t_17 = __Pyx_PyInt_As_unsigned_long(__pyx_t_4); if (unlikely((__pyx_t_17 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1382, __pyx_L1_error)
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                   __pyx_v_dollarIndex = __pyx_t_17;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1365
+                  /* "MUSCython/RLE_BWTCython.pyx":1384
  *                                         dollarIndex = recoveredString.find('$')
  *                                         #number of symbols before k-mer = 1+(strLen-dollarIndex)
  *                                         symBefore = 1+strLen-dollarIndex             # <<<<<<<<<<<<<<
@@ -33135,7 +33750,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                   __pyx_v_symBefore = ((1 + __pyx_v_strLen) - __pyx_v_dollarIndex);
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1367
+                  /* "MUSCython/RLE_BWTCython.pyx":1386
  *                                         symBefore = 1+strLen-dollarIndex
  *                                         #number of symbols after k-mer = dollarIndex-(halfLen+1)
  *                                         symAfter = dollarIndex-(halfLen+1)             # <<<<<<<<<<<<<<
@@ -33144,7 +33759,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                   __pyx_v_symAfter = (__pyx_v_dollarIndex - (__pyx_v_halfLen + 1));
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1369
+                  /* "MUSCython/RLE_BWTCython.pyx":1388
  *                                         symAfter = dollarIndex-(halfLen+1)
  * 
  *                                         if symBefore <= x and x+dollarIndex-1 < s:             # <<<<<<<<<<<<<<
@@ -33162,37 +33777,37 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __pyx_L73_bool_binop_done:;
                   if (__pyx_t_15) {
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1370
+                    /* "MUSCython/RLE_BWTCython.pyx":1389
  * 
  *                                         if symBefore <= x and x+dollarIndex-1 < s:
  *                                             alignScore = (AlignmentUtil.alignChanges(seq[x-symBefore:x], recoveredString[dollarIndex+1:]+recoveredString[0:1])             # <<<<<<<<<<<<<<
  *                                                           + AlignmentUtil.alignChanges(seq[x+halfLen:x+halfLen+symAfter], recoveredString[1+halfLen:dollarIndex]))
  * 
  */
-                    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1370, __pyx_L1_error)
+                    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1389, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_3);
-                    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1370, __pyx_L1_error)
+                    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1389, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_1);
                     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                     if (unlikely(__pyx_v_seq == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 1370, __pyx_L1_error)
+                      __PYX_ERR(0, 1389, __pyx_L1_error)
                     }
-                    __pyx_t_3 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x - __pyx_v_symBefore), __pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1370, __pyx_L1_error)
+                    __pyx_t_3 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x - __pyx_v_symBefore), __pyx_v_x); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1389, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_3);
                     if (unlikely(__pyx_v_recoveredString == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 1370, __pyx_L1_error)
+                      __PYX_ERR(0, 1389, __pyx_L1_error)
                     }
-                    __pyx_t_2 = PySequence_GetSlice(__pyx_v_recoveredString, (__pyx_v_dollarIndex + 1), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1370, __pyx_L1_error)
+                    __pyx_t_2 = PySequence_GetSlice(__pyx_v_recoveredString, (__pyx_v_dollarIndex + 1), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1389, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_2);
                     if (unlikely(__pyx_v_recoveredString == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 1370, __pyx_L1_error)
+                      __PYX_ERR(0, 1389, __pyx_L1_error)
                     }
-                    __pyx_t_5 = PySequence_GetSlice(__pyx_v_recoveredString, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1370, __pyx_L1_error)
+                    __pyx_t_5 = PySequence_GetSlice(__pyx_v_recoveredString, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1389, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_5);
-                    __pyx_t_26 = __Pyx_PyStr_ConcatInPlace(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 1370, __pyx_L1_error)
+                    __pyx_t_26 = __Pyx_PyStr_ConcatInPlace(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 1389, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_26);
                     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -33216,34 +33831,34 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
                       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                       __Pyx_DECREF(__pyx_t_26); __pyx_t_26 = 0;
-                      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1370, __pyx_L1_error)
+                      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 1389, __pyx_L1_error)
                       __Pyx_GOTREF(__pyx_t_4);
                       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
                     }
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1371
+                    /* "MUSCython/RLE_BWTCython.pyx":1390
  *                                         if symBefore <= x and x+dollarIndex-1 < s:
  *                                             alignScore = (AlignmentUtil.alignChanges(seq[x-symBefore:x], recoveredString[dollarIndex+1:]+recoveredString[0:1])
  *                                                           + AlignmentUtil.alignChanges(seq[x+halfLen:x+halfLen+symAfter], recoveredString[1+halfLen:dollarIndex]))             # <<<<<<<<<<<<<<
  * 
  *                                             if alignScore <= 1:
  */
-                    __Pyx_GetModuleGlobalName(__pyx_t_26, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 1371, __pyx_L1_error)
+                    __Pyx_GetModuleGlobalName(__pyx_t_26, __pyx_n_s_AlignmentUtil); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 1390, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_26);
-                    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_26, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1371, __pyx_L1_error)
+                    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_26, __pyx_n_s_alignChanges); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1390, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_3);
                     __Pyx_DECREF(__pyx_t_26); __pyx_t_26 = 0;
                     if (unlikely(__pyx_v_seq == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 1371, __pyx_L1_error)
+                      __PYX_ERR(0, 1390, __pyx_L1_error)
                     }
-                    __pyx_t_26 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), ((__pyx_v_x + __pyx_v_halfLen) + __pyx_v_symAfter)); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 1371, __pyx_L1_error)
+                    __pyx_t_26 = PySequence_GetSlice(__pyx_v_seq, (__pyx_v_x + __pyx_v_halfLen), ((__pyx_v_x + __pyx_v_halfLen) + __pyx_v_symAfter)); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 1390, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_26);
                     if (unlikely(__pyx_v_recoveredString == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 1371, __pyx_L1_error)
+                      __PYX_ERR(0, 1390, __pyx_L1_error)
                     }
-                    __pyx_t_5 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), __pyx_v_dollarIndex); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1371, __pyx_L1_error)
+                    __pyx_t_5 = PySequence_GetSlice(__pyx_v_recoveredString, (1 + __pyx_v_halfLen), __pyx_v_dollarIndex); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1390, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_5);
                     __pyx_t_2 = NULL;
                     __pyx_t_6 = 0;
@@ -33265,19 +33880,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
                       __Pyx_DECREF(__pyx_t_26); __pyx_t_26 = 0;
                       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-                      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1371, __pyx_L1_error)
+                      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1390, __pyx_L1_error)
                       __Pyx_GOTREF(__pyx_t_1);
                       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                     }
-                    __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1371, __pyx_L1_error)
+                    __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1390, __pyx_L1_error)
                     __Pyx_GOTREF(__pyx_t_3);
                     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-                    __pyx_t_17 = __Pyx_PyInt_As_unsigned_long(__pyx_t_3); if (unlikely((__pyx_t_17 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1371, __pyx_L1_error)
+                    __pyx_t_17 = __Pyx_PyInt_As_unsigned_long(__pyx_t_3); if (unlikely((__pyx_t_17 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1390, __pyx_L1_error)
                     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                     __pyx_v_alignScore = __pyx_t_17;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1373
+                    /* "MUSCython/RLE_BWTCython.pyx":1392
  *                                                           + AlignmentUtil.alignChanges(seq[x+halfLen:x+halfLen+symAfter], recoveredString[1+halfLen:dollarIndex]))
  * 
  *                                             if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -33287,19 +33902,19 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_t_15 = (__pyx_v_alignScore <= 1);
                     if (__pyx_t_15) {
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1374
+                      /* "MUSCython/RLE_BWTCython.pyx":1393
  * 
  *                                             if alignScore <= 1:
  *                                                 readSet.add(self.getSequenceDollarID(y))             # <<<<<<<<<<<<<<
  *                                 else:
  *                                     #when we have a more than just one (i.e., a SNP we didn't know about)
  */
-                      __pyx_t_3 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getSequenceDollarID(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1374, __pyx_L1_error)
+                      __pyx_t_3 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getSequenceDollarID(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_y, 0, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1393, __pyx_L1_error)
                       __Pyx_GOTREF(__pyx_t_3);
-                      __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1374, __pyx_L1_error)
+                      __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1393, __pyx_L1_error)
                       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1373
+                      /* "MUSCython/RLE_BWTCython.pyx":1392
  *                                                           + AlignmentUtil.alignChanges(seq[x+halfLen:x+halfLen+symAfter], recoveredString[1+halfLen:dollarIndex]))
  * 
  *                                             if alignScore <= 1:             # <<<<<<<<<<<<<<
@@ -33308,7 +33923,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                     }
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1369
+                    /* "MUSCython/RLE_BWTCython.pyx":1388
  *                                         symAfter = dollarIndex-(halfLen+1)
  * 
  *                                         if symBefore <= x and x+dollarIndex-1 < s:             # <<<<<<<<<<<<<<
@@ -33318,7 +33933,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   }
                 }
 
-                /* "MUSCython/RLE_BWTCython.pyx":1358
+                /* "MUSCython/RLE_BWTCython.pyx":1377
  *                         for c2 in range(1, vcLen):
  *                             if nextC != c2:
  *                                 if highArray_view[c2] - lowArray_view[c2] <= 1:             # <<<<<<<<<<<<<<
@@ -33328,7 +33943,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 goto __pyx_L69;
               }
 
-              /* "MUSCython/RLE_BWTCython.pyx":1379
+              /* "MUSCython/RLE_BWTCython.pyx":1398
  *                                     #we approach it by adding the "wrong" symbol and then forcing the rest to be correct
  *                                     #copy some values
  *                                     altL = l             # <<<<<<<<<<<<<<
@@ -33338,7 +33953,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               /*else*/ {
                 __pyx_v_altL = __pyx_v_l;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1380
+                /* "MUSCython/RLE_BWTCython.pyx":1399
  *                                     #copy some values
  *                                     altL = l
  *                                     altH = h             # <<<<<<<<<<<<<<
@@ -33347,7 +33962,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 __pyx_v_altH = __pyx_v_h;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1381
+                /* "MUSCython/RLE_BWTCython.pyx":1400
  *                                     altL = l
  *                                     altH = h
  *                                     altCurrLen = currLen             # <<<<<<<<<<<<<<
@@ -33356,7 +33971,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 __pyx_v_altCurrLen = __pyx_v_currLen;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1382
+                /* "MUSCython/RLE_BWTCython.pyx":1401
  *                                     altH = h
  *                                     altCurrLen = currLen
  *                                     altChangeOffset = 0             # <<<<<<<<<<<<<<
@@ -33365,7 +33980,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 __pyx_v_altChangeOffset = 0;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1383
+                /* "MUSCython/RLE_BWTCython.pyx":1402
  *                                     altCurrLen = currLen
  *                                     altChangeOffset = 0
  *                                     z = x - 2             # <<<<<<<<<<<<<<
@@ -33374,7 +33989,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                 __pyx_v_z = (__pyx_v_x - 2);
 
-                /* "MUSCython/RLE_BWTCython.pyx":1386
+                /* "MUSCython/RLE_BWTCython.pyx":1405
  * 
  *                                     #try to tighten once
  *                                     newL = lowArray_view[c2]             # <<<<<<<<<<<<<<
@@ -33384,7 +33999,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_t_23 = __pyx_v_c2;
                 __pyx_v_newL = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_lowArray_view.data + __pyx_t_23 * __pyx_v_lowArray_view.strides[0]) )));
 
-                /* "MUSCython/RLE_BWTCython.pyx":1387
+                /* "MUSCython/RLE_BWTCython.pyx":1406
  *                                     #try to tighten once
  *                                     newL = lowArray_view[c2]
  *                                     newH = highArray_view[c2]             # <<<<<<<<<<<<<<
@@ -33394,7 +34009,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_t_23 = __pyx_v_c2;
                 __pyx_v_newH = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_highArray_view.data + __pyx_t_23 * __pyx_v_highArray_view.strides[0]) )));
 
-                /* "MUSCython/RLE_BWTCython.pyx":1390
+                /* "MUSCython/RLE_BWTCython.pyx":1409
  * 
  *                                     #loosen until we get a match we can tighten into
  *                                     while newL == newH and altCurrLen > halfLen:             # <<<<<<<<<<<<<<
@@ -33413,7 +34028,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __pyx_L78_bool_binop_done:;
                   if (!__pyx_t_15) break;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1391
+                  /* "MUSCython/RLE_BWTCython.pyx":1410
  *                                     #loosen until we get a match we can tighten into
  *                                     while newL == newH and altCurrLen > halfLen:
  *                                         altCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -33422,7 +34037,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                   __pyx_v_altCurrLen = (__pyx_v_altCurrLen - 1);
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1392
+                  /* "MUSCython/RLE_BWTCython.pyx":1411
  *                                     while newL == newH and altCurrLen > halfLen:
  *                                         altCurrLen -= 1
  *                                         while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -33442,7 +34057,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_L82_bool_binop_done:;
                     if (!__pyx_t_15) break;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1393
+                    /* "MUSCython/RLE_BWTCython.pyx":1412
  *                                         altCurrLen -= 1
  *                                         while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                             altL -= 1             # <<<<<<<<<<<<<<
@@ -33452,7 +34067,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_v_altL = (__pyx_v_altL - 1);
                   }
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1394
+                  /* "MUSCython/RLE_BWTCython.pyx":1413
  *                                         while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                             altL -= 1
  *                                         while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -33472,7 +34087,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_L86_bool_binop_done:;
                     if (!__pyx_t_15) break;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1395
+                    /* "MUSCython/RLE_BWTCython.pyx":1414
  *                                             altL -= 1
  *                                         while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:
  *                                             altH += 1             # <<<<<<<<<<<<<<
@@ -33482,28 +34097,28 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_v_altH = (__pyx_v_altH + 1);
                   }
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1397
+                  /* "MUSCython/RLE_BWTCython.pyx":1416
  *                                             altH += 1
  * 
  *                                         newL = self.getOccurrenceOfCharAtIndex(c2, altL)             # <<<<<<<<<<<<<<
  *                                         newH = self.getOccurrenceOfCharAtIndex(c2, altH)
  * 
  */
-                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c2, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1397, __pyx_L1_error)
+                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c2, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1416, __pyx_L1_error)
                   __pyx_v_newL = __pyx_t_17;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1398
+                  /* "MUSCython/RLE_BWTCython.pyx":1417
  * 
  *                                         newL = self.getOccurrenceOfCharAtIndex(c2, altL)
  *                                         newH = self.getOccurrenceOfCharAtIndex(c2, altH)             # <<<<<<<<<<<<<<
  * 
  *                                     if altCurrLen == 0 and newL == newH:
  */
-                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c2, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1398, __pyx_L1_error)
+                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c2, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1417, __pyx_L1_error)
                   __pyx_v_newH = __pyx_t_17;
                 }
 
-                /* "MUSCython/RLE_BWTCython.pyx":1400
+                /* "MUSCython/RLE_BWTCython.pyx":1419
  *                                         newH = self.getOccurrenceOfCharAtIndex(c2, altH)
  * 
  *                                     if altCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -33521,7 +34136,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 __pyx_L89_bool_binop_done:;
                 if (__pyx_t_15) {
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1401
+                  /* "MUSCython/RLE_BWTCython.pyx":1420
  * 
  *                                     if altCurrLen == 0 and newL == newH:
  *                                         newL = 0             # <<<<<<<<<<<<<<
@@ -33530,7 +34145,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                   __pyx_v_newL = 0;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1402
+                  /* "MUSCython/RLE_BWTCython.pyx":1421
  *                                     if altCurrLen == 0 and newL == newH:
  *                                         newL = 0
  *                                         newH = self.totalSize             # <<<<<<<<<<<<<<
@@ -33540,7 +34155,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __pyx_t_17 = __pyx_v_self->__pyx_base.totalSize;
                   __pyx_v_newH = __pyx_t_17;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1400
+                  /* "MUSCython/RLE_BWTCython.pyx":1419
  *                                         newH = self.getOccurrenceOfCharAtIndex(c2, altH)
  * 
  *                                     if altCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -33550,7 +34165,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   goto __pyx_L88;
                 }
 
-                /* "MUSCython/RLE_BWTCython.pyx":1405
+                /* "MUSCython/RLE_BWTCython.pyx":1424
  *                                     else:
  *                                         #tighten once
  *                                         altCurrLen += 1             # <<<<<<<<<<<<<<
@@ -33560,7 +34175,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 /*else*/ {
                   __pyx_v_altCurrLen = (__pyx_v_altCurrLen + 1);
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1406
+                  /* "MUSCython/RLE_BWTCython.pyx":1425
  *                                         #tighten once
  *                                         altCurrLen += 1
  *                                         altL = newL             # <<<<<<<<<<<<<<
@@ -33569,7 +34184,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                   __pyx_v_altL = __pyx_v_newL;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1407
+                  /* "MUSCython/RLE_BWTCython.pyx":1426
  *                                         altCurrLen += 1
  *                                         altL = newL
  *                                         altH = newH             # <<<<<<<<<<<<<<
@@ -33578,7 +34193,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                   __pyx_v_altH = __pyx_v_newH;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1410
+                  /* "MUSCython/RLE_BWTCython.pyx":1429
  * 
  *                                         #if exact matches, copy them and loosen up
  *                                         if altCurrLen == strLen:             # <<<<<<<<<<<<<<
@@ -33588,33 +34203,33 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __pyx_t_15 = (__pyx_v_altCurrLen == __pyx_v_strLen);
                   if (__pyx_t_15) {
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1411
+                    /* "MUSCython/RLE_BWTCython.pyx":1430
  *                                         #if exact matches, copy them and loosen up
  *                                         if altCurrLen == strLen:
  *                                             for y in range(self.getOccurrenceOfCharAtIndex(0, altL), self.getOccurrenceOfCharAtIndex(0, altH)):             # <<<<<<<<<<<<<<
  *                                                 readSet.add(y)
  * 
  */
-                    __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1411, __pyx_L1_error)
-                    __pyx_t_20 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1411, __pyx_L1_error)
+                    __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1430, __pyx_L1_error)
+                    __pyx_t_20 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1430, __pyx_L1_error)
                     __pyx_t_27 = __pyx_t_17;
                     for (__pyx_t_18 = __pyx_t_20; __pyx_t_18 < __pyx_t_27; __pyx_t_18+=1) {
                       __pyx_v_y = __pyx_t_18;
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1412
+                      /* "MUSCython/RLE_BWTCython.pyx":1431
  *                                         if altCurrLen == strLen:
  *                                             for y in range(self.getOccurrenceOfCharAtIndex(0, altL), self.getOccurrenceOfCharAtIndex(0, altH)):
  *                                                 readSet.add(y)             # <<<<<<<<<<<<<<
  * 
  *                                             altCurrLen -= 1
  */
-                      __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1412, __pyx_L1_error)
+                      __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1431, __pyx_L1_error)
                       __Pyx_GOTREF(__pyx_t_3);
-                      __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1412, __pyx_L1_error)
+                      __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1431, __pyx_L1_error)
                       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                     }
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1414
+                    /* "MUSCython/RLE_BWTCython.pyx":1433
  *                                                 readSet.add(y)
  * 
  *                                             altCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -33623,7 +34238,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                     __pyx_v_altCurrLen = (__pyx_v_altCurrLen - 1);
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1415
+                    /* "MUSCython/RLE_BWTCython.pyx":1434
  * 
  *                                             altCurrLen -= 1
  *                                             while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -33643,7 +34258,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_L96_bool_binop_done:;
                       if (!__pyx_t_15) break;
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1416
+                      /* "MUSCython/RLE_BWTCython.pyx":1435
  *                                             altCurrLen -= 1
  *                                             while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                                 altL -= 1             # <<<<<<<<<<<<<<
@@ -33653,7 +34268,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_v_altL = (__pyx_v_altL - 1);
                     }
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1417
+                    /* "MUSCython/RLE_BWTCython.pyx":1436
  *                                             while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                                 altL -= 1
  *                                             while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -33673,7 +34288,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_L100_bool_binop_done:;
                       if (!__pyx_t_15) break;
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1418
+                      /* "MUSCython/RLE_BWTCython.pyx":1437
  *                                                 altL -= 1
  *                                             while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:
  *                                                 altH += 1             # <<<<<<<<<<<<<<
@@ -33683,7 +34298,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_v_altH = (__pyx_v_altH + 1);
                     }
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1410
+                    /* "MUSCython/RLE_BWTCython.pyx":1429
  * 
  *                                         #if exact matches, copy them and loosen up
  *                                         if altCurrLen == strLen:             # <<<<<<<<<<<<<<
@@ -33694,7 +34309,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                 }
                 __pyx_L88:;
 
-                /* "MUSCython/RLE_BWTCython.pyx":1421
+                /* "MUSCython/RLE_BWTCython.pyx":1440
  * 
  *                                     #while our alternate symbol is in the front half of our k-mer range
  *                                     while altCurrLen - altChangeOffset > halfLen and z > 0:             # <<<<<<<<<<<<<<
@@ -33713,7 +34328,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __pyx_L104_bool_binop_done:;
                   if (!__pyx_t_15) break;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1422
+                  /* "MUSCython/RLE_BWTCython.pyx":1441
  *                                     #while our alternate symbol is in the front half of our k-mer range
  *                                     while altCurrLen - altChangeOffset > halfLen and z > 0:
  *                                         c3 = self.charToNum_view[seq_view[z]]             # <<<<<<<<<<<<<<
@@ -33723,27 +34338,27 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __pyx_t_23 = (__pyx_v_seq_view[__pyx_v_z]);
                   __pyx_v_c3 = (*((unsigned char *) ( /* dim=0 */ (__pyx_v_self->__pyx_base.charToNum_view.data + __pyx_t_23 * __pyx_v_self->__pyx_base.charToNum_view.strides[0]) )));
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1423
+                  /* "MUSCython/RLE_BWTCython.pyx":1442
  *                                     while altCurrLen - altChangeOffset > halfLen and z > 0:
  *                                         c3 = self.charToNum_view[seq_view[z]]
  *                                         newL = self.getOccurrenceOfCharAtIndex(c3, altL)             # <<<<<<<<<<<<<<
  *                                         newH = self.getOccurrenceOfCharAtIndex(c3, altH)
  * 
  */
-                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1423, __pyx_L1_error)
+                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1442, __pyx_L1_error)
                   __pyx_v_newL = __pyx_t_17;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1424
+                  /* "MUSCython/RLE_BWTCython.pyx":1443
  *                                         c3 = self.charToNum_view[seq_view[z]]
  *                                         newL = self.getOccurrenceOfCharAtIndex(c3, altL)
  *                                         newH = self.getOccurrenceOfCharAtIndex(c3, altH)             # <<<<<<<<<<<<<<
  * 
  *                                         #loosen until we get a match we can tighten into
  */
-                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1424, __pyx_L1_error)
+                  __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1443, __pyx_L1_error)
                   __pyx_v_newH = __pyx_t_17;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1427
+                  /* "MUSCython/RLE_BWTCython.pyx":1446
  * 
  *                                         #loosen until we get a match we can tighten into
  *                                         while newL == newH and altCurrLen - altChangeOffset > halfLen:             # <<<<<<<<<<<<<<
@@ -33762,7 +34377,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_L108_bool_binop_done:;
                     if (!__pyx_t_15) break;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1428
+                    /* "MUSCython/RLE_BWTCython.pyx":1447
  *                                         #loosen until we get a match we can tighten into
  *                                         while newL == newH and altCurrLen - altChangeOffset > halfLen:
  *                                             altCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -33771,7 +34386,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                     __pyx_v_altCurrLen = (__pyx_v_altCurrLen - 1);
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1429
+                    /* "MUSCython/RLE_BWTCython.pyx":1448
  *                                         while newL == newH and altCurrLen - altChangeOffset > halfLen:
  *                                             altCurrLen -= 1
  *                                             while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -33791,7 +34406,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_L112_bool_binop_done:;
                       if (!__pyx_t_15) break;
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1430
+                      /* "MUSCython/RLE_BWTCython.pyx":1449
  *                                             altCurrLen -= 1
  *                                             while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                                 altL -= 1             # <<<<<<<<<<<<<<
@@ -33801,7 +34416,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_v_altL = (__pyx_v_altL - 1);
                     }
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1431
+                    /* "MUSCython/RLE_BWTCython.pyx":1450
  *                                             while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                                 altL -= 1
  *                                             while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -33821,7 +34436,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_L116_bool_binop_done:;
                       if (!__pyx_t_15) break;
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1432
+                      /* "MUSCython/RLE_BWTCython.pyx":1451
  *                                                 altL -= 1
  *                                             while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:
  *                                                 altH += 1             # <<<<<<<<<<<<<<
@@ -33831,28 +34446,28 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                       __pyx_v_altH = (__pyx_v_altH + 1);
                     }
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1434
+                    /* "MUSCython/RLE_BWTCython.pyx":1453
  *                                                 altH += 1
  * 
  *                                             newL = self.getOccurrenceOfCharAtIndex(c3, altL)             # <<<<<<<<<<<<<<
  *                                             newH = self.getOccurrenceOfCharAtIndex(c3, altH)
  * 
  */
-                    __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1434, __pyx_L1_error)
+                    __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1453, __pyx_L1_error)
                     __pyx_v_newL = __pyx_t_17;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1435
+                    /* "MUSCython/RLE_BWTCython.pyx":1454
  * 
  *                                             newL = self.getOccurrenceOfCharAtIndex(c3, altL)
  *                                             newH = self.getOccurrenceOfCharAtIndex(c3, altH)             # <<<<<<<<<<<<<<
  * 
  *                                         if altCurrLen == 0 and newL == newH:
  */
-                    __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1435, __pyx_L1_error)
+                    __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), __pyx_v_c3, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1454, __pyx_L1_error)
                     __pyx_v_newH = __pyx_t_17;
                   }
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1437
+                  /* "MUSCython/RLE_BWTCython.pyx":1456
  *                                             newH = self.getOccurrenceOfCharAtIndex(c3, altH)
  * 
  *                                         if altCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -33870,7 +34485,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   __pyx_L119_bool_binop_done:;
                   if (__pyx_t_15) {
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1438
+                    /* "MUSCython/RLE_BWTCython.pyx":1457
  * 
  *                                         if altCurrLen == 0 and newL == newH:
  *                                             newL = 0             # <<<<<<<<<<<<<<
@@ -33879,7 +34494,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                     __pyx_v_newL = 0;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1439
+                    /* "MUSCython/RLE_BWTCython.pyx":1458
  *                                         if altCurrLen == 0 and newL == newH:
  *                                             newL = 0
  *                                             newH = self.totalSize             # <<<<<<<<<<<<<<
@@ -33889,7 +34504,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_t_17 = __pyx_v_self->__pyx_base.totalSize;
                     __pyx_v_newH = __pyx_t_17;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1437
+                    /* "MUSCython/RLE_BWTCython.pyx":1456
  *                                             newH = self.getOccurrenceOfCharAtIndex(c3, altH)
  * 
  *                                         if altCurrLen == 0 and newL == newH:             # <<<<<<<<<<<<<<
@@ -33899,7 +34514,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     goto __pyx_L118;
                   }
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1442
+                  /* "MUSCython/RLE_BWTCython.pyx":1461
  *                                         else:
  *                                             #tighten once
  *                                             altCurrLen += 1             # <<<<<<<<<<<<<<
@@ -33909,7 +34524,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   /*else*/ {
                     __pyx_v_altCurrLen = (__pyx_v_altCurrLen + 1);
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1443
+                    /* "MUSCython/RLE_BWTCython.pyx":1462
  *                                             #tighten once
  *                                             altCurrLen += 1
  *                                             altChangeOffset += 1             # <<<<<<<<<<<<<<
@@ -33918,7 +34533,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                     __pyx_v_altChangeOffset = (__pyx_v_altChangeOffset + 1);
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1444
+                    /* "MUSCython/RLE_BWTCython.pyx":1463
  *                                             altCurrLen += 1
  *                                             altChangeOffset += 1
  *                                             altL = newL             # <<<<<<<<<<<<<<
@@ -33927,7 +34542,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                     __pyx_v_altL = __pyx_v_newL;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1445
+                    /* "MUSCython/RLE_BWTCython.pyx":1464
  *                                             altChangeOffset += 1
  *                                             altL = newL
  *                                             altH = newH             # <<<<<<<<<<<<<<
@@ -33936,7 +34551,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                     __pyx_v_altH = __pyx_v_newH;
 
-                    /* "MUSCython/RLE_BWTCython.pyx":1448
+                    /* "MUSCython/RLE_BWTCython.pyx":1467
  * 
  *                                             #if exact matches, copy them and loosen up
  *                                             if altCurrLen == strLen:             # <<<<<<<<<<<<<<
@@ -33946,33 +34561,33 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                     __pyx_t_15 = (__pyx_v_altCurrLen == __pyx_v_strLen);
                     if (__pyx_t_15) {
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1449
+                      /* "MUSCython/RLE_BWTCython.pyx":1468
  *                                             #if exact matches, copy them and loosen up
  *                                             if altCurrLen == strLen:
  *                                                 for y in range(self.getOccurrenceOfCharAtIndex(0, altL), self.getOccurrenceOfCharAtIndex(0, altH)):             # <<<<<<<<<<<<<<
  *                                                     readSet.add(y)
  * 
  */
-                      __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1449, __pyx_L1_error)
-                      __pyx_t_27 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1449, __pyx_L1_error)
+                      __pyx_t_17 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altH, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1468, __pyx_L1_error)
+                      __pyx_t_27 = ((struct __pyx_vtabstruct_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self->__pyx_base.__pyx_vtab)->__pyx_base.getOccurrenceOfCharAtIndex(((struct __pyx_obj_9MUSCython_8BasicBWT_BasicBWT *)__pyx_v_self), 0, __pyx_v_altL, 0); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1468, __pyx_L1_error)
                       __pyx_t_20 = __pyx_t_17;
                       for (__pyx_t_18 = __pyx_t_27; __pyx_t_18 < __pyx_t_20; __pyx_t_18+=1) {
                         __pyx_v_y = __pyx_t_18;
 
-                        /* "MUSCython/RLE_BWTCython.pyx":1450
+                        /* "MUSCython/RLE_BWTCython.pyx":1469
  *                                             if altCurrLen == strLen:
  *                                                 for y in range(self.getOccurrenceOfCharAtIndex(0, altL), self.getOccurrenceOfCharAtIndex(0, altH)):
  *                                                     readSet.add(y)             # <<<<<<<<<<<<<<
  * 
  *                                                 altCurrLen -= 1
  */
-                        __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1450, __pyx_L1_error)
+                        __pyx_t_3 = __Pyx_PyInt_From_long(__pyx_v_y); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1469, __pyx_L1_error)
                         __Pyx_GOTREF(__pyx_t_3);
-                        __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1450, __pyx_L1_error)
+                        __pyx_t_19 = PySet_Add(__pyx_v_readSet, __pyx_t_3); if (unlikely(__pyx_t_19 == ((int)-1))) __PYX_ERR(0, 1469, __pyx_L1_error)
                         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                       }
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1452
+                      /* "MUSCython/RLE_BWTCython.pyx":1471
  *                                                     readSet.add(y)
  * 
  *                                                 altCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -33981,7 +34596,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
                       __pyx_v_altCurrLen = (__pyx_v_altCurrLen - 1);
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1453
+                      /* "MUSCython/RLE_BWTCython.pyx":1472
  * 
  *                                                 altCurrLen -= 1
  *                                                 while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -34001,7 +34616,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                         __pyx_L126_bool_binop_done:;
                         if (!__pyx_t_15) break;
 
-                        /* "MUSCython/RLE_BWTCython.pyx":1454
+                        /* "MUSCython/RLE_BWTCython.pyx":1473
  *                                                 altCurrLen -= 1
  *                                                 while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                                     altL -= 1             # <<<<<<<<<<<<<<
@@ -34011,7 +34626,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                         __pyx_v_altL = (__pyx_v_altL - 1);
                       }
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1455
+                      /* "MUSCython/RLE_BWTCython.pyx":1474
  *                                                 while altL > 0 and self.lcps_view[altL-1] >= altCurrLen:
  *                                                     altL -= 1
  *                                                 while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:             # <<<<<<<<<<<<<<
@@ -34031,7 +34646,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                         __pyx_L130_bool_binop_done:;
                         if (!__pyx_t_15) break;
 
-                        /* "MUSCython/RLE_BWTCython.pyx":1456
+                        /* "MUSCython/RLE_BWTCython.pyx":1475
  *                                                     altL -= 1
  *                                                 while altH < self.totalSize and self.lcps_view[altH-1] >= altCurrLen:
  *                                                     altH += 1             # <<<<<<<<<<<<<<
@@ -34041,7 +34656,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                         __pyx_v_altH = (__pyx_v_altH + 1);
                       }
 
-                      /* "MUSCython/RLE_BWTCython.pyx":1448
+                      /* "MUSCython/RLE_BWTCython.pyx":1467
  * 
  *                                             #if exact matches, copy them and loosen up
  *                                             if altCurrLen == strLen:             # <<<<<<<<<<<<<<
@@ -34052,7 +34667,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
                   }
                   __pyx_L118:;
 
-                  /* "MUSCython/RLE_BWTCython.pyx":1458
+                  /* "MUSCython/RLE_BWTCython.pyx":1477
  *                                                     altH += 1
  * 
  *                                         z -= 1             # <<<<<<<<<<<<<<
@@ -34064,7 +34679,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
               }
               __pyx_L69:;
 
-              /* "MUSCython/RLE_BWTCython.pyx":1357
+              /* "MUSCython/RLE_BWTCython.pyx":1376
  *                         #for all other symbols
  *                         for c2 in range(1, vcLen):
  *                             if nextC != c2:             # <<<<<<<<<<<<<<
@@ -34074,7 +34689,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
             }
           }
 
-          /* "MUSCython/RLE_BWTCython.pyx":1349
+          /* "MUSCython/RLE_BWTCython.pyx":1368
  *                     #2 - take max level range, loosen until we have a c2+k-mer where c2 != nextC and k >= 50#
  *                     #    then crawl until we cycle the 'c2' out
  *                     if x > 0:             # <<<<<<<<<<<<<<
@@ -34083,7 +34698,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1461
+        /* "MUSCython/RLE_BWTCython.pyx":1480
  * 
  *                     #now reduce the currLen and loosen
  *                     hCurrLen -= 1             # <<<<<<<<<<<<<<
@@ -34092,7 +34707,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
  */
         __pyx_v_hCurrLen = (__pyx_v_hCurrLen - 1);
 
-        /* "MUSCython/RLE_BWTCython.pyx":1462
+        /* "MUSCython/RLE_BWTCython.pyx":1481
  *                     #now reduce the currLen and loosen
  *                     hCurrLen -= 1
  *                     while hL > 0 and self.lcps_view[hL-1] >= hCurrLen:             # <<<<<<<<<<<<<<
@@ -34112,7 +34727,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L134_bool_binop_done:;
           if (!__pyx_t_15) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1463
+          /* "MUSCython/RLE_BWTCython.pyx":1482
  *                     hCurrLen -= 1
  *                     while hL > 0 and self.lcps_view[hL-1] >= hCurrLen:
  *                         hL -= 1             # <<<<<<<<<<<<<<
@@ -34122,7 +34737,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_hL = (__pyx_v_hL - 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1464
+        /* "MUSCython/RLE_BWTCython.pyx":1483
  *                     while hL > 0 and self.lcps_view[hL-1] >= hCurrLen:
  *                         hL -= 1
  *                     while hH < self.totalSize and self.lcps_view[hH-1] >= hCurrLen:             # <<<<<<<<<<<<<<
@@ -34142,7 +34757,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_L138_bool_binop_done:;
           if (!__pyx_t_15) break;
 
-          /* "MUSCython/RLE_BWTCython.pyx":1465
+          /* "MUSCython/RLE_BWTCython.pyx":1484
  *                         hL -= 1
  *                     while hH < self.totalSize and self.lcps_view[hH-1] >= hCurrLen:
  *                         hH += 1             # <<<<<<<<<<<<<<
@@ -34152,7 +34767,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
           __pyx_v_hH = (__pyx_v_hH + 1);
         }
 
-        /* "MUSCython/RLE_BWTCython.pyx":1307
+        /* "MUSCython/RLE_BWTCython.pyx":1326
  * 
  *                 #also, we now check if we are at the half read length
  *                 if hCurrLen == halfLen:             # <<<<<<<<<<<<<<
@@ -34164,7 +34779,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
     __pyx_L43:;
   }
 
-  /* "MUSCython/RLE_BWTCython.pyx":1468
+  /* "MUSCython/RLE_BWTCython.pyx":1487
  * 
  *         #return the readSet
  *         return readSet             # <<<<<<<<<<<<<<
@@ -34174,7 +34789,7 @@ static PyObject *__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSe
   __pyx_r = __pyx_v_readSet;
   goto __pyx_L0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":1165
+  /* "MUSCython/RLE_BWTCython.pyx":1184
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError2(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
@@ -34273,7 +34888,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1165, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1184, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -34281,14 +34896,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1165, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 1184, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError2", 1, 2, 2, 1); __PYX_ERR(0, 1165, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError2", 1, 2, 2, 1); __PYX_ERR(0, 1184, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "findReadsMatchingSeqWithError2") < 0)) __PYX_ERR(0, 1165, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "findReadsMatchingSeqWithError2") < 0)) __PYX_ERR(0, 1184, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 2)) {
       goto __pyx_L5_argtuple_error;
@@ -34297,11 +34912,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[1] = __Pyx_Arg_FASTCALL(__pyx_args, 1);
     }
     __pyx_v_seq = ((PyObject*)values[0]);
-    __pyx_v_strLen = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_strLen == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1165, __pyx_L3_error)
+    __pyx_v_strLen = __Pyx_PyInt_As_unsigned_long(values[1]); if (unlikely((__pyx_v_strLen == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 1184, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError2", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 1165, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("findReadsMatchingSeqWithError2", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 1184, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -34315,7 +34930,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq), (&PyBytes_Type), 1, "seq", 1))) __PYX_ERR(0, 1165, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq), (&PyBytes_Type), 1, "seq", 1))) __PYX_ERR(0, 1184, __pyx_L1_error)
   __pyx_r = __pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_24findReadsMatchingSeqWithError2(((struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *)__pyx_v_self), __pyx_v_seq, __pyx_v_strLen);
 
   /* function exit code */
@@ -34342,7 +34957,7 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_24findReadsMatchin
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("findReadsMatchingSeqWithError2", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeqWithError2(__pyx_v_self, __pyx_v_seq, __pyx_v_strLen, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1165, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeqWithError2(__pyx_v_self, __pyx_v_seq, __pyx_v_strLen, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -35027,15 +35642,15 @@ static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_7RLE_BWT_28__setstate_cytho
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9MUSCython_13RLE_BWTCython_1__pyx_unpickle_RLE_BWT(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_9MUSCython_13RLE_BWTCython_3__pyx_unpickle_RLE_BWT(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_9MUSCython_13RLE_BWTCython_1__pyx_unpickle_RLE_BWT = {"__pyx_unpickle_RLE_BWT", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_9MUSCython_13RLE_BWTCython_1__pyx_unpickle_RLE_BWT, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_9MUSCython_13RLE_BWTCython_1__pyx_unpickle_RLE_BWT(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_9MUSCython_13RLE_BWTCython_3__pyx_unpickle_RLE_BWT = {"__pyx_unpickle_RLE_BWT", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_9MUSCython_13RLE_BWTCython_3__pyx_unpickle_RLE_BWT, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_9MUSCython_13RLE_BWTCython_3__pyx_unpickle_RLE_BWT(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -35139,7 +35754,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_9MUSCython_13RLE_BWTCython___pyx_unpickle_RLE_BWT(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_9MUSCython_13RLE_BWTCython_2__pyx_unpickle_RLE_BWT(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -35152,7 +35767,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython___pyx_unpickle_RLE_BWT(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_9MUSCython_13RLE_BWTCython_2__pyx_unpickle_RLE_BWT(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -35892,6 +36507,178 @@ static PyTypeObject __pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT = {
   0, /*tp_init*/
   0, /*tp_alloc*/
   __pyx_tp_new_9MUSCython_13RLE_BWTCython_RLE_BWT, /*tp_new*/
+  0, /*tp_free*/
+  0, /*tp_is_gc*/
+  0, /*tp_bases*/
+  0, /*tp_mro*/
+  0, /*tp_cache*/
+  0, /*tp_subclasses*/
+  0, /*tp_weaklist*/
+  0, /*tp_del*/
+  0, /*tp_version_tag*/
+  #if PY_VERSION_HEX >= 0x030400a1
+  #if CYTHON_USE_TP_FINALIZE
+  0, /*tp_finalize*/
+  #else
+  NULL, /*tp_finalize*/
+  #endif
+  #endif
+  #if PY_VERSION_HEX >= 0x030800b1 && (!CYTHON_COMPILING_IN_PYPY || PYPY_VERSION_NUM >= 0x07030800)
+  0, /*tp_vectorcall*/
+  #endif
+  #if __PYX_NEED_TP_PRINT_SLOT == 1
+  0, /*tp_print*/
+  #endif
+  #if PY_VERSION_HEX >= 0x030C0000
+  0, /*tp_watched*/
+  #endif
+  #if PY_VERSION_HEX >= 0x030d00A4
+  0, /*tp_versions_used*/
+  #endif
+  #if CYTHON_COMPILING_IN_PYPY && PY_VERSION_HEX >= 0x03090000 && PY_VERSION_HEX < 0x030a0000
+  0, /*tp_pypy_flags*/
+  #endif
+};
+#endif
+
+#if CYTHON_USE_FREELISTS
+static struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *__pyx_freelist_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr[8];
+static int __pyx_freecount_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr = 0;
+#endif
+
+static PyObject *__pyx_tp_new_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  PyObject *o;
+  #if CYTHON_COMPILING_IN_LIMITED_API
+  allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
+  o = alloc_func(t, 0);
+  #else
+  #if CYTHON_USE_FREELISTS
+  if (likely((int)(__pyx_freecount_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr > 0) & (int)(t->tp_basicsize == sizeof(struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr)))) {
+    o = (PyObject*)__pyx_freelist_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr[--__pyx_freecount_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr];
+    memset(o, 0, sizeof(struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr));
+    (void) PyObject_INIT(o, t);
+    PyObject_GC_Track(o);
+  } else
+  #endif
+  {
+    o = (*t->tp_alloc)(t, 0);
+    if (unlikely(!o)) return 0;
+  }
+  #endif
+  return o;
+}
+
+static void __pyx_tp_dealloc_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr(PyObject *o) {
+  struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *p = (struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *)o;
+  #if CYTHON_USE_TP_FINALIZE
+  if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && !__Pyx_PyObject_GC_IsFinalized(o)) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr) {
+      if (PyObject_CallFinalizerFromDealloc(o)) return;
+    }
+  }
+  #endif
+  PyObject_GC_UnTrack(o);
+  Py_CLEAR(p->__pyx_genexpr_arg_0);
+  Py_CLEAR(p->__pyx_v_x);
+  Py_CLEAR(p->__pyx_t_0);
+  #if CYTHON_USE_FREELISTS
+  if (((int)(__pyx_freecount_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr < 8) & (int)(Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr)))) {
+    __pyx_freelist_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr[__pyx_freecount_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr++] = ((struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *)o);
+  } else
+  #endif
+  {
+    #if CYTHON_USE_TYPE_SLOTS || CYTHON_COMPILING_IN_PYPY
+    (*Py_TYPE(o)->tp_free)(o);
+    #else
+    {
+      freefunc tp_free = (freefunc)PyType_GetSlot(Py_TYPE(o), Py_tp_free);
+      if (tp_free) tp_free(o);
+    }
+    #endif
+  }
+}
+
+static int __pyx_tp_traverse_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr(PyObject *o, visitproc v, void *a) {
+  int e;
+  struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *p = (struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr *)o;
+  if (p->__pyx_genexpr_arg_0) {
+    e = (*v)(p->__pyx_genexpr_arg_0, a); if (e) return e;
+  }
+  if (p->__pyx_v_x) {
+    e = (*v)(p->__pyx_v_x, a); if (e) return e;
+  }
+  if (p->__pyx_t_0) {
+    e = (*v)(p->__pyx_t_0, a); if (e) return e;
+  }
+  return 0;
+}
+#if CYTHON_USE_TYPE_SPECS
+static PyType_Slot __pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr},
+  {Py_tp_traverse, (void *)__pyx_tp_traverse_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr},
+  {Py_tp_new, (void *)__pyx_tp_new_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr},
+  {0, 0},
+};
+static PyType_Spec __pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr_spec = {
+  "MUSCython.RLE_BWTCython.__pyx_scope_struct__genexpr",
+  sizeof(struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr),
+  0,
+  Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_HAVE_FINALIZE,
+  __pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr_slots,
+};
+#else
+
+static PyTypeObject __pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr = {
+  PyVarObject_HEAD_INIT(0, 0)
+  "MUSCython.RLE_BWTCython.""__pyx_scope_struct__genexpr", /*tp_name*/
+  sizeof(struct __pyx_obj_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr), /*tp_basicsize*/
+  0, /*tp_itemsize*/
+  __pyx_tp_dealloc_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr, /*tp_dealloc*/
+  #if PY_VERSION_HEX < 0x030800b4
+  0, /*tp_print*/
+  #endif
+  #if PY_VERSION_HEX >= 0x030800b4
+  0, /*tp_vectorcall_offset*/
+  #endif
+  0, /*tp_getattr*/
+  0, /*tp_setattr*/
+  #if PY_MAJOR_VERSION < 3
+  0, /*tp_compare*/
+  #endif
+  #if PY_MAJOR_VERSION >= 3
+  0, /*tp_as_async*/
+  #endif
+  0, /*tp_repr*/
+  0, /*tp_as_number*/
+  0, /*tp_as_sequence*/
+  0, /*tp_as_mapping*/
+  0, /*tp_hash*/
+  0, /*tp_call*/
+  0, /*tp_str*/
+  0, /*tp_getattro*/
+  0, /*tp_setattro*/
+  0, /*tp_as_buffer*/
+  Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_HAVE_FINALIZE, /*tp_flags*/
+  0, /*tp_doc*/
+  __pyx_tp_traverse_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr, /*tp_traverse*/
+  0, /*tp_clear*/
+  0, /*tp_richcompare*/
+  0, /*tp_weaklistoffset*/
+  0, /*tp_iter*/
+  0, /*tp_iternext*/
+  0, /*tp_methods*/
+  0, /*tp_members*/
+  0, /*tp_getset*/
+  0, /*tp_base*/
+  0, /*tp_dict*/
+  0, /*tp_descr_get*/
+  0, /*tp_descr_set*/
+  #if !CYTHON_USE_TYPE_SPECS
+  0, /*tp_dictoffset*/
+  #endif
+  0, /*tp_init*/
+  0, /*tp_alloc*/
+  __pyx_tp_new_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -36963,7 +37750,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_s__13, __pyx_k__13, sizeof(__pyx_k__13), 0, 0, 1, 0},
     {&__pyx_kp_u__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 1, 0, 0},
     {&__pyx_n_s__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 0, 1, 1},
-    {&__pyx_n_s__56, __pyx_k__56, sizeof(__pyx_k__56), 0, 0, 1, 1},
+    {&__pyx_n_s__58, __pyx_k__58, sizeof(__pyx_k__58), 0, 0, 1, 1},
     {&__pyx_kp_u__6, __pyx_k__6, sizeof(__pyx_k__6), 0, 1, 0, 0},
     {&__pyx_kp_u__7, __pyx_k__7, sizeof(__pyx_k__7), 0, 1, 0, 0},
     {&__pyx_n_s_abc, __pyx_k_abc, sizeof(__pyx_k_abc), 0, 0, 1, 1},
@@ -36971,6 +37758,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_alignChanges, __pyx_k_alignChanges, sizeof(__pyx_k_alignChanges), 0, 0, 1, 1},
     {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
     {&__pyx_kp_u_and, __pyx_k_and, sizeof(__pyx_k_and), 0, 1, 0, 0},
+    {&__pyx_n_s_args, __pyx_k_args, sizeof(__pyx_k_args), 0, 0, 1, 1},
     {&__pyx_n_s_asyncio_coroutines, __pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 0, 1, 1},
     {&__pyx_n_s_base, __pyx_k_base, sizeof(__pyx_k_base), 0, 0, 1, 1},
     {&__pyx_n_s_binEnd, __pyx_k_binEnd, sizeof(__pyx_k_binEnd), 0, 0, 1, 1},
@@ -36984,6 +37772,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_class_getitem, __pyx_k_class_getitem, sizeof(__pyx_k_class_getitem), 0, 0, 1, 1},
     {&__pyx_n_s_clearAuxiliaryData, __pyx_k_clearAuxiliaryData, sizeof(__pyx_k_clearAuxiliaryData), 0, 0, 1, 1},
     {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
+    {&__pyx_n_s_close, __pyx_k_close, sizeof(__pyx_k_close), 0, 0, 1, 1},
     {&__pyx_n_s_collections, __pyx_k_collections, sizeof(__pyx_k_collections), 0, 0, 1, 1},
     {&__pyx_kp_s_collections_abc, __pyx_k_collections_abc, sizeof(__pyx_k_collections_abc), 0, 0, 1, 0},
     {&__pyx_kp_s_comp_fmIndex_npy, __pyx_k_comp_fmIndex_npy, sizeof(__pyx_k_comp_fmIndex_npy), 0, 0, 1, 0},
@@ -37043,6 +37832,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_fp, __pyx_k_fp, sizeof(__pyx_k_fp), 0, 0, 1, 1},
     {&__pyx_kp_s_from_the_file_system_manual_rem, __pyx_k_from_the_file_system_manual_rem, sizeof(__pyx_k_from_the_file_system_manual_rem), 0, 0, 1, 0},
     {&__pyx_kp_u_gc, __pyx_k_gc, sizeof(__pyx_k_gc), 0, 1, 0, 0},
+    {&__pyx_n_s_genexpr, __pyx_k_genexpr, sizeof(__pyx_k_genexpr), 0, 0, 1, 1},
     {&__pyx_n_s_getBWTRange, __pyx_k_getBWTRange, sizeof(__pyx_k_getBWTRange), 0, 0, 1, 1},
     {&__pyx_n_s_getCharAtIndex, __pyx_k_getCharAtIndex, sizeof(__pyx_k_getCharAtIndex), 0, 0, 1, 1},
     {&__pyx_n_s_getCompSize, __pyx_k_getCompSize, sizeof(__pyx_k_getCompSize), 0, 0, 1, 1},
@@ -37058,6 +37848,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_indexByte, __pyx_k_indexByte, sizeof(__pyx_k_indexByte), 0, 0, 1, 1},
     {&__pyx_n_s_info, __pyx_k_info, sizeof(__pyx_k_info), 0, 0, 1, 1},
     {&__pyx_n_s_initializing, __pyx_k_initializing, sizeof(__pyx_k_initializing), 0, 0, 1, 1},
+    {&__pyx_n_s_int_shape, __pyx_k_int_shape, sizeof(__pyx_k_int_shape), 0, 0, 1, 1},
+    {&__pyx_n_s_int_shape_locals_genexpr, __pyx_k_int_shape_locals_genexpr, sizeof(__pyx_k_int_shape_locals_genexpr), 0, 0, 1, 1},
     {&__pyx_n_s_is_coroutine, __pyx_k_is_coroutine, sizeof(__pyx_k_is_coroutine), 0, 0, 1, 1},
     {&__pyx_kp_s_is_too_large_to_be_a_string_ID, __pyx_k_is_too_large_to_be_a_string_ID, sizeof(__pyx_k_is_too_large_to_be_a_string_ID), 0, 0, 1, 0},
     {&__pyx_kp_u_isenabled, __pyx_k_isenabled, sizeof(__pyx_k_isenabled), 0, 1, 0, 0},
@@ -37077,6 +37869,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_math, __pyx_k_math, sizeof(__pyx_k_math), 0, 0, 1, 1},
     {&__pyx_n_s_memmap, __pyx_k_memmap, sizeof(__pyx_k_memmap), 0, 0, 1, 1},
     {&__pyx_n_s_memview, __pyx_k_memview, sizeof(__pyx_k_memview), 0, 0, 1, 1},
+    {&__pyx_n_s_mm, __pyx_k_mm, sizeof(__pyx_k_mm), 0, 0, 1, 1},
     {&__pyx_n_s_mode, __pyx_k_mode, sizeof(__pyx_k_mode), 0, 0, 1, 1},
     {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
     {&__pyx_n_s_name_2, __pyx_k_name_2, sizeof(__pyx_k_name_2), 0, 0, 1, 1},
@@ -37125,8 +37918,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_s, __pyx_k_s, sizeof(__pyx_k_s), 0, 0, 1, 1},
     {&__pyx_n_s_same, __pyx_k_same, sizeof(__pyx_k_same), 0, 0, 1, 1},
     {&__pyx_n_s_samplingSize, __pyx_k_samplingSize, sizeof(__pyx_k_samplingSize), 0, 0, 1, 1},
-    {&__pyx_n_s_save, __pyx_k_save, sizeof(__pyx_k_save), 0, 0, 1, 1},
     {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
+    {&__pyx_n_s_send, __pyx_k_send, sizeof(__pyx_k_send), 0, 0, 1, 1},
     {&__pyx_n_s_seq, __pyx_k_seq, sizeof(__pyx_k_seq), 0, 0, 1, 1},
     {&__pyx_n_s_setstate, __pyx_k_setstate, sizeof(__pyx_k_setstate), 0, 0, 1, 1},
     {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
@@ -37154,6 +37947,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_tempIndexArray, __pyx_k_tempIndexArray, sizeof(__pyx_k_tempIndexArray), 0, 0, 1, 1},
     {&__pyx_n_s_tempIndexArray_view, __pyx_k_tempIndexArray_view, sizeof(__pyx_k_tempIndexArray_view), 0, 0, 1, 1},
     {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
+    {&__pyx_n_s_throw, __pyx_k_throw, sizeof(__pyx_k_throw), 0, 0, 1, 1},
     {&__pyx_n_s_totalCharCount, __pyx_k_totalCharCount, sizeof(__pyx_k_totalCharCount), 0, 0, 1, 1},
     {&__pyx_n_s_totalCounted, __pyx_k_totalCounted, sizeof(__pyx_k_totalCounted), 0, 0, 1, 1},
     {&__pyx_kp_s_totalCounts_npy, __pyx_k_totalCounts_npy, sizeof(__pyx_k_totalCounts_npy), 0, 0, 1, 0},
@@ -37181,11 +37975,11 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 119, __pyx_L1_error)
   #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 977, __pyx_L1_error)
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) __PYX_ERR(0, 996, __pyx_L1_error)
   #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 977, __pyx_L1_error)
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 996, __pyx_L1_error)
   #endif
   __pyx_builtin___import__ = __Pyx_GetBuiltinName(__pyx_n_s_import); if (!__pyx_builtin___import__) __PYX_ERR(1, 100, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 141, __pyx_L1_error)
@@ -37243,7 +38037,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":991
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -37254,7 +38048,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":997
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -37265,25 +38059,25 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "MUSCython/RLE_BWTCython.pyx":390
+  /* "MUSCython/RLE_BWTCython.pyx":403
  *         i = 1
  *         #same = (letters[0:-1] == letters[1:])
  *         same = (letters[0:letters.shape[0]-1] == letters[1:])             # <<<<<<<<<<<<<<
  *         while np.count_nonzero(same) > 0:
  *             (counts[i:])[same] *= numPower
  */
-  __pyx_slice__11 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__11)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_slice__11 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__11)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__11);
   __Pyx_GIVEREF(__pyx_slice__11);
 
-  /* "MUSCython/RLE_BWTCython.pyx":704
+  /* "MUSCython/RLE_BWTCython.pyx":717
  *         cdef unsigned long readID
  * 
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] tempIndexArray = np.zeros(dtype='<u8', shape=(1, ))             # <<<<<<<<<<<<<<
  *         cdef np.uint64_t [:] tempIndexArray_view = tempIndexArray
  * 
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_int_1); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 704, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_int_1); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 717, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
@@ -37399,168 +38193,180 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__24);
   __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_Enum, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(1, 1, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":49
+  /* "MUSCython/RLE_BWTCython.pyx":18
+ * # headers on Windows; normalize to ints so headers are byte-identical to
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):             # <<<<<<<<<<<<<<
+ *     return tuple(int(x) for x in shape)
+ * 
+ */
+  __pyx_tuple__26 = PyTuple_Pack(3, __pyx_n_s_shape, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__26);
+  __Pyx_GIVEREF(__pyx_tuple__26);
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_int_shape, 18, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 18, __pyx_L1_error)
+
+  /* "MUSCython/RLE_BWTCython.pyx":55
  *     cdef bint useMemmapRLE
  * 
  *     def getCompSize(RLE_BWT self):             # <<<<<<<<<<<<<<
  *         return self.bwt.shape[0]
  * 
  */
-  __pyx_tuple__26 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 49, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__26);
-  __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getCompSize, 49, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 55, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__28);
+  __Pyx_GIVEREF(__pyx_tuple__28);
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getCompSize, 55, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 55, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":52
+  /* "MUSCython/RLE_BWTCython.pyx":58
  *         return self.bwt.shape[0]
  * 
  *     def loadMsbwt(RLE_BWT self, char * dirName, bint useMemmap=True, logger=None):             # <<<<<<<<<<<<<<
  *         '''
  *         This functions loads a BWT file and constructs total counts, indexes start positions, and constructs an FM index in memory
  */
-  __pyx_tuple__28 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_dirName, __pyx_n_s_useMemmap, __pyx_n_s_logger); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 52, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__28);
-  __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_loadMsbwt, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 52, __pyx_L1_error)
-  __pyx_tuple__30 = PyTuple_Pack(2, Py_True, Py_None); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_tuple__30 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_dirName, __pyx_n_s_useMemmap, __pyx_n_s_logger); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_loadMsbwt, 58, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_tuple__32 = PyTuple_Pack(2, Py_True, Py_None); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__32);
+  __Pyx_GIVEREF(__pyx_tuple__32);
 
-  /* "MUSCython/RLE_BWTCython.pyx":78
+  /* "MUSCython/RLE_BWTCython.pyx":84
  *             self.lcpsPresent = False
  * 
  *     def constructTotalCounts(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
  *         '''
  *         This function constructs the total count for each valid character in the array and stores it under '<DIR>/totalCounts.p'
  */
-  __pyx_tuple__31 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_logger, __pyx_n_s_i, __pyx_n_s_numBytes, __pyx_n_s_currentChar, __pyx_n_s_prevChar, __pyx_n_s_currentCount, __pyx_n_s_powerMultiple, __pyx_n_s_abtFN); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 78, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__31);
-  __Pyx_GIVEREF(__pyx_tuple__31);
-  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_constructTotalCounts, 78, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_tuple__33 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_logger, __pyx_n_s_i, __pyx_n_s_numBytes, __pyx_n_s_currentChar, __pyx_n_s_prevChar, __pyx_n_s_currentCount, __pyx_n_s_powerMultiple, __pyx_n_s_abtFN, __pyx_n_s_mm); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__33);
+  __Pyx_GIVEREF(__pyx_tuple__33);
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_constructTotalCounts, 84, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 84, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":128
+  /* "MUSCython/RLE_BWTCython.pyx":141
  *         self.totalSize = int(np.sum(self.totalCounts))
  * 
  *     def constructFMIndex(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
  *         '''
  *         This function iterates through the BWT and counts the letters as it goes to create the FM index.  For example, the string 'ACC$' would have BWT
  */
-  __pyx_tuple__33 = PyTuple_Pack(18, __pyx_n_s_self, __pyx_n_s_logger, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_binID, __pyx_n_s_totalCharCount, __pyx_n_s_bwtIndex, __pyx_n_s_currentChar, __pyx_n_s_prevChar, __pyx_n_s_prevStart, __pyx_n_s_powerMultiple, __pyx_n_s_binEnd, __pyx_n_s_countsSoFar, __pyx_n_s_countsSoFar_view, __pyx_n_s_fmIndexFN, __pyx_n_s_fmRefFN, __pyx_n_s_samplingSize, __pyx_n_s_numBytes); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 128, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__33);
-  __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_constructFMIndex, 128, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_tuple__35 = PyTuple_Pack(18, __pyx_n_s_self, __pyx_n_s_logger, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_binID, __pyx_n_s_totalCharCount, __pyx_n_s_bwtIndex, __pyx_n_s_currentChar, __pyx_n_s_prevChar, __pyx_n_s_prevStart, __pyx_n_s_powerMultiple, __pyx_n_s_binEnd, __pyx_n_s_countsSoFar, __pyx_n_s_countsSoFar_view, __pyx_n_s_fmIndexFN, __pyx_n_s_fmRefFN, __pyx_n_s_samplingSize, __pyx_n_s_numBytes); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__35);
+  __Pyx_GIVEREF(__pyx_tuple__35);
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 18, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_constructFMIndex, 141, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 141, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":231
+  /* "MUSCython/RLE_BWTCython.pyx":244
  *         self.offsetSum = np.sum(self.partialFM[0])
  * 
  *     cpdef unsigned long getCharAtIndex(RLE_BWT self, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
  *         '''
  *         Used for searching, this function masks the complexity behind retrieving a specific character at a specific index
  */
-  __pyx_tuple__35 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_index); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 231, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__35);
-  __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getCharAtIndex, 231, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_index); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 244, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__37);
+  __Pyx_GIVEREF(__pyx_tuple__37);
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getCharAtIndex, 244, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 244, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":338
+  /* "MUSCython/RLE_BWTCython.pyx":351
  *             binToFill[x] = prevChar
  * 
  *     def getBWTRange(RLE_BWT self, unsigned long start, unsigned long end):             # <<<<<<<<<<<<<<
  *         '''
  *         TODO: cythonize
  */
-  __pyx_tuple__37 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_start, __pyx_n_s_end, __pyx_n_s_startBlockIndex, __pyx_n_s_endBlockIndex, __pyx_n_s_trueStart); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 338, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__37);
-  __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getBWTRange, 338, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_start, __pyx_n_s_end, __pyx_n_s_startBlockIndex, __pyx_n_s_endBlockIndex, __pyx_n_s_trueStart); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__39);
+  __Pyx_GIVEREF(__pyx_tuple__39);
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getBWTRange, 351, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 351, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":354
+  /* "MUSCython/RLE_BWTCython.pyx":367
  *         return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]
  * 
  *     def decompressBlocks(RLE_BWT self, unsigned long startBlock, unsigned long endBlock):             # <<<<<<<<<<<<<<
  *         '''
  *         TODO: cythonize
  */
-  __pyx_tuple__39 = PyTuple_Pack(16, __pyx_n_s_self, __pyx_n_s_startBlock, __pyx_n_s_endBlock, __pyx_n_s_expectedIndex, __pyx_n_s_trueIndex, __pyx_n_s_dist, __pyx_n_s_startRange, __pyx_n_s_endRange, __pyx_n_s_returnSize, __pyx_n_s_ret, __pyx_n_s_letters, __pyx_n_s_counts, __pyx_n_s_i, __pyx_n_s_same, __pyx_n_s_s, __pyx_n_s_lInd); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 354, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__39);
-  __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_decompressBlocks, 354, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_tuple__41 = PyTuple_Pack(16, __pyx_n_s_self, __pyx_n_s_startBlock, __pyx_n_s_endBlock, __pyx_n_s_expectedIndex, __pyx_n_s_trueIndex, __pyx_n_s_dist, __pyx_n_s_startRange, __pyx_n_s_endRange, __pyx_n_s_returnSize, __pyx_n_s_ret, __pyx_n_s_letters, __pyx_n_s_counts, __pyx_n_s_i, __pyx_n_s_same, __pyx_n_s_s, __pyx_n_s_lInd); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 367, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__41);
+  __Pyx_GIVEREF(__pyx_tuple__41);
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_decompressBlocks, 367, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 367, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":418
+  /* "MUSCython/RLE_BWTCython.pyx":431
  *         return ret
  * 
  *     cpdef unsigned long getOccurrenceOfCharAtIndex(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
  *         '''
  *         This functions gets the FM-index value of a character at the specified position
  */
-  __pyx_tuple__41 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_sym, __pyx_n_s_index); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 418, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__41);
-  __Pyx_GIVEREF(__pyx_tuple__41);
-  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getOccurrenceOfCharAtIndex, 418, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 418, __pyx_L1_error)
+  __pyx_tuple__43 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_sym, __pyx_n_s_index); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__43);
+  __Pyx_GIVEREF(__pyx_tuple__43);
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getOccurrenceOfCharAtIndex, 431, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 431, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":594
+  /* "MUSCython/RLE_BWTCython.pyx":607
  *         return ret
  * 
  *     def getFullFMAtIndex(RLE_BWT self, np.uint64_t index):             # <<<<<<<<<<<<<<
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.empty(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] ret_view = ret
  */
-  __pyx_tuple__43 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_index, __pyx_n_s_ret, __pyx_n_s_ret_view); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 594, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__43);
-  __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getFullFMAtIndex, 594, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 594, __pyx_L1_error)
+  __pyx_tuple__45 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_index, __pyx_n_s_ret, __pyx_n_s_ret_view); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 607, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__45);
+  __Pyx_GIVEREF(__pyx_tuple__45);
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_getFullFMAtIndex, 607, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 607, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":684
+  /* "MUSCython/RLE_BWTCython.pyx":697
  *         return ret
  * 
  *     def removeStrings(RLE_BWT self, set delSet, bint reloadBWT=True, logger=None):             # <<<<<<<<<<<<<<
  *         '''
  *         This function removes a set of readIDs from the BWT along with all their associated bases
  */
-  __pyx_tuple__45 = PyTuple_Pack(32, __pyx_n_s_self, __pyx_n_s_delSet, __pyx_n_s_reloadBWT, __pyx_n_s_logger, __pyx_n_s_readID, __pyx_n_s_tempIndexArray, __pyx_n_s_tempIndexArray_view, __pyx_n_s_deletionFN, __pyx_n_s_fp, __pyx_n_s_x, __pyx_n_s_copyIndex, __pyx_n_s_indexByte, __pyx_n_s_prevSym, __pyx_n_s_currIndex, __pyx_n_s_delIndices, __pyx_n_s_delIndices_view, __pyx_n_s_currDel, __pyx_n_s_totalDels, __pyx_n_s_numBytes, __pyx_n_s_currentChar, __pyx_n_s_prevChar, __pyx_n_s_writeByte, __pyx_n_s_lastRunSym, __pyx_n_s_lastRunCount, __pyx_n_s_currentCount, __pyx_n_s_powerMultiple, __pyx_n_s_totalCounted, __pyx_n_s_NUM_MASK, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_writeLcp, __pyx_n_s_readLcp); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 684, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__45);
-  __Pyx_GIVEREF(__pyx_tuple__45);
-  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 32, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_removeStrings, 684, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_tuple__47 = PyTuple_Pack(32, __pyx_n_s_self, __pyx_n_s_delSet, __pyx_n_s_reloadBWT, __pyx_n_s_logger, __pyx_n_s_readID, __pyx_n_s_tempIndexArray, __pyx_n_s_tempIndexArray_view, __pyx_n_s_deletionFN, __pyx_n_s_fp, __pyx_n_s_x, __pyx_n_s_copyIndex, __pyx_n_s_indexByte, __pyx_n_s_prevSym, __pyx_n_s_currIndex, __pyx_n_s_delIndices, __pyx_n_s_delIndices_view, __pyx_n_s_currDel, __pyx_n_s_totalDels, __pyx_n_s_numBytes, __pyx_n_s_currentChar, __pyx_n_s_prevChar, __pyx_n_s_writeByte, __pyx_n_s_lastRunSym, __pyx_n_s_lastRunCount, __pyx_n_s_currentCount, __pyx_n_s_powerMultiple, __pyx_n_s_totalCounted, __pyx_n_s_NUM_MASK, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_writeLcp, __pyx_n_s_readLcp); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 697, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__47);
+  __Pyx_GIVEREF(__pyx_tuple__47);
+  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 32, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_removeStrings, 697, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 697, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":914
+  /* "MUSCython/RLE_BWTCython.pyx":933
  *             pass
  * 
  *     cpdef set findReadsMatchingSeq(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
  *         '''
  *         REQUIRES LCP
  */
-  __pyx_tuple__47 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_seq, __pyx_n_s_strLen); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 914, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__47);
-  __Pyx_GIVEREF(__pyx_tuple__47);
-  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_findReadsMatchingSeq, 914, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 914, __pyx_L1_error)
+  __pyx_tuple__49 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_seq, __pyx_n_s_strLen); if (unlikely(!__pyx_tuple__49)) __PYX_ERR(0, 933, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__49);
+  __Pyx_GIVEREF(__pyx_tuple__49);
+  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_findReadsMatchingSeq, 933, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(0, 933, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":990
+  /* "MUSCython/RLE_BWTCython.pyx":1009
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
  *         '''
  *         REQUIRES LCP
  */
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_findReadsMatchingSeqWithError, 990, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 990, __pyx_L1_error)
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_findReadsMatchingSeqWithError, 1009, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 1009, __pyx_L1_error)
 
-  /* "MUSCython/RLE_BWTCython.pyx":1165
+  /* "MUSCython/RLE_BWTCython.pyx":1184
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError2(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
  *         '''
  *         REQUIRES LCP
  */
-  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_findReadsMatchingSeqWithError2, 1165, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(0, 1165, __pyx_L1_error)
+  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_RLE_BWTCython_pyx, __pyx_n_s_findReadsMatchingSeqWithError2, 1184, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 1184, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_tuple__51 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_state, __pyx_n_s_dict_2, __pyx_n_s_use_setstate); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(1, 1, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__51);
-  __Pyx_GIVEREF(__pyx_tuple__51);
-  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_tuple__53 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_state, __pyx_n_s_dict_2, __pyx_n_s_use_setstate); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__53);
+  __Pyx_GIVEREF(__pyx_tuple__53);
+  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_reduce_cython, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(1, 1, __pyx_L1_error)
 
   /* "(tree fragment)":16
  *     else:
@@ -37568,17 +38374,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_RLE_BWT__set_state(self, __pyx_state)
  */
-  __pyx_tuple__53 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(1, 16, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__53);
-  __Pyx_GIVEREF(__pyx_tuple__53);
-  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_tuple__55 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_pyx_state); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__55);
+  __Pyx_GIVEREF(__pyx_tuple__55);
+  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(1, 16, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_RLE_BWT(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_RLE_BWT, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_pyx_unpickle_RLE_BWT, 1, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -37702,12 +38508,12 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_vtable_9MUSCython_13RLE_BWTCython_RLE_BWT.findReadsMatchingSeqWithError = (PyObject *(*)(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *, PyObject *, unsigned long, int __pyx_skip_dispatch))__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeqWithError;
   __pyx_vtable_9MUSCython_13RLE_BWTCython_RLE_BWT.findReadsMatchingSeqWithError2 = (PyObject *(*)(struct __pyx_obj_9MUSCython_13RLE_BWTCython_RLE_BWT *, PyObject *, unsigned long, int __pyx_skip_dispatch))__pyx_f_9MUSCython_13RLE_BWTCython_7RLE_BWT_findReadsMatchingSeqWithError2;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_t_2 = PyTuple_Pack(1, (PyObject *)__pyx_ptype_9MUSCython_8BasicBWT_BasicBWT); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_Pack(1, (PyObject *)__pyx_ptype_9MUSCython_8BasicBWT_BasicBWT); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT_spec, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT)) __PYX_ERR(0, 31, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT_spec, __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (unlikely(!__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT)) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT_spec, __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   #else
   __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT = &__pyx_type_9MUSCython_13RLE_BWTCython_RLE_BWT;
   #endif
@@ -37715,7 +38521,7 @@ static int __Pyx_modinit_type_init_code(void) {
   __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT->tp_base = __pyx_ptype_9MUSCython_8BasicBWT_BasicBWT;
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
   __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT->tp_print = 0;
@@ -37725,13 +38531,32 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_vtabptr_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_vtabptr_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_RLE_BWT, (PyObject *) __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_RLE_BWT, (PyObject *) __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
+  #endif
+  #if CYTHON_USE_TYPE_SPECS
+  __pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr_spec, NULL); if (unlikely(!__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr)) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr_spec, __pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  #else
+  __pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr = &__pyx_type_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr;
+  #endif
+  #if !CYTHON_COMPILING_IN_LIMITED_API
+  #endif
+  #if !CYTHON_USE_TYPE_SPECS
+  if (__Pyx_PyType_Ready(__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  #endif
+  #if PY_MAJOR_VERSION < 3
+  __pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr->tp_print = 0;
+  #endif
+  #if !CYTHON_COMPILING_IN_LIMITED_API
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr->tp_dictoffset && __pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_9MUSCython_13RLE_BWTCython___pyx_scope_struct__genexpr->tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  }
   #endif
   __pyx_vtabptr_array = &__pyx_vtable_array;
   __pyx_vtable_array.get_memview = (PyObject *(*)(struct __pyx_array_obj *))__pyx_array_get_memview;
@@ -38778,198 +39603,210 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_7) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":16
+  /* "MUSCython/RLE_BWTCython.pyx":18
+ * # headers on Windows; normalize to ints so headers are byte-identical to
+ * # Linux.  Plain Python def so it stays callable from Cython code.
+ * def _int_shape(shape):             # <<<<<<<<<<<<<<
+ *     return tuple(int(x) for x in shape)
+ * 
+ */
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_1_int_shape, 0, __pyx_n_s_int_shape, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_int_shape, __pyx_t_7) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+
+  /* "MUSCython/RLE_BWTCython.pyx":22
  * 
  * cimport BasicBWT
  * import MSBWTGenCython as MSBWTGen             # <<<<<<<<<<<<<<
  * import AlignmentUtil
  * from cython.operator cimport preincrement as inc
  */
-  __pyx_t_7 = __Pyx_ImportDottedModuleRelFirst(__pyx_n_s_MSBWTGenCython, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_ImportDottedModuleRelFirst(__pyx_n_s_MSBWTGenCython, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_MSBWTGen, __pyx_t_7) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_MSBWTGen, __pyx_t_7) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":17
+  /* "MUSCython/RLE_BWTCython.pyx":23
  * cimport BasicBWT
  * import MSBWTGenCython as MSBWTGen
  * import AlignmentUtil             # <<<<<<<<<<<<<<
  * from cython.operator cimport preincrement as inc
  * 
  */
-  __pyx_t_7 = __Pyx_ImportDottedModuleRelFirst(__pyx_n_s_AlignmentUtil, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_ImportDottedModuleRelFirst(__pyx_n_s_AlignmentUtil, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_AlignmentUtil, __pyx_t_7) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_AlignmentUtil, __pyx_t_7) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "MUSCython/RLE_BWTCython.pyx":49
+  /* "MUSCython/RLE_BWTCython.pyx":55
  *     cdef bint useMemmapRLE
  * 
  *     def getCompSize(RLE_BWT self):             # <<<<<<<<<<<<<<
  *         return self.bwt.shape[0]
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_1getCompSize, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getCompSize, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 49, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_1getCompSize, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getCompSize, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getCompSize, __pyx_t_7) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getCompSize, __pyx_t_7) < 0) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":52
+  /* "MUSCython/RLE_BWTCython.pyx":58
  *         return self.bwt.shape[0]
  * 
  *     def loadMsbwt(RLE_BWT self, char * dirName, bint useMemmap=True, logger=None):             # <<<<<<<<<<<<<<
  *         '''
  *         This functions loads a BWT file and constructs total counts, indexes start positions, and constructs an FM index in memory
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_3loadMsbwt, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_loadMsbwt, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_3loadMsbwt, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_loadMsbwt, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_7, __pyx_tuple__30);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_loadMsbwt, __pyx_t_7) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_7, __pyx_tuple__32);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_loadMsbwt, __pyx_t_7) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":78
+  /* "MUSCython/RLE_BWTCython.pyx":84
  *             self.lcpsPresent = False
  * 
  *     def constructTotalCounts(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
  *         '''
  *         This function constructs the total count for each valid character in the array and stores it under '<DIR>/totalCounts.p'
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_5constructTotalCounts, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_constructTotalCounts, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_5constructTotalCounts, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_constructTotalCounts, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_constructTotalCounts, __pyx_t_7) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_constructTotalCounts, __pyx_t_7) < 0) __PYX_ERR(0, 84, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":128
+  /* "MUSCython/RLE_BWTCython.pyx":141
  *         self.totalSize = int(np.sum(self.totalCounts))
  * 
  *     def constructFMIndex(RLE_BWT self, logger):             # <<<<<<<<<<<<<<
  *         '''
  *         This function iterates through the BWT and counts the letters as it goes to create the FM index.  For example, the string 'ACC$' would have BWT
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_7constructFMIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_constructFMIndex, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_7constructFMIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_constructFMIndex, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_constructFMIndex, __pyx_t_7) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_constructFMIndex, __pyx_t_7) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":231
+  /* "MUSCython/RLE_BWTCython.pyx":244
  *         self.offsetSum = np.sum(self.partialFM[0])
  * 
  *     cpdef unsigned long getCharAtIndex(RLE_BWT self, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
  *         '''
  *         Used for searching, this function masks the complexity behind retrieving a specific character at a specific index
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_9getCharAtIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getCharAtIndex, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_9getCharAtIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getCharAtIndex, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getCharAtIndex, __pyx_t_7) < 0) __PYX_ERR(0, 231, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getCharAtIndex, __pyx_t_7) < 0) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":338
+  /* "MUSCython/RLE_BWTCython.pyx":351
  *             binToFill[x] = prevChar
  * 
  *     def getBWTRange(RLE_BWT self, unsigned long start, unsigned long end):             # <<<<<<<<<<<<<<
  *         '''
  *         TODO: cythonize
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_11getBWTRange, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getBWTRange, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_11getBWTRange, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getBWTRange, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getBWTRange, __pyx_t_7) < 0) __PYX_ERR(0, 338, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getBWTRange, __pyx_t_7) < 0) __PYX_ERR(0, 351, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":354
+  /* "MUSCython/RLE_BWTCython.pyx":367
  *         return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]
  * 
  *     def decompressBlocks(RLE_BWT self, unsigned long startBlock, unsigned long endBlock):             # <<<<<<<<<<<<<<
  *         '''
  *         TODO: cythonize
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_13decompressBlocks, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_decompressBlocks, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_13decompressBlocks, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_decompressBlocks, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_decompressBlocks, __pyx_t_7) < 0) __PYX_ERR(0, 354, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_decompressBlocks, __pyx_t_7) < 0) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":418
+  /* "MUSCython/RLE_BWTCython.pyx":431
  *         return ret
  * 
  *     cpdef unsigned long getOccurrenceOfCharAtIndex(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:             # <<<<<<<<<<<<<<
  *         '''
  *         This functions gets the FM-index value of a character at the specified position
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_15getOccurrenceOfCharAtIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getOccurrenceOfCharAtInd, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 418, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_15getOccurrenceOfCharAtIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getOccurrenceOfCharAtInd, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getOccurrenceOfCharAtIndex, __pyx_t_7) < 0) __PYX_ERR(0, 418, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getOccurrenceOfCharAtIndex, __pyx_t_7) < 0) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":594
+  /* "MUSCython/RLE_BWTCython.pyx":607
  *         return ret
  * 
  *     def getFullFMAtIndex(RLE_BWT self, np.uint64_t index):             # <<<<<<<<<<<<<<
  *         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.empty(dtype='<u8', shape=(vcLen, ))
  *         cdef np.uint64_t [:] ret_view = ret
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_17getFullFMAtIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getFullFMAtIndex, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 594, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_17getFullFMAtIndex, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_getFullFMAtIndex, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 607, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getFullFMAtIndex, __pyx_t_7) < 0) __PYX_ERR(0, 594, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_getFullFMAtIndex, __pyx_t_7) < 0) __PYX_ERR(0, 607, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":684
+  /* "MUSCython/RLE_BWTCython.pyx":697
  *         return ret
  * 
  *     def removeStrings(RLE_BWT self, set delSet, bint reloadBWT=True, logger=None):             # <<<<<<<<<<<<<<
  *         '''
  *         This function removes a set of readIDs from the BWT along with all their associated bases
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_19removeStrings, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_removeStrings, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_19removeStrings, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_removeStrings, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_7, __pyx_tuple__30);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_removeStrings, __pyx_t_7) < 0) __PYX_ERR(0, 684, __pyx_L1_error)
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_7, __pyx_tuple__32);
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_removeStrings, __pyx_t_7) < 0) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":914
+  /* "MUSCython/RLE_BWTCython.pyx":933
  *             pass
  * 
  *     cpdef set findReadsMatchingSeq(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
  *         '''
  *         REQUIRES LCP
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_21findReadsMatchingSeq, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_findReadsMatchingSeq, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__48)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 914, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_21findReadsMatchingSeq, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_findReadsMatchingSeq, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__50)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 933, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_findReadsMatchingSeq, __pyx_t_7) < 0) __PYX_ERR(0, 914, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_findReadsMatchingSeq, __pyx_t_7) < 0) __PYX_ERR(0, 933, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":990
+  /* "MUSCython/RLE_BWTCython.pyx":1009
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
  *         '''
  *         REQUIRES LCP
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_23findReadsMatchingSeqWithError, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_findReadsMatchingSeqWith, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 990, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_23findReadsMatchingSeqWithError, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_findReadsMatchingSeqWith, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1009, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_findReadsMatchingSeqWithError, __pyx_t_7) < 0) __PYX_ERR(0, 990, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_findReadsMatchingSeqWithError, __pyx_t_7) < 0) __PYX_ERR(0, 1009, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
-  /* "MUSCython/RLE_BWTCython.pyx":1165
+  /* "MUSCython/RLE_BWTCython.pyx":1184
  *         return readSet
  * 
  *     cpdef set findReadsMatchingSeqWithError2(RLE_BWT self, bytes seq, unsigned long strLen):             # <<<<<<<<<<<<<<
  *         '''
  *         REQUIRES LCP
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_25findReadsMatchingSeqWithError2, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_findReadsMatchingSeqWith_2, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__50)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1165, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_25findReadsMatchingSeqWithError2, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT_findReadsMatchingSeqWith_2, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 1184, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_findReadsMatchingSeqWithError2, __pyx_t_7) < 0) __PYX_ERR(0, 1165, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_findReadsMatchingSeqWithError2, __pyx_t_7) < 0) __PYX_ERR(0, 1184, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   PyType_Modified(__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT);
 
@@ -38978,7 +39815,7 @@ if (!__Pyx_RefNanny) {
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_27__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT___reduce_cython, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_27__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT___reduce_cython, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_reduce_cython, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -38990,7 +39827,7 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_RLE_BWT__set_state(self, __pyx_state)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_29__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT___setstate_cython, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_7RLE_BWT_29__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_RLE_BWT___setstate_cython, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_9MUSCython_13RLE_BWTCython_RLE_BWT, __pyx_n_s_setstate_cython, __pyx_t_7) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -39001,7 +39838,7 @@ if (!__Pyx_RefNanny) {
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_1__pyx_unpickle_RLE_BWT, 0, __pyx_n_s_pyx_unpickle_RLE_BWT, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_13RLE_BWTCython_3__pyx_unpickle_RLE_BWT, 0, __pyx_n_s_pyx_unpickle_RLE_BWT, NULL, __pyx_n_s_MUSCython_RLE_BWTCython, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_7)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_RLE_BWT, __pyx_t_7) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -41500,6 +42337,111 @@ static CYTHON_INLINE int __Pyx_HasAttr(PyObject *o, PyObject *n) {
     }
 }
 
+/* SliceObject */
+static CYTHON_INLINE int __Pyx_PyObject_SetSlice(PyObject* obj, PyObject* value,
+        Py_ssize_t cstart, Py_ssize_t cstop,
+        PyObject** _py_start, PyObject** _py_stop, PyObject** _py_slice,
+        int has_cstart, int has_cstop, int wraparound) {
+    __Pyx_TypeName obj_type_name;
+#if CYTHON_USE_TYPE_SLOTS
+    PyMappingMethods* mp;
+#if PY_MAJOR_VERSION < 3
+    PySequenceMethods* ms = Py_TYPE(obj)->tp_as_sequence;
+    if (likely(ms && ms->sq_ass_slice)) {
+        if (!has_cstart) {
+            if (_py_start && (*_py_start != Py_None)) {
+                cstart = __Pyx_PyIndex_AsSsize_t(*_py_start);
+                if ((cstart == (Py_ssize_t)-1) && PyErr_Occurred()) goto bad;
+            } else
+                cstart = 0;
+        }
+        if (!has_cstop) {
+            if (_py_stop && (*_py_stop != Py_None)) {
+                cstop = __Pyx_PyIndex_AsSsize_t(*_py_stop);
+                if ((cstop == (Py_ssize_t)-1) && PyErr_Occurred()) goto bad;
+            } else
+                cstop = PY_SSIZE_T_MAX;
+        }
+        if (wraparound && unlikely((cstart < 0) | (cstop < 0)) && likely(ms->sq_length)) {
+            Py_ssize_t l = ms->sq_length(obj);
+            if (likely(l >= 0)) {
+                if (cstop < 0) {
+                    cstop += l;
+                    if (cstop < 0) cstop = 0;
+                }
+                if (cstart < 0) {
+                    cstart += l;
+                    if (cstart < 0) cstart = 0;
+                }
+            } else {
+                if (!PyErr_ExceptionMatches(PyExc_OverflowError))
+                    goto bad;
+                PyErr_Clear();
+            }
+        }
+        return ms->sq_ass_slice(obj, cstart, cstop, value);
+    }
+#else
+    CYTHON_UNUSED_VAR(wraparound);
+#endif
+    mp = Py_TYPE(obj)->tp_as_mapping;
+    if (likely(mp && mp->mp_ass_subscript))
+#else
+    CYTHON_UNUSED_VAR(wraparound);
+#endif
+    {
+        int result;
+        PyObject *py_slice, *py_start, *py_stop;
+        if (_py_slice) {
+            py_slice = *_py_slice;
+        } else {
+            PyObject* owned_start = NULL;
+            PyObject* owned_stop = NULL;
+            if (_py_start) {
+                py_start = *_py_start;
+            } else {
+                if (has_cstart) {
+                    owned_start = py_start = PyInt_FromSsize_t(cstart);
+                    if (unlikely(!py_start)) goto bad;
+                } else
+                    py_start = Py_None;
+            }
+            if (_py_stop) {
+                py_stop = *_py_stop;
+            } else {
+                if (has_cstop) {
+                    owned_stop = py_stop = PyInt_FromSsize_t(cstop);
+                    if (unlikely(!py_stop)) {
+                        Py_XDECREF(owned_start);
+                        goto bad;
+                    }
+                } else
+                    py_stop = Py_None;
+            }
+            py_slice = PySlice_New(py_start, py_stop, Py_None);
+            Py_XDECREF(owned_start);
+            Py_XDECREF(owned_stop);
+            if (unlikely(!py_slice)) goto bad;
+        }
+#if CYTHON_USE_TYPE_SLOTS
+        result = mp->mp_ass_subscript(obj, py_slice, value);
+#else
+        result = value ? PyObject_SetItem(obj, py_slice, value) : PyObject_DelItem(obj, py_slice);
+#endif
+        if (!_py_slice) {
+            Py_DECREF(py_slice);
+        }
+        return result;
+    }
+    obj_type_name = __Pyx_PyType_GetName(Py_TYPE(obj));
+    PyErr_Format(PyExc_TypeError,
+        "'" __Pyx_FMT_TYPENAME "' object does not support slice %.10s",
+        obj_type_name, value ? "assignment" : "deletion");
+    __Pyx_DECREF_TypeName(obj_type_name);
+bad:
+    return -1;
+}
+
 /* IsLittleEndian */
 static CYTHON_INLINE int __Pyx_Is_Little_Endian(void)
 {
@@ -42443,111 +43385,6 @@ static PyObject* __Pyx_PyInt_SubtractObjC(PyObject *op1, PyObject *op2, long int
     return (inplace ? PyNumber_InPlaceSubtract : PyNumber_Subtract)(op1, op2);
 }
 #endif
-
-/* SliceObject */
-  static CYTHON_INLINE int __Pyx_PyObject_SetSlice(PyObject* obj, PyObject* value,
-        Py_ssize_t cstart, Py_ssize_t cstop,
-        PyObject** _py_start, PyObject** _py_stop, PyObject** _py_slice,
-        int has_cstart, int has_cstop, int wraparound) {
-    __Pyx_TypeName obj_type_name;
-#if CYTHON_USE_TYPE_SLOTS
-    PyMappingMethods* mp;
-#if PY_MAJOR_VERSION < 3
-    PySequenceMethods* ms = Py_TYPE(obj)->tp_as_sequence;
-    if (likely(ms && ms->sq_ass_slice)) {
-        if (!has_cstart) {
-            if (_py_start && (*_py_start != Py_None)) {
-                cstart = __Pyx_PyIndex_AsSsize_t(*_py_start);
-                if ((cstart == (Py_ssize_t)-1) && PyErr_Occurred()) goto bad;
-            } else
-                cstart = 0;
-        }
-        if (!has_cstop) {
-            if (_py_stop && (*_py_stop != Py_None)) {
-                cstop = __Pyx_PyIndex_AsSsize_t(*_py_stop);
-                if ((cstop == (Py_ssize_t)-1) && PyErr_Occurred()) goto bad;
-            } else
-                cstop = PY_SSIZE_T_MAX;
-        }
-        if (wraparound && unlikely((cstart < 0) | (cstop < 0)) && likely(ms->sq_length)) {
-            Py_ssize_t l = ms->sq_length(obj);
-            if (likely(l >= 0)) {
-                if (cstop < 0) {
-                    cstop += l;
-                    if (cstop < 0) cstop = 0;
-                }
-                if (cstart < 0) {
-                    cstart += l;
-                    if (cstart < 0) cstart = 0;
-                }
-            } else {
-                if (!PyErr_ExceptionMatches(PyExc_OverflowError))
-                    goto bad;
-                PyErr_Clear();
-            }
-        }
-        return ms->sq_ass_slice(obj, cstart, cstop, value);
-    }
-#else
-    CYTHON_UNUSED_VAR(wraparound);
-#endif
-    mp = Py_TYPE(obj)->tp_as_mapping;
-    if (likely(mp && mp->mp_ass_subscript))
-#else
-    CYTHON_UNUSED_VAR(wraparound);
-#endif
-    {
-        int result;
-        PyObject *py_slice, *py_start, *py_stop;
-        if (_py_slice) {
-            py_slice = *_py_slice;
-        } else {
-            PyObject* owned_start = NULL;
-            PyObject* owned_stop = NULL;
-            if (_py_start) {
-                py_start = *_py_start;
-            } else {
-                if (has_cstart) {
-                    owned_start = py_start = PyInt_FromSsize_t(cstart);
-                    if (unlikely(!py_start)) goto bad;
-                } else
-                    py_start = Py_None;
-            }
-            if (_py_stop) {
-                py_stop = *_py_stop;
-            } else {
-                if (has_cstop) {
-                    owned_stop = py_stop = PyInt_FromSsize_t(cstop);
-                    if (unlikely(!py_stop)) {
-                        Py_XDECREF(owned_start);
-                        goto bad;
-                    }
-                } else
-                    py_stop = Py_None;
-            }
-            py_slice = PySlice_New(py_start, py_stop, Py_None);
-            Py_XDECREF(owned_start);
-            Py_XDECREF(owned_stop);
-            if (unlikely(!py_slice)) goto bad;
-        }
-#if CYTHON_USE_TYPE_SLOTS
-        result = mp->mp_ass_subscript(obj, py_slice, value);
-#else
-        result = value ? PyObject_SetItem(obj, py_slice, value) : PyObject_DelItem(obj, py_slice);
-#endif
-        if (!_py_slice) {
-            Py_DECREF(py_slice);
-        }
-        return result;
-    }
-    obj_type_name = __Pyx_PyType_GetName(Py_TYPE(obj));
-    PyErr_Format(PyExc_TypeError,
-        "'" __Pyx_FMT_TYPENAME "' object does not support slice %.10s",
-        obj_type_name, value ? "assignment" : "deletion");
-    __Pyx_DECREF_TypeName(obj_type_name);
-bad:
-    return -1;
-}
 
 /* IterFinish */
   static CYTHON_INLINE int __Pyx_IterFinish(void) {
@@ -48620,11 +49457,1128 @@ __Pyx_PyType_GetName(PyTypeObject* tp)
     if (unlikely(name == NULL) || unlikely(!PyUnicode_Check(name))) {
         PyErr_Clear();
         Py_XDECREF(name);
-        name = __Pyx_NewRef(__pyx_n_s__56);
+        name = __Pyx_NewRef(__pyx_n_s__58);
     }
     return name;
 }
 #endif
+
+/* PyObjectCall2Args */
+  static CYTHON_INLINE PyObject* __Pyx_PyObject_Call2Args(PyObject* function, PyObject* arg1, PyObject* arg2) {
+    PyObject *args[3] = {NULL, arg1, arg2};
+    return __Pyx_PyObject_FastCall(function, args+1, 2 | __Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET);
+}
+
+/* PyObjectCallMethod1 */
+  #if !(CYTHON_VECTORCALL && __PYX_LIMITED_VERSION_HEX >= 0x030C00A2)
+static PyObject* __Pyx__PyObject_CallMethod1(PyObject* method, PyObject* arg) {
+    PyObject *result = __Pyx_PyObject_CallOneArg(method, arg);
+    Py_DECREF(method);
+    return result;
+}
+#endif
+static PyObject* __Pyx_PyObject_CallMethod1(PyObject* obj, PyObject* method_name, PyObject* arg) {
+#if CYTHON_VECTORCALL && __PYX_LIMITED_VERSION_HEX >= 0x030C00A2
+    PyObject *args[2] = {obj, arg};
+    (void) __Pyx_PyObject_GetMethod;
+    (void) __Pyx_PyObject_CallOneArg;
+    (void) __Pyx_PyObject_Call2Args;
+    return PyObject_VectorcallMethod(method_name, args, 2 | PY_VECTORCALL_ARGUMENTS_OFFSET, NULL);
+#else
+    PyObject *method = NULL, *result;
+    int is_method = __Pyx_PyObject_GetMethod(obj, method_name, &method);
+    if (likely(is_method)) {
+        result = __Pyx_PyObject_Call2Args(method, obj, arg);
+        Py_DECREF(method);
+        return result;
+    }
+    if (unlikely(!method)) return NULL;
+    return __Pyx__PyObject_CallMethod1(method, arg);
+#endif
+}
+
+/* CoroutineBase */
+  #include <frameobject.h>
+#if PY_VERSION_HEX >= 0x030b00a6 && !defined(PYPY_VERSION)
+  #ifndef Py_BUILD_CORE
+    #define Py_BUILD_CORE 1
+  #endif
+  #include "internal/pycore_frame.h"
+#endif
+#define __Pyx_Coroutine_Undelegate(gen) Py_CLEAR((gen)->yieldfrom)
+static int __Pyx_PyGen__FetchStopIterationValue(PyThreadState *__pyx_tstate, PyObject **pvalue) {
+    PyObject *et, *ev, *tb;
+    PyObject *value = NULL;
+    CYTHON_UNUSED_VAR(__pyx_tstate);
+    __Pyx_ErrFetch(&et, &ev, &tb);
+    if (!et) {
+        Py_XDECREF(tb);
+        Py_XDECREF(ev);
+        Py_INCREF(Py_None);
+        *pvalue = Py_None;
+        return 0;
+    }
+    if (likely(et == PyExc_StopIteration)) {
+        if (!ev) {
+            Py_INCREF(Py_None);
+            value = Py_None;
+        }
+#if PY_VERSION_HEX >= 0x030300A0
+        else if (likely(__Pyx_IS_TYPE(ev, (PyTypeObject*)PyExc_StopIteration))) {
+            value = ((PyStopIterationObject *)ev)->value;
+            Py_INCREF(value);
+            Py_DECREF(ev);
+        }
+#endif
+        else if (unlikely(PyTuple_Check(ev))) {
+            if (PyTuple_GET_SIZE(ev) >= 1) {
+#if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+                value = PyTuple_GET_ITEM(ev, 0);
+                Py_INCREF(value);
+#else
+                value = PySequence_ITEM(ev, 0);
+#endif
+            } else {
+                Py_INCREF(Py_None);
+                value = Py_None;
+            }
+            Py_DECREF(ev);
+        }
+        else if (!__Pyx_TypeCheck(ev, (PyTypeObject*)PyExc_StopIteration)) {
+            value = ev;
+        }
+        if (likely(value)) {
+            Py_XDECREF(tb);
+            Py_DECREF(et);
+            *pvalue = value;
+            return 0;
+        }
+    } else if (!__Pyx_PyErr_GivenExceptionMatches(et, PyExc_StopIteration)) {
+        __Pyx_ErrRestore(et, ev, tb);
+        return -1;
+    }
+    PyErr_NormalizeException(&et, &ev, &tb);
+    if (unlikely(!PyObject_TypeCheck(ev, (PyTypeObject*)PyExc_StopIteration))) {
+        __Pyx_ErrRestore(et, ev, tb);
+        return -1;
+    }
+    Py_XDECREF(tb);
+    Py_DECREF(et);
+#if PY_VERSION_HEX >= 0x030300A0
+    value = ((PyStopIterationObject *)ev)->value;
+    Py_INCREF(value);
+    Py_DECREF(ev);
+#else
+    {
+        PyObject* args = __Pyx_PyObject_GetAttrStr(ev, __pyx_n_s_args);
+        Py_DECREF(ev);
+        if (likely(args)) {
+            value = PySequence_GetItem(args, 0);
+            Py_DECREF(args);
+        }
+        if (unlikely(!value)) {
+            __Pyx_ErrRestore(NULL, NULL, NULL);
+            Py_INCREF(Py_None);
+            value = Py_None;
+        }
+    }
+#endif
+    *pvalue = value;
+    return 0;
+}
+static CYTHON_INLINE
+void __Pyx_Coroutine_ExceptionClear(__Pyx_ExcInfoStruct *exc_state) {
+#if PY_VERSION_HEX >= 0x030B00a4
+    Py_CLEAR(exc_state->exc_value);
+#else
+    PyObject *t, *v, *tb;
+    t = exc_state->exc_type;
+    v = exc_state->exc_value;
+    tb = exc_state->exc_traceback;
+    exc_state->exc_type = NULL;
+    exc_state->exc_value = NULL;
+    exc_state->exc_traceback = NULL;
+    Py_XDECREF(t);
+    Py_XDECREF(v);
+    Py_XDECREF(tb);
+#endif
+}
+#define __Pyx_Coroutine_AlreadyRunningError(gen)  (__Pyx__Coroutine_AlreadyRunningError(gen), (PyObject*)NULL)
+static void __Pyx__Coroutine_AlreadyRunningError(__pyx_CoroutineObject *gen) {
+    const char *msg;
+    CYTHON_MAYBE_UNUSED_VAR(gen);
+    if ((0)) {
+    #ifdef __Pyx_Coroutine_USED
+    } else if (__Pyx_Coroutine_Check((PyObject*)gen)) {
+        msg = "coroutine already executing";
+    #endif
+    #ifdef __Pyx_AsyncGen_USED
+    } else if (__Pyx_AsyncGen_CheckExact((PyObject*)gen)) {
+        msg = "async generator already executing";
+    #endif
+    } else {
+        msg = "generator already executing";
+    }
+    PyErr_SetString(PyExc_ValueError, msg);
+}
+#define __Pyx_Coroutine_NotStartedError(gen)  (__Pyx__Coroutine_NotStartedError(gen), (PyObject*)NULL)
+static void __Pyx__Coroutine_NotStartedError(PyObject *gen) {
+    const char *msg;
+    CYTHON_MAYBE_UNUSED_VAR(gen);
+    if ((0)) {
+    #ifdef __Pyx_Coroutine_USED
+    } else if (__Pyx_Coroutine_Check(gen)) {
+        msg = "can't send non-None value to a just-started coroutine";
+    #endif
+    #ifdef __Pyx_AsyncGen_USED
+    } else if (__Pyx_AsyncGen_CheckExact(gen)) {
+        msg = "can't send non-None value to a just-started async generator";
+    #endif
+    } else {
+        msg = "can't send non-None value to a just-started generator";
+    }
+    PyErr_SetString(PyExc_TypeError, msg);
+}
+#define __Pyx_Coroutine_AlreadyTerminatedError(gen, value, closing)  (__Pyx__Coroutine_AlreadyTerminatedError(gen, value, closing), (PyObject*)NULL)
+static void __Pyx__Coroutine_AlreadyTerminatedError(PyObject *gen, PyObject *value, int closing) {
+    CYTHON_MAYBE_UNUSED_VAR(gen);
+    CYTHON_MAYBE_UNUSED_VAR(closing);
+    #ifdef __Pyx_Coroutine_USED
+    if (!closing && __Pyx_Coroutine_Check(gen)) {
+        PyErr_SetString(PyExc_RuntimeError, "cannot reuse already awaited coroutine");
+    } else
+    #endif
+    if (value) {
+        #ifdef __Pyx_AsyncGen_USED
+        if (__Pyx_AsyncGen_CheckExact(gen))
+            PyErr_SetNone(__Pyx_PyExc_StopAsyncIteration);
+        else
+        #endif
+        PyErr_SetNone(PyExc_StopIteration);
+    }
+}
+static
+PyObject *__Pyx_Coroutine_SendEx(__pyx_CoroutineObject *self, PyObject *value, int closing) {
+    __Pyx_PyThreadState_declare
+    PyThreadState *tstate;
+    __Pyx_ExcInfoStruct *exc_state;
+    PyObject *retval;
+    assert(!self->is_running);
+    if (unlikely(self->resume_label == 0)) {
+        if (unlikely(value && value != Py_None)) {
+            return __Pyx_Coroutine_NotStartedError((PyObject*)self);
+        }
+    }
+    if (unlikely(self->resume_label == -1)) {
+        return __Pyx_Coroutine_AlreadyTerminatedError((PyObject*)self, value, closing);
+    }
+#if CYTHON_FAST_THREAD_STATE
+    __Pyx_PyThreadState_assign
+    tstate = __pyx_tstate;
+#else
+    tstate = __Pyx_PyThreadState_Current;
+#endif
+    exc_state = &self->gi_exc_state;
+    if (exc_state->exc_value) {
+        #if CYTHON_COMPILING_IN_PYPY
+        #else
+        PyObject *exc_tb;
+        #if PY_VERSION_HEX >= 0x030B00a4 && !CYTHON_COMPILING_IN_CPYTHON
+        exc_tb = PyException_GetTraceback(exc_state->exc_value);
+        #elif PY_VERSION_HEX >= 0x030B00a4
+        exc_tb = ((PyBaseExceptionObject*) exc_state->exc_value)->traceback;
+        #else
+        exc_tb = exc_state->exc_traceback;
+        #endif
+        if (exc_tb) {
+            PyTracebackObject *tb = (PyTracebackObject *) exc_tb;
+            PyFrameObject *f = tb->tb_frame;
+            assert(f->f_back == NULL);
+            #if PY_VERSION_HEX >= 0x030B00A1
+            f->f_back = PyThreadState_GetFrame(tstate);
+            #else
+            Py_XINCREF(tstate->frame);
+            f->f_back = tstate->frame;
+            #endif
+            #if PY_VERSION_HEX >= 0x030B00a4 && !CYTHON_COMPILING_IN_CPYTHON
+            Py_DECREF(exc_tb);
+            #endif
+        }
+        #endif
+    }
+#if CYTHON_USE_EXC_INFO_STACK
+    exc_state->previous_item = tstate->exc_info;
+    tstate->exc_info = exc_state;
+#else
+    if (exc_state->exc_type) {
+        __Pyx_ExceptionSwap(&exc_state->exc_type, &exc_state->exc_value, &exc_state->exc_traceback);
+    } else {
+        __Pyx_Coroutine_ExceptionClear(exc_state);
+        __Pyx_ExceptionSave(&exc_state->exc_type, &exc_state->exc_value, &exc_state->exc_traceback);
+    }
+#endif
+    self->is_running = 1;
+    retval = self->body(self, tstate, value);
+    self->is_running = 0;
+#if CYTHON_USE_EXC_INFO_STACK
+    exc_state = &self->gi_exc_state;
+    tstate->exc_info = exc_state->previous_item;
+    exc_state->previous_item = NULL;
+    __Pyx_Coroutine_ResetFrameBackpointer(exc_state);
+#endif
+    return retval;
+}
+static CYTHON_INLINE void __Pyx_Coroutine_ResetFrameBackpointer(__Pyx_ExcInfoStruct *exc_state) {
+#if CYTHON_COMPILING_IN_PYPY
+    CYTHON_UNUSED_VAR(exc_state);
+#else
+    PyObject *exc_tb;
+    #if PY_VERSION_HEX >= 0x030B00a4
+    if (!exc_state->exc_value) return;
+    exc_tb = PyException_GetTraceback(exc_state->exc_value);
+    #else
+    exc_tb = exc_state->exc_traceback;
+    #endif
+    if (likely(exc_tb)) {
+        PyTracebackObject *tb = (PyTracebackObject *) exc_tb;
+        PyFrameObject *f = tb->tb_frame;
+        Py_CLEAR(f->f_back);
+        #if PY_VERSION_HEX >= 0x030B00a4
+        Py_DECREF(exc_tb);
+        #endif
+    }
+#endif
+}
+static CYTHON_INLINE
+PyObject *__Pyx_Coroutine_MethodReturn(PyObject* gen, PyObject *retval) {
+    CYTHON_MAYBE_UNUSED_VAR(gen);
+    if (unlikely(!retval)) {
+        __Pyx_PyThreadState_declare
+        __Pyx_PyThreadState_assign
+        if (!__Pyx_PyErr_Occurred()) {
+            PyObject *exc = PyExc_StopIteration;
+            #ifdef __Pyx_AsyncGen_USED
+            if (__Pyx_AsyncGen_CheckExact(gen))
+                exc = __Pyx_PyExc_StopAsyncIteration;
+            #endif
+            __Pyx_PyErr_SetNone(exc);
+        }
+    }
+    return retval;
+}
+#if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x03030000 && (defined(__linux__) || PY_VERSION_HEX >= 0x030600B3)
+static CYTHON_INLINE
+PyObject *__Pyx_PyGen_Send(PyGenObject *gen, PyObject *arg) {
+#if PY_VERSION_HEX <= 0x030A00A1
+    return _PyGen_Send(gen, arg);
+#else
+    PyObject *result;
+    if (PyIter_Send((PyObject*)gen, arg ? arg : Py_None, &result) == PYGEN_RETURN) {
+        if (PyAsyncGen_CheckExact(gen)) {
+            assert(result == Py_None);
+            PyErr_SetNone(PyExc_StopAsyncIteration);
+        }
+        else if (result == Py_None) {
+            PyErr_SetNone(PyExc_StopIteration);
+        }
+        else {
+#if PY_VERSION_HEX < 0x030d00A1
+            _PyGen_SetStopIterationValue(result);
+#else
+            if (!PyTuple_Check(result) && !PyExceptionInstance_Check(result)) {
+                PyErr_SetObject(PyExc_StopIteration, result);
+            } else {
+                PyObject *exc = __Pyx_PyObject_CallOneArg(PyExc_StopIteration, result);
+                if (likely(exc != NULL)) {
+                    PyErr_SetObject(PyExc_StopIteration, exc);
+                    Py_DECREF(exc);
+                }
+            }
+#endif
+        }
+        Py_DECREF(result);
+        result = NULL;
+    }
+    return result;
+#endif
+}
+#endif
+static CYTHON_INLINE
+PyObject *__Pyx_Coroutine_FinishDelegation(__pyx_CoroutineObject *gen) {
+    PyObject *ret;
+    PyObject *val = NULL;
+    __Pyx_Coroutine_Undelegate(gen);
+    __Pyx_PyGen__FetchStopIterationValue(__Pyx_PyThreadState_Current, &val);
+    ret = __Pyx_Coroutine_SendEx(gen, val, 0);
+    Py_XDECREF(val);
+    return ret;
+}
+static PyObject *__Pyx_Coroutine_Send(PyObject *self, PyObject *value) {
+    PyObject *retval;
+    __pyx_CoroutineObject *gen = (__pyx_CoroutineObject*) self;
+    PyObject *yf = gen->yieldfrom;
+    if (unlikely(gen->is_running))
+        return __Pyx_Coroutine_AlreadyRunningError(gen);
+    if (yf) {
+        PyObject *ret;
+        gen->is_running = 1;
+        #ifdef __Pyx_Generator_USED
+        if (__Pyx_Generator_CheckExact(yf)) {
+            ret = __Pyx_Coroutine_Send(yf, value);
+        } else
+        #endif
+        #ifdef __Pyx_Coroutine_USED
+        if (__Pyx_Coroutine_Check(yf)) {
+            ret = __Pyx_Coroutine_Send(yf, value);
+        } else
+        #endif
+        #ifdef __Pyx_AsyncGen_USED
+        if (__pyx_PyAsyncGenASend_CheckExact(yf)) {
+            ret = __Pyx_async_gen_asend_send(yf, value);
+        } else
+        #endif
+        #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x03030000 && (defined(__linux__) || PY_VERSION_HEX >= 0x030600B3)
+        if (PyGen_CheckExact(yf)) {
+            ret = __Pyx_PyGen_Send((PyGenObject*)yf, value == Py_None ? NULL : value);
+        } else
+        #endif
+        #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x03050000 && defined(PyCoro_CheckExact) && (defined(__linux__) || PY_VERSION_HEX >= 0x030600B3)
+        if (PyCoro_CheckExact(yf)) {
+            ret = __Pyx_PyGen_Send((PyGenObject*)yf, value == Py_None ? NULL : value);
+        } else
+        #endif
+        {
+            if (value == Py_None)
+                ret = __Pyx_PyObject_GetIterNextFunc(yf)(yf);
+            else
+                ret = __Pyx_PyObject_CallMethod1(yf, __pyx_n_s_send, value);
+        }
+        gen->is_running = 0;
+        if (likely(ret)) {
+            return ret;
+        }
+        retval = __Pyx_Coroutine_FinishDelegation(gen);
+    } else {
+        retval = __Pyx_Coroutine_SendEx(gen, value, 0);
+    }
+    return __Pyx_Coroutine_MethodReturn(self, retval);
+}
+static int __Pyx_Coroutine_CloseIter(__pyx_CoroutineObject *gen, PyObject *yf) {
+    PyObject *retval = NULL;
+    int err = 0;
+    #ifdef __Pyx_Generator_USED
+    if (__Pyx_Generator_CheckExact(yf)) {
+        retval = __Pyx_Coroutine_Close(yf);
+        if (!retval)
+            return -1;
+    } else
+    #endif
+    #ifdef __Pyx_Coroutine_USED
+    if (__Pyx_Coroutine_Check(yf)) {
+        retval = __Pyx_Coroutine_Close(yf);
+        if (!retval)
+            return -1;
+    } else
+    if (__Pyx_CoroutineAwait_CheckExact(yf)) {
+        retval = __Pyx_CoroutineAwait_Close((__pyx_CoroutineAwaitObject*)yf, NULL);
+        if (!retval)
+            return -1;
+    } else
+    #endif
+    #ifdef __Pyx_AsyncGen_USED
+    if (__pyx_PyAsyncGenASend_CheckExact(yf)) {
+        retval = __Pyx_async_gen_asend_close(yf, NULL);
+    } else
+    if (__pyx_PyAsyncGenAThrow_CheckExact(yf)) {
+        retval = __Pyx_async_gen_athrow_close(yf, NULL);
+    } else
+    #endif
+    {
+        PyObject *meth;
+        gen->is_running = 1;
+        meth = __Pyx_PyObject_GetAttrStrNoError(yf, __pyx_n_s_close);
+        if (unlikely(!meth)) {
+            if (unlikely(PyErr_Occurred())) {
+                PyErr_WriteUnraisable(yf);
+            }
+        } else {
+            retval = __Pyx_PyObject_CallNoArg(meth);
+            Py_DECREF(meth);
+            if (unlikely(!retval))
+                err = -1;
+        }
+        gen->is_running = 0;
+    }
+    Py_XDECREF(retval);
+    return err;
+}
+static PyObject *__Pyx_Generator_Next(PyObject *self) {
+    __pyx_CoroutineObject *gen = (__pyx_CoroutineObject*) self;
+    PyObject *yf = gen->yieldfrom;
+    if (unlikely(gen->is_running))
+        return __Pyx_Coroutine_AlreadyRunningError(gen);
+    if (yf) {
+        PyObject *ret;
+        gen->is_running = 1;
+        #ifdef __Pyx_Generator_USED
+        if (__Pyx_Generator_CheckExact(yf)) {
+            ret = __Pyx_Generator_Next(yf);
+        } else
+        #endif
+        #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX >= 0x03030000 && (defined(__linux__) || PY_VERSION_HEX >= 0x030600B3)
+        if (PyGen_CheckExact(yf)) {
+            ret = __Pyx_PyGen_Send((PyGenObject*)yf, NULL);
+        } else
+        #endif
+        #ifdef __Pyx_Coroutine_USED
+        if (__Pyx_Coroutine_Check(yf)) {
+            ret = __Pyx_Coroutine_Send(yf, Py_None);
+        } else
+        #endif
+            ret = __Pyx_PyObject_GetIterNextFunc(yf)(yf);
+        gen->is_running = 0;
+        if (likely(ret)) {
+            return ret;
+        }
+        return __Pyx_Coroutine_FinishDelegation(gen);
+    }
+    return __Pyx_Coroutine_SendEx(gen, Py_None, 0);
+}
+static PyObject *__Pyx_Coroutine_Close_Method(PyObject *self, PyObject *arg) {
+    CYTHON_UNUSED_VAR(arg);
+    return __Pyx_Coroutine_Close(self);
+}
+static PyObject *__Pyx_Coroutine_Close(PyObject *self) {
+    __pyx_CoroutineObject *gen = (__pyx_CoroutineObject *) self;
+    PyObject *retval, *raised_exception;
+    PyObject *yf = gen->yieldfrom;
+    int err = 0;
+    if (unlikely(gen->is_running))
+        return __Pyx_Coroutine_AlreadyRunningError(gen);
+    if (yf) {
+        Py_INCREF(yf);
+        err = __Pyx_Coroutine_CloseIter(gen, yf);
+        __Pyx_Coroutine_Undelegate(gen);
+        Py_DECREF(yf);
+    }
+    if (err == 0)
+        PyErr_SetNone(PyExc_GeneratorExit);
+    retval = __Pyx_Coroutine_SendEx(gen, NULL, 1);
+    if (unlikely(retval)) {
+        const char *msg;
+        Py_DECREF(retval);
+        if ((0)) {
+        #ifdef __Pyx_Coroutine_USED
+        } else if (__Pyx_Coroutine_Check(self)) {
+            msg = "coroutine ignored GeneratorExit";
+        #endif
+        #ifdef __Pyx_AsyncGen_USED
+        } else if (__Pyx_AsyncGen_CheckExact(self)) {
+#if PY_VERSION_HEX < 0x03060000
+            msg = "async generator ignored GeneratorExit - might require Python 3.6+ finalisation (PEP 525)";
+#else
+            msg = "async generator ignored GeneratorExit";
+#endif
+        #endif
+        } else {
+            msg = "generator ignored GeneratorExit";
+        }
+        PyErr_SetString(PyExc_RuntimeError, msg);
+        return NULL;
+    }
+    raised_exception = PyErr_Occurred();
+    if (likely(!raised_exception || __Pyx_PyErr_GivenExceptionMatches2(raised_exception, PyExc_GeneratorExit, PyExc_StopIteration))) {
+        if (raised_exception) PyErr_Clear();
+        Py_INCREF(Py_None);
+        return Py_None;
+    }
+    return NULL;
+}
+static PyObject *__Pyx__Coroutine_Throw(PyObject *self, PyObject *typ, PyObject *val, PyObject *tb,
+                                        PyObject *args, int close_on_genexit) {
+    __pyx_CoroutineObject *gen = (__pyx_CoroutineObject *) self;
+    PyObject *yf = gen->yieldfrom;
+    if (unlikely(gen->is_running))
+        return __Pyx_Coroutine_AlreadyRunningError(gen);
+    if (yf) {
+        PyObject *ret;
+        Py_INCREF(yf);
+        if (__Pyx_PyErr_GivenExceptionMatches(typ, PyExc_GeneratorExit) && close_on_genexit) {
+            int err = __Pyx_Coroutine_CloseIter(gen, yf);
+            Py_DECREF(yf);
+            __Pyx_Coroutine_Undelegate(gen);
+            if (err < 0)
+                return __Pyx_Coroutine_MethodReturn(self, __Pyx_Coroutine_SendEx(gen, NULL, 0));
+            goto throw_here;
+        }
+        gen->is_running = 1;
+        if (0
+        #ifdef __Pyx_Generator_USED
+            || __Pyx_Generator_CheckExact(yf)
+        #endif
+        #ifdef __Pyx_Coroutine_USED
+            || __Pyx_Coroutine_Check(yf)
+        #endif
+            ) {
+            ret = __Pyx__Coroutine_Throw(yf, typ, val, tb, args, close_on_genexit);
+        #ifdef __Pyx_Coroutine_USED
+        } else if (__Pyx_CoroutineAwait_CheckExact(yf)) {
+            ret = __Pyx__Coroutine_Throw(((__pyx_CoroutineAwaitObject*)yf)->coroutine, typ, val, tb, args, close_on_genexit);
+        #endif
+        } else {
+            PyObject *meth = __Pyx_PyObject_GetAttrStrNoError(yf, __pyx_n_s_throw);
+            if (unlikely(!meth)) {
+                Py_DECREF(yf);
+                if (unlikely(PyErr_Occurred())) {
+                    gen->is_running = 0;
+                    return NULL;
+                }
+                __Pyx_Coroutine_Undelegate(gen);
+                gen->is_running = 0;
+                goto throw_here;
+            }
+            if (likely(args)) {
+                ret = __Pyx_PyObject_Call(meth, args, NULL);
+            } else {
+                PyObject *cargs[4] = {NULL, typ, val, tb};
+                ret = __Pyx_PyObject_FastCall(meth, cargs+1, 3 | __Pyx_PY_VECTORCALL_ARGUMENTS_OFFSET);
+            }
+            Py_DECREF(meth);
+        }
+        gen->is_running = 0;
+        Py_DECREF(yf);
+        if (!ret) {
+            ret = __Pyx_Coroutine_FinishDelegation(gen);
+        }
+        return __Pyx_Coroutine_MethodReturn(self, ret);
+    }
+throw_here:
+    __Pyx_Raise(typ, val, tb, NULL);
+    return __Pyx_Coroutine_MethodReturn(self, __Pyx_Coroutine_SendEx(gen, NULL, 0));
+}
+static PyObject *__Pyx_Coroutine_Throw(PyObject *self, PyObject *args) {
+    PyObject *typ;
+    PyObject *val = NULL;
+    PyObject *tb = NULL;
+    if (unlikely(!PyArg_UnpackTuple(args, (char *)"throw", 1, 3, &typ, &val, &tb)))
+        return NULL;
+    return __Pyx__Coroutine_Throw(self, typ, val, tb, args, 1);
+}
+static CYTHON_INLINE int __Pyx_Coroutine_traverse_excstate(__Pyx_ExcInfoStruct *exc_state, visitproc visit, void *arg) {
+#if PY_VERSION_HEX >= 0x030B00a4
+    Py_VISIT(exc_state->exc_value);
+#else
+    Py_VISIT(exc_state->exc_type);
+    Py_VISIT(exc_state->exc_value);
+    Py_VISIT(exc_state->exc_traceback);
+#endif
+    return 0;
+}
+static int __Pyx_Coroutine_traverse(__pyx_CoroutineObject *gen, visitproc visit, void *arg) {
+    Py_VISIT(gen->closure);
+    Py_VISIT(gen->classobj);
+    Py_VISIT(gen->yieldfrom);
+    return __Pyx_Coroutine_traverse_excstate(&gen->gi_exc_state, visit, arg);
+}
+static int __Pyx_Coroutine_clear(PyObject *self) {
+    __pyx_CoroutineObject *gen = (__pyx_CoroutineObject *) self;
+    Py_CLEAR(gen->closure);
+    Py_CLEAR(gen->classobj);
+    Py_CLEAR(gen->yieldfrom);
+    __Pyx_Coroutine_ExceptionClear(&gen->gi_exc_state);
+#ifdef __Pyx_AsyncGen_USED
+    if (__Pyx_AsyncGen_CheckExact(self)) {
+        Py_CLEAR(((__pyx_PyAsyncGenObject*)gen)->ag_finalizer);
+    }
+#endif
+    Py_CLEAR(gen->gi_code);
+    Py_CLEAR(gen->gi_frame);
+    Py_CLEAR(gen->gi_name);
+    Py_CLEAR(gen->gi_qualname);
+    Py_CLEAR(gen->gi_modulename);
+    return 0;
+}
+static void __Pyx_Coroutine_dealloc(PyObject *self) {
+    __pyx_CoroutineObject *gen = (__pyx_CoroutineObject *) self;
+    PyObject_GC_UnTrack(gen);
+    if (gen->gi_weakreflist != NULL)
+        PyObject_ClearWeakRefs(self);
+    if (gen->resume_label >= 0) {
+        PyObject_GC_Track(self);
+#if PY_VERSION_HEX >= 0x030400a1 && CYTHON_USE_TP_FINALIZE
+        if (unlikely(PyObject_CallFinalizerFromDealloc(self)))
+#else
+        Py_TYPE(gen)->tp_del(self);
+        if (unlikely(Py_REFCNT(self) > 0))
+#endif
+        {
+            return;
+        }
+        PyObject_GC_UnTrack(self);
+    }
+#ifdef __Pyx_AsyncGen_USED
+    if (__Pyx_AsyncGen_CheckExact(self)) {
+        /* We have to handle this case for asynchronous generators
+           right here, because this code has to be between UNTRACK
+           and GC_Del. */
+        Py_CLEAR(((__pyx_PyAsyncGenObject*)self)->ag_finalizer);
+    }
+#endif
+    __Pyx_Coroutine_clear(self);
+    __Pyx_PyHeapTypeObject_GC_Del(gen);
+}
+static void __Pyx_Coroutine_del(PyObject *self) {
+    PyObject *error_type, *error_value, *error_traceback;
+    __pyx_CoroutineObject *gen = (__pyx_CoroutineObject *) self;
+    __Pyx_PyThreadState_declare
+    if (gen->resume_label < 0) {
+        return;
+    }
+#if !CYTHON_USE_TP_FINALIZE
+    assert(self->ob_refcnt == 0);
+    __Pyx_SET_REFCNT(self, 1);
+#endif
+    __Pyx_PyThreadState_assign
+    __Pyx_ErrFetch(&error_type, &error_value, &error_traceback);
+#ifdef __Pyx_AsyncGen_USED
+    if (__Pyx_AsyncGen_CheckExact(self)) {
+        __pyx_PyAsyncGenObject *agen = (__pyx_PyAsyncGenObject*)self;
+        PyObject *finalizer = agen->ag_finalizer;
+        if (finalizer && !agen->ag_closed) {
+            PyObject *res = __Pyx_PyObject_CallOneArg(finalizer, self);
+            if (unlikely(!res)) {
+                PyErr_WriteUnraisable(self);
+            } else {
+                Py_DECREF(res);
+            }
+            __Pyx_ErrRestore(error_type, error_value, error_traceback);
+            return;
+        }
+    }
+#endif
+    if (unlikely(gen->resume_label == 0 && !error_value)) {
+#ifdef __Pyx_Coroutine_USED
+#ifdef __Pyx_Generator_USED
+    if (!__Pyx_Generator_CheckExact(self))
+#endif
+        {
+        PyObject_GC_UnTrack(self);
+#if PY_MAJOR_VERSION >= 3  || defined(PyErr_WarnFormat)
+        if (unlikely(PyErr_WarnFormat(PyExc_RuntimeWarning, 1, "coroutine '%.50S' was never awaited", gen->gi_qualname) < 0))
+            PyErr_WriteUnraisable(self);
+#else
+        {PyObject *msg;
+        char *cmsg;
+        #if CYTHON_COMPILING_IN_PYPY
+        msg = NULL;
+        cmsg = (char*) "coroutine was never awaited";
+        #else
+        char *cname;
+        PyObject *qualname;
+        qualname = gen->gi_qualname;
+        cname = PyString_AS_STRING(qualname);
+        msg = PyString_FromFormat("coroutine '%.50s' was never awaited", cname);
+        if (unlikely(!msg)) {
+            PyErr_Clear();
+            cmsg = (char*) "coroutine was never awaited";
+        } else {
+            cmsg = PyString_AS_STRING(msg);
+        }
+        #endif
+        if (unlikely(PyErr_WarnEx(PyExc_RuntimeWarning, cmsg, 1) < 0))
+            PyErr_WriteUnraisable(self);
+        Py_XDECREF(msg);}
+#endif
+        PyObject_GC_Track(self);
+        }
+#endif
+    } else {
+        PyObject *res = __Pyx_Coroutine_Close(self);
+        if (unlikely(!res)) {
+            if (PyErr_Occurred())
+                PyErr_WriteUnraisable(self);
+        } else {
+            Py_DECREF(res);
+        }
+    }
+    __Pyx_ErrRestore(error_type, error_value, error_traceback);
+#if !CYTHON_USE_TP_FINALIZE
+    assert(Py_REFCNT(self) > 0);
+    if (likely(--self->ob_refcnt == 0)) {
+        return;
+    }
+    {
+        Py_ssize_t refcnt = Py_REFCNT(self);
+        _Py_NewReference(self);
+        __Pyx_SET_REFCNT(self, refcnt);
+    }
+#if CYTHON_COMPILING_IN_CPYTHON
+    assert(PyType_IS_GC(Py_TYPE(self)) &&
+           _Py_AS_GC(self)->gc.gc_refs != _PyGC_REFS_UNTRACKED);
+    _Py_DEC_REFTOTAL;
+#endif
+#ifdef COUNT_ALLOCS
+    --Py_TYPE(self)->tp_frees;
+    --Py_TYPE(self)->tp_allocs;
+#endif
+#endif
+}
+static PyObject *
+__Pyx_Coroutine_get_name(__pyx_CoroutineObject *self, void *context)
+{
+    PyObject *name = self->gi_name;
+    CYTHON_UNUSED_VAR(context);
+    if (unlikely(!name)) name = Py_None;
+    Py_INCREF(name);
+    return name;
+}
+static int
+__Pyx_Coroutine_set_name(__pyx_CoroutineObject *self, PyObject *value, void *context)
+{
+    CYTHON_UNUSED_VAR(context);
+#if PY_MAJOR_VERSION >= 3
+    if (unlikely(value == NULL || !PyUnicode_Check(value)))
+#else
+    if (unlikely(value == NULL || !PyString_Check(value)))
+#endif
+    {
+        PyErr_SetString(PyExc_TypeError,
+                        "__name__ must be set to a string object");
+        return -1;
+    }
+    Py_INCREF(value);
+    __Pyx_Py_XDECREF_SET(self->gi_name, value);
+    return 0;
+}
+static PyObject *
+__Pyx_Coroutine_get_qualname(__pyx_CoroutineObject *self, void *context)
+{
+    PyObject *name = self->gi_qualname;
+    CYTHON_UNUSED_VAR(context);
+    if (unlikely(!name)) name = Py_None;
+    Py_INCREF(name);
+    return name;
+}
+static int
+__Pyx_Coroutine_set_qualname(__pyx_CoroutineObject *self, PyObject *value, void *context)
+{
+    CYTHON_UNUSED_VAR(context);
+#if PY_MAJOR_VERSION >= 3
+    if (unlikely(value == NULL || !PyUnicode_Check(value)))
+#else
+    if (unlikely(value == NULL || !PyString_Check(value)))
+#endif
+    {
+        PyErr_SetString(PyExc_TypeError,
+                        "__qualname__ must be set to a string object");
+        return -1;
+    }
+    Py_INCREF(value);
+    __Pyx_Py_XDECREF_SET(self->gi_qualname, value);
+    return 0;
+}
+static PyObject *
+__Pyx_Coroutine_get_frame(__pyx_CoroutineObject *self, void *context)
+{
+    PyObject *frame = self->gi_frame;
+    CYTHON_UNUSED_VAR(context);
+    if (!frame) {
+        if (unlikely(!self->gi_code)) {
+            Py_RETURN_NONE;
+        }
+        frame = (PyObject *) PyFrame_New(
+            PyThreadState_Get(),            /*PyThreadState *tstate,*/
+            (PyCodeObject*) self->gi_code,  /*PyCodeObject *code,*/
+            __pyx_d,                 /*PyObject *globals,*/
+            0                               /*PyObject *locals*/
+        );
+        if (unlikely(!frame))
+            return NULL;
+        self->gi_frame = frame;
+    }
+    Py_INCREF(frame);
+    return frame;
+}
+static __pyx_CoroutineObject *__Pyx__Coroutine_New(
+            PyTypeObject* type, __pyx_coroutine_body_t body, PyObject *code, PyObject *closure,
+            PyObject *name, PyObject *qualname, PyObject *module_name) {
+    __pyx_CoroutineObject *gen = PyObject_GC_New(__pyx_CoroutineObject, type);
+    if (unlikely(!gen))
+        return NULL;
+    return __Pyx__Coroutine_NewInit(gen, body, code, closure, name, qualname, module_name);
+}
+static __pyx_CoroutineObject *__Pyx__Coroutine_NewInit(
+            __pyx_CoroutineObject *gen, __pyx_coroutine_body_t body, PyObject *code, PyObject *closure,
+            PyObject *name, PyObject *qualname, PyObject *module_name) {
+    gen->body = body;
+    gen->closure = closure;
+    Py_XINCREF(closure);
+    gen->is_running = 0;
+    gen->resume_label = 0;
+    gen->classobj = NULL;
+    gen->yieldfrom = NULL;
+    #if PY_VERSION_HEX >= 0x030B00a4
+    gen->gi_exc_state.exc_value = NULL;
+    #else
+    gen->gi_exc_state.exc_type = NULL;
+    gen->gi_exc_state.exc_value = NULL;
+    gen->gi_exc_state.exc_traceback = NULL;
+    #endif
+#if CYTHON_USE_EXC_INFO_STACK
+    gen->gi_exc_state.previous_item = NULL;
+#endif
+    gen->gi_weakreflist = NULL;
+    Py_XINCREF(qualname);
+    gen->gi_qualname = qualname;
+    Py_XINCREF(name);
+    gen->gi_name = name;
+    Py_XINCREF(module_name);
+    gen->gi_modulename = module_name;
+    Py_XINCREF(code);
+    gen->gi_code = code;
+    gen->gi_frame = NULL;
+    PyObject_GC_Track(gen);
+    return gen;
+}
+
+/* PatchModuleWithCoroutine */
+  static PyObject* __Pyx_Coroutine_patch_module(PyObject* module, const char* py_code) {
+#if defined(__Pyx_Generator_USED) || defined(__Pyx_Coroutine_USED)
+    int result;
+    PyObject *globals, *result_obj;
+    globals = PyDict_New();  if (unlikely(!globals)) goto ignore;
+    result = PyDict_SetItemString(globals, "_cython_coroutine_type",
+    #ifdef __Pyx_Coroutine_USED
+        (PyObject*)__pyx_CoroutineType);
+    #else
+        Py_None);
+    #endif
+    if (unlikely(result < 0)) goto ignore;
+    result = PyDict_SetItemString(globals, "_cython_generator_type",
+    #ifdef __Pyx_Generator_USED
+        (PyObject*)__pyx_GeneratorType);
+    #else
+        Py_None);
+    #endif
+    if (unlikely(result < 0)) goto ignore;
+    if (unlikely(PyDict_SetItemString(globals, "_module", module) < 0)) goto ignore;
+    if (unlikely(PyDict_SetItemString(globals, "__builtins__", __pyx_b) < 0)) goto ignore;
+    result_obj = PyRun_String(py_code, Py_file_input, globals, globals);
+    if (unlikely(!result_obj)) goto ignore;
+    Py_DECREF(result_obj);
+    Py_DECREF(globals);
+    return module;
+ignore:
+    Py_XDECREF(globals);
+    PyErr_WriteUnraisable(module);
+    if (unlikely(PyErr_WarnEx(PyExc_RuntimeWarning, "Cython module failed to patch module with custom type", 1) < 0)) {
+        Py_DECREF(module);
+        module = NULL;
+    }
+#else
+    py_code++;
+#endif
+    return module;
+}
+
+/* PatchGeneratorABC */
+  #ifndef CYTHON_REGISTER_ABCS
+#define CYTHON_REGISTER_ABCS 1
+#endif
+#if defined(__Pyx_Generator_USED) || defined(__Pyx_Coroutine_USED)
+static PyObject* __Pyx_patch_abc_module(PyObject *module);
+static PyObject* __Pyx_patch_abc_module(PyObject *module) {
+    module = __Pyx_Coroutine_patch_module(
+        module, ""
+"if _cython_generator_type is not None:\n"
+"    try: Generator = _module.Generator\n"
+"    except AttributeError: pass\n"
+"    else: Generator.register(_cython_generator_type)\n"
+"if _cython_coroutine_type is not None:\n"
+"    try: Coroutine = _module.Coroutine\n"
+"    except AttributeError: pass\n"
+"    else: Coroutine.register(_cython_coroutine_type)\n"
+    );
+    return module;
+}
+#endif
+static int __Pyx_patch_abc(void) {
+#if defined(__Pyx_Generator_USED) || defined(__Pyx_Coroutine_USED)
+    static int abc_patched = 0;
+    if (CYTHON_REGISTER_ABCS && !abc_patched) {
+        PyObject *module;
+        module = PyImport_ImportModule((PY_MAJOR_VERSION >= 3) ? "collections.abc" : "collections");
+        if (unlikely(!module)) {
+            PyErr_WriteUnraisable(NULL);
+            if (unlikely(PyErr_WarnEx(PyExc_RuntimeWarning,
+                    ((PY_MAJOR_VERSION >= 3) ?
+                        "Cython module failed to register with collections.abc module" :
+                        "Cython module failed to register with collections module"), 1) < 0)) {
+                return -1;
+            }
+        } else {
+            module = __Pyx_patch_abc_module(module);
+            abc_patched = 1;
+            if (unlikely(!module))
+                return -1;
+            Py_DECREF(module);
+        }
+        module = PyImport_ImportModule("backports_abc");
+        if (module) {
+            module = __Pyx_patch_abc_module(module);
+            Py_XDECREF(module);
+        }
+        if (!module) {
+            PyErr_Clear();
+        }
+    }
+#else
+    if ((0)) __Pyx_Coroutine_patch_module(NULL, NULL);
+#endif
+    return 0;
+}
+
+/* Generator */
+  static PyMethodDef __pyx_Generator_methods[] = {
+    {"send", (PyCFunction) __Pyx_Coroutine_Send, METH_O,
+     (char*) PyDoc_STR("send(arg) -> send 'arg' into generator,\nreturn next yielded value or raise StopIteration.")},
+    {"throw", (PyCFunction) __Pyx_Coroutine_Throw, METH_VARARGS,
+     (char*) PyDoc_STR("throw(typ[,val[,tb]]) -> raise exception in generator,\nreturn next yielded value or raise StopIteration.")},
+    {"close", (PyCFunction) __Pyx_Coroutine_Close_Method, METH_NOARGS,
+     (char*) PyDoc_STR("close() -> raise GeneratorExit inside generator.")},
+    {0, 0, 0, 0}
+};
+static PyMemberDef __pyx_Generator_memberlist[] = {
+    {(char *) "gi_running", T_BOOL, offsetof(__pyx_CoroutineObject, is_running), READONLY, NULL},
+    {(char*) "gi_yieldfrom", T_OBJECT, offsetof(__pyx_CoroutineObject, yieldfrom), READONLY,
+     (char*) PyDoc_STR("object being iterated by 'yield from', or None")},
+    {(char*) "gi_code", T_OBJECT, offsetof(__pyx_CoroutineObject, gi_code), READONLY, NULL},
+    {(char *) "__module__", T_OBJECT, offsetof(__pyx_CoroutineObject, gi_modulename), 0, 0},
+#if CYTHON_USE_TYPE_SPECS
+    {(char *) "__weaklistoffset__", T_PYSSIZET, offsetof(__pyx_CoroutineObject, gi_weakreflist), READONLY, 0},
+#endif
+    {0, 0, 0, 0, 0}
+};
+static PyGetSetDef __pyx_Generator_getsets[] = {
+    {(char *) "__name__", (getter)__Pyx_Coroutine_get_name, (setter)__Pyx_Coroutine_set_name,
+     (char*) PyDoc_STR("name of the generator"), 0},
+    {(char *) "__qualname__", (getter)__Pyx_Coroutine_get_qualname, (setter)__Pyx_Coroutine_set_qualname,
+     (char*) PyDoc_STR("qualified name of the generator"), 0},
+    {(char *) "gi_frame", (getter)__Pyx_Coroutine_get_frame, NULL,
+     (char*) PyDoc_STR("Frame of the generator"), 0},
+    {0, 0, 0, 0, 0}
+};
+#if CYTHON_USE_TYPE_SPECS
+static PyType_Slot __pyx_GeneratorType_slots[] = {
+    {Py_tp_dealloc, (void *)__Pyx_Coroutine_dealloc},
+    {Py_tp_traverse, (void *)__Pyx_Coroutine_traverse},
+    {Py_tp_iter, (void *)PyObject_SelfIter},
+    {Py_tp_iternext, (void *)__Pyx_Generator_Next},
+    {Py_tp_methods, (void *)__pyx_Generator_methods},
+    {Py_tp_members, (void *)__pyx_Generator_memberlist},
+    {Py_tp_getset, (void *)__pyx_Generator_getsets},
+    {Py_tp_getattro, (void *) __Pyx_PyObject_GenericGetAttrNoDict},
+#if CYTHON_USE_TP_FINALIZE
+    {Py_tp_finalize, (void *)__Pyx_Coroutine_del},
+#endif
+    {0, 0},
+};
+static PyType_Spec __pyx_GeneratorType_spec = {
+    __PYX_TYPE_MODULE_PREFIX "generator",
+    sizeof(__pyx_CoroutineObject),
+    0,
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_HAVE_GC | Py_TPFLAGS_HAVE_FINALIZE,
+    __pyx_GeneratorType_slots
+};
+#else
+static PyTypeObject __pyx_GeneratorType_type = {
+    PyVarObject_HEAD_INIT(0, 0)
+    __PYX_TYPE_MODULE_PREFIX "generator",
+    sizeof(__pyx_CoroutineObject),
+    0,
+    (destructor) __Pyx_Coroutine_dealloc,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_HAVE_GC | Py_TPFLAGS_HAVE_FINALIZE,
+    0,
+    (traverseproc) __Pyx_Coroutine_traverse,
+    0,
+    0,
+    offsetof(__pyx_CoroutineObject, gi_weakreflist),
+    0,
+    (iternextfunc) __Pyx_Generator_Next,
+    __pyx_Generator_methods,
+    __pyx_Generator_memberlist,
+    __pyx_Generator_getsets,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+#if CYTHON_USE_TP_FINALIZE
+    0,
+#else
+    __Pyx_Coroutine_del,
+#endif
+    0,
+#if CYTHON_USE_TP_FINALIZE
+    __Pyx_Coroutine_del,
+#elif PY_VERSION_HEX >= 0x030400a1
+    0,
+#endif
+#if PY_VERSION_HEX >= 0x030800b1 && (!CYTHON_COMPILING_IN_PYPY || PYPY_VERSION_NUM >= 0x07030800)
+    0,
+#endif
+#if __PYX_NEED_TP_PRINT_SLOT
+    0,
+#endif
+#if PY_VERSION_HEX >= 0x030C0000
+    0,
+#endif
+#if PY_VERSION_HEX >= 0x030d00A4
+    0,
+#endif
+#if CYTHON_COMPILING_IN_PYPY && PY_VERSION_HEX >= 0x03090000 && PY_VERSION_HEX < 0x030a0000
+    0,
+#endif
+};
+#endif
+static int __pyx_Generator_init(PyObject *module) {
+#if CYTHON_USE_TYPE_SPECS
+    __pyx_GeneratorType = __Pyx_FetchCommonTypeFromSpec(module, &__pyx_GeneratorType_spec, NULL);
+#else
+    CYTHON_UNUSED_VAR(module);
+    __pyx_GeneratorType_type.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+    __pyx_GeneratorType_type.tp_iter = PyObject_SelfIter;
+    __pyx_GeneratorType = __Pyx_FetchCommonType(&__pyx_GeneratorType_type);
+#endif
+    if (unlikely(!__pyx_GeneratorType)) {
+        return -1;
+    }
+    return 0;
+}
 
 /* CheckBinaryVersion */
   static unsigned long __Pyx_get_runtime_version(void) {

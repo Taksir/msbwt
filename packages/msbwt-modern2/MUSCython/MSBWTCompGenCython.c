@@ -1517,7 +1517,7 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "MUSCython/MSBWTCompGenCython.pyx",
+  "MUSCython\\\\MSBWTCompGenCython.pyx",
   "<stringsource>",
   "__init__.pxd",
   "type.pxd",
@@ -1666,7 +1666,7 @@ typedef struct {
 
 /* #### Code section: numeric_typedefs ### */
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":736
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":736
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1675,7 +1675,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":737
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":737
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1684,7 +1684,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":738
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":738
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1693,7 +1693,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":739
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":739
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1702,7 +1702,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":743
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":743
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1711,7 +1711,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":744
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":744
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1720,7 +1720,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":745
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":745
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1729,7 +1729,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":746
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":746
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1738,7 +1738,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":750
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":750
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1747,7 +1747,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":751
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":751
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1756,7 +1756,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":760
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":760
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1765,7 +1765,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":761
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":761
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1774,7 +1774,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":763
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":763
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1783,7 +1783,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":764
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":764
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1792,7 +1792,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":766
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":766
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1801,7 +1801,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":767
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":767
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1810,7 +1810,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":769
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":769
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1819,7 +1819,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":770
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":770
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1828,7 +1828,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":771
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":771
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1869,7 +1869,7 @@ struct __pyx_MemviewEnum_obj;
 struct __pyx_memoryview_obj;
 struct __pyx_memoryviewslice_obj;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":773
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":773
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1878,7 +1878,7 @@ struct __pyx_memoryviewslice_obj;
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":774
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":774
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1887,7 +1887,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":775
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":775
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1896,7 +1896,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":777
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":777
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -3365,6 +3365,7 @@ static const char __pyx_k_dict[] = "__dict__";
 static const char __pyx_k_glob[] = "glob";
 static const char __pyx_k_imap[] = "imap";
 static const char __pyx_k_info[] = "info";
+static const char __pyx_k_join[] = "join";
 static const char __pyx_k_load[] = "load";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_math[] = "math";
@@ -3617,7 +3618,7 @@ static const char __pyx_k_Empty_shape_tuple_for_cython_arr[] = "Empty shape tupl
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0[] = "Incompatible checksums (0x%x vs (0x82a3537, 0x6ae9995, 0xb068931) = (name))";
 static const char __pyx_k_Indirect_dimensions_not_supporte[] = "Indirect dimensions not supported";
 static const char __pyx_k_Invalid_mode_expected_c_or_fortr[] = "Invalid mode, expected 'c' or 'fortran', got ";
-static const char __pyx_k_MUSCython_MSBWTCompGenCython_pyx[] = "MUSCython/MSBWTCompGenCython.pyx";
+static const char __pyx_k_MUSCython_MSBWTCompGenCython_pyx[] = "MUSCython\\MSBWTCompGenCython.pyx";
 static const char __pyx_k_Out_of_bounds_on_buffer_access_a[] = "Out of bounds on buffer access (axis ";
 static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to convert item to object";
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension ";
@@ -3920,6 +3921,7 @@ typedef struct {
   PyObject *__pyx_kp_s_itemsize_0_for_cython_array;
   PyObject *__pyx_n_s_iterateMsbwtCreate;
   PyObject *__pyx_n_s_j;
+  PyObject *__pyx_n_s_join;
   PyObject *__pyx_n_s_lib;
   PyObject *__pyx_n_s_load;
   PyObject *__pyx_kp_s_loading_partial_BWT;
@@ -4327,6 +4329,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_s_itemsize_0_for_cython_array);
   Py_CLEAR(clear_module_state->__pyx_n_s_iterateMsbwtCreate);
   Py_CLEAR(clear_module_state->__pyx_n_s_j);
+  Py_CLEAR(clear_module_state->__pyx_n_s_join);
   Py_CLEAR(clear_module_state->__pyx_n_s_lib);
   Py_CLEAR(clear_module_state->__pyx_n_s_load);
   Py_CLEAR(clear_module_state->__pyx_kp_s_loading_partial_BWT);
@@ -4712,6 +4715,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_s_itemsize_0_for_cython_array);
   Py_VISIT(traverse_module_state->__pyx_n_s_iterateMsbwtCreate);
   Py_VISIT(traverse_module_state->__pyx_n_s_j);
+  Py_VISIT(traverse_module_state->__pyx_n_s_join);
   Py_VISIT(traverse_module_state->__pyx_n_s_lib);
   Py_VISIT(traverse_module_state->__pyx_n_s_load);
   Py_VISIT(traverse_module_state->__pyx_kp_s_loading_partial_BWT);
@@ -5125,6 +5129,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_s_itemsize_0_for_cython_array __pyx_mstate_global->__pyx_kp_s_itemsize_0_for_cython_array
 #define __pyx_n_s_iterateMsbwtCreate __pyx_mstate_global->__pyx_n_s_iterateMsbwtCreate
 #define __pyx_n_s_j __pyx_mstate_global->__pyx_n_s_j
+#define __pyx_n_s_join __pyx_mstate_global->__pyx_n_s_join
 #define __pyx_n_s_lib __pyx_mstate_global->__pyx_n_s_lib
 #define __pyx_n_s_load __pyx_mstate_global->__pyx_n_s_load
 #define __pyx_kp_s_loading_partial_BWT __pyx_mstate_global->__pyx_kp_s_loading_partial_BWT
@@ -18920,7 +18925,7 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":250
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":250
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -18931,7 +18936,7 @@ static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *__
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject *__pyx_v_self) {
   PyObject *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":253
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":253
  *             """Returns a borrowed reference to the object owning the data/memory.
  *             """
  *             return PyArray_BASE(self)             # <<<<<<<<<<<<<<
@@ -18941,7 +18946,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   __pyx_r = PyArray_BASE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":250
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":250
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -18954,7 +18959,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":256
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":256
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -18968,7 +18973,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   PyArray_Descr *__pyx_t_1;
   __Pyx_RefNannySetupContext("descr", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":259
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":259
  *             """Returns an owned reference to the dtype of the array.
  *             """
  *             return <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -18981,7 +18986,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   __pyx_r = ((PyArray_Descr *)__pyx_t_1);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":256
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":256
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -18996,7 +19001,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":262
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":262
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -19007,7 +19012,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
 static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx_v_self) {
   int __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":265
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":265
  *             """Returns the number of dimensions in the array.
  *             """
  *             return PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -19017,7 +19022,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   __pyx_r = PyArray_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":262
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":262
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -19030,7 +19035,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":268
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -19041,7 +19046,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":273
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":273
  *             Can return NULL for 0-dimensional arrays.
  *             """
  *             return PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -19051,7 +19056,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   __pyx_r = PyArray_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":268
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":268
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -19064,7 +19069,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":276
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -19075,7 +19080,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":280
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":280
  *             The number of elements matches the number of dimensions of the array (ndim).
  *             """
  *             return PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -19085,7 +19090,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   __pyx_r = PyArray_STRIDES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":276
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":276
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -19098,7 +19103,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":283
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -19109,7 +19114,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":286
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":286
  *             """Returns the total size (in number of elements) of the array.
  *             """
  *             return PyArray_SIZE(self)             # <<<<<<<<<<<<<<
@@ -19119,7 +19124,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   __pyx_r = PyArray_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":283
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":283
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -19132,7 +19137,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":289
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -19143,7 +19148,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self) {
   char *__pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":295
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":295
  *             of `PyArray_DATA()` instead, which returns a 'void*'.
  *             """
  *             return PyArray_BYTES(self)             # <<<<<<<<<<<<<<
@@ -19153,7 +19158,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   __pyx_r = PyArray_BYTES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":289
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":289
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -19166,7 +19171,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":779
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":779
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19183,7 +19188,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":780
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -19197,7 +19202,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":779
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":779
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -19216,7 +19221,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":782
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19233,7 +19238,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":783
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -19247,7 +19252,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":782
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":782
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -19266,7 +19271,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":785
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19283,7 +19288,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":786
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":786
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -19297,7 +19302,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":785
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":785
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -19316,7 +19321,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":788
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":788
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19333,7 +19338,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":789
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":789
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -19347,7 +19352,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":788
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":788
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -19366,7 +19371,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":791
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":791
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19383,7 +19388,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":792
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":792
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -19397,7 +19402,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":791
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":791
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -19416,7 +19421,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":794
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -19430,7 +19435,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":795
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":795
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -19440,7 +19445,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = PyDataType_HASSUBARRAY(__pyx_v_d);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":796
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":796
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -19452,7 +19457,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":795
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":795
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -19461,7 +19466,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":798
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":798
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -19475,7 +19480,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":794
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":794
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -19490,7 +19495,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":975
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":975
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -19500,7 +19505,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
 
 static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_arr, PyObject *__pyx_v_base) {
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":976
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":976
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -19509,7 +19514,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":977
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":977
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -19518,7 +19523,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   (void)(PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base));
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":975
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":975
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -19529,7 +19534,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   /* function exit code */
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -19544,7 +19549,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":980
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":980
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -19553,7 +19558,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":981
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":981
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -19563,7 +19568,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = (__pyx_v_base == NULL);
   if (__pyx_t_1) {
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":982
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":982
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -19574,7 +19579,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":981
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":981
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -19583,7 +19588,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":983
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":983
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -19595,7 +19600,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":979
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":979
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -19610,7 +19615,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":987
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":987
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -19634,7 +19639,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":988
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":988
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19650,7 +19655,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":989
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":989
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -19659,7 +19664,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 989, __pyx_L3_error)
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":988
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":988
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19673,7 +19678,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":990
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":990
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -19688,7 +19693,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":991
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -19703,7 +19708,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":988
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":988
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19719,7 +19724,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":987
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":987
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -19742,7 +19747,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":993
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":993
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -19766,7 +19771,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":994
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":994
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19782,7 +19787,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":995
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":995
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -19791,7 +19796,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 995, __pyx_L3_error)
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":994
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":994
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19805,7 +19810,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":996
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":996
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -19820,7 +19825,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":997
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -19835,7 +19840,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":994
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":994
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19851,7 +19856,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":993
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":993
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -19874,7 +19879,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":999
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":999
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -19898,7 +19903,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 1);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19914,7 +19919,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1001
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1001
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -19923,7 +19928,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(2, 1001, __pyx_L3_error)
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19937,7 +19942,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1002
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1002
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -19952,7 +19957,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1003
+      /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1003
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -19967,7 +19972,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1000
+    /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1000
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -19983,7 +19988,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":999
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":999
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -20006,7 +20011,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1006
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20017,7 +20022,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1018
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1018
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -20027,7 +20032,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1006
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1006
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20040,7 +20045,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1021
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20051,7 +20056,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
 static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1033
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1033
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -20061,7 +20066,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1021
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1021
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -20074,7 +20079,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1036
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1036
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20085,7 +20090,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1043
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1043
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -20095,7 +20100,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1036
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1036
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20108,7 +20113,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1046
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20119,7 +20124,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1050
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1050
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -20129,7 +20134,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1046
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1046
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20142,7 +20147,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1053
+/* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1053
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -20153,7 +20158,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1057
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1057
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -20161,7 +20166,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":1053
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":1053
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -21683,8 +21688,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *         for c in range(0, numValidChars):
  *             #create an initial empty region for each symbol
  *             tempFN = bwtDir+'/state.'+str(c)+'.0.dat'             # <<<<<<<<<<<<<<
- *             tempFP = fopen(tempFN, 'w+')
- *             fclose(tempFP)
+ *             # binary mode: on Windows the C runtime would otherwise translate
+ *             # 0x0A bytes inside the binary state data into '\r\n' pairs.
  */
       __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 138, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
@@ -21703,81 +21708,81 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF_SET(__pyx_v_tempFN, __pyx_t_14);
       __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":139
- *             #create an initial empty region for each symbol
- *             tempFN = bwtDir+'/state.'+str(c)+'.0.dat'
- *             tempFP = fopen(tempFN, 'w+')             # <<<<<<<<<<<<<<
+      /* "MUSCython/MSBWTCompGenCython.pyx":141
+ *             # binary mode: on Windows the C runtime would otherwise translate
+ *             # 0x0A bytes inside the binary state data into '\r\n' pairs.
+ *             tempFP = fopen(tempFN, 'w+b')             # <<<<<<<<<<<<<<
  *             fclose(tempFP)
  * 
  */
-      __pyx_t_34 = __Pyx_PyObject_AsString(__pyx_v_tempFN); if (unlikely((!__pyx_t_34) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
-      __pyx_v_tempFP = fopen(__pyx_t_34, ((char const *)"w+"));
+      __pyx_t_34 = __Pyx_PyObject_AsString(__pyx_v_tempFN); if (unlikely((!__pyx_t_34) && PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L1_error)
+      __pyx_v_tempFP = fopen(__pyx_t_34, ((char const *)"w+b"));
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":140
- *             tempFN = bwtDir+'/state.'+str(c)+'.0.dat'
- *             tempFP = fopen(tempFN, 'w+')
+      /* "MUSCython/MSBWTCompGenCython.pyx":142
+ *             # 0x0A bytes inside the binary state data into '\r\n' pairs.
+ *             tempFP = fopen(tempFN, 'w+b')
  *             fclose(tempFP)             # <<<<<<<<<<<<<<
  * 
  *             #create an empty list of files for insertion
  */
       (void)(fclose(__pyx_v_tempFP));
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":143
+      /* "MUSCython/MSBWTCompGenCython.pyx":145
  * 
  *             #create an empty list of files for insertion
  *             insertionFNDict[c] = []             # <<<<<<<<<<<<<<
  *             nextInsertionFNDict[c] = []
  * 
  */
-      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 143, __pyx_L1_error)
+      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (unlikely((PyDict_SetItem(__pyx_v_insertionFNDict, __pyx_t_3, __pyx_t_14) < 0))) __PYX_ERR(0, 143, __pyx_L1_error)
+      if (unlikely((PyDict_SetItem(__pyx_v_insertionFNDict, __pyx_t_3, __pyx_t_14) < 0))) __PYX_ERR(0, 145, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":144
+      /* "MUSCython/MSBWTCompGenCython.pyx":146
  *             #create an empty list of files for insertion
  *             insertionFNDict[c] = []
  *             nextInsertionFNDict[c] = []             # <<<<<<<<<<<<<<
  * 
  *         #add the single insertion file we generated earlier
  */
-      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 144, __pyx_L1_error)
+      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 146, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 146, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (unlikely((PyDict_SetItem(__pyx_v_nextInsertionFNDict, __pyx_t_3, __pyx_t_14) < 0))) __PYX_ERR(0, 144, __pyx_L1_error)
+      if (unlikely((PyDict_SetItem(__pyx_v_nextInsertionFNDict, __pyx_t_3, __pyx_t_14) < 0))) __PYX_ERR(0, 146, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":147
+    /* "MUSCython/MSBWTCompGenCython.pyx":149
  * 
  *         #add the single insertion file we generated earlier
  *         insertionFNDict[0].append(initialInsertsFN)             # <<<<<<<<<<<<<<
  * 
  *         np.save(bwtDir+'/fmDeltas.0.npy', fmDeltas)
  */
-    __pyx_t_14 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_int_0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_int_0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_35 = __Pyx_PyObject_Append(__pyx_t_14, __pyx_v_initialInsertsFN); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_35 = __Pyx_PyObject_Append(__pyx_t_14, __pyx_v_initialInsertsFN); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":149
+    /* "MUSCython/MSBWTCompGenCython.pyx":151
  *         insertionFNDict[0].append(initialInsertsFN)
  * 
  *         np.save(bwtDir+'/fmDeltas.0.npy', fmDeltas)             # <<<<<<<<<<<<<<
  *         np.save(bwtDir+'/fmStarts.0.npy', fmStarts)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_save); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 149, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_save); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas_0_npy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas_0_npy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_2 = NULL;
     __pyx_t_4 = 0;
@@ -21798,25 +21803,25 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 149, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 151, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     }
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":150
+    /* "MUSCython/MSBWTCompGenCython.pyx":152
  * 
  *         np.save(bwtDir+'/fmDeltas.0.npy', fmDeltas)
  *         np.save(bwtDir+'/fmStarts.0.npy', fmStarts)             # <<<<<<<<<<<<<<
  * 
  *         etc = time.clock()
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_save); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_save); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts_0_npy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts_0_npy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_2 = NULL;
     __pyx_t_4 = 0;
@@ -21837,22 +21842,22 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 150, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 152, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":152
+    /* "MUSCython/MSBWTCompGenCython.pyx":154
  *         np.save(bwtDir+'/fmStarts.0.npy', fmStarts)
  * 
  *         etc = time.clock()             # <<<<<<<<<<<<<<
  *         et = time.time()
  *         logger.info('Finished init in '+str(et-st)+' seconds.')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 152, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_clock); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 152, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_clock); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -21873,24 +21878,24 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_3, NULL};
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 152, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     }
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 152, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_v_etc = __pyx_t_5;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":153
+    /* "MUSCython/MSBWTCompGenCython.pyx":155
  * 
  *         etc = time.clock()
  *         et = time.time()             # <<<<<<<<<<<<<<
  *         logger.info('Finished init in '+str(et-st)+' seconds.')
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 153, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 153, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -21911,32 +21916,32 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_13, NULL};
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 153, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 155, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 153, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_v_et = __pyx_t_5;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":154
+    /* "MUSCython/MSBWTCompGenCython.pyx":156
  *         etc = time.clock()
  *         et = time.time()
  *         logger.info('Finished init in '+str(et-st)+' seconds.')             # <<<<<<<<<<<<<<
  * 
  *     else:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = PyFloat_FromDouble((__pyx_v_et - __pyx_v_st)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_13 = PyFloat_FromDouble((__pyx_v_et - __pyx_v_st)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_kp_s_Finished_init_in, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_kp_s_Finished_init_in, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_seconds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_seconds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -21958,7 +21963,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 154, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 156, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
@@ -21974,7 +21979,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     goto __pyx_L11;
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":158
+  /* "MUSCython/MSBWTCompGenCython.pyx":160
  *     else:
  *         #print 'FOUND PARTIAL RUN STARTING AT '+str(initColumnID)
  *         logger.info('Resuming previous run from '+str(initColumnID)+', loading partial BWT...')             # <<<<<<<<<<<<<<
@@ -21982,17 +21987,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *         fmDeltas = np.load(bwtDir+'/fmDeltas.'+str(initColumnID)+'.npy')
  */
   /*else*/ {
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Resuming_previous_run_from, __pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Resuming_previous_run_from, __pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_loading_partial_BWT); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 158, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_loading_partial_BWT); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 160, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -22014,36 +22019,36 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 158, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 160, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":160
+    /* "MUSCython/MSBWTCompGenCython.pyx":162
  *         logger.info('Resuming previous run from '+str(initColumnID)+', loading partial BWT...')
  * 
  *         fmDeltas = np.load(bwtDir+'/fmDeltas.'+str(initColumnID)+'.npy')             # <<<<<<<<<<<<<<
  *         fmDeltas_view = fmDeltas
  *         fmStarts = np.load(bwtDir+'/fmStarts.'+str(initColumnID)+'.npy')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_load); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -22065,11 +22070,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 160, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 162, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     }
-    if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 162, __pyx_L1_error)
     __pyx_t_23 = ((PyArrayObject *)__pyx_t_14);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -22086,49 +22091,49 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_t_27 = __pyx_t_28 = __pyx_t_29 = 0;
       }
       __pyx_pybuffernd_fmDeltas.diminfo[0].strides = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_fmDeltas.diminfo[0].shape = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_fmDeltas.diminfo[1].strides = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_fmDeltas.diminfo[1].shape = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.shape[1];
-      if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 160, __pyx_L1_error)
+      if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 162, __pyx_L1_error)
     }
     __pyx_t_23 = 0;
     __Pyx_DECREF_SET(__pyx_v_fmDeltas, ((PyArrayObject *)__pyx_t_14));
     __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":161
+    /* "MUSCython/MSBWTCompGenCython.pyx":163
  * 
  *         fmDeltas = np.load(bwtDir+'/fmDeltas.'+str(initColumnID)+'.npy')
  *         fmDeltas_view = fmDeltas             # <<<<<<<<<<<<<<
  *         fmStarts = np.load(bwtDir+'/fmStarts.'+str(initColumnID)+'.npy')
  *         fmStarts_view = fmStarts
  */
-    __pyx_t_22 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmDeltas), PyBUF_WRITABLE); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 161, __pyx_L1_error)
+    __pyx_t_22 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmDeltas), PyBUF_WRITABLE); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 163, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_fmDeltas_view, 1);
     __pyx_v_fmDeltas_view = __pyx_t_22;
     __pyx_t_22.memview = NULL;
     __pyx_t_22.data = NULL;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":162
+    /* "MUSCython/MSBWTCompGenCython.pyx":164
  *         fmDeltas = np.load(bwtDir+'/fmDeltas.'+str(initColumnID)+'.npy')
  *         fmDeltas_view = fmDeltas
  *         fmStarts = np.load(bwtDir+'/fmStarts.'+str(initColumnID)+'.npy')             # <<<<<<<<<<<<<<
  *         fmStarts_view = fmStarts
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_load); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_load); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_npy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_npy); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -22150,11 +22155,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 162, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 164, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
-    if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 162, __pyx_L1_error)
+    if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 164, __pyx_L1_error)
     __pyx_t_21 = ((PyArrayObject *)__pyx_t_14);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -22171,26 +22176,26 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_t_29 = __pyx_t_28 = __pyx_t_27 = 0;
       }
       __pyx_pybuffernd_fmStarts.diminfo[0].strides = __pyx_pybuffernd_fmStarts.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_fmStarts.diminfo[0].shape = __pyx_pybuffernd_fmStarts.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_fmStarts.diminfo[1].strides = __pyx_pybuffernd_fmStarts.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_fmStarts.diminfo[1].shape = __pyx_pybuffernd_fmStarts.rcbuffer->pybuffer.shape[1];
-      if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 162, __pyx_L1_error)
+      if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
     }
     __pyx_t_21 = 0;
     __Pyx_DECREF_SET(__pyx_v_fmStarts, ((PyArrayObject *)__pyx_t_14));
     __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":163
+    /* "MUSCython/MSBWTCompGenCython.pyx":165
  *         fmDeltas_view = fmDeltas
  *         fmStarts = np.load(bwtDir+'/fmStarts.'+str(initColumnID)+'.npy')
  *         fmStarts_view = fmStarts             # <<<<<<<<<<<<<<
  * 
  *         for c in range(0, numValidChars):
  */
-    __pyx_t_22 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmStarts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 163, __pyx_L1_error)
+    __pyx_t_22 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmStarts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 165, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_fmStarts_view, 1);
     __pyx_v_fmStarts_view = __pyx_t_22;
     __pyx_t_22.memview = NULL;
     __pyx_t_22.data = NULL;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":165
+    /* "MUSCython/MSBWTCompGenCython.pyx":167
  *         fmStarts_view = fmStarts
  * 
  *         for c in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -22202,61 +22207,61 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_11; __pyx_t_8+=1) {
       __pyx_v_c = __pyx_t_8;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":167
+      /* "MUSCython/MSBWTCompGenCython.pyx":169
  *         for c in range(0, numValidChars):
  *             #create an empty list of files for insertion
  *             insertionFNDict[c] = []             # <<<<<<<<<<<<<<
  *             nextInsertionFNDict[c] = []
  * 
  */
-      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (unlikely((PyDict_SetItem(__pyx_v_insertionFNDict, __pyx_t_1, __pyx_t_14) < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+      if (unlikely((PyDict_SetItem(__pyx_v_insertionFNDict, __pyx_t_1, __pyx_t_14) < 0))) __PYX_ERR(0, 169, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":168
+      /* "MUSCython/MSBWTCompGenCython.pyx":170
  *             #create an empty list of files for insertion
  *             insertionFNDict[c] = []
  *             nextInsertionFNDict[c] = []             # <<<<<<<<<<<<<<
  * 
  *         gl = sorted(glob.glob(bwtDir+'/inserts.*.'+str(initColumnID)+'.npy'))
  */
-      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      if (unlikely((PyDict_SetItem(__pyx_v_nextInsertionFNDict, __pyx_t_1, __pyx_t_14) < 0))) __PYX_ERR(0, 168, __pyx_L1_error)
+      if (unlikely((PyDict_SetItem(__pyx_v_nextInsertionFNDict, __pyx_t_1, __pyx_t_14) < 0))) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":170
+    /* "MUSCython/MSBWTCompGenCython.pyx":172
  *             nextInsertionFNDict[c] = []
  * 
  *         gl = sorted(glob.glob(bwtDir+'/inserts.*.'+str(initColumnID)+'.npy'))             # <<<<<<<<<<<<<<
  *         for fn in gl:
  *             firstSym = fn.split('/')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_glob); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_glob); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_glob); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_glob); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_inserts); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_inserts); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_initColumnID); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_36 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_36 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_t_3, __pyx_t_36); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_t_3, __pyx_t_36); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_npy); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_npy); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -22278,20 +22283,20 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
-    __pyx_t_2 = PySequence_List(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_2 = PySequence_List(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 172, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_14 = ((PyObject*)__pyx_t_2);
     __pyx_t_2 = 0;
-    __pyx_t_35 = PyList_Sort(__pyx_t_14); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_35 = PyList_Sort(__pyx_t_14); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 172, __pyx_L1_error)
     __pyx_v_gl = ((PyObject*)__pyx_t_14);
     __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":171
+    /* "MUSCython/MSBWTCompGenCython.pyx":173
  * 
  *         gl = sorted(glob.glob(bwtDir+'/inserts.*.'+str(initColumnID)+'.npy'))
  *         for fn in gl:             # <<<<<<<<<<<<<<
@@ -22304,27 +22309,27 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       {
         Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_14);
         #if !CYTHON_ASSUME_SAFE_MACROS
-        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 171, __pyx_L1_error)
+        if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
         #endif
         if (__pyx_t_37 >= __pyx_temp) break;
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_14, __pyx_t_37); __Pyx_INCREF(__pyx_t_2); __pyx_t_37++; if (unlikely((0 < 0))) __PYX_ERR(0, 171, __pyx_L1_error)
+      __pyx_t_2 = PyList_GET_ITEM(__pyx_t_14, __pyx_t_37); __Pyx_INCREF(__pyx_t_2); __pyx_t_37++; if (unlikely((0 < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
       #else
-      __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_14, __pyx_t_37); __pyx_t_37++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_14, __pyx_t_37); __pyx_t_37++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       #endif
       __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":172
+      /* "MUSCython/MSBWTCompGenCython.pyx":174
  *         gl = sorted(glob.glob(bwtDir+'/inserts.*.'+str(initColumnID)+'.npy'))
  *         for fn in gl:
  *             firstSym = fn.split('/')             # <<<<<<<<<<<<<<
  *             firstSym = firstSym[len(firstSym)-1]
  *             firstSym = firstSym.split('.')
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_fn, __pyx_n_s_split); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_fn, __pyx_n_s_split); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_36 = NULL;
       __pyx_t_4 = 0;
@@ -22344,35 +22349,35 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         PyObject *__pyx_callargs[2] = {__pyx_t_36, __pyx_kp_s__11};
         __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 172, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
       __Pyx_XDECREF_SET(__pyx_v_firstSym, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":173
+      /* "MUSCython/MSBWTCompGenCython.pyx":175
  *         for fn in gl:
  *             firstSym = fn.split('/')
  *             firstSym = firstSym[len(firstSym)-1]             # <<<<<<<<<<<<<<
  *             firstSym = firstSym.split('.')
  *             firstSym = int(firstSym[1][0])
  */
-      __pyx_t_38 = PyObject_Length(__pyx_v_firstSym); if (unlikely(__pyx_t_38 == ((Py_ssize_t)-1))) __PYX_ERR(0, 173, __pyx_L1_error)
+      __pyx_t_38 = PyObject_Length(__pyx_v_firstSym); if (unlikely(__pyx_t_38 == ((Py_ssize_t)-1))) __PYX_ERR(0, 175, __pyx_L1_error)
       __pyx_t_39 = (__pyx_t_38 - 1);
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_firstSym, __pyx_t_39, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_firstSym, __pyx_t_39, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF_SET(__pyx_v_firstSym, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":174
+      /* "MUSCython/MSBWTCompGenCython.pyx":176
  *             firstSym = fn.split('/')
  *             firstSym = firstSym[len(firstSym)-1]
  *             firstSym = firstSym.split('.')             # <<<<<<<<<<<<<<
  *             firstSym = int(firstSym[1][0])
  * 
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_firstSym, __pyx_n_s_split); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_firstSym, __pyx_n_s_split); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_36 = NULL;
       __pyx_t_4 = 0;
@@ -22392,44 +22397,44 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         PyObject *__pyx_callargs[2] = {__pyx_t_36, __pyx_kp_s__2};
         __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 176, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       }
       __Pyx_DECREF_SET(__pyx_v_firstSym, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":175
+      /* "MUSCython/MSBWTCompGenCython.pyx":177
  *             firstSym = firstSym[len(firstSym)-1]
  *             firstSym = firstSym.split('.')
  *             firstSym = int(firstSym[1][0])             # <<<<<<<<<<<<<<
  * 
  *             insertionFNDict[firstSym].append(fn)
  */
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_firstSym, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_firstSym, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF_SET(__pyx_v_firstSym, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":177
+      /* "MUSCython/MSBWTCompGenCython.pyx":179
  *             firstSym = int(firstSym[1][0])
  * 
  *             insertionFNDict[firstSym].append(fn)             # <<<<<<<<<<<<<<
  * 
  *         #print insertionFNDict
  */
-      __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_v_firstSym); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_v_firstSym); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_35 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_v_fn); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+      __pyx_t_35 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_v_fn); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 179, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":171
+      /* "MUSCython/MSBWTCompGenCython.pyx":173
  * 
  *         gl = sorted(glob.glob(bwtDir+'/inserts.*.'+str(initColumnID)+'.npy'))
  *         for fn in gl:             # <<<<<<<<<<<<<<
@@ -22441,14 +22446,14 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
   }
   __pyx_L11:;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":183
+  /* "MUSCython/MSBWTCompGenCython.pyx":185
  *         #raise Exception('')
  * 
  *     logger.info('Beginning iterations...')             # <<<<<<<<<<<<<<
  * 
- *     cdef unsigned long cumsum
+ *     # (Windows portability) the parent no longer needs its own view of the
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 183, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = NULL;
   __pyx_t_4 = 0;
@@ -22468,40 +22473,49 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_s_Beginning_iterations};
     __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 183, __pyx_L1_error)
+    if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 185, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":188
+  /* "MUSCython/MSBWTCompGenCython.pyx":191
+ *     # below can remove inserts.initial.npy (os.remove() fails on Windows
+ *     # while a mapping is open).
+ *     if initialInserts is not None and (<object>initialInserts).base is not None:             # <<<<<<<<<<<<<<
+ *         (<object>initialInserts).base.close()
  * 
- *     #2 - go back one column at a time, building new inserts
- *     for columnID in range(initColumnID, seqLen):             # <<<<<<<<<<<<<<
- *         st = time.time()
- *         stc = time.clock()
  */
-  __pyx_t_8 = __pyx_v_seqLen;
-  __pyx_t_9 = __pyx_t_8;
-  for (__pyx_t_10 = __pyx_v_initColumnID; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
-    __pyx_v_columnID = __pyx_t_10;
+  __pyx_t_16 = (((PyObject *)__pyx_v_initialInserts) != Py_None);
+  if (__pyx_t_16) {
+  } else {
+    __pyx_t_17 = __pyx_t_16;
+    goto __pyx_L24_bool_binop_done;
+  }
+  __pyx_t_14 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_initialInserts), __pyx_n_s_base); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_14);
+  __pyx_t_16 = (__pyx_t_14 != Py_None);
+  __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+  __pyx_t_17 = __pyx_t_16;
+  __pyx_L24_bool_binop_done:;
+  if (__pyx_t_17) {
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":189
- *     #2 - go back one column at a time, building new inserts
- *     for columnID in range(initColumnID, seqLen):
- *         st = time.time()             # <<<<<<<<<<<<<<
- *         stc = time.clock()
+    /* "MUSCython/MSBWTCompGenCython.pyx":192
+ *     # while a mapping is open).
+ *     if initialInserts is not None and (<object>initialInserts).base is not None:
+ *         (<object>initialInserts).base.close()             # <<<<<<<<<<<<<<
  * 
+ *     cdef unsigned long cumsum
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_initialInserts), __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_close); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
     __pyx_t_4 = 0;
     #if CYTHON_UNPACK_METHODS
-    if (unlikely(PyMethod_Check(__pyx_t_1))) {
+    if (likely(PyMethod_Check(__pyx_t_1))) {
       __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
       if (likely(__pyx_t_2)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
@@ -22516,24 +22530,43 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 189, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 192, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __pyx_v_st = __pyx_t_5;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":190
- *     for columnID in range(initColumnID, seqLen):
- *         st = time.time()
- *         stc = time.clock()             # <<<<<<<<<<<<<<
+    /* "MUSCython/MSBWTCompGenCython.pyx":191
+ *     # below can remove inserts.initial.npy (os.remove() fails on Windows
+ *     # while a mapping is open).
+ *     if initialInserts is not None and (<object>initialInserts).base is not None:             # <<<<<<<<<<<<<<
+ *         (<object>initialInserts).base.close()
  * 
- *         #first take into account the new fmDeltas coming in from all insertions
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 190, __pyx_L1_error)
+  }
+
+  /* "MUSCython/MSBWTCompGenCython.pyx":197
+ * 
+ *     #2 - go back one column at a time, building new inserts
+ *     for columnID in range(initColumnID, seqLen):             # <<<<<<<<<<<<<<
+ *         st = time.time()
+ *         stc = time.clock()
+ */
+  __pyx_t_8 = __pyx_v_seqLen;
+  __pyx_t_9 = __pyx_t_8;
+  for (__pyx_t_10 = __pyx_v_initColumnID; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
+    __pyx_v_columnID = __pyx_t_10;
+
+    /* "MUSCython/MSBWTCompGenCython.pyx":198
+ *     #2 - go back one column at a time, building new inserts
+ *     for columnID in range(initColumnID, seqLen):
+ *         st = time.time()             # <<<<<<<<<<<<<<
+ *         stc = time.clock()
+ * 
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_clock); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 190, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -22554,15 +22587,53 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 190, __pyx_L1_error)
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 198, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 190, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 198, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+    __pyx_v_st = __pyx_t_5;
+
+    /* "MUSCython/MSBWTCompGenCython.pyx":199
+ *     for columnID in range(initColumnID, seqLen):
+ *         st = time.time()
+ *         stc = time.clock()             # <<<<<<<<<<<<<<
+ * 
+ *         #first take into account the new fmDeltas coming in from all insertions
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_clock); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    __pyx_t_4 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (unlikely(PyMethod_Check(__pyx_t_1))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_1, function);
+        __pyx_t_4 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
+      __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 199, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_14);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    }
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_v_stc = __pyx_t_5;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":195
+    /* "MUSCython/MSBWTCompGenCython.pyx":204
  *         #fmStarts = fmStarts+(np.cumsum(fmDeltas, axis=0)-fmDeltas)
  *         #fmEnds = fmEnds+np.cumsum(fmDeltas, axis=0)
  *         for i in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -22574,7 +22645,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
       __pyx_v_i = __pyx_t_12;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":196
+      /* "MUSCython/MSBWTCompGenCython.pyx":205
  *         #fmEnds = fmEnds+np.cumsum(fmDeltas, axis=0)
  *         for i in range(0, numValidChars):
  *             cumsum = 0             # <<<<<<<<<<<<<<
@@ -22583,7 +22654,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       __pyx_v_cumsum = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":197
+      /* "MUSCython/MSBWTCompGenCython.pyx":206
  *         for i in range(0, numValidChars):
  *             cumsum = 0
  *             for j in range(0, numValidChars-1):             # <<<<<<<<<<<<<<
@@ -22595,7 +22666,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       for (__pyx_t_42 = 0; __pyx_t_42 < __pyx_t_41; __pyx_t_42+=1) {
         __pyx_v_j = __pyx_t_42;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":198
+        /* "MUSCython/MSBWTCompGenCython.pyx":207
  *             cumsum = 0
  *             for j in range(0, numValidChars-1):
  *                 cumsum += fmDeltas_view[j,i]             # <<<<<<<<<<<<<<
@@ -22606,7 +22677,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_t_33 = __pyx_v_i;
         __pyx_v_cumsum = (__pyx_v_cumsum + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_fmDeltas_view.data + __pyx_t_32 * __pyx_v_fmDeltas_view.strides[0]) ) + __pyx_t_33 * __pyx_v_fmDeltas_view.strides[1]) ))));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":199
+        /* "MUSCython/MSBWTCompGenCython.pyx":208
  *             for j in range(0, numValidChars-1):
  *                 cumsum += fmDeltas_view[j,i]
  *                 fmStarts_view[j+1, i] += cumsum             # <<<<<<<<<<<<<<
@@ -22617,7 +22688,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_t_32 = __pyx_v_i;
         *((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_fmStarts_view.data + __pyx_t_33 * __pyx_v_fmStarts_view.strides[0]) ) + __pyx_t_32 * __pyx_v_fmStarts_view.strides[1]) )) += __pyx_v_cumsum;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":201
+        /* "MUSCython/MSBWTCompGenCython.pyx":210
  *                 fmStarts_view[j+1, i] += cumsum
  *                 #fmEnds_view[j, i] += cumsum
  *                 nextFmDeltas_view[j, i] = 0             # <<<<<<<<<<<<<<
@@ -22629,7 +22700,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         *((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_nextFmDeltas_view.data + __pyx_t_32 * __pyx_v_nextFmDeltas_view.strides[0]) ) + __pyx_t_33 * __pyx_v_nextFmDeltas_view.strides[1]) )) = 0;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":202
+      /* "MUSCython/MSBWTCompGenCython.pyx":211
  *                 #fmEnds_view[j, i] += cumsum
  *                 nextFmDeltas_view[j, i] = 0
  *             cumsum += fmDeltas_view[numValidChars-1, i]             # <<<<<<<<<<<<<<
@@ -22640,7 +22711,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_33 = __pyx_v_i;
       __pyx_v_cumsum = (__pyx_v_cumsum + (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_fmDeltas_view.data + __pyx_t_7 * __pyx_v_fmDeltas_view.strides[0]) ) + __pyx_t_33 * __pyx_v_fmDeltas_view.strides[1]) ))));
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":204
+      /* "MUSCython/MSBWTCompGenCython.pyx":213
  *             cumsum += fmDeltas_view[numValidChars-1, i]
  *             #fmEnds_view[numValidChars-1, i] += cumsum
  *             nextFmDeltas_view[numValidChars-1, i] = 0             # <<<<<<<<<<<<<<
@@ -22652,19 +22723,19 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       *((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_nextFmDeltas_view.data + __pyx_t_7 * __pyx_v_nextFmDeltas_view.strides[0]) ) + __pyx_t_33 * __pyx_v_nextFmDeltas_view.strides[1]) )) = 0;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":207
+    /* "MUSCython/MSBWTCompGenCython.pyx":216
  * 
  *         #clear out the next fmDeltas
  *         tups = []             # <<<<<<<<<<<<<<
  *         for c in range(0, numValidChars):
  *             currentSymbolFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'
  */
-    __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_14 = PyList_New(0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 216, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_XDECREF_SET(__pyx_v_tups, ((PyObject*)__pyx_t_14));
     __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":208
+    /* "MUSCython/MSBWTCompGenCython.pyx":217
  *         #clear out the next fmDeltas
  *         tups = []
  *         for c in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -22676,122 +22747,122 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
       __pyx_v_c = __pyx_t_12;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":209
+      /* "MUSCython/MSBWTCompGenCython.pyx":218
  *         tups = []
  *         for c in range(0, numValidChars):
  *             currentSymbolFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'             # <<<<<<<<<<<<<<
  *             nextSymbolFN = bwtDir+'/state.'+str(c)+'.'+str(columnID+1)+'.dat'
  *             nextSeqFN = seqFNPrefix+'.'+str((columnID+2) % seqLen)+'.npy'
  */
-      __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 209, __pyx_L1_error)
+      __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 218, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 209, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_14, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __pyx_t_14 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 209, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s__2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_14);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_14); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+      __pyx_t_14 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_14);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF_SET(__pyx_v_currentSymbolFN, __pyx_t_14);
       __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":210
+      /* "MUSCython/MSBWTCompGenCython.pyx":219
  *         for c in range(0, numValidChars):
  *             currentSymbolFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'
  *             nextSymbolFN = bwtDir+'/state.'+str(c)+'.'+str(columnID+1)+'.dat'             # <<<<<<<<<<<<<<
  *             nextSeqFN = seqFNPrefix+'.'+str((columnID+2) % seqLen)+'.npy'
  *             #tup = (c, np.copy(fmStarts[c]), np.copy(fmDeltas[c]), np.copy(fmEnds[c]), insertionFNDict[c], currentSymbolFN, nextSymbolFN, bwtDir, columnID, nextSeqFN)
  */
-      __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 219, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 210, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 219, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_14, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __pyx_t_14 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 210, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s__2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_14);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_14); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+      __pyx_t_14 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_14);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF_SET(__pyx_v_nextSymbolFN, __pyx_t_14);
       __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":211
+      /* "MUSCython/MSBWTCompGenCython.pyx":220
  *             currentSymbolFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'
  *             nextSymbolFN = bwtDir+'/state.'+str(c)+'.'+str(columnID+1)+'.dat'
  *             nextSeqFN = seqFNPrefix+'.'+str((columnID+2) % seqLen)+'.npy'             # <<<<<<<<<<<<<<
  *             #tup = (c, np.copy(fmStarts[c]), np.copy(fmDeltas[c]), np.copy(fmEnds[c]), insertionFNDict[c], currentSymbolFN, nextSymbolFN, bwtDir, columnID, nextSeqFN)
  *             tup = (c, np.copy(fmStarts[c]), np.copy(fmDeltas[c]), insertionFNDict[c], currentSymbolFN, nextSymbolFN, bwtDir, columnID, nextSeqFN)
  */
-      __pyx_t_14 = PyNumber_Add(__pyx_v_seqFNPrefix, __pyx_kp_s__2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 211, __pyx_L1_error)
+      __pyx_t_14 = PyNumber_Add(__pyx_v_seqFNPrefix, __pyx_kp_s__2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 220, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __pyx_t_42 = (__pyx_v_columnID + 2);
       if (unlikely(__pyx_v_seqLen == 0)) {
         PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-        __PYX_ERR(0, 211, __pyx_L1_error)
+        __PYX_ERR(0, 220, __pyx_L1_error)
       }
-      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long((__pyx_t_42 % __pyx_v_seqLen)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 211, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 211, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long((__pyx_t_42 % __pyx_v_seqLen)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 211, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 220, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 211, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Add(__pyx_t_14, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_nextSeqFN, __pyx_t_1);
-      __pyx_t_1 = 0;
+      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 220, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_nextSeqFN, __pyx_t_2);
+      __pyx_t_2 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":213
+      /* "MUSCython/MSBWTCompGenCython.pyx":222
  *             nextSeqFN = seqFNPrefix+'.'+str((columnID+2) % seqLen)+'.npy'
  *             #tup = (c, np.copy(fmStarts[c]), np.copy(fmDeltas[c]), np.copy(fmEnds[c]), insertionFNDict[c], currentSymbolFN, nextSymbolFN, bwtDir, columnID, nextSeqFN)
  *             tup = (c, np.copy(fmStarts[c]), np.copy(fmDeltas[c]), insertionFNDict[c], currentSymbolFN, nextSymbolFN, bwtDir, columnID, nextSeqFN)             # <<<<<<<<<<<<<<
  *             tups.append(tup)
  * 
  */
-      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 222, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_copy); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_copy); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_36);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __pyx_t_14 = __Pyx_GetItemInt(((PyObject *)__pyx_v_fmStarts), __pyx_v_c, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_GetItemInt(((PyObject *)__pyx_v_fmStarts), __pyx_v_c, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __pyx_t_13 = NULL;
       __pyx_t_15 = 0;
@@ -22809,19 +22880,19 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       #endif
       {
         PyObject *__pyx_callargs[2] = {__pyx_t_13, __pyx_t_14};
-        __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
+        __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
       }
-      __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_copy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_copy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __pyx_t_14 = __Pyx_GetItemInt(((PyObject *)__pyx_v_fmDeltas), __pyx_v_c, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_GetItemInt(((PyObject *)__pyx_v_fmDeltas), __pyx_v_c, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __pyx_t_3 = NULL;
       __pyx_t_15 = 0;
@@ -22842,72 +22913,72 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_t_36 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-        if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 213, __pyx_L1_error)
+        if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 222, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_36);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       }
-      __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      __pyx_t_14 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      __pyx_t_3 = PyTuple_New(9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(9); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_GIVEREF(__pyx_t_1);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_2);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2)) __PYX_ERR(0, 222, __pyx_L1_error);
+      __Pyx_GIVEREF(__pyx_t_1);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1)) __PYX_ERR(0, 222, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_36);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_t_36)) __PYX_ERR(0, 213, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_t_36)) __PYX_ERR(0, 222, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_14);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_t_14)) __PYX_ERR(0, 213, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_t_14)) __PYX_ERR(0, 222, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_currentSymbolFN);
       __Pyx_GIVEREF(__pyx_v_currentSymbolFN);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 4, __pyx_v_currentSymbolFN)) __PYX_ERR(0, 213, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 4, __pyx_v_currentSymbolFN)) __PYX_ERR(0, 222, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_nextSymbolFN);
       __Pyx_GIVEREF(__pyx_v_nextSymbolFN);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 5, __pyx_v_nextSymbolFN)) __PYX_ERR(0, 213, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 5, __pyx_v_nextSymbolFN)) __PYX_ERR(0, 222, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_bwtDir);
       __Pyx_GIVEREF(__pyx_v_bwtDir);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 6, __pyx_v_bwtDir)) __PYX_ERR(0, 213, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 6, __pyx_v_bwtDir)) __PYX_ERR(0, 222, __pyx_L1_error);
       __Pyx_GIVEREF(__pyx_t_13);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 7, __pyx_t_13)) __PYX_ERR(0, 213, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 7, __pyx_t_13)) __PYX_ERR(0, 222, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_nextSeqFN);
       __Pyx_GIVEREF(__pyx_v_nextSeqFN);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 8, __pyx_v_nextSeqFN)) __PYX_ERR(0, 213, __pyx_L1_error);
-      __pyx_t_1 = 0;
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 8, __pyx_v_nextSeqFN)) __PYX_ERR(0, 222, __pyx_L1_error);
       __pyx_t_2 = 0;
+      __pyx_t_1 = 0;
       __pyx_t_36 = 0;
       __pyx_t_14 = 0;
       __pyx_t_13 = 0;
       __Pyx_XDECREF_SET(__pyx_v_tup, ((PyObject*)__pyx_t_3));
       __pyx_t_3 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":214
+      /* "MUSCython/MSBWTCompGenCython.pyx":223
  *             #tup = (c, np.copy(fmStarts[c]), np.copy(fmDeltas[c]), np.copy(fmEnds[c]), insertionFNDict[c], currentSymbolFN, nextSymbolFN, bwtDir, columnID, nextSeqFN)
  *             tup = (c, np.copy(fmStarts[c]), np.copy(fmDeltas[c]), insertionFNDict[c], currentSymbolFN, nextSymbolFN, bwtDir, columnID, nextSeqFN)
  *             tups.append(tup)             # <<<<<<<<<<<<<<
  * 
  *         '''
  */
-      __pyx_t_35 = __Pyx_PyList_Append(__pyx_v_tups, __pyx_v_tup); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+      __pyx_t_35 = __Pyx_PyList_Append(__pyx_v_tups, __pyx_v_tup); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 223, __pyx_L1_error)
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":224
+    /* "MUSCython/MSBWTCompGenCython.pyx":233
  *         '''
  * 
  *         myPool = multiprocessing.Pool(numProcs)             # <<<<<<<<<<<<<<
  *         rets = myPool.imap(iterateMsbwtCreate, tups)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_multiprocessing); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 224, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_multiprocessing); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 233, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_Pool); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 224, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_Pool); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 233, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numProcs); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 224, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numProcs); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 233, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_36 = NULL;
     __pyx_t_4 = 0;
@@ -22928,23 +22999,23 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 224, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 233, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     }
     __Pyx_XDECREF_SET(__pyx_v_myPool, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":225
+    /* "MUSCython/MSBWTCompGenCython.pyx":234
  * 
  *         myPool = multiprocessing.Pool(numProcs)
  *         rets = myPool.imap(iterateMsbwtCreate, tups)             # <<<<<<<<<<<<<<
  * 
  *         for ret in rets:
  */
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_myPool, __pyx_n_s_imap); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 225, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_myPool, __pyx_n_s_imap); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 234, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_iterateMsbwtCreate); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 225, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_iterateMsbwtCreate); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 234, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_36 = NULL;
     __pyx_t_4 = 0;
@@ -22965,14 +23036,14 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 225, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 234, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     }
     __Pyx_XDECREF_SET(__pyx_v_rets, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":227
+    /* "MUSCython/MSBWTCompGenCython.pyx":236
  *         rets = myPool.imap(iterateMsbwtCreate, tups)
  * 
  *         for ret in rets:             # <<<<<<<<<<<<<<
@@ -22984,9 +23055,9 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_37 = 0;
       __pyx_t_43 = NULL;
     } else {
-      __pyx_t_37 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_rets); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 227, __pyx_L1_error)
+      __pyx_t_37 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_rets); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_43 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 227, __pyx_L1_error)
+      __pyx_t_43 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_3); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 236, __pyx_L1_error)
     }
     for (;;) {
       if (likely(!__pyx_t_43)) {
@@ -22994,28 +23065,28 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_3);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 227, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 236, __pyx_L1_error)
             #endif
             if (__pyx_t_37 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_37); __Pyx_INCREF(__pyx_t_14); __pyx_t_37++; if (unlikely((0 < 0))) __PYX_ERR(0, 227, __pyx_L1_error)
+          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_37); __Pyx_INCREF(__pyx_t_14); __pyx_t_37++; if (unlikely((0 < 0))) __PYX_ERR(0, 236, __pyx_L1_error)
           #else
-          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_37); __pyx_t_37++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 227, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_37); __pyx_t_37++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 236, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_14);
           #endif
         } else {
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_3);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 227, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 236, __pyx_L1_error)
             #endif
             if (__pyx_t_37 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_14 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_37); __Pyx_INCREF(__pyx_t_14); __pyx_t_37++; if (unlikely((0 < 0))) __PYX_ERR(0, 227, __pyx_L1_error)
+          __pyx_t_14 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_37); __Pyx_INCREF(__pyx_t_14); __pyx_t_37++; if (unlikely((0 < 0))) __PYX_ERR(0, 236, __pyx_L1_error)
           #else
-          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_37); __pyx_t_37++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 227, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_3, __pyx_t_37); __pyx_t_37++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 236, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_14);
           #endif
         }
@@ -23025,7 +23096,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 227, __pyx_L1_error)
+            else __PYX_ERR(0, 236, __pyx_L1_error)
           }
           break;
         }
@@ -23034,16 +23105,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF_SET(__pyx_v_ret, __pyx_t_14);
       __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":230
+      /* "MUSCython/MSBWTCompGenCython.pyx":239
  *             #update the fmDeltas
  *             #nextFmDeltas = nextFmDeltas + ret[0]
  *             retFmDeltas = ret[0]             # <<<<<<<<<<<<<<
  *             retFmDeltas_view = retFmDeltas
  *             for i in range(0, numValidChars):
  */
-      __pyx_t_14 = __Pyx_GetItemInt(__pyx_v_ret, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 230, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_GetItemInt(__pyx_v_ret, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 239, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 230, __pyx_L1_error)
+      if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 239, __pyx_L1_error)
       __pyx_t_44 = ((PyArrayObject *)__pyx_t_14);
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -23060,26 +23131,26 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           __pyx_t_27 = __pyx_t_28 = __pyx_t_29 = 0;
         }
         __pyx_pybuffernd_retFmDeltas.diminfo[0].strides = __pyx_pybuffernd_retFmDeltas.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_retFmDeltas.diminfo[0].shape = __pyx_pybuffernd_retFmDeltas.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_retFmDeltas.diminfo[1].strides = __pyx_pybuffernd_retFmDeltas.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_retFmDeltas.diminfo[1].shape = __pyx_pybuffernd_retFmDeltas.rcbuffer->pybuffer.shape[1];
-        if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 230, __pyx_L1_error)
+        if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 239, __pyx_L1_error)
       }
       __pyx_t_44 = 0;
       __Pyx_XDECREF_SET(__pyx_v_retFmDeltas, ((PyArrayObject *)__pyx_t_14));
       __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":231
+      /* "MUSCython/MSBWTCompGenCython.pyx":240
  *             #nextFmDeltas = nextFmDeltas + ret[0]
  *             retFmDeltas = ret[0]
  *             retFmDeltas_view = retFmDeltas             # <<<<<<<<<<<<<<
  *             for i in range(0, numValidChars):
  *                 for j in range(0, numValidChars):
  */
-      __pyx_t_22 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_retFmDeltas), PyBUF_WRITABLE); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 231, __pyx_L1_error)
+      __pyx_t_22 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_retFmDeltas), PyBUF_WRITABLE); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 240, __pyx_L1_error)
       __PYX_XCLEAR_MEMVIEW(&__pyx_v_retFmDeltas_view, 1);
       __pyx_v_retFmDeltas_view = __pyx_t_22;
       __pyx_t_22.memview = NULL;
       __pyx_t_22.data = NULL;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":232
+      /* "MUSCython/MSBWTCompGenCython.pyx":241
  *             retFmDeltas = ret[0]
  *             retFmDeltas_view = retFmDeltas
  *             for i in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -23091,7 +23162,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
         __pyx_v_i = __pyx_t_12;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":233
+        /* "MUSCython/MSBWTCompGenCython.pyx":242
  *             retFmDeltas_view = retFmDeltas
  *             for i in range(0, numValidChars):
  *                 for j in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -23103,7 +23174,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         for (__pyx_t_42 = 0; __pyx_t_42 < __pyx_t_45; __pyx_t_42+=1) {
           __pyx_v_j = __pyx_t_42;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":234
+          /* "MUSCython/MSBWTCompGenCython.pyx":243
  *             for i in range(0, numValidChars):
  *                 for j in range(0, numValidChars):
  *                     nextFmDeltas_view[i,j] += retFmDeltas_view[i,j]             # <<<<<<<<<<<<<<
@@ -23118,7 +23189,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         }
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":237
+      /* "MUSCython/MSBWTCompGenCython.pyx":246
  * 
  *             #update our insertions files
  *             for c2 in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -23130,27 +23201,27 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
         __pyx_v_c2 = __pyx_t_12;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":238
+        /* "MUSCython/MSBWTCompGenCython.pyx":247
  *             #update our insertions files
  *             for c2 in range(0, numValidChars):
  *                 if ret[1][c2] == None:             # <<<<<<<<<<<<<<
  *                     #no new file
  *                     pass
  */
-        __pyx_t_14 = __Pyx_GetItemInt(__pyx_v_ret, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 238, __pyx_L1_error)
+        __pyx_t_14 = __Pyx_GetItemInt(__pyx_v_ret, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 247, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_14, __pyx_v_c2, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 238, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_14, __pyx_v_c2, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 247, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-        __pyx_t_14 = PyObject_RichCompare(__pyx_t_13, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_14); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 238, __pyx_L1_error)
+        __pyx_t_14 = PyObject_RichCompare(__pyx_t_13, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_14); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 247, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_14); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 238, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_14); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 247, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         if (__pyx_t_17) {
-          goto __pyx_L39;
+          goto __pyx_L42;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":242
+        /* "MUSCython/MSBWTCompGenCython.pyx":251
  *                     pass
  *                 else:
  *                     nextInsertionFNDict[c2].append(ret[1][c2])             # <<<<<<<<<<<<<<
@@ -23158,24 +23229,24 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *         myPool.close()
  */
         /*else*/ {
-          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 242, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 251, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_13 = __Pyx_PyDict_GetItem(__pyx_v_nextInsertionFNDict, __pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 242, __pyx_L1_error)
+          __pyx_t_13 = __Pyx_PyDict_GetItem(__pyx_v_nextInsertionFNDict, __pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 251, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_14 = __Pyx_GetItemInt(__pyx_v_ret, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 242, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_GetItemInt(__pyx_v_ret, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 251, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_36 = __Pyx_GetItemInt(__pyx_t_14, __pyx_v_c2, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 242, __pyx_L1_error)
+          __pyx_t_36 = __Pyx_GetItemInt(__pyx_t_14, __pyx_v_c2, unsigned long, 0, __Pyx_PyInt_From_unsigned_long, 0, 0, 0); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 251, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_36);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_35 = __Pyx_PyObject_Append(__pyx_t_13, __pyx_t_36); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 242, __pyx_L1_error)
+          __pyx_t_35 = __Pyx_PyObject_Append(__pyx_t_13, __pyx_t_36); if (unlikely(__pyx_t_35 == ((int)-1))) __PYX_ERR(0, 251, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
         }
-        __pyx_L39:;
+        __pyx_L42:;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":227
+      /* "MUSCython/MSBWTCompGenCython.pyx":236
  *         rets = myPool.imap(iterateMsbwtCreate, tups)
  * 
  *         for ret in rets:             # <<<<<<<<<<<<<<
@@ -23185,14 +23256,14 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":244
+    /* "MUSCython/MSBWTCompGenCython.pyx":253
  *                     nextInsertionFNDict[c2].append(ret[1][c2])
  * 
  *         myPool.close()             # <<<<<<<<<<<<<<
- * 
- *         #copy the fmDeltas and insertion filenames
+ *         # (Windows portability) wait for the workers to exit before removing
+ *         # the state files below: a still-running worker keeps its np.load(..,
  */
-    __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_myPool, __pyx_n_s_close); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 244, __pyx_L1_error)
+    __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_myPool, __pyx_n_s_close); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 253, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
     __pyx_t_13 = NULL;
     __pyx_t_4 = 0;
@@ -23212,13 +23283,46 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_13, NULL};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 244, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 253, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":248
+    /* "MUSCython/MSBWTCompGenCython.pyx":258
+ *         # 'r+') mappings open, and Windows refuses to remove files that have
+ *         # an open memory mapping.
+ *         myPool.join()             # <<<<<<<<<<<<<<
+ * 
+ *         #copy the fmDeltas and insertion filenames
+ */
+    __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_myPool, __pyx_n_s_join); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 258, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_36);
+    __pyx_t_13 = NULL;
+    __pyx_t_4 = 0;
+    #if CYTHON_UNPACK_METHODS
+    if (likely(PyMethod_Check(__pyx_t_36))) {
+      __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_36);
+      if (likely(__pyx_t_13)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_36);
+        __Pyx_INCREF(__pyx_t_13);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_36, function);
+        __pyx_t_4 = 1;
+      }
+    }
+    #endif
+    {
+      PyObject *__pyx_callargs[2] = {__pyx_t_13, NULL};
+      __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
+      __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 258, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+    /* "MUSCython/MSBWTCompGenCython.pyx":262
  *         #copy the fmDeltas and insertion filenames
  *         #fmDeltas[:] = nextFmDeltas[:]
  *         for i in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -23230,7 +23334,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
       __pyx_v_i = __pyx_t_12;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":249
+      /* "MUSCython/MSBWTCompGenCython.pyx":263
  *         #fmDeltas[:] = nextFmDeltas[:]
  *         for i in range(0, numValidChars):
  *             for j in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -23242,7 +23346,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       for (__pyx_t_42 = 0; __pyx_t_42 < __pyx_t_45; __pyx_t_42+=1) {
         __pyx_v_j = __pyx_t_42;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":250
+        /* "MUSCython/MSBWTCompGenCython.pyx":264
  *         for i in range(0, numValidChars):
  *             for j in range(0, numValidChars):
  *                 fmDeltas_view[i, j] = nextFmDeltas_view[i, j]             # <<<<<<<<<<<<<<
@@ -23257,31 +23361,31 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       }
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":252
+    /* "MUSCython/MSBWTCompGenCython.pyx":266
  *                 fmDeltas_view[i, j] = nextFmDeltas_view[i, j]
  * 
  *         np.save(bwtDir+'/fmDeltas.'+str(columnID+1)+'.npy', fmDeltas)             # <<<<<<<<<<<<<<
  *         np.save(bwtDir+'/fmStarts.'+str(columnID+1)+'.npy', fmStarts)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_36, __pyx_n_s_np); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 252, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_36, __pyx_n_s_np); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_36, __pyx_n_s_save); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 252, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_36, __pyx_n_s_save); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __pyx_t_36 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 252, __pyx_L1_error)
+    __pyx_t_36 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
-    __pyx_t_14 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 252, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 266, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __pyx_t_14 = PyNumber_Add(__pyx_t_36, __pyx_t_2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 252, __pyx_L1_error)
+    __pyx_t_14 = PyNumber_Add(__pyx_t_36, __pyx_t_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 266, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 266, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_t_14 = NULL;
     __pyx_t_4 = 0;
@@ -23298,68 +23402,68 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     }
     #endif
     {
-      PyObject *__pyx_callargs[3] = {__pyx_t_14, __pyx_t_2, ((PyObject *)__pyx_v_fmDeltas)};
+      PyObject *__pyx_callargs[3] = {__pyx_t_14, __pyx_t_1, ((PyObject *)__pyx_v_fmDeltas)};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 252, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 266, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":253
+    /* "MUSCython/MSBWTCompGenCython.pyx":267
  * 
  *         np.save(bwtDir+'/fmDeltas.'+str(columnID+1)+'.npy', fmDeltas)
  *         np.save(bwtDir+'/fmStarts.'+str(columnID+1)+'.npy', fmStarts)             # <<<<<<<<<<<<<<
  * 
  *         #remove the old insertions and old state files
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_np); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 267, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_save); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 253, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_save); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 267, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 267, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_14 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 267, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_36 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_36 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 267, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __pyx_t_14 = PyNumber_Add(__pyx_t_13, __pyx_t_36); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_14 = PyNumber_Add(__pyx_t_13, __pyx_t_36); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 267, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __pyx_t_36 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_npy); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 253, __pyx_L1_error)
+    __pyx_t_36 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_npy); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 267, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_t_14 = NULL;
     __pyx_t_4 = 0;
     #if CYTHON_UNPACK_METHODS
-    if (unlikely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_14 = PyMethod_GET_SELF(__pyx_t_2);
+    if (unlikely(PyMethod_Check(__pyx_t_1))) {
+      __pyx_t_14 = PyMethod_GET_SELF(__pyx_t_1);
       if (likely(__pyx_t_14)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_14);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
+        __Pyx_DECREF_SET(__pyx_t_1, function);
         __pyx_t_4 = 1;
       }
     }
     #endif
     {
       PyObject *__pyx_callargs[3] = {__pyx_t_14, __pyx_t_36, ((PyObject *)__pyx_v_fmStarts)};
-      __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
+      __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 2+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 253, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 267, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":256
+    /* "MUSCython/MSBWTCompGenCython.pyx":270
  * 
  *         #remove the old insertions and old state files
  *         for c in insertionFNDict:             # <<<<<<<<<<<<<<
@@ -23367,80 +23471,80 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *                 try:
  */
     __pyx_t_37 = 0;
-    __pyx_t_2 = __Pyx_dict_iterator(__pyx_v_insertionFNDict, 1, ((PyObject *)NULL), (&__pyx_t_39), (&__pyx_t_26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 256, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_dict_iterator(__pyx_v_insertionFNDict, 1, ((PyObject *)NULL), (&__pyx_t_39), (&__pyx_t_26)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 270, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_3);
-    __pyx_t_3 = __pyx_t_2;
-    __pyx_t_2 = 0;
+    __pyx_t_3 = __pyx_t_1;
+    __pyx_t_1 = 0;
     while (1) {
-      __pyx_t_48 = __Pyx_dict_iter_next(__pyx_t_3, __pyx_t_39, &__pyx_t_37, &__pyx_t_2, NULL, NULL, __pyx_t_26);
+      __pyx_t_48 = __Pyx_dict_iter_next(__pyx_t_3, __pyx_t_39, &__pyx_t_37, &__pyx_t_1, NULL, NULL, __pyx_t_26);
       if (unlikely(__pyx_t_48 == 0)) break;
-      if (unlikely(__pyx_t_48 == -1)) __PYX_ERR(0, 256, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_12 = __Pyx_PyInt_As_unsigned_long(__pyx_t_2); if (unlikely((__pyx_t_12 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 256, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(__pyx_t_48 == -1)) __PYX_ERR(0, 270, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_12 = __Pyx_PyInt_As_unsigned_long(__pyx_t_1); if (unlikely((__pyx_t_12 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 270, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_v_c = __pyx_t_12;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":257
+      /* "MUSCython/MSBWTCompGenCython.pyx":271
  *         #remove the old insertions and old state files
  *         for c in insertionFNDict:
  *             for fn in insertionFNDict[c]:             # <<<<<<<<<<<<<<
  *                 try:
  *                     os.remove(fn)
  */
-      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 257, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_36 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_t_2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 257, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_36 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_t_1); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 271, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_36);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (likely(PyList_CheckExact(__pyx_t_36)) || PyTuple_CheckExact(__pyx_t_36)) {
-        __pyx_t_2 = __pyx_t_36; __Pyx_INCREF(__pyx_t_2);
+        __pyx_t_1 = __pyx_t_36; __Pyx_INCREF(__pyx_t_1);
         __pyx_t_38 = 0;
         __pyx_t_43 = NULL;
       } else {
-        __pyx_t_38 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_36); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 257, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_43 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 257, __pyx_L1_error)
+        __pyx_t_38 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_36); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_43 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 271, __pyx_L1_error)
       }
       __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
       for (;;) {
         if (likely(!__pyx_t_43)) {
-          if (likely(PyList_CheckExact(__pyx_t_2))) {
+          if (likely(PyList_CheckExact(__pyx_t_1))) {
             {
-              Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
+              Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 257, __pyx_L1_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 271, __pyx_L1_error)
               #endif
               if (__pyx_t_38 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_36 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_38); __Pyx_INCREF(__pyx_t_36); __pyx_t_38++; if (unlikely((0 < 0))) __PYX_ERR(0, 257, __pyx_L1_error)
+            __pyx_t_36 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_38); __Pyx_INCREF(__pyx_t_36); __pyx_t_38++; if (unlikely((0 < 0))) __PYX_ERR(0, 271, __pyx_L1_error)
             #else
-            __pyx_t_36 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_38); __pyx_t_38++; if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 257, __pyx_L1_error)
+            __pyx_t_36 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_38); __pyx_t_38++; if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 271, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_36);
             #endif
           } else {
             {
-              Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
+              Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
               #if !CYTHON_ASSUME_SAFE_MACROS
-              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 257, __pyx_L1_error)
+              if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 271, __pyx_L1_error)
               #endif
               if (__pyx_t_38 >= __pyx_temp) break;
             }
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_36 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_38); __Pyx_INCREF(__pyx_t_36); __pyx_t_38++; if (unlikely((0 < 0))) __PYX_ERR(0, 257, __pyx_L1_error)
+            __pyx_t_36 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_38); __Pyx_INCREF(__pyx_t_36); __pyx_t_38++; if (unlikely((0 < 0))) __PYX_ERR(0, 271, __pyx_L1_error)
             #else
-            __pyx_t_36 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_38); __pyx_t_38++; if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 257, __pyx_L1_error)
+            __pyx_t_36 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_38); __pyx_t_38++; if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 271, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_36);
             #endif
           }
         } else {
-          __pyx_t_36 = __pyx_t_43(__pyx_t_2);
+          __pyx_t_36 = __pyx_t_43(__pyx_t_1);
           if (unlikely(!__pyx_t_36)) {
             PyObject* exc_type = PyErr_Occurred();
             if (exc_type) {
               if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-              else __PYX_ERR(0, 257, __pyx_L1_error)
+              else __PYX_ERR(0, 271, __pyx_L1_error)
             }
             break;
           }
@@ -23449,7 +23553,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_36);
         __pyx_t_36 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":258
+        /* "MUSCython/MSBWTCompGenCython.pyx":272
  *         for c in insertionFNDict:
  *             for fn in insertionFNDict[c]:
  *                 try:             # <<<<<<<<<<<<<<
@@ -23465,16 +23569,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           __Pyx_XGOTREF(__pyx_t_27);
           /*try:*/ {
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":259
+            /* "MUSCython/MSBWTCompGenCython.pyx":273
  *             for fn in insertionFNDict[c]:
  *                 try:
  *                     os.remove(fn)             # <<<<<<<<<<<<<<
  *                 except:
  *                     logger.warning('Failed to remove \''+fn+'\' from file system.')
  */
-            __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 259, __pyx_L49_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 273, __pyx_L52_error)
             __Pyx_GOTREF(__pyx_t_14);
-            __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 259, __pyx_L49_error)
+            __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 273, __pyx_L52_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
             __pyx_t_14 = NULL;
@@ -23495,13 +23599,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
               PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_v_fn};
               __pyx_t_36 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
               __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-              if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 259, __pyx_L49_error)
+              if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 273, __pyx_L52_error)
               __Pyx_GOTREF(__pyx_t_36);
               __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
             }
             __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":258
+            /* "MUSCython/MSBWTCompGenCython.pyx":272
  *         for c in insertionFNDict:
  *             for fn in insertionFNDict[c]:
  *                 try:             # <<<<<<<<<<<<<<
@@ -23512,20 +23616,20 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
           __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
           __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
-          goto __pyx_L56_try_end;
-          __pyx_L49_error:;
-          __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+          goto __pyx_L59_try_end;
+          __pyx_L52_error:;
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
           __PYX_XCLEAR_MEMVIEW(&__pyx_t_19, 1);
           __pyx_t_19.memview = NULL; __pyx_t_19.data = NULL;
+          __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
           __PYX_XCLEAR_MEMVIEW(&__pyx_t_22, 1);
           __pyx_t_22.memview = NULL; __pyx_t_22.data = NULL;
           __PYX_XCLEAR_MEMVIEW(&__pyx_t_31, 1);
           __pyx_t_31.memview = NULL; __pyx_t_31.data = NULL;
           __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":260
+          /* "MUSCython/MSBWTCompGenCython.pyx":274
  *                 try:
  *                     os.remove(fn)
  *                 except:             # <<<<<<<<<<<<<<
@@ -23534,23 +23638,23 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
           /*except:*/ {
             __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_36, &__pyx_t_13, &__pyx_t_14) < 0) __PYX_ERR(0, 260, __pyx_L51_except_error)
+            if (__Pyx_GetException(&__pyx_t_36, &__pyx_t_13, &__pyx_t_14) < 0) __PYX_ERR(0, 274, __pyx_L54_except_error)
             __Pyx_XGOTREF(__pyx_t_36);
             __Pyx_XGOTREF(__pyx_t_13);
             __Pyx_XGOTREF(__pyx_t_14);
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":261
+            /* "MUSCython/MSBWTCompGenCython.pyx":275
  *                     os.remove(fn)
  *                 except:
  *                     logger.warning('Failed to remove \''+fn+'\' from file system.')             # <<<<<<<<<<<<<<
  * 
  *             #if len(insertionFNDict[c]) > 0:
  */
-            __pyx_t_49 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 261, __pyx_L51_except_error)
+            __pyx_t_49 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 275, __pyx_L54_except_error)
             __Pyx_GOTREF(__pyx_t_49);
-            __pyx_t_50 = PyNumber_Add(__pyx_kp_s_Failed_to_remove, __pyx_v_fn); if (unlikely(!__pyx_t_50)) __PYX_ERR(0, 261, __pyx_L51_except_error)
+            __pyx_t_50 = PyNumber_Add(__pyx_kp_s_Failed_to_remove, __pyx_v_fn); if (unlikely(!__pyx_t_50)) __PYX_ERR(0, 275, __pyx_L54_except_error)
             __Pyx_GOTREF(__pyx_t_50);
-            __pyx_t_51 = PyNumber_Add(__pyx_t_50, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 261, __pyx_L51_except_error)
+            __pyx_t_51 = PyNumber_Add(__pyx_t_50, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 275, __pyx_L54_except_error)
             __Pyx_GOTREF(__pyx_t_51);
             __Pyx_DECREF(__pyx_t_50); __pyx_t_50 = 0;
             __pyx_t_50 = NULL;
@@ -23569,42 +23673,42 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
             #endif
             {
               PyObject *__pyx_callargs[2] = {__pyx_t_50, __pyx_t_51};
-              __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_49, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+              __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_49, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
               __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
               __Pyx_DECREF(__pyx_t_51); __pyx_t_51 = 0;
-              if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L51_except_error)
-              __Pyx_GOTREF(__pyx_t_1);
+              if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L54_except_error)
+              __Pyx_GOTREF(__pyx_t_2);
               __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
             }
-            __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+            __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
             __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
             __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-            goto __pyx_L50_exception_handled;
+            goto __pyx_L53_exception_handled;
           }
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":258
+          /* "MUSCython/MSBWTCompGenCython.pyx":272
  *         for c in insertionFNDict:
  *             for fn in insertionFNDict[c]:
  *                 try:             # <<<<<<<<<<<<<<
  *                     os.remove(fn)
  *                 except:
  */
-          __pyx_L51_except_error:;
+          __pyx_L54_except_error:;
           __Pyx_XGIVEREF(__pyx_t_29);
           __Pyx_XGIVEREF(__pyx_t_28);
           __Pyx_XGIVEREF(__pyx_t_27);
           __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
           goto __pyx_L1_error;
-          __pyx_L50_exception_handled:;
+          __pyx_L53_exception_handled:;
           __Pyx_XGIVEREF(__pyx_t_29);
           __Pyx_XGIVEREF(__pyx_t_28);
           __Pyx_XGIVEREF(__pyx_t_27);
           __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
-          __pyx_L56_try_end:;
+          __pyx_L59_try_end:;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":257
+        /* "MUSCython/MSBWTCompGenCython.pyx":271
  *         #remove the old insertions and old state files
  *         for c in insertionFNDict:
  *             for fn in insertionFNDict[c]:             # <<<<<<<<<<<<<<
@@ -23612,9 +23716,9 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *                     os.remove(fn)
  */
       }
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":264
+      /* "MUSCython/MSBWTCompGenCython.pyx":278
  * 
  *             #if len(insertionFNDict[c]) > 0:
  *             try:             # <<<<<<<<<<<<<<
@@ -23630,52 +23734,52 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __Pyx_XGOTREF(__pyx_t_29);
         /*try:*/ {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":265
+          /* "MUSCython/MSBWTCompGenCython.pyx":279
  *             #if len(insertionFNDict[c]) > 0:
  *             try:
  *                 rmStateFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'             # <<<<<<<<<<<<<<
  *                 os.remove(rmStateFN)
  *             except:
  */
-          __pyx_t_2 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 265, __pyx_L60_error)
-          __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 265, __pyx_L60_error)
+          __pyx_t_1 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L63_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 279, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 265, __pyx_L60_error)
+          __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 279, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_14 = PyNumber_Add(__pyx_t_2, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 265, __pyx_L60_error)
+          __pyx_t_14 = PyNumber_Add(__pyx_t_1, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 279, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_14);
-          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __pyx_t_13 = PyNumber_Add(__pyx_t_14, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 265, __pyx_L60_error)
+          __pyx_t_13 = PyNumber_Add(__pyx_t_14, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 279, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 265, __pyx_L60_error)
+          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 279, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 265, __pyx_L60_error)
-          __Pyx_GOTREF(__pyx_t_2);
+          __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L63_error)
+          __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_14 = PyNumber_Add(__pyx_t_13, __pyx_t_2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 265, __pyx_L60_error)
+          __pyx_t_14 = PyNumber_Add(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 279, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_14);
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_dat); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 265, __pyx_L60_error)
-          __Pyx_GOTREF(__pyx_t_2);
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+          __pyx_t_1 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_dat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L63_error)
+          __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __Pyx_XDECREF_SET(__pyx_v_rmStateFN, __pyx_t_2);
-          __pyx_t_2 = 0;
+          __Pyx_XDECREF_SET(__pyx_v_rmStateFN, __pyx_t_1);
+          __pyx_t_1 = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":266
+          /* "MUSCython/MSBWTCompGenCython.pyx":280
  *             try:
  *                 rmStateFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'
  *                 os.remove(rmStateFN)             # <<<<<<<<<<<<<<
  *             except:
  *                 logger.warning('Failed to remove\''+rmStateFN+'\' from file system.')
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 266, __pyx_L60_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 280, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 266, __pyx_L60_error)
+          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 280, __pyx_L63_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           __pyx_t_14 = NULL;
@@ -23694,15 +23798,15 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           #endif
           {
             PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_v_rmStateFN};
-            __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+            __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
             __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-            if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L60_error)
-            __Pyx_GOTREF(__pyx_t_2);
+            if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L63_error)
+            __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           }
-          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":264
+          /* "MUSCython/MSBWTCompGenCython.pyx":278
  * 
  *             #if len(insertionFNDict[c]) > 0:
  *             try:             # <<<<<<<<<<<<<<
@@ -23713,8 +23817,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
         __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
         __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
-        goto __pyx_L67_try_end;
-        __pyx_L60_error:;
+        goto __pyx_L70_try_end;
+        __pyx_L63_error:;
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -23730,7 +23834,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
         __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":267
+        /* "MUSCython/MSBWTCompGenCython.pyx":281
  *                 rmStateFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'
  *                 os.remove(rmStateFN)
  *             except:             # <<<<<<<<<<<<<<
@@ -23739,80 +23843,80 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         /*except:*/ {
           __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_13, &__pyx_t_14) < 0) __PYX_ERR(0, 267, __pyx_L62_except_error)
-          __Pyx_XGOTREF(__pyx_t_2);
+          if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_13, &__pyx_t_14) < 0) __PYX_ERR(0, 281, __pyx_L65_except_error)
+          __Pyx_XGOTREF(__pyx_t_1);
           __Pyx_XGOTREF(__pyx_t_13);
           __Pyx_XGOTREF(__pyx_t_14);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":268
+          /* "MUSCython/MSBWTCompGenCython.pyx":282
  *                 os.remove(rmStateFN)
  *             except:
  *                 logger.warning('Failed to remove\''+rmStateFN+'\' from file system.')             # <<<<<<<<<<<<<<
  * 
  *         try:
  */
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L62_except_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          if (unlikely(!__pyx_v_rmStateFN)) { __Pyx_RaiseUnboundLocalError("rmStateFN"); __PYX_ERR(0, 268, __pyx_L62_except_error) }
-          __pyx_t_49 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_rmStateFN); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 268, __pyx_L62_except_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 282, __pyx_L65_except_error)
+          __Pyx_GOTREF(__pyx_t_2);
+          if (unlikely(!__pyx_v_rmStateFN)) { __Pyx_RaiseUnboundLocalError("rmStateFN"); __PYX_ERR(0, 282, __pyx_L65_except_error) }
+          __pyx_t_49 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_rmStateFN); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 282, __pyx_L65_except_error)
           __Pyx_GOTREF(__pyx_t_49);
-          __pyx_t_51 = PyNumber_Add(__pyx_t_49, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 268, __pyx_L62_except_error)
+          __pyx_t_51 = PyNumber_Add(__pyx_t_49, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 282, __pyx_L65_except_error)
           __Pyx_GOTREF(__pyx_t_51);
           __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
           __pyx_t_49 = NULL;
           __pyx_t_4 = 0;
           #if CYTHON_UNPACK_METHODS
-          if (likely(PyMethod_Check(__pyx_t_1))) {
-            __pyx_t_49 = PyMethod_GET_SELF(__pyx_t_1);
+          if (likely(PyMethod_Check(__pyx_t_2))) {
+            __pyx_t_49 = PyMethod_GET_SELF(__pyx_t_2);
             if (likely(__pyx_t_49)) {
-              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
               __Pyx_INCREF(__pyx_t_49);
               __Pyx_INCREF(function);
-              __Pyx_DECREF_SET(__pyx_t_1, function);
+              __Pyx_DECREF_SET(__pyx_t_2, function);
               __pyx_t_4 = 1;
             }
           }
           #endif
           {
             PyObject *__pyx_callargs[2] = {__pyx_t_49, __pyx_t_51};
-            __pyx_t_36 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+            __pyx_t_36 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
             __Pyx_XDECREF(__pyx_t_49); __pyx_t_49 = 0;
             __Pyx_DECREF(__pyx_t_51); __pyx_t_51 = 0;
-            if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 268, __pyx_L62_except_error)
+            if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 282, __pyx_L65_except_error)
             __Pyx_GOTREF(__pyx_t_36);
-            __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+            __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           }
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-          __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+          __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-          goto __pyx_L61_exception_handled;
+          goto __pyx_L64_exception_handled;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":264
+        /* "MUSCython/MSBWTCompGenCython.pyx":278
  * 
  *             #if len(insertionFNDict[c]) > 0:
  *             try:             # <<<<<<<<<<<<<<
  *                 rmStateFN = bwtDir+'/state.'+str(c)+'.'+str(columnID)+'.dat'
  *                 os.remove(rmStateFN)
  */
-        __pyx_L62_except_error:;
+        __pyx_L65_except_error:;
         __Pyx_XGIVEREF(__pyx_t_27);
         __Pyx_XGIVEREF(__pyx_t_28);
         __Pyx_XGIVEREF(__pyx_t_29);
         __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
         goto __pyx_L1_error;
-        __pyx_L61_exception_handled:;
+        __pyx_L64_exception_handled:;
         __Pyx_XGIVEREF(__pyx_t_27);
         __Pyx_XGIVEREF(__pyx_t_28);
         __Pyx_XGIVEREF(__pyx_t_29);
         __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
-        __pyx_L67_try_end:;
+        __pyx_L70_try_end:;
       }
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":270
+    /* "MUSCython/MSBWTCompGenCython.pyx":284
  *                 logger.warning('Failed to remove\''+rmStateFN+'\' from file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -23828,40 +23932,40 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XGOTREF(__pyx_t_27);
       /*try:*/ {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":271
+        /* "MUSCython/MSBWTCompGenCython.pyx":285
  * 
  *         try:
  *             fn = bwtDir+'/fmDeltas.'+str(columnID)+'.npy'             # <<<<<<<<<<<<<<
  *             os.remove(fn)
  *         except:
  */
-        __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L70_error)
+        __pyx_t_3 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L73_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 271, __pyx_L70_error)
+        __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 285, __pyx_L73_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 271, __pyx_L70_error)
+        __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 285, __pyx_L73_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-        __pyx_t_14 = PyNumber_Add(__pyx_t_3, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 271, __pyx_L70_error)
+        __pyx_t_14 = PyNumber_Add(__pyx_t_3, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 285, __pyx_L73_error)
         __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_npy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 271, __pyx_L70_error)
+        __pyx_t_13 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_npy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 285, __pyx_L73_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_13);
         __pyx_t_13 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":272
+        /* "MUSCython/MSBWTCompGenCython.pyx":286
  *         try:
  *             fn = bwtDir+'/fmDeltas.'+str(columnID)+'.npy'
  *             os.remove(fn)             # <<<<<<<<<<<<<<
  *         except:
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 272, __pyx_L70_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 286, __pyx_L73_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 272, __pyx_L70_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L73_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __pyx_t_14 = NULL;
@@ -23882,13 +23986,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_v_fn};
           __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
           __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-          if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 272, __pyx_L70_error)
+          if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 286, __pyx_L73_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         }
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":270
+        /* "MUSCython/MSBWTCompGenCython.pyx":284
  *                 logger.warning('Failed to remove\''+rmStateFN+'\' from file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -23899,8 +24003,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
       __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
       __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
-      goto __pyx_L77_try_end;
-      __pyx_L70_error:;
+      goto __pyx_L80_try_end;
+      __pyx_L73_error:;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -23917,7 +24021,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
       __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":273
+      /* "MUSCython/MSBWTCompGenCython.pyx":287
  *             fn = bwtDir+'/fmDeltas.'+str(columnID)+'.npy'
  *             os.remove(fn)
  *         except:             # <<<<<<<<<<<<<<
@@ -23926,34 +24030,34 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       /*except:*/ {
         __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_13, &__pyx_t_3, &__pyx_t_14) < 0) __PYX_ERR(0, 273, __pyx_L72_except_error)
+        if (__Pyx_GetException(&__pyx_t_13, &__pyx_t_3, &__pyx_t_14) < 0) __PYX_ERR(0, 287, __pyx_L75_except_error)
         __Pyx_XGOTREF(__pyx_t_13);
         __Pyx_XGOTREF(__pyx_t_3);
         __Pyx_XGOTREF(__pyx_t_14);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":274
+        /* "MUSCython/MSBWTCompGenCython.pyx":288
  *             os.remove(fn)
  *         except:
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')             # <<<<<<<<<<<<<<
  * 
  *         try:
  */
-        __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 274, __pyx_L72_except_error)
+        __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 288, __pyx_L75_except_error)
         __Pyx_GOTREF(__pyx_t_36);
-        if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 274, __pyx_L72_except_error) }
-        __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L72_except_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_51 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 274, __pyx_L72_except_error)
+        if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 288, __pyx_L75_except_error) }
+        __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L75_except_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_51 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 288, __pyx_L75_except_error)
         __Pyx_GOTREF(__pyx_t_51);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = NULL;
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_2 = NULL;
         __pyx_t_4 = 0;
         #if CYTHON_UNPACK_METHODS
         if (likely(PyMethod_Check(__pyx_t_36))) {
-          __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_36);
-          if (likely(__pyx_t_1)) {
+          __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_36);
+          if (likely(__pyx_t_2)) {
             PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_36);
-            __Pyx_INCREF(__pyx_t_1);
+            __Pyx_INCREF(__pyx_t_2);
             __Pyx_INCREF(function);
             __Pyx_DECREF_SET(__pyx_t_36, function);
             __pyx_t_4 = 1;
@@ -23961,43 +24065,43 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         }
         #endif
         {
-          PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_t_51};
-          __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-          __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+          PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_t_51};
+          __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+          __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_51); __pyx_t_51 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 274, __pyx_L72_except_error)
-          __Pyx_GOTREF(__pyx_t_2);
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 288, __pyx_L75_except_error)
+          __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
         }
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-        goto __pyx_L71_exception_handled;
+        goto __pyx_L74_exception_handled;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":270
+      /* "MUSCython/MSBWTCompGenCython.pyx":284
  *                 logger.warning('Failed to remove\''+rmStateFN+'\' from file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
  *             fn = bwtDir+'/fmDeltas.'+str(columnID)+'.npy'
  *             os.remove(fn)
  */
-      __pyx_L72_except_error:;
+      __pyx_L75_except_error:;
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
       goto __pyx_L1_error;
-      __pyx_L71_exception_handled:;
+      __pyx_L74_exception_handled:;
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
-      __pyx_L77_try_end:;
+      __pyx_L80_try_end:;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":276
+    /* "MUSCython/MSBWTCompGenCython.pyx":290
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -24013,40 +24117,40 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XGOTREF(__pyx_t_29);
       /*try:*/ {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":277
+        /* "MUSCython/MSBWTCompGenCython.pyx":291
  * 
  *         try:
  *             fn = bwtDir+'/fmStarts.'+str(columnID)+'.npy'             # <<<<<<<<<<<<<<
  *             os.remove(fn)
  *         except:
  */
-        __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 277, __pyx_L80_error)
+        __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 291, __pyx_L83_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L80_error)
+        __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_columnID); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L83_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 277, __pyx_L80_error)
+        __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 291, __pyx_L83_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = PyNumber_Add(__pyx_t_14, __pyx_t_13); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L80_error)
+        __pyx_t_3 = PyNumber_Add(__pyx_t_14, __pyx_t_13); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L83_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_npy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 277, __pyx_L80_error)
+        __pyx_t_13 = PyNumber_Add(__pyx_t_3, __pyx_kp_s_npy); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 291, __pyx_L83_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_13);
         __pyx_t_13 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":278
+        /* "MUSCython/MSBWTCompGenCython.pyx":292
  *         try:
  *             fn = bwtDir+'/fmStarts.'+str(columnID)+'.npy'
  *             os.remove(fn)             # <<<<<<<<<<<<<<
  *         except:
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_os); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L80_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_os); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L83_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_remove); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 278, __pyx_L80_error)
+        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_remove); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 292, __pyx_L83_error)
         __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_t_3 = NULL;
@@ -24067,13 +24171,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           PyObject *__pyx_callargs[2] = {__pyx_t_3, __pyx_v_fn};
           __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 278, __pyx_L80_error)
+          if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 292, __pyx_L83_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         }
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":276
+        /* "MUSCython/MSBWTCompGenCython.pyx":290
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -24084,8 +24188,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
       __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
       __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
-      goto __pyx_L87_try_end;
-      __pyx_L80_error:;
+      goto __pyx_L90_try_end;
+      __pyx_L83_error:;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -24102,7 +24206,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
       __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":279
+      /* "MUSCython/MSBWTCompGenCython.pyx":293
  *             fn = bwtDir+'/fmStarts.'+str(columnID)+'.npy'
  *             os.remove(fn)
  *         except:             # <<<<<<<<<<<<<<
@@ -24111,25 +24215,25 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       /*except:*/ {
         __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_13, &__pyx_t_14, &__pyx_t_3) < 0) __PYX_ERR(0, 279, __pyx_L82_except_error)
+        if (__Pyx_GetException(&__pyx_t_13, &__pyx_t_14, &__pyx_t_3) < 0) __PYX_ERR(0, 293, __pyx_L85_except_error)
         __Pyx_XGOTREF(__pyx_t_13);
         __Pyx_XGOTREF(__pyx_t_14);
         __Pyx_XGOTREF(__pyx_t_3);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":280
+        /* "MUSCython/MSBWTCompGenCython.pyx":294
  *             os.remove(fn)
  *         except:
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')             # <<<<<<<<<<<<<<
  * 
  *         insertionFNDict = nextInsertionFNDict
  */
-        __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 280, __pyx_L82_except_error)
+        __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 294, __pyx_L85_except_error)
         __Pyx_GOTREF(__pyx_t_36);
-        if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 280, __pyx_L82_except_error) }
-        __pyx_t_51 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 280, __pyx_L82_except_error)
+        if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 294, __pyx_L85_except_error) }
+        __pyx_t_51 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 294, __pyx_L85_except_error)
         __Pyx_GOTREF(__pyx_t_51);
-        __pyx_t_1 = PyNumber_Add(__pyx_t_51, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 280, __pyx_L82_except_error)
-        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_2 = PyNumber_Add(__pyx_t_51, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 294, __pyx_L85_except_error)
+        __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_51); __pyx_t_51 = 0;
         __pyx_t_51 = NULL;
         __pyx_t_4 = 0;
@@ -24146,43 +24250,43 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         }
         #endif
         {
-          PyObject *__pyx_callargs[2] = {__pyx_t_51, __pyx_t_1};
-          __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+          PyObject *__pyx_callargs[2] = {__pyx_t_51, __pyx_t_2};
+          __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
           __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
-          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L82_except_error)
-          __Pyx_GOTREF(__pyx_t_2);
+          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L85_except_error)
+          __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
         }
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        goto __pyx_L81_exception_handled;
+        goto __pyx_L84_exception_handled;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":276
+      /* "MUSCython/MSBWTCompGenCython.pyx":290
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
  *             fn = bwtDir+'/fmStarts.'+str(columnID)+'.npy'
  *             os.remove(fn)
  */
-      __pyx_L82_except_error:;
+      __pyx_L85_except_error:;
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
       goto __pyx_L1_error;
-      __pyx_L81_exception_handled:;
+      __pyx_L84_exception_handled:;
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
-      __pyx_L87_try_end:;
+      __pyx_L90_try_end:;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":282
+    /* "MUSCython/MSBWTCompGenCython.pyx":296
  *             logger.warning('Failed to remove\''+fn+'\' from the file system.')
  * 
  *         insertionFNDict = nextInsertionFNDict             # <<<<<<<<<<<<<<
@@ -24192,19 +24296,19 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __Pyx_INCREF(__pyx_v_nextInsertionFNDict);
     __Pyx_DECREF_SET(__pyx_v_insertionFNDict, __pyx_v_nextInsertionFNDict);
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":283
+    /* "MUSCython/MSBWTCompGenCython.pyx":297
  * 
  *         insertionFNDict = nextInsertionFNDict
  *         nextInsertionFNDict = {}             # <<<<<<<<<<<<<<
  *         for c in range(0, numValidChars):
  *             nextInsertionFNDict[c] = []
  */
-    __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 283, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF_SET(__pyx_v_nextInsertionFNDict, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":284
+    /* "MUSCython/MSBWTCompGenCython.pyx":298
  *         insertionFNDict = nextInsertionFNDict
  *         nextInsertionFNDict = {}
  *         for c in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -24216,32 +24320,32 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
       __pyx_v_c = __pyx_t_12;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":285
+      /* "MUSCython/MSBWTCompGenCython.pyx":299
  *         nextInsertionFNDict = {}
  *         for c in range(0, numValidChars):
  *             nextInsertionFNDict[c] = []             # <<<<<<<<<<<<<<
  * 
  *         etc = time.clock()
  */
-      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L1_error)
+      __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 285, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 299, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
-      if (unlikely((PyDict_SetItem(__pyx_v_nextInsertionFNDict, __pyx_t_14, __pyx_t_3) < 0))) __PYX_ERR(0, 285, __pyx_L1_error)
+      if (unlikely((PyDict_SetItem(__pyx_v_nextInsertionFNDict, __pyx_t_14, __pyx_t_3) < 0))) __PYX_ERR(0, 299, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":287
+    /* "MUSCython/MSBWTCompGenCython.pyx":301
  *             nextInsertionFNDict[c] = []
  * 
  *         etc = time.clock()             # <<<<<<<<<<<<<<
  *         et = time.time()
  *         logger.info('Finished iteration '+str(columnID+1)+' in '+str(et-st)+' seconds('+str(etc-stc)+' clock)...')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_time); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 287, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_time); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 301, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_clock); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 287, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_clock); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 301, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_t_14 = NULL;
@@ -24262,24 +24366,24 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_14, NULL};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 301, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     }
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 287, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 301, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_etc = __pyx_t_5;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":288
+    /* "MUSCython/MSBWTCompGenCython.pyx":302
  * 
  *         etc = time.clock()
  *         et = time.time()             # <<<<<<<<<<<<<<
  *         logger.info('Finished iteration '+str(columnID+1)+' in '+str(et-st)+' seconds('+str(etc-stc)+' clock)...')
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 288, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 288, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_time); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
@@ -24300,57 +24404,57 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_13, NULL};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     }
-    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 288, __pyx_L1_error)
+    __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_et = __pyx_t_5;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":289
+    /* "MUSCython/MSBWTCompGenCython.pyx":303
  *         etc = time.clock()
  *         et = time.time()
  *         logger.info('Finished iteration '+str(columnID+1)+' in '+str(et-st)+' seconds('+str(etc-stc)+' clock)...')             # <<<<<<<<<<<<<<
  * 
  *     logger.info('Creating final output...')
  */
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_13 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyInt_From_unsigned_long((__pyx_v_columnID + 1)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_kp_s_Finished_iteration, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_kp_s_Finished_iteration, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_in); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_in); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyFloat_FromDouble((__pyx_v_et - __pyx_v_st)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_13 = PyFloat_FromDouble((__pyx_v_et - __pyx_v_st)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_36 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_36 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_t_2, __pyx_t_36); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_t_1, __pyx_t_36); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_seconds_2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_seconds_2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyFloat_FromDouble((__pyx_v_etc - __pyx_v_stc)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_13 = PyFloat_FromDouble((__pyx_v_etc - __pyx_v_stc)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_t_36, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_t_36, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_clock_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_clock_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_t_13 = NULL;
     __pyx_t_4 = 0;
@@ -24367,34 +24471,34 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     }
     #endif
     {
-      PyObject *__pyx_callargs[2] = {__pyx_t_13, __pyx_t_2};
+      PyObject *__pyx_callargs[2] = {__pyx_t_13, __pyx_t_1};
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":291
+  /* "MUSCython/MSBWTCompGenCython.pyx":305
  *         logger.info('Finished iteration '+str(columnID+1)+' in '+str(et-st)+' seconds('+str(etc-stc)+' clock)...')
  * 
  *     logger.info('Creating final output...')             # <<<<<<<<<<<<<<
  * 
  *     #finally, join all the subcomponents
  */
-  __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 291, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 305, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_2 = NULL;
+  __pyx_t_1 = NULL;
   __pyx_t_4 = 0;
   #if CYTHON_UNPACK_METHODS
   if (likely(PyMethod_Check(__pyx_t_14))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_14);
-    if (likely(__pyx_t_2)) {
+    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_14);
+    if (likely(__pyx_t_1)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
-      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_14, function);
       __pyx_t_4 = 1;
@@ -24402,74 +24506,74 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_kp_s_Creating_final_output};
+    PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_kp_s_Creating_final_output};
     __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":300
+  /* "MUSCython/MSBWTCompGenCython.pyx":314
  * 
  *     #initialize our length to be the length of the '$' portion which must be there by our string definitions
  *     tempBWT = np.memmap(bwtDir+'/state.'+str(0)+'.'+str(seqLen)+'.dat', '<u1', 'r')             # <<<<<<<<<<<<<<
  *     cdef unsigned long totalLength = tempBWT.shape[0]
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_memmap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_memmap); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-  __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_13 = __Pyx_PyObject_Str(__pyx_int_0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyObject_Str(__pyx_int_0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_36 = PyNumber_Add(__pyx_t_14, __pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_36 = PyNumber_Add(__pyx_t_14, __pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_36);
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = PyNumber_Add(__pyx_t_36, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_13 = PyNumber_Add(__pyx_t_36, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-  __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_36);
-  __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-  __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_36);
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-  __pyx_t_14 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_14 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
   __pyx_t_36 = NULL;
   __pyx_t_4 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_36 = PyMethod_GET_SELF(__pyx_t_2);
+  if (unlikely(PyMethod_Check(__pyx_t_1))) {
+    __pyx_t_36 = PyMethod_GET_SELF(__pyx_t_1);
     if (likely(__pyx_t_36)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
       __Pyx_INCREF(__pyx_t_36);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
+      __Pyx_DECREF_SET(__pyx_t_1, function);
       __pyx_t_4 = 1;
     }
   }
   #endif
   {
     PyObject *__pyx_callargs[4] = {__pyx_t_36, __pyx_t_14, __pyx_kp_s_u1, __pyx_n_s_r_2};
-    __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
+    __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 3+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 300, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 314, __pyx_L1_error)
   __pyx_t_52 = ((PyArrayObject *)__pyx_t_3);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -24486,23 +24590,23 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_29 = __pyx_t_28 = __pyx_t_27 = 0;
     }
     __pyx_pybuffernd_tempBWT.diminfo[0].strides = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tempBWT.diminfo[0].shape = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.shape[0];
-    if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 300, __pyx_L1_error)
+    if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 314, __pyx_L1_error)
   }
   __pyx_t_52 = 0;
   __pyx_v_tempBWT = ((PyArrayObject *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":301
+  /* "MUSCython/MSBWTCompGenCython.pyx":315
  *     #initialize our length to be the length of the '$' portion which must be there by our string definitions
  *     tempBWT = np.memmap(bwtDir+'/state.'+str(0)+'.'+str(seqLen)+'.dat', '<u1', 'r')
  *     cdef unsigned long totalLength = tempBWT.shape[0]             # <<<<<<<<<<<<<<
  * 
  *     #figure out what symbol is at the end and how big it is
  */
-  __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 301, __pyx_L1_error)
+  __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 315, __pyx_L1_error)
   __pyx_v_totalLength = (__pyx_t_20[0]);
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":304
+  /* "MUSCython/MSBWTCompGenCython.pyx":318
  * 
  *     #figure out what symbol is at the end and how big it is
  *     cdef np.uint8_t finalSymbol = tempBWT[totalLength-1] & 0x07             # <<<<<<<<<<<<<<
@@ -24512,7 +24616,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
   __pyx_t_33 = (__pyx_v_totalLength - 1);
   __pyx_v_finalSymbol = ((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) & 0x07);
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":305
+  /* "MUSCython/MSBWTCompGenCython.pyx":319
  *     #figure out what symbol is at the end and how big it is
  *     cdef np.uint8_t finalSymbol = tempBWT[totalLength-1] & 0x07
  *     cdef unsigned long finalSymbolCount = 0             # <<<<<<<<<<<<<<
@@ -24521,7 +24625,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
   __pyx_v_finalSymbolCount = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":306
+  /* "MUSCython/MSBWTCompGenCython.pyx":320
  *     cdef np.uint8_t finalSymbol = tempBWT[totalLength-1] & 0x07
  *     cdef unsigned long finalSymbolCount = 0
  *     cdef unsigned long finalSymbolPos = totalLength             # <<<<<<<<<<<<<<
@@ -24530,7 +24634,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
   __pyx_v_finalSymbolPos = __pyx_v_totalLength;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":307
+  /* "MUSCython/MSBWTCompGenCython.pyx":321
  *     cdef unsigned long finalSymbolCount = 0
  *     cdef unsigned long finalSymbolPos = totalLength
  *     cdef unsigned long finalSymbolBytes = 0             # <<<<<<<<<<<<<<
@@ -24539,7 +24643,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
   __pyx_v_finalSymbolBytes = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":308
+  /* "MUSCython/MSBWTCompGenCython.pyx":322
  *     cdef unsigned long finalSymbolPos = totalLength
  *     cdef unsigned long finalSymbolBytes = 0
  *     while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:             # <<<<<<<<<<<<<<
@@ -24551,15 +24655,15 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     if (__pyx_t_16) {
     } else {
       __pyx_t_17 = __pyx_t_16;
-      goto __pyx_L94_bool_binop_done;
+      goto __pyx_L97_bool_binop_done;
     }
     __pyx_t_33 = (__pyx_v_finalSymbolPos - 1);
     __pyx_t_16 = (((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) & 0x07) == __pyx_v_finalSymbol);
     __pyx_t_17 = __pyx_t_16;
-    __pyx_L94_bool_binop_done:;
+    __pyx_L97_bool_binop_done:;
     if (!__pyx_t_17) break;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":309
+    /* "MUSCython/MSBWTCompGenCython.pyx":323
  *     cdef unsigned long finalSymbolBytes = 0
  *     while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:
  *         finalSymbolCount = finalSymbolCount*32 + (tempBWT[finalSymbolPos-1] >> 3)             # <<<<<<<<<<<<<<
@@ -24569,7 +24673,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __pyx_t_33 = (__pyx_v_finalSymbolPos - 1);
     __pyx_v_finalSymbolCount = ((__pyx_v_finalSymbolCount * 32) + ((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) >> 3));
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":310
+    /* "MUSCython/MSBWTCompGenCython.pyx":324
  *     while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:
  *         finalSymbolCount = finalSymbolCount*32 + (tempBWT[finalSymbolPos-1] >> 3)
  *         finalSymbolBytes += 1             # <<<<<<<<<<<<<<
@@ -24578,7 +24682,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     __pyx_v_finalSymbolBytes = (__pyx_v_finalSymbolBytes + 1);
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":311
+    /* "MUSCython/MSBWTCompGenCython.pyx":325
  *         finalSymbolCount = finalSymbolCount*32 + (tempBWT[finalSymbolPos-1] >> 3)
  *         finalSymbolBytes += 1
  *         finalSymbolPos -= 1             # <<<<<<<<<<<<<<
@@ -24588,7 +24692,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __pyx_v_finalSymbolPos = (__pyx_v_finalSymbolPos - 1);
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":316
+  /* "MUSCython/MSBWTCompGenCython.pyx":330
  * 
  *     #now incorporate the other symbols
  *     for c in range(1, numValidChars):             # <<<<<<<<<<<<<<
@@ -24600,7 +24704,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
   for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_11; __pyx_t_8+=1) {
     __pyx_v_c = __pyx_t_8;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":317
+    /* "MUSCython/MSBWTCompGenCython.pyx":331
  *     #now incorporate the other symbols
  *     for c in range(1, numValidChars):
  *         try:             # <<<<<<<<<<<<<<
@@ -24616,43 +24720,43 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XGOTREF(__pyx_t_29);
       /*try:*/ {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":318
+        /* "MUSCython/MSBWTCompGenCython.pyx":332
  *     for c in range(1, numValidChars):
  *         try:
  *             tempBWT = np.memmap(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat', '<u1', 'r')             # <<<<<<<<<<<<<<
  *         except ValueError as e:
  *             if str(e) == 'cannot mmap an empty file':
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L98_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_memmap); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 318, __pyx_L98_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L101_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_memmap); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 332, __pyx_L101_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L98_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 318, __pyx_L98_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_1 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L101_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 332, __pyx_L101_error)
         __Pyx_GOTREF(__pyx_t_36);
-        __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 318, __pyx_L98_error)
+        __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 332, __pyx_L101_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = PyNumber_Add(__pyx_t_2, __pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 318, __pyx_L98_error)
+        __pyx_t_36 = PyNumber_Add(__pyx_t_1, __pyx_t_13); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 332, __pyx_L101_error)
         __Pyx_GOTREF(__pyx_t_36);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = PyNumber_Add(__pyx_t_36, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 318, __pyx_L98_error)
+        __pyx_t_13 = PyNumber_Add(__pyx_t_36, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 332, __pyx_L101_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 318, __pyx_L98_error)
+        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 332, __pyx_L101_error)
         __Pyx_GOTREF(__pyx_t_36);
-        __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L98_error)
-        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L101_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_t_2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 318, __pyx_L98_error)
+        __pyx_t_36 = PyNumber_Add(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 332, __pyx_L101_error)
         __Pyx_GOTREF(__pyx_t_36);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_dat); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L98_error)
-        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_1 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_dat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L101_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
         __pyx_t_36 = NULL;
         __pyx_t_15 = 0;
@@ -24669,15 +24773,15 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         }
         #endif
         {
-          PyObject *__pyx_callargs[4] = {__pyx_t_36, __pyx_t_2, __pyx_kp_s_u1, __pyx_n_s_r_2};
+          PyObject *__pyx_callargs[4] = {__pyx_t_36, __pyx_t_1, __pyx_kp_s_u1, __pyx_n_s_r_2};
           __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_15, 3+__pyx_t_15);
           __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
-          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L98_error)
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 332, __pyx_L101_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         }
-        if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 318, __pyx_L98_error)
+        if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 332, __pyx_L101_error)
         __pyx_t_52 = ((PyArrayObject *)__pyx_t_3);
         {
           __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -24694,13 +24798,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
             __pyx_t_53 = __pyx_t_54 = __pyx_t_55 = 0;
           }
           __pyx_pybuffernd_tempBWT.diminfo[0].strides = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tempBWT.diminfo[0].shape = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.shape[0];
-          if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 318, __pyx_L98_error)
+          if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 332, __pyx_L101_error)
         }
         __pyx_t_52 = 0;
         __Pyx_DECREF_SET(__pyx_v_tempBWT, ((PyArrayObject *)__pyx_t_3));
         __pyx_t_3 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":317
+        /* "MUSCython/MSBWTCompGenCython.pyx":331
  *     #now incorporate the other symbols
  *     for c in range(1, numValidChars):
  *         try:             # <<<<<<<<<<<<<<
@@ -24711,8 +24815,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
       __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
       __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
-      goto __pyx_L105_try_end;
-      __pyx_L98_error:;
+      goto __pyx_L108_try_end;
+      __pyx_L101_error:;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -24729,7 +24833,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
       __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":319
+      /* "MUSCython/MSBWTCompGenCython.pyx":333
  *         try:
  *             tempBWT = np.memmap(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat', '<u1', 'r')
  *         except ValueError as e:             # <<<<<<<<<<<<<<
@@ -24739,48 +24843,48 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_26 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ValueError);
       if (__pyx_t_26) {
         __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_14, &__pyx_t_2) < 0) __PYX_ERR(0, 319, __pyx_L100_except_error)
+        if (__Pyx_GetException(&__pyx_t_3, &__pyx_t_14, &__pyx_t_1) < 0) __PYX_ERR(0, 333, __pyx_L103_except_error)
         __Pyx_XGOTREF(__pyx_t_3);
         __Pyx_XGOTREF(__pyx_t_14);
-        __Pyx_XGOTREF(__pyx_t_2);
+        __Pyx_XGOTREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_14);
         __Pyx_XDECREF_SET(__pyx_v_e, __pyx_t_14);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":320
+        /* "MUSCython/MSBWTCompGenCython.pyx":334
  *             tempBWT = np.memmap(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat', '<u1', 'r')
  *         except ValueError as e:
  *             if str(e) == 'cannot mmap an empty file':             # <<<<<<<<<<<<<<
  *                 #this is normal behavior for my test cases with missing symbols
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))
  */
-        __pyx_t_36 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 320, __pyx_L100_except_error)
+        __pyx_t_36 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 334, __pyx_L103_except_error)
         __Pyx_GOTREF(__pyx_t_36);
-        __pyx_t_17 = (__Pyx_PyString_Equals(__pyx_t_36, __pyx_kp_s_cannot_mmap_an_empty_file, Py_EQ)); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 320, __pyx_L100_except_error)
+        __pyx_t_17 = (__Pyx_PyString_Equals(__pyx_t_36, __pyx_kp_s_cannot_mmap_an_empty_file, Py_EQ)); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 334, __pyx_L103_except_error)
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
         if (likely(__pyx_t_17)) {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":322
+          /* "MUSCython/MSBWTCompGenCython.pyx":336
  *             if str(e) == 'cannot mmap an empty file':
  *                 #this is normal behavior for my test cases with missing symbols
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))             # <<<<<<<<<<<<<<
  *             else:
  *                 raise e
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_36, __pyx_n_s_np); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 322, __pyx_L100_except_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_36, __pyx_n_s_np); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 336, __pyx_L103_except_error)
           __Pyx_GOTREF(__pyx_t_36);
-          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_36, __pyx_n_s_zeros); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 322, __pyx_L100_except_error)
+          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_36, __pyx_n_s_zeros); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 336, __pyx_L103_except_error)
           __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-          __pyx_t_36 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 322, __pyx_L100_except_error)
+          __pyx_t_36 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 336, __pyx_L103_except_error)
           __Pyx_GOTREF(__pyx_t_36);
-          if (PyDict_SetItem(__pyx_t_36, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 322, __pyx_L100_except_error)
-          if (PyDict_SetItem(__pyx_t_36, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 322, __pyx_L100_except_error)
-          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_empty_tuple, __pyx_t_36); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L100_except_error)
-          __Pyx_GOTREF(__pyx_t_1);
+          if (PyDict_SetItem(__pyx_t_36, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 336, __pyx_L103_except_error)
+          if (PyDict_SetItem(__pyx_t_36, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 336, __pyx_L103_except_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_empty_tuple, __pyx_t_36); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 336, __pyx_L103_except_error)
+          __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-          if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 322, __pyx_L100_except_error)
-          __pyx_t_52 = ((PyArrayObject *)__pyx_t_1);
+          if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 336, __pyx_L103_except_error)
+          __pyx_t_52 = ((PyArrayObject *)__pyx_t_2);
           {
             __Pyx_BufFmt_StackElem __pyx_stack[1];
             __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_tempBWT.rcbuffer->pybuffer);
@@ -24796,23 +24900,23 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
               __pyx_t_55 = __pyx_t_54 = __pyx_t_53 = 0;
             }
             __pyx_pybuffernd_tempBWT.diminfo[0].strides = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tempBWT.diminfo[0].shape = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.shape[0];
-            if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 322, __pyx_L100_except_error)
+            if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 336, __pyx_L103_except_error)
           }
           __pyx_t_52 = 0;
-          __Pyx_DECREF_SET(__pyx_v_tempBWT, ((PyArrayObject *)__pyx_t_1));
-          __pyx_t_1 = 0;
+          __Pyx_DECREF_SET(__pyx_v_tempBWT, ((PyArrayObject *)__pyx_t_2));
+          __pyx_t_2 = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":320
+          /* "MUSCython/MSBWTCompGenCython.pyx":334
  *             tempBWT = np.memmap(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat', '<u1', 'r')
  *         except ValueError as e:
  *             if str(e) == 'cannot mmap an empty file':             # <<<<<<<<<<<<<<
  *                 #this is normal behavior for my test cases with missing symbols
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))
  */
-          goto __pyx_L108;
+          goto __pyx_L111;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":324
+        /* "MUSCython/MSBWTCompGenCython.pyx":338
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))
  *             else:
  *                 raise e             # <<<<<<<<<<<<<<
@@ -24821,38 +24925,38 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         /*else*/ {
           __Pyx_Raise(__pyx_v_e, 0, 0, 0);
-          __PYX_ERR(0, 324, __pyx_L100_except_error)
+          __PYX_ERR(0, 338, __pyx_L103_except_error)
         }
-        __pyx_L108:;
+        __pyx_L111:;
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        goto __pyx_L99_exception_handled;
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        goto __pyx_L102_exception_handled;
       }
-      goto __pyx_L100_except_error;
+      goto __pyx_L103_except_error;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":317
+      /* "MUSCython/MSBWTCompGenCython.pyx":331
  *     #now incorporate the other symbols
  *     for c in range(1, numValidChars):
  *         try:             # <<<<<<<<<<<<<<
  *             tempBWT = np.memmap(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat', '<u1', 'r')
  *         except ValueError as e:
  */
-      __pyx_L100_except_error:;
+      __pyx_L103_except_error:;
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
       goto __pyx_L1_error;
-      __pyx_L99_exception_handled:;
+      __pyx_L102_exception_handled:;
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
-      __pyx_L105_try_end:;
+      __pyx_L108_try_end:;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":327
+    /* "MUSCython/MSBWTCompGenCython.pyx":341
  * 
  *         #figure out if they're the same
  *         finalSymbolPos = 0             # <<<<<<<<<<<<<<
@@ -24861,7 +24965,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     __pyx_v_finalSymbolPos = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":328
+    /* "MUSCython/MSBWTCompGenCython.pyx":342
  *         #figure out if they're the same
  *         finalSymbolPos = 0
  *         modifier = 0             # <<<<<<<<<<<<<<
@@ -24870,7 +24974,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     __pyx_v_modifier = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":329
+    /* "MUSCython/MSBWTCompGenCython.pyx":343
  *         finalSymbolPos = 0
  *         modifier = 0
  *         while finalSymbolPos < tempBWT.shape[0] and (tempBWT[finalSymbolPos] & 0x07) == finalSymbol:             # <<<<<<<<<<<<<<
@@ -24878,20 +24982,20 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *             finalSymbolPos += 1
  */
     while (1) {
-      __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 329, __pyx_L1_error)
+      __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 343, __pyx_L1_error)
       __pyx_t_16 = (__pyx_v_finalSymbolPos < (__pyx_t_20[0]));
       if (__pyx_t_16) {
       } else {
         __pyx_t_17 = __pyx_t_16;
-        goto __pyx_L111_bool_binop_done;
+        goto __pyx_L114_bool_binop_done;
       }
       __pyx_t_33 = __pyx_v_finalSymbolPos;
       __pyx_t_16 = (((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) & 0x07) == __pyx_v_finalSymbol);
       __pyx_t_17 = __pyx_t_16;
-      __pyx_L111_bool_binop_done:;
+      __pyx_L114_bool_binop_done:;
       if (!__pyx_t_17) break;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":330
+      /* "MUSCython/MSBWTCompGenCython.pyx":344
  *         modifier = 0
  *         while finalSymbolPos < tempBWT.shape[0] and (tempBWT[finalSymbolPos] & 0x07) == finalSymbol:
  *             modifier += (tempBWT[finalSymbolPos] >> 3) * (32**finalSymbolPos)             # <<<<<<<<<<<<<<
@@ -24901,7 +25005,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_33 = __pyx_v_finalSymbolPos;
       __pyx_v_modifier = (__pyx_v_modifier + (((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) >> 3) * __Pyx_pow_unsigned_long(32, __pyx_v_finalSymbolPos)));
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":331
+      /* "MUSCython/MSBWTCompGenCython.pyx":345
  *         while finalSymbolPos < tempBWT.shape[0] and (tempBWT[finalSymbolPos] & 0x07) == finalSymbol:
  *             modifier += (tempBWT[finalSymbolPos] >> 3) * (32**finalSymbolPos)
  *             finalSymbolPos += 1             # <<<<<<<<<<<<<<
@@ -24911,25 +25015,25 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_v_finalSymbolPos = (__pyx_v_finalSymbolPos + 1);
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":334
+    /* "MUSCython/MSBWTCompGenCython.pyx":348
  * 
  *         #calculate if we added more bytes here
  *         extendBytes = max(1, math.floor(math.log(finalSymbolCount+modifier, 32.0))+1) - max(1, math.floor(math.log(finalSymbolCount, 32.0))+1)             # <<<<<<<<<<<<<<
  * 
  *         #add in the extended bytes followed by the total size subtracting the bytes used for the shared symbols
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_math); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_math); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_floor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_math); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_log); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_math); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_log); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyInt_From_unsigned_long((__pyx_v_finalSymbolCount + __pyx_v_modifier)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long((__pyx_v_finalSymbolCount + __pyx_v_modifier)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_13 = NULL;
     __pyx_t_15 = 0;
     #if CYTHON_UNPACK_METHODS
@@ -24945,11 +25049,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     }
     #endif
     {
-      PyObject *__pyx_callargs[3] = {__pyx_t_13, __pyx_t_1, __pyx_float_32_0};
+      PyObject *__pyx_callargs[3] = {__pyx_t_13, __pyx_t_2, __pyx_float_32_0};
       __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_15, 2+__pyx_t_15);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 334, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 348, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_14);
       __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
     }
@@ -24969,45 +25073,45 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     #endif
     {
       PyObject *__pyx_callargs[2] = {__pyx_t_36, __pyx_t_14};
-      __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
+      __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
       __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 334, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
-    __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_t_2, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_t_1, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_40 = 1;
-    __pyx_t_14 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_36 = PyObject_RichCompare(__pyx_t_3, __pyx_t_14, Py_GT); __Pyx_XGOTREF(__pyx_t_36); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_36 = PyObject_RichCompare(__pyx_t_3, __pyx_t_14, Py_GT); __Pyx_XGOTREF(__pyx_t_36); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_36); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_36); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
     if (__pyx_t_17) {
       __Pyx_INCREF(__pyx_t_3);
-      __pyx_t_2 = __pyx_t_3;
+      __pyx_t_1 = __pyx_t_3;
     } else {
-      __pyx_t_36 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 334, __pyx_L1_error)
+      __pyx_t_36 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 348, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_36);
-      __pyx_t_2 = __pyx_t_36;
+      __pyx_t_1 = __pyx_t_36;
       __pyx_t_36 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_36, __pyx_n_s_math); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_36, __pyx_n_s_math); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_36, __pyx_n_s_floor); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_36, __pyx_n_s_floor); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_math); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_log); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_math); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_log); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_finalSymbolCount); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_finalSymbolCount); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_51 = NULL;
     __pyx_t_15 = 0;
     #if CYTHON_UNPACK_METHODS
@@ -25023,11 +25127,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     }
     #endif
     {
-      PyObject *__pyx_callargs[3] = {__pyx_t_51, __pyx_t_1, __pyx_float_32_0};
+      PyObject *__pyx_callargs[3] = {__pyx_t_51, __pyx_t_2, __pyx_float_32_0};
       __pyx_t_36 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_15, 2+__pyx_t_15);
       __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 334, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 348, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_36);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     }
@@ -25050,60 +25154,60 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 334, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     }
-    __pyx_t_14 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_40 = 1;
-    __pyx_t_36 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_36 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_36);
-    __pyx_t_13 = PyObject_RichCompare(__pyx_t_14, __pyx_t_36, Py_GT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_13 = PyObject_RichCompare(__pyx_t_14, __pyx_t_36, Py_GT); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-    __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     if (__pyx_t_17) {
       __Pyx_INCREF(__pyx_t_14);
       __pyx_t_3 = __pyx_t_14;
     } else {
-      __pyx_t_13 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 334, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyInt_From_long(__pyx_t_40); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 348, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __pyx_t_3 = __pyx_t_13;
       __pyx_t_13 = 0;
     }
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __pyx_t_14 = PyNumber_Subtract(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_14 = PyNumber_Subtract(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_9 = __Pyx_PyInt_As_unsigned_long(__pyx_t_14); if (unlikely((__pyx_t_9 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyInt_As_unsigned_long(__pyx_t_14); if (unlikely((__pyx_t_9 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __pyx_v_extendBytes = __pyx_t_9;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":337
+    /* "MUSCython/MSBWTCompGenCython.pyx":351
  * 
  *         #add in the extended bytes followed by the total size subtracting the bytes used for the shared symbols
  *         totalLength += extendBytes + (tempBWT.shape[0] - finalSymbolPos)             # <<<<<<<<<<<<<<
  * 
  *         #now check if we need to update our final symbols
  */
-    __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 337, __pyx_L1_error)
+    __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 351, __pyx_L1_error)
     __pyx_v_totalLength = (__pyx_v_totalLength + (__pyx_v_extendBytes + ((__pyx_t_20[0]) - __pyx_v_finalSymbolPos)));
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":340
+    /* "MUSCython/MSBWTCompGenCython.pyx":354
  * 
  *         #now check if we need to update our final symbols
  *         if finalSymbolPos == tempBWT.shape[0]:             # <<<<<<<<<<<<<<
  *             #this is the atypical case where all 'C' are preceded by a single symbol for example, only matters in my test
  *             #cases really but the check is simple enough to implement that I should handle it
  */
-    __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 340, __pyx_L1_error)
+    __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 354, __pyx_L1_error)
     __pyx_t_17 = (__pyx_v_finalSymbolPos == (__pyx_t_20[0]));
     if (__pyx_t_17) {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":344
+      /* "MUSCython/MSBWTCompGenCython.pyx":358
  *             #cases really but the check is simple enough to implement that I should handle it
  *             #add the counts from this entire chunk to the count, but modify nothing else
  *             finalSymbolCount += modifier             # <<<<<<<<<<<<<<
@@ -25112,17 +25216,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       __pyx_v_finalSymbolCount = (__pyx_v_finalSymbolCount + __pyx_v_modifier);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":340
+      /* "MUSCython/MSBWTCompGenCython.pyx":354
  * 
  *         #now check if we need to update our final symbols
  *         if finalSymbolPos == tempBWT.shape[0]:             # <<<<<<<<<<<<<<
  *             #this is the atypical case where all 'C' are preceded by a single symbol for example, only matters in my test
  *             #cases really but the check is simple enough to implement that I should handle it
  */
-      goto __pyx_L113;
+      goto __pyx_L116;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":347
+    /* "MUSCython/MSBWTCompGenCython.pyx":361
  *         else:
  *             #this is the typical case, this chunk is not all one symbol, so we need to recalculate the final symbol range
  *             finalSymbol = tempBWT[tempBWT.shape[0]-1] & 0x07             # <<<<<<<<<<<<<<
@@ -25130,11 +25234,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *             finalSymbolPos = tempBWT.shape[0]
  */
     /*else*/ {
-      __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 347, __pyx_L1_error)
+      __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 361, __pyx_L1_error)
       __pyx_t_56 = ((__pyx_t_20[0]) - 1);
       __pyx_v_finalSymbol = ((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_56, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) & 0x07);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":348
+      /* "MUSCython/MSBWTCompGenCython.pyx":362
  *             #this is the typical case, this chunk is not all one symbol, so we need to recalculate the final symbol range
  *             finalSymbol = tempBWT[tempBWT.shape[0]-1] & 0x07
  *             finalSymbolCount = 0             # <<<<<<<<<<<<<<
@@ -25143,17 +25247,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       __pyx_v_finalSymbolCount = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":349
+      /* "MUSCython/MSBWTCompGenCython.pyx":363
  *             finalSymbol = tempBWT[tempBWT.shape[0]-1] & 0x07
  *             finalSymbolCount = 0
  *             finalSymbolPos = tempBWT.shape[0]             # <<<<<<<<<<<<<<
  *             finalSymbolBytes = 0
  *             while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:
  */
-      __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 363, __pyx_L1_error)
       __pyx_v_finalSymbolPos = (__pyx_t_20[0]);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":350
+      /* "MUSCython/MSBWTCompGenCython.pyx":364
  *             finalSymbolCount = 0
  *             finalSymbolPos = tempBWT.shape[0]
  *             finalSymbolBytes = 0             # <<<<<<<<<<<<<<
@@ -25162,7 +25266,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       __pyx_v_finalSymbolBytes = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":351
+      /* "MUSCython/MSBWTCompGenCython.pyx":365
  *             finalSymbolPos = tempBWT.shape[0]
  *             finalSymbolBytes = 0
  *             while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:             # <<<<<<<<<<<<<<
@@ -25174,15 +25278,15 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         if (__pyx_t_16) {
         } else {
           __pyx_t_17 = __pyx_t_16;
-          goto __pyx_L116_bool_binop_done;
+          goto __pyx_L119_bool_binop_done;
         }
         __pyx_t_33 = (__pyx_v_finalSymbolPos - 1);
         __pyx_t_16 = (((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) & 0x07) == __pyx_v_finalSymbol);
         __pyx_t_17 = __pyx_t_16;
-        __pyx_L116_bool_binop_done:;
+        __pyx_L119_bool_binop_done:;
         if (!__pyx_t_17) break;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":352
+        /* "MUSCython/MSBWTCompGenCython.pyx":366
  *             finalSymbolBytes = 0
  *             while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:
  *                 finalSymbolCount = finalSymbolCount*32 + (tempBWT[finalSymbolPos-1] >> 3)             # <<<<<<<<<<<<<<
@@ -25192,7 +25296,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_t_33 = (__pyx_v_finalSymbolPos - 1);
         __pyx_v_finalSymbolCount = ((__pyx_v_finalSymbolCount * 32) + ((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_uint8_t *, __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_tempBWT.diminfo[0].strides)) >> 3));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":353
+        /* "MUSCython/MSBWTCompGenCython.pyx":367
  *             while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:
  *                 finalSymbolCount = finalSymbolCount*32 + (tempBWT[finalSymbolPos-1] >> 3)
  *                 finalSymbolBytes += 1             # <<<<<<<<<<<<<<
@@ -25201,7 +25305,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         __pyx_v_finalSymbolBytes = (__pyx_v_finalSymbolBytes + 1);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":354
+        /* "MUSCython/MSBWTCompGenCython.pyx":368
  *                 finalSymbolCount = finalSymbolCount*32 + (tempBWT[finalSymbolPos-1] >> 3)
  *                 finalSymbolBytes += 1
  *                 finalSymbolPos -= 1             # <<<<<<<<<<<<<<
@@ -25211,10 +25315,10 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_v_finalSymbolPos = (__pyx_v_finalSymbolPos - 1);
       }
     }
-    __pyx_L113:;
+    __pyx_L116:;
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":357
+  /* "MUSCython/MSBWTCompGenCython.pyx":371
  * 
  *     #prepare the final structure for copying
  *     cdef unsigned long finalInd = 0             # <<<<<<<<<<<<<<
@@ -25223,55 +25327,55 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
   __pyx_v_finalInd = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":359
+  /* "MUSCython/MSBWTCompGenCython.pyx":373
  *     cdef unsigned long finalInd = 0
  *     cdef unsigned long tempLen
  *     finalBWT = np.lib.format.open_memmap(bwtFN, 'w+', '<u1', (totalLength, ))             # <<<<<<<<<<<<<<
  *     finalBWT_view = finalBWT
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_lib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 359, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_lib); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 359, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_totalLength); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_unsigned_long(__pyx_v_totalLength); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 359, __pyx_L1_error)
+  __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 373, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error);
   __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+  if (likely(PyMethod_Check(__pyx_t_1))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
     if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
       __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
+      __Pyx_DECREF_SET(__pyx_t_1, function);
       __pyx_t_4 = 1;
     }
   }
   #endif
   {
     PyObject *__pyx_callargs[5] = {__pyx_t_3, __pyx_v_bwtFN, __pyx_kp_s_w, __pyx_kp_s_u1, __pyx_t_13};
-    __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 4+__pyx_t_4);
+    __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 4+__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 359, __pyx_L1_error)
+    if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 373, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
-  if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 359, __pyx_L1_error)
+  if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 373, __pyx_L1_error)
   __pyx_t_57 = ((PyArrayObject *)__pyx_t_14);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -25288,25 +25392,25 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_29 = __pyx_t_28 = __pyx_t_27 = 0;
     }
     __pyx_pybuffernd_finalBWT.diminfo[0].strides = __pyx_pybuffernd_finalBWT.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_finalBWT.diminfo[0].shape = __pyx_pybuffernd_finalBWT.rcbuffer->pybuffer.shape[0];
-    if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 359, __pyx_L1_error)
+    if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 373, __pyx_L1_error)
   }
   __pyx_t_57 = 0;
   __pyx_v_finalBWT = ((PyArrayObject *)__pyx_t_14);
   __pyx_t_14 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":360
+  /* "MUSCython/MSBWTCompGenCython.pyx":374
  *     cdef unsigned long tempLen
  *     finalBWT = np.lib.format.open_memmap(bwtFN, 'w+', '<u1', (totalLength, ))
  *     finalBWT_view = finalBWT             # <<<<<<<<<<<<<<
  * 
  *     cdef unsigned long startPoint
  */
-  __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_finalBWT), PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 360, __pyx_L1_error)
+  __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_finalBWT), PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 374, __pyx_L1_error)
   __pyx_v_finalBWT_view = __pyx_t_19;
   __pyx_t_19.memview = NULL;
   __pyx_t_19.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":365
+  /* "MUSCython/MSBWTCompGenCython.pyx":379
  * 
  *     #now the tricky part of actually combining them
  *     for c in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -25318,43 +25422,43 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_11; __pyx_t_8+=1) {
     __pyx_v_c = __pyx_t_8;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":366
+    /* "MUSCython/MSBWTCompGenCython.pyx":380
  *     #now the tricky part of actually combining them
  *     for c in range(0, numValidChars):
  *         stateFN = bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'             # <<<<<<<<<<<<<<
  *         try:
  *             tempBWT = np.memmap(stateFN, '<u1', 'r+')
  */
-    __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = PyNumber_Add(__pyx_t_14, __pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_13 = PyNumber_Add(__pyx_t_1, __pyx_kp_s__2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = PyNumber_Add(__pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __pyx_t_14 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_14 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 380, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_stateFN, __pyx_t_14);
     __pyx_t_14 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":367
+    /* "MUSCython/MSBWTCompGenCython.pyx":381
  *     for c in range(0, numValidChars):
  *         stateFN = bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'
  *         try:             # <<<<<<<<<<<<<<
@@ -25370,26 +25474,26 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XGOTREF(__pyx_t_29);
       /*try:*/ {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":368
+        /* "MUSCython/MSBWTCompGenCython.pyx":382
  *         stateFN = bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'
  *         try:
  *             tempBWT = np.memmap(stateFN, '<u1', 'r+')             # <<<<<<<<<<<<<<
  *         except ValueError as e:
  *             if str(e) == 'cannot mmap an empty file':
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L120_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_memmap); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 368, __pyx_L120_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L123_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_memmap); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 382, __pyx_L123_error)
         __Pyx_GOTREF(__pyx_t_13);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = NULL;
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_1 = NULL;
         __pyx_t_15 = 0;
         #if CYTHON_UNPACK_METHODS
         if (unlikely(PyMethod_Check(__pyx_t_13))) {
-          __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_13);
-          if (likely(__pyx_t_2)) {
+          __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_13);
+          if (likely(__pyx_t_1)) {
             PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
-            __Pyx_INCREF(__pyx_t_2);
+            __Pyx_INCREF(__pyx_t_1);
             __Pyx_INCREF(function);
             __Pyx_DECREF_SET(__pyx_t_13, function);
             __pyx_t_15 = 1;
@@ -25397,14 +25501,14 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         }
         #endif
         {
-          PyObject *__pyx_callargs[4] = {__pyx_t_2, __pyx_v_stateFN, __pyx_kp_s_u1, __pyx_kp_s_r};
+          PyObject *__pyx_callargs[4] = {__pyx_t_1, __pyx_v_stateFN, __pyx_kp_s_u1, __pyx_kp_s_r};
           __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_15, 3+__pyx_t_15);
-          __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 368, __pyx_L120_error)
+          __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+          if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 382, __pyx_L123_error)
           __Pyx_GOTREF(__pyx_t_14);
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         }
-        if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 368, __pyx_L120_error)
+        if (!(likely(((__pyx_t_14) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_14, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 382, __pyx_L123_error)
         __pyx_t_52 = ((PyArrayObject *)__pyx_t_14);
         {
           __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -25421,13 +25525,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
             __pyx_t_53 = __pyx_t_54 = __pyx_t_55 = 0;
           }
           __pyx_pybuffernd_tempBWT.diminfo[0].strides = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tempBWT.diminfo[0].shape = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.shape[0];
-          if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 368, __pyx_L120_error)
+          if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 382, __pyx_L123_error)
         }
         __pyx_t_52 = 0;
         __Pyx_DECREF_SET(__pyx_v_tempBWT, ((PyArrayObject *)__pyx_t_14));
         __pyx_t_14 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":367
+        /* "MUSCython/MSBWTCompGenCython.pyx":381
  *     for c in range(0, numValidChars):
  *         stateFN = bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'
  *         try:             # <<<<<<<<<<<<<<
@@ -25438,8 +25542,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
       __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
       __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
-      goto __pyx_L127_try_end;
-      __pyx_L120_error:;
+      goto __pyx_L130_try_end;
+      __pyx_L123_error:;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -25456,7 +25560,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
       __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":369
+      /* "MUSCython/MSBWTCompGenCython.pyx":383
  *         try:
  *             tempBWT = np.memmap(stateFN, '<u1', 'r+')
  *         except ValueError as e:             # <<<<<<<<<<<<<<
@@ -25466,48 +25570,48 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_26 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ValueError);
       if (__pyx_t_26) {
         __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_14, &__pyx_t_13, &__pyx_t_2) < 0) __PYX_ERR(0, 369, __pyx_L122_except_error)
+        if (__Pyx_GetException(&__pyx_t_14, &__pyx_t_13, &__pyx_t_1) < 0) __PYX_ERR(0, 383, __pyx_L125_except_error)
         __Pyx_XGOTREF(__pyx_t_14);
         __Pyx_XGOTREF(__pyx_t_13);
-        __Pyx_XGOTREF(__pyx_t_2);
+        __Pyx_XGOTREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_13);
         __Pyx_XDECREF_SET(__pyx_v_e, __pyx_t_13);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":370
+        /* "MUSCython/MSBWTCompGenCython.pyx":384
  *             tempBWT = np.memmap(stateFN, '<u1', 'r+')
  *         except ValueError as e:
  *             if str(e) == 'cannot mmap an empty file':             # <<<<<<<<<<<<<<
  *                 #this is normal behavior for my test cases with missing symbols
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))
  */
-        __pyx_t_3 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L122_except_error)
+        __pyx_t_3 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L125_except_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_17 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_kp_s_cannot_mmap_an_empty_file, Py_EQ)); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 370, __pyx_L122_except_error)
+        __pyx_t_17 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_kp_s_cannot_mmap_an_empty_file, Py_EQ)); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 384, __pyx_L125_except_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         if (likely(__pyx_t_17)) {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":372
+          /* "MUSCython/MSBWTCompGenCython.pyx":386
  *             if str(e) == 'cannot mmap an empty file':
  *                 #this is normal behavior for my test cases with missing symbols
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))             # <<<<<<<<<<<<<<
  *             else:
  *                 raise e
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L122_except_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L125_except_error)
           __Pyx_GOTREF(__pyx_t_3);
-          __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 372, __pyx_L122_except_error)
+          __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 386, __pyx_L125_except_error)
           __Pyx_GOTREF(__pyx_t_36);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L122_except_error)
+          __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L125_except_error)
           __Pyx_GOTREF(__pyx_t_3);
-          if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 372, __pyx_L122_except_error)
-          if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 372, __pyx_L122_except_error)
-          __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_36, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L122_except_error)
-          __Pyx_GOTREF(__pyx_t_1);
+          if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 386, __pyx_L125_except_error)
+          if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 386, __pyx_L125_except_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_36, __pyx_empty_tuple, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L125_except_error)
+          __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 372, __pyx_L122_except_error)
-          __pyx_t_52 = ((PyArrayObject *)__pyx_t_1);
+          if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 386, __pyx_L125_except_error)
+          __pyx_t_52 = ((PyArrayObject *)__pyx_t_2);
           {
             __Pyx_BufFmt_StackElem __pyx_stack[1];
             __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_tempBWT.rcbuffer->pybuffer);
@@ -25523,23 +25627,23 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
               __pyx_t_55 = __pyx_t_54 = __pyx_t_53 = 0;
             }
             __pyx_pybuffernd_tempBWT.diminfo[0].strides = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tempBWT.diminfo[0].shape = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.shape[0];
-            if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 372, __pyx_L122_except_error)
+            if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 386, __pyx_L125_except_error)
           }
           __pyx_t_52 = 0;
-          __Pyx_DECREF_SET(__pyx_v_tempBWT, ((PyArrayObject *)__pyx_t_1));
-          __pyx_t_1 = 0;
+          __Pyx_DECREF_SET(__pyx_v_tempBWT, ((PyArrayObject *)__pyx_t_2));
+          __pyx_t_2 = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":370
+          /* "MUSCython/MSBWTCompGenCython.pyx":384
  *             tempBWT = np.memmap(stateFN, '<u1', 'r+')
  *         except ValueError as e:
  *             if str(e) == 'cannot mmap an empty file':             # <<<<<<<<<<<<<<
  *                 #this is normal behavior for my test cases with missing symbols
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))
  */
-          goto __pyx_L130;
+          goto __pyx_L133;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":374
+        /* "MUSCython/MSBWTCompGenCython.pyx":388
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))
  *             else:
  *                 raise e             # <<<<<<<<<<<<<<
@@ -25548,61 +25652,61 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         /*else*/ {
           __Pyx_Raise(__pyx_v_e, 0, 0, 0);
-          __PYX_ERR(0, 374, __pyx_L122_except_error)
+          __PYX_ERR(0, 388, __pyx_L125_except_error)
         }
-        __pyx_L130:;
+        __pyx_L133:;
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        goto __pyx_L121_exception_handled;
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        goto __pyx_L124_exception_handled;
       }
-      goto __pyx_L122_except_error;
+      goto __pyx_L125_except_error;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":367
+      /* "MUSCython/MSBWTCompGenCython.pyx":381
  *     for c in range(0, numValidChars):
  *         stateFN = bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'
  *         try:             # <<<<<<<<<<<<<<
  *             tempBWT = np.memmap(stateFN, '<u1', 'r+')
  *         except ValueError as e:
  */
-      __pyx_L122_except_error:;
+      __pyx_L125_except_error:;
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
       goto __pyx_L1_error;
-      __pyx_L121_exception_handled:;
+      __pyx_L124_exception_handled:;
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
-      __pyx_L127_try_end:;
+      __pyx_L130_try_end:;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":376
+    /* "MUSCython/MSBWTCompGenCython.pyx":390
  *                 raise e
  * 
  *         tempBWT_view = tempBWT             # <<<<<<<<<<<<<<
  *         tempLen = tempBWT.shape[0]
  * 
  */
-    __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_tempBWT), PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 376, __pyx_L1_error)
+    __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_tempBWT), PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 390, __pyx_L1_error)
     __PYX_XCLEAR_MEMVIEW(&__pyx_v_tempBWT_view, 1);
     __pyx_v_tempBWT_view = __pyx_t_19;
     __pyx_t_19.memview = NULL;
     __pyx_t_19.data = NULL;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":377
+    /* "MUSCython/MSBWTCompGenCython.pyx":391
  * 
  *         tempBWT_view = tempBWT
  *         tempLen = tempBWT.shape[0]             # <<<<<<<<<<<<<<
  * 
  *         if c == 0:
  */
-    __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 377, __pyx_L1_error)
+    __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 391, __pyx_L1_error)
     __pyx_v_tempLen = (__pyx_t_20[0]);
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":379
+    /* "MUSCython/MSBWTCompGenCython.pyx":393
  *         tempLen = tempBWT.shape[0]
  * 
  *         if c == 0:             # <<<<<<<<<<<<<<
@@ -25612,7 +25716,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __pyx_t_17 = (__pyx_v_c == 0);
     if (__pyx_t_17) {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":380
+      /* "MUSCython/MSBWTCompGenCython.pyx":394
  * 
  *         if c == 0:
  *             startPoint = 0             # <<<<<<<<<<<<<<
@@ -25621,17 +25725,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       __pyx_v_startPoint = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":379
+      /* "MUSCython/MSBWTCompGenCython.pyx":393
  *         tempLen = tempBWT.shape[0]
  * 
  *         if c == 0:             # <<<<<<<<<<<<<<
  *             startPoint = 0
  *         else:
  */
-      goto __pyx_L131;
+      goto __pyx_L134;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":383
+    /* "MUSCython/MSBWTCompGenCython.pyx":397
  *         else:
  *             #special checks to see if the symbols are the same at the boundary
  *             startPoint = 0             # <<<<<<<<<<<<<<
@@ -25641,7 +25745,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     /*else*/ {
       __pyx_v_startPoint = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":384
+      /* "MUSCython/MSBWTCompGenCython.pyx":398
  *             #special checks to see if the symbols are the same at the boundary
  *             startPoint = 0
  *             modifier = 0             # <<<<<<<<<<<<<<
@@ -25650,7 +25754,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       __pyx_v_modifier = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":385
+      /* "MUSCython/MSBWTCompGenCython.pyx":399
  *             startPoint = 0
  *             modifier = 0
  *             while startPoint < tempBWT.shape[0] and (tempBWT_view[startPoint] & 0x07) == finalSymbol:             # <<<<<<<<<<<<<<
@@ -25658,20 +25762,20 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *                 startPoint += 1
  */
       while (1) {
-        __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 385, __pyx_L1_error)
+        __pyx_t_20 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_tempBWT)); if (unlikely(__pyx_t_20 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 399, __pyx_L1_error)
         __pyx_t_16 = (__pyx_v_startPoint < (__pyx_t_20[0]));
         if (__pyx_t_16) {
         } else {
           __pyx_t_17 = __pyx_t_16;
-          goto __pyx_L134_bool_binop_done;
+          goto __pyx_L137_bool_binop_done;
         }
         __pyx_t_33 = __pyx_v_startPoint;
         __pyx_t_16 = (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_tempBWT_view.data + __pyx_t_33 * __pyx_v_tempBWT_view.strides[0]) ))) & 0x07) == __pyx_v_finalSymbol);
         __pyx_t_17 = __pyx_t_16;
-        __pyx_L134_bool_binop_done:;
+        __pyx_L137_bool_binop_done:;
         if (!__pyx_t_17) break;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":386
+        /* "MUSCython/MSBWTCompGenCython.pyx":400
  *             modifier = 0
  *             while startPoint < tempBWT.shape[0] and (tempBWT_view[startPoint] & 0x07) == finalSymbol:
  *                 modifier += (tempBWT_view[startPoint] >> 3) * (32**startPoint)             # <<<<<<<<<<<<<<
@@ -25681,7 +25785,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_t_33 = __pyx_v_startPoint;
         __pyx_v_modifier = (__pyx_v_modifier + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_tempBWT_view.data + __pyx_t_33 * __pyx_v_tempBWT_view.strides[0]) ))) >> 3) * __Pyx_pow_unsigned_long(32, __pyx_v_startPoint)));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":387
+        /* "MUSCython/MSBWTCompGenCython.pyx":401
  *             while startPoint < tempBWT.shape[0] and (tempBWT_view[startPoint] & 0x07) == finalSymbol:
  *                 modifier += (tempBWT_view[startPoint] >> 3) * (32**startPoint)
  *                 startPoint += 1             # <<<<<<<<<<<<<<
@@ -25691,7 +25795,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __pyx_v_startPoint = (__pyx_v_startPoint + 1);
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":390
+      /* "MUSCython/MSBWTCompGenCython.pyx":404
  * 
  *             #there is overlap, we need to re-write the boundary
  *             if modifier > 0:             # <<<<<<<<<<<<<<
@@ -25701,7 +25805,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_17 = (__pyx_v_modifier > 0);
       if (__pyx_t_17) {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":392
+        /* "MUSCython/MSBWTCompGenCython.pyx":406
  *             if modifier > 0:
  *                 #reset finalInd to the start of this symbol boundary and add in the new counts
  *                 finalInd = finalSymbolPos             # <<<<<<<<<<<<<<
@@ -25710,7 +25814,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         __pyx_v_finalInd = __pyx_v_finalSymbolPos;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":393
+        /* "MUSCython/MSBWTCompGenCython.pyx":407
  *                 #reset finalInd to the start of this symbol boundary and add in the new counts
  *                 finalInd = finalSymbolPos
  *                 finalSymbolCount += modifier             # <<<<<<<<<<<<<<
@@ -25719,7 +25823,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         __pyx_v_finalSymbolCount = (__pyx_v_finalSymbolCount + __pyx_v_modifier);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":396
+        /* "MUSCython/MSBWTCompGenCython.pyx":410
  * 
  *                 #now write it like normal
  *                 while finalSymbolCount > 0:             # <<<<<<<<<<<<<<
@@ -25730,7 +25834,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           __pyx_t_17 = (__pyx_v_finalSymbolCount > 0);
           if (!__pyx_t_17) break;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":398
+          /* "MUSCython/MSBWTCompGenCython.pyx":412
  *                 while finalSymbolCount > 0:
  *                     #3 bits = symbol, 5 bits = piece of count in LSB form
  *                     finalBWT_view[finalInd] = finalSymbol + ((finalSymbolCount & 0x1F) << 3)             # <<<<<<<<<<<<<<
@@ -25740,7 +25844,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           __pyx_t_33 = __pyx_v_finalInd;
           *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_finalBWT_view.data + __pyx_t_33 * __pyx_v_finalBWT_view.strides[0]) )) = (__pyx_v_finalSymbol + ((__pyx_v_finalSymbolCount & 0x1F) << 3));
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":399
+          /* "MUSCython/MSBWTCompGenCython.pyx":413
  *                     #3 bits = symbol, 5 bits = piece of count in LSB form
  *                     finalBWT_view[finalInd] = finalSymbol + ((finalSymbolCount & 0x1F) << 3)
  *                     finalInd += 1             # <<<<<<<<<<<<<<
@@ -25749,7 +25853,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
           __pyx_v_finalInd = (__pyx_v_finalInd + 1);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":400
+          /* "MUSCython/MSBWTCompGenCython.pyx":414
  *                     finalBWT_view[finalInd] = finalSymbol + ((finalSymbolCount & 0x1F) << 3)
  *                     finalInd += 1
  *                     finalSymbolCount = finalSymbolCount >> 5             # <<<<<<<<<<<<<<
@@ -25759,7 +25863,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
           __pyx_v_finalSymbolCount = (__pyx_v_finalSymbolCount >> 5);
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":390
+        /* "MUSCython/MSBWTCompGenCython.pyx":404
  * 
  *             #there is overlap, we need to re-write the boundary
  *             if modifier > 0:             # <<<<<<<<<<<<<<
@@ -25768,9 +25872,9 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       }
     }
-    __pyx_L131:;
+    __pyx_L134:;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":403
+    /* "MUSCython/MSBWTCompGenCython.pyx":417
  * 
  *         #now write out the rest of this piece
  *         for i in range(startPoint, tempLen):             # <<<<<<<<<<<<<<
@@ -25782,7 +25886,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     for (__pyx_t_12 = __pyx_v_startPoint; __pyx_t_12 < __pyx_t_10; __pyx_t_12+=1) {
       __pyx_v_i = __pyx_t_12;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":404
+      /* "MUSCython/MSBWTCompGenCython.pyx":418
  *         #now write out the rest of this piece
  *         for i in range(startPoint, tempLen):
  *             finalBWT_view[finalInd] = tempBWT_view[i]             # <<<<<<<<<<<<<<
@@ -25793,7 +25897,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_32 = __pyx_v_finalInd;
       *((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_finalBWT_view.data + __pyx_t_32 * __pyx_v_finalBWT_view.strides[0]) )) = (*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_tempBWT_view.data + __pyx_t_33 * __pyx_v_tempBWT_view.strides[0]) )));
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":405
+      /* "MUSCython/MSBWTCompGenCython.pyx":419
  *         for i in range(startPoint, tempLen):
  *             finalBWT_view[finalInd] = tempBWT_view[i]
  *             finalInd += 1             # <<<<<<<<<<<<<<
@@ -25803,7 +25907,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_v_finalInd = (__pyx_v_finalInd + 1);
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":408
+    /* "MUSCython/MSBWTCompGenCython.pyx":422
  * 
  *         #finally, recalculate the final symbol stats for the next pass
  *         finalSymbol = finalBWT_view[finalInd-1] & 0x07             # <<<<<<<<<<<<<<
@@ -25813,7 +25917,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __pyx_t_33 = (__pyx_v_finalInd - 1);
     __pyx_v_finalSymbol = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_finalBWT_view.data + __pyx_t_33 * __pyx_v_finalBWT_view.strides[0]) ))) & 0x07);
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":409
+    /* "MUSCython/MSBWTCompGenCython.pyx":423
  *         #finally, recalculate the final symbol stats for the next pass
  *         finalSymbol = finalBWT_view[finalInd-1] & 0x07
  *         finalSymbolCount = 0             # <<<<<<<<<<<<<<
@@ -25822,7 +25926,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     __pyx_v_finalSymbolCount = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":410
+    /* "MUSCython/MSBWTCompGenCython.pyx":424
  *         finalSymbol = finalBWT_view[finalInd-1] & 0x07
  *         finalSymbolCount = 0
  *         finalSymbolPos = finalInd             # <<<<<<<<<<<<<<
@@ -25831,7 +25935,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     __pyx_v_finalSymbolPos = __pyx_v_finalInd;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":411
+    /* "MUSCython/MSBWTCompGenCython.pyx":425
  *         finalSymbolCount = 0
  *         finalSymbolPos = finalInd
  *         finalSymbolBytes = 0             # <<<<<<<<<<<<<<
@@ -25840,7 +25944,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     __pyx_v_finalSymbolBytes = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":412
+    /* "MUSCython/MSBWTCompGenCython.pyx":426
  *         finalSymbolPos = finalInd
  *         finalSymbolBytes = 0
  *         while finalSymbolPos > 0 and (finalBWT_view[finalSymbolPos-1] & 0x07) == finalSymbol:             # <<<<<<<<<<<<<<
@@ -25852,15 +25956,15 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       if (__pyx_t_16) {
       } else {
         __pyx_t_17 = __pyx_t_16;
-        goto __pyx_L143_bool_binop_done;
+        goto __pyx_L146_bool_binop_done;
       }
       __pyx_t_33 = (__pyx_v_finalSymbolPos - 1);
       __pyx_t_16 = (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_finalBWT_view.data + __pyx_t_33 * __pyx_v_finalBWT_view.strides[0]) ))) & 0x07) == __pyx_v_finalSymbol);
       __pyx_t_17 = __pyx_t_16;
-      __pyx_L143_bool_binop_done:;
+      __pyx_L146_bool_binop_done:;
       if (!__pyx_t_17) break;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":413
+      /* "MUSCython/MSBWTCompGenCython.pyx":427
  *         finalSymbolBytes = 0
  *         while finalSymbolPos > 0 and (finalBWT_view[finalSymbolPos-1] & 0x07) == finalSymbol:
  *             finalSymbolCount = finalSymbolCount*32 + (finalBWT_view[finalSymbolPos-1] >> 3)             # <<<<<<<<<<<<<<
@@ -25870,7 +25974,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_33 = (__pyx_v_finalSymbolPos - 1);
       __pyx_v_finalSymbolCount = ((__pyx_v_finalSymbolCount * 32) + ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_finalBWT_view.data + __pyx_t_33 * __pyx_v_finalBWT_view.strides[0]) ))) >> 3));
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":414
+      /* "MUSCython/MSBWTCompGenCython.pyx":428
  *         while finalSymbolPos > 0 and (finalBWT_view[finalSymbolPos-1] & 0x07) == finalSymbol:
  *             finalSymbolCount = finalSymbolCount*32 + (finalBWT_view[finalSymbolPos-1] >> 3)
  *             finalSymbolBytes += 1             # <<<<<<<<<<<<<<
@@ -25879,18 +25983,76 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       __pyx_v_finalSymbolBytes = (__pyx_v_finalSymbolBytes + 1);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":415
+      /* "MUSCython/MSBWTCompGenCython.pyx":429
  *             finalSymbolCount = finalSymbolCount*32 + (finalBWT_view[finalSymbolPos-1] >> 3)
  *             finalSymbolBytes += 1
  *             finalSymbolPos -= 1             # <<<<<<<<<<<<<<
  * 
- *     #finally, clear the last state files
+ *         # (Windows portability) close this state file's mapping before it is
  */
       __pyx_v_finalSymbolPos = (__pyx_v_finalSymbolPos - 1);
     }
+
+    /* "MUSCython/MSBWTCompGenCython.pyx":433
+ *         # (Windows portability) close this state file's mapping before it is
+ *         # removed below (os.remove() fails on Windows while a mapping is open).
+ *         if (<object>tempBWT).base is not None:             # <<<<<<<<<<<<<<
+ *             (<object>tempBWT).base.close()
+ * 
+ */
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_tempBWT), __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_17 = (__pyx_t_1 != Py_None);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (__pyx_t_17) {
+
+      /* "MUSCython/MSBWTCompGenCython.pyx":434
+ *         # removed below (os.remove() fails on Windows while a mapping is open).
+ *         if (<object>tempBWT).base is not None:
+ *             (<object>tempBWT).base.close()             # <<<<<<<<<<<<<<
+ * 
+ *     #finally, clear the last state files
+ */
+      __pyx_t_13 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_tempBWT), __pyx_n_s_base); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 434, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_close); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 434, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_14);
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_13 = NULL;
+      __pyx_t_15 = 0;
+      #if CYTHON_UNPACK_METHODS
+      if (likely(PyMethod_Check(__pyx_t_14))) {
+        __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_14);
+        if (likely(__pyx_t_13)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
+          __Pyx_INCREF(__pyx_t_13);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_14, function);
+          __pyx_t_15 = 1;
+        }
+      }
+      #endif
+      {
+        PyObject *__pyx_callargs[2] = {__pyx_t_13, NULL};
+        __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_15, 0+__pyx_t_15);
+        __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "MUSCython/MSBWTCompGenCython.pyx":433
+ *         # (Windows portability) close this state file's mapping before it is
+ *         # removed below (os.remove() fails on Windows while a mapping is open).
+ *         if (<object>tempBWT).base is not None:             # <<<<<<<<<<<<<<
+ *             (<object>tempBWT).base.close()
+ * 
+ */
+    }
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":418
+  /* "MUSCython/MSBWTCompGenCython.pyx":437
  * 
  *     #finally, clear the last state files
  *     tempBWT = None             # <<<<<<<<<<<<<<
@@ -25913,13 +26075,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __pyx_t_29 = __pyx_t_28 = __pyx_t_27 = 0;
     }
     __pyx_pybuffernd_tempBWT.diminfo[0].strides = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tempBWT.diminfo[0].shape = __pyx_pybuffernd_tempBWT.rcbuffer->pybuffer.shape[0];
-    if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 418, __pyx_L1_error)
+    if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 437, __pyx_L1_error)
   }
   __pyx_t_52 = 0;
   __Pyx_INCREF(Py_None);
   __Pyx_DECREF_SET(__pyx_v_tempBWT, ((PyArrayObject *)Py_None));
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":419
+  /* "MUSCython/MSBWTCompGenCython.pyx":438
  *     #finally, clear the last state files
  *     tempBWT = None
  *     for c in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -25931,75 +26093,75 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_11; __pyx_t_8+=1) {
     __pyx_v_c = __pyx_t_8;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":420
+    /* "MUSCython/MSBWTCompGenCython.pyx":439
  *     tempBWT = None
  *     for c in range(0, numValidChars):
  *         for fn in insertionFNDict[c]:             # <<<<<<<<<<<<<<
  *             try:
  *                 os.remove(fn)
  */
-    __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_13 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 420, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (likely(PyList_CheckExact(__pyx_t_13)) || PyTuple_CheckExact(__pyx_t_13)) {
-      __pyx_t_2 = __pyx_t_13; __Pyx_INCREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_14 = __Pyx_PyDict_GetItem(__pyx_v_insertionFNDict, __pyx_t_1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (likely(PyList_CheckExact(__pyx_t_14)) || PyTuple_CheckExact(__pyx_t_14)) {
+      __pyx_t_1 = __pyx_t_14; __Pyx_INCREF(__pyx_t_1);
       __pyx_t_39 = 0;
       __pyx_t_43 = NULL;
     } else {
-      __pyx_t_39 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_13); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_43 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 420, __pyx_L1_error)
+      __pyx_t_39 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_14); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_43 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 439, __pyx_L1_error)
     }
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     for (;;) {
       if (likely(!__pyx_t_43)) {
-        if (likely(PyList_CheckExact(__pyx_t_2))) {
+        if (likely(PyList_CheckExact(__pyx_t_1))) {
           {
-            Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
+            Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 420, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 439, __pyx_L1_error)
             #endif
             if (__pyx_t_39 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_13 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_39); __Pyx_INCREF(__pyx_t_13); __pyx_t_39++; if (unlikely((0 < 0))) __PYX_ERR(0, 420, __pyx_L1_error)
+          __pyx_t_14 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_39); __Pyx_INCREF(__pyx_t_14); __pyx_t_39++; if (unlikely((0 < 0))) __PYX_ERR(0, 439, __pyx_L1_error)
           #else
-          __pyx_t_13 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_39); __pyx_t_39++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 420, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_13);
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_39); __pyx_t_39++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 439, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_14);
           #endif
         } else {
           {
-            Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
+            Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 420, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 439, __pyx_L1_error)
             #endif
             if (__pyx_t_39 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_13 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_39); __Pyx_INCREF(__pyx_t_13); __pyx_t_39++; if (unlikely((0 < 0))) __PYX_ERR(0, 420, __pyx_L1_error)
+          __pyx_t_14 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_39); __Pyx_INCREF(__pyx_t_14); __pyx_t_39++; if (unlikely((0 < 0))) __PYX_ERR(0, 439, __pyx_L1_error)
           #else
-          __pyx_t_13 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_39); __pyx_t_39++; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 420, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_13);
+          __pyx_t_14 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_39); __pyx_t_39++; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 439, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_14);
           #endif
         }
       } else {
-        __pyx_t_13 = __pyx_t_43(__pyx_t_2);
-        if (unlikely(!__pyx_t_13)) {
+        __pyx_t_14 = __pyx_t_43(__pyx_t_1);
+        if (unlikely(!__pyx_t_14)) {
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 420, __pyx_L1_error)
+            else __PYX_ERR(0, 439, __pyx_L1_error)
           }
           break;
         }
-        __Pyx_GOTREF(__pyx_t_13);
+        __Pyx_GOTREF(__pyx_t_14);
       }
-      __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_13);
-      __pyx_t_13 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_14);
+      __pyx_t_14 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":421
+      /* "MUSCython/MSBWTCompGenCython.pyx":440
  *     for c in range(0, numValidChars):
  *         for fn in insertionFNDict[c]:
  *             try:             # <<<<<<<<<<<<<<
@@ -26015,43 +26177,43 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __Pyx_XGOTREF(__pyx_t_29);
         /*try:*/ {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":422
+          /* "MUSCython/MSBWTCompGenCython.pyx":441
  *         for fn in insertionFNDict[c]:
  *             try:
  *                 os.remove(fn)             # <<<<<<<<<<<<<<
  *             except:
  *                 logger.warning('Failed to remove \''+fn+'\' from file system.')
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 422, __pyx_L149_error)
-          __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 422, __pyx_L149_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_14 = NULL;
+          __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_os); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 441, __pyx_L153_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_remove); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 441, __pyx_L153_error)
+          __Pyx_GOTREF(__pyx_t_2);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          __pyx_t_13 = NULL;
           __pyx_t_15 = 0;
           #if CYTHON_UNPACK_METHODS
-          if (unlikely(PyMethod_Check(__pyx_t_1))) {
-            __pyx_t_14 = PyMethod_GET_SELF(__pyx_t_1);
-            if (likely(__pyx_t_14)) {
-              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-              __Pyx_INCREF(__pyx_t_14);
+          if (unlikely(PyMethod_Check(__pyx_t_2))) {
+            __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_2);
+            if (likely(__pyx_t_13)) {
+              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+              __Pyx_INCREF(__pyx_t_13);
               __Pyx_INCREF(function);
-              __Pyx_DECREF_SET(__pyx_t_1, function);
+              __Pyx_DECREF_SET(__pyx_t_2, function);
               __pyx_t_15 = 1;
             }
           }
           #endif
           {
-            PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_v_fn};
-            __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
-            __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-            if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 422, __pyx_L149_error)
-            __Pyx_GOTREF(__pyx_t_13);
-            __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+            PyObject *__pyx_callargs[2] = {__pyx_t_13, __pyx_v_fn};
+            __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
+            __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+            if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 441, __pyx_L153_error)
+            __Pyx_GOTREF(__pyx_t_14);
+            __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           }
-          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":421
+          /* "MUSCython/MSBWTCompGenCython.pyx":440
  *     for c in range(0, numValidChars):
  *         for fn in insertionFNDict[c]:
  *             try:             # <<<<<<<<<<<<<<
@@ -26062,13 +26224,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
         __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
         __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
-        goto __pyx_L156_try_end;
-        __pyx_L149_error:;
-        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        goto __pyx_L160_try_end;
+        __pyx_L153_error:;
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
         __PYX_XCLEAR_MEMVIEW(&__pyx_t_19, 1);
         __pyx_t_19.memview = NULL; __pyx_t_19.data = NULL;
+        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __PYX_XCLEAR_MEMVIEW(&__pyx_t_22, 1);
         __pyx_t_22.memview = NULL; __pyx_t_22.data = NULL;
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -26079,7 +26241,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
         __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":423
+        /* "MUSCython/MSBWTCompGenCython.pyx":442
  *             try:
  *                 os.remove(fn)
  *             except:             # <<<<<<<<<<<<<<
@@ -26088,23 +26250,23 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         /*except:*/ {
           __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_13, &__pyx_t_1, &__pyx_t_14) < 0) __PYX_ERR(0, 423, __pyx_L151_except_error)
-          __Pyx_XGOTREF(__pyx_t_13);
-          __Pyx_XGOTREF(__pyx_t_1);
+          if (__Pyx_GetException(&__pyx_t_14, &__pyx_t_2, &__pyx_t_13) < 0) __PYX_ERR(0, 442, __pyx_L155_except_error)
           __Pyx_XGOTREF(__pyx_t_14);
+          __Pyx_XGOTREF(__pyx_t_2);
+          __Pyx_XGOTREF(__pyx_t_13);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":424
+          /* "MUSCython/MSBWTCompGenCython.pyx":443
  *                 os.remove(fn)
  *             except:
  *                 logger.warning('Failed to remove \''+fn+'\' from file system.')             # <<<<<<<<<<<<<<
  * 
  *         try:
  */
-          __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 424, __pyx_L151_except_error)
+          __pyx_t_36 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 443, __pyx_L155_except_error)
           __Pyx_GOTREF(__pyx_t_36);
-          __pyx_t_51 = PyNumber_Add(__pyx_kp_s_Failed_to_remove, __pyx_v_fn); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 424, __pyx_L151_except_error)
+          __pyx_t_51 = PyNumber_Add(__pyx_kp_s_Failed_to_remove, __pyx_v_fn); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 443, __pyx_L155_except_error)
           __Pyx_GOTREF(__pyx_t_51);
-          __pyx_t_49 = PyNumber_Add(__pyx_t_51, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 424, __pyx_L151_except_error)
+          __pyx_t_49 = PyNumber_Add(__pyx_t_51, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 443, __pyx_L155_except_error)
           __Pyx_GOTREF(__pyx_t_49);
           __Pyx_DECREF(__pyx_t_51); __pyx_t_51 = 0;
           __pyx_t_51 = NULL;
@@ -26126,39 +26288,39 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
             __pyx_t_3 = __Pyx_PyObject_FastCall(__pyx_t_36, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
             __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
             __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
-            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 424, __pyx_L151_except_error)
+            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 443, __pyx_L155_except_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
           }
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-          goto __pyx_L150_exception_handled;
+          __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+          __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+          goto __pyx_L154_exception_handled;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":421
+        /* "MUSCython/MSBWTCompGenCython.pyx":440
  *     for c in range(0, numValidChars):
  *         for fn in insertionFNDict[c]:
  *             try:             # <<<<<<<<<<<<<<
  *                 os.remove(fn)
  *             except:
  */
-        __pyx_L151_except_error:;
+        __pyx_L155_except_error:;
         __Pyx_XGIVEREF(__pyx_t_27);
         __Pyx_XGIVEREF(__pyx_t_28);
         __Pyx_XGIVEREF(__pyx_t_29);
         __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
         goto __pyx_L1_error;
-        __pyx_L150_exception_handled:;
+        __pyx_L154_exception_handled:;
         __Pyx_XGIVEREF(__pyx_t_27);
         __Pyx_XGIVEREF(__pyx_t_28);
         __Pyx_XGIVEREF(__pyx_t_29);
         __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
-        __pyx_L156_try_end:;
+        __pyx_L160_try_end:;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":420
+      /* "MUSCython/MSBWTCompGenCython.pyx":439
  *     tempBWT = None
  *     for c in range(0, numValidChars):
  *         for fn in insertionFNDict[c]:             # <<<<<<<<<<<<<<
@@ -26166,9 +26328,9 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  *                 os.remove(fn)
  */
     }
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":426
+    /* "MUSCython/MSBWTCompGenCython.pyx":445
  *                 logger.warning('Failed to remove \''+fn+'\' from file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -26184,138 +26346,138 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XGOTREF(__pyx_t_27);
       /*try:*/ {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":427
+        /* "MUSCython/MSBWTCompGenCython.pyx":446
  * 
  *         try:
  *             if os.path.exists(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'):             # <<<<<<<<<<<<<<
  *                 os.remove(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat')
  *         except:
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 427, __pyx_L160_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_os); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_13);
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_path); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_exists); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_13);
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_2 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 446, __pyx_L164_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_3 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_exists); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 427, __pyx_L160_error)
+        __pyx_t_14 = PyNumber_Add(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 446, __pyx_L164_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_13);
-        __pyx_t_3 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = PyNumber_Add(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_13);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = PyNumber_Add(__pyx_t_13, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 427, __pyx_L160_error)
+        __pyx_t_3 = PyNumber_Add(__pyx_t_14, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 446, __pyx_L164_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_13);
-        __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = PyNumber_Add(__pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_13);
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+        __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_14);
+        __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+        __pyx_t_14 = PyNumber_Add(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_dat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = NULL;
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_dat); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+        __pyx_t_14 = NULL;
         __pyx_t_15 = 0;
         #if CYTHON_UNPACK_METHODS
-        if (likely(PyMethod_Check(__pyx_t_14))) {
-          __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_14);
-          if (likely(__pyx_t_13)) {
-            PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
-            __Pyx_INCREF(__pyx_t_13);
+        if (likely(PyMethod_Check(__pyx_t_13))) {
+          __pyx_t_14 = PyMethod_GET_SELF(__pyx_t_13);
+          if (likely(__pyx_t_14)) {
+            PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
+            __Pyx_INCREF(__pyx_t_14);
             __Pyx_INCREF(function);
-            __Pyx_DECREF_SET(__pyx_t_14, function);
+            __Pyx_DECREF_SET(__pyx_t_13, function);
             __pyx_t_15 = 1;
           }
         }
         #endif
         {
-          PyObject *__pyx_callargs[2] = {__pyx_t_13, __pyx_t_1};
-          __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
-          __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 427, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_2);
-          __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+          PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_t_2};
+          __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
+          __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
+          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 446, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         }
-        __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 427, __pyx_L160_error)
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_17 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely((__pyx_t_17 < 0))) __PYX_ERR(0, 446, __pyx_L164_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_17) {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":428
+          /* "MUSCython/MSBWTCompGenCython.pyx":447
  *         try:
  *             if os.path.exists(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'):
  *                 os.remove(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat')             # <<<<<<<<<<<<<<
  *         except:
  *             logger.warning('Failed to remove \''+bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'+'\' from file system.')
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 428, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 428, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_14);
-          __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L160_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_os); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 447, __pyx_L164_error)
           __Pyx_GOTREF(__pyx_t_13);
-          __pyx_t_3 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L160_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_remove); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 447, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_2);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_state); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 447, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 447, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_14);
+          __pyx_t_3 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 447, __pyx_L164_error)
           __Pyx_GOTREF(__pyx_t_3);
-          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __pyx_t_13 = PyNumber_Add(__pyx_t_14, __pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_13);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+          __pyx_t_14 = PyNumber_Add(__pyx_t_13, __pyx_t_3); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 447, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_14);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __pyx_t_3 = PyNumber_Add(__pyx_t_13, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L160_error)
+          __pyx_t_3 = PyNumber_Add(__pyx_t_14, __pyx_kp_s__2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 447, __pyx_L164_error)
           __Pyx_GOTREF(__pyx_t_3);
-          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_13);
-          __pyx_t_14 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 428, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_14);
-          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __pyx_t_13 = PyNumber_Add(__pyx_t_3, __pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L160_error)
-          __Pyx_GOTREF(__pyx_t_13);
-          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          __pyx_t_14 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_dat); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 428, __pyx_L160_error)
+          __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 447, __pyx_L164_error)
           __Pyx_GOTREF(__pyx_t_14);
+          __pyx_t_13 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 447, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+          __pyx_t_14 = PyNumber_Add(__pyx_t_3, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 447, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_14);
+          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          __pyx_t_13 = NULL;
+          __pyx_t_13 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_dat); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 447, __pyx_L164_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+          __pyx_t_14 = NULL;
           __pyx_t_15 = 0;
           #if CYTHON_UNPACK_METHODS
-          if (unlikely(PyMethod_Check(__pyx_t_1))) {
-            __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_1);
-            if (likely(__pyx_t_13)) {
-              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-              __Pyx_INCREF(__pyx_t_13);
+          if (unlikely(PyMethod_Check(__pyx_t_2))) {
+            __pyx_t_14 = PyMethod_GET_SELF(__pyx_t_2);
+            if (likely(__pyx_t_14)) {
+              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+              __Pyx_INCREF(__pyx_t_14);
               __Pyx_INCREF(function);
-              __Pyx_DECREF_SET(__pyx_t_1, function);
+              __Pyx_DECREF_SET(__pyx_t_2, function);
               __pyx_t_15 = 1;
             }
           }
           #endif
           {
-            PyObject *__pyx_callargs[2] = {__pyx_t_13, __pyx_t_14};
-            __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
-            __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
-            __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-            if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 428, __pyx_L160_error)
-            __Pyx_GOTREF(__pyx_t_2);
-            __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+            PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_t_13};
+            __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
+            __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
+            __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+            if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 447, __pyx_L164_error)
+            __Pyx_GOTREF(__pyx_t_1);
+            __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           }
-          __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":427
+          /* "MUSCython/MSBWTCompGenCython.pyx":446
  * 
  *         try:
  *             if os.path.exists(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'):             # <<<<<<<<<<<<<<
@@ -26324,7 +26486,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":426
+        /* "MUSCython/MSBWTCompGenCython.pyx":445
  *                 logger.warning('Failed to remove \''+fn+'\' from file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -26335,8 +26497,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
       __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
       __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
-      goto __pyx_L167_try_end;
-      __pyx_L160_error:;
+      goto __pyx_L171_try_end;
+      __pyx_L164_error:;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -26353,7 +26515,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
       __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":429
+      /* "MUSCython/MSBWTCompGenCython.pyx":448
  *             if os.path.exists(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'):
  *                 os.remove(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat')
  *         except:             # <<<<<<<<<<<<<<
@@ -26362,50 +26524,50 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
       /*except:*/ {
         __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_1, &__pyx_t_14) < 0) __PYX_ERR(0, 429, __pyx_L162_except_error)
-        __Pyx_XGOTREF(__pyx_t_2);
+        if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_2, &__pyx_t_13) < 0) __PYX_ERR(0, 448, __pyx_L166_except_error)
         __Pyx_XGOTREF(__pyx_t_1);
-        __Pyx_XGOTREF(__pyx_t_14);
+        __Pyx_XGOTREF(__pyx_t_2);
+        __Pyx_XGOTREF(__pyx_t_13);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":430
+        /* "MUSCython/MSBWTCompGenCython.pyx":449
  *                 os.remove(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat')
  *         except:
  *             logger.warning('Failed to remove \''+bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'+'\' from file system.')             # <<<<<<<<<<<<<<
  * 
  *     try:
  */
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_36 = PyNumber_Add(__pyx_kp_s_Failed_to_remove, __pyx_v_bwtDir); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_36 = PyNumber_Add(__pyx_kp_s_Failed_to_remove, __pyx_v_bwtDir); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_36);
-        __pyx_t_49 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_state); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_49 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_state); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_49);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_c); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_36);
-        __pyx_t_51 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_51 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_51);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = PyNumber_Add(__pyx_t_49, __pyx_t_51); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_36 = PyNumber_Add(__pyx_t_49, __pyx_t_51); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_36);
         __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
         __Pyx_DECREF(__pyx_t_51); __pyx_t_51 = 0;
-        __pyx_t_51 = PyNumber_Add(__pyx_t_36, __pyx_kp_s__2); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_51 = PyNumber_Add(__pyx_t_36, __pyx_kp_s__2); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_51);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_36 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_36);
-        __pyx_t_49 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_49 = __Pyx_PyObject_Str(__pyx_t_36); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_49);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = PyNumber_Add(__pyx_t_51, __pyx_t_49); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_36 = PyNumber_Add(__pyx_t_51, __pyx_t_49); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_36);
         __Pyx_DECREF(__pyx_t_51); __pyx_t_51 = 0;
         __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
-        __pyx_t_49 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_dat); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_49 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_dat); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_49);
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        __pyx_t_36 = PyNumber_Add(__pyx_t_49, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 430, __pyx_L162_except_error)
+        __pyx_t_36 = PyNumber_Add(__pyx_t_49, __pyx_kp_s_from_file_system); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 449, __pyx_L166_except_error)
         __Pyx_GOTREF(__pyx_t_36);
         __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
         __pyx_t_49 = NULL;
@@ -26424,43 +26586,43 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
         #endif
         {
           PyObject *__pyx_callargs[2] = {__pyx_t_49, __pyx_t_36};
-          __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
+          __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_15, 1+__pyx_t_15);
           __Pyx_XDECREF(__pyx_t_49); __pyx_t_49 = 0;
           __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-          if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 430, __pyx_L162_except_error)
-          __Pyx_GOTREF(__pyx_t_13);
+          if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 449, __pyx_L166_except_error)
+          __Pyx_GOTREF(__pyx_t_14);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         }
-        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-        goto __pyx_L161_exception_handled;
+        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+        goto __pyx_L165_exception_handled;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":426
+      /* "MUSCython/MSBWTCompGenCython.pyx":445
  *                 logger.warning('Failed to remove \''+fn+'\' from file system.')
  * 
  *         try:             # <<<<<<<<<<<<<<
  *             if os.path.exists(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'):
  *                 os.remove(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat')
  */
-      __pyx_L162_except_error:;
+      __pyx_L166_except_error:;
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
       goto __pyx_L1_error;
-      __pyx_L161_exception_handled:;
+      __pyx_L165_exception_handled:;
       __Pyx_XGIVEREF(__pyx_t_29);
       __Pyx_XGIVEREF(__pyx_t_28);
       __Pyx_XGIVEREF(__pyx_t_27);
       __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
-      __pyx_L167_try_end:;
+      __pyx_L171_try_end:;
     }
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":432
+  /* "MUSCython/MSBWTCompGenCython.pyx":451
  *             logger.warning('Failed to remove \''+bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'+'\' from file system.')
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -26476,67 +26638,67 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __Pyx_XGOTREF(__pyx_t_29);
     /*try:*/ {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":433
+      /* "MUSCython/MSBWTCompGenCython.pyx":452
  * 
  *     try:
  *         fn = bwtDir+'/fmDeltas.'+str(seqLen)+'.npy'             # <<<<<<<<<<<<<<
  *         os.remove(fn)
  *     except:
  */
-      __pyx_t_14 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 433, __pyx_L171_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_1 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L171_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 433, __pyx_L171_error)
+      __pyx_t_13 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmDeltas); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 452, __pyx_L175_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __pyx_t_2 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 452, __pyx_L175_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyNumber_Add(__pyx_t_14, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L171_error)
+      __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 452, __pyx_L175_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 433, __pyx_L171_error)
+      __pyx_t_2 = PyNumber_Add(__pyx_t_13, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 452, __pyx_L175_error)
       __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_2);
-      __pyx_t_2 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 452, __pyx_L175_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_1);
+      __pyx_t_1 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":434
+      /* "MUSCython/MSBWTCompGenCython.pyx":453
  *     try:
  *         fn = bwtDir+'/fmDeltas.'+str(seqLen)+'.npy'
  *         os.remove(fn)             # <<<<<<<<<<<<<<
  *     except:
  *         logger.warning('Failed to remove\''+fn+'\' from the file system.')
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_os); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L171_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_remove); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 434, __pyx_L171_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = NULL;
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 453, __pyx_L175_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_remove); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 453, __pyx_L175_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = NULL;
       __pyx_t_4 = 0;
       #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_14))) {
-        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_14);
-        if (likely(__pyx_t_1)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
-          __Pyx_INCREF(__pyx_t_1);
+      if (unlikely(PyMethod_Check(__pyx_t_13))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_13);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
+          __Pyx_INCREF(__pyx_t_2);
           __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_14, function);
+          __Pyx_DECREF_SET(__pyx_t_13, function);
           __pyx_t_4 = 1;
         }
       }
       #endif
       {
-        PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_v_fn};
-        __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 434, __pyx_L171_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+        PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_fn};
+        __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L175_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       }
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":432
+      /* "MUSCython/MSBWTCompGenCython.pyx":451
  *             logger.warning('Failed to remove \''+bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'+'\' from file system.')
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -26547,8 +26709,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
     __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
     __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
-    goto __pyx_L176_try_end;
-    __pyx_L171_error:;
+    goto __pyx_L180_try_end;
+    __pyx_L175_error:;
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -26565,7 +26727,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
     __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":435
+    /* "MUSCython/MSBWTCompGenCython.pyx":454
  *         fn = bwtDir+'/fmDeltas.'+str(seqLen)+'.npy'
  *         os.remove(fn)
  *     except:             # <<<<<<<<<<<<<<
@@ -26574,24 +26736,24 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     /*except:*/ {
       __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_14, &__pyx_t_1) < 0) __PYX_ERR(0, 435, __pyx_L173_except_error)
-      __Pyx_XGOTREF(__pyx_t_2);
-      __Pyx_XGOTREF(__pyx_t_14);
+      if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_13, &__pyx_t_2) < 0) __PYX_ERR(0, 454, __pyx_L177_except_error)
       __Pyx_XGOTREF(__pyx_t_1);
+      __Pyx_XGOTREF(__pyx_t_13);
+      __Pyx_XGOTREF(__pyx_t_2);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":436
+      /* "MUSCython/MSBWTCompGenCython.pyx":455
  *         os.remove(fn)
  *     except:
  *         logger.warning('Failed to remove\''+fn+'\' from the file system.')             # <<<<<<<<<<<<<<
  * 
  *     try:
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 436, __pyx_L173_except_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L177_except_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 436, __pyx_L173_except_error) }
-      __pyx_t_36 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 436, __pyx_L173_except_error)
+      if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 455, __pyx_L177_except_error) }
+      __pyx_t_36 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 455, __pyx_L177_except_error)
       __Pyx_GOTREF(__pyx_t_36);
-      __pyx_t_49 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 436, __pyx_L173_except_error)
+      __pyx_t_49 = PyNumber_Add(__pyx_t_36, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 455, __pyx_L177_except_error)
       __Pyx_GOTREF(__pyx_t_49);
       __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
       __pyx_t_36 = NULL;
@@ -26610,42 +26772,42 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       #endif
       {
         PyObject *__pyx_callargs[2] = {__pyx_t_36, __pyx_t_49};
-        __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+        __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_36); __pyx_t_36 = 0;
         __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
-        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 436, __pyx_L173_except_error)
-        __Pyx_GOTREF(__pyx_t_13);
+        if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 455, __pyx_L177_except_error)
+        __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
+      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      goto __pyx_L172_exception_handled;
+      __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      goto __pyx_L176_exception_handled;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":432
+    /* "MUSCython/MSBWTCompGenCython.pyx":451
  *             logger.warning('Failed to remove \''+bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'+'\' from file system.')
  * 
  *     try:             # <<<<<<<<<<<<<<
  *         fn = bwtDir+'/fmDeltas.'+str(seqLen)+'.npy'
  *         os.remove(fn)
  */
-    __pyx_L173_except_error:;
+    __pyx_L177_except_error:;
     __Pyx_XGIVEREF(__pyx_t_27);
     __Pyx_XGIVEREF(__pyx_t_28);
     __Pyx_XGIVEREF(__pyx_t_29);
     __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
     goto __pyx_L1_error;
-    __pyx_L172_exception_handled:;
+    __pyx_L176_exception_handled:;
     __Pyx_XGIVEREF(__pyx_t_27);
     __Pyx_XGIVEREF(__pyx_t_28);
     __Pyx_XGIVEREF(__pyx_t_29);
     __Pyx_ExceptionReset(__pyx_t_27, __pyx_t_28, __pyx_t_29);
-    __pyx_L176_try_end:;
+    __pyx_L180_try_end:;
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":438
+  /* "MUSCython/MSBWTCompGenCython.pyx":457
  *         logger.warning('Failed to remove\''+fn+'\' from the file system.')
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -26661,67 +26823,67 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __Pyx_XGOTREF(__pyx_t_27);
     /*try:*/ {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":439
+      /* "MUSCython/MSBWTCompGenCython.pyx":458
  * 
  *     try:
  *         fn = bwtDir+'/fmStarts.'+str(seqLen)+'.npy'             # <<<<<<<<<<<<<<
  *         os.remove(fn)
  *     except:
  */
-      __pyx_t_1 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L179_error)
+      __pyx_t_2 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_fmStarts); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 458, __pyx_L183_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_13 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 458, __pyx_L183_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_13); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L183_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_14 = __Pyx_PyInt_From_unsigned_long(__pyx_v_seqLen); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 439, __pyx_L179_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_14); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 439, __pyx_L179_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __pyx_t_14 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 439, __pyx_L179_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_13 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 458, __pyx_L183_error)
+      __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_14, __pyx_kp_s_npy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 439, __pyx_L179_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_2);
-      __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_npy); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L183_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_1);
+      __pyx_t_1 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":440
+      /* "MUSCython/MSBWTCompGenCython.pyx":459
  *     try:
  *         fn = bwtDir+'/fmStarts.'+str(seqLen)+'.npy'
  *         os.remove(fn)             # <<<<<<<<<<<<<<
  *     except:
  *         logger.warning('Failed to remove\''+fn+'\' from the file system.')
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 440, __pyx_L179_error)
-      __Pyx_GOTREF(__pyx_t_14);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_remove); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 440, __pyx_L179_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __pyx_t_14 = NULL;
+      __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_os); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 459, __pyx_L183_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_remove); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 459, __pyx_L183_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_13 = NULL;
       __pyx_t_4 = 0;
       #if CYTHON_UNPACK_METHODS
-      if (unlikely(PyMethod_Check(__pyx_t_1))) {
-        __pyx_t_14 = PyMethod_GET_SELF(__pyx_t_1);
-        if (likely(__pyx_t_14)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-          __Pyx_INCREF(__pyx_t_14);
+      if (unlikely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_13)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_13);
           __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_1, function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
           __pyx_t_4 = 1;
         }
       }
       #endif
       {
-        PyObject *__pyx_callargs[2] = {__pyx_t_14, __pyx_v_fn};
-        __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-        __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 440, __pyx_L179_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        PyObject *__pyx_callargs[2] = {__pyx_t_13, __pyx_v_fn};
+        __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+        __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L183_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       }
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":438
+      /* "MUSCython/MSBWTCompGenCython.pyx":457
  *         logger.warning('Failed to remove\''+fn+'\' from the file system.')
  * 
  *     try:             # <<<<<<<<<<<<<<
@@ -26732,8 +26894,8 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __Pyx_XDECREF(__pyx_t_29); __pyx_t_29 = 0;
     __Pyx_XDECREF(__pyx_t_28); __pyx_t_28 = 0;
     __Pyx_XDECREF(__pyx_t_27); __pyx_t_27 = 0;
-    goto __pyx_L184_try_end;
-    __pyx_L179_error:;
+    goto __pyx_L188_try_end;
+    __pyx_L183_error:;
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -26750,7 +26912,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
     __Pyx_XDECREF(__pyx_t_50); __pyx_t_50 = 0;
     __Pyx_XDECREF(__pyx_t_51); __pyx_t_51 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":441
+    /* "MUSCython/MSBWTCompGenCython.pyx":460
  *         fn = bwtDir+'/fmStarts.'+str(seqLen)+'.npy'
  *         os.remove(fn)
  *     except:             # <<<<<<<<<<<<<<
@@ -26759,24 +26921,24 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
  */
     /*except:*/ {
       __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.createMsbwtFromSeqs", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_1, &__pyx_t_14) < 0) __PYX_ERR(0, 441, __pyx_L181_except_error)
-      __Pyx_XGOTREF(__pyx_t_2);
+      if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_2, &__pyx_t_13) < 0) __PYX_ERR(0, 460, __pyx_L185_except_error)
       __Pyx_XGOTREF(__pyx_t_1);
-      __Pyx_XGOTREF(__pyx_t_14);
+      __Pyx_XGOTREF(__pyx_t_2);
+      __Pyx_XGOTREF(__pyx_t_13);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":442
+      /* "MUSCython/MSBWTCompGenCython.pyx":461
  *         os.remove(fn)
  *     except:
  *         logger.warning('Failed to remove\''+fn+'\' from the file system.')             # <<<<<<<<<<<<<<
  * 
  * 
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L181_except_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_warning); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L185_except_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 442, __pyx_L181_except_error) }
-      __pyx_t_49 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 442, __pyx_L181_except_error)
+      if (unlikely(!__pyx_v_fn)) { __Pyx_RaiseUnboundLocalError("fn"); __PYX_ERR(0, 461, __pyx_L185_except_error) }
+      __pyx_t_49 = PyNumber_Add(__pyx_kp_s_Failed_to_remove_2, __pyx_v_fn); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 461, __pyx_L185_except_error)
       __Pyx_GOTREF(__pyx_t_49);
-      __pyx_t_36 = PyNumber_Add(__pyx_t_49, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 442, __pyx_L181_except_error)
+      __pyx_t_36 = PyNumber_Add(__pyx_t_49, __pyx_kp_s_from_the_file_system); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 461, __pyx_L185_except_error)
       __Pyx_GOTREF(__pyx_t_36);
       __Pyx_DECREF(__pyx_t_49); __pyx_t_49 = 0;
       __pyx_t_49 = NULL;
@@ -26795,162 +26957,162 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
       #endif
       {
         PyObject *__pyx_callargs[2] = {__pyx_t_49, __pyx_t_36};
-        __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+        __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
         __Pyx_XDECREF(__pyx_t_49); __pyx_t_49 = 0;
         __Pyx_DECREF(__pyx_t_36); __pyx_t_36 = 0;
-        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 442, __pyx_L181_except_error)
-        __Pyx_GOTREF(__pyx_t_13);
+        if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 461, __pyx_L185_except_error)
+        __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-      goto __pyx_L180_exception_handled;
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+      goto __pyx_L184_exception_handled;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":438
+    /* "MUSCython/MSBWTCompGenCython.pyx":457
  *         logger.warning('Failed to remove\''+fn+'\' from the file system.')
  * 
  *     try:             # <<<<<<<<<<<<<<
  *         fn = bwtDir+'/fmStarts.'+str(seqLen)+'.npy'
  *         os.remove(fn)
  */
-    __pyx_L181_except_error:;
+    __pyx_L185_except_error:;
     __Pyx_XGIVEREF(__pyx_t_29);
     __Pyx_XGIVEREF(__pyx_t_28);
     __Pyx_XGIVEREF(__pyx_t_27);
     __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
     goto __pyx_L1_error;
-    __pyx_L180_exception_handled:;
+    __pyx_L184_exception_handled:;
     __Pyx_XGIVEREF(__pyx_t_29);
     __Pyx_XGIVEREF(__pyx_t_28);
     __Pyx_XGIVEREF(__pyx_t_27);
     __Pyx_ExceptionReset(__pyx_t_29, __pyx_t_28, __pyx_t_27);
-    __pyx_L184_try_end:;
+    __pyx_L188_try_end:;
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":445
+  /* "MUSCython/MSBWTCompGenCython.pyx":464
  * 
  * 
  *     logger.info('Final output saved to \''+bwtFN+'\'.')             # <<<<<<<<<<<<<<
  *     totalEndTime = time.time()
  *     logger.info('Finished all iterations in '+str(totalEndTime-totalStartTime)+' seconds.')
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 445, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Final_output_saved_to, __pyx_v_bwtFN); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 445, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_13 = PyNumber_Add(__pyx_t_2, __pyx_kp_s__13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 445, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = NULL;
+  __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Final_output_saved_to, __pyx_v_bwtFN); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_14 = PyNumber_Add(__pyx_t_1, __pyx_kp_s__13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_14);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = NULL;
   __pyx_t_4 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_2);
+  if (likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_1)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
       __pyx_t_4 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_t_13};
-    __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 445, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_t_14};
+    __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_2, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+    if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 464, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":446
+  /* "MUSCython/MSBWTCompGenCython.pyx":465
  * 
  *     logger.info('Final output saved to \''+bwtFN+'\'.')
  *     totalEndTime = time.time()             # <<<<<<<<<<<<<<
  *     logger.info('Finished all iterations in '+str(totalEndTime-totalStartTime)+' seconds.')
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 446, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_time); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 446, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = NULL;
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 465, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 465, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_14);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = NULL;
   __pyx_t_4 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (unlikely(PyMethod_Check(__pyx_t_13))) {
-    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_13);
-    if (likely(__pyx_t_1)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
-      __Pyx_INCREF(__pyx_t_1);
+  if (unlikely(PyMethod_Check(__pyx_t_14))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_14);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
+      __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_13, function);
+      __Pyx_DECREF_SET(__pyx_t_14, function);
       __pyx_t_4 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_1, NULL};
-    __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 446, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    PyObject *__pyx_callargs[2] = {__pyx_t_2, NULL};
+    __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 0+__pyx_t_4);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 465, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
   }
-  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_14); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 446, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_13); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 465, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   __pyx_v_totalEndTime = __pyx_t_5;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":447
+  /* "MUSCython/MSBWTCompGenCython.pyx":466
  *     logger.info('Final output saved to \''+bwtFN+'\'.')
  *     totalEndTime = time.time()
  *     logger.info('Finished all iterations in '+str(totalEndTime-totalStartTime)+' seconds.')             # <<<<<<<<<<<<<<
  * 
  * def iterateMsbwtCreate(tuple tup):
  */
-  __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 447, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_1 = PyFloat_FromDouble((__pyx_v_totalEndTime - __pyx_v_totalStartTime)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 447, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Str(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 447, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_logger, __pyx_n_s_info); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_14);
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_v_totalEndTime - __pyx_v_totalStartTime)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Add(__pyx_kp_s_Finished_all_iterations_in, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 447, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Str(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_t_1, __pyx_kp_s_seconds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 447, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_kp_s_Finished_all_iterations_in, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 466, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = NULL;
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_kp_s_seconds); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = NULL;
   __pyx_t_4 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (likely(PyMethod_Check(__pyx_t_13))) {
-    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_13);
-    if (likely(__pyx_t_1)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
-      __Pyx_INCREF(__pyx_t_1);
+  if (likely(PyMethod_Check(__pyx_t_14))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_14);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
+      __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_13, function);
+      __Pyx_DECREF_SET(__pyx_t_14, function);
       __pyx_t_4 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_1, __pyx_t_2};
-    __pyx_t_14 = __Pyx_PyObject_FastCall(__pyx_t_13, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 447, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_t_1};
+    __pyx_t_13 = __Pyx_PyObject_FastCall(__pyx_t_14, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 466, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
   }
-  __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
   /* "MUSCython/MSBWTCompGenCython.pyx":36
  * import MSBWTGenCython as MSBWTGen
@@ -27051,7 +27213,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_createMsbwtFromSeqs(CY
   return __pyx_r;
 }
 
-/* "MUSCython/MSBWTCompGenCython.pyx":449
+/* "MUSCython/MSBWTCompGenCython.pyx":468
  *     logger.info('Finished all iterations in '+str(totalEndTime-totalStartTime)+' seconds.')
  * 
  * def iterateMsbwtCreate(tuple tup):             # <<<<<<<<<<<<<<
@@ -27113,12 +27275,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 449, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 468, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "iterateMsbwtCreate") < 0)) __PYX_ERR(0, 449, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "iterateMsbwtCreate") < 0)) __PYX_ERR(0, 468, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 1)) {
       goto __pyx_L5_argtuple_error;
@@ -27129,7 +27291,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("iterateMsbwtCreate", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 449, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("iterateMsbwtCreate", 1, 1, 1, __pyx_nargs); __PYX_ERR(0, 468, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -27143,7 +27305,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_tup), (&PyTuple_Type), 1, "tup", 1))) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_tup), (&PyTuple_Type), 1, "tup", 1))) __PYX_ERR(0, 468, __pyx_L1_error)
   __pyx_r = __pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(__pyx_self, __pyx_v_tup);
 
   /* function exit code */
@@ -27318,7 +27480,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   __pyx_pybuffernd_currSeqs.data = NULL;
   __pyx_pybuffernd_currSeqs.rcbuffer = &__pyx_pybuffer_currSeqs;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":463
+  /* "MUSCython/MSBWTCompGenCython.pyx":482
  *     cdef unsigned long column
  *     #(idChar, fmIndex, prevFmDelta, fmEndex, insertionFNs, currentSymbolFN, nextSymbolFN, bwtDir, column, nextSeqFN) = tup
  *     (idChar, fmIndex, prevFmDelta, insertionFNs, currentSymbolFN, nextSymbolFN, bwtDir, column, nextSeqFN) = tup             # <<<<<<<<<<<<<<
@@ -27331,7 +27493,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     if (unlikely(size != 9)) {
       if (size > 9) __Pyx_RaiseTooManyValuesError(9);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 463, __pyx_L1_error)
+      __PYX_ERR(0, 482, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     __pyx_t_1 = PyTuple_GET_ITEM(sequence, 0); 
@@ -27357,20 +27519,20 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       Py_ssize_t i;
       PyObject** temps[9] = {&__pyx_t_1,&__pyx_t_2,&__pyx_t_3,&__pyx_t_4,&__pyx_t_5,&__pyx_t_6,&__pyx_t_7,&__pyx_t_8,&__pyx_t_9};
       for (i=0; i < 9; i++) {
-        PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 463, __pyx_L1_error)
+        PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) __PYX_ERR(0, 482, __pyx_L1_error)
         __Pyx_GOTREF(item);
         *(temps[i]) = item;
       }
     }
     #endif
   } else {
-    __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 463, __pyx_L1_error)
+    __Pyx_RaiseNoneNotIterableError(); __PYX_ERR(0, 482, __pyx_L1_error)
   }
-  __pyx_t_10 = __Pyx_PyInt_As_npy_uint8(__pyx_t_1); if (unlikely((__pyx_t_10 == ((npy_uint8)-1)) && PyErr_Occurred())) __PYX_ERR(0, 463, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyInt_As_npy_uint8(__pyx_t_1); if (unlikely((__pyx_t_10 == ((npy_uint8)-1)) && PyErr_Occurred())) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 463, __pyx_L1_error)
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 463, __pyx_L1_error)
-  __pyx_t_11 = __Pyx_PyInt_As_unsigned_long(__pyx_t_8); if (unlikely((__pyx_t_11 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 463, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 482, __pyx_L1_error)
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 482, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyInt_As_unsigned_long(__pyx_t_8); if (unlikely((__pyx_t_11 == (unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __pyx_v_idChar = __pyx_t_10;
   __pyx_t_12 = ((PyArrayObject *)__pyx_t_2);
@@ -27389,7 +27551,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       __pyx_t_14 = __pyx_t_15 = __pyx_t_16 = 0;
     }
     __pyx_pybuffernd_fmIndex.diminfo[0].strides = __pyx_pybuffernd_fmIndex.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_fmIndex.diminfo[0].shape = __pyx_pybuffernd_fmIndex.rcbuffer->pybuffer.shape[0];
-    if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 463, __pyx_L1_error)
+    if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 482, __pyx_L1_error)
   }
   __pyx_t_12 = 0;
   __pyx_v_fmIndex = ((PyArrayObject *)__pyx_t_2);
@@ -27410,7 +27572,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       __pyx_t_16 = __pyx_t_15 = __pyx_t_14 = 0;
     }
     __pyx_pybuffernd_prevFmDelta.diminfo[0].strides = __pyx_pybuffernd_prevFmDelta.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_prevFmDelta.diminfo[0].shape = __pyx_pybuffernd_prevFmDelta.rcbuffer->pybuffer.shape[0];
-    if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 463, __pyx_L1_error)
+    if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 482, __pyx_L1_error)
   }
   __pyx_t_17 = 0;
   __pyx_v_prevFmDelta = ((PyArrayObject *)__pyx_t_3);
@@ -27427,31 +27589,31 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   __pyx_v_nextSeqFN = __pyx_t_9;
   __pyx_t_9 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":464
+  /* "MUSCython/MSBWTCompGenCython.pyx":483
  *     #(idChar, fmIndex, prevFmDelta, fmEndex, insertionFNs, currentSymbolFN, nextSymbolFN, bwtDir, column, nextSeqFN) = tup
  *     (idChar, fmIndex, prevFmDelta, insertionFNs, currentSymbolFN, nextSymbolFN, bwtDir, column, nextSeqFN) = tup
  *     fmIndex_view = fmIndex             # <<<<<<<<<<<<<<
  *     #fmEndex_view = fmEndex
  *     prevFmDelta_view = prevFmDelta
  */
-  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmIndex), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmIndex), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 483, __pyx_L1_error)
   __pyx_v_fmIndex_view = __pyx_t_18;
   __pyx_t_18.memview = NULL;
   __pyx_t_18.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":466
+  /* "MUSCython/MSBWTCompGenCython.pyx":485
  *     fmIndex_view = fmIndex
  *     #fmEndex_view = fmEndex
  *     prevFmDelta_view = prevFmDelta             # <<<<<<<<<<<<<<
  * 
  *     #hardcoded
  */
-  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_prevFmDelta), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_prevFmDelta), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 485, __pyx_L1_error)
   __pyx_v_prevFmDelta_view = __pyx_t_18;
   __pyx_t_18.memview = NULL;
   __pyx_t_18.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":469
+  /* "MUSCython/MSBWTCompGenCython.pyx":488
  * 
  *     #hardcoded
  *     cdef unsigned int numValidChars = 6             # <<<<<<<<<<<<<<
@@ -27460,46 +27622,46 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
   __pyx_v_numValidChars = 6;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":472
+  /* "MUSCython/MSBWTCompGenCython.pyx":491
  * 
  *     #this stores the number of symbols we find in our range
  *     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fmDeltas = np.zeros(dtype='<u8', shape=(numValidChars, numValidChars))             # <<<<<<<<<<<<<<
  *     cdef np.uint64_t [:, :] fmDeltas_view = fmDeltas
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_zeros); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_zeros); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 472, __pyx_L1_error)
-  __pyx_t_7 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 472, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 491, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_6 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 472, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_6);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_6)) __PYX_ERR(0, 472, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_6)) __PYX_ERR(0, 491, __pyx_L1_error);
   __pyx_t_7 = 0;
   __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_shape, __pyx_t_5) < 0) __PYX_ERR(0, 472, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_shape, __pyx_t_5) < 0) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_empty_tuple, __pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_empty_tuple, __pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 472, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 491, __pyx_L1_error)
   __pyx_t_19 = ((PyArrayObject *)__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer, (PyObject*)__pyx_t_19, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_fmDeltas = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 472, __pyx_L1_error)
+      __PYX_ERR(0, 491, __pyx_L1_error)
     } else {__pyx_pybuffernd_fmDeltas.diminfo[0].strides = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_fmDeltas.diminfo[0].shape = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_fmDeltas.diminfo[1].strides = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_fmDeltas.diminfo[1].shape = __pyx_pybuffernd_fmDeltas.rcbuffer->pybuffer.shape[1];
     }
   }
@@ -27507,19 +27669,19 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   __pyx_v_fmDeltas = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":473
+  /* "MUSCython/MSBWTCompGenCython.pyx":492
  *     #this stores the number of symbols we find in our range
  *     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fmDeltas = np.zeros(dtype='<u8', shape=(numValidChars, numValidChars))
  *     cdef np.uint64_t [:, :] fmDeltas_view = fmDeltas             # <<<<<<<<<<<<<<
  * 
  *     #the input partial BWT for suffixes starting with 'idChar'
  */
-  __pyx_t_20 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmDeltas), PyBUF_WRITABLE); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_20 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_fmDeltas), PyBUF_WRITABLE); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 492, __pyx_L1_error)
   __pyx_v_fmDeltas_view = __pyx_t_20;
   __pyx_t_20.memview = NULL;
   __pyx_t_20.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":477
+  /* "MUSCython/MSBWTCompGenCython.pyx":496
  *     #the input partial BWT for suffixes starting with 'idChar'
  *     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBwt
  *     try:             # <<<<<<<<<<<<<<
@@ -27535,16 +27697,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     __Pyx_XGOTREF(__pyx_t_16);
     /*try:*/ {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":479
+      /* "MUSCython/MSBWTCompGenCython.pyx":498
  *     try:
  *         #TODO: make an "all-in-memory" version of this at some point, it's likely to actually fit on many machines
  *         currentBwt = np.memmap(currentSymbolFN, '<u1', 'r+')             # <<<<<<<<<<<<<<
  *         #currentBwt = np.fromfile(currentSymbolFN, '<u1')
  *     except ValueError as e:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 479, __pyx_L3_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 498, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_memmap); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 479, __pyx_L3_error)
+      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_memmap); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 498, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -27565,11 +27727,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         PyObject *__pyx_callargs[4] = {__pyx_t_9, __pyx_v_currentSymbolFN, __pyx_kp_s_u1, __pyx_kp_s_r};
         __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_8, __pyx_callargs+1-__pyx_t_21, 3+__pyx_t_21);
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 479, __pyx_L3_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 498, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       }
-      if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 479, __pyx_L3_error)
+      if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 498, __pyx_L3_error)
       __pyx_t_22 = ((PyArrayObject *)__pyx_t_5);
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -27586,13 +27748,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_23 = __pyx_t_24 = __pyx_t_25 = 0;
         }
         __pyx_pybuffernd_currentBwt.diminfo[0].strides = __pyx_pybuffernd_currentBwt.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_currentBwt.diminfo[0].shape = __pyx_pybuffernd_currentBwt.rcbuffer->pybuffer.shape[0];
-        if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 479, __pyx_L3_error)
+        if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 498, __pyx_L3_error)
       }
       __pyx_t_22 = 0;
       __pyx_v_currentBwt = ((PyArrayObject *)__pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":477
+      /* "MUSCython/MSBWTCompGenCython.pyx":496
  *     #the input partial BWT for suffixes starting with 'idChar'
  *     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBwt
  *     try:             # <<<<<<<<<<<<<<
@@ -27619,7 +27781,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":481
+    /* "MUSCython/MSBWTCompGenCython.pyx":500
  *         currentBwt = np.memmap(currentSymbolFN, '<u1', 'r+')
  *         #currentBwt = np.fromfile(currentSymbolFN, '<u1')
  *     except ValueError as e:             # <<<<<<<<<<<<<<
@@ -27629,58 +27791,58 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     __pyx_t_13 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ValueError);
     if (__pyx_t_13) {
       __Pyx_AddTraceback("MUSCython.MSBWTCompGenCython.iterateMsbwtCreate", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 481, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 500, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_5);
       __Pyx_XGOTREF(__pyx_t_8);
       __Pyx_XGOTREF(__pyx_t_9);
       __Pyx_INCREF(__pyx_t_8);
       __pyx_v_e = __pyx_t_8;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":482
+      /* "MUSCython/MSBWTCompGenCython.pyx":501
  *         #currentBwt = np.fromfile(currentSymbolFN, '<u1')
  *     except ValueError as e:
  *         if str(e) == 'cannot mmap an empty file' or str(e) == 'mmap offset is greater than file size':             # <<<<<<<<<<<<<<
  *             #this is normal behavior during early iterations, make a dummy array just to get the code running
  *             currentBwt = np.zeros(dtype='<u1', shape=(0, ))
  */
-      __pyx_t_6 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 482, __pyx_L5_except_error)
+      __pyx_t_6 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 501, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_27 = (__Pyx_PyString_Equals(__pyx_t_6, __pyx_kp_s_cannot_mmap_an_empty_file, Py_EQ)); if (unlikely((__pyx_t_27 < 0))) __PYX_ERR(0, 482, __pyx_L5_except_error)
+      __pyx_t_27 = (__Pyx_PyString_Equals(__pyx_t_6, __pyx_kp_s_cannot_mmap_an_empty_file, Py_EQ)); if (unlikely((__pyx_t_27 < 0))) __PYX_ERR(0, 501, __pyx_L5_except_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (!__pyx_t_27) {
       } else {
         __pyx_t_26 = __pyx_t_27;
         goto __pyx_L12_bool_binop_done;
       }
-      __pyx_t_6 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 482, __pyx_L5_except_error)
+      __pyx_t_6 = __Pyx_PyObject_Str(__pyx_v_e); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 501, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_27 = (__Pyx_PyString_Equals(__pyx_t_6, __pyx_kp_s_mmap_offset_is_greater_than_file, Py_EQ)); if (unlikely((__pyx_t_27 < 0))) __PYX_ERR(0, 482, __pyx_L5_except_error)
+      __pyx_t_27 = (__Pyx_PyString_Equals(__pyx_t_6, __pyx_kp_s_mmap_offset_is_greater_than_file, Py_EQ)); if (unlikely((__pyx_t_27 < 0))) __PYX_ERR(0, 501, __pyx_L5_except_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_t_26 = __pyx_t_27;
       __pyx_L12_bool_binop_done:;
       if (likely(__pyx_t_26)) {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":484
+        /* "MUSCython/MSBWTCompGenCython.pyx":503
  *         if str(e) == 'cannot mmap an empty file' or str(e) == 'mmap offset is greater than file size':
  *             #this is normal behavior during early iterations, make a dummy array just to get the code running
  *             currentBwt = np.zeros(dtype='<u1', shape=(0, ))             # <<<<<<<<<<<<<<
  *         else:
  *             raise e
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 484, __pyx_L5_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 503, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_zeros); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 484, __pyx_L5_except_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_zeros); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 503, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 484, __pyx_L5_except_error)
+        __pyx_t_6 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 503, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 484, __pyx_L5_except_error)
-        if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 484, __pyx_L5_except_error)
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L5_except_error)
+        if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_kp_s_u1) < 0) __PYX_ERR(0, 503, __pyx_L5_except_error)
+        if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_shape, __pyx_tuple__12) < 0) __PYX_ERR(0, 503, __pyx_L5_except_error)
+        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 503, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 484, __pyx_L5_except_error)
+        if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 503, __pyx_L5_except_error)
         __pyx_t_22 = ((PyArrayObject *)__pyx_t_4);
         {
           __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -27697,13 +27859,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
             __pyx_t_25 = __pyx_t_24 = __pyx_t_23 = 0;
           }
           __pyx_pybuffernd_currentBwt.diminfo[0].strides = __pyx_pybuffernd_currentBwt.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_currentBwt.diminfo[0].shape = __pyx_pybuffernd_currentBwt.rcbuffer->pybuffer.shape[0];
-          if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 484, __pyx_L5_except_error)
+          if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 503, __pyx_L5_except_error)
         }
         __pyx_t_22 = 0;
         __Pyx_XDECREF_SET(__pyx_v_currentBwt, ((PyArrayObject *)__pyx_t_4));
         __pyx_t_4 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":482
+        /* "MUSCython/MSBWTCompGenCython.pyx":501
  *         #currentBwt = np.fromfile(currentSymbolFN, '<u1')
  *     except ValueError as e:
  *         if str(e) == 'cannot mmap an empty file' or str(e) == 'mmap offset is greater than file size':             # <<<<<<<<<<<<<<
@@ -27713,7 +27875,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         goto __pyx_L11;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":486
+      /* "MUSCython/MSBWTCompGenCython.pyx":505
  *             currentBwt = np.zeros(dtype='<u1', shape=(0, ))
  *         else:
  *             raise e             # <<<<<<<<<<<<<<
@@ -27722,7 +27884,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
       /*else*/ {
         __Pyx_Raise(__pyx_v_e, 0, 0, 0);
-        __PYX_ERR(0, 486, __pyx_L5_except_error)
+        __PYX_ERR(0, 505, __pyx_L5_except_error)
       }
       __pyx_L11:;
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -27732,7 +27894,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     }
     goto __pyx_L5_except_error;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":477
+    /* "MUSCython/MSBWTCompGenCython.pyx":496
  *     #the input partial BWT for suffixes starting with 'idChar'
  *     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBwt
  *     try:             # <<<<<<<<<<<<<<
@@ -27753,65 +27915,65 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     __pyx_L8_try_end:;
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":488
+  /* "MUSCython/MSBWTCompGenCython.pyx":507
  *             raise e
  * 
  *     cdef np.uint8_t [:] currentBwt_view = currentBwt             # <<<<<<<<<<<<<<
  * 
  *     #the output partial BWT for suffixes starting with 'idChar'
  */
-  __pyx_t_28 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_currentBwt), PyBUF_WRITABLE); if (unlikely(!__pyx_t_28.memview)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_28 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_currentBwt), PyBUF_WRITABLE); if (unlikely(!__pyx_t_28.memview)) __PYX_ERR(0, 507, __pyx_L1_error)
   __pyx_v_currentBwt_view = __pyx_t_28;
   __pyx_t_28.memview = NULL;
   __pyx_t_28.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":503
+  /* "MUSCython/MSBWTCompGenCython.pyx":522
  * 
  *     #These values contain the numpy arrays for the new inserts, created below
  *     outputInserts = []             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] outputInsertPointers = np.zeros(dtype='<u8', shape=(numValidChars, ))
  *     cdef np.uint64_t [:] outputInsertPointers_view = outputInsertPointers
  */
-  __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 522, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __pyx_v_outputInserts = ((PyObject*)__pyx_t_9);
   __pyx_t_9 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":504
+  /* "MUSCython/MSBWTCompGenCython.pyx":523
  *     #These values contain the numpy arrays for the new inserts, created below
  *     outputInserts = []
  *     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] outputInsertPointers = np.zeros(dtype='<u8', shape=(numValidChars, ))             # <<<<<<<<<<<<<<
  *     cdef np.uint64_t [:] outputInsertPointers_view = outputInsertPointers
  *     cdef np.uint64_t * outputInsert_p
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_zeros); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_zeros); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 504, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 523, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_5);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 504, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5)) __PYX_ERR(0, 523, __pyx_L1_error);
   __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 504, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_shape, __pyx_t_4) < 0) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_empty_tuple, __pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_empty_tuple, __pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 504, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 523, __pyx_L1_error)
   __pyx_t_29 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_outputInsertPointers.rcbuffer->pybuffer, (PyObject*)__pyx_t_29, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_outputInsertPointers = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_outputInsertPointers.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 504, __pyx_L1_error)
+      __PYX_ERR(0, 523, __pyx_L1_error)
     } else {__pyx_pybuffernd_outputInsertPointers.diminfo[0].strides = __pyx_pybuffernd_outputInsertPointers.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_outputInsertPointers.diminfo[0].shape = __pyx_pybuffernd_outputInsertPointers.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -27819,53 +27981,53 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   __pyx_v_outputInsertPointers = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":505
+  /* "MUSCython/MSBWTCompGenCython.pyx":524
  *     outputInserts = []
  *     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] outputInsertPointers = np.zeros(dtype='<u8', shape=(numValidChars, ))
  *     cdef np.uint64_t [:] outputInsertPointers_view = outputInsertPointers             # <<<<<<<<<<<<<<
  *     cdef np.uint64_t * outputInsert_p
  * 
  */
-  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_outputInsertPointers), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 505, __pyx_L1_error)
+  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_outputInsertPointers), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 524, __pyx_L1_error)
   __pyx_v_outputInsertPointers_view = __pyx_t_18;
   __pyx_t_18.memview = NULL;
   __pyx_t_18.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":509
+  /* "MUSCython/MSBWTCompGenCython.pyx":528
  * 
  *     #these indices will be used for knowing where we are in the outputs
  *     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] outputInsertIndices = np.zeros(dtype='<u8', shape=(numValidChars, ))             # <<<<<<<<<<<<<<
  *     cdef np.uint64_t [:] outputInsertIndices_view = outputInsertIndices
  *     cdef np.uint64_t ind
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 509, __pyx_L1_error)
-  __pyx_t_8 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 509, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_kp_s_u8) < 0) __PYX_ERR(0, 528, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_unsigned_int(__pyx_v_numValidChars); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_8);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_8)) __PYX_ERR(0, 509, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_8)) __PYX_ERR(0, 528, __pyx_L1_error);
   __pyx_t_8 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_shape, __pyx_t_5) < 0) __PYX_ERR(0, 509, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_shape, __pyx_t_5) < 0) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_empty_tuple, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_empty_tuple, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 509, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 528, __pyx_L1_error)
   __pyx_t_30 = ((PyArrayObject *)__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_outputInsertIndices.rcbuffer->pybuffer, (PyObject*)__pyx_t_30, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint64_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_outputInsertIndices = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_outputInsertIndices.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 509, __pyx_L1_error)
+      __PYX_ERR(0, 528, __pyx_L1_error)
     } else {__pyx_pybuffernd_outputInsertIndices.diminfo[0].strides = __pyx_pybuffernd_outputInsertIndices.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_outputInsertIndices.diminfo[0].shape = __pyx_pybuffernd_outputInsertIndices.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -27873,28 +28035,28 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   __pyx_v_outputInsertIndices = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":510
+  /* "MUSCython/MSBWTCompGenCython.pyx":529
  *     #these indices will be used for knowing where we are in the outputs
  *     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] outputInsertIndices = np.zeros(dtype='<u8', shape=(numValidChars, ))
  *     cdef np.uint64_t [:] outputInsertIndices_view = outputInsertIndices             # <<<<<<<<<<<<<<
  *     cdef np.uint64_t ind
  * 
  */
-  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_outputInsertIndices), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_outputInsertIndices), PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 529, __pyx_L1_error)
   __pyx_v_outputInsertIndices_view = __pyx_t_18;
   __pyx_t_18.memview = NULL;
   __pyx_t_18.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":518
+  /* "MUSCython/MSBWTCompGenCython.pyx":537
  * 
  *     #the symbols we are noting as being inserted next
  *     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currSeqs = np.load(nextSeqFN, 'r+')             # <<<<<<<<<<<<<<
  *     cdef np.uint8_t [:] currSeqs_view = currSeqs
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_load); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -27915,17 +28077,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     PyObject *__pyx_callargs[3] = {__pyx_t_4, __pyx_v_nextSeqFN, __pyx_kp_s_r};
     __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+1-__pyx_t_21, 2+__pyx_t_21);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 518, __pyx_L1_error)
+    if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 537, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   }
-  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 518, __pyx_L1_error)
+  if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 537, __pyx_L1_error)
   __pyx_t_31 = ((PyArrayObject *)__pyx_t_5);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_currSeqs.rcbuffer->pybuffer, (PyObject*)__pyx_t_31, &__Pyx_TypeInfo_nn___pyx_t_5numpy_uint8_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_currSeqs = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_currSeqs.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 518, __pyx_L1_error)
+      __PYX_ERR(0, 537, __pyx_L1_error)
     } else {__pyx_pybuffernd_currSeqs.diminfo[0].strides = __pyx_pybuffernd_currSeqs.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_currSeqs.diminfo[0].shape = __pyx_pybuffernd_currSeqs.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -27933,19 +28095,19 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   __pyx_v_currSeqs = ((PyArrayObject *)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":519
+  /* "MUSCython/MSBWTCompGenCython.pyx":538
  *     #the symbols we are noting as being inserted next
  *     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currSeqs = np.load(nextSeqFN, 'r+')
  *     cdef np.uint8_t [:] currSeqs_view = currSeqs             # <<<<<<<<<<<<<<
  * 
  *     #extra variables for counting the number of symbols of each type
  */
-  __pyx_t_28 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_currSeqs), PyBUF_WRITABLE); if (unlikely(!__pyx_t_28.memview)) __PYX_ERR(0, 519, __pyx_L1_error)
+  __pyx_t_28 = __Pyx_PyObject_to_MemoryviewSlice_ds_nn___pyx_t_5numpy_uint8_t(((PyObject *)__pyx_v_currSeqs), PyBUF_WRITABLE); if (unlikely(!__pyx_t_28.memview)) __PYX_ERR(0, 538, __pyx_L1_error)
   __pyx_v_currSeqs_view = __pyx_t_28;
   __pyx_t_28.memview = NULL;
   __pyx_t_28.data = NULL;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":522
+  /* "MUSCython/MSBWTCompGenCython.pyx":541
  * 
  *     #extra variables for counting the number of symbols of each type
  *     cdef unsigned long readBufferSymbol = 0             # <<<<<<<<<<<<<<
@@ -27954,7 +28116,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
   __pyx_v_readBufferSymbol = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":523
+  /* "MUSCython/MSBWTCompGenCython.pyx":542
  *     #extra variables for counting the number of symbols of each type
  *     cdef unsigned long readBufferSymbol = 0
  *     cdef unsigned long readBufferCount = 0             # <<<<<<<<<<<<<<
@@ -27963,7 +28125,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
   __pyx_v_readBufferCount = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":524
+  /* "MUSCython/MSBWTCompGenCython.pyx":543
  *     cdef unsigned long readBufferSymbol = 0
  *     cdef unsigned long readBufferCount = 0
  *     cdef unsigned long readBufferPower = 0             # <<<<<<<<<<<<<<
@@ -27972,7 +28134,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
   __pyx_v_readBufferPower = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":526
+  /* "MUSCython/MSBWTCompGenCython.pyx":545
  *     cdef unsigned long readBufferPower = 0
  * 
  *     cdef unsigned long writeBufferSymbol = 0             # <<<<<<<<<<<<<<
@@ -27981,7 +28143,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
   __pyx_v_writeBufferSymbol = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":527
+  /* "MUSCython/MSBWTCompGenCython.pyx":546
  * 
  *     cdef unsigned long writeBufferSymbol = 0
  *     cdef unsigned long writeBufferCount = 0             # <<<<<<<<<<<<<<
@@ -27990,7 +28152,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
   __pyx_v_writeBufferCount = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":529
+  /* "MUSCython/MSBWTCompGenCython.pyx":548
  *     cdef unsigned long writeBufferCount = 0
  * 
  *     cdef np.uint8_t writeValue = 0             # <<<<<<<<<<<<<<
@@ -27999,49 +28161,49 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
   __pyx_v_writeValue = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":531
+  /* "MUSCython/MSBWTCompGenCython.pyx":550
  *     cdef np.uint8_t writeValue = 0
  * 
  *     retFNs = [None]*numValidChars             # <<<<<<<<<<<<<<
  * 
  *     if len(insertionFNs) == 0:
  */
-  __pyx_t_5 = PyList_New(1 * (__pyx_v_numValidChars)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 531, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(1 * (__pyx_v_numValidChars)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   { Py_ssize_t __pyx_temp;
     for (__pyx_temp=0; __pyx_temp < __pyx_v_numValidChars; __pyx_temp++) {
       __Pyx_INCREF(Py_None);
       __Pyx_GIVEREF(Py_None);
-      if (__Pyx_PyList_SET_ITEM(__pyx_t_5, __pyx_temp, Py_None)) __PYX_ERR(0, 531, __pyx_L1_error);
+      if (__Pyx_PyList_SET_ITEM(__pyx_t_5, __pyx_temp, Py_None)) __PYX_ERR(0, 550, __pyx_L1_error);
     }
   }
   __pyx_v_retFNs = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":533
+  /* "MUSCython/MSBWTCompGenCython.pyx":552
  *     retFNs = [None]*numValidChars
  * 
  *     if len(insertionFNs) == 0:             # <<<<<<<<<<<<<<
  *         #we don't need to do anything except rename our file
  *         if os.path.exists(currentSymbolFN):
  */
-  __pyx_t_32 = PyObject_Length(__pyx_v_insertionFNs); if (unlikely(__pyx_t_32 == ((Py_ssize_t)-1))) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_32 = PyObject_Length(__pyx_v_insertionFNs); if (unlikely(__pyx_t_32 == ((Py_ssize_t)-1))) __PYX_ERR(0, 552, __pyx_L1_error)
   __pyx_t_26 = (__pyx_t_32 == 0);
   if (__pyx_t_26) {
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":535
+    /* "MUSCython/MSBWTCompGenCython.pyx":554
  *     if len(insertionFNs) == 0:
  *         #we don't need to do anything except rename our file
  *         if os.path.exists(currentSymbolFN):             # <<<<<<<<<<<<<<
  *             #os.rename(currentSymbolFN, nextSymbolFN)
  *             shutil.copyfile(currentSymbolFN, nextSymbolFN)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_os); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 535, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_os); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 535, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 535, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -28062,24 +28224,24 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_currentSymbolFN};
       __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+1-__pyx_t_21, 1+__pyx_t_21);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 535, __pyx_L1_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 554, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     }
-    __pyx_t_26 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 535, __pyx_L1_error)
+    __pyx_t_26 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely((__pyx_t_26 < 0))) __PYX_ERR(0, 554, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_26) {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":537
+      /* "MUSCython/MSBWTCompGenCython.pyx":556
  *         if os.path.exists(currentSymbolFN):
  *             #os.rename(currentSymbolFN, nextSymbolFN)
  *             shutil.copyfile(currentSymbolFN, nextSymbolFN)             # <<<<<<<<<<<<<<
  *     else:
  *         #first, open the file for output
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_shutil); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 537, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_shutil); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 556, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_copyfile); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 537, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_copyfile); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 556, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -28100,13 +28262,13 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         PyObject *__pyx_callargs[3] = {__pyx_t_9, __pyx_v_currentSymbolFN, __pyx_v_nextSymbolFN};
         __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_21, 2+__pyx_t_21);
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 537, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 556, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":535
+      /* "MUSCython/MSBWTCompGenCython.pyx":554
  *     if len(insertionFNs) == 0:
  *         #we don't need to do anything except rename our file
  *         if os.path.exists(currentSymbolFN):             # <<<<<<<<<<<<<<
@@ -28115,7 +28277,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":533
+    /* "MUSCython/MSBWTCompGenCython.pyx":552
  *     retFNs = [None]*numValidChars
  * 
  *     if len(insertionFNs) == 0:             # <<<<<<<<<<<<<<
@@ -28125,18 +28287,18 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     goto __pyx_L14;
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":540
- *     else:
- *         #first, open the file for output
- *         nextBwtFP = fopen(nextSymbolFN, 'w+')             # <<<<<<<<<<<<<<
+  /* "MUSCython/MSBWTCompGenCython.pyx":561
+ *         # binary mode: see the note at the state-file creation above
+ *         # (Windows text mode would corrupt 0x0A bytes in the BWT data).
+ *         nextBwtFP = fopen(nextSymbolFN, 'w+b')             # <<<<<<<<<<<<<<
  * 
  *         #allocate a numpy array for each new insert file
  */
   /*else*/ {
-    __pyx_t_33 = __Pyx_PyObject_AsString(__pyx_v_nextSymbolFN); if (unlikely((!__pyx_t_33) && PyErr_Occurred())) __PYX_ERR(0, 540, __pyx_L1_error)
-    __pyx_v_nextBwtFP = fopen(__pyx_t_33, ((char const *)"w+"));
+    __pyx_t_33 = __Pyx_PyObject_AsString(__pyx_v_nextSymbolFN); if (unlikely((!__pyx_t_33) && PyErr_Occurred())) __PYX_ERR(0, 561, __pyx_L1_error)
+    __pyx_v_nextBwtFP = fopen(__pyx_t_33, ((char const *)"w+b"));
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":543
+    /* "MUSCython/MSBWTCompGenCython.pyx":564
  * 
  *         #allocate a numpy array for each new insert file
  *         for c in range(0, numValidChars):             # <<<<<<<<<<<<<<
@@ -28148,7 +28310,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_34; __pyx_t_10+=1) {
       __pyx_v_c = __pyx_t_10;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":544
+      /* "MUSCython/MSBWTCompGenCython.pyx":565
  *         #allocate a numpy array for each new insert file
  *         for c in range(0, numValidChars):
  *             if prevFmDelta_view[c] == 0:             # <<<<<<<<<<<<<<
@@ -28159,16 +28321,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       __pyx_t_26 = ((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_prevFmDelta_view.data + __pyx_t_35 * __pyx_v_prevFmDelta_view.strides[0]) ))) == 0);
       if (__pyx_t_26) {
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":546
+        /* "MUSCython/MSBWTCompGenCython.pyx":567
  *             if prevFmDelta_view[c] == 0:
  *                 #nothing to insert from c
  *                 outputInserts.append(None)             # <<<<<<<<<<<<<<
  *             else:
  *                 #add the insert to our return
  */
-        __pyx_t_36 = __Pyx_PyList_Append(__pyx_v_outputInserts, Py_None); if (unlikely(__pyx_t_36 == ((int)-1))) __PYX_ERR(0, 546, __pyx_L1_error)
+        __pyx_t_36 = __Pyx_PyList_Append(__pyx_v_outputInserts, Py_None); if (unlikely(__pyx_t_36 == ((int)-1))) __PYX_ERR(0, 567, __pyx_L1_error)
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":544
+        /* "MUSCython/MSBWTCompGenCython.pyx":565
  *         #allocate a numpy array for each new insert file
  *         for c in range(0, numValidChars):
  *             if prevFmDelta_view[c] == 0:             # <<<<<<<<<<<<<<
@@ -28178,7 +28340,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         goto __pyx_L18;
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":549
+      /* "MUSCython/MSBWTCompGenCython.pyx":570
  *             else:
  *                 #add the insert to our return
  *                 newInsertFN = bwtDir+'/inserts.'+str(c)+str(idChar)+'.'+str(column+1)+'.npy'             # <<<<<<<<<<<<<<
@@ -28186,81 +28348,81 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  * 
  */
       /*else*/ {
-        __pyx_t_5 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_inserts_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_5 = PyNumber_Add(__pyx_v_bwtDir, __pyx_kp_s_inserts_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_4 = __Pyx_PyInt_From_npy_uint8(__pyx_v_c); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyInt_From_npy_uint8(__pyx_v_c); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_9 = __Pyx_PyObject_Str(__pyx_t_4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyObject_Str(__pyx_t_4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyNumber_Add(__pyx_t_5, __pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_4 = PyNumber_Add(__pyx_t_5, __pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __pyx_t_9 = __Pyx_PyInt_From_npy_uint8(__pyx_v_idChar); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyInt_From_npy_uint8(__pyx_v_idChar); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_5 = __Pyx_PyObject_Str(__pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_Str(__pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __pyx_t_9 = PyNumber_Add(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_9 = PyNumber_Add(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = PyNumber_Add(__pyx_t_9, __pyx_kp_s__2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_5 = PyNumber_Add(__pyx_t_9, __pyx_kp_s__2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __pyx_t_9 = __Pyx_PyInt_From_unsigned_long((__pyx_v_column + 1)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyInt_From_unsigned_long((__pyx_v_column + 1)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_4 = __Pyx_PyObject_Str(__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_Str(__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __pyx_t_9 = PyNumber_Add(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_9 = PyNumber_Add(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyNumber_Add(__pyx_t_9, __pyx_kp_s_npy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 549, __pyx_L1_error)
+        __pyx_t_4 = PyNumber_Add(__pyx_t_9, __pyx_kp_s_npy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 570, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __Pyx_XDECREF_SET(__pyx_v_newInsertFN, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":550
+        /* "MUSCython/MSBWTCompGenCython.pyx":571
  *                 #add the insert to our return
  *                 newInsertFN = bwtDir+'/inserts.'+str(c)+str(idChar)+'.'+str(column+1)+'.npy'
  *                 retFNs[c] = newInsertFN             # <<<<<<<<<<<<<<
  * 
  *                 #create the insert file, store pointers
  */
-        if (unlikely((__Pyx_SetItemInt(__pyx_v_retFNs, __pyx_v_c, __pyx_v_newInsertFN, __pyx_t_5numpy_uint8_t, 0, __Pyx_PyInt_From_npy_uint8, 1, 0, 0) < 0))) __PYX_ERR(0, 550, __pyx_L1_error)
+        if (unlikely((__Pyx_SetItemInt(__pyx_v_retFNs, __pyx_v_c, __pyx_v_newInsertFN, __pyx_t_5numpy_uint8_t, 0, __Pyx_PyInt_From_npy_uint8, 1, 0, 0) < 0))) __PYX_ERR(0, 571, __pyx_L1_error)
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":553
+        /* "MUSCython/MSBWTCompGenCython.pyx":574
  * 
  *                 #create the insert file, store pointers
  *                 newInsertArray = np.lib.format.open_memmap(newInsertFN, 'w+', '<u8', (prevFmDelta_view[c], 3))             # <<<<<<<<<<<<<<
  *                 newInsertArray_view = newInsertArray
  *                 outputInserts.append(newInsertArray)
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 553, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_np); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 574, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_lib); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 553, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_lib); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 574, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_format); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 553, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_format); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 574, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 553, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_open_memmap); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 574, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __pyx_t_35 = __pyx_v_c;
-        __pyx_t_9 = __Pyx_PyInt_From_npy_uint64((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_prevFmDelta_view.data + __pyx_t_35 * __pyx_v_prevFmDelta_view.strides[0]) )))); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 553, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyInt_From_npy_uint64((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_prevFmDelta_view.data + __pyx_t_35 * __pyx_v_prevFmDelta_view.strides[0]) )))); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 574, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 553, __pyx_L1_error)
+        __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 574, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_GIVEREF(__pyx_t_9);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_9)) __PYX_ERR(0, 553, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_9)) __PYX_ERR(0, 574, __pyx_L1_error);
         __Pyx_INCREF(__pyx_int_3);
         __Pyx_GIVEREF(__pyx_int_3);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_int_3)) __PYX_ERR(0, 553, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_int_3)) __PYX_ERR(0, 574, __pyx_L1_error);
         __pyx_t_9 = 0;
         __pyx_t_9 = NULL;
         __pyx_t_37 = 0;
@@ -28281,11 +28443,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_5, __pyx_callargs+1-__pyx_t_37, 4+__pyx_t_37);
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 553, __pyx_L1_error)
+          if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 574, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         }
-        if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 553, __pyx_L1_error)
+        if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 574, __pyx_L1_error)
         __pyx_t_38 = ((PyArrayObject *)__pyx_t_4);
         {
           __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -28302,35 +28464,35 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
             __pyx_t_16 = __pyx_t_15 = __pyx_t_14 = 0;
           }
           __pyx_pybuffernd_newInsertArray.diminfo[0].strides = __pyx_pybuffernd_newInsertArray.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_newInsertArray.diminfo[0].shape = __pyx_pybuffernd_newInsertArray.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_newInsertArray.diminfo[1].strides = __pyx_pybuffernd_newInsertArray.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_newInsertArray.diminfo[1].shape = __pyx_pybuffernd_newInsertArray.rcbuffer->pybuffer.shape[1];
-          if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 553, __pyx_L1_error)
+          if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 574, __pyx_L1_error)
         }
         __pyx_t_38 = 0;
         __Pyx_XDECREF_SET(__pyx_v_newInsertArray, ((PyArrayObject *)__pyx_t_4));
         __pyx_t_4 = 0;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":554
+        /* "MUSCython/MSBWTCompGenCython.pyx":575
  *                 #create the insert file, store pointers
  *                 newInsertArray = np.lib.format.open_memmap(newInsertFN, 'w+', '<u8', (prevFmDelta_view[c], 3))
  *                 newInsertArray_view = newInsertArray             # <<<<<<<<<<<<<<
  *                 outputInserts.append(newInsertArray)
  *                 outputInsertPointers_view[c] = <np.uint64_t> &(newInsertArray_view[0,0])
  */
-        __pyx_t_20 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_newInsertArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 554, __pyx_L1_error)
+        __pyx_t_20 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_newInsertArray), PyBUF_WRITABLE); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 575, __pyx_L1_error)
         __PYX_XCLEAR_MEMVIEW(&__pyx_v_newInsertArray_view, 1);
         __pyx_v_newInsertArray_view = __pyx_t_20;
         __pyx_t_20.memview = NULL;
         __pyx_t_20.data = NULL;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":555
+        /* "MUSCython/MSBWTCompGenCython.pyx":576
  *                 newInsertArray = np.lib.format.open_memmap(newInsertFN, 'w+', '<u8', (prevFmDelta_view[c], 3))
  *                 newInsertArray_view = newInsertArray
  *                 outputInserts.append(newInsertArray)             # <<<<<<<<<<<<<<
  *                 outputInsertPointers_view[c] = <np.uint64_t> &(newInsertArray_view[0,0])
  * 
  */
-        __pyx_t_36 = __Pyx_PyList_Append(__pyx_v_outputInserts, ((PyObject *)__pyx_v_newInsertArray)); if (unlikely(__pyx_t_36 == ((int)-1))) __PYX_ERR(0, 555, __pyx_L1_error)
+        __pyx_t_36 = __Pyx_PyList_Append(__pyx_v_outputInserts, ((PyObject *)__pyx_v_newInsertArray)); if (unlikely(__pyx_t_36 == ((int)-1))) __PYX_ERR(0, 576, __pyx_L1_error)
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":556
+        /* "MUSCython/MSBWTCompGenCython.pyx":577
  *                 newInsertArray_view = newInsertArray
  *                 outputInserts.append(newInsertArray)
  *                 outputInsertPointers_view[c] = <np.uint64_t> &(newInsertArray_view[0,0])             # <<<<<<<<<<<<<<
@@ -28345,7 +28507,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       __pyx_L18:;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":559
+    /* "MUSCython/MSBWTCompGenCython.pyx":580
  * 
  *         #now build the iteration, we'll start at zero obviously
  *         prevIndex = 0#tracks BWT index, aka the number of values written thus far, equivalently, the index of the start of the run next to be written             # <<<<<<<<<<<<<<
@@ -28354,7 +28516,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
     __pyx_v_prevIndex = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":560
+    /* "MUSCython/MSBWTCompGenCython.pyx":581
  *         #now build the iteration, we'll start at zero obviously
  *         prevIndex = 0#tracks BWT index, aka the number of values written thus far, equivalently, the index of the start of the run next to be written
  *         currIndex = 0#tracks file index (this will be smaller because it's compressed)             # <<<<<<<<<<<<<<
@@ -28363,17 +28525,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
     __pyx_v_currIndex = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":561
+    /* "MUSCython/MSBWTCompGenCython.pyx":582
  *         prevIndex = 0#tracks BWT index, aka the number of values written thus far, equivalently, the index of the start of the run next to be written
  *         currIndex = 0#tracks file index (this will be smaller because it's compressed)
  *         maxIndex = currentBwt.shape[0]             # <<<<<<<<<<<<<<
  * 
  *         #get the buffered symbol and count if they're present
  */
-    __pyx_t_41 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_currentBwt)); if (unlikely(__pyx_t_41 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 561, __pyx_L1_error)
+    __pyx_t_41 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_currentBwt)); if (unlikely(__pyx_t_41 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 582, __pyx_L1_error)
     __pyx_v_maxIndex = (__pyx_t_41[0]);
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":564
+    /* "MUSCython/MSBWTCompGenCython.pyx":585
  * 
  *         #get the buffered symbol and count if they're present
  *         if currIndex < maxIndex:             # <<<<<<<<<<<<<<
@@ -28383,17 +28545,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     __pyx_t_26 = (__pyx_v_currIndex < __pyx_v_maxIndex);
     if (__pyx_t_26) {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":565
+      /* "MUSCython/MSBWTCompGenCython.pyx":586
  *         #get the buffered symbol and count if they're present
  *         if currIndex < maxIndex:
  *             currIndex = getNextRLE(currentBwt_view, currIndex, maxIndex, &readBufferSymbol, &readBufferCount)             # <<<<<<<<<<<<<<
  * 
  *         #go through each file, one at a time
  */
-      __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 565, __pyx_L1_error)
+      __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 586, __pyx_L1_error)
       __pyx_v_currIndex = __pyx_t_11;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":564
+      /* "MUSCython/MSBWTCompGenCython.pyx":585
  * 
  *         #get the buffered symbol and count if they're present
  *         if currIndex < maxIndex:             # <<<<<<<<<<<<<<
@@ -28402,7 +28564,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":568
+    /* "MUSCython/MSBWTCompGenCython.pyx":589
  * 
  *         #go through each file, one at a time
  *         for fn in insertionFNs:             # <<<<<<<<<<<<<<
@@ -28414,9 +28576,9 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       __pyx_t_32 = 0;
       __pyx_t_42 = NULL;
     } else {
-      __pyx_t_32 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_v_insertionFNs); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 568, __pyx_L1_error)
+      __pyx_t_32 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_v_insertionFNs); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 589, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_42 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_42)) __PYX_ERR(0, 568, __pyx_L1_error)
+      __pyx_t_42 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_42)) __PYX_ERR(0, 589, __pyx_L1_error)
     }
     for (;;) {
       if (likely(!__pyx_t_42)) {
@@ -28424,28 +28586,28 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 568, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 589, __pyx_L1_error)
             #endif
             if (__pyx_t_32 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_32); __Pyx_INCREF(__pyx_t_5); __pyx_t_32++; if (unlikely((0 < 0))) __PYX_ERR(0, 568, __pyx_L1_error)
+          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_32); __Pyx_INCREF(__pyx_t_5); __pyx_t_32++; if (unlikely((0 < 0))) __PYX_ERR(0, 589, __pyx_L1_error)
           #else
-          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_32); __pyx_t_32++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 568, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_32); __pyx_t_32++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 589, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         } else {
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 568, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 589, __pyx_L1_error)
             #endif
             if (__pyx_t_32 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_32); __Pyx_INCREF(__pyx_t_5); __pyx_t_32++; if (unlikely((0 < 0))) __PYX_ERR(0, 568, __pyx_L1_error)
+          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_32); __Pyx_INCREF(__pyx_t_5); __pyx_t_32++; if (unlikely((0 < 0))) __PYX_ERR(0, 589, __pyx_L1_error)
           #else
-          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_32); __pyx_t_32++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 568, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_32); __pyx_t_32++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 589, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         }
@@ -28455,7 +28617,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 568, __pyx_L1_error)
+            else __PYX_ERR(0, 589, __pyx_L1_error)
           }
           break;
         }
@@ -28464,16 +28626,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       __Pyx_XDECREF_SET(__pyx_v_fn, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":570
+      /* "MUSCython/MSBWTCompGenCython.pyx":591
  *         for fn in insertionFNs:
  *             #load the actual inserts
  *             inserts = np.load(fn, 'r+')             # <<<<<<<<<<<<<<
  *             inserts_view = inserts
  *             insertLen = inserts.shape[0]
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 570, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_np); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 591, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_load); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 570, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_load); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 591, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_t_8 = NULL;
@@ -28494,11 +28656,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         PyObject *__pyx_callargs[3] = {__pyx_t_8, __pyx_v_fn, __pyx_kp_s_r};
         __pyx_t_5 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+1-__pyx_t_21, 2+__pyx_t_21);
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 570, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 591, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       }
-      if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 570, __pyx_L1_error)
+      if (!(likely(((__pyx_t_5) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_5, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 591, __pyx_L1_error)
       __pyx_t_43 = ((PyArrayObject *)__pyx_t_5);
       {
         __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -28515,36 +28677,36 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_14 = __pyx_t_15 = __pyx_t_16 = 0;
         }
         __pyx_pybuffernd_inserts.diminfo[0].strides = __pyx_pybuffernd_inserts.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_inserts.diminfo[0].shape = __pyx_pybuffernd_inserts.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_inserts.diminfo[1].strides = __pyx_pybuffernd_inserts.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_inserts.diminfo[1].shape = __pyx_pybuffernd_inserts.rcbuffer->pybuffer.shape[1];
-        if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 570, __pyx_L1_error)
+        if (unlikely((__pyx_t_13 < 0))) __PYX_ERR(0, 591, __pyx_L1_error)
       }
       __pyx_t_43 = 0;
       __Pyx_XDECREF_SET(__pyx_v_inserts, ((PyArrayObject *)__pyx_t_5));
       __pyx_t_5 = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":571
+      /* "MUSCython/MSBWTCompGenCython.pyx":592
  *             #load the actual inserts
  *             inserts = np.load(fn, 'r+')
  *             inserts_view = inserts             # <<<<<<<<<<<<<<
  *             insertLen = inserts.shape[0]
  * 
  */
-      __pyx_t_20 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_inserts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 571, __pyx_L1_error)
+      __pyx_t_20 = __Pyx_PyObject_to_MemoryviewSlice_dsds_nn___pyx_t_5numpy_uint64_t(((PyObject *)__pyx_v_inserts), PyBUF_WRITABLE); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 592, __pyx_L1_error)
       __PYX_XCLEAR_MEMVIEW(&__pyx_v_inserts_view, 1);
       __pyx_v_inserts_view = __pyx_t_20;
       __pyx_t_20.memview = NULL;
       __pyx_t_20.data = NULL;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":572
+      /* "MUSCython/MSBWTCompGenCython.pyx":593
  *             inserts = np.load(fn, 'r+')
  *             inserts_view = inserts
  *             insertLen = inserts.shape[0]             # <<<<<<<<<<<<<<
  * 
  *             #first check if there were adjacent writes across files, typically not except in the very early insertions
  */
-      __pyx_t_41 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_inserts)); if (unlikely(__pyx_t_41 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 572, __pyx_L1_error)
+      __pyx_t_41 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_inserts)); if (unlikely(__pyx_t_41 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 593, __pyx_L1_error)
       __pyx_v_insertLen = (__pyx_t_41[0]);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":576
+      /* "MUSCython/MSBWTCompGenCython.pyx":597
  *             #first check if there were adjacent writes across files, typically not except in the very early insertions
  *             #this loop is really just a copy of the second half of the main loop
  *             i = 0             # <<<<<<<<<<<<<<
@@ -28553,7 +28715,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
       __pyx_v_i = 0;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":577
+      /* "MUSCython/MSBWTCompGenCython.pyx":598
  *             #this loop is really just a copy of the second half of the main loop
  *             i = 0
  *             while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:             # <<<<<<<<<<<<<<
@@ -28574,7 +28736,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_L24_bool_binop_done:;
         if (!__pyx_t_26) break;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":578
+        /* "MUSCython/MSBWTCompGenCython.pyx":599
  *             i = 0
  *             while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:
  *                 if inserts_view[i, 1] == writeBufferSymbol:             # <<<<<<<<<<<<<<
@@ -28586,7 +28748,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_26 = ((*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_35 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) ))) == __pyx_v_writeBufferSymbol);
         if (__pyx_t_26) {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":579
+          /* "MUSCython/MSBWTCompGenCython.pyx":600
  *             while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:
  *                 if inserts_view[i, 1] == writeBufferSymbol:
  *                     writeBufferCount += 1             # <<<<<<<<<<<<<<
@@ -28595,7 +28757,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           __pyx_v_writeBufferCount = (__pyx_v_writeBufferCount + 1);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":578
+          /* "MUSCython/MSBWTCompGenCython.pyx":599
  *             i = 0
  *             while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:
  *                 if inserts_view[i, 1] == writeBufferSymbol:             # <<<<<<<<<<<<<<
@@ -28605,7 +28767,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           goto __pyx_L26;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":581
+        /* "MUSCython/MSBWTCompGenCython.pyx":602
  *                     writeBufferCount += 1
  *                 else:
  *                     fmIndex_view[writeBufferSymbol] += writeBufferCount             # <<<<<<<<<<<<<<
@@ -28616,7 +28778,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_35 = __pyx_v_writeBufferSymbol;
           *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_fmIndex_view.data + __pyx_t_35 * __pyx_v_fmIndex_view.strides[0]) )) += __pyx_v_writeBufferCount;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":582
+          /* "MUSCython/MSBWTCompGenCython.pyx":603
  *                 else:
  *                     fmIndex_view[writeBufferSymbol] += writeBufferCount
  *                     prevIndex += writeBufferCount             # <<<<<<<<<<<<<<
@@ -28625,16 +28787,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           __pyx_v_prevIndex = (__pyx_v_prevIndex + __pyx_v_writeBufferCount);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":584
+          /* "MUSCython/MSBWTCompGenCython.pyx":605
  *                     prevIndex += writeBufferCount
  * 
  *                     setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)             # <<<<<<<<<<<<<<
  *                     writeBufferSymbol = inserts_view[i, 1]
  *                     writeBufferCount = 1
  */
-          __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 584, __pyx_L1_error)
+          __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 605, __pyx_L1_error)
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":585
+          /* "MUSCython/MSBWTCompGenCython.pyx":606
  * 
  *                     setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)
  *                     writeBufferSymbol = inserts_view[i, 1]             # <<<<<<<<<<<<<<
@@ -28645,7 +28807,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_40 = 1;
           __pyx_v_writeBufferSymbol = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_35 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) )));
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":586
+          /* "MUSCython/MSBWTCompGenCython.pyx":607
  *                     setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)
  *                     writeBufferSymbol = inserts_view[i, 1]
  *                     writeBufferCount = 1             # <<<<<<<<<<<<<<
@@ -28656,7 +28818,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         }
         __pyx_L26:;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":588
+        /* "MUSCython/MSBWTCompGenCython.pyx":609
  *                     writeBufferCount = 1
  * 
  *                 symbol = writeBufferSymbol             # <<<<<<<<<<<<<<
@@ -28665,7 +28827,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
         __pyx_v_symbol = __pyx_v_writeBufferSymbol;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":589
+        /* "MUSCython/MSBWTCompGenCython.pyx":610
  * 
  *                 symbol = writeBufferSymbol
  *                 nextSymbol = currSeqs_view[inserts_view[i,2]]             # <<<<<<<<<<<<<<
@@ -28677,7 +28839,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_44 = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_35 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) )));
         __pyx_v_nextSymbol = (*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_currSeqs_view.data + __pyx_t_44 * __pyx_v_currSeqs_view.strides[0]) )));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":590
+        /* "MUSCython/MSBWTCompGenCython.pyx":611
  *                 symbol = writeBufferSymbol
  *                 nextSymbol = currSeqs_view[inserts_view[i,2]]
  *                 fmDeltas_view[symbol, nextSymbol] += 1             # <<<<<<<<<<<<<<
@@ -28688,7 +28850,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_45 = __pyx_v_nextSymbol;
         *((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_fmDeltas_view.data + __pyx_t_35 * __pyx_v_fmDeltas_view.strides[0]) ) + __pyx_t_45 * __pyx_v_fmDeltas_view.strides[1]) )) += 1;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":593
+        /* "MUSCython/MSBWTCompGenCython.pyx":614
  * 
  *                 #now we need to add the information for our next insertion
  *                 outputInsert_p = <np.uint64_t *> outputInsertPointers_view[symbol]             # <<<<<<<<<<<<<<
@@ -28698,7 +28860,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_45 = __pyx_v_symbol;
         __pyx_v_outputInsert_p = ((__pyx_t_5numpy_uint64_t *)(*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_outputInsertPointers_view.data + __pyx_t_45 * __pyx_v_outputInsertPointers_view.strides[0]) ))));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":594
+        /* "MUSCython/MSBWTCompGenCython.pyx":615
  *                 #now we need to add the information for our next insertion
  *                 outputInsert_p = <np.uint64_t *> outputInsertPointers_view[symbol]
  *                 ind = outputInsertIndices_view[symbol]             # <<<<<<<<<<<<<<
@@ -28708,7 +28870,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_45 = __pyx_v_symbol;
         __pyx_v_ind = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_outputInsertIndices_view.data + __pyx_t_45 * __pyx_v_outputInsertIndices_view.strides[0]) )));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":595
+        /* "MUSCython/MSBWTCompGenCython.pyx":616
  *                 outputInsert_p = <np.uint64_t *> outputInsertPointers_view[symbol]
  *                 ind = outputInsertIndices_view[symbol]
  *                 outputInsertIndices_view[symbol] += 3             # <<<<<<<<<<<<<<
@@ -28718,7 +28880,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_45 = __pyx_v_symbol;
         *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_outputInsertIndices_view.data + __pyx_t_45 * __pyx_v_outputInsertIndices_view.strides[0]) )) += 3;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":598
+        /* "MUSCython/MSBWTCompGenCython.pyx":619
  * 
  *                 #finally, store the values
  *                 outputInsert_p[ind] = fmIndex_view[symbol]+writeBufferCount-1             # <<<<<<<<<<<<<<
@@ -28728,7 +28890,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_45 = __pyx_v_symbol;
         (__pyx_v_outputInsert_p[__pyx_v_ind]) = (((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_fmIndex_view.data + __pyx_t_45 * __pyx_v_fmIndex_view.strides[0]) ))) + __pyx_v_writeBufferCount) - 1);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":599
+        /* "MUSCython/MSBWTCompGenCython.pyx":620
  *                 #finally, store the values
  *                 outputInsert_p[ind] = fmIndex_view[symbol]+writeBufferCount-1
  *                 outputInsert_p[ind+1] = nextSymbol             # <<<<<<<<<<<<<<
@@ -28737,7 +28899,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
         (__pyx_v_outputInsert_p[(__pyx_v_ind + 1)]) = __pyx_v_nextSymbol;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":600
+        /* "MUSCython/MSBWTCompGenCython.pyx":621
  *                 outputInsert_p[ind] = fmIndex_view[symbol]+writeBufferCount-1
  *                 outputInsert_p[ind+1] = nextSymbol
  *                 outputInsert_p[ind+2] = inserts_view[i,2]             # <<<<<<<<<<<<<<
@@ -28748,7 +28910,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_40 = 2;
         (__pyx_v_outputInsert_p[(__pyx_v_ind + 2)]) = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_45 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) )));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":601
+        /* "MUSCython/MSBWTCompGenCython.pyx":622
  *                 outputInsert_p[ind+1] = nextSymbol
  *                 outputInsert_p[ind+2] = inserts_view[i,2]
  *                 i += 1             # <<<<<<<<<<<<<<
@@ -28758,7 +28920,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_v_i = (__pyx_v_i + 1);
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":604
+      /* "MUSCython/MSBWTCompGenCython.pyx":625
  * 
  *             #the real main loop
  *             while i < insertLen:             # <<<<<<<<<<<<<<
@@ -28769,7 +28931,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_26 = (__pyx_v_i < __pyx_v_insertLen);
         if (!__pyx_t_26) break;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":605
+        /* "MUSCython/MSBWTCompGenCython.pyx":626
  *             #the real main loop
  *             while i < insertLen:
  *                 insertIndex = inserts_view[i, 0]             # <<<<<<<<<<<<<<
@@ -28780,7 +28942,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_40 = 0;
         __pyx_v_insertIndex = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_45 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) )));
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":607
+        /* "MUSCython/MSBWTCompGenCython.pyx":628
  *                 insertIndex = inserts_view[i, 0]
  * 
  *                 if writeBufferSymbol == readBufferSymbol:             # <<<<<<<<<<<<<<
@@ -28790,7 +28952,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_t_26 = (__pyx_v_writeBufferSymbol == __pyx_v_readBufferSymbol);
         if (__pyx_t_26) {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":609
+          /* "MUSCython/MSBWTCompGenCython.pyx":630
  *                 if writeBufferSymbol == readBufferSymbol:
  *                     #move the write buffer into the read buffer
  *                     readBufferCount += writeBufferCount             # <<<<<<<<<<<<<<
@@ -28799,7 +28961,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           __pyx_v_readBufferCount = (__pyx_v_readBufferCount + __pyx_v_writeBufferCount);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":610
+          /* "MUSCython/MSBWTCompGenCython.pyx":631
  *                     #move the write buffer into the read buffer
  *                     readBufferCount += writeBufferCount
  *                     writeBufferCount = 0             # <<<<<<<<<<<<<<
@@ -28808,7 +28970,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           __pyx_v_writeBufferCount = 0;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":607
+          /* "MUSCython/MSBWTCompGenCython.pyx":628
  *                 insertIndex = inserts_view[i, 0]
  * 
  *                 if writeBufferSymbol == readBufferSymbol:             # <<<<<<<<<<<<<<
@@ -28818,7 +28980,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           goto __pyx_L29;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":613
+        /* "MUSCython/MSBWTCompGenCython.pyx":634
  *                 else:
  *                     #write it out
  *                     fmIndex_view[writeBufferSymbol] += writeBufferCount             # <<<<<<<<<<<<<<
@@ -28829,7 +28991,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_45 = __pyx_v_writeBufferSymbol;
           *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_fmIndex_view.data + __pyx_t_45 * __pyx_v_fmIndex_view.strides[0]) )) += __pyx_v_writeBufferCount;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":614
+          /* "MUSCython/MSBWTCompGenCython.pyx":635
  *                     #write it out
  *                     fmIndex_view[writeBufferSymbol] += writeBufferCount
  *                     prevIndex += writeBufferCount             # <<<<<<<<<<<<<<
@@ -28838,16 +29000,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           __pyx_v_prevIndex = (__pyx_v_prevIndex + __pyx_v_writeBufferCount);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":616
+          /* "MUSCython/MSBWTCompGenCython.pyx":637
  *                     prevIndex += writeBufferCount
  * 
  *                     setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)             # <<<<<<<<<<<<<<
  *                     writeBufferCount = 0
  * 
  */
-          __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 616, __pyx_L1_error)
+          __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 637, __pyx_L1_error)
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":617
+          /* "MUSCython/MSBWTCompGenCython.pyx":638
  * 
  *                     setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)
  *                     writeBufferCount = 0             # <<<<<<<<<<<<<<
@@ -28858,7 +29020,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         }
         __pyx_L29:;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":619
+        /* "MUSCython/MSBWTCompGenCython.pyx":640
  *                     writeBufferCount = 0
  * 
  *                 while prevIndex+readBufferCount < insertIndex:             # <<<<<<<<<<<<<<
@@ -28869,7 +29031,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_26 = ((__pyx_v_prevIndex + __pyx_v_readBufferCount) < __pyx_v_insertIndex);
           if (!__pyx_t_26) break;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":620
+          /* "MUSCython/MSBWTCompGenCython.pyx":641
  * 
  *                 while prevIndex+readBufferCount < insertIndex:
  *                     fmIndex_view[readBufferSymbol] += readBufferCount             # <<<<<<<<<<<<<<
@@ -28879,7 +29041,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_45 = __pyx_v_readBufferSymbol;
           *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_fmIndex_view.data + __pyx_t_45 * __pyx_v_fmIndex_view.strides[0]) )) += __pyx_v_readBufferCount;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":621
+          /* "MUSCython/MSBWTCompGenCython.pyx":642
  *                 while prevIndex+readBufferCount < insertIndex:
  *                     fmIndex_view[readBufferSymbol] += readBufferCount
  *                     prevIndex += readBufferCount             # <<<<<<<<<<<<<<
@@ -28888,27 +29050,27 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           __pyx_v_prevIndex = (__pyx_v_prevIndex + __pyx_v_readBufferCount);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":623
+          /* "MUSCython/MSBWTCompGenCython.pyx":644
  *                     prevIndex += readBufferCount
  * 
  *                     setNextRLE(nextBwtFP, readBufferSymbol, readBufferCount)             # <<<<<<<<<<<<<<
  *                     currIndex = getNextRLE(currentBwt_view, currIndex, maxIndex, &readBufferSymbol, &readBufferCount)
  * 
  */
-          __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_readBufferSymbol, __pyx_v_readBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 623, __pyx_L1_error)
+          __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_readBufferSymbol, __pyx_v_readBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 644, __pyx_L1_error)
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":624
+          /* "MUSCython/MSBWTCompGenCython.pyx":645
  * 
  *                     setNextRLE(nextBwtFP, readBufferSymbol, readBufferCount)
  *                     currIndex = getNextRLE(currentBwt_view, currIndex, maxIndex, &readBufferSymbol, &readBufferCount)             # <<<<<<<<<<<<<<
  * 
  *                 writeBufferCount = insertIndex-prevIndex
  */
-          __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 624, __pyx_L1_error)
+          __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 645, __pyx_L1_error)
           __pyx_v_currIndex = __pyx_t_11;
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":626
+        /* "MUSCython/MSBWTCompGenCython.pyx":647
  *                     currIndex = getNextRLE(currentBwt_view, currIndex, maxIndex, &readBufferSymbol, &readBufferCount)
  * 
  *                 writeBufferCount = insertIndex-prevIndex             # <<<<<<<<<<<<<<
@@ -28917,7 +29079,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
         __pyx_v_writeBufferCount = (__pyx_v_insertIndex - __pyx_v_prevIndex);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":627
+        /* "MUSCython/MSBWTCompGenCython.pyx":648
  * 
  *                 writeBufferCount = insertIndex-prevIndex
  *                 readBufferCount -= writeBufferCount             # <<<<<<<<<<<<<<
@@ -28926,7 +29088,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
         __pyx_v_readBufferCount = (__pyx_v_readBufferCount - __pyx_v_writeBufferCount);
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":628
+        /* "MUSCython/MSBWTCompGenCython.pyx":649
  *                 writeBufferCount = insertIndex-prevIndex
  *                 readBufferCount -= writeBufferCount
  *                 writeBufferSymbol = readBufferSymbol             # <<<<<<<<<<<<<<
@@ -28935,7 +29097,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
         __pyx_v_writeBufferSymbol = __pyx_v_readBufferSymbol;
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":630
+        /* "MUSCython/MSBWTCompGenCython.pyx":651
  *                 writeBufferSymbol = readBufferSymbol
  * 
  *                 if readBufferCount == 0 and currIndex < maxIndex:             # <<<<<<<<<<<<<<
@@ -28953,17 +29115,17 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         __pyx_L33_bool_binop_done:;
         if (__pyx_t_26) {
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":631
+          /* "MUSCython/MSBWTCompGenCython.pyx":652
  * 
  *                 if readBufferCount == 0 and currIndex < maxIndex:
  *                     currIndex = getNextRLE(currentBwt_view, currIndex, maxIndex, &readBufferSymbol, &readBufferCount)             # <<<<<<<<<<<<<<
  * 
  *                 #now do the inserts, loop as long as there are consecutive insertions
  */
-          __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 631, __pyx_L1_error)
+          __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 652, __pyx_L1_error)
           __pyx_v_currIndex = __pyx_t_11;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":630
+          /* "MUSCython/MSBWTCompGenCython.pyx":651
  *                 writeBufferSymbol = readBufferSymbol
  * 
  *                 if readBufferCount == 0 and currIndex < maxIndex:             # <<<<<<<<<<<<<<
@@ -28972,7 +29134,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
         }
 
-        /* "MUSCython/MSBWTCompGenCython.pyx":634
+        /* "MUSCython/MSBWTCompGenCython.pyx":655
  * 
  *                 #now do the inserts, loop as long as there are consecutive insertions
  *                 while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:             # <<<<<<<<<<<<<<
@@ -28993,7 +29155,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_L37_bool_binop_done:;
           if (!__pyx_t_26) break;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":635
+          /* "MUSCython/MSBWTCompGenCython.pyx":656
  *                 #now do the inserts, loop as long as there are consecutive insertions
  *                 while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:
  *                     if inserts_view[i, 1] == writeBufferSymbol:             # <<<<<<<<<<<<<<
@@ -29005,7 +29167,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_26 = ((*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_45 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) ))) == __pyx_v_writeBufferSymbol);
           if (__pyx_t_26) {
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":636
+            /* "MUSCython/MSBWTCompGenCython.pyx":657
  *                 while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:
  *                     if inserts_view[i, 1] == writeBufferSymbol:
  *                         writeBufferCount += 1             # <<<<<<<<<<<<<<
@@ -29014,7 +29176,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
             __pyx_v_writeBufferCount = (__pyx_v_writeBufferCount + 1);
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":635
+            /* "MUSCython/MSBWTCompGenCython.pyx":656
  *                 #now do the inserts, loop as long as there are consecutive insertions
  *                 while i < insertLen and prevIndex+writeBufferCount == inserts_view[i, 0]:
  *                     if inserts_view[i, 1] == writeBufferSymbol:             # <<<<<<<<<<<<<<
@@ -29024,7 +29186,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
             goto __pyx_L39;
           }
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":638
+          /* "MUSCython/MSBWTCompGenCython.pyx":659
  *                         writeBufferCount += 1
  *                     else:
  *                         fmIndex_view[writeBufferSymbol] += writeBufferCount             # <<<<<<<<<<<<<<
@@ -29035,7 +29197,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
             __pyx_t_45 = __pyx_v_writeBufferSymbol;
             *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_fmIndex_view.data + __pyx_t_45 * __pyx_v_fmIndex_view.strides[0]) )) += __pyx_v_writeBufferCount;
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":639
+            /* "MUSCython/MSBWTCompGenCython.pyx":660
  *                     else:
  *                         fmIndex_view[writeBufferSymbol] += writeBufferCount
  *                         prevIndex += writeBufferCount             # <<<<<<<<<<<<<<
@@ -29044,16 +29206,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
             __pyx_v_prevIndex = (__pyx_v_prevIndex + __pyx_v_writeBufferCount);
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":641
+            /* "MUSCython/MSBWTCompGenCython.pyx":662
  *                         prevIndex += writeBufferCount
  * 
  *                         setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)             # <<<<<<<<<<<<<<
  *                         writeBufferSymbol = inserts_view[i, 1]
  *                         writeBufferCount = 1
  */
-            __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 641, __pyx_L1_error)
+            __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 662, __pyx_L1_error)
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":642
+            /* "MUSCython/MSBWTCompGenCython.pyx":663
  * 
  *                         setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)
  *                         writeBufferSymbol = inserts_view[i, 1]             # <<<<<<<<<<<<<<
@@ -29064,7 +29226,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
             __pyx_t_40 = 1;
             __pyx_v_writeBufferSymbol = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_45 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) )));
 
-            /* "MUSCython/MSBWTCompGenCython.pyx":643
+            /* "MUSCython/MSBWTCompGenCython.pyx":664
  *                         setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)
  *                         writeBufferSymbol = inserts_view[i, 1]
  *                         writeBufferCount = 1             # <<<<<<<<<<<<<<
@@ -29075,7 +29237,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           }
           __pyx_L39:;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":645
+          /* "MUSCython/MSBWTCompGenCython.pyx":666
  *                         writeBufferCount = 1
  * 
  *                     symbol = writeBufferSymbol             # <<<<<<<<<<<<<<
@@ -29084,7 +29246,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           __pyx_v_symbol = __pyx_v_writeBufferSymbol;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":646
+          /* "MUSCython/MSBWTCompGenCython.pyx":667
  * 
  *                     symbol = writeBufferSymbol
  *                     nextSymbol = currSeqs_view[inserts_view[i,2]]             # <<<<<<<<<<<<<<
@@ -29096,7 +29258,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_44 = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_45 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) )));
           __pyx_v_nextSymbol = (*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_currSeqs_view.data + __pyx_t_44 * __pyx_v_currSeqs_view.strides[0]) )));
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":647
+          /* "MUSCython/MSBWTCompGenCython.pyx":668
  *                     symbol = writeBufferSymbol
  *                     nextSymbol = currSeqs_view[inserts_view[i,2]]
  *                     fmDeltas_view[symbol, nextSymbol] += 1             # <<<<<<<<<<<<<<
@@ -29107,7 +29269,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_35 = __pyx_v_nextSymbol;
           *((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_fmDeltas_view.data + __pyx_t_45 * __pyx_v_fmDeltas_view.strides[0]) ) + __pyx_t_35 * __pyx_v_fmDeltas_view.strides[1]) )) += 1;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":650
+          /* "MUSCython/MSBWTCompGenCython.pyx":671
  * 
  *                     #now we need to add the information for our next insertion
  *                     outputInsert_p = <np.uint64_t *> outputInsertPointers_view[symbol]             # <<<<<<<<<<<<<<
@@ -29117,7 +29279,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_35 = __pyx_v_symbol;
           __pyx_v_outputInsert_p = ((__pyx_t_5numpy_uint64_t *)(*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_outputInsertPointers_view.data + __pyx_t_35 * __pyx_v_outputInsertPointers_view.strides[0]) ))));
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":651
+          /* "MUSCython/MSBWTCompGenCython.pyx":672
  *                     #now we need to add the information for our next insertion
  *                     outputInsert_p = <np.uint64_t *> outputInsertPointers_view[symbol]
  *                     ind = outputInsertIndices_view[symbol]             # <<<<<<<<<<<<<<
@@ -29127,7 +29289,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_35 = __pyx_v_symbol;
           __pyx_v_ind = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_outputInsertIndices_view.data + __pyx_t_35 * __pyx_v_outputInsertIndices_view.strides[0]) )));
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":652
+          /* "MUSCython/MSBWTCompGenCython.pyx":673
  *                     outputInsert_p = <np.uint64_t *> outputInsertPointers_view[symbol]
  *                     ind = outputInsertIndices_view[symbol]
  *                     outputInsertIndices_view[symbol] += 3             # <<<<<<<<<<<<<<
@@ -29137,7 +29299,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_35 = __pyx_v_symbol;
           *((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_outputInsertIndices_view.data + __pyx_t_35 * __pyx_v_outputInsertIndices_view.strides[0]) )) += 3;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":655
+          /* "MUSCython/MSBWTCompGenCython.pyx":676
  * 
  *                     #finally, store the values
  *                     outputInsert_p[ind] = fmIndex_view[symbol]+writeBufferCount-1             # <<<<<<<<<<<<<<
@@ -29147,7 +29309,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_35 = __pyx_v_symbol;
           (__pyx_v_outputInsert_p[__pyx_v_ind]) = (((*((__pyx_t_5numpy_uint64_t *) ( /* dim=0 */ (__pyx_v_fmIndex_view.data + __pyx_t_35 * __pyx_v_fmIndex_view.strides[0]) ))) + __pyx_v_writeBufferCount) - 1);
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":656
+          /* "MUSCython/MSBWTCompGenCython.pyx":677
  *                     #finally, store the values
  *                     outputInsert_p[ind] = fmIndex_view[symbol]+writeBufferCount-1
  *                     outputInsert_p[ind+1] = nextSymbol             # <<<<<<<<<<<<<<
@@ -29156,7 +29318,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
           (__pyx_v_outputInsert_p[(__pyx_v_ind + 1)]) = __pyx_v_nextSymbol;
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":657
+          /* "MUSCython/MSBWTCompGenCython.pyx":678
  *                     outputInsert_p[ind] = fmIndex_view[symbol]+writeBufferCount-1
  *                     outputInsert_p[ind+1] = nextSymbol
  *                     outputInsert_p[ind+2] = inserts_view[i,2]             # <<<<<<<<<<<<<<
@@ -29167,7 +29329,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
           __pyx_t_40 = 2;
           (__pyx_v_outputInsert_p[(__pyx_v_ind + 2)]) = (*((__pyx_t_5numpy_uint64_t *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_inserts_view.data + __pyx_t_35 * __pyx_v_inserts_view.strides[0]) ) + __pyx_t_40 * __pyx_v_inserts_view.strides[1]) )));
 
-          /* "MUSCython/MSBWTCompGenCython.pyx":658
+          /* "MUSCython/MSBWTCompGenCython.pyx":679
  *                     outputInsert_p[ind+1] = nextSymbol
  *                     outputInsert_p[ind+2] = inserts_view[i,2]
  *                     i += 1             # <<<<<<<<<<<<<<
@@ -29178,7 +29340,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
         }
       }
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":568
+      /* "MUSCython/MSBWTCompGenCython.pyx":589
  * 
  *         #go through each file, one at a time
  *         for fn in insertionFNs:             # <<<<<<<<<<<<<<
@@ -29188,7 +29350,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":660
+    /* "MUSCython/MSBWTCompGenCython.pyx":681
  *                     i += 1
  * 
  *         if writeBufferSymbol == readBufferSymbol:             # <<<<<<<<<<<<<<
@@ -29198,7 +29360,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     __pyx_t_26 = (__pyx_v_writeBufferSymbol == __pyx_v_readBufferSymbol);
     if (__pyx_t_26) {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":661
+      /* "MUSCython/MSBWTCompGenCython.pyx":682
  * 
  *         if writeBufferSymbol == readBufferSymbol:
  *             readBufferCount += writeBufferCount             # <<<<<<<<<<<<<<
@@ -29207,7 +29369,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
       __pyx_v_readBufferCount = (__pyx_v_readBufferCount + __pyx_v_writeBufferCount);
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":660
+      /* "MUSCython/MSBWTCompGenCython.pyx":681
  *                     i += 1
  * 
  *         if writeBufferSymbol == readBufferSymbol:             # <<<<<<<<<<<<<<
@@ -29217,7 +29379,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       goto __pyx_L41;
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":663
+    /* "MUSCython/MSBWTCompGenCython.pyx":684
  *             readBufferCount += writeBufferCount
  *         else:
  *             setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)             # <<<<<<<<<<<<<<
@@ -29225,11 +29387,11 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  *         if readBufferCount > 0:
  */
     /*else*/ {
-      __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 663, __pyx_L1_error)
+      __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_writeBufferSymbol, __pyx_v_writeBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 684, __pyx_L1_error)
     }
     __pyx_L41:;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":665
+    /* "MUSCython/MSBWTCompGenCython.pyx":686
  *             setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)
  * 
  *         if readBufferCount > 0:             # <<<<<<<<<<<<<<
@@ -29239,16 +29401,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     __pyx_t_26 = (__pyx_v_readBufferCount > 0);
     if (__pyx_t_26) {
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":666
+      /* "MUSCython/MSBWTCompGenCython.pyx":687
  * 
  *         if readBufferCount > 0:
  *             setNextRLE(nextBwtFP, readBufferSymbol, readBufferCount)             # <<<<<<<<<<<<<<
  * 
  *         while currIndex < maxIndex:
  */
-      __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_readBufferSymbol, __pyx_v_readBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 666, __pyx_L1_error)
+      __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_readBufferSymbol, __pyx_v_readBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 687, __pyx_L1_error)
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":665
+      /* "MUSCython/MSBWTCompGenCython.pyx":686
  *             setNextRLE(nextBwtFP, writeBufferSymbol, writeBufferCount)
  * 
  *         if readBufferCount > 0:             # <<<<<<<<<<<<<<
@@ -29257,7 +29419,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
  */
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":668
+    /* "MUSCython/MSBWTCompGenCython.pyx":689
  *             setNextRLE(nextBwtFP, readBufferSymbol, readBufferCount)
  * 
  *         while currIndex < maxIndex:             # <<<<<<<<<<<<<<
@@ -29268,27 +29430,27 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
       __pyx_t_26 = (__pyx_v_currIndex < __pyx_v_maxIndex);
       if (!__pyx_t_26) break;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":669
+      /* "MUSCython/MSBWTCompGenCython.pyx":690
  * 
  *         while currIndex < maxIndex:
  *             currIndex = getNextRLE(currentBwt_view, currIndex, maxIndex, &readBufferSymbol, &readBufferCount)             # <<<<<<<<<<<<<<
  *             setNextRLE(nextBwtFP, readBufferSymbol, readBufferCount)
  * 
  */
-      __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 669, __pyx_L1_error)
+      __pyx_t_11 = __pyx_f_9MUSCython_18MSBWTCompGenCython_getNextRLE(__pyx_v_currentBwt_view, __pyx_v_currIndex, __pyx_v_maxIndex, (&__pyx_v_readBufferSymbol), (&__pyx_v_readBufferCount)); if (unlikely(__pyx_t_11 == ((unsigned long)-1) && PyErr_Occurred())) __PYX_ERR(0, 690, __pyx_L1_error)
       __pyx_v_currIndex = __pyx_t_11;
 
-      /* "MUSCython/MSBWTCompGenCython.pyx":670
+      /* "MUSCython/MSBWTCompGenCython.pyx":691
  *         while currIndex < maxIndex:
  *             currIndex = getNextRLE(currentBwt_view, currIndex, maxIndex, &readBufferSymbol, &readBufferCount)
  *             setNextRLE(nextBwtFP, readBufferSymbol, readBufferCount)             # <<<<<<<<<<<<<<
  * 
  *         #put this at the end when all writes are completed
  */
-      __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_readBufferSymbol, __pyx_v_readBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 670, __pyx_L1_error)
+      __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(__pyx_v_nextBwtFP, __pyx_v_readBufferSymbol, __pyx_v_readBufferCount); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 691, __pyx_L1_error)
     }
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":673
+    /* "MUSCython/MSBWTCompGenCython.pyx":694
  * 
  *         #put this at the end when all writes are completed
  *         fclose(nextBwtFP)             # <<<<<<<<<<<<<<
@@ -29299,16 +29461,16 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   }
   __pyx_L14:;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":675
+  /* "MUSCython/MSBWTCompGenCython.pyx":696
  *         fclose(nextBwtFP)
  * 
  *     ret = (np.copy(fmDeltas), retFNs)             # <<<<<<<<<<<<<<
  *     return ret
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 675, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 696, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_copy); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 675, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_copy); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 696, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -29329,22 +29491,22 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
     PyObject *__pyx_callargs[2] = {__pyx_t_5, ((PyObject *)__pyx_v_fmDeltas)};
     __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_9, __pyx_callargs+1-__pyx_t_21, 1+__pyx_t_21);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 675, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 696, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   }
-  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 675, __pyx_L1_error)
+  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 696, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_4)) __PYX_ERR(0, 675, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_4)) __PYX_ERR(0, 696, __pyx_L1_error);
   __Pyx_INCREF(__pyx_v_retFNs);
   __Pyx_GIVEREF(__pyx_v_retFNs);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_v_retFNs)) __PYX_ERR(0, 675, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_v_retFNs)) __PYX_ERR(0, 696, __pyx_L1_error);
   __pyx_t_4 = 0;
   __pyx_v_ret = ((PyObject*)__pyx_t_9);
   __pyx_t_9 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":676
+  /* "MUSCython/MSBWTCompGenCython.pyx":697
  * 
  *     ret = (np.copy(fmDeltas), retFNs)
  *     return ret             # <<<<<<<<<<<<<<
@@ -29356,7 +29518,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":449
+  /* "MUSCython/MSBWTCompGenCython.pyx":468
  *     logger.info('Finished all iterations in '+str(totalEndTime-totalStartTime)+' seconds.')
  * 
  * def iterateMsbwtCreate(tuple tup):             # <<<<<<<<<<<<<<
@@ -29440,7 +29602,7 @@ static PyObject *__pyx_pf_9MUSCython_18MSBWTCompGenCython_2iterateMsbwtCreate(CY
   return __pyx_r;
 }
 
-/* "MUSCython/MSBWTCompGenCython.pyx":678
+/* "MUSCython/MSBWTCompGenCython.pyx":699
  *     return ret
  * 
  * cdef inline unsigned long getNextRLE(np.uint8_t [:] arr, unsigned long startingIndex, unsigned long maxIndex,             # <<<<<<<<<<<<<<
@@ -29456,7 +29618,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
   int __pyx_t_3;
   long __pyx_t_4;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":680
+  /* "MUSCython/MSBWTCompGenCython.pyx":701
  * cdef inline unsigned long getNextRLE(np.uint8_t [:] arr, unsigned long startingIndex, unsigned long maxIndex,
  *                                      unsigned long * sym, unsigned long * rl):
  *     cdef unsigned long pow32 = 0             # <<<<<<<<<<<<<<
@@ -29465,7 +29627,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
  */
   __pyx_v_pow32 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":681
+  /* "MUSCython/MSBWTCompGenCython.pyx":702
  *                                      unsigned long * sym, unsigned long * rl):
  *     cdef unsigned long pow32 = 0
  *     sym[0] = arr[startingIndex] & 0x7             # <<<<<<<<<<<<<<
@@ -29475,7 +29637,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
   __pyx_t_1 = __pyx_v_startingIndex;
   (__pyx_v_sym[0]) = ((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_arr.data + __pyx_t_1 * __pyx_v_arr.strides[0]) ))) & 0x7);
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":682
+  /* "MUSCython/MSBWTCompGenCython.pyx":703
  *     cdef unsigned long pow32 = 0
  *     sym[0] = arr[startingIndex] & 0x7
  *     rl[0] = 0             # <<<<<<<<<<<<<<
@@ -29484,7 +29646,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
  */
   (__pyx_v_rl[0]) = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":683
+  /* "MUSCython/MSBWTCompGenCython.pyx":704
  *     sym[0] = arr[startingIndex] & 0x7
  *     rl[0] = 0
  *     while startingIndex < maxIndex and sym[0] == (arr[startingIndex] & 0x7):             # <<<<<<<<<<<<<<
@@ -29504,7 +29666,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
     __pyx_L5_bool_binop_done:;
     if (!__pyx_t_2) break;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":684
+    /* "MUSCython/MSBWTCompGenCython.pyx":705
  *     rl[0] = 0
  *     while startingIndex < maxIndex and sym[0] == (arr[startingIndex] & 0x7):
  *         rl[0] += (arr[startingIndex] >> 3) << (5*pow32)             # <<<<<<<<<<<<<<
@@ -29515,7 +29677,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
     __pyx_t_1 = __pyx_v_startingIndex;
     (__pyx_v_rl[__pyx_t_4]) = ((__pyx_v_rl[__pyx_t_4]) + (((*((__pyx_t_5numpy_uint8_t *) ( /* dim=0 */ (__pyx_v_arr.data + __pyx_t_1 * __pyx_v_arr.strides[0]) ))) >> 3) << (5 * __pyx_v_pow32)));
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":685
+    /* "MUSCython/MSBWTCompGenCython.pyx":706
  *     while startingIndex < maxIndex and sym[0] == (arr[startingIndex] & 0x7):
  *         rl[0] += (arr[startingIndex] >> 3) << (5*pow32)
  *         pow32 += 1             # <<<<<<<<<<<<<<
@@ -29524,7 +29686,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
  */
     __pyx_v_pow32 = (__pyx_v_pow32 + 1);
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":686
+    /* "MUSCython/MSBWTCompGenCython.pyx":707
  *         rl[0] += (arr[startingIndex] >> 3) << (5*pow32)
  *         pow32 += 1
  *         startingIndex += 1             # <<<<<<<<<<<<<<
@@ -29534,7 +29696,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
     __pyx_v_startingIndex = (__pyx_v_startingIndex + 1);
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":688
+  /* "MUSCython/MSBWTCompGenCython.pyx":709
  *         startingIndex += 1
  * 
  *     return startingIndex             # <<<<<<<<<<<<<<
@@ -29544,7 +29706,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
   __pyx_r = __pyx_v_startingIndex;
   goto __pyx_L0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":678
+  /* "MUSCython/MSBWTCompGenCython.pyx":699
  *     return ret
  * 
  * cdef inline unsigned long getNextRLE(np.uint8_t [:] arr, unsigned long startingIndex, unsigned long maxIndex,             # <<<<<<<<<<<<<<
@@ -29557,7 +29719,7 @@ static CYTHON_INLINE unsigned long __pyx_f_9MUSCython_18MSBWTCompGenCython_getNe
   return __pyx_r;
 }
 
-/* "MUSCython/MSBWTCompGenCython.pyx":690
+/* "MUSCython/MSBWTCompGenCython.pyx":711
  *     return startingIndex
  * 
  * cdef inline void setNextRLE(FILE * fp, unsigned long sym, unsigned long rl):             # <<<<<<<<<<<<<<
@@ -29569,7 +29731,7 @@ static CYTHON_INLINE void __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(FIL
   __pyx_t_5numpy_uint8_t __pyx_v_writeValue;
   int __pyx_t_1;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":692
+  /* "MUSCython/MSBWTCompGenCython.pyx":713
  * cdef inline void setNextRLE(FILE * fp, unsigned long sym, unsigned long rl):
  *     cdef np.uint8_t writeValue
  *     while rl > 0:             # <<<<<<<<<<<<<<
@@ -29580,7 +29742,7 @@ static CYTHON_INLINE void __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(FIL
     __pyx_t_1 = (__pyx_v_rl > 0);
     if (!__pyx_t_1) break;
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":693
+    /* "MUSCython/MSBWTCompGenCython.pyx":714
  *     cdef np.uint8_t writeValue
  *     while rl > 0:
  *         writeValue = sym + ((rl & 0x1F) << 3)             # <<<<<<<<<<<<<<
@@ -29589,7 +29751,7 @@ static CYTHON_INLINE void __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(FIL
  */
     __pyx_v_writeValue = (__pyx_v_sym + ((__pyx_v_rl & 0x1F) << 3));
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":694
+    /* "MUSCython/MSBWTCompGenCython.pyx":715
  *     while rl > 0:
  *         writeValue = sym + ((rl & 0x1F) << 3)
  *         fwrite(&writeValue, 1, 1, fp)             # <<<<<<<<<<<<<<
@@ -29597,7 +29759,7 @@ static CYTHON_INLINE void __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(FIL
  */
     (void)(fwrite((&__pyx_v_writeValue), 1, 1, __pyx_v_fp));
 
-    /* "MUSCython/MSBWTCompGenCython.pyx":695
+    /* "MUSCython/MSBWTCompGenCython.pyx":716
  *         writeValue = sym + ((rl & 0x1F) << 3)
  *         fwrite(&writeValue, 1, 1, fp)
  *         rl = (rl >> 5)             # <<<<<<<<<<<<<<
@@ -29605,7 +29767,7 @@ static CYTHON_INLINE void __pyx_f_9MUSCython_18MSBWTCompGenCython_setNextRLE(FIL
     __pyx_v_rl = (__pyx_v_rl >> 5);
   }
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":690
+  /* "MUSCython/MSBWTCompGenCython.pyx":711
  *     return startingIndex
  * 
  * cdef inline void setNextRLE(FILE * fp, unsigned long sym, unsigned long rl):             # <<<<<<<<<<<<<<
@@ -30766,6 +30928,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_s_itemsize_0_for_cython_array, __pyx_k_itemsize_0_for_cython_array, sizeof(__pyx_k_itemsize_0_for_cython_array), 0, 0, 1, 0},
     {&__pyx_n_s_iterateMsbwtCreate, __pyx_k_iterateMsbwtCreate, sizeof(__pyx_k_iterateMsbwtCreate), 0, 0, 1, 1},
     {&__pyx_n_s_j, __pyx_k_j, sizeof(__pyx_k_j), 0, 0, 1, 1},
+    {&__pyx_n_s_join, __pyx_k_join, sizeof(__pyx_k_join), 0, 0, 1, 1},
     {&__pyx_n_s_lib, __pyx_k_lib, sizeof(__pyx_k_lib), 0, 0, 1, 1},
     {&__pyx_n_s_load, __pyx_k_load, sizeof(__pyx_k_load), 0, 0, 1, 1},
     {&__pyx_kp_s_loading_partial_BWT, __pyx_k_loading_partial_BWT, sizeof(__pyx_k_loading_partial_BWT), 0, 0, 1, 0},
@@ -30914,7 +31077,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) __PYX_ERR(0, 69, __pyx_L1_error)
   #endif
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 122, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 319, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 333, __pyx_L1_error)
   __pyx_builtin___import__ = __Pyx_GetBuiltinName(__pyx_n_s_import); if (!__pyx_builtin___import__) __PYX_ERR(1, 100, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 156, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 159, __pyx_L1_error)
@@ -30970,7 +31133,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":991
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":991
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -30981,7 +31144,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "../../../../../../../../../home/mytho/.local/share/msbwt-modern2/python27-modern2/lib/python2.7/site-packages/Cython/Includes/numpy/__init__.pxd":997
+  /* "C:/Users/mytho/miniconda3/envs/py27win/lib/site-packages/Cython/Includes/numpy/__init__.pxd":997
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -30992,14 +31155,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":322
+  /* "MUSCython/MSBWTCompGenCython.pyx":336
  *             if str(e) == 'cannot mmap an empty file':
  *                 #this is normal behavior for my test cases with missing symbols
  *                 tempBWT = np.zeros(dtype='<u1', shape=(0, ))             # <<<<<<<<<<<<<<
  *             else:
  *                 raise e
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_int_0); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 336, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
@@ -31116,17 +31279,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__25);
   __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 70, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_MSBWTCompGenCython_pyx, __pyx_n_s_createMsbwtFromSeqs, 36, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 36, __pyx_L1_error)
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":449
+  /* "MUSCython/MSBWTCompGenCython.pyx":468
  *     logger.info('Finished all iterations in '+str(totalEndTime-totalStartTime)+' seconds.')
  * 
  * def iterateMsbwtCreate(tuple tup):             # <<<<<<<<<<<<<<
  *     '''
  *     This function will perform the insertion iteration for a single symbol grouping
  */
-  __pyx_tuple__27 = PyTuple_Pack(53, __pyx_n_s_tup, __pyx_n_s_idChar, __pyx_n_s_fmIndex, __pyx_n_s_fmIndex_view, __pyx_n_s_prevFmDelta, __pyx_n_s_prevFmDelta_view, __pyx_n_s_column, __pyx_n_s_insertionFNs, __pyx_n_s_currentSymbolFN, __pyx_n_s_nextSymbolFN, __pyx_n_s_bwtDir, __pyx_n_s_nextSeqFN, __pyx_n_s_numValidChars, __pyx_n_s_fmDeltas_2, __pyx_n_s_fmDeltas_view, __pyx_n_s_currentBwt, __pyx_n_s_e, __pyx_n_s_currentBwt_view, __pyx_n_s_nextBwtFP, __pyx_n_s_inserts_3, __pyx_n_s_inserts_view, __pyx_n_s_currIndex, __pyx_n_s_maxIndex, __pyx_n_s_insertLen, __pyx_n_s_insertIndex, __pyx_n_s_prevIndex, __pyx_n_s_totalNewLen, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_c, __pyx_n_s_symbol, __pyx_n_s_nextSymbol, __pyx_n_s_outputInserts, __pyx_n_s_outputInsertPointers, __pyx_n_s_outputInsertPointers_view, __pyx_n_s_outputInsert_p, __pyx_n_s_outputInsertIndices, __pyx_n_s_outputInsertIndices_view, __pyx_n_s_ind, __pyx_n_s_newInsertArray, __pyx_n_s_newInsertArray_view, __pyx_n_s_currSeqs, __pyx_n_s_currSeqs_view, __pyx_n_s_readBufferSymbol, __pyx_n_s_readBufferCount, __pyx_n_s_readBufferPower, __pyx_n_s_writeBufferSymbol, __pyx_n_s_writeBufferCount, __pyx_n_s_writeValue, __pyx_n_s_retFNs, __pyx_n_s_newInsertFN, __pyx_n_s_fn, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_tuple__27 = PyTuple_Pack(53, __pyx_n_s_tup, __pyx_n_s_idChar, __pyx_n_s_fmIndex, __pyx_n_s_fmIndex_view, __pyx_n_s_prevFmDelta, __pyx_n_s_prevFmDelta_view, __pyx_n_s_column, __pyx_n_s_insertionFNs, __pyx_n_s_currentSymbolFN, __pyx_n_s_nextSymbolFN, __pyx_n_s_bwtDir, __pyx_n_s_nextSeqFN, __pyx_n_s_numValidChars, __pyx_n_s_fmDeltas_2, __pyx_n_s_fmDeltas_view, __pyx_n_s_currentBwt, __pyx_n_s_e, __pyx_n_s_currentBwt_view, __pyx_n_s_nextBwtFP, __pyx_n_s_inserts_3, __pyx_n_s_inserts_view, __pyx_n_s_currIndex, __pyx_n_s_maxIndex, __pyx_n_s_insertLen, __pyx_n_s_insertIndex, __pyx_n_s_prevIndex, __pyx_n_s_totalNewLen, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_c, __pyx_n_s_symbol, __pyx_n_s_nextSymbol, __pyx_n_s_outputInserts, __pyx_n_s_outputInsertPointers, __pyx_n_s_outputInsertPointers_view, __pyx_n_s_outputInsert_p, __pyx_n_s_outputInsertIndices, __pyx_n_s_outputInsertIndices_view, __pyx_n_s_ind, __pyx_n_s_newInsertArray, __pyx_n_s_newInsertArray_view, __pyx_n_s_currSeqs, __pyx_n_s_currSeqs_view, __pyx_n_s_readBufferSymbol, __pyx_n_s_readBufferCount, __pyx_n_s_readBufferPower, __pyx_n_s_writeBufferSymbol, __pyx_n_s_writeBufferCount, __pyx_n_s_writeValue, __pyx_n_s_retFNs, __pyx_n_s_newInsertFN, __pyx_n_s_fn, __pyx_n_s_ret); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 53, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_MSBWTCompGenCython_pyx, __pyx_n_s_iterateMsbwtCreate, 449, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(1, 0, 0, 53, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_MUSCython_MSBWTCompGenCython_pyx, __pyx_n_s_iterateMsbwtCreate, 468, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -32343,16 +32506,16 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_createMsbwtFromSeqs, __pyx_t_7) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "MUSCython/MSBWTCompGenCython.pyx":449
+  /* "MUSCython/MSBWTCompGenCython.pyx":468
  *     logger.info('Finished all iterations in '+str(totalEndTime-totalStartTime)+' seconds.')
  * 
  * def iterateMsbwtCreate(tuple tup):             # <<<<<<<<<<<<<<
  *     '''
  *     This function will perform the insertion iteration for a single symbol grouping
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_18MSBWTCompGenCython_3iterateMsbwtCreate, 0, __pyx_n_s_iterateMsbwtCreate, NULL, __pyx_n_s_MUSCython_MSBWTCompGenCython, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_9MUSCython_18MSBWTCompGenCython_3iterateMsbwtCreate, 0, __pyx_n_s_iterateMsbwtCreate, NULL, __pyx_n_s_MUSCython_MSBWTCompGenCython, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_iterateMsbwtCreate, __pyx_t_7) < 0) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_iterateMsbwtCreate, __pyx_t_7) < 0) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
   /* "MUSCython/MSBWTCompGenCython.pyx":1
