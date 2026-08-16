@@ -20,6 +20,5 @@
 /compat/fixtures/synthetic/*.fastq text eol=lf
 /compat/fixtures/synthetic/*.json text eol=lf
 /compat/fixtures/synthetic/*.gz binary
-/compat/goldens/** binary
 /reference/original-0.3.0/environment/run-probe.sh text eol=lf
 /reference/original-0.3.0/frozen-source/README.md binary
