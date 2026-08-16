@@ -56,6 +56,44 @@ TRACKER_EXPECTATIONS = [
     ("documented legacy quirk", "cannot concatenate"),
 ]
 
+# Enhanced-modern2 production modules (additive MUS layers).
+ENHANCED_MODULES = [
+    "BackendContract", "Benchmarking", "BWTTags", "LCP",
+    "MultiSourceProvenance", "MultiSourceQuery", "QualitySidecar",
+    "ReadProvenance", "SourceIndex", "SourceMetadata", "SourceRemoval",
+]
+
+# Enhanced CLI tools shipped as console-script entry points.
+ENHANCED_TOOLS = [
+    "bwt_tags", "lcp", "quality_sidecar", "remove_sources",
+    "retrofit_read_provenance", "benchmark_index",
+]
+
+ENHANCED_CONSOLE_SCRIPTS = [
+    "msbwt-bwt-tags", "msbwt-lcp", "msbwt-quality-sidecar",
+    "msbwt-remove-sources", "msbwt-retrofit-read-provenance",
+    "msbwt-benchmark-index",
+]
+
+ENHANCED_EVIDENCE = PACKAGE / "evidence" / "enhanced-release-candidate.json"
+
+# (feature-table row phrase, distinctive README phrase) — each enhanced
+# feature must be described in the package README.
+ENHANCED_README_EXPECTATIONS = [
+    ("Multi-source provenance", "merge_many_balanced"),
+    ("Source-aware queries", "countOccurrencesForSource"),
+    ("Sparse source listing", "nonzeroSources"),
+    ("Sample frequency / top-k", "sourceFrequency"),
+    ("Metadata groups / subsets", "countGroup"),
+    ("Sequence extensions", "extendLeft"),
+    ("Read-level provenance", "ReadProvenanceIndex"),
+    ("Source removal / unmerge", "retain_sources"),
+    ("Generic BWT-aligned tags", "BWTTagStore"),
+    ("Lossless FASTQ quality", "QualitySidecar"),
+    ("Post-construction LCP", "construct_lcp_from_bwt"),
+    ("Benchmarking / backend contract", "BackendContract"),
+]
+
 
 class TestDistributionMetadata(unittest.TestCase):
     def test_setup_py_declares_expected_metadata(self):
@@ -65,12 +103,18 @@ class TestDistributionMetadata(unittest.TestCase):
         self.assertIn("license='MIT'", text)
         self.assertIn("author='James Holt'", text)
         self.assertIn("scripts=['bin/msbwt']", text)
-        self.assertIn("packages=['MUS', 'MUSCython']", text)
+        self.assertIn("packages=['MUS', 'MUSCython', 'tools']", text)
         self.assertIn("'BasicBWT.pxd'", text)
         self.assertIn("install_requires=['pysam', 'numpy']", text)
         self.assertIn("zip_safe=False", text)
+        self.assertIn("entry_points={'console_scripts':", text)
         for name in EXTENSION_NAMES:
             self.assertIn("'%s'" % name, text)
+
+    def test_setup_py_declares_enhanced_console_scripts(self):
+        text = (PACKAGE / "setup.py").read_text(encoding="utf-8")
+        for script in ENHANCED_CONSOLE_SCRIPTS:
+            self.assertIn(script, text, script)
 
     def test_version_matches_mus_util(self):
         text = (MUS / "util.py").read_text(encoding="utf-8")
@@ -82,6 +126,28 @@ class TestDistributionMetadata(unittest.TestCase):
             pkg = (PACKAGE / name).read_bytes()
             root = (REPOSITORY_ROOT / name).read_bytes()
             self.assertEqual(pkg, root, name)
+
+
+class TestEnhancedPackageContent(unittest.TestCase):
+    def test_enhanced_modules_present_in_mus(self):
+        for name in ENHANCED_MODULES:
+            self.assertTrue((MUS / (name + ".py")).is_file(), name)
+
+    def test_tools_package_present(self):
+        self.assertTrue((PACKAGE / "tools" / "__init__.py").is_file())
+        for name in ENHANCED_TOOLS:
+            self.assertTrue((PACKAGE / "tools" / (name + ".py")).is_file(),
+                            name)
+
+    def test_tools_in_manifest_in(self):
+        text = (PACKAGE / "MANIFEST.in").read_text(encoding="utf-8")
+        self.assertIn("recursive-include tools *.py", text)
+
+    def test_installed_gate_driver_present(self):
+        self.assertTrue(
+            (PACKAGE / "validate" / "enhanced_installed_gate.py").is_file())
+        self.assertTrue(
+            (PACKAGE / "validate" / "enhanced-release-candidate.sh").is_file())
 
 
 class TestRequiredPackageContent(unittest.TestCase):
@@ -124,6 +190,32 @@ class TestReadmeBugListConsistency(unittest.TestCase):
         for status, phrase in TRACKER_EXPECTATIONS:
             self.assertIn(phrase, readme,
                           "README missing tracker phrase %r" % phrase)
+
+    def test_readme_covers_every_enhanced_feature(self):
+        readme = PACKAGE_README.read_text(encoding="utf-8")
+        for feature, phrase in ENHANCED_README_EXPECTATIONS:
+            self.assertIn(feature, readme,
+                          "README missing feature %r" % feature)
+            self.assertIn(phrase, readme,
+                          "README missing feature phrase %r" % phrase)
+
+    def test_readme_documents_enhanced_tools(self):
+        readme = PACKAGE_README.read_text(encoding="utf-8")
+        for script in ENHANCED_CONSOLE_SCRIPTS:
+            self.assertIn(script, readme, script)
+
+    def test_readme_does_not_claim_out_of_scope_features(self):
+        readme = PACKAGE_README.read_text(encoding="utf-8")
+        # out-of-scope items must not be claimed as implemented: 8B,
+        # 11B/11C may be mentioned only as future/out-of-scope
+        for banned in ("8B is implemented", "11C is implemented",
+                       "a new compressed backend is implemented"):
+            self.assertNotIn(banned, readme, banned)
+        # 8B must not be named at all (it is not part of this release)
+        self.assertNotIn("8B", readme)
+        # the honest negative 13A result must be documented, not claimed
+        self.assertIn("larger", readme)
+        self.assertIn("No compression win", readme)
 
     def test_tracker_rows_are_the_proven_eight(self):
         text = BUG_TRACKER.read_text(encoding="utf-8")
@@ -169,6 +261,35 @@ class TestReleaseEvidence(unittest.TestCase):
             self.assertEqual(env["result"].startswith("ALL-PASS"), True, env["id"])
 
 
+class TestEnhancedReleaseEvidence(unittest.TestCase):
+    def test_enhanced_release_evidence_schema(self):
+        if not ENHANCED_EVIDENCE.is_file():
+            self.skipTest("enhanced-release-candidate.json not committed yet")
+        data = json.loads(ENHANCED_EVIDENCE.read_text(encoding="utf-8"))
+        for key in ("format", "distribution", "version", "branch", "commit",
+                    "status", "result", "checks", "build", "sdist", "wheel",
+                    "install_environments", "enhanced_gate",
+                    "release_blockers"):
+            self.assertIn(key, data, key)
+        for artifact in ("sdist", "wheel"):
+            for key in ("filename", "sha256", "size"):
+                self.assertIn(key, data[artifact], artifact + "." + key)
+        self.assertIsInstance(data["release_blockers"], list)
+        self.assertEqual(data["release_blockers"], [])
+        self.assertEqual(data["status"], "release-candidate")
+        for env in data["install_environments"]:
+            imports = env["imports"]
+            self.assertEqual(imports["module_failures"], [], env["id"])
+            self.assertEqual(imports["not_site_packages"], [], env["id"])
+            self.assertEqual(imports["sys_path_leaks"], [], env["id"])
+        for label in ("wheel", "sdist"):
+            gate = data["enhanced_gate"][label]
+            self.assertEqual(gate["mismatch_count"], 0, label)
+            self.assertGreater(gate["integrated_comparisons"], 200, label)
+            self.assertGreater(gate["reduced_comparisons"], 100, label)
+            self.assertEqual(gate["rebuild_payload_equal"], True, label)
+
+
 class TestBuiltArtifacts(unittest.TestCase):
     """Content audits of the locally built artifacts (present only when the
     release build was run; dist/ is gitignored and not part of the repo)."""
@@ -198,6 +319,13 @@ class TestBuiltArtifacts(unittest.TestCase):
                     "MANIFEST.in", "LICENSE", "AUTHORS", "README.md",
                     "PKG-INFO"):
             self.assertIn(prefix + rel, names, rel)
+        # enhanced feature modules must ship in the sdist
+        for name in ENHANCED_MODULES:
+            self.assertIn(prefix + "MUS/%s.py" % name, names, name)
+        # tools package must ship in the sdist
+        self.assertIn(prefix + "tools/__init__.py", names)
+        for name in ENHANCED_TOOLS:
+            self.assertIn(prefix + "tools/%s.py" % name, names, name)
         # every extension must ship .pyx and .c
         for name in EXTENSION_NAMES:
             self.assertIn(prefix + "MUSCython/%s.pyx" % name, names)
@@ -223,11 +351,23 @@ class TestBuiltArtifacts(unittest.TestCase):
         self.assertIn("MUS/util.py", names)
         self.assertIn("MUSCython/LCPGen.py", names)
         self.assertIn("MUSCython/BasicBWT.pxd", names)
+        # enhanced feature modules must ship in the wheel
+        for name in ENHANCED_MODULES:
+            self.assertIn("MUS/%s.py" % name, names, name)
+        # tools package must ship in the wheel
+        self.assertIn("tools/__init__.py", names)
+        for name in ENHANCED_TOOLS:
+            self.assertIn("tools/%s.py" % name, names, name)
         for name in EXTENSION_NAMES:
             self.assertIn("MUSCython/%s.so" % name, names, name)
         self.assertTrue(any(n.startswith("msbwt_modern2-0.3.0.dist-info/")
                             for n in names))
         self.assertTrue(any(n.endswith(".data/scripts/msbwt") for n in names))
+        # enhanced console-script wrappers must ship in the wheel
+        for script in ENHANCED_CONSOLE_SCRIPTS:
+            self.assertTrue(
+                any(n.endswith(".data/scripts/%s" % script) for n in names),
+                script)
         # .pyx/.c sources are not shipped in the wheel
         self.assertFalse(any(n.endswith(".pyx") or n.endswith(".c")
                              for n in names))
