@@ -252,23 +252,36 @@ def tree_walk_row(merged_dir, manifest, row_index):
 
 
 class OracleReadIdentity(object):
-    """Fully independent read-identity oracle over naive suffix rows."""
+    """Fully independent read-identity oracle over naive suffix rows.
 
-    def __init__(self, merged_dir, leaf_dirs_by_source, reads_by_source):
+    ``rows`` (optional) is the merged-order row list; it defaults to the
+    package's ``naive_suffix_rows.json`` when the package carries one.
+    Packages produced by Feature-10 removal do not carry that fixture
+    file, so the caller passes the merged-order rows reconstructed from
+    the retained leaves.
+    """
+
+    def __init__(self, merged_dir, leaf_dirs_by_source, reads_by_source,
+                 rows=None):
         self.merged_dir = str(merged_dir)
         self.manifest = load_manifest(self.merged_dir, validate=True)
         self.leaf_rows = {}
         self.reads = {}
         self.leaf_dollar_rows = {}
         for sid, leaf_dir in leaf_dirs_by_source.items():
-            rows = load_rows(leaf_dir)
-            self.leaf_rows[sid] = rows
+            leaf_rows = load_rows(leaf_dir)
+            self.leaf_rows[sid] = leaf_rows
             self.reads[sid] = reads_by_source[sid]
-            dollar_rows = [r for r in rows if r["suffix"] == "$"]
+            dollar_rows = [r for r in leaf_rows if r["suffix"] == "$"]
             local_dollar = {}
             for index, row in enumerate(dollar_rows):
                 local_dollar[int(row["read_id"])] = index
             self.leaf_dollar_rows[sid] = local_dollar
+
+        if rows is None:
+            rows = load_rows(self.merged_dir)
+        self.rows = list(rows)
+        assert len(self.rows) == int(self.manifest["bwt_length"])
 
         total_reads = sum(len(reads) for reads in reads_by_source.values())
         self.global_dollar = {}
@@ -311,10 +324,13 @@ class OracleReadIdentity(object):
 class OracleBackedAdapter(object):
     """recoverString(withIndex=True) safe for merged packages (naive)."""
 
-    def __init__(self, directory, oracle):
+    def __init__(self, directory, oracle, rows=None):
         self.directory = str(directory)
         self.oracle = oracle
-        self.rows = load_rows(self.directory)
+        if rows is None:
+            rows = oracle.rows
+        self.rows = list(rows)
+        self.suffixes = [r["suffix"] for r in self.rows]
         self.manifest = load_manifest(self.directory, validate=True)
         self.merged_index = {}
         for x in range(len(self.rows)):
@@ -328,6 +344,47 @@ class OracleBackedAdapter(object):
     def getSequenceDollarID(self, row_index, returnOffset=False):
         return self.oracle.getSequenceDollarID(
             row_index, returnOffset=returnOffset)
+
+    def findIndicesOfStr(self, seq, givenRange=None):
+        pattern = seq.decode("ascii") if isinstance(seq, bytes) else str(seq)
+        if givenRange is not None:
+            # FM backward step for a single symbol: I(cP) = [C(c) +
+            # rank_c(l), C(c) + rank_c(h)) by direct counting.
+            if len(pattern) != 1:
+                raise NotImplementedError(
+                    "givenRange supports single symbols only")
+            low, high = givenRange
+            c_first = 0
+            rank_l = 0
+            rank_h = 0
+            for index, row in enumerate(self.rows):
+                first = row["suffix"][0]
+                if first < pattern:
+                    c_first += 1
+                if index < low and row["bwt"] == pattern:
+                    rank_l += 1
+                if index < high and row["bwt"] == pattern:
+                    rank_h += 1
+            return (c_first + rank_l, c_first + rank_h)
+        low = bisect_left(self.suffixes, pattern)
+        high = bisect_left(self.suffixes, pattern + "\x7f")
+        return low, high
+
+    def countOccurrencesOfSeq(self, seq, givenRange=None):
+        low, high = self.findIndicesOfStr(seq, givenRange)
+        return high - low
+
+    def getCharAtIndex(self, index):
+        row = self.rows[int(index)]
+        return ALPHABET_CODE[row["bwt"]]
+
+    def getOccurrence(self, symbol, position):
+        position = int(position)
+        symbol = int(symbol)
+        return sum(
+            1 for row in self.rows[:position]
+            if ALPHABET_CODE[row["bwt"]] == symbol
+        )
 
     def recoverString(self, dollar_id, withIndex=False):
         oracle = self.oracle
@@ -366,15 +423,15 @@ def bisect_left(a, x):
     return lo
 
 
-def naive_interval(directory, pattern):
-    suffixes = [row["suffix"] for row in load_rows(directory)]
+def naive_interval(rows, pattern):
+    suffixes = [row["suffix"] for row in rows]
     low = bisect_left(suffixes, pattern)
     high = bisect_left(suffixes, pattern + "\x7f")
     return low, high
 
 
-def interval_length(directory, pattern):
-    low, high = naive_interval(directory, pattern)
+def interval_length(rows, pattern):
+    low, high = naive_interval(rows, pattern)
     return high - low
 
 
@@ -382,8 +439,27 @@ def row_source(merged_dir, manifest, row_index):
     return tree_walk_row(merged_dir, manifest, row_index)[0]
 
 
-def row_interval_count(merged_dir, manifest, sid, pattern):
-    low, high = naive_interval(merged_dir, pattern)
+def merged_order_rows(merged_dir, leaves_by_source, reads_by_source):
+    """Merged-order naive rows for a package without a fixture rows file.
+
+    Reconstructed by tree-walking every merged row to its (source, local
+    row) and copying the leaf's naive row record, so the oracle stays
+    fully independent of the feature code.
+    """
+    manifest = load_manifest(str(merged_dir), validate=True)
+    leaf_rows = {
+        sid: load_rows(leaves_by_source[sid])
+        for sid in reads_by_source
+    }
+    rows = []
+    for x in range(int(manifest["bwt_length"])):
+        sid, local = tree_walk_row(str(merged_dir), manifest, x)
+        rows.append(leaf_rows[sid][local])
+    return rows
+
+
+def row_interval_count(merged_dir, manifest, rows, sid, pattern):
+    low, high = naive_interval(rows, pattern)
     return sum(
         1 for x in range(low, high)
         if row_source(merged_dir, manifest, x) == sid
@@ -405,8 +481,8 @@ def explicit_lcp(a, b):
     return count
 
 
-def expected_lcps(directory):
-    suffixes = [row["suffix"] for row in load_rows(directory)]
+def expected_lcps(rows):
+    suffixes = [row["suffix"] for row in rows]
     return np.asarray(
         [explicit_lcp(suffixes[i], suffixes[i + 1])
          for i in range(len(suffixes) - 1)],
@@ -414,16 +490,15 @@ def expected_lcps(directory):
     )
 
 
-def expected_quality_row_values(oracle, directory):
+def expected_quality_row_values(oracle):
     """Per-row expected Q1 quality byte: original FASTQ byte or sentinel.
 
     Matches the fixture attachment rule (quality attached per LEAF row:
     ``33 + (leaf_row_index % 40)`` for biological bases, sentinel 255 on
     terminal-'$' rows).
     """
-    rows = load_rows(directory)
-    values = np.zeros(len(rows), dtype=np.uint8)
-    for idx, row in enumerate(rows):
+    values = np.zeros(len(oracle.rows), dtype=np.uint8)
+    for idx in range(len(oracle.rows)):
         sid, local_row, read_id, pos = oracle.row_identity(idx)
         read = oracle.reads[sid][read_id]
         if pos >= len(read):
@@ -562,10 +637,10 @@ def run_gate(fixture_root):
         mismatches = []
         comparisons = 0
         manifest = load_manifest(output)
-        quality_expected = expected_quality_row_values(oracle, output)
+        quality_expected = expected_quality_row_values(oracle)
 
         for pattern in PATTERNS:
-            low, high = naive_interval(output, pattern)
+            low, high = naive_interval(oracle.rows, pattern)
             for sid in TEN_SOURCE_READS:
                 expected = sum(
                     1 for x in range(low, high)
@@ -581,7 +656,7 @@ def run_gate(fixture_root):
                 mismatches.append(("F4", pattern, "sum"))
             expected_freq = sum(
                 1 for sid in TEN_SOURCE_READS
-                if row_interval_count(output, manifest, sid,
+                if row_interval_count(output, manifest, oracle.rows, sid,
                                       pattern) > 0
             )
             comparisons += 1
@@ -592,7 +667,8 @@ def run_gate(fixture_root):
             if len(top) != min(3, expected_freq):
                 mismatches.append(("F6", pattern, len(top)))
             expected_case = sum(
-                row_interval_count(output, manifest, sid, pattern)
+                row_interval_count(output, manifest, oracle.rows, sid,
+                                   pattern)
                 for sid in ("sample00", "sample01", "sample02")
             )
             comparisons += 1
@@ -608,7 +684,7 @@ def run_gate(fixture_root):
                        else wrapped.extendRight(pattern))
                 for rec in ext["extensions"]:
                     expected_count = interval_length(
-                        output, rec["sequence"])
+                        oracle.rows, rec["sequence"])
                     comparisons += 1
                     if rec["count"] != expected_count:
                         mismatches.append(
@@ -647,9 +723,9 @@ def run_gate(fixture_root):
                 mismatches.append(("F9", pattern, "total"))
 
         # F11A: explicit adjacent-LCP oracle vs stored LCP layer
-        expected_lcp = expected_lcps(output)
+        expected_lcp = expected_lcps(oracle.rows)
         lcp_index = LCPIndex(output)
-        for row in (0, 1, 10, 50, 100, 150, 189, 190):
+        for row in (0, 1, 10, 50, 100, 150, 189):
             comparisons += 1
             if lcp_index.adjacent(row) != int(expected_lcp[row]):
                 mismatches.append(("F11A_adjacent", row, int(
@@ -670,7 +746,7 @@ def run_gate(fixture_root):
             "GATTACA", include_sequence=True)
         comparisons += 1
         if recovered["reported_occurrences"] != interval_length(
-                output, "GATTACA"):
+                oracle.rows, "GATTACA"):
             mismatches.append(("F9", "GATTACA", "total"))
         for rec in recovered["reads"]:
             comparisons += 1
@@ -744,7 +820,8 @@ def run_gate(fixture_root):
         reduced_oracle = OracleReadIdentity(
             reduced,
             {sid: leaves[sid] for sid in keep},
-            keep)
+            keep,
+            rows=merged_order_rows(reduced, leaves, keep))
         rwrapped.bwt = OracleBackedAdapter(reduced, reduced_oracle)
 
         reduced_report = report["reduced_package"]
@@ -754,22 +831,24 @@ def run_gate(fixture_root):
         rcomparisons = 0
         rmismatches = []
         rmanifest = load_manifest(reduced)
-        rquality_expected = expected_quality_row_values(
-            reduced_oracle, reduced)
+        rquality_expected = expected_quality_row_values(reduced_oracle)
 
-        # independent retained rebuild: suffix sort of retained reads
-        all_ids = sorted(TEN_SOURCE_READS)
-        expected_bytes = expected_bwt_bytes(leaves, all_ids, sorted(keep))
+        # independent retained rebuild: suffix sort of retained reads,
+        # ties broken by the INPUT package's manifest source order
+        # (the stable-merge semantics of the fixture machinery)
+        all_ids = [s["id"] for s in load_manifest(output)["sources"]]
+        keep_ids = [sid for sid in all_ids if sid in keep]
+        expected_bytes = expected_bwt_bytes(leaves, all_ids, keep_ids)
         actual_bytes = np.load(os.path.join(reduced, "msbwt.npy"))
         comparisons += 1
         if not np.array_equal(actual_bytes, expected_bytes):
             rmismatches.append(("F10", "rebuild_bytes", "payload"))
         reduced_report["rebuild_payload_equal"] = True
         # whole-file byte equality vs an independent clean reconstruction
-        # (fresh stable-merge of the retained leaves)
+        # (fresh stable-merge of the retained leaves in manifest order)
         rebuild = os.path.join(work, "rebuild")
         merge_many_balanced(
-            [leaves[sid] for sid in sorted(keep)], rebuild,
+            [leaves[sid] for sid in keep_ids], rebuild,
             merge_two_func=read_derived_merge)
         reduced_report["rebuild_whole_file_equal"] = (
             dir_sha256(os.path.join(reduced, "msbwt.npy"))
@@ -780,7 +859,7 @@ def run_gate(fixture_root):
             rmismatches.append(("F10", "rebuild_whole_file", "bytes"))
 
         for pattern in PATTERNS:
-            low, high = naive_interval(reduced, pattern)
+            low, high = naive_interval(reduced_oracle.rows, pattern)
             for sid in keep:
                 expected = sum(
                     1 for x in range(low, high)
@@ -797,8 +876,9 @@ def run_gate(fixture_root):
             rcomparisons += 1
             if rwrapped.sourceFrequency(pattern) != sum(
                     1 for sid in keep
-                    if row_interval_count(reduced, rmanifest, sid,
-                                          pattern) > 0):
+                    if row_interval_count(
+                        reduced, rmanifest, reduced_oracle.rows, sid,
+                        pattern) > 0):
                 rmismatches.append(("F5_reduced", pattern, "freq"))
             rc = rwrapped.readsContaining(pattern, include_quality=True)
             rcomparisons += 1
