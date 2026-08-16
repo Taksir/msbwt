@@ -19,6 +19,12 @@ import time
 
 from cython.operator cimport preincrement as inc
 
+# (Windows portability) np.save() writes py2-long shape elements into .npy
+# headers on Windows; normalize to ints so headers are byte-identical to
+# Linux.  Plain Python def so it stays callable from Cython code.
+def _int_shape(shape):
+    return tuple(int(x) for x in shape)
+
 import MSBWTGenCython as MSBWTGen
 
 def createMSBWTFromSeqs(list seqArray, char * mergedDir, unsigned long numProcs, bint areUniform, logger):
@@ -307,9 +313,19 @@ def mergeTwoMSBWTs(char * inputMsbwtDir1, char * inputMsbwtDir2, char * mergedDi
     
     #remove this temp files also
     if interleaveBytes > interThresh:
+        # (Windows portability) close the interleave mapping before removal.
+        if (<object>inter1).base is not None:
+            (<object>inter1).base.close()
         os.remove(interleaveFN1)
     else:
-        np.save(interleaveFN0, inter0)
+        # (Windows portability) np.save() writes arr.shape elements (py2
+        # longs on Windows) into the .npy header as 'L'-suffixed literals,
+        # diverging from the Linux byte contract; open_memmap() with a
+        # normalized int shape writes byte-identical headers everywhere.
+        _mm = np.lib.format.open_memmap(interleaveFN0, 'w+', inter0.dtype,
+                                        _int_shape((<object>inter0).shape))
+        _mm[:] = inter0
+        del _mm
     
     #return the number of iterations it took us to converge
     return iterCount
@@ -553,7 +569,11 @@ def memoryBWT(seq):
             arr0_view[x] = x
     
     #fm index type stuff which helps build the thing
-    cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmOffsets = np.cumsum(totalCounts)-totalCounts
+    # (Windows portability) np.cumsum(u4) - u4 promotes to C 'unsigned long',
+    # which is 32-bit on Windows (64-bit on Linux); forcing the cumsum dtype
+    # keeps the fmOffsets result 64-bit on both platforms with identical
+    # values.
+    cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmOffsets = np.cumsum(totalCounts, dtype='<u8')-totalCounts
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmOffsetsCopy
     cdef np.uint64_t [:] fmOffsetsCopy_view
     cdef unsigned long ind
@@ -646,7 +666,14 @@ def interleaveLevelMerge(char * mergedDir, unsigned long numProcs, bint areUnifo
     if backupID == 0:
         #copy the input strings over to our final output, this is what we'll be manipulating
         logger.info('Copying seqs.npy to msbwt.npy...')
-        np.save(mergedDir+'/msbwt.npy', seqs)
+        # (Windows portability) np.save() writes py2-long shape elements into
+        # the .npy header on Windows ('L'-suffixed literals), diverging from
+        # the Linux byte contract; open_memmap() with a normalized int shape
+        # writes byte-identical headers everywhere.
+        _mm = np.lib.format.open_memmap(mergedDir+'/msbwt.npy', 'w+', seqs.dtype,
+                                        _int_shape((<object>seqs).shape))
+        _mm[:] = seqs
+        del _mm
         oldBackupFN = None
     else:
         bfn = mergedDir+'/backup.'+str(backupID)+'.npy'
@@ -1091,10 +1118,18 @@ def buildViaMerge256(tup):
     
     #remove the temp file if we made it
     if offsets_view[numInputs] - offsets_view[0] >= inMemThreshold:
+        # (Windows portability) close the mapping before removal.
+        if (<object>msbwtOut).base is not None:
+            (<object>msbwtOut).base.close()
         os.remove(outFN)
     
     #remove these temp files also
     if interleaveBytes > interThresh:
+        # (Windows portability) close the interleave mappings before removal.
+        if (<object>inter0).base is not None:
+            (<object>inter0).base.close()
+        if (<object>inter1).base is not None:
+            (<object>inter1).base.close()
         os.remove(interleaveFN0)
         os.remove(interleaveFN1)
         

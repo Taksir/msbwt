@@ -1045,7 +1045,10 @@ def compressBWT(inputFN, outputFN, numProcs, logger):
         prevChar = ret[3]
     
     #make the real output by joining all of the partial compressions into a single file
-    finalBWT = np.lib.format.open_memmap(outputFN, 'w+', '<u1', (totalSize,))
+    # (Windows portability) totalSize can be a py2 long on Windows (numpy
+    # intp arithmetic), which would write an 'L'-suffixed shape literal into
+    # the .npy header and diverge from the Linux byte contract; normalize it.
+    finalBWT = np.lib.format.open_memmap(outputFN, 'w+', '<u1', (int(totalSize),))
     logger.info('Calculated compressed size:'+str(totalSize)+'B')
     logger.info('Joining sub-compressions...')
     
@@ -1087,6 +1090,11 @@ def compressBWT(inputFN, outputFN, numProcs, logger):
         prevChar = ret[3]
         
     #clear all intermediate files
+    # (Windows portability) np.load(fn, 'r') keeps the last temporary file
+    # memory-mapped here; close it so the files can be removed (os.remove()
+    # fails on Windows while a mapping is open).
+    if getattr(copyArr, 'base', None) is not None:
+        copyArr.base.close()
     for ret in rets:
         os.remove(ret[5])
     

@@ -136,7 +136,9 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
         for c in range(0, numValidChars):
             #create an initial empty region for each symbol
             tempFN = bwtDir+'/state.'+str(c)+'.0.dat'
-            tempFP = fopen(tempFN, 'w+')
+            # binary mode: on Windows the C runtime would otherwise translate
+            # 0x0A bytes inside the binary state data into '\r\n' pairs.
+            tempFP = fopen(tempFN, 'w+b')
             fclose(tempFP)
             
             #create an empty list of files for insertion
@@ -181,6 +183,13 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
         #raise Exception('')
     
     logger.info('Beginning iterations...')
+    
+    # (Windows portability) the parent no longer needs its own view of the
+    # initial-inserts file; close the mapping so the first column cleanup
+    # below can remove inserts.initial.npy (os.remove() fails on Windows
+    # while a mapping is open).
+    if initialInserts is not None and (<object>initialInserts).base is not None:
+        (<object>initialInserts).base.close()
     
     cdef unsigned long cumsum
     
@@ -242,6 +251,11 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
                     nextInsertionFNDict[c2].append(ret[1][c2])
         
         myPool.close()
+        # (Windows portability) wait for the workers to exit before removing
+        # the state files below: a still-running worker keeps its np.load(..,
+        # 'r+') mappings open, and Windows refuses to remove files that have
+        # an open memory mapping.
+        myPool.join()
         
         #copy the fmDeltas and insertion filenames
         #fmDeltas[:] = nextFmDeltas[:]
@@ -413,6 +427,11 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
             finalSymbolCount = finalSymbolCount*32 + (finalBWT_view[finalSymbolPos-1] >> 3)
             finalSymbolBytes += 1
             finalSymbolPos -= 1
+        
+        # (Windows portability) close this state file's mapping before it is
+        # removed below (os.remove() fails on Windows while a mapping is open).
+        if (<object>tempBWT).base is not None:
+            (<object>tempBWT).base.close()
     
     #finally, clear the last state files
     tempBWT = None
@@ -537,7 +556,9 @@ def iterateMsbwtCreate(tuple tup):
             shutil.copyfile(currentSymbolFN, nextSymbolFN)
     else:
         #first, open the file for output
-        nextBwtFP = fopen(nextSymbolFN, 'w+')
+        # binary mode: see the note at the state-file creation above
+        # (Windows text mode would corrupt 0x0A bytes in the BWT data).
+        nextBwtFP = fopen(nextSymbolFN, 'w+b')
         
         #allocate a numpy array for each new insert file
         for c in range(0, numValidChars):

@@ -11,6 +11,12 @@ import os
 cimport BasicBWT
 from cython.operator cimport preincrement as inc
 
+# (Windows portability) np.save() writes py2-long shape elements into .npy
+# headers on Windows; normalize to ints so headers are byte-identical to
+# Linux.  Plain Python def so it stays callable from Cython code.
+def _int_shape(shape):
+    return tuple(int(x) for x in shape)
+
 cdef class ByteBWT(BasicBWT.BasicBWT):
     '''
     This class is a BWT capable of hosting multiple strings inside one structure.  Basically, this would allow you to
@@ -75,7 +81,14 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
             with nogil:
                 for i in range(0, self.totalSize):
                     inc(self.totalCounts_view[self.bwt_view[i]])
-            np.save(abtFN, self.totalCounts)
+            # (Windows portability) np.save() writes py2-long shape elements
+            # into the .npy header on Windows ('L'-suffixed literals),
+            # diverging from the Linux byte contract; open_memmap() with a
+            # normalized int shape writes byte-identical headers everywhere.
+            _mm = np.lib.format.open_memmap(abtFN, 'w+', self.totalCounts.dtype,
+                                            _int_shape((<object>self.totalCounts).shape))
+            _mm[:] = self.totalCounts
+            del _mm
     
     def constructFMIndex(ByteBWT self, logger):
         '''

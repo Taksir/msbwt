@@ -12,6 +12,12 @@ import time
 import MultiStringBWTCython as MSBWT
 cimport BasicBWT
 
+# (Windows portability) np.save() writes py2-long shape elements into .npy
+# headers on Windows; normalize to ints so headers are byte-identical to
+# Linux.  Plain Python def so it stays callable from Cython code.
+def _int_shape(shape):
+    return tuple(int(x) for x in shape)
+
 def mergeTwoMSBWTs(char * inputMsbwtDir1, char * inputMsbwtDir2, char * mergedDir, unsigned long numProcs, logger):
     '''
     This function takes two BWTs as input and merges them into a single BWT in O(N*LCP_avg) time where N is the 
@@ -146,11 +152,21 @@ def mergeTwoMSBWTs(char * inputMsbwtDir1, char * inputMsbwtDir2, char * mergedDi
             fullCoverageRanges = np.copy(ranges)
     
     if interleaveBytes <= interThresh:
-        np.save(interleaveFN0, inter0)
+        # (Windows portability) np.save() writes py2-long shape elements into
+        # the .npy header on Windows ('L'-suffixed literals), diverging from
+        # the Linux byte contract; open_memmap() with a normalized int shape
+        # writes byte-identical headers everywhere.
+        _mm = np.lib.format.open_memmap(interleaveFN0, 'w+', inter0.dtype,
+                                        _int_shape((<object>inter0).shape))
+        _mm[:] = inter0
+        del _mm
     
     interleaveTwoBwts(inputMsbwtDir1, inputMsbwtDir2, mergedDir, logger)
     
     if interleaveBytes > interThresh:
+        # (Windows portability) close the interleave mapping before removal.
+        if (<object>inter1).base is not None:
+            (<object>inter1).base.close()
         os.remove(interleaveFN1)
         
     return iterCount

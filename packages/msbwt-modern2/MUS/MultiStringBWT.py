@@ -14,7 +14,6 @@ import math
 import numpy as np
 import os
 import pickle
-import pysam#@UnresolvedImport
 import shutil
 import sys
 
@@ -242,7 +241,9 @@ class MultiStringBWT(BasicBWT):
         
         abtFN = self.dirName+'/totalCounts.p'
         if os.path.exists(abtFN):
-            fp = open(abtFN, 'r')
+            # binary mode: pickle framing bytes must not be rewritten by
+            # Windows text-mode newline translation
+            fp = open(abtFN, 'rb')
             self.totalCounts = pickle.load(fp)
             fp.close()
         else:
@@ -258,7 +259,9 @@ class MultiStringBWT(BasicBWT):
                 i += 1
             
             #save the total count to '<DIR>/totalCounts.p'
-            fp = open(abtFN, 'w+')
+            # binary mode: pickle framing bytes must not be rewritten by
+            # Windows text-mode newline translation
+            fp = open(abtFN, 'wb+')
             pickle.dump(self.totalCounts, fp)
             fp.close()
     
@@ -419,7 +422,9 @@ class CompressedMSBWT(BasicBWT):
         
         abtFN = self.dirName+'/totalCounts.p'
         if os.path.exists(abtFN):
-            fp = open(abtFN, 'r')
+            # binary mode: pickle framing bytes must not be rewritten by
+            # Windows text-mode newline translation
+            fp = open(abtFN, 'rb')
             self.totalCounts = pickle.load(fp)
             fp.close()
         else:
@@ -456,7 +461,9 @@ class CompressedMSBWT(BasicBWT):
                 #each letter has a variable 'weight' which is the runlength of that region
                 self.totalCounts += np.bincount(letters, np.multiply(counts, self.numPower**powers), minlength=self.vcLen)
                 
-            fp = open(abtFN, 'w+')
+            # binary mode: pickle framing bytes must not be rewritten by
+            # Windows text-mode newline translation
+            fp = open(abtFN, 'wb+')
             pickle.dump(self.totalCounts, fp)
             fp.close()
         
@@ -953,6 +960,13 @@ def preprocessBams(bamFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger):
     numSeqs = 0
     
     subSortFNs = []
+    
+    # pysam is imported lazily here (not at module scope): it is only needed
+    # for BAM input, and no pysam distribution exists for CPython 2.7 on
+    # native Windows.  FASTQ input never touches pysam, so the import is
+    # deferred until a BAM file is actually preprocessed.  On Linux this
+    # preserves the historical behavior (pysam is still required for BAM).
+    import pysam
     
     for fnID, fn in enumerate(bamFNs):
         #open the file and read in starting form the second, every 4th line

@@ -22,7 +22,6 @@ import numpy as np
 cimport numpy as np
 import os
 import pickle
-import pysam#@UnresolvedImport
 import shutil
 import sys
 import time
@@ -318,6 +317,13 @@ def preprocessBams(bamFNs, outputDir, areUniform, logger):
     
     subSortFNs = []
     
+    # pysam is imported lazily here (not at module scope): it is only needed
+    # for BAM input, and no pysam distribution exists for CPython 2.7 on
+    # native Windows.  FASTQ input never touches pysam, so the import is
+    # deferred until a BAM file is actually preprocessed.  On Linux this
+    # preserves the historical behavior (pysam is still required for BAM).
+    import pysam
+    
     for fnID, fn in enumerate(bamFNs):
         #open the file and read in starting form the second, every 4th line
         logger.info('Loading \''+fn+'\'...')
@@ -563,6 +569,12 @@ def mergeSubSorts(list subSortFNs, unsigned long numSeqs, bint areUniform, maxSe
     MSBWTGen.writeSeqsToFiles(seqArrayMmap, seqFNPrefix, offsetFN, uniformLength)
     
     #wipe this
+    # (Windows portability) Cython holds the typed memmap view alive until the
+    # function epilogue, so the underlying file mapping is still open here;
+    # explicitly close it so the temporary file can be removed (os.remove()
+    # fails with a sharing violation on Windows while a mapping is open).
+    if (<object>seqArrayMmap).base is not None:
+        (<object>seqArrayMmap).base.close()
     os.remove(tempFN)
     
 def cleanupTemporaryFiles(outputDir):

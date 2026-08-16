@@ -12,6 +12,12 @@ import os
 
 from libc.stdio cimport FILE, fopen, fwrite, fclose
 
+# (Windows portability) np.save() writes py2-long shape elements into .npy
+# headers on Windows; normalize to ints so headers are byte-identical to
+# Linux.  Plain Python def so it stays callable from Cython code.
+def _int_shape(shape):
+    return tuple(int(x) for x in shape)
+
 cimport BasicBWT
 import MSBWTGenCython as MSBWTGen
 import AlignmentUtil
@@ -121,7 +127,14 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
                     currentCount = (self.bwt_view[i] >> letterBits) * powerMultiple
                     self.totalCounts_view[currentChar] += currentCount
             
-            np.save(abtFN, self.totalCounts)
+            # (Windows portability) np.save() writes py2-long shape elements
+            # into the .npy header on Windows ('L'-suffixed literals),
+            # diverging from the Linux byte contract; open_memmap() with a
+            # normalized int shape writes byte-identical headers everywhere.
+            _mm = np.lib.format.open_memmap(abtFN, 'w+', self.totalCounts.dtype,
+                                            _int_shape((<object>self.totalCounts).shape))
+            _mm[:] = self.totalCounts
+            del _mm
         
         self.totalSize = int(np.sum(self.totalCounts))
     
@@ -705,7 +718,9 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         cdef np.uint64_t [:] tempIndexArray_view = tempIndexArray
         
         cdef str deletionFN = self.dirName+'/deletion_indices.dat'
-        cdef FILE * fp = fopen(deletionFN, 'w+')
+        # binary mode: on Windows the C runtime would otherwise translate
+        # 0x0A bytes inside the binary index data into '\r\n' pairs.
+        cdef FILE * fp = fopen(deletionFN, 'w+b')
         
         cdef unsigned long x, copyIndex
         cdef np.uint8_t indexByte
@@ -898,6 +913,10 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
             
         #clear Auxiliary data
         MSBWTGen.clearAuxiliaryData(self.dirName)
+        # (Windows portability) close the deletion-index mapping first;
+        # os.remove() fails on Windows while a memory mapping is open.
+        if (<object>delIndices).base is not None:
+            (<object>delIndices).base.close()
         try:
             os.remove(deletionFN)
         except:

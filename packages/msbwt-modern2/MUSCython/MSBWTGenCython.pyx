@@ -127,6 +127,13 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     logger.info('Finished init in '+str(et-st)+' seconds.')
     logger.info('Beginning iterations...')
     
+    # (Windows portability) the parent no longer needs its own view of the
+    # initial-inserts file; close the mapping so the first column cleanup
+    # below can remove inserts.initial.npy (os.remove() fails on Windows
+    # while a mapping is open).
+    if (<object>initialInserts).base is not None:
+        (<object>initialInserts).base.close()
+    
     cdef unsigned long cumsum
     
     #2 - go back one column at a time, building new inserts
@@ -186,6 +193,11 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
                     nextInsertionFNDict[c2].append(ret[1][c2])
         
         myPool.close()
+        # (Windows portability) wait for the workers to exit before removing
+        # the state files below: a still-running worker keeps its np.load(..,
+        # 'r+') mappings open, and Windows refuses to remove files that have
+        # an open memory mapping.
+        myPool.join()
         
         #remove the old insertions and old state files
         for c in insertionFNDict:
@@ -251,6 +263,13 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
                 finalInd += 1
     
     #finally, clear the last state files
+    # (Windows portability) close the parent's own mappings first: the
+    # initial-inserts memmap and the last state-file read mapping would
+    # otherwise block os.remove() below.
+    if (<object>initialInserts).base is not None:
+        (<object>initialInserts).base.close()
+    if (<object>tempBWT).base is not None:
+        (<object>tempBWT).base.close()
     tempBWT = None
     for c in range(0, numValidChars):
         for fn in insertionFNDict[c]:
@@ -337,6 +356,11 @@ def iterateMsbwtCreate(tuple tup):
         #we don't need to do anything except rename our file
         #print str(idChar)+', No change'
         if os.path.exists(currentSymbolFN):
+            # (Windows portability) close the read mapping before the rename;
+            # Windows cannot rename a file that still has an open memory
+            # mapping (sharing violation).
+            if (<object>currentBwt).base is not None:
+                (<object>currentBwt).base.close()
             os.rename(currentSymbolFN, nextSymbolFN)
     else:
         #first we need to count how big the new iteration is
@@ -534,6 +558,11 @@ def compressBWT(char * inputFN, char * outputFN, unsigned long numProcs, logger)
             prevTotal = ret[4]
             
         prevChar = ret[3]
+        # (Windows portability) np.load(fn, 'r+') returns a memory-mapped
+        # array; close each mapping here so the intermediate files can be
+        # removed below (os.remove() fails on Windows while a mapping is open).
+        if (<object>copyArr).base is not None:
+            (<object>copyArr).base.close()
         
     #clear all intermediate files
     for ret in rets:

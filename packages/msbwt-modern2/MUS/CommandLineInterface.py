@@ -215,7 +215,9 @@ def mainRun():
         print
         msbwt = MultiStringBWT.loadBWT(args.inputBwtDir, logger=logger)
         
-        output = open(args.outputFile, 'w+')
+        # binary mode: on Windows text mode would write '\r\n' line endings,
+        # diverging from the Linux byte contract of the CSV output.
+        output = open(args.outputFile, 'wb+')
         output.write('k-mer,counts')
         if args.reverseComplement:
             output.write(',revCompCounts\n')

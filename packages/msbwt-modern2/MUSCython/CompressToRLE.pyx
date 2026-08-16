@@ -24,13 +24,20 @@ def compressInput(str fn, str bwtDir):
     if fn == None:
         inputStream = stdin
     else:
+        # text mode on the input: Windows text-mode reads translate CRLF line
+        # endings to '\n', matching the Linux behavior for the same input
+        # bytes (the BWT text input is newline-terminated).  The OUTPUT stream
+        # below is binary so the RLE payload bytes are never rewritten.
         inputStream = fopen(fn, 'r')
     
     if not os.path.exists(bwtDir):
         os.makedirs(bwtDir)
     
     cdef str outputFN = bwtDir+'/comp_msbwt.npy'
-    cdef FILE * outputStream = fopen(outputFN, 'w+')
+    # binary mode: on Windows the C runtime would otherwise translate '\n'
+    # (0x0A) bytes inside the RLE payload into '\r\n' pairs, corrupting the
+    # output; Linux text mode is already byte-transparent.
+    cdef FILE * outputStream = fopen(outputFN, 'w+b')
     
     cdef unsigned long BUFFER_SIZE = 1024
     cdef bytes strBuffer = <bytes>('\x00'*BUFFER_SIZE)

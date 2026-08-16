@@ -11,6 +11,12 @@ import time
 import numpy as np
 cimport numpy as np
 
+# (Windows portability) np.save() writes py2-long shape elements into .npy
+# headers on Windows; normalize to ints so headers are byte-identical to
+# Linux.  Plain Python def so it stays callable from Cython code.
+def _int_shape(shape):
+    return tuple(int(x) for x in shape)
+
 cimport BasicBWT
 
 cdef class LZW_BWT(BasicBWT.BasicBWT):
@@ -188,7 +194,15 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
                         for j in range(0, tmpBin.shape[0]):
                             self.totalCounts_view[tmpBin_view[j]] += 1
                 
-                np.save(totalCountsFN, self.totalCounts)
+                # (Windows portability) np.save() writes py2-long shape
+                # elements into the .npy header on Windows ('L'-suffixed
+                # literals), diverging from the Linux byte contract;
+                # open_memmap() with a normalized int shape writes
+                # byte-identical headers everywhere.
+                _mm = np.lib.format.open_memmap(totalCountsFN, 'w+', self.totalCounts.dtype,
+                                                _int_shape((<object>self.totalCounts).shape))
+                _mm[:] = self.totalCounts
+                del _mm
             
             self.constructIndexing()
         else:
@@ -227,7 +241,14 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
             for i in range(0, self.vcLen):
                 self.totalCounts_view[i] = self.partialFM_view[numSamples][i]
             
-            np.save(totalCountsFN, self.totalCounts)
+            # (Windows portability) np.save() writes py2-long shape elements
+            # into the .npy header on Windows ('L'-suffixed literals),
+            # diverging from the Linux byte contract; open_memmap() with a
+            # normalized int shape writes byte-identical headers everywhere.
+            _mm = np.lib.format.open_memmap(totalCountsFN, 'w+', self.totalCounts.dtype,
+                                            _int_shape((<object>self.totalCounts).shape))
+            _mm[:] = self.totalCounts
+            del _mm
             
             #finally, correct the fm-index to be offsets, not counts
             self.constructIndexing()

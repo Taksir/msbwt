@@ -15,6 +15,8 @@
 from setuptools import setup
 from setuptools import Extension
 
+import os
+
 # Version comes from MUS.util (frozen behavior: the original setup.py does the
 # same).  Safe because pip/setup.py run with the package source on sys.path.
 from MUS import util
@@ -92,6 +94,30 @@ class build_ext(_build_ext):
             pass
         import numpy as np
         self.include_dirs.append(np.get_include())
+
+    def build_extensions(self):
+        # Native Windows (MinGW-w64) builds: link the extension DLLs against
+        # msvcrt.dll instead of the MSVC9 CRT (msvcr90.dll).
+        #
+        # Background: distutils on Python 2.7 derives the CRT import library
+        # from sys.version ("MSC v.1500" on the conda/CPython 2.7 Windows
+        # build) and passes -lmsvcr90 to the mingw32 linker.  On Windows
+        # 10/11 this is not loadable: the extension .pyd has no SxS manifest,
+        # so the loader resolves msvcr90.dll outside the activation context
+        # of the interpreter and the CRT's initialization aborts with runtime
+        # error R6034 ("attempt to load the C runtime library incorrectly"),
+        # failing every import.  The community-proven mingwpy approach links
+        # Python 2.7 extensions against msvcrt.dll (always loadable, no
+        # manifest) instead.  msbwt extensions perform no cross-CRT resource
+        # passing: all Python-visible objects are allocated/freed through the
+        # python27.dll exports, so this has no semantic effect on the build
+        # or the artifacts.  Linux/GCC builds are unaffected (this branch
+        # only triggers for the mingw32 compiler on Windows).
+        compiler = getattr(self, 'compiler', None)
+        if os.name == 'nt' and compiler is not None \
+                and getattr(compiler, 'compiler_type', '') == 'mingw32':
+            compiler.dll_libraries = ['msvcrt']
+        _build_ext.build_extensions(self)
 
 
 cmdClass['build_ext'] = build_ext
