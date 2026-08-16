@@ -4,3 +4,4 @@ include README.md
 include bin/msbwt
 recursive-include MUS *.py
 recursive-include MUSCython *.py *.pyx *.pxd *.c
+recursive-include tools *.py

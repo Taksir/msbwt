@@ -69,6 +69,20 @@ else:
     ]
 
 
+# enhanced-modern2 command-line tools are installed as conventional
+# console-script entry points.  Each tool keeps its argparse `main()` and
+# `MUS.*` imports; the entry points simply make the installed commands
+# available on PATH with the environment's own interpreter.
+ENHANCED_CONSOLE_SCRIPTS = [
+    'msbwt-bwt-tags = tools.bwt_tags:main',
+    'msbwt-lcp = tools.lcp:main',
+    'msbwt-quality-sidecar = tools.quality_sidecar:main',
+    'msbwt-remove-sources = tools.remove_sources:main',
+    'msbwt-retrofit-read-provenance = tools.retrofit_read_provenance:main',
+    'msbwt-benchmark-index = tools.benchmark_index:main',
+]
+
+
 class build_ext(_build_ext):
     def finalize_options(self):
         _build_ext.finalize_options(self)
@@ -89,10 +103,11 @@ setup(name='msbwt-modern2',
       author='James Holt',
       author_email='holtjma@cs.unc.edu',
       license='MIT',
-      packages=['MUS', 'MUSCython'],
+      packages=['MUS', 'MUSCython', 'tools'],
       package_data={'MUSCython': ['BasicBWT.pxd']},
       install_requires=['pysam', 'numpy'],
       scripts=['bin/msbwt'],
+      entry_points={'console_scripts': ENHANCED_CONSOLE_SCRIPTS},
       zip_safe=False,
       ext_modules=extModules,
       cmdclass=cmdClass)
