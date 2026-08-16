@@ -38,8 +38,31 @@ distribution:
   `packages/msbwt-modern2/evidence/release-candidate.json`).
 
 The modern2 baseline is **frozen** except for critical release-blocking
-fixes. New research features will be developed separately on a future
-`enhanced-modern2` track.
+fixes.
+
+### `enhanced-modern2` — complete (release candidate)
+
+The additive research-feature track on top of the frozen baseline is
+complete on branch `enhanced-modern2`:
+
+- multi-source provenance and source-aware queries, sparse source
+  listing, sample frequency / exact top-k, metadata groups and subset
+  predicates, source-aware left/right sequence extensions, exact
+  read-level provenance, source removal/unmerge without FASTQ rebuild,
+  generic BWT-aligned tag arrays, lossless FASTQ quality sidecar,
+  post-construction LCP retrofit, and a whole-index benchmark harness
+  with a machine-readable backend contract (features F1–F13A + Q1);
+- every feature is an additive pure-Python `MUS.*` layer with its own
+  milestone doc, host + Python-2 tests, and executed evidence under
+  `packages/msbwt-modern2/evidence/`; the final integrated gate runs all
+  features in one package against independent oracles
+  (`docs/enhanced-modern2/README.md`);
+- the enhanced layers are packaged into the same `msbwt-modern2`
+  distribution (six additional console-script tools) and validated by
+  fresh-prefix installs of both the wheel and the sdist
+  (`packages/msbwt-modern2/evidence/enhanced-release-candidate.json`).
+- No claims are made for 8B / 11B / 11C, a new compressed backend, or
+  performance superiority: those are not part of this release.
 
 ### `msbwt-modern3` — not started
 
@@ -52,13 +75,16 @@ not treat anything in this repository as a Python 3 release.
 ```text
 reference/original-0.3.0/   frozen historical oracle (40 hash-pinned files)
 packages/msbwt-modern2/     COMPLETE: Python-2.7/Cython-3.0.12 compatibility
-                            baseline, independently installable distribution
+                            baseline + enhanced-modern2 feature layers,
+                            independently installable distribution
                             (setup.py, MUS/, MUSCython/, bin/msbwt,
-                            environment/ locks, tests/, validate/, evidence/)
+                            tools/, environment/ locks, tests/, validate/,
+                            evidence/)
 packages/msbwt-modern3/     future separate modernization track (not created)
 compat/                     shared fixtures, goldens, manifests, compatibility
                             tests, and the Q1 audit harness
 docs/modernization/         handoff, milestone reports, bug tracker, audit doc
+docs/enhanced-modern2/      enhanced-modern2 feature milestone docs + index
 MUS/ MUSCython/ setup.py    frozen-original sources kept for oracle reference
 ```
 

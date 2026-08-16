@@ -16,6 +16,11 @@ import MUSCython
 msbwt -V        # -> msbwt 0.3.0 in MSBWT 0.3.0
 ```
 
+This distribution also carries the **enhanced-modern2** feature layers
+(multi-source provenance and queries, source removal, BWT-aligned tags,
+exact FASTQ quality, LCP, benchmarking) as additive `MUS.*` modules with
+six additional command-line tools; see section 11.
+
 [MSBWT]: https://github.com/holtjma/msbwt
 
 ## 1. What is msbwt-modern2?
@@ -96,9 +101,13 @@ public package index; install them from the built files:
 
 The wheel is specific to the Python-2.7/Linux x86-64 reference profile
 (`cp27mu`); it is not a universal wheel.  The sdist contains the MUS
-sources, all `MUSCython` `.pyx`/`.pxd` sources, the committed
-Cython-3.0.12-generated `.c`, the `msbwt` script, and the
-README/LICENSE/AUTHORS.
+sources (including the enhanced-modern2 feature modules), all `MUSCython`
+`.pyx`/`.pxd` sources, the committed Cython-3.0.12-generated `.c`, the
+`msbwt` script, the `tools/` enhanced CLI package, and the
+README/LICENSE/AUTHORS.  Installing the wheel or the sdist also installs
+the six enhanced console scripts (`msbwt-bwt-tags`, `msbwt-lcp`,
+`msbwt-quality-sidecar`, `msbwt-remove-sources`,
+`msbwt-retrofit-read-provenance`, `msbwt-benchmark-index`).
 
 ### 3.3 Building from source (validated path)
 
@@ -243,6 +252,14 @@ proven defects are listed; frozen source is never modified.
   byte query`, plus `merge -p 1`/`-p 2` and `convert`) reproduced the
   committed golden hashes — all checks passed, with no dependency on the
   repository checkout.
+- Enhanced-modern2 validation (this distribution): each feature milestone
+  has executed evidence (`packages/msbwt-modern2/evidence/`), the final
+  integrated gate builds one all-feature package plus a Feature-10-reduced
+  package and verifies both against independent oracles
+  (`validate/enhanced-integration-gate.sh`), and the installed-distribution
+  release gate re-runs the whole enhanced chain from the wheel and from the
+  sdist in fresh prefixes (`validate/enhanced-release-candidate.sh`,
+  evidence `evidence/enhanced-release-candidate.json`).
 
 ## 9. Known limitations
 
@@ -266,10 +283,125 @@ proven defects are listed; frozen source is never modified.
 
 ## 10. Relationship to enhanced/new-feature work
 
-This release is the **compatibility-preserving baseline**.  It is frozen
-except for critical release-blocking fixes.  New research features will be
-developed separately (on a future `enhanced-modern2` track) and are not
-part of this release.
+This distribution is the **compatibility-preserving baseline** extended by
+the **enhanced-modern2** feature track (same repository, branch
+`enhanced-modern2`).  The original CLI, the `MUS` / `MUSCython` legacy
+surface, and all persistent legacy formats are untouched by the feature
+layers; every feature is an additive, pure-Python layer with its own
+persisted artifacts, tests, and executed evidence (see
+`docs/enhanced-modern2/` in the repository and
+[the feature index](docs/enhanced-modern2/README.md)).
+
+## 11. Enhanced features (enhanced-modern2)
+
+All enhanced features ship inside this same `msbwt-modern2` distribution;
+the import namespaces are unchanged (`MUS.*`), and each feature persists
+its own sidecar artifacts inside the BWT directory without rewriting the
+legacy `msbwt.npy`, `provenance` formats, or indexes.
+
+| Feature | What it does | Example / use case | Main API / module | Persisted artifact |
+|---|---|---|---|---|
+| Multi-source provenance | Identity-preserving merges of any number of sources; every BWT row knows its source | Merge per-sample indexes and keep which sample each row came from | `MUS.MultiSourceProvenance` (`merge_many_balanced`) | `provenance.json` + per-merge `interleave` bit store |
+| Source-aware queries | One merged FM search; exact per-source counts/intervals for a pattern | "How many occurrences in sample07?" | `MUS.MultiSourceQuery` (`countOccurrencesForSource`) | — (reads existing artifacts) |
+| Sparse source listing | Which sources contain a pattern, with exact counts, in one descent | "Which samples carry this k-mer?" | `MUS.MultiSourceQuery` (`nonzeroSources`) | — |
+| Sample frequency / top-k | Number of distinct sources containing a pattern; exact top-k sources | "Which 3 samples have the most copies of this motif?" | `MUS.MultiSourceQuery` (`sourceFrequency`, `topSources`) | — |
+| Metadata groups / subsets | Arbitrary source subsets, named groups, and key/value predicates | "Count occurrences in the `case` cohort only" | `MUS.SourceMetadata` + `countGroup` / `countWhere` | `source_metadata.json` |
+| Sequence extensions | Source-aware left/right base extension with exact counts | "What bases can extend this seed in sample05?" | `MUS.MultiSourceQuery` (`extendLeft` / `extendRight`) | — |
+| Read-level provenance | Exact owning read, origin file/read IDs, and mate links for every occurrence | "Which reads contain this variant?" | `MUS.ReadProvenance` (`ReadProvenanceIndex`, `readsContaining`) | `read_provenance.npy` + `read_provenance.json` |
+| Source removal / unmerge | Remove or retain sources without rebuilding from FASTQ; BWT bytes equal an independent retained rebuild | "Drop the control samples from the merged index" | `MUS.SourceRemoval` (`remove_sources` / `retain_sources`) | rewritten package (same formats) |
+| Generic BWT-aligned tags | Arbitrary row-aligned tag arrays attached to the merged BWT | "Annotate each BWT row with a read position" | `MUS.BWTTags` (`attach_tag`, `BWTTagStore`) | `bwt_tags.json` + `bwt_tags/tag_<hash>.npy` |
+| Lossless FASTQ quality | Byte-exact original FASTQ quality for every occurrence, suffix-start aligned | "Recover read + quality for a matched row" | `MUS.QualitySidecar` (`qualityValues`, `readFastqData`) | `bwt_tags/` reserved tag `fastq_quality_ascii` |
+| Post-construction LCP | Exact adjacent LCP over the final BWT, no FASTQ / no rebuild | "LCP between rows 10 and 20" | `MUS.LCP` (`construct_lcp_from_bwt`, `LCPIndex`) | `lcps.npy` + `lcp.json` |
+| Benchmarking / backend contract | Whole-index structural/disk/query accounting and a machine-readable backend contract | "How many bytes does this index really cost per layer?" | `MUS.Benchmarking` (`inspect_index`, `full_benchmark_document`), `MUS.BackendContract` | benchmark report JSON (user-written) |
+
+Feature documentation and evidence are committed under
+`docs/enhanced-modern2/` (13 milestone docs, each with executed evidence in
+`packages/msbwt-modern2/evidence/`).  The final integrated gate builds ONE
+package carrying every feature layer, then a Feature-10-reduced package,
+and verifies both against independent oracles
+(`packages/msbwt-modern2/validate/enhanced-integration-gate.sh`).
+
+### 11.1 Enhanced command-line tools
+
+The enhanced feature layers install six additional commands (console-script
+entry points), available after installation on the same `PATH` as `msbwt`:
+
+| Command | Feature | Example |
+|---|---|---|
+| `msbwt-bwt-tags` | F12 tags | `msbwt-bwt-tags list --input /data/merged10` |
+| `msbwt-lcp` | F11A LCP | `msbwt-lcp construct --input /data/merged10` |
+| `msbwt-quality-sidecar` | Q1 quality | `msbwt-quality-sidecar validate --input /data/merged10` |
+| `msbwt-remove-sources` | F10 removal | `msbwt-remove-sources --input /data/merged10 --output /data/merged7 --remove sample00,sample02 --drop-lcp` |
+| `msbwt-retrofit-read-provenance` | F9 provenance | `msbwt-retrofit-read-provenance --merged /data/merged10 --source sample00=/data/sample00` |
+| `msbwt-benchmark-index` | F13A benchmark | `msbwt-benchmark-index inspect --input /data/merged10` |
+
+Each tool supports `--help`.  Source-tree invocation (`python tools/<name>.py`)
+also remains supported in the repository checkout.
+
+### 11.2 Enhanced multi-source example
+
+```python
+from MUS.MultiSourceProvenance import initialize_leaf_provenance, merge_many_balanced
+from MUS.MultiSourceQuery import MultiSourceBWT
+from MUS.SourceMetadata import SourceMetadataCatalog
+
+# leaves: standalone BWT directories (built with msbwt pp/cfpp)
+for sid in ("sample00", "sample01"):
+    initialize_leaf_provenance("data/" + sid, source_id=sid)
+merge_many_balanced(["data/sample00", "data/sample01"], "data/merged")
+
+wrapped = MultiSourceBWT.load("data/merged")
+print(wrapped.countOccurrencesForSource("ACGT", "sample00"))
+print(wrapped.nonzeroSources("ACGT"))
+print(wrapped.topSources("ACGT", k=2))
+```
+
+### 11.3 Quality / provenance / removal example
+
+```python
+from MUS.MultiSourceQuery import MultiSourceBWT
+
+wrapped = MultiSourceBWT.load("data/merged")
+reads = wrapped.readsContaining("ACGT", include_quality=True)
+for rec in reads["reads"]:
+    print(rec["source_id"], rec["sequence"], rec["quality"])
+```
+
+```bash
+msbwt-remove-sources --input data/merged --output data/merged-minus \
+    --remove sample09 --drop-lcp
+```
+
+Removal keeps surviving rows in their existing order; the reduced
+`msbwt.npy` is byte-equal to an independent retained-source rebuild
+(verified for every removal shape in the Feature-10 evidence).
+
+### 11.4 Compatibility policy for the enhanced layers
+
+- The legacy surface (section 6) is authoritative; feature layers never
+  change legacy formats, construction, merge, readers, FM search, or
+  compression/decompression semantics.
+- Every feature persisted artifact is self-describing and digest-bound to
+  the BWT it annotates: stale or foreign sidecars are rejected on load.
+- Feature layers are additive pure-Python code inside `MUS/`; they are
+  exercised against independent oracles (naive suffix rows, direct
+  bit-array walks, explicit adjacent-LCP computation, raw filesystem byte
+  sums) rather than only against each other.
+- The benchmark layer reports exact accounting; Feature-13A's naive u32
+  RLE run-encoding model on the toy fixture was **larger** than the raw
+  BWT payload.  No compression win is claimed from that result, and no new
+  compressed backend is part of this release.
+
+### 11.5 Known limitations of the enhanced layers
+
+- Enhanced features are validated on the same Linux x86-64 Python-2.7
+  profile as the baseline; no other platform is claimed.
+- Feature-10 removal drops the Feature-11A LCP layer unless explicitly
+  handled (LCP-preserving removal requires the future Feature 11B).
+- Read-provenance one-sided merges are rejected before the BWT merge
+  (documented Feature-9 policy).
+- The baseline `MUSCython.LCPGen` stub and all other baseline limitations
+  from section 9 apply unchanged.
 
 ## License and attribution
 
