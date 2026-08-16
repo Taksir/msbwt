@@ -164,3 +164,34 @@ def fastqIterator(fastqFN):
             quals = ''
         i += 1
     fp.close()
+
+
+def atomic_replace(source_path, dest_path):
+    """Replace dest_path with source_path atomically.
+
+    Python 2.7 has no os.replace.  On POSIX, os.rename is atomic; on
+    Windows, os.rename fails if dest_path already exists.  This helper
+    removes dest_path first on Windows before renaming.
+    """
+    if hasattr(os, "replace"):
+        os.replace(source_path, dest_path)
+    elif os.name == "nt" and os.path.exists(dest_path):
+        os.remove(dest_path)
+        os.rename(source_path, dest_path)
+    else:
+        os.rename(source_path, dest_path)
+
+
+def atomic_write_json(path, document):
+    """Write a JSON document atomically: tmp file -> flush -> rename."""
+    import json
+    dir_name = os.path.dirname(path) or "."
+    tmp_path = os.path.join(dir_name, ".tmp_%s.json" % os.getpid())
+    with open(tmp_path, "w") as fp:
+        json.dump(document, fp, indent=2, sort_keys=True)
+        fp.flush()
+        try:
+            os.fsync(fp.fileno())
+        except (OSError, IOError):
+            pass
+    atomic_replace(tmp_path, str(path))

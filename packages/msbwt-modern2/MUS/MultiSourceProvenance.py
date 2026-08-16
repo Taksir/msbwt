@@ -133,11 +133,15 @@ def _atomic_replace(source_path, dest_path):
     """Replace ``dest_path`` with ``source_path`` atomically where possible.
 
     Python 2.7 has no ``os.replace``; ``os.rename`` is atomic on POSIX
-    (same filesystem), which is the pinned modern2 runtime.  Python 3 uses
-    ``os.replace`` when available.
+    (same filesystem), which is the pinned modern2 runtime.  On Windows,
+    ``os.rename`` fails if the destination already exists, so we remove it
+    first.  Python 3 uses ``os.replace`` when available.
     """
     if hasattr(os, "replace"):
         os.replace(source_path, dest_path)
+    elif os.name == "nt" and os.path.exists(dest_path):
+        os.remove(dest_path)
+        os.rename(source_path, dest_path)
     else:
         os.rename(source_path, dest_path)
 

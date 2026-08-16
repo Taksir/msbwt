@@ -98,6 +98,9 @@ def _atomic_write_json(path, document):
             pass
     if hasattr(os, "replace"):
         os.replace(tmp_path, path)
+    elif os.name == "nt" and os.path.exists(path):
+        os.remove(path)
+        os.rename(tmp_path, path)
     else:
         os.rename(tmp_path, path)
 

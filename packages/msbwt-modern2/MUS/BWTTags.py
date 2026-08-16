@@ -100,6 +100,9 @@ def _atomic_write_json(path, document):
             pass
     if hasattr(os, "replace"):
         os.replace(tmp_path, path)
+    elif os.name == "nt" and os.path.exists(path):
+        os.remove(path)
+        os.rename(tmp_path, path)
     else:
         os.rename(tmp_path, path)
 
@@ -107,6 +110,9 @@ def _atomic_write_json(path, document):
 def _atomic_replace(source_path, dest_path):
     if hasattr(os, "replace"):
         os.replace(source_path, dest_path)
+    elif os.name == "nt" and os.path.exists(dest_path):
+        os.remove(dest_path)
+        os.rename(source_path, dest_path)
     else:
         os.rename(source_path, dest_path)
 
@@ -434,7 +440,10 @@ def remove_tag(bwt_dir, name):
 
     path = os.path.join(bwt_dir, str(doc["tags"][name]["filename"]))
     if os.path.exists(path):
-        _remove_file_robust(path)
+        try:
+            _remove_file_robust(path)
+        except (OSError, IOError):
+            pass  # file still mapped; registry will be updated correctly
     del doc["tags"][name]
     if doc["tags"]:
         _write_registry(bwt_dir, doc)
