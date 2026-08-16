@@ -54,6 +54,8 @@ This file must remain valid Python 2.7 (no f-strings, no annotations).
 
 from __future__ import print_function
 
+import _npy_compat  # noqa: E402 (platform-consistent .npy writer)
+
 import hashlib
 import os
 import shutil
@@ -139,7 +141,7 @@ class ReaderBoundaryTests(unittest.TestCase):
         cls.expected_payload = tiled.tostring()
         evidence_root = os.path.join(cls.work, "evidence")
         os.makedirs(evidence_root)
-        np.save(os.path.join(evidence_root, "msbwt.npy"), tiled)
+        _npy_compat.save_npy(os.path.join(evidence_root, "msbwt.npy"), tiled)
         assert sha256_file(os.path.join(evidence_root, "msbwt.npy")) == EVIDENCE_PRIMARY_SHA256
         cls.rle = os.path.join(cls.work, "rle")
         os.makedirs(cls.rle)
@@ -169,7 +171,7 @@ class ReaderBoundaryTests(unittest.TestCase):
         src = os.path.join(self.work, "byte-" + label)
         os.makedirs(src)
         import numpy as np
-        np.save(os.path.join(src, "msbwt.npy"),
+        _npy_compat.save_npy(os.path.join(src, "msbwt.npy"),
                 np.fromstring(self.expected_payload, dtype="<u1"))
         return src
 
@@ -264,7 +266,7 @@ class ReaderBoundaryTests(unittest.TestCase):
         import numpy as np
         small_ev = os.path.join(self.work, "small-ev")
         os.makedirs(small_ev)
-        np.save(os.path.join(small_ev, "msbwt.npy"), np.load(BYTE_GOLDEN, "r"))
+        _npy_compat.save_npy(os.path.join(small_ev, "msbwt.npy"), np.load(BYTE_GOLDEN, "r"))
         small_rle = os.path.join(self.work, "small-rle")
         os.makedirs(small_rle)
         self._cli("compress", "-p", "1", small_ev, small_rle)
@@ -433,7 +435,7 @@ class ReaderBoundaryTests(unittest.TestCase):
         import numpy as np
         ev = os.path.join(self.work, "col-ev")
         os.makedirs(ev)
-        np.save(os.path.join(ev, "msbwt.npy"), np.load(BYTE_GOLDEN, "r"))
+        _npy_compat.save_npy(os.path.join(ev, "msbwt.npy"), np.load(BYTE_GOLDEN, "r"))
         rle = os.path.join(self.work, "col-rle")
         os.makedirs(rle)
         self._cli("compress", "-p", "1", ev, rle)

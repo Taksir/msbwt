@@ -46,6 +46,8 @@ This file must remain valid Python 2.7 (no f-strings, no annotations).
 
 from __future__ import print_function
 
+import _npy_compat  # noqa: E402 (platform-consistent .npy writer)
+
 import hashlib
 import imp
 import os
@@ -131,7 +133,7 @@ class PureFMReaderTests(unittest.TestCase):
         cls.col_payload = evidence.tostring()
         evidence_root = os.path.join(cls.work, "evidence")
         os.makedirs(evidence_root)
-        np.save(os.path.join(evidence_root, "msbwt.npy"), tiled)
+        _npy_compat.save_npy(os.path.join(evidence_root, "msbwt.npy"), tiled)
         assert sha256_file(os.path.join(evidence_root, "msbwt.npy")) == EVIDENCE_PRIMARY_SHA256
         cls.rle = os.path.join(cls.work, "rle")
         os.makedirs(cls.rle)
@@ -139,7 +141,7 @@ class PureFMReaderTests(unittest.TestCase):
         assert sha256_file(os.path.join(cls.rle, "comp_msbwt.npy")) == RLE_PRIMARY_SHA256
         cls.col = os.path.join(cls.work, "col")
         os.makedirs(cls.col)
-        np.save(os.path.join(cls.col, "msbwt.npy"), evidence)
+        _npy_compat.save_npy(os.path.join(cls.col, "msbwt.npy"), evidence)
         cls.col_rle = os.path.join(cls.work, "col-rle")
         os.makedirs(cls.col_rle)
         cls._cli("compress", "-p", "1", cls.col, cls.col_rle)

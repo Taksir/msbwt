@@ -42,6 +42,8 @@ This file must remain valid Python 2.7 (no f-strings, no annotations).
 
 from __future__ import print_function
 
+import _npy_compat  # noqa: E402 (platform-consistent .npy writer)
+
 import hashlib
 import json
 import os
@@ -132,7 +134,7 @@ class MultiBlockDecompressionTests(unittest.TestCase):
         cls.expected_payload = tiled.tostring()
         evidence_root = os.path.join(cls.work, "evidence")
         os.makedirs(evidence_root)
-        np.save(os.path.join(evidence_root, "msbwt.npy"), tiled)
+        _npy_compat.save_npy(os.path.join(evidence_root, "msbwt.npy"), tiled)
         assert sha256_file(os.path.join(evidence_root, "msbwt.npy")) == EVIDENCE_PRIMARY_SHA256
         cls.rle = os.path.join(cls.work, "rle")
         os.makedirs(cls.rle)
