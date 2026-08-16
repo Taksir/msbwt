@@ -87,6 +87,10 @@ ENHANCED_CONSOLE_SCRIPTS = [
 
 class build_ext(_build_ext):
     def finalize_options(self):
+        # On Windows, default to the mingw32 compiler if no explicit
+        # compiler was specified (e.g., when invoked via bdist_wheel).
+        if os.name == 'nt' and getattr(self, 'compiler', None) is None:
+            self.compiler = 'mingw32'
         _build_ext.finalize_options(self)
         try:
             __builtins__.__NUMPY_SETUP__ = False
