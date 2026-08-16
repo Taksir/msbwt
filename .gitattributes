@@ -14,8 +14,12 @@
 
 # Fixture and container bytes are also reproducibility inputs.
 /compat/**/*.py text eol=lf
+/compat/**/*.txt text eol=lf
+/compat/goldens/**/*.npy binary
+/compat/goldens/**/*.json text eol=lf
 /compat/fixtures/synthetic/*.fastq text eol=lf
 /compat/fixtures/synthetic/*.json text eol=lf
 /compat/fixtures/synthetic/*.gz binary
+/compat/goldens/** binary
 /reference/original-0.3.0/environment/run-probe.sh text eol=lf
 /reference/original-0.3.0/frozen-source/README.md binary
