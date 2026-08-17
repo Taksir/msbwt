@@ -13,3 +13,5 @@ packages/*/*.pyd
 packages/*/*.egg-info/
 packages/*/MUSCython/*.so
 packages/*/MUSCython/*.pyd
+config.bat
+node_modules

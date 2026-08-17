@@ -63,7 +63,7 @@ fi
 if [ ! -x "$MICROMAMBA" ]; then
     printf 'micromamba is not executable: %s\n' "$MICROMAMBA" >&2; exit 66
 fi
-for tool in python3 git sha256sum unzip tar; do
+for tool in python3 git sha256sum tar; do
     command -v "$tool" >/dev/null 2>&1 || { printf 'Missing required tool: %s\n' "$tool" >&2; exit 69; }
 done
 
@@ -149,14 +149,30 @@ echo "wheel: $WHEEL_NAME $WHEEL_SIZE bytes sha256=$WHEEL_SHA" | tee -a "$RES"
 # 2. archive content audits
 # ---------------------------------------------------------------------------
 tar -tzf "$SDIST" > "$WORK_BASE/sdist-contents.txt"
-unzip -l "$WHEEL" > "$WORK_BASE/wheel-contents.txt"
+python3 - "$WHEEL" "$WORK_BASE" <<'PY'
+import sys, zipfile
+wheel, work = sys.argv[1], sys.argv[2]
+with zipfile.ZipFile(wheel) as zf:
+    with open(work + "/wheel-contents.txt", "w") as fp:
+        for info in zf.infolist():
+            fp.write("%s\n" % info.filename)
+PY
 
-python3 - "$WORK_BASE" <<'PY'
-import json, os, re, sys
+python3 - "$WORK_BASE" "$WHEEL" <<'PY'
+import json, os, re, sys, zipfile
 work = sys.argv[1]
+wheel_path = sys.argv[2]
 sdist = open(os.path.join(work, "sdist-contents.txt")).read()
 wheel = open(os.path.join(work, "wheel-contents.txt")).read()
 missing = []
+# console-script entry points ship in dist-info/entry_points.txt and are
+# materialized into the prefix bin/ by pip at install time
+entry_points_text = None
+with zipfile.ZipFile(wheel_path) as zf:
+    for member in zf.namelist():
+        if member.endswith("entry_points.txt"):
+            entry_points_text = zf.read(member)
+            break
 required_sdist = [
     "MUS/BackendContract.py", "MUS/Benchmarking.py", "MUS/BWTTags.py",
     "MUS/LCP.py", "MUS/MultiSourceProvenance.py", "MUS/MultiSourceQuery.py",
@@ -189,13 +205,20 @@ for name in ("AlignmentUtil", "BasicBWT", "ByteBWTCython", "CompressToRLE",
              "RLE_BWTCython"):
     if ("MUSCython/%s.so" % name) not in wheel:
         missing.append("wheel-so:" + name)
-for script in ("msbwt", "msbwt-bwt-tags", "msbwt-lcp",
-               "msbwt-quality-sidecar", "msbwt-remove-sources",
-               "msbwt-retrofit-read-provenance", "msbwt-benchmark-index"):
-    if not re.search(r"\.data/scripts/%s$" % re.escape(script), wheel):
-        missing.append("wheel-script:" + script)
+# legacy msbwt CLI script ships in .data/scripts (scripts= entry)
+if not re.search(r"\.data/scripts/msbwt$", wheel):
+    missing.append("wheel-script:msbwt")
 if re.search(r"\.pyx|\.c\b", wheel):
     missing.append("wheel-ships-sources")
+if entry_points_text is None or "console_scripts" not in entry_points_text:
+    missing.append("wheel-entry-points-missing")
+else:
+    for script in ("msbwt-bwt-tags", "msbwt-lcp",
+                   "msbwt-quality-sidecar", "msbwt-remove-sources",
+                   "msbwt-retrofit-read-provenance",
+                   "msbwt-benchmark-index"):
+        if ("%s = " % script) not in entry_points_text:
+            missing.append("wheel-entry-point:" + script)
 json.dump({"missing": missing}, open(os.path.join(work, "content-audit.json"), "w"),
           indent=1, sort_keys=True)
 print("missing: %d" % len(missing))
@@ -421,102 +444,10 @@ else
 fi
 STARTING_COMMIT=$(git -C "$REPO" rev-parse --short HEAD)
 BRANCH=$(git -C "$REPO" branch --show-current)
-python3 - "$RESULT" "$RES" "$WORK_BASE" "$SDIST_NAME" "$SDIST_SHA" \
+python3 "$PACKAGE/validate/release_evidence_assembly.py" \
+    "$RESULT" "$RES" "$WORK_BASE" "$SDIST_NAME" "$SDIST_SHA" \
     "$SDIST_SIZE" "$WHEEL_NAME" "$WHEEL_SHA" "$WHEEL_SIZE" \
-    "$STARTING_COMMIT" "$BRANCH" "$REPO" "$EVIDENCE_OUT" <<'PY'
-import json, os, re, sys
-(result, res_path, work, sdist_name, sdist_sha, sdist_size,
- wheel_name, wheel_sha, wheel_size, commit, branch, repo,
- evidence_out) = sys.argv[1:]
-entries = []
-for ln in open(res_path).read().strip().splitlines():
-    m = re.match(r"^(PASS|FAIL): (.*)$", ln)
-    if m:
-        entries.append({"status": m.group(1), "check": m.group(2)})
-artifact = re.match(r"^sdist: (\S+) (\d+) bytes sha256=(\S+)$",
-                    open(res_path).read(), re.M)
-wheel_m = re.match(r"^wheel: (\S+) (\d+) bytes sha256=(\S+)$",
-                   open(res_path).read(), re.M)
-
-def import_report(label):
-    try:
-        return json.load(open(os.path.join(
-            work, "import-%s" % label, "report.json")))
-    except Exception:
-        return {}
-
-def gate_report(label):
-    try:
-        return json.load(open(os.path.join(
-            work, "gate-%s" % label, "gate-report.json")))
-    except Exception:
-        return {}
-
-evidence = {
-    "format": "msbwt-modern2-enhanced-release-candidate-evidence-v1",
-    "distribution": "msbwt-modern2",
-    "version": "0.3.0",
-    "branch": branch,
-    "commit": commit,
-    "status": "release-candidate",
-    "result": result,
-    "checks": entries,
-    "n_pass": sum(1 for e in entries if e["status"] == "PASS"),
-    "n_fail": sum(1 for e in entries if e["status"] == "FAIL"),
-    "build": {
-        "environment": "pinned python27-modern2 prefix (bootstrap-modern2.sh)",
-        "commands": ["python setup.py sdist", "python setup.py bdist_wheel"],
-        "disposable_copy": True,
-        "cython_policy": "exactly 3.0.12, language_level=2; generated C committed",
-    },
-    "sdist": {
-        "filename": sdist_name,
-        "sha256": sdist_sha,
-        "size": int(sdist_size),
-    },
-    "wheel": {
-        "filename": wheel_name,
-        "sha256": wheel_sha,
-        "size": int(wheel_size),
-        "tag": wheel_name.split("-", 2)[2].rsplit(".whl", 1)[0],
-    },
-    "install_environments": [],
-    "legacy_gate": {},
-    "enhanced_gate": {},
-    "tools": {},
-    "release_blockers": [],
-}
-for label in ("wheel", "sdist"):
-    rep = import_report(label)
-    gate = gate_report(label)
-    evidence["install_environments"].append({
-        "id": "fresh-prefix (%s install)" % label,
-        "artifact_installed": sdist_name if label == "sdist" else wheel_name,
-        "imports": {
-            "module_failures": [
-                k for k, v in rep.get("modules", {}).items()
-                if not v.get("ok")
-            ],
-            "not_site_packages": [
-                v.get("__file__") for v in rep.get("modules", {}).values()
-                if v.get("__file__") and "site-packages" not in v.get("__file__", "")
-            ],
-            "sys_path_leaks": rep.get("sys_path_leaks", []),
-        },
-    })
-    evidence["enhanced_gate"][label] = {
-        "mismatch_count": gate.get("mismatch_count"),
-        "integrated_comparisons": gate.get("integrated_package", {}).get("comparisons"),
-        "reduced_comparisons": gate.get("reduced_package", {}).get("comparisons"),
-        "integrated_N": gate.get("benchmark", {}).get("integrated_N"),
-        "reduced_N": gate.get("benchmark", {}).get("reduced_N"),
-        "rebuild_payload_equal": gate.get("reduced_package", {}).get("rebuild_payload_equal"),
-        "rebuild_whole_file_equal": gate.get("reduced_package", {}).get("rebuild_whole_file_equal"),
-    }
-os.makedirs(os.path.dirname(evidence_out), exist_ok=True)
-json.dump(evidence, open(evidence_out, "w"), indent=1, sort_keys=True)
-print("evidence written to %s" % evidence_out)
-print("RESULT: %s" % result)
-PY
+    "$STARTING_COMMIT" "$BRANCH" "$EVIDENCE_OUT"
+echo "summary completed: $RESULT"
 if [ "$RESULT" = "FAIL" ]; then exit 1; fi
 exit 0

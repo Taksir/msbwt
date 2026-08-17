@@ -363,11 +363,17 @@ class TestBuiltArtifacts(unittest.TestCase):
         self.assertTrue(any(n.startswith("msbwt_modern2-0.3.0.dist-info/")
                             for n in names))
         self.assertTrue(any(n.endswith(".data/scripts/msbwt") for n in names))
-        # enhanced console-script wrappers must ship in the wheel
+        # enhanced console-script entry points ship in dist-info and are
+        # materialized into prefix bin/ by pip at install time
+        with zipfile.ZipFile(str(wheel)) as zf:
+            entry_points = None
+            for member in zf.namelist():
+                if member.endswith("entry_points.txt"):
+                    entry_points = zf.read(member)
+                    break
+        self.assertIsNotNone(entry_points, "dist-info/entry_points.txt")
         for script in ENHANCED_CONSOLE_SCRIPTS:
-            self.assertTrue(
-                any(n.endswith(".data/scripts/%s" % script) for n in names),
-                script)
+            self.assertIn(script.encode("utf-8"), entry_points, script)
         # .pyx/.c sources are not shipped in the wheel
         self.assertFalse(any(n.endswith(".pyx") or n.endswith(".c")
                              for n in names))
