@@ -171,7 +171,7 @@ entry_points_text = None
 with zipfile.ZipFile(wheel_path) as zf:
     for member in zf.namelist():
         if member.endswith("entry_points.txt"):
-            entry_points_text = zf.read(member)
+            entry_points_text = zf.read(member).decode("utf-8")
             break
 required_sdist = [
     "MUS/BackendContract.py", "MUS/Benchmarking.py", "MUS/BWTTags.py",
@@ -206,7 +206,7 @@ for name in ("AlignmentUtil", "BasicBWT", "ByteBWTCython", "CompressToRLE",
     if ("MUSCython/%s.so" % name) not in wheel:
         missing.append("wheel-so:" + name)
 # legacy msbwt CLI script ships in .data/scripts (scripts= entry)
-if not re.search(r"\.data/scripts/msbwt$", wheel):
+if not re.search(r"\.data/scripts/msbwt$", wheel, re.MULTILINE):
     missing.append("wheel-script:msbwt")
 if re.search(r"\.pyx|\.c\b", wheel):
     missing.append("wheel-ships-sources")
@@ -284,6 +284,8 @@ for entry in $INSTALLS; do
     PREFIX=${REST%%:*}
     ARTIFACT=${REST#*:}
     echo "=== validating $LABEL install into $PREFIX ===" | tee -a "$RES"
+    activate_prefix "$PREFIX"
+    cd "$WORK_BASE"
 
     # 3a. install
     "$PREFIX/bin/python" -m pip install --isolated --disable-pip-version-check \

@@ -8,6 +8,25 @@ These rules apply to every change in this repository.
 - Preserve the original authors, MIT license, scientific references, and repository history. This is a maintenance fork.
 - Start with [the current handoff](docs/modernization/HANDOFF.md), then use its links to the forensic audit, behavioral surface, architecture proposal, test plan, legacy oracle status, and risk register.
 
+## Mistakes reference
+
+Before beginning any porting, testing, or cross-platform work, consult
+[`Mistakes.md`](Mistakes.md) for a catalog of errors encountered during
+this project.  It is organized as a lookup table: each entry records what
+went wrong, why, and the lesson learned.  Common categories include:
+
+- **Windows I/O**: text vs binary mode, CRLF corruption, pickle framing
+  (M2, M10, M21)
+- **Cython typed ndarrays**: `.shape` returns C pointer (not Python tuple),
+  buffer-acquired references not released by `del` (M11, M15)
+- **multiprocessing spawn**: `if __name__ == '__main__':` guard required,
+  pool `join()` before file removal (M6, M12, M16)
+- **numpy platform quirks**: py2 long shape elements in pickles, cumsum
+  dtype promotion, `.npy` header L-suffix (M13, M14, M18)
+- **Git/checkout**: CRLF conversion, robocopy path exclusion (M7, M10)
+- **Test infrastructure**: frozen overlay setup, assertEqual diff direction,
+  stale .pyc files (M9, M3, M8)
+
 ## Compatibility gates
 
 - Do not port or refactor an operation until its practical CLI/API behavior and persistent artifacts have a legacy characterization test.
