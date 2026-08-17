@@ -1,0 +1,239 @@
+{
+ "branch": "enhanced-modern2",
+ "build": {
+  "commands": [
+   "python setup.py sdist",
+   "python setup.py bdist_wheel"
+  ],
+  "cython_policy": "exactly 3.0.12, language_level=2; generated C committed",
+  "disposable_copy": true,
+  "environment": "pinned python27-modern2 prefix (bootstrap-modern2.sh)"
+ },
+ "checks": [
+  {
+   "check": "sdist build",
+   "status": "PASS"
+  },
+  {
+   "check": "wheel build",
+   "status": "PASS"
+  },
+  {
+   "check": "artifact content audit (sdist + wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "pinned runtime imports in wheel prefix",
+   "status": "PASS"
+  },
+  {
+   "check": "wheel imports all from site-packages (28 modules)",
+   "status": "PASS"
+  },
+  {
+   "check": "legacy release-candidate gate (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "enhanced installed gate (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (wheel msbwt-bwt-tags)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (wheel msbwt-lcp)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (wheel msbwt-quality-sidecar)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (wheel msbwt-remove-sources)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (wheel msbwt-retrofit-read-provenance)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (wheel msbwt-benchmark-index)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-bwt-tags list (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-bwt-tags validate (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-lcp validate (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-quality-sidecar validate (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-remove-sources (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "quality sidecar valid after removal (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-retrofit-read-provenance (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-benchmark-index inspect (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-benchmark-index contract (wheel)",
+   "status": "PASS"
+  },
+  {
+   "check": "pinned runtime imports in sdist prefix",
+   "status": "PASS"
+  },
+  {
+   "check": "sdist imports all from site-packages (28 modules)",
+   "status": "PASS"
+  },
+  {
+   "check": "legacy release-candidate gate (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "enhanced installed gate (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (sdist msbwt-bwt-tags)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (sdist msbwt-lcp)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (sdist msbwt-quality-sidecar)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (sdist msbwt-remove-sources)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (sdist msbwt-retrofit-read-provenance)",
+   "status": "PASS"
+  },
+  {
+   "check": "console script --help (sdist msbwt-benchmark-index)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-bwt-tags list (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-bwt-tags validate (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-lcp validate (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-quality-sidecar validate (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-remove-sources (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "quality sidecar valid after removal (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-retrofit-read-provenance (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-benchmark-index inspect (sdist)",
+   "status": "PASS"
+  },
+  {
+   "check": "msbwt-benchmark-index contract (sdist)",
+   "status": "PASS"
+  }
+ ],
+ "commit": "e527796",
+ "distribution": "msbwt-modern2",
+ "enhanced_gate": {
+  "sdist": {
+   "integrated_N": 191,
+   "integrated_comparisons": 433,
+   "mismatch_count": 0,
+   "rebuild_payload_equal": true,
+   "rebuild_whole_file_equal": true,
+   "reduced_N": 133,
+   "reduced_comparisons": 282
+  },
+  "wheel": {
+   "integrated_N": 191,
+   "integrated_comparisons": 433,
+   "mismatch_count": 0,
+   "rebuild_payload_equal": true,
+   "rebuild_whole_file_equal": true,
+   "reduced_N": 133,
+   "reduced_comparisons": 282
+  }
+ },
+ "format": "msbwt-modern2-enhanced-release-candidate-evidence-v1",
+ "install_environments": [
+  {
+   "artifact_installed": "msbwt_modern2-0.3.0-cp27-cp27mu-linux_x86_64.whl",
+   "id": "fresh-prefix (wheel install)",
+   "imports": {
+    "module_failures": [],
+    "not_site_packages": [],
+    "sys_path_leaks": []
+   }
+  },
+  {
+   "artifact_installed": "msbwt-modern2-0.3.0.tar.gz",
+   "id": "fresh-prefix (sdist install)",
+   "imports": {
+    "module_failures": [],
+    "not_site_packages": [],
+    "sys_path_leaks": []
+   }
+  }
+ ],
+ "n_fail": 0,
+ "n_pass": 41,
+ "release_blockers": [],
+ "result": "PASS",
+ "sdist": {
+  "filename": "msbwt-modern2-0.3.0.tar.gz",
+  "sha256": "ef9dcaaff263ecb654c46e505c1443c8ea4b88f3ec07aaa2741fb1aa0e708347",
+  "size": 2658479
+ },
+ "status": "release-candidate",
+ "tools": {},
+ "version": "0.3.0",
+ "wheel": {
+  "filename": "msbwt_modern2-0.3.0-cp27-cp27mu-linux_x86_64.whl",
+  "sha256": "8f799a9ab3b9c28974965a9d98ac364ebbb12589c9392adc37e4695abddf95e6",
+  "size": 1808235,
+  "tag": "cp27-cp27mu-linux_x86_64"
+ }
+}
