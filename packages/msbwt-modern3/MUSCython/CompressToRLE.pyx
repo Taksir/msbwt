@@ -28,7 +28,8 @@ def compressInput(str fn, str bwtDir):
         # endings to '\n', matching the Linux behavior for the same input
         # bytes (the BWT text input is newline-terminated).  The OUTPUT stream
         # below is binary so the RLE payload bytes are never rewritten.
-        inputStream = fopen(fn, 'r')
+        # encode(): Cython 3str str values must become bytes for fopen().
+        inputStream = fopen(fn.encode('UTF-8'), 'r')
     
     if not os.path.exists(bwtDir):
         os.makedirs(bwtDir)
@@ -37,10 +38,15 @@ def compressInput(str fn, str bwtDir):
     # binary mode: on Windows the C runtime would otherwise translate '\n'
     # (0x0A) bytes inside the RLE payload into '\r\n' pairs, corrupting the
     # output; Linux text mode is already byte-transparent.
-    cdef FILE * outputStream = fopen(outputFN, 'w+b')
+    # encode(): Cython 3str str values must become bytes for fopen().
+    cdef FILE * outputStream = fopen(outputFN.encode('UTF-8'), 'w+b')
     
     cdef unsigned long BUFFER_SIZE = 1024
-    cdef bytes strBuffer = <bytes>('\x00'*BUFFER_SIZE)
+    # NOTE: must be a b'' literal. Under Cython language_level=3str a ''
+    # literal is unicode, and an explicit <bytes> cast does NOT convert —
+    # it silently type-puns the PyObject*, so fread/fwrite would then write
+    # through PyBytes_AS_STRING aimed at a PyUnicode object (heap corruption).
+    cdef bytes strBuffer = b'\x00' * BUFFER_SIZE
     cdef unsigned char * buffer = strBuffer
     
     #most of the files I've seen are 80 and '\x46', I'm increasing it just in case
@@ -123,7 +129,8 @@ def compressInput(str fn, str bwtDir):
     fclose(outputStream)
     
     #now that we know the total length, fill in the bytes for our header
-    cdef bytes initialWrite = b'\x93NUMPY\x01\x00' + headerHex.encode('latin1') + b"\x00{'descr': '|u1', 'fortran_order': False, 'shape': (" + str(bytesWritten).encode('ascii') + b'),), }'
+    # NOTE: the tail literal is ',), }' — it must produce e.g. 'shape': (48,), }
+    cdef bytes initialWrite = b'\x93NUMPY\x01\x00' + headerHex.encode('latin1') + b"\x00{'descr': '|u1', 'fortran_order': False, 'shape': (" + str(bytesWritten).encode('ascii') + b',), }'
     buffer = initialWrite
     
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] mmapTemp = np.memmap(bwtDir+'/comp_msbwt.npy', '<u1', 'r+')

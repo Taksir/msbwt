@@ -258,7 +258,7 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
                     tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
                     subSortFNs.append(tempFN)
                     
-                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
+                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
                     tempArray[:] = sorted(seqArray)
                     numSeqs += len(seqArray)
                     del tempArray
@@ -280,7 +280,7 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
         tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
         subSortFNs.append(tempFN)
         
-        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
+        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
         tempArray[:] = sorted(seqArray)
         numSeqs += len(seqArray)
         del tempArray
@@ -391,7 +391,7 @@ def preprocessBams(bamFNs, outputDir, areUniform, logger):
                     
                     sys.stdout.write('\rWriting file '+str(tempFileId))
                     sys.stdout.flush()
-                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
+                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
                     tempArray[:] = sorted(seqArray)
                     numSeqs += len(seqArray)
                     del tempArray
@@ -410,7 +410,7 @@ def preprocessBams(bamFNs, outputDir, areUniform, logger):
         tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
         subSortFNs.append(tempFN)
         
-        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
+        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
         tempArray[:] = sorted(seqArray)
         numSeqs += len(seqArray)
         del tempArray
@@ -479,7 +479,7 @@ def preprocessFastas(fastaFNs, outputDir, areUniform, logger):
                     tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
                     subSortFNs.append(tempFN)
                     
-                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
+                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
                     tempArray[:] = sorted(seqArray)
                     numSeqs += len(seqArray)
                     del tempArray
@@ -509,7 +509,7 @@ def preprocessFastas(fastaFNs, outputDir, areUniform, logger):
         tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
         subSortFNs.append(tempFN)
         
-        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
+        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
         tempArray[:] = sorted(seqArray)
         numSeqs += len(seqArray)
         del tempArray
@@ -540,7 +540,10 @@ def mergeSubSorts(list subSortFNs, unsigned long numSeqs, bint areUniform, maxSe
     
     #save it
     tempFN = seqFNPrefix+'.temp.npy'
-    fp = open(tempFN, 'w+')
+    # binary mode: the merged sequence payload is raw bytes (numpy.bytes_),
+    # which Python 3 text-mode files reject; Python 2 text mode was
+    # byte-transparent so 'wb+' preserves the historical bytes everywhere.
+    fp = open(tempFN, 'wb+')
     
     cdef np.ndarray aboutFile = np.lib.format.open_memmap(abtFN, 'w+', '<u1,<u8', (numSeqs,))
     cdef unsigned long ind = 0

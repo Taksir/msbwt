@@ -138,7 +138,8 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
             tempFN = bwtDir+'/state.'+str(c)+'.0.dat'
             # binary mode: on Windows the C runtime would otherwise translate
             # 0x0A bytes inside the binary state data into '\r\n' pairs.
-            tempFP = fopen(tempFN, 'w+b')
+            # encode(): Cython 3str str values must become bytes for fopen().
+            tempFP = fopen(tempFN.encode('UTF-8'), 'w+b')
             fclose(tempFP)
             
             #create an empty list of files for insertion
@@ -328,18 +329,26 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     
     #now incorporate the other symbols
     for c in range(1, numValidChars):
-        try:
-            tempBWT = np.memmap(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat', '<u1', 'r')
-        except ValueError as e:
-            if str(e) == 'cannot mmap an empty file':
-                #this is normal behavior for my test cases with missing symbols
-                tempBWT = np.zeros(dtype='<u1', shape=(0, ))
-            else:
-                raise e
-        
         #figure out if they're the same
         finalSymbolPos = 0
         modifier = 0
+        # (NumPy 2 portability) np.memmap(..., 'r+') on an empty file used to
+        # raise 'cannot mmap an empty file' (numpy 1.x); numpy 2.x instead
+        # succeeds with shape (0,) AND grows the file by one 0x00 byte, which
+        # would corrupt the state file and break the final join.  Detect
+        # emptiness by size first; the historical except branch is retained.
+        if not os.path.exists(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat') or os.path.getsize(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat') == 0:
+            #this is normal behavior for my test cases with missing symbols
+            tempBWT = np.zeros(dtype='<u1', shape=(0, ))
+        else:
+            try:
+                tempBWT = np.memmap(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat', '<u1', 'r')
+            except ValueError as e:
+                if str(e) == 'cannot mmap an empty file':
+                    #this is normal behavior for my test cases with missing symbols
+                    tempBWT = np.zeros(dtype='<u1', shape=(0, ))
+                else:
+                    raise e
         while finalSymbolPos < tempBWT.shape[0] and (tempBWT[finalSymbolPos] & 0x07) == finalSymbol:
             modifier += (tempBWT[finalSymbolPos] >> 3) * (32**finalSymbolPos)
             finalSymbolPos += 1
@@ -378,14 +387,20 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     #now the tricky part of actually combining them
     for c in range(0, numValidChars):
         stateFN = bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.dat'
-        try:
-            tempBWT = np.memmap(stateFN, '<u1', 'r+')
-        except ValueError as e:
-            if str(e) == 'cannot mmap an empty file':
-                #this is normal behavior for my test cases with missing symbols
-                tempBWT = np.zeros(dtype='<u1', shape=(0, ))
-            else:
-                raise e
+        # (NumPy 2 portability) see the size-check note above: numpy 2.x
+        # memmap of an empty file silently grows it by one 0x00 byte.
+        if not os.path.exists(stateFN) or os.path.getsize(stateFN) == 0:
+            #this is normal behavior for my test cases with missing symbols
+            tempBWT = np.zeros(dtype='<u1', shape=(0, ))
+        else:
+            try:
+                tempBWT = np.memmap(stateFN, '<u1', 'r+')
+            except ValueError as e:
+                if str(e) == 'cannot mmap an empty file':
+                    #this is normal behavior for my test cases with missing symbols
+                    tempBWT = np.zeros(dtype='<u1', shape=(0, ))
+                else:
+                    raise e
         
         tempBWT_view = tempBWT
         tempLen = tempBWT.shape[0]
@@ -493,10 +508,17 @@ def iterateMsbwtCreate(tuple tup):
     
     #the input partial BWT for suffixes starting with 'idChar'
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBwt
+    # (NumPy 2 portability) see the size-check note in createMsbwtFromSeqs:
+    # numpy 2.x memmap of an empty file succeeds AND grows it by one 0x00
+    # byte instead of raising 'cannot mmap an empty file'.
     try:
         #TODO: make an "all-in-memory" version of this at some point, it's likely to actually fit on many machines
-        currentBwt = np.memmap(currentSymbolFN, '<u1', 'r+')
-        #currentBwt = np.fromfile(currentSymbolFN, '<u1')
+        if not os.path.exists(currentSymbolFN) or os.path.getsize(currentSymbolFN) == 0:
+            #this is normal behavior during early iterations, make a dummy array just to get the code running
+            currentBwt = np.zeros(dtype='<u1', shape=(0, ))
+        else:
+            currentBwt = np.memmap(currentSymbolFN, '<u1', 'r+')
+            #currentBwt = np.fromfile(currentSymbolFN, '<u1')
     except ValueError as e:
         if str(e) == 'cannot mmap an empty file' or str(e) == 'mmap offset is greater than file size':
             #this is normal behavior during early iterations, make a dummy array just to get the code running
@@ -558,7 +580,8 @@ def iterateMsbwtCreate(tuple tup):
         #first, open the file for output
         # binary mode: see the note at the state-file creation above
         # (Windows text mode would corrupt 0x0A bytes in the BWT data).
-        nextBwtFP = fopen(nextSymbolFN, 'w+b')
+        # encode(): Cython 3str str values must become bytes for fopen().
+        nextBwtFP = fopen(nextSymbolFN.encode('UTF-8'), 'w+b')
         
         #allocate a numpy array for each new insert file
         for c in range(0, numValidChars):

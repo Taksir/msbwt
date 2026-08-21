@@ -720,7 +720,8 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         cdef str deletionFN = self.dirName+'/deletion_indices.dat'
         # binary mode: on Windows the C runtime would otherwise translate
         # 0x0A bytes inside the binary index data into '\r\n' pairs.
-        cdef FILE * fp = fopen(deletionFN, 'w+b')
+        # encode(): Cython 3str str values must become bytes for fopen().
+        cdef FILE * fp = fopen(deletionFN.encode('UTF-8'), 'w+b')
         
         cdef unsigned long x, copyIndex
         cdef np.uint8_t indexByte
