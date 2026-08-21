@@ -729,11 +729,11 @@ def holt_merge_two(left_dir, right_dir, output_dir, num_procs=1, logger=None):
         logger = logging.getLogger(__name__)
     from MUSCython import GenericMerge
 
-    def as_bytes(path):
-        return os.fsencode(str(path))
+    def as_path(path):
+        return str(path)
 
     return GenericMerge.mergeTwoMSBWTs(
-        as_bytes(left_dir), as_bytes(right_dir), as_bytes(output_dir),
+        as_path(left_dir), as_path(right_dir), as_path(output_dir),
         int(num_procs), logger
     )
 
