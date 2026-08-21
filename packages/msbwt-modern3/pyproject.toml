@@ -39,19 +39,18 @@ bam = ["pysam>=0.24"]
 
 [project.scripts]
 # Legacy CLI (single dispatcher; cffq, pp, cfpp, merge, query, massquery,
-# compress, decompress, convert are its subcommands). Deferred in M3-1.
-msbwt = "_deferred_cli:ms_main"
-# Enhanced console scripts (deferred in M3-1).
-msbwt-bwt-tags = "_deferred_cli:bwt_tags"
-msbwt-lcp = "_deferred_cli:lcp"
-msbwt-quality-sidecar = "_deferred_cli:quality_sidecar"
-msbwt-remove-sources = "_deferred_cli:remove_sources"
-msbwt-retrofit-read-provenance = "_deferred_cli:retrofit_read_provenance"
-msbwt-benchmark-index = "_deferred_cli:benchmark_index"
+# compress, decompress, convert are its subcommands).
+msbwt = "MUS.CommandLineInterface:mainRun"
+# Enhanced console scripts.
+msbwt-bwt-tags = "tools.bwt_tags:main"
+msbwt-lcp = "tools.lcp:main"
+msbwt-quality-sidecar = "tools.quality_sidecar:main"
+msbwt-remove-sources = "tools.remove_sources:main"
+msbwt-retrofit-read-provenance = "tools.retrofit_read_provenance:main"
+msbwt-benchmark-index = "tools.benchmark_index:main"
 
 [tool.setuptools]
-packages = ["MUS", "MUSCython"]
-py-modules = ["_deferred_cli"]
+packages = ["MUS", "MUSCython", "tools"]
 # BasicBWT.pxd (and any future .pxd) becomes package data in M3-3.
 package-data = { "MUSCython" = ["*.pxd"] }
 zip-safe = false
