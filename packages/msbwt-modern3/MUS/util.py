@@ -101,8 +101,11 @@ def newOrExistingDirectory(dirName):
 
 def validKmer(kmer):
     '''
-    @param kmer - must be contained in the characters used for our sequencing
+    @param kmer - must be contained in the characters used for our sequencing.
+    Accepts both str and bytes input.
     '''
+    if isinstance(kmer, bytes):
+        kmer = kmer.decode('ascii')
     for c in kmer:
         if not (c in validCharacters):
             raise ap.ArgumentTypeError("Invalid k-mer: All characters must be in ($, A, C, G, N, T)")

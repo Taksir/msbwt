@@ -57,6 +57,18 @@ class BasicBWT(object):
         #this is purely for querying and determines how big our cache will be to shorten query times
         #TODO: experiment with this number
         self.cacheDepth = 6
+
+    @staticmethod
+    def _ensure_str(seq):
+        """Normalize a query sequence to str for character-level iteration.
+
+        Python 3 bytes iteration yields ints, which breaks dict lookups
+        keyed by str characters.  This guard ensures all downstream
+        charToNum/complement lookups receive str keys.
+        """
+        if isinstance(seq, bytes):
+            return seq.decode('ascii')
+        return seq
     
     def constructIndexing(self):
         '''
@@ -82,6 +94,8 @@ class BasicBWT(object):
         @param givenRange - the range to start from (if a partial search has already been run), default=whole range
         @return - an integer count of the number of times seq occurred in this BWT
         '''
+        #normalize bytes to str for Python 3 compatibility
+        seq = self._ensure_str(seq)
         #init the current range
         if givenRange == None:
             if seq[-self.cacheDepth:] not in self.searchCache:
@@ -118,6 +132,8 @@ class BasicBWT(object):
         @param givenRange - the range to search for, whole range by default
         @return - a python range representing the start and end of the sequence in the bwt
         '''
+        #normalize bytes to str for Python 3 compatibility
+        seq = self._ensure_str(seq)
         #init the current range
         if givenRange == None:
             if seq[-self.cacheDepth:] not in self.searchCache:
@@ -1422,8 +1438,11 @@ def interactiveTranscriptConstruction(bwtDir, seedKmer, endSeeds, threshold, num
     
 def reverseComplement(seq):
     '''
-    Helper function for generating reverse-complements
+    Helper function for generating reverse-complements.
+    Accepts both str and bytes; always returns str.
     '''
+    if isinstance(seq, bytes):
+        seq = seq.decode('ascii')
     revComp = ''
     complement = {'A':'T', 'C':'G', 'G':'C', 'T':'A', 'N':'N', '$':'$'}
     for c in reversed(seq):

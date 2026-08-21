@@ -46,7 +46,7 @@ import numpy as np
 
 PACKAGE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                        "..", "..", "packages", "msbwt-modern2")
-sys.path.insert(0, PACKAGE)
+# sys.path injection is handled by conftest.py --msbwt-package option
 
 from MUS.BWTTags import (  # noqa: E402
     BWTTagError,

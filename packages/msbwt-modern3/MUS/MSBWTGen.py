@@ -1016,7 +1016,11 @@ def compressBWT(inputFN, outputFN, numProcs, logger):
     #run our multi-processed builder
     if numProcs > 1:
         myPool = multiprocessing.Pool(numProcs)
-        rets = myPool.map(compressBWTPoolProcess, tups)
+        try:
+            rets = myPool.map(compressBWTPoolProcess, tups)
+        finally:
+            myPool.close()
+            myPool.join()
     else:
         rets = []
         for tup in tups:
@@ -1204,7 +1208,11 @@ def decompressBWT(inputDir, outputDir, numProcs, logger):
         
     if numProcs > 1:
         myPool = multiprocessing.Pool(numProcs)
-        rets = myPool.map(decompressBWTPoolProcess, tups)
+        try:
+            rets = myPool.map(decompressBWTPoolProcess, tups)
+        finally:
+            myPool.close()
+            myPool.join()
     else:
         rets = []
         for tup in tups:
