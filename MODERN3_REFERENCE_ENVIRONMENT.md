@@ -1,6 +1,6 @@
 # Modern3 Reference Environment
 
-Recommended stable reference profile for the msbwt-modern3 Python 3 port. Versions verified against primary upstream sources as of 2026-08-12.
+Recommended stable reference profile for the msbwt-modern3 Python 3 port. Versions verified against primary upstream sources as of 2026-08-20. Repaired M3-0R: corrected build version (1.5.0, not yanked 1.5.1), removed `pip --no-deps` recommendation, added conditional dependency packaging direction.
 
 ---
 
@@ -13,8 +13,8 @@ Recommended stable reference profile for the msbwt-modern3 Python 3 port. Versio
 | **Cython** | 3.2.9 | 2026-07-24 | ≥3.8 | Latest stable. Supports CPython 3.8+, free-threading experimental. |
 | **pysam** | 0.24.0 | 2026-04-27 | 3.8–3.14 | Wraps htslib 1.23.1. Requires Cython 3. Linux/macOS only. |
 | **pip** | 26.2.1 | 2026-08-04 | ≥3.10 | Latest stable. |
-| **setuptools** | 84.0.0 | 2026-08-08 | ≥3.9 | Latest stable. |
-| **build** | 1.5.1 | 2026-07-09 | — | PEP 517 build frontend. |
+| **setuptools** | 84.0.0 | 2026-08-08 | ≥3.10 | Latest stable. |
+| **build** | **1.5.0** | 2026-04-30 | ≥3.10 | PEP 517 build frontend. **1.5.1 exists but IS YANKED** ("considers breaking changes, will discuss re-releasing as a new major version"). |
 | **wheel** | 0.48.0 | 2026-08-11 | ≥3.9 | Latest stable. |
 
 ---
@@ -47,7 +47,7 @@ pysam 0.24 requires Cython 3. Cython 3.2.9 satisfies this. **Compatible.**
 
 ### 2.7 pip + setuptools + build + wheel
 
-pip 26.2 requires setuptools. build 1.5.1 works with modern setuptools. wheel 0.48 is the wheel package manager. **All compatible.**
+pip 26.2 works with modern setuptools. build 1.5.0 works with modern setuptools. wheel 0.48 is the wheel package manager. **All compatible.**
 
 ---
 
@@ -61,7 +61,7 @@ pip 26.2 requires setuptools. build 1.5.1 works with modern setuptools. wheel 0.
 | NumPy 2.5.2 | Wheel available | `cp314-cp314-manylinux_2_17_x86_64` |
 | Cython 3.2.9 | Pure Python | `py3-none-any` |
 | pysam 0.24.0 | Wheel available | `cp314-cp314-manylinux_2_28_x86_64` |
-| GCC/build tools | Required | For Cython compilation; `manylinux` containers have GCC |
+| GCC/build tools | Required | For Cython compilation |
 
 ### 3.2 Linux ARM64 (Tier 2)
 
@@ -94,7 +94,7 @@ pip 26.2 requires setuptools. build 1.5.1 works with modern setuptools. wheel 0.
 | CPython 3.14.7 | Available | python.org installer (64-bit) |
 | NumPy 2.5.2 | Wheel available | `cp314-cp314-win_amd64` |
 | Cython 3.2.9 | Pure Python | Works on Windows |
-| **pysam 0.24.0** | **NOT AVAILABLE** | **No native Windows wheels. Build from source fails. BAM functionality unavailable.** |
+| **pysam 0.24.0** | **NOT AVAILABLE** | **No native Windows wheels. Build from source fails.** |
 | MSVC compiler | Required | Visual Studio 2022+ for C extensions |
 
 ---
@@ -107,13 +107,17 @@ pip 26.2 requires setuptools. build 1.5.1 works with modern setuptools. wheel 0.
 - **pysam maintainer response**: "Pysam does not currently support Windows."
 - **PR #1274**: Windows support efforts exist but are incomplete.
 - **Wheel availability**: macOS and Linux only (manylinux_2_28, musllinux_1_2, ARM, x86-64).
-- **Build from source**: Fails on Windows due to htslib configure script using Unix shell syntax.
 
 **Impact on modern3:**
 - BAM preprocessing (`preprocessBams`) is the only pysam consumer.
 - All FASTQ/FASTA construction, query, compression, decompression, and merge operations work without pysam.
-- Modern3 should follow the modern2 approach: lazy import of pysam, `NotImplementedError` on Windows when BAM path is attempted.
-- `install_requires` should include pysam for Linux metadata; Windows users install with `pip install --no-deps`.
+
+**Packaging direction for M3-1:** Use conditional dependency packaging, NOT `pip install --no-deps` as a package design. Options:
+- `extras_require={"bam": ["pysam>=0.24"]}` — users install `msbwt-modern3[bam]` on supported platforms
+- `install_requires` with platform markers: `pysam>=0.24; sys_platform != 'win32'`
+- Lazy import in `preprocessBams` (matches modern2 approach) with clear error message on Windows
+
+Do NOT recommend `pip install --no-deps` as the packaging strategy. The distribution must be installable with standard `pip install` on all supported platforms.
 
 ---
 
@@ -149,57 +153,33 @@ pip 26.2 requires setuptools. build 1.5.1 works with modern setuptools. wheel 0.
 ### 6.1 Linux/macOS
 
 ```bash
-# Create isolated environment
 python3.14 -m venv .venv
 source .venv/bin/activate
-
-# Install build tools
-pip install --upgrade pip setuptools wheel build
-
-# Install Cython (build dependency)
-pip install Cython==3.2.9
-
-# Install NumPy
-pip install numpy==2.5.2
-
-# Install pysam (Linux/macOS only)
-pip install pysam==0.24.0
-
-# Build and install msbwt-modern3
+pip install --upgrade pip setuptools==84.0.0 wheel==0.48.0 build==1.5.0
+pip install Cython==3.2.9 numpy==2.5.2
+pip install pysam==0.24.0  # Linux/macOS only
 pip install -e packages/msbwt-modern3/
 ```
 
 ### 6.2 Windows
 
 ```powershell
-# Create isolated environment
 python -m venv .venv
 .venv\Scripts\activate
-
-# Install build tools
-pip install --upgrade pip setuptools wheel build
-
-# Install Cython
-pip install Cython==3.2.9
-
-# Install NumPy
-pip install numpy==2.5.2
-
-# Build and install msbwt-modern3 (--no-deps to skip pysam)
-pip install --no-deps -e packages/msbwt-modern3/
+pip install --upgrade pip setuptools==84.0.0 wheel==0.48.0 build==1.5.0
+pip install Cython==3.2.9 numpy==2.5.2
+pip install -e packages/msbwt-modern3/  # pysam not available; BAM path raises NotImplementedError
 ```
 
 ---
 
 ## 7. Alternative Profiles
 
-If the latest-stable profile encounters unforeseen issues, these fallback profiles provide known-good combinations:
-
 ### 7.1 Conservative Fallback
 
 | Component | Version | Notes |
 |-----------|---------|-------|
-| CPython | 3.12.9 | Latest 3.12 bugfix; widest NumPy 2.x compatibility |
+| CPython | 3.12.9 | Widest NumPy 2.x compatibility |
 | NumPy | 2.4.6 | Previous stable minor |
 | Cython | 3.2.9 | Same |
 | pysam | 0.24.0 | Same |
@@ -219,8 +199,9 @@ If the latest-stable profile encounters unforeseen issues, these fallback profil
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| NumPy 2.x `.npy` header format differences vs NumPy 1.x | Potential golden mismatch | Validate header bytes against NumPy 2.5; accept semantic equality for headers if needed |
-| Cython 3.2 language-level changes vs 3.0.x | Generated C differences | Use `language_level=3str` explicitly; regenerate and test |
-| pysam API changes (deprecated `Samfile`, `.qname`, `.seq`) | BAM path breakage | Update to modern pysam API (`AlignmentFile`, `.query_name`, `.query_sequence`) |
+| NumPy 2.x `.npy` header format differences vs 1.x | Potential golden mismatch | Validate header bytes; accept semantic equality if needed |
+| Cython 3.2 language-level vs 3.0.x | Generated C differences | Use `language_level=3str` explicitly; regenerate and test |
+| pysam API changes (deprecated `Samfile`, `.qname`, `.seq`) | BAM path breakage | Update to modern pysam API |
 | `unsigned long` width on Windows vs Linux | ABI/platform divergence | Document; do not fix in initial port |
-| Free-threaded CPython 3.13+ | GIL-less Cython execution | Cython 3.2 has experimental support; not needed for initial port |
+| Free-threaded CPython 3.13+ | GIL-less Cython execution | Experimental; not needed for initial port |
+| build 1.5.1 yanked | Must use 1.5.0 | Pin `build==1.5.0` in build requirements |
