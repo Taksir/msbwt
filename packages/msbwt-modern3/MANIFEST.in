@@ -1,0 +1,6 @@
+include pyproject.toml
+include setup.py
+include README.md
+include _deferred_cli.py
+recursive-include MUS *.py
+recursive-include MUSCython *.py
