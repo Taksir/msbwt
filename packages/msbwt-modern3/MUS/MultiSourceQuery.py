@@ -1445,15 +1445,11 @@ class MultiSourceBWT(object):
                 selected,
                 include_stats=True,
             )
-            stats.update(
-                {
-                    "merged_interval": (int(merged_low), int(merged_high)),
-                    "merged_count": int(merged_high - merged_low),
-                    "selected_source_ids": list(selected),
-                    "selected_source_count": len(selected),
-                    "count": int(count),
-                }
-            )
+            # NOTE: no stats.update here.  The persisted contract is the
+            # modern2 shape: ``stats`` contains exactly the traversal
+            # diagnostics from ``subset_count_interval``.  An earlier
+            # Python-3 edit injected merged-interval/selection keys here,
+            # silently diverging from the oracle return contract.
             return {
                 "sequence": seq,
                 "merged_interval": (int(merged_low), int(merged_high)),
