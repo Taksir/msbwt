@@ -29,6 +29,21 @@ cpdef tuple bwt_range_roundtrip(np.uint64_t lo, np.uint64_t hi):
     r.h = hi
     return (r.l, r.h)
 
+cpdef np.uint64_t stranded_max_alt_probe(np.uint64_t [:] lowArray_view,
+                                         np.uint64_t [:] highArray_view):
+    """M3-R64-W6 (audit A-1): mirrors findKTOtherStranded's alternative-symbol
+    FM-width scan using the exact production statement sequence and scalar
+    types (altVal/maxAlt as np.uint64_t, u64 view reads, u64 comparison).
+    Lets >2^32 interval widths be verified without a >4-billion-row BWT."""
+    cdef np.uint64_t altVal
+    cdef np.uint64_t maxAlt = 0
+    cdef np.uint64_t altC
+    for altC in range(1, 6):
+        altVal = highArray_view[altC] - lowArray_view[altC]
+        if altVal > maxAlt:
+            maxAlt = altVal
+    return maxAlt
+
 cdef class BasicBWT(object):
     '''
     This class is the root class for ANY msbwt created by this code regardless of it being compressed or no.
@@ -1601,9 +1616,13 @@ cdef class BasicBWT(object):
         cdef unsigned long c, altC
         cdef long x = len(seq)-1
         cdef long y = 0
-        
-        cdef unsigned long maxAlt, altVal
-        
+
+        # M3-R64-W6 (audit A-1): these hold FM interval WIDTHS derived from the
+        # uint64 low/high arrays and can validly exceed 2^32-1; the former
+        # unsigned long silently wrapped them mod 2^32 on Win64 LLP64 before
+        # they were stored into the '<u8' result array.
+        cdef np.uint64_t maxAlt, altVal
+
         #now we start traversing
         for x in range(s-1, -1, -1):
             c = self.charToNum_view[seq_view[x]]
@@ -1611,7 +1630,7 @@ cdef class BasicBWT(object):
             self.fillFmAtIndex(highArray_view, h)
             newL = lowArray_view[c]
             newH = highArray_view[c]
-            
+
             if currLen > 20:
                 maxAlt = 0
                 for altC in range(1, self.vcLen):
