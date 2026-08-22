@@ -18,7 +18,7 @@ from . cimport BasicBWT
 def _int_shape(shape):
     return tuple(int(x) for x in shape)
 
-def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsigned long numProcs, logger):
+def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, np.uint64_t numProcs, logger):
     '''
     This function takes two BWTs as input and merges them into a single BWT in O(N*LCP_avg) time where N is the 
     total number of bases and LCP_avg is the average common prefix between adjacent entries in the merged result.
@@ -39,26 +39,26 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
         numProcs = 1
     
     #hardcode this as we do everywhere else
-    cdef unsigned long numValidChars = 6
+    cdef np.uint64_t numValidChars = 6
     
     #map the seqs, note we map msbwt.npy because that's where all changes happen
     cdef BasicBWT.BasicBWT loadedBwt0 = MSBWT.loadBWT(inputMsbwtDir1, useMemmap=True, logger=logger)
     cdef BasicBWT.BasicBWT loadedBwt1 = MSBWT.loadBWT(inputMsbwtDir2, useMemmap=True, logger=logger)
     
-    cdef unsigned long bwtLen1 = loadedBwt0.getTotalSize()
-    cdef unsigned long bwtLen2 = loadedBwt1.getTotalSize()
+    cdef np.uint64_t bwtLen1 = loadedBwt0.getTotalSize()
+    cdef np.uint64_t bwtLen2 = loadedBwt1.getTotalSize()
     
     #prepare to construct total counts for the symbols
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] totalCounts = np.zeros(dtype='<u8', shape=(numValidChars, ))
     cdef np.uint64_t [:] totalCounts_view = totalCounts
     
     #first calculate the total counts for our region
-    cdef unsigned long x, y
+    cdef np.uint64_t x, y
     for x in range(0, numValidChars):
         totalCounts_view[x] = loadedBwt0.getSymbolCount(x)+loadedBwt1.getSymbolCount(x)
     
     #now we should load the interleaves
-    cdef unsigned long interleaveBytes
+    cdef np.uint64_t interleaveBytes
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inter0
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inter1
     
@@ -66,7 +66,7 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
     interleaveBytes = (bwtLen1+bwtLen2)//8+1
     
     #hardcoded as 1 GB right now
-    cdef unsigned long interThresh = 1*10**9
+    cdef np.uint64_t interThresh = 1*10**9
     interleaveFN0 = mergedDir+'/inter0.npy'
     interleaveFN1 = mergedDir+'/inter1.npy'
     
@@ -109,11 +109,11 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
     cdef double st, el
     
     #format is (position in bwt0, position in bwt1, total length)
-    cdef unsigned long HARD_LIMIT = 4**10#at 1 million, we should force it to collapse down
-    cdef unsigned long SOFT_LIMIT = 4**5 #at 1024 entries, we should be collapsing down to smaller ranges
+    cdef np.uint64_t HARD_LIMIT = 4**10#at 1 million, we should force it to collapse down
+    cdef np.uint64_t SOFT_LIMIT = 4**5#at 1024 entries, we should be collapsing down to smaller ranges
     ranges = np.zeros(dtype='<u8', shape=(1, 3))
     ranges[0][2] = bwtLen1+bwtLen2
-    cdef unsigned long totalLength = bwtLen1+bwtLen2
+    cdef np.uint64_t totalLength = bwtLen1+bwtLen2
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fullCoverageRanges = np.copy(ranges)
     
     while changesMade:
@@ -176,8 +176,8 @@ def interleaveTwoBwts(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, log
     cdef BasicBWT.BasicBWT loadedBwt0 = MSBWT.loadBWT(inputMsbwtDir1, useMemmap=True, logger=logger)
     cdef BasicBWT.BasicBWT loadedBwt1 = MSBWT.loadBWT(inputMsbwtDir2, useMemmap=True, logger=logger)
     
-    cdef unsigned long bwtLen1 = loadedBwt0.getTotalSize()
-    cdef unsigned long bwtLen2 = loadedBwt1.getTotalSize()
+    cdef np.uint64_t bwtLen1 = loadedBwt0.getTotalSize()
+    cdef np.uint64_t bwtLen2 = loadedBwt1.getTotalSize()
     
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] msbwt = np.lib.format.open_memmap(mergedDir+'/msbwt.npy', 'w+', '<u1', (bwtLen1+bwtLen2,))
     cdef np.uint8_t [:] msbwt_view = msbwt
@@ -191,30 +191,30 @@ def interleaveTwoBwts(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, log
     #with two, we will initialize both arrays
     inter0_p = &inter0_view[0]
     
-    cdef unsigned long readID
-    cdef unsigned long pos1 = 0
-    cdef unsigned long pos2 = 0
+    cdef np.uint64_t readID
+    cdef np.uint64_t pos1 = 0
+    cdef np.uint64_t pos2 = 0
     
-    cdef unsigned long binBits0 = loadedBwt0.getBinBits()
-    cdef unsigned long binBits1 = loadedBwt1.getBinBits()
-    cdef unsigned long binSize0 = 2**binBits0
-    cdef unsigned long binSize1 = 2**binBits1
+    cdef np.uint64_t binBits0 = loadedBwt0.getBinBits()
+    cdef np.uint64_t binBits1 = loadedBwt1.getBinBits()
+    cdef np.uint64_t binSize0 = 2**binBits0
+    cdef np.uint64_t binSize1 = 2**binBits1
     
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBin0 = np.empty(dtype='<u1', shape=(binSize0, ))
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBin1 = np.empty(dtype='<u1', shape=(binSize1, ))
     cdef np.uint8_t [:] currentBin0_view = currentBin0
     cdef np.uint8_t [:] currentBin1_view = currentBin1
-    cdef unsigned long currentBinID0 = 0
-    cdef unsigned long currentBinID1 = 0
-    cdef unsigned long currentBinUse0 = 0
-    cdef unsigned long currentBinUse1 = 0
+    cdef np.uint64_t currentBinID0 = 0
+    cdef np.uint64_t currentBinID1 = 0
+    cdef np.uint64_t currentBinUse0 = 0
+    cdef np.uint64_t currentBinUse1 = 0
     
     #fill in the bin from the BasicBWT
     with nogil:
         loadedBwt0.fillBin(currentBin0_view, currentBinID0)
         loadedBwt1.fillBin(currentBin1_view, currentBinID1)
     
-    cdef unsigned long x
+    cdef np.uint64_t x
     for x in range(0, bwtLen1+bwtLen2):
         #get the read, the symbol, and increment the position in that read
         if getBit_p(inter0_p, x):
@@ -234,9 +234,9 @@ def interleaveTwoBwts(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, log
                 
 cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt1, 
                                   np.uint8_t * inputInter_view, np.uint8_t * outputInter_view, 
-                                  unsigned long bwtLen,
-                                  np.ndarray[np.uint64_t, ndim=2, mode='c'] ranges, unsigned long nvc,
-                                  unsigned long iterCount, unsigned long numThreads,
+                                  np.uint64_t bwtLen,
+                                  np.ndarray[np.uint64_t, ndim=2, mode='c'] ranges, np.uint64_t nvc,
+                                  np.uint64_t iterCount, np.uint64_t numThreads,
                                   bint collapseEntries):
     '''
     Performs a single pass over the data for a merge of at most 2 BWTs, allows for a bit array, instead of byte
@@ -253,7 +253,7 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
         total number of entries that are returned (aka, reduces memory)
     '''
     #counters
-    cdef unsigned long x, y, z
+    cdef np.uint64_t x, y, z
     
     #values associated with reading the input ranges
     cdef bint readID
@@ -267,8 +267,8 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
     cdef np.uint64_t [:] neIndex_view = neIndex
     
     #these are things we need to process results of the sub-threads
-    cdef unsigned long resultStart
-    cdef unsigned long resultOffset
+    cdef np.uint64_t resultStart
+    cdef np.uint64_t resultOffset
     cdef bint resultChangesMade
     
     #FM-index values at the start of a range
@@ -291,9 +291,9 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
     cdef np.uint64_t [:, :] ranges_view = ranges
     
     #these values get pulled from each entry as needed
-    cdef unsigned long startIndex0 = 0
-    cdef unsigned long startIndex1 = 0
-    cdef unsigned long dist
+    cdef np.uint64_t startIndex0 = 0
+    cdef np.uint64_t startIndex1 = 0
+    cdef np.uint64_t dist
     
     #fill in the initial indices
     bwt0.fillFmAtIndex(fmCurrent0_view, 0)
@@ -308,19 +308,19 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
     cdef np.uint8_t [:] currBytes_view = currBytes
     cdef np.uint8_t [:] byteUses_view = byteUses
     
-    cdef unsigned long binBits0 = bwt0.getBinBits()
-    cdef unsigned long binBits1 = bwt1.getBinBits()
-    cdef unsigned long binSize0 = 2**binBits0
-    cdef unsigned long binSize1 = 2**binBits1
+    cdef np.uint64_t binBits0 = bwt0.getBinBits()
+    cdef np.uint64_t binBits1 = bwt1.getBinBits()
+    cdef np.uint64_t binSize0 = 2**binBits0
+    cdef np.uint64_t binSize1 = 2**binBits1
     
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBin0 = np.empty(dtype='<u1', shape=(binSize0, ))
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] currentBin1 = np.empty(dtype='<u1', shape=(binSize1, ))
     cdef np.uint8_t [:] currentBin0_view = currentBin0
     cdef np.uint8_t [:] currentBin1_view = currentBin1
-    cdef unsigned long currentBinID0 = 0
-    cdef unsigned long currentBinID1 = 0
-    cdef unsigned long currentBinUse0 = 0
-    cdef unsigned long currentBinUse1 = 0
+    cdef np.uint64_t currentBinID0 = 0
+    cdef np.uint64_t currentBinID1 = 0
+    cdef np.uint64_t currentBinUse0 = 0
+    cdef np.uint64_t currentBinUse1 = 0
     
     #fill in our initial bins
     bwt0.fillBin(currentBin0_view, currentBinID0)
@@ -440,15 +440,15 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] extendedEntries = np.empty(dtype='<u8', shape=(nvc*ranges.shape[0], 3))
     
     cdef np.uint64_t [:, :] extendedEntries_view = extendedEntries
-    cdef unsigned long exIndex = 0
+    cdef np.uint64_t exIndex = 0
     
     #track these values so we can find ranges we missed
-    cdef unsigned long start
-    cdef unsigned long end, prevEnd
-    cdef unsigned long input0c, input1c, output0c, output1c, prev0c, prev1c
+    cdef np.uint64_t start
+    cdef np.uint64_t end, prevEnd
+    cdef np.uint64_t input0c, input1c, output0c, output1c, prev0c, prev1c
     
     #these correspond to hidden ranges
-    cdef unsigned long hiddenStart0, hiddenStart1, nextStart
+    cdef np.uint64_t hiddenStart0, hiddenStart1, nextStart
     
     #init
     end = 0
@@ -532,7 +532,7 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
     extendedEntries_view = extendedEntries
     
     #here's where we'll do the collapse
-    cdef unsigned long shrinkIndex = 0, currIndex = 1
+    cdef np.uint64_t shrinkIndex = 0, currIndex = 1
     #cdef bint collapseEntries = (iterCount <= 20)
     #cdef bint collapseEntries = True or (iterCount <= 20) or (exIndex >= 2**17)
     #cdef bint collapseEntries = (exIndex >= 2**10)
@@ -555,7 +555,7 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
         extendedEntries_view = extendedEntries
     #'''
     #go through each of the next entries and correct our input
-    cdef unsigned long totalStart
+    cdef np.uint64_t totalStart
     
     #go through each symbol range we just changed and copy it back into our input
     for z in range(0, nvc):
@@ -588,14 +588,14 @@ cdef tuple targetedIterationMerge2(BasicBWT.BasicBWT bwt0, BasicBWT.BasicBWT bwt
     cdef tuple ret = (changesMade, extendedEntries)
     return ret
 
-cdef inline void setBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline void setBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     #set a bit in an array
     bitArray[index >> 3] |= (0x1 << (index & 0x7))
 
-cdef inline void clearBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline void clearBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     #clear a bit in an array
     bitArray[index >> 3] &= ~(0x1 << (index & 0x7))
 
-cdef inline bint getBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline bint getBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     #get a bit from an array
     return (bitArray[index >> 3] >> (index & 0x7)) & 0x1
