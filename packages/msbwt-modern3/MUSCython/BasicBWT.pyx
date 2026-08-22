@@ -12,6 +12,23 @@ from cython.operator cimport preincrement as inc
 
 from . import MultiStringBWTCython as MultiStringBWT
 
+# R64-0 test-support probes (docs/modernization/NUMERIC_WIDTH_POLICY.md)
+SIZEOF_UNSIGNED_LONG = sizeof(unsigned long)
+
+cpdef np.uint64_t u64_roundtrip(np.uint64_t value):
+    """Round-trip through the canonical repaired scalar width plus a
+    small arithmetic step; proves Python->C->Python u64 boundaries."""
+    cdef np.uint64_t v = value
+    v = v * 3 + 7
+    return v
+
+cpdef tuple bwt_range_roundtrip(np.uint64_t lo, np.uint64_t hi):
+    """Round-trip two values through the repaired bwtRange struct."""
+    cdef bwtRange r
+    r.l = lo
+    r.h = hi
+    return (r.l, r.h)
+
 cdef class BasicBWT(object):
     '''
     This class is the root class for ANY msbwt created by this code regardless of it being compressed or no.
@@ -69,7 +86,7 @@ cdef class BasicBWT(object):
         self.endIndex = np.zeros(dtype='<u8', shape=(self.vcLen, ))
         self.endIndex_view = self.endIndex
         
-        cdef unsigned long pos = 0
+        cdef np.uint64_t pos = 0
         cdef unsigned long i
         with nogil:
             for i in range(0, self.vcLen):
@@ -77,13 +94,13 @@ cdef class BasicBWT(object):
                 pos += self.totalCounts_view[i]
                 self.endIndex_view[i] = pos
     
-    cpdef unsigned long getTotalSize(BasicBWT self):
+    cpdef np.uint64_t getTotalSize(BasicBWT self):
         '''
         @return - the total number of symbols in the BWT
         '''
         return self.totalSize
     
-    cpdef unsigned long getSymbolCount(BasicBWT self, unsigned long symbol):
+    cpdef np.uint64_t getSymbolCount(BasicBWT self, np.uint8_t symbol):
         '''
         @param symbol - this is an integer from [0, 6)
         @return - the total count for the passed in symbol
@@ -98,14 +115,14 @@ cdef class BasicBWT(object):
         '''
         return self.bitPower
     
-    cpdef unsigned long countOccurrencesOfSeq(BasicBWT self, object seq, tuple givenRange=None):
+    cpdef np.uint64_t countOccurrencesOfSeq(BasicBWT self, object seq, tuple givenRange=None):
         '''
         This function counts the number of occurrences of the given sequence
         @param seq - the sequence to search for
         @param givenRange - the range to start from (if a partial search has already been run), default=whole range
         @return - an integer count of the number of times seq occurred in this BWT
         '''
-        cdef unsigned long l, h
+        cdef np.uint64_t l, h
         cdef long x
         cdef unsigned long s
         cdef unsigned long c
@@ -143,7 +160,7 @@ cdef class BasicBWT(object):
         @param givenRange - the range to search for, whole range by default
         @return - a python range representing the start and end of the sequence in the bwt
         '''
-        cdef unsigned long l, h
+        cdef np.uint64_t l, h
         cdef unsigned long s
         cdef long x
         cdef unsigned long c
@@ -184,8 +201,8 @@ cdef class BasicBWT(object):
         '''
         cdef list ret = []
         
-        cdef unsigned long l, h
-        cdef unsigned long lc, hc
+        cdef np.uint64_t l, h
+        cdef np.uint64_t lc, hc
         cdef unsigned long s
         cdef long x
         cdef unsigned long c
@@ -239,7 +256,7 @@ cdef class BasicBWT(object):
         
         #return the difference
         cdef list finalRet = []
-        cdef unsigned long currStart, currEnd, nextStart, nextEnd
+        cdef np.uint64_t currStart, currEnd, nextStart, nextEnd
         
         if (not recursed) and (h-l > 0):
             #normal search, no variable symbols like * or ?
@@ -290,8 +307,8 @@ cdef class BasicBWT(object):
         '''
         cdef list ret = []
         
-        cdef unsigned long l, h
-        cdef unsigned long lc, hc
+        cdef np.uint64_t l, h
+        cdef np.uint64_t lc, hc
         cdef unsigned long s
         cdef long x, y
         cdef unsigned long c, altC
@@ -395,8 +412,8 @@ cdef class BasicBWT(object):
         '''
         cdef list ret = []
         
-        cdef unsigned long l, h
-        cdef unsigned long lc, hc
+        cdef np.uint64_t l, h
+        cdef np.uint64_t lc, hc
         cdef unsigned long s
         cdef long x, y
         cdef unsigned long c, altC
@@ -478,7 +495,7 @@ cdef class BasicBWT(object):
         
         return ret
     
-    cpdef set findReadsMatchingSeq(BasicBWT self, object seq, unsigned long strLen):
+    cpdef set findReadsMatchingSeq(BasicBWT self, object seq, np.uint64_t strLen):
         '''
         REQUIRES LCP 
         This function takes a sequence and finds all strings of length "stringLen" which exactly match the sequence
@@ -491,7 +508,7 @@ cdef class BasicBWT(object):
         #if it can't be generalized, then specific impls/errors need to be written for subclasses
         return set([])
     
-    cpdef list findKmerWithError(BasicBWT self, object seq, unsigned long minThresh=1):
+    cpdef list findKmerWithError(BasicBWT self, object seq, np.uint64_t minThresh=1):
         '''
         This function takes a k-mer input and finds all k-mers with an edit distance of 1 that occur at least
         "minThresh" times in the dataset.  Indels at the beginning/end of the 'seq' are not considered.
@@ -505,8 +522,8 @@ cdef class BasicBWT(object):
         '''
         cdef list ret = []
         
-        cdef unsigned long l, h
-        cdef unsigned long lc, hc
+        cdef np.uint64_t l, h
+        cdef np.uint64_t lc, hc
         cdef unsigned long s
         cdef long x, y
         cdef unsigned long c, altC
@@ -606,7 +623,7 @@ cdef class BasicBWT(object):
         else:
             return ret
     
-    cpdef list findKmerWithErrors(BasicBWT self, object seq, unsigned long editDistance, unsigned long minThresh=1):
+    cpdef list findKmerWithErrors(BasicBWT self, object seq, np.uint64_t editDistance, np.uint64_t minThresh=1):
         '''
         This function takes a k-mer input and finds all k-mers with an edit distance of 1 that occur at least
         "minThresh" times in the dataset.  Indels at the beginning/end of the 'seq' are not considered.
@@ -621,7 +638,7 @@ cdef class BasicBWT(object):
         '''
         cdef list ret = []
         
-        cdef unsigned long l, h
+        cdef np.uint64_t l, h
         cdef unsigned long s
         cdef long x, y
         cdef unsigned long c, altC, seqC
@@ -670,11 +687,11 @@ cdef class BasicBWT(object):
         #start at 'A', not '$'
         currSymStack_view[0] = 1
         
-        cdef unsigned long currSeqIndex
+        cdef Py_ssize_t currSeqIndex
         cdef bint iterNext = False
         
-        cdef unsigned long exactL = 0
-        cdef unsigned long exactH = 0
+        cdef np.uint64_t exactL = 0
+        cdef np.uint64_t exactH = 0
         
         while stackIndex >= 0:
             currSeqIndex = s-1-stackIndex+currShiftStack_view[stackIndex]
@@ -821,7 +838,7 @@ cdef class BasicBWT(object):
                     iterNext = False
         
         cdef list filteredRet = []
-        cdef unsigned long lc, hc
+        cdef np.uint64_t lc, hc
         cdef str tempSeq, b
         cdef unsigned long maxOverlap
         
@@ -844,24 +861,24 @@ cdef class BasicBWT(object):
         else:
             return ret
         
-    cpdef unsigned long getCharAtIndex(BasicBWT self, unsigned long index):# nogil:
+    cpdef np.uint8_t getCharAtIndex(BasicBWT self, np.uint64_t index):# nogil:
         '''
         dummy function, shouldn't be called
         '''
-        cdef unsigned long ret = 0
+        cdef np.uint8_t ret = 0
         return ret
     
-    cdef void fillBin(BasicBWT self, np.uint8_t [:] binToFill, unsigned long binID) nogil:
+    cdef void fillBin(BasicBWT self, np.uint8_t [:] binToFill, np.uint64_t binID) nogil:
         '''
         dummy funciton, shouldn't be called
         '''
         return
     
-    cpdef unsigned long getOccurrenceOfCharAtIndex(BasicBWT self, unsigned long sym, unsigned long index):# nogil:
+    cpdef np.uint64_t getOccurrenceOfCharAtIndex(BasicBWT self, np.uint8_t sym, np.uint64_t index):# nogil:
         '''
         dummy function, shouldn't be called
         '''
-        cdef unsigned long ret = 0
+        cdef np.uint64_t ret = 0
         return ret
     
     cpdef iterInit(BasicBWT self):
@@ -886,7 +903,7 @@ cdef class BasicBWT(object):
         '''
         return 255
     
-    cpdef getSequenceDollarID(BasicBWT self, unsigned long strIndex, bint returnOffset=False):
+    cpdef getSequenceDollarID(BasicBWT self, np.uint64_t strIndex, bint returnOffset=False):
         '''
         This will take a given index and work backwards until it encounters a '$' indicating which dollar ID is
         associated with this read
@@ -894,9 +911,9 @@ cdef class BasicBWT(object):
         @return - an integer indicating the dollar ID of the string the given character belongs to
         '''
         #figure out the first hop backwards
-        cdef unsigned long currIndex = strIndex
+        cdef np.uint64_t currIndex = strIndex
         cdef unsigned long prevChar
-        cdef unsigned long i
+        cdef np.uint64_t i
         
         prevChar = self.getCharAtIndex(currIndex)
         currIndex = self.getOccurrenceOfCharAtIndex(prevChar, currIndex)
@@ -914,7 +931,7 @@ cdef class BasicBWT(object):
         else:
             return currIndex
     
-    cpdef recoverString(BasicBWT self, unsigned long strIndex, bint withIndex=False):
+    cpdef recoverString(BasicBWT self, np.uint64_t strIndex, bint withIndex=False):
         '''
         This will return the string that starts at the given index
         @param strIndex - the index of the string we want to recover
@@ -926,7 +943,7 @@ cdef class BasicBWT(object):
         
         #figure out the first hop backwards
         cdef unsigned long prevChar = self.getCharAtIndex(strIndex)
-        cdef unsigned long currIndex = self.getOccurrenceOfCharAtIndex(prevChar, strIndex)
+        cdef np.uint64_t currIndex = self.getOccurrenceOfCharAtIndex(prevChar, strIndex)
         
         #while we haven't looped back to the start
         while currIndex != strIndex:
@@ -955,7 +972,7 @@ cdef class BasicBWT(object):
         cdef np.uint8_t [:] retConvert_arr = retConvert
         cdef unsigned long retVal
         cdef unsigned long x
-        cdef unsigned long retNumPos = len(retNums)-1
+        cdef Py_ssize_t retNumPos = len(retNums)-1
         for x in range(0, len(retNums)):
             retVal = retNums[retNumPos]
             retNumPos -= 1
@@ -971,13 +988,13 @@ cdef class BasicBWT(object):
         else:
             return ret
     
-    cdef void fillFmAtIndex(BasicBWT self, np.uint64_t [:] fill_view, unsigned long index):
+    cdef void fillFmAtIndex(BasicBWT self, np.uint64_t [:] fill_view, np.uint64_t index):
         '''
         dummy function, override in all subclasses
         '''
         pass
     
-    cpdef np.ndarray[np.uint64_t, ndim=1, mode='c'] countPileup(BasicBWT self, object seq, long kmerSize):
+    cpdef np.ndarray[np.uint64_t, ndim=1, mode='c'] countPileup(BasicBWT self, object seq, Py_ssize_t kmerSize):
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array. Automatically includes reverse complement.
@@ -1002,7 +1019,7 @@ cdef class BasicBWT(object):
         
         return ret
         
-    cpdef tuple countSeqMatches(BasicBWT self, object seq, unsigned long kmerSize):
+    cpdef tuple countSeqMatches(BasicBWT self, object seq, Py_ssize_t kmerSize):
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1032,7 +1049,7 @@ cdef class BasicBWT(object):
             
         return (ret, otherChoices)
         
-    cpdef tuple countStrandedSeqMatches(BasicBWT self, object seq, unsigned long kmerSize):
+    cpdef tuple countStrandedSeqMatches(BasicBWT self, object seq, Py_ssize_t kmerSize):
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1061,11 +1078,11 @@ cdef class BasicBWT(object):
         cdef np.uint64_t [:] highArray_view = highArray
         
         #ranges for counting
-        cdef unsigned long currLen = 0
-        cdef unsigned long l = 0
-        cdef unsigned long h = self.totalSize
+        cdef np.uint64_t currLen = 0
+        cdef np.uint64_t l = 0
+        cdef np.uint64_t h = self.totalSize
         
-        cdef unsigned long newL, newH
+        cdef np.uint64_t newL, newH
         
         #other vars
         cdef unsigned long c, altC
@@ -1127,7 +1144,7 @@ cdef class BasicBWT(object):
                 
         return (ret, otherChoices)
     
-    cdef bwtRange getOccurrenceOfCharAtRange(BasicBWT self, unsigned long sym, bwtRange inRange) nogil:
+    cdef bwtRange getOccurrenceOfCharAtRange(BasicBWT self, np.uint8_t sym, bwtRange inRange) nogil:
         cdef bwtRange ret
         ret.l = 0
         ret.h = 0
@@ -1162,7 +1179,7 @@ cdef class BasicBWT(object):
         #return the difference
         return ret
     
-    cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] countPileup_c(BasicBWT self, object seq, long kmerSize):
+    cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] countPileup_c(BasicBWT self, object seq, Py_ssize_t kmerSize):
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array. Automatically includes reverse complement.
@@ -1194,7 +1211,7 @@ cdef class BasicBWT(object):
         
         return ret
     
-    cdef unsigned long countOccurrencesOfSeq_c(BasicBWT self, unsigned char * seq_view, unsigned long seqLen, unsigned long mc=1):
+    cdef np.uint64_t countOccurrencesOfSeq_c(BasicBWT self, unsigned char * seq_view, np.uint64_t seqLen, np.uint64_t mc=1):
         '''
         This function counts the number of occurrences of the given sequence so long as the number of occurrences is >= mc;
         essentially lets you exit early if the value is smaller than some meaningful threshold "mc"
@@ -1226,14 +1243,14 @@ cdef class BasicBWT(object):
         #return the difference
         return ret.h-ret.l
     
-    cdef unsigned long getOccurrenceOfCharAtIndex_c(BasicBWT self, unsigned long sym, unsigned long index):# nogil:
+    cdef np.uint64_t getOccurrenceOfCharAtIndex_c(BasicBWT self, np.uint8_t sym, np.uint64_t index):# nogil:
         '''
         dummy function, shouldn't be called
         '''
-        cdef unsigned long ret = 0
+        cdef np.uint64_t ret = 0
         return ret
     
-    cdef bwtRange findRangeOfStr_c(BasicBWT self, unsigned char * seq_view, unsigned long seqLen):
+    cdef bwtRange findRangeOfStr_c(BasicBWT self, unsigned char * seq_view, np.uint64_t seqLen):
         '''
         This function will search for a string and find the location of that string OR the last index less than it. It also
         will start its search within a given range instead of the whole structure
@@ -1257,7 +1274,7 @@ cdef class BasicBWT(object):
         #return the difference
         return ret
     
-    cpdef np.ndarray countStrandedSeqMatchesNoOther(BasicBWT self, object seq, unsigned long kmerSize):
+    cpdef np.ndarray countStrandedSeqMatchesNoOther(BasicBWT self, object seq, Py_ssize_t kmerSize):
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1282,7 +1299,7 @@ cdef class BasicBWT(object):
         cdef np.uint64_t [:] highArray_view = highArray
         
         #ranges for counting
-        cdef unsigned long currLen = 0
+        cdef np.uint64_t currLen = 0
         #cdef unsigned long l = 0
         #cdef unsigned long h = self.totalSize
         cdef bwtRange mainRange
@@ -1354,7 +1371,7 @@ cdef class BasicBWT(object):
                 
         return ret
     
-    cpdef np.ndarray findKmerThreshold(BasicBWT self, object seq, unsigned long threshold):
+    cpdef np.ndarray findKmerThreshold(BasicBWT self, object seq, np.uint64_t threshold):
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1383,7 +1400,7 @@ cdef class BasicBWT(object):
         
         return ret
         
-    cpdef np.ndarray findKmerThresholdStranded(BasicBWT self, object seq, unsigned long threshold):
+    cpdef np.ndarray findKmerThresholdStranded(BasicBWT self, object seq, np.uint64_t threshold):
         '''
         ??? need desc
         @param seq - the seq to scan
@@ -1409,11 +1426,11 @@ cdef class BasicBWT(object):
         cdef np.uint64_t [:] highArray_view = highArray
         
         #ranges for counting
-        cdef unsigned long currLen = 0
-        cdef unsigned long l = 0
-        cdef unsigned long h = self.totalSize
+        cdef np.uint64_t currLen = 0
+        cdef np.uint64_t l = 0
+        cdef np.uint64_t h = self.totalSize
         
-        cdef unsigned long newL, newH
+        cdef np.uint64_t newL, newH
         
         #other vars
         cdef unsigned long c, altC
@@ -1455,7 +1472,7 @@ cdef class BasicBWT(object):
         #TODO: currently returning (and calculating) just the right side, are other metrics better?
         return rightRet
                 
-    cpdef np.ndarray findKTOtherStranded(BasicBWT self, object seq, unsigned long threshold):
+    cpdef np.ndarray findKTOtherStranded(BasicBWT self, object seq, np.uint64_t threshold):
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1482,13 +1499,13 @@ cdef class BasicBWT(object):
         cdef np.uint64_t [:] highArray_view = highArray
         
         #ranges for counting
-        cdef unsigned long currLen = 0
-        cdef unsigned long altCurrLen
-        cdef unsigned long l = 0
-        cdef unsigned long h = self.totalSize
+        cdef np.uint64_t currLen = 0
+        cdef np.uint64_t altCurrLen
+        cdef np.uint64_t l = 0
+        cdef np.uint64_t h = self.totalSize
         
-        cdef unsigned long newL, newH
-        cdef unsigned long altL, altH
+        cdef np.uint64_t newL, newH
+        cdef np.uint64_t altL, altH
         
         #other vars
         cdef unsigned long c, altC

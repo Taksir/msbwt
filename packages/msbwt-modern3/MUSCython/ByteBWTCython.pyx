@@ -11,6 +11,9 @@ import os
 from . cimport BasicBWT
 from cython.operator cimport preincrement as inc
 
+# R64-0 test-support probe (NUMERIC_WIDTH_POLICY.md)
+SIZEOF_UNSIGNED_LONG = sizeof(unsigned long)
+
 # (Windows portability) np.save() writes py2-long shape elements into .npy
 # headers on Windows; normalize to ints so headers are byte-identical to
 # Linux.  Plain Python def so it stays callable from Cython code.
@@ -73,7 +76,7 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         These will always be stored in '<DIR>/totalCounts.p', a pickled file
         @param logger - the logger to print output to
         '''
-        cdef unsigned long i
+        cdef np.uint64_t i
         self.totalSize = self.bwt.shape[0]
         abtFN = self.dirName+'/totalCounts.npy'
         if os.path.exists(abtFN):
@@ -123,8 +126,8 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         
         cdef np.ndarray[np.uint64_t, ndim=1] counts
         cdef np.uint64_t [:] counts_view
-        cdef unsigned long i, j
-        cdef unsigned long samplingSize
+        cdef np.uint64_t i, j
+        cdef np.uint64_t samplingSize
         
         if os.path.exists(fmIndexFN):
             if self.useMemmap:
@@ -155,7 +158,7 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
                     for j in range(0, self.vcLen):
                         self.partialFM_view[i][j] = counts_view[j]
             
-    cpdef unsigned long getCharAtIndex(ByteBWT self, unsigned long index):# nogil:
+    cpdef np.uint8_t getCharAtIndex(ByteBWT self, np.uint64_t index):# nogil:
         '''
         This function is only necessary for other functions which perform searches generically without knowing if the 
         underlying structure is compressed or not
@@ -163,7 +166,7 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         '''
         return self.bwt_view[index]
     
-    def getBWTRange(ByteBWT self, unsigned long start, unsigned long end):
+    def getBWTRange(ByteBWT self, np.uint64_t start, np.uint64_t end):
         '''
         This function is only necessary for other functions which perform searches generically without knowing if the 
         underlying structure is compressed or not
@@ -172,21 +175,21 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         '''
         return self.bwt[start:end]
     
-    cdef void fillBin(ByteBWT self, np.uint8_t [:] binToFill, unsigned long binID) nogil:
+    cdef void fillBin(ByteBWT self, np.uint8_t [:] binToFill, np.uint64_t binID) nogil:
         '''
         This copies a slice of the BWT into an array the caller can manipulate, useful mostly for the compressed
         versions of this data structure.
         @param binToFill - the place we can copy the BWT into
         @param binID - the bin we're copying
         '''
-        cdef unsigned long x
-        cdef unsigned long startIndex = binID*self.binSize
-        cdef unsigned long endIndex = min((binID+1)*self.binSize, self.totalSize)
+        cdef np.uint64_t x
+        cdef np.uint64_t startIndex = binID*self.binSize
+        cdef np.uint64_t endIndex = min((binID+1)*self.binSize, self.totalSize)
         
         for x in range(0, endIndex-startIndex):
             binToFill[x] = self.bwt_view[startIndex+x]
         
-    cpdef unsigned long getOccurrenceOfCharAtIndex(ByteBWT self, unsigned long sym, unsigned long index):# nogil:
+    cpdef np.uint64_t getOccurrenceOfCharAtIndex(ByteBWT self, np.uint8_t sym, np.uint64_t index):# nogil:
         '''
         This functions gets the FM-index value of a character at the specified position
         @param sym - the character to find the occurrence level
@@ -195,10 +198,10 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         '''
         #sampling method
         #get the bin we occupy
-        cdef unsigned long binID = index >> self.bitPower
-        cdef unsigned long ret = self.partialFM_view[binID][sym]
-        cdef unsigned long start = binID << self.bitPower
-        cdef unsigned long i
+        cdef np.uint64_t binID = index >> self.bitPower
+        cdef np.uint64_t ret = self.partialFM_view[binID][sym]
+        cdef np.uint64_t start = binID << self.bitPower
+        cdef np.uint64_t i
         
         for i in range(start, index):
             if self.bwt_view[i] == sym:
@@ -206,7 +209,7 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         
         return ret
     
-    cdef BasicBWT.bwtRange getOccurrenceOfCharAtRange(ByteBWT self, unsigned long sym, BasicBWT.bwtRange inRange) nogil:
+    cdef BasicBWT.bwtRange getOccurrenceOfCharAtRange(ByteBWT self, np.uint8_t sym, BasicBWT.bwtRange inRange) nogil:
         '''
         This functions gets the FM-index value of a character at the specified position
         @param sym - the character to find the occurrence level
@@ -214,17 +217,17 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         @return - the number of occurrences of char before the specified index
         '''
         #sampling method
-        cdef unsigned long binID = inRange.l >> self.bitPower
+        cdef np.uint64_t binID = inRange.l >> self.bitPower
         cdef BasicBWT.bwtRange ret
         ret.l = self.partialFM_view[binID, sym]
-        cdef unsigned long start = binID << self.bitPower
-        cdef unsigned long i
+        cdef np.uint64_t start = binID << self.bitPower
+        cdef np.uint64_t i
         
         for i in range(start, inRange.l):
             if self.bwt_view[i] == sym:
                 ret.l += 1
         
-        cdef unsigned long binID_h = inRange.h >> self.bitPower
+        cdef np.uint64_t binID_h = inRange.h >> self.bitPower
         if binID == binID_h:
             ret.h = ret.l
             start = inRange.l
@@ -238,7 +241,7 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         
         return ret
         
-    def getFullFMAtIndex(ByteBWT self, unsigned long index):
+    def getFullFMAtIndex(ByteBWT self, np.uint64_t index):
         '''
         This function creates a complete FM-index for a specific position in the BWT.  Example using the above example:
         BWT    Full FM-index
@@ -252,9 +255,9 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         '''
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.empty(dtype='<u8', shape=(self.vcLen, ))
         cdef np.uint64_t [:] ret_view = ret
-        cdef unsigned long binID = index >> self.bitPower
-        cdef unsigned long bwtInd = binID * self.binSize
-        cdef unsigned long i
+        cdef np.uint64_t binID = index >> self.bitPower
+        cdef np.uint64_t bwtInd = binID * self.binSize
+        cdef np.uint64_t i
         
         for i in range(0, self.vcLen):
             ret_view[i] = self.partialFM_view[binID][i]
@@ -264,15 +267,15 @@ cdef class ByteBWT(BasicBWT.BasicBWT):
         
         return ret
     
-    cdef void fillFmAtIndex(ByteBWT self, np.uint64_t [:] fill_view, unsigned long index):
+    cdef void fillFmAtIndex(ByteBWT self, np.uint64_t [:] fill_view, np.uint64_t index):
         '''
         Same as getFmAtIndex, but with a pass in array to fill in
         @param fill_view - the view of the fmIndex we are going to fill in
         @param index - the index to extract the fm-index for
         '''
-        cdef unsigned long binID = index >> self.bitPower
-        cdef unsigned long bwtInd = binID * self.binSize
-        cdef unsigned long i
+        cdef np.uint64_t binID = index >> self.bitPower
+        cdef np.uint64_t bwtInd = binID * self.binSize
+        cdef np.uint64_t i
         
         for i in range(0, self.vcLen):
             fill_view[i] = self.partialFM_view[binID][i]

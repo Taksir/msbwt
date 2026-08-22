@@ -276,7 +276,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         self.fillBin(ret_view, binID)
         return ret
     
-    cdef void fillBin(LZW_BWT self, np.uint8_t [:] binToFill, unsigned long binID) nogil:
+    cdef void fillBin(LZW_BWT self, np.uint8_t [:] binToFill, np.uint64_t binID) nogil:
         #extract inputs
         cdef np.uint8_t [:] compressed_view = self.bwt_view[self.offsetArray_view[binID]:self.offsetArray_view[binID+1]]
         
@@ -364,7 +364,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         #return the numpy array
         #return ret
     
-    cpdef unsigned long getCharAtIndex(LZW_BWT self, unsigned long index):# nogil:
+    cpdef np.uint8_t getCharAtIndex(LZW_BWT self, np.uint64_t index):# nogil:
         '''
         Used for searching, this function masks the complexity behind retrieving a specific character at a specific index
         in our compressed BWT.
@@ -458,7 +458,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         #return the numpy array
         return <unsigned long> self.symbolList_view[z]
         
-    cpdef unsigned long getOccurrenceOfCharAtIndex(LZW_BWT self, unsigned long sym, unsigned long index):# nogil:
+    cpdef np.uint64_t getOccurrenceOfCharAtIndex(LZW_BWT self, np.uint8_t sym, np.uint64_t index):# nogil:
         '''
         This functions gets the FM-index value of a character at the specified position
         @param sym - the character to find the occurrence level
@@ -560,7 +560,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         self.fillFmAtIndex(ret_view, index)
         return ret
         
-    cdef void fillFmAtIndex(LZW_BWT self, np.uint64_t [:] ret_view, unsigned long index):
+    cdef void fillFmAtIndex(LZW_BWT self, np.uint64_t [:] ret_view, np.uint64_t index):
         '''
         This functions fills in the FM-index value of all characters at the specified position
         @param index - the index we want to find the occurrence level at

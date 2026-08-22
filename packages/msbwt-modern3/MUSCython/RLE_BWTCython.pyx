@@ -251,7 +251,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         #we'll use this later when we do lookups
         self.offsetSum = np.sum(self.partialFM[0])
         
-    cpdef unsigned long getCharAtIndex(RLE_BWT self, unsigned long index):# nogil:
+    cpdef np.uint8_t getCharAtIndex(RLE_BWT self, np.uint64_t index):# nogil:
         '''
         Used for searching, this function masks the complexity behind retrieving a specific character at a specific index
         in our compressed BWT.
@@ -290,7 +290,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         
         return prevChar
     
-    cdef void fillBin(RLE_BWT self, np.uint8_t [:] binToFill, unsigned long binID) nogil:
+    cdef void fillBin(RLE_BWT self, np.uint8_t [:] binToFill, np.uint64_t binID) nogil:
         '''
         This copies a slice of the BWT into an array the caller can manipulate, useful mostly for the compressed
         versions of this data structure.
@@ -438,7 +438,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         
         return ret
     
-    cpdef unsigned long getOccurrenceOfCharAtIndex(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:
+    cpdef np.uint64_t getOccurrenceOfCharAtIndex(RLE_BWT self, np.uint8_t sym, np.uint64_t index):# nogil:
         '''
         This functions gets the FM-index value of a character at the specified position
         @param sym - the character to find the occurrence level
@@ -485,7 +485,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         
         return ret
     
-    cdef unsigned long getOccurrenceOfCharAtIndex_c(RLE_BWT self, unsigned long sym, unsigned long index):# nogil:
+    cdef np.uint64_t getOccurrenceOfCharAtIndex_c(RLE_BWT self, np.uint8_t sym, np.uint64_t index):# nogil:
         '''
         This functions gets the FM-index value of a character at the specified position
         @param sym - the character to find the occurrence level
@@ -532,7 +532,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         
         return ret
     
-    cdef BasicBWT.bwtRange getOccurrenceOfCharAtRange(RLE_BWT self, unsigned long sym, BasicBWT.bwtRange inRange) nogil:
+    cdef BasicBWT.bwtRange getOccurrenceOfCharAtRange(RLE_BWT self, np.uint8_t sym, BasicBWT.bwtRange inRange) nogil:
         '''
         This functions gets the FM-index value of a character at the specified position
         @param sym - the character to find the occurrence level
@@ -620,7 +620,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         self.fillFmAtIndex(ret_view, index)
         return ret
         
-    cdef void fillFmAtIndex(RLE_BWT self, np.uint64_t [:] ret_view, unsigned long index):
+    cdef void fillFmAtIndex(RLE_BWT self, np.uint64_t [:] ret_view, np.uint64_t index):
         '''
         This function creates a complete FM-index for a specific position in the BWT.  Example using the above example:
         BWT    Full FM-index
@@ -941,7 +941,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
             #USER IS RESPONSIBLE FOR RELOADING THE BWT
             pass
         
-    cpdef set findReadsMatchingSeq(RLE_BWT self, object seq, unsigned long strLen):
+    cpdef set findReadsMatchingSeq(RLE_BWT self, object seq, np.uint64_t strLen):
         '''
         REQUIRES LCP 
         This function takes a sequence and finds all strings of length "stringLen" which exactly match the sequence
