@@ -21,6 +21,7 @@ packages/msbwt-modern2/validate/release-candidate.sh (WSL).
 import json
 import re
 import unittest
+import importlib.machinery
 import zipfile
 from pathlib import Path
 
@@ -105,7 +106,12 @@ class TestDistributionMetadata(unittest.TestCase):
         self.assertIn("scripts=['bin/msbwt']", text)
         self.assertIn("packages=['MUS', 'MUSCython', 'tools']", text)
         self.assertIn("'BasicBWT.pxd'", text)
-        self.assertIn("install_requires=['pysam', 'numpy']", text)
+        # RC-T2 rebaseline: the W-PYSAM deviation (COMPATIBILITY.md)
+        # made pysam conditional on non-Windows platforms; numpy stays
+        # required everywhere.
+        self.assertIn(
+            "install_requires=['numpy', 'pysam; sys_platform != \"win32\"']",
+            text)
         self.assertIn("zip_safe=False", text)
         self.assertIn("entry_points={'console_scripts':", text)
         for name in EXTENSION_NAMES:
@@ -359,7 +365,18 @@ class TestBuiltArtifacts(unittest.TestCase):
         for name in ENHANCED_TOOLS:
             self.assertIn("tools/%s.py" % name, names, name)
         for name in EXTENSION_NAMES:
-            self.assertIn("MUSCython/%s.so" % name, names, name)
+            # RC-T1 rebaseline: extension binaries use the platform suffix
+            # (.so on Linux, .pyd on Windows); the contract is one
+            # importable extension binary per module.
+            candidates = [n for n in names
+                          if n.startswith("MUSCython/%s." % name)
+                          and any(n.endswith(sfx) for sfx in
+                                  importlib.machinery.EXTENSION_SUFFIXES)]
+            ext = next(iter(candidates), None)
+            self.assertIsNotNone(ext, name)
+            self.assertTrue(any(ext.endswith(sfx) for sfx in
+                                importlib.machinery.EXTENSION_SUFFIXES),
+                            ext)
         self.assertTrue(any(n.startswith("msbwt_modern2-0.3.0.dist-info/")
                             for n in names))
         self.assertTrue(any(n.endswith(".data/scripts/msbwt") for n in names))

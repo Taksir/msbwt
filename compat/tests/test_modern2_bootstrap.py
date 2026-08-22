@@ -129,7 +129,14 @@ class Python2CompatibilityTests(unittest.TestCase):
     # docs/modernization/MODERN2_MILESTONE9_GENERIC_MERGE.md): the exact
     # one-line diff vs the frozen original is asserted by
     # test_modern2_generic_merge.SourcePolicyTests.
-    DOCUMENTED_DEVIATIONS = ("MUS/MultiStringBWT.py", "MUS/CommandLineInterface.py")
+    # M3-R64-W5: MSBWTGen.py carries the accepted Windows-portability
+    # temp-writer np.save normalization; its exact diff is whitelisted
+    # line-by-line in modern2_source_acceptance.py.
+    DOCUMENTED_DEVIATIONS = ("MUS/MultiStringBWT.py",
+                             "MUS/CommandLineInterface.py",
+                             "MUS/MSBWTGen.py",
+                             # Windows-portability atomic-rename helpers
+                             "MUS/util.py")
 
     def test_mus_pure_python_files_match_frozen_manifest(self):
         frozen_manifest = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environment" / "frozen-source.sha256"

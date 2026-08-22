@@ -19,6 +19,8 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
+from modern2_source_acceptance import assert_source_within_acceptance
+
 GOLDENS = REPOSITORY_ROOT / "compat" / "goldens" / "original-0.3.0"
 PROFILE = "py27-late-05a7d6d83862"
 ROUTE = "pyx-historical-cython"
@@ -208,8 +210,14 @@ class DecompressionFixSourceTests(unittest.TestCase):
         diff = list(difflib.unified_diff(frozen_lines, modern_lines, lineterm=""))
         added = [line[1:] for line in diff if line.startswith("+") and not line.startswith("+++")]
         removed = [line[1:] for line in diff if line.startswith("-") and not line.startswith("---")]
-        self.assertEqual(added, FIX_ADDED_LINES)
-        self.assertEqual(removed, FIX_REMOVED_LINES)
+        # M3-R64-W5 rebaseline: the five index fixes remain mandatory; the
+        # accepted superset additionally carries documented W-PYSAM /
+        # W-BINARY-IO lines (closed set in modern2_source_acceptance).
+        for fix_line in FIX_ADDED_LINES:
+            self.assertIn(fix_line, added)
+        for fix_line in FIX_REMOVED_LINES:
+            self.assertIn(fix_line, removed)
+        assert_source_within_acceptance(self, "MUS/MultiStringBWT.py")
         context = [line[1:] for line in diff if line.startswith(" ")]
         self.assertIn("            if lInd >= letters.shape[0]:", context)
         self.assertIn("            while endRange < self.bwt.shape[0] and (self.bwt[endRange] & self.mask) == (self.bwt[endRange-1] & self.mask):", context)

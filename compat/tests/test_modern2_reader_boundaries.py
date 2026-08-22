@@ -21,6 +21,8 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
+from modern2_source_acceptance import assert_source_within_acceptance
+
 EVIDENCE = PACKAGE / "evidence" / "reader-milestone5.json"
 
 # committed evidence dataset and reader-boundary SUCCESS contract constants
@@ -190,8 +192,13 @@ class ReaderFixSourceTests(unittest.TestCase):
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUSCython" / "RLE_BWTCython.pyx",
             PACKAGE / "MUSCython" / "RLE_BWTCython.pyx")
-        self.assertEqual(added, PYX_ADDED_LINES)
-        self.assertEqual(removed, PYX_REMOVED_LINES)
+        # M3-R64-W5 rebaseline: accepted superset (language_level header,
+        # milestone-5 endRange fix, Windows-portability np.save
+        # normalization).
+        assert_source_within_acceptance(self, "MUSCython/RLE_BWTCython.pyx")
+        self.assertIn("#cython: language_level=2", added)
+        self.assertIn(
+            "            endRange = int(self.refFM[endBlock+1])+1", added)
 
     def test_regenerated_c_contains_the_conversion_at_the_site(self):
         """The committed generated C (Cython 3.0.12, pinned environment)
@@ -209,8 +216,8 @@ class ReaderFixSourceTests(unittest.TestCase):
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py",
             PACKAGE / "MUS" / "MultiStringBWT.py")
-        self.assertEqual(len(added), 7)
-        self.assertEqual(len(removed), 6)
+        # M3-R64-W5 rebaseline: closed-set acceptance whitelist.
+        assert_source_within_acceptance(self, "MUS/MultiStringBWT.py")
         self.assertEqual(added.count("            endRange = int(self.refFM[binID+1])+1"), 2)
         self.assertEqual(removed.count("            endRange = self.refFM[binID+1]+1"), 2)
         self.assertIn("            np.add.at(ret, letters[0:x-1], counts[0:x-1])",

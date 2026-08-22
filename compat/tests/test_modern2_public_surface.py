@@ -17,6 +17,8 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
+from modern2_source_acceptance import assert_source_within_acceptance
+
 MUS = PACKAGE / "MUS"
 MUSCYN = PACKAGE / "MUSCython"
 FROZEN = REPOSITORY_ROOT / "MUS"
@@ -173,8 +175,9 @@ class CliInventoryTests(unittest.TestCase):
         added, removed = unified_diff_lines(
             FROZEN / "CommandLineInterface.py",
             PACKAGE / "MUS" / "CommandLineInterface.py")
-        self.assertEqual(added, ["        numProcs = 1"])
-        self.assertEqual(removed, [])
+        # M3-R64-W5 rebaseline: numprocs fix plus W-BINARY-IO CSV open.
+        assert_source_within_acceptance(self, "MUS/CommandLineInterface.py")
+        self.assertIn("        numProcs = 1", added)
 
 
 class ImportExportMatrixTests(unittest.TestCase):
@@ -212,8 +215,9 @@ class CompressToRleMigrationTests(unittest.TestCase):
         added, removed = unified_diff_lines(
             FROZEN_CYN / "CompressToRLE.pyx",
             MUSCYN / "CompressToRLE.pyx")
-        self.assertEqual(added, ["#cython: language_level=2"])
-        self.assertEqual(removed, [])
+        # M3-R64-W5 rebaseline: language_level header only (no drift).
+        assert_source_within_acceptance(self, "MUSCython/CompressToRLE.pyx")
+        self.assertIn("#cython: language_level=2", added)
 
     def test_stub_removed(self):
         self.assertFalse((MUSCYN / "CompressToRLE.py").exists())

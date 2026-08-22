@@ -18,6 +18,8 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
+from modern2_source_acceptance import assert_source_within_acceptance
+
 EVIDENCE = PACKAGE / "evidence" / "reader-milestone6.json"
 PREFIX_PROBE = PACKAGE / "evidence" / "reader-milestone6-prefix-probe.json"
 
@@ -259,8 +261,9 @@ class ReaderFixSourceTests(unittest.TestCase):
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py",
             PACKAGE / "MUS" / "MultiStringBWT.py")
-        self.assertEqual(len(added), 7)
-        self.assertEqual(len(removed), 6)
+        # M3-R64-W5 rebaseline: closed-set acceptance whitelist replaces
+        # the exact-count assertion; landmark fixes must remain present.
+        assert_source_within_acceptance(self, "MUS/MultiStringBWT.py")
         self.assertEqual(added.count("            endRange = int(self.refFM[binID+1])+1"), 2)
         self.assertEqual(removed.count("            endRange = self.refFM[binID+1]+1"), 2)
         self.assertIn(FILL_ADDED, added)

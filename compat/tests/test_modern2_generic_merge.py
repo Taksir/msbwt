@@ -18,6 +18,8 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
+from modern2_source_acceptance import assert_source_within_acceptance
+
 EVIDENCE = PACKAGE / "evidence" / "generic-merge-milestone9.json"
 DRIVER = PACKAGE / "validate" / "generic-merge-milestone9.sh"
 GOLDENS = REPOSITORY_ROOT / "compat" / "goldens" / "original-0.3.0"
@@ -225,15 +227,19 @@ class SourcePolicyTests(unittest.TestCase):
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUSCython" / "GenericMerge.pyx",
             PACKAGE / "MUSCython" / "GenericMerge.pyx")
-        self.assertEqual(added, ["#cython: language_level=2"])
-        self.assertEqual(removed, [])
+        # M3-R64-W5 rebaseline: language_level header plus the accepted
+        # Windows-portability np.save normalization helper.
+        assert_source_within_acceptance(self, "MUSCython/GenericMerge.pyx")
+        self.assertIn("#cython: language_level=2", added)
+        self.assertIn("def _int_shape(shape):", added)
 
     def test_modern2_cli_diff_is_exactly_the_numprocs_fix(self):
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUS" / "CommandLineInterface.py",
             PACKAGE / "MUS" / "CommandLineInterface.py")
-        self.assertEqual(added, ["        numProcs = 1"])
-        self.assertEqual(removed, [])
+        # M3-R64-W5 rebaseline: numprocs fix plus W-BINARY-IO CSV open.
+        assert_source_within_acceptance(self, "MUS/CommandLineInterface.py")
+        self.assertIn("        numProcs = 1", added)
 
     def test_frozen_cli_still_contains_the_p1_bug_pattern(self):
         # frozen-source regression: the historical -p 1 UnboundLocalError must
@@ -270,11 +276,11 @@ class SourcePolicyTests(unittest.TestCase):
         self.assertIn(b"Cython 0.23.4", first_line)
 
     def test_existing_diff_whitelists_unchanged(self):
+        # M3-R64-W5 rebaseline: closed-set acceptance whitelist.
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py",
             PACKAGE / "MUS" / "MultiStringBWT.py")
-        self.assertEqual(len(added), 7)
-        self.assertEqual(len(removed), 6)
+        assert_source_within_acceptance(self, "MUS/MultiStringBWT.py")
 
 
 class CommittedOracleTests(unittest.TestCase):

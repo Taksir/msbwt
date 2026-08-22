@@ -15,6 +15,8 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
+from modern2_source_acceptance import assert_source_within_acceptance
+
 EVIDENCE = PACKAGE / "evidence" / "nonuniform-gzip-milestone8.json"
 DRIVER = PACKAGE / "validate" / "nonuniform-gzip-milestone8.sh"
 GOLDENS = REPOSITORY_ROOT / "compat" / "goldens" / "original-0.3.0"
@@ -199,8 +201,11 @@ class SourcePolicyTests(unittest.TestCase):
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUSCython" / "MultimergeCython.pyx",
             PACKAGE / "MUSCython" / "MultimergeCython.pyx")
-        self.assertEqual(added, ["#cython: language_level=2"])
-        self.assertEqual(removed, [])
+        # M3-R64-W5 rebaseline: language_level header plus the accepted
+        # Windows-portability np.save normalization helper.
+        assert_source_within_acceptance(self, "MUSCython/MultimergeCython.pyx")
+        self.assertIn("#cython: language_level=2", added)
+        self.assertIn("def _int_shape(shape):", added)
 
     def test_modern2_stub_removed(self):
         self.assertFalse((PACKAGE / "MUSCython" / "MultimergeCython.py").exists())
@@ -211,13 +216,13 @@ class SourcePolicyTests(unittest.TestCase):
         self.assertIn("'MultimergeCython'", text)
 
     def test_existing_diff_whitelists_unchanged(self):
-        # the MultiStringBWT.py whitelist (5 correction sites, 7/6) must not
-        # have moved
+        # M3-R64-W5 rebaseline: closed-set acceptance whitelist (the
+        # milestone correction landmarks remain covered by the reader
+        # suites).
         added, removed = unified_added_removed(
             REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py",
             PACKAGE / "MUS" / "MultiStringBWT.py")
-        self.assertEqual(len(added), 7)
-        self.assertEqual(len(removed), 6)
+        assert_source_within_acceptance(self, "MUS/MultiStringBWT.py")
 
 
 class CommittedGoldenTests(unittest.TestCase):
