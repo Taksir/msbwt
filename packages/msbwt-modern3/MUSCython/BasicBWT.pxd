@@ -39,7 +39,10 @@ cdef class BasicBWT(object):
     
     cdef bint lcpsPresent
     cdef np.ndarray lcps
-    cdef np.uint8_t [:] lcps_view
+    # M3-R64-LCP repair: F11A persists lcps.npy as <u4; bind that exact
+    # dtype (the former np.uint8_t[:] declaration raised a buffer dtype
+    # mismatch at load time in every compiled reader).
+    cdef np.uint32_t [:] lcps_view
     
     #called during initialization, no reason for a user to need this
     cdef void constructIndexing(BasicBWT self)

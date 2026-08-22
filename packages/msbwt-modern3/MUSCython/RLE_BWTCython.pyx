@@ -77,7 +77,17 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         if os.path.exists(self.dirName+'/lcps.npy'):
             self.lcpsPresent = True
             self.lcps = np.load(self.dirName+'/lcps.npy', 'r+')
-            self.lcps_view = self.lcps
+            # M3-R64-LCP repair: lcps.npy is persisted as <u4 (F11A contract).
+            # Bind exactly that dtype; reject anything else explicitly rather
+            # than reinterpreting or truncating values.
+            if self.lcps.dtype == np.dtype('<u4'):
+                self.lcps_view = self.lcps
+            else:
+                self.lcpsPresent = False
+                raise ValueError(
+                    'lcps.npy has dtype %s; compiled readers require <u4'
+                    % self.lcps.dtype
+                )
         else:
             self.lcpsPresent = False
         
