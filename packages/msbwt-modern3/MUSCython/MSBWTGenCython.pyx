@@ -27,6 +27,12 @@ from . import MultiStringBWTCython as MultiStringBWT
 
 import numpy as np
 cimport numpy as np
+
+# M3-R64-W4 test-support probe: cumulative-offset addition in the exact
+# widened scalar type used by column construction (NUMERIC_WIDTH_POLICY.md).
+cpdef np.uint64_t construction_offset_probe(np.uint64_t base, np.uint64_t delta):
+    cdef np.uint64_t v = base + delta
+    return v
 #from cython.operator cimport preincrement as inc
 from multiprocessing.pool import ThreadPool
 
@@ -58,12 +64,12 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     
     #offsets is really just storing the length of all string at this point
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] offsets = np.load(offsetFN, 'r+')
-    cdef unsigned long seqLen = offsets[0]
+    cdef np.uint64_t seqLen = offsets[0]
     
     #finalSymbols stores the last real symbols in the strings (not the '$', the ones right before)
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] finalSymbols = np.load(seqFNPrefix+'.1.npy', 'r+')
     cdef np.uint8_t [:] finalSymbols_view = finalSymbols
-    cdef unsigned long numSeqs = finalSymbols.shape[0]
+    cdef np.uint64_t numSeqs = finalSymbols.shape[0]
     
     logger.warning('Beta version of Cython creation')
     logger.info('Preparing to merge '+str(numSeqs)+' sequences...')
@@ -77,7 +83,7 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     cdef np.uint64_t [:, :] initialInserts_view = initialInserts
     
     #some basic counting variables
-    cdef unsigned long i, j, c, columnID, c2
+    cdef np.uint64_t i, j, c, columnID, c2
     
     #this will still the initial counts of symbols in the final column of our strings
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] initialFmDeltas = np.zeros(dtype='<u8', shape=(numValidChars, ))
@@ -134,7 +140,7 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     if (<object>initialInserts).base is not None:
         (<object>initialInserts).base.close()
     
-    cdef unsigned long cumsum
+    cdef np.uint64_t cumsum
     
     #2 - go back one column at a time, building new inserts
     for columnID in range(0, seqLen):
@@ -237,14 +243,14 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] finalBWT
     cdef np.uint8_t [:] finalBWT_view
     
-    cdef unsigned long totalLength = 0
+    cdef np.uint64_t totalLength = 0
     for c in range(0, numValidChars):
         tempBWT = np.load(bwtDir+'/state.'+str(c)+'.'+str(seqLen)+'.npy', 'r')
         totalLength += tempBWT.shape[0]
         
     #prepare the final structure for copying
-    cdef unsigned long finalInd = 0
-    cdef unsigned long tempLen
+    cdef np.uint64_t finalInd = 0
+    cdef np.uint64_t tempLen
     finalBWT = np.lib.format.open_memmap(bwtFN, 'w+', '<u1', (totalLength, ))
     finalBWT_view = finalBWT
     
@@ -300,7 +306,7 @@ def iterateMsbwtCreate(tuple tup):
     cdef np.uint64_t [:] fmEndex_view
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] prevFmDelta
     cdef np.uint64_t [:] prevFmDelta_view
-    cdef unsigned long column
+    cdef np.uint64_t column
     (idChar, fmIndex, prevFmDelta, fmEndex, insertionFNs, currentSymbolFN, nextSymbolFN, bwtDir, column, nextSeqFN) = tup
     fmIndex_view = fmIndex
     fmEndex_view = fmEndex
@@ -327,8 +333,8 @@ def iterateMsbwtCreate(tuple tup):
     cdef np.uint64_t [:, :] inserts_view
     
     #counting variables
-    cdef unsigned long currIndex, insertLen, insertIndex, prevIndex, totalNewLen
-    cdef unsigned long i, j
+    cdef np.uint64_t currIndex, insertLen, insertIndex, prevIndex, totalNewLen
+    cdef np.uint64_t i, j
     cdef np.uint8_t c, symbol, nextSymbol
     
     #These values contain the numpy arrays for the new inserts, created below
@@ -443,7 +449,7 @@ def iterateMsbwtCreate(tuple tup):
     ret = (np.copy(fmDeltas), retFNs)
     return ret
     
-def compressBWT(str inputFN, str outputFN, unsigned long numProcs, logger):
+def compressBWT(str inputFN, str outputFN, np.uint64_t numProcs, logger):
     '''
     Current encoding scheme uses 3 LSB for the letter and 5 MSB for a count, note that consecutive ones of the same character
     combine to create one large count.  So to represent 34A, you would have 00010|001 followed by 00001|001 which can be though of
@@ -454,9 +460,9 @@ def compressBWT(str inputFN, str outputFN, unsigned long numProcs, logger):
     @param logger - logger from initLogger()
     '''
     #create bit spacings
-    cdef unsigned long letterBits = 3
-    cdef unsigned long numberBits = 8-letterBits
-    cdef unsigned long numPower = 2**numberBits
+    cdef np.uint64_t letterBits = 3
+    cdef np.uint64_t numberBits = 8-letterBits
+    cdef np.uint64_t numPower = 2**numberBits
     cdef np.uint8_t mask = 255 >> letterBits
     
     #load the thing to compress
@@ -467,10 +473,10 @@ def compressBWT(str inputFN, str outputFN, unsigned long numProcs, logger):
     
     #first locate boundaries
     cdef list tups = []
-    cdef unsigned long binSize = 2**20
-    cdef unsigned long numBins = max(numProcs, bwt.shape[0]//binSize)
+    cdef np.uint64_t binSize = 2**20
+    cdef np.uint64_t numBins = max(numProcs, bwt.shape[0]//binSize)
     
-    cdef unsigned long i, startIndex, endIndex
+    cdef np.uint64_t i, startIndex, endIndex
     for i in range(0, numBins):
         startIndex = i*bwt.shape[0]//numBins
         endIndex = (i+1)*bwt.shape[0]//numBins
@@ -490,9 +496,9 @@ def compressBWT(str inputFN, str outputFN, unsigned long numProcs, logger):
             rets.append(compressBWTPoolProcess(tup))
     
     #calculate how big it will be after combining the separate chunk
-    cdef unsigned long totalSize = 0
+    cdef np.uint64_t totalSize = 0
     cdef long prevChar = -1
-    cdef unsigned long prevTotal = 0
+    cdef np.uint64_t prevTotal = 0
     for ret in rets:
         #start by just adding the raw size
         totalSize += ret[0]
@@ -520,11 +526,11 @@ def compressBWT(str inputFN, str outputFN, unsigned long numProcs, logger):
     #iterate a second time, this time storing things
     prevChar = -1
     prevTotal = 0
-    cdef unsigned long offset = 0
+    cdef np.uint64_t offset = 0
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] copyArr
     #cdef np.uint8_t [:] copyArr_view
     
-    cdef unsigned long prevBytes, nextBytes, power
+    cdef np.uint64_t prevBytes, nextBytes, power
     for ret in rets:
         copyArr = np.load(ret[5], 'r+')
         #copyArr_view = copyArr
@@ -581,8 +587,8 @@ def compressBWTPoolProcess(tuple tup):
     '''
     #pull the tuple info
     cdef str inputFN = tup[0]
-    cdef unsigned long startIndex = tup[1]
-    cdef unsigned long endIndex = tup[2]
+    cdef np.uint64_t startIndex = tup[1]
+    cdef np.uint64_t endIndex = tup[2]
     cdef str tempFN = tup[3]
     
     #this shouldn't happen
@@ -595,9 +601,9 @@ def compressBWTPoolProcess(tuple tup):
     cdef np.uint8_t [:] bwt_view = bwt
     
     #create bit spacings
-    cdef unsigned long letterBits = 3
-    cdef unsigned long numberBits = 8-letterBits
-    cdef unsigned long numPower = 2**numberBits
+    cdef np.uint64_t letterBits = 3
+    cdef np.uint64_t numberBits = 8-letterBits
+    cdef np.uint64_t numPower = 2**numberBits
     cdef np.uint8_t mask = 255 >> letterBits
     
     #search for the places they're different
@@ -614,9 +620,9 @@ def compressBWTPoolProcess(tuple tup):
         deltas_view[deltas.shape[0]-1] = endIndex - whereSol[whereSol.shape[0]-1]
     
     #calculate the number of bytes we need to store this information
-    cdef unsigned long size = 0
-    cdef unsigned long byteCount = 0
-    cdef unsigned long lastCount = 1
+    cdef np.uint64_t size = 0
+    cdef np.uint64_t byteCount = 0
+    cdef np.uint64_t lastCount = 1
     while lastCount > 0:
         lastCount = np.where(deltas >= 2**(numberBits*byteCount))[0].shape[0]
         size += lastCount
@@ -625,7 +631,7 @@ def compressBWTPoolProcess(tuple tup):
     #create the file
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] ret = np.lib.format.open_memmap(tempFN, 'w+', '<u1', (size,))
     cdef np.uint8_t [:] ret_view = ret
-    cdef unsigned long retIndex = 0
+    cdef np.uint64_t retIndex = 0
     cdef np.uint8_t c = bwt_view[startIndex]
     startChar = c
     delta = deltas_view[0]
@@ -635,7 +641,7 @@ def compressBWTPoolProcess(tuple tup):
         retIndex += 1
     
     #fill in the values based on the bit functions
-    cdef unsigned long i
+    cdef np.uint64_t i
     for i in range(0, whereSol.shape[0]):
         c = bwt_view[whereSol[i]]
         delta = deltas_view[i+1]
@@ -758,10 +764,10 @@ def writeSeqsToFiles(np.ndarray[np.uint8_t, ndim=1, mode='c'] seqArray, seqFNPre
     
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] offsets
     
-    cdef unsigned long i, j
-    cdef unsigned long k = 0
-    cdef unsigned long seqLen
-    cdef unsigned long numSeqs
+    cdef np.uint64_t i, j
+    cdef np.uint64_t k = 0
+    cdef np.uint64_t seqLen
+    cdef np.uint64_t numSeqs
     
     if uniformLength:
         #first, store the uniform size in our offsets file

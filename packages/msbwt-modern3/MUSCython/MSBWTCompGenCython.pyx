@@ -61,11 +61,11 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     
     #offsets is really just storing the length of all string at this point
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] offsets = np.load(offsetFN, 'r+')
-    cdef unsigned long seqLen = offsets[0]
+    cdef np.uint64_t seqLen = offsets[0]
     
     #some basic counting variables
-    cdef unsigned long i, j, c, columnID, c2
-    cdef unsigned long initColumnID = 0
+    cdef np.uint64_t i, j, c, columnID, c2
+    cdef np.uint64_t initColumnID = 0
     for i in range(0, seqLen):
         for c in range(0, numValidChars):
             if not os.path.exists(bwtDir+'/state.'+str(c)+'.'+str(i)+'.dat'):
@@ -80,7 +80,7 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     #finalSymbols stores the last real symbols in the strings (not the '$', the ones right before)
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] finalSymbols = np.load(seqFNPrefix+'.1.npy', 'r+')
     cdef np.uint8_t [:] finalSymbols_view = finalSymbols
-    cdef unsigned long numSeqs = finalSymbols.shape[0]
+    cdef np.uint64_t numSeqs = finalSymbols.shape[0]
     
     logger.warning('Beta version of Cython compressed creation')
     logger.info('Preparing to merge '+str(numSeqs)+' sequences...')
@@ -192,7 +192,7 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     if initialInserts is not None and (<object>initialInserts).base is not None:
         (<object>initialInserts).base.close()
     
-    cdef unsigned long cumsum
+    cdef np.uint64_t cumsum
     
     #2 - go back one column at a time, building new inserts
     for columnID in range(initColumnID, seqLen):
@@ -313,19 +313,19 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
     
     #initialize our length to be the length of the '$' portion which must be there by our string definitions
     tempBWT = np.memmap(bwtDir+'/state.'+str(0)+'.'+str(seqLen)+'.dat', '<u1', 'r')
-    cdef unsigned long totalLength = tempBWT.shape[0]
+    cdef np.uint64_t totalLength = tempBWT.shape[0]
     
     #figure out what symbol is at the end and how big it is
     cdef np.uint8_t finalSymbol = tempBWT[totalLength-1] & 0x07
-    cdef unsigned long finalSymbolCount = 0
-    cdef unsigned long finalSymbolPos = totalLength
-    cdef unsigned long finalSymbolBytes = 0
+    cdef np.uint64_t finalSymbolCount = 0
+    cdef np.uint64_t finalSymbolPos = totalLength
+    cdef np.uint64_t finalSymbolBytes = 0
     while finalSymbolPos > 0 and (tempBWT[finalSymbolPos-1] & 0x07) == finalSymbol:
         finalSymbolCount = finalSymbolCount*32 + (tempBWT[finalSymbolPos-1] >> 3)
         finalSymbolBytes += 1
         finalSymbolPos -= 1
     
-    cdef unsigned long modifier, extendBytes
+    cdef np.uint64_t modifier, extendBytes
     
     #now incorporate the other symbols
     for c in range(1, numValidChars):
@@ -377,12 +377,12 @@ def createMsbwtFromSeqs(bwtDir, unsigned int numProcs, logger):
                 finalSymbolPos -= 1
     
     #prepare the final structure for copying
-    cdef unsigned long finalInd = 0
-    cdef unsigned long tempLen
+    cdef np.uint64_t finalInd = 0
+    cdef np.uint64_t tempLen
     finalBWT = np.lib.format.open_memmap(bwtFN, 'w+', '<u1', (totalLength, ))
     finalBWT_view = finalBWT
     
-    cdef unsigned long startPoint
+    cdef np.uint64_t startPoint
     
     #now the tricky part of actually combining them
     for c in range(0, numValidChars):
@@ -492,7 +492,7 @@ def iterateMsbwtCreate(tuple tup):
     #cdef np.uint64_t [:] fmEndex_view
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] prevFmDelta
     cdef np.uint64_t [:] prevFmDelta_view
-    cdef unsigned long column
+    cdef np.uint64_t column
     #(idChar, fmIndex, prevFmDelta, fmEndex, insertionFNs, currentSymbolFN, nextSymbolFN, bwtDir, column, nextSeqFN) = tup
     (idChar, fmIndex, prevFmDelta, insertionFNs, currentSymbolFN, nextSymbolFN, bwtDir, column, nextSeqFN) = tup
     fmIndex_view = fmIndex
@@ -536,8 +536,8 @@ def iterateMsbwtCreate(tuple tup):
     cdef np.uint64_t [:, :] inserts_view
     
     #counting variables
-    cdef unsigned long currIndex, maxIndex, insertLen, insertIndex, prevIndex, totalNewLen
-    cdef unsigned long i, j
+    cdef np.uint64_t currIndex, maxIndex, insertLen, insertIndex, prevIndex, totalNewLen
+    cdef np.uint64_t i, j
     cdef np.uint8_t c, symbol, nextSymbol
     
     #These values contain the numpy arrays for the new inserts, created below
@@ -560,12 +560,12 @@ def iterateMsbwtCreate(tuple tup):
     cdef np.uint8_t [:] currSeqs_view = currSeqs
     
     #extra variables for counting the number of symbols of each type
-    cdef unsigned long readBufferSymbol = 0
-    cdef unsigned long readBufferCount = 0
-    cdef unsigned long readBufferPower = 0
+    cdef np.uint64_t readBufferSymbol = 0
+    cdef np.uint64_t readBufferCount = 0
+    cdef np.uint64_t readBufferPower = 0
     
-    cdef unsigned long writeBufferSymbol = 0
-    cdef unsigned long writeBufferCount = 0
+    cdef np.uint64_t writeBufferSymbol = 0
+    cdef np.uint64_t writeBufferCount = 0
     
     cdef np.uint8_t writeValue = 0
     
@@ -719,9 +719,9 @@ def iterateMsbwtCreate(tuple tup):
     ret = (np.copy(fmDeltas), retFNs)
     return ret
     
-cdef inline unsigned long getNextRLE(np.uint8_t [:] arr, unsigned long startingIndex, unsigned long maxIndex,
-                                     unsigned long * sym, unsigned long * rl):
-    cdef unsigned long pow32 = 0
+cdef inline np.uint64_t getNextRLE(np.uint8_t [:] arr, np.uint64_t startingIndex, np.uint64_t maxIndex,
+                                     np.uint64_t * sym, np.uint64_t * rl):
+    cdef np.uint64_t pow32 = 0
     sym[0] = arr[startingIndex] & 0x7
     rl[0] = 0
     while startingIndex < maxIndex and sym[0] == (arr[startingIndex] & 0x7):
@@ -731,7 +731,7 @@ cdef inline unsigned long getNextRLE(np.uint8_t [:] arr, unsigned long startingI
     
     return startingIndex
     
-cdef inline void setNextRLE(FILE * fp, unsigned long sym, unsigned long rl):
+cdef inline void setNextRLE(FILE * fp, np.uint64_t sym, np.uint64_t rl):
     cdef np.uint8_t writeValue
     while rl > 0:
         writeValue = sym + ((rl & 0x1F) << 3)

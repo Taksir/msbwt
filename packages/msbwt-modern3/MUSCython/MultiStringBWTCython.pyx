@@ -221,14 +221,14 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
     #create a seqArray
     cdef list seqArray = []
     
-    cdef unsigned long tempFileId = 0
-    cdef unsigned long seqsPerFile = 10000000
+    cdef np.uint64_t tempFileId = 0
+    cdef np.uint64_t seqsPerFile = 10000000
     cdef long maxSeqLen = -1
-    cdef unsigned long numSeqs = 0
+    cdef np.uint64_t numSeqs = 0
     
     cdef list subSortFNs = []
-    cdef unsigned long fnID
-    cdef unsigned long i
+    cdef np.uint64_t fnID
+    cdef np.uint64_t i
     
     cdef long uniformSeqLen = -1
     cdef np.ndarray tempArray
@@ -439,15 +439,15 @@ def preprocessFastas(fastaFNs, outputDir, areUniform, logger):
     cdef list seqArray = []
     
     #TODO: make the seqPerFile work better for when they aren't uniform
-    cdef unsigned long tempFileId = 0
-    cdef unsigned long seqsPerFile = 10000000
+    cdef np.uint64_t tempFileId = 0
+    cdef np.uint64_t seqsPerFile = 10000000
     cdef long maxSeqLen = -1
-    cdef unsigned long numSeqs = 0
+    cdef np.uint64_t numSeqs = 0
     cdef long uniformSeqLen = -1
     
     cdef list subSortFNs = []
-    cdef unsigned long fnID
-    cdef unsigned long i
+    cdef np.uint64_t fnID
+    cdef np.uint64_t i
     
     cdef np.ndarray tempArray
     
@@ -518,7 +518,7 @@ def preprocessFastas(fastaFNs, outputDir, areUniform, logger):
     
     mergeSubSorts(subSortFNs, numSeqs, areUniform, maxSeqLen, outputDir, logger)
 
-def mergeSubSorts(list subSortFNs, unsigned long numSeqs, bint areUniform, maxSeqLen, outputDir, logger):
+def mergeSubSorts(list subSortFNs, np.uint64_t numSeqs, bint areUniform, maxSeqLen, outputDir, logger):
     '''
     A shared function for use by the preprocess related functions
     @param subSortFNs - the list of partially sorted string filenames
@@ -546,7 +546,7 @@ def mergeSubSorts(list subSortFNs, unsigned long numSeqs, bint areUniform, maxSe
     fp = open(tempFN, 'wb+')
     
     cdef np.ndarray aboutFile = np.lib.format.open_memmap(abtFN, 'w+', '<u1,<u8', (numSeqs,))
-    cdef unsigned long ind = 0
+    cdef np.uint64_t ind = 0
     
     for tup in heapq.merge(*iters):
         (seq, fID, seqID) = tup
