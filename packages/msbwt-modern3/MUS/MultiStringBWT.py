@@ -350,7 +350,11 @@ class MultiStringBWT(BasicBWT):
         if (binID << self.bitPower) == index:
             ret = self.partialFM[binID][sym]
         else:
-            ret = self.partialFM[binID][sym] + np.bincount(self.bwt[binID << self.bitPower:index], minlength=6)[sym]
+            # M3-R64-W5: uint64 + int64 would promote to float64
+            # (exact only below 2^53); keep integer arithmetic exact.
+            ret = int(self.partialFM[binID][sym]) + int(
+                np.bincount(self.bwt[binID << self.bitPower:index],
+                            minlength=6)[sym])
         return int(ret)
         
     def getFullFMAtIndex(self, index):
@@ -370,7 +374,10 @@ class MultiStringBWT(BasicBWT):
         if binID << self.bitPower == index:
             ret = self.partialFM[binID]
         else:
-            ret = self.partialFM[binID] + np.bincount(self.bwt[binID << self.bitPower:index], minlength=6)
+            # M3-R64-W5: avoid float64 promotion (see getOccurrenceOfCharAtIndex).
+            ret = (self.partialFM[binID].astype('<i8') +
+                   np.bincount(self.bwt[binID << self.bitPower:index],
+                               minlength=6))
         return ret
     
     def createKmerProfile(self, k, profileCsvFN):

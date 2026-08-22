@@ -306,7 +306,10 @@ class Assembler(object):
                     node.sourceCounts[sourceID] = node.sourceCounts.get(sourceID, 0)+1
                 
         if trackPairs:
-            abtFN = self.bwtDir+'/abt.npy'
+            # M3-R64-W5 repair: every writer generation creates
+            # 'about.npy'; this reader used a nonexistent 'abt.npy', so
+            # the trackPairs path could never load its input.
+            abtFN = self.bwtDir+'/about.npy'
             abt = np.load(abtFN, 'r')
                     
             #abtDict = {}

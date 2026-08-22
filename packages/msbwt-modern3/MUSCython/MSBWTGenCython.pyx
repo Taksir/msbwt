@@ -915,7 +915,7 @@ def createFromSeqs(seqFNPrefix, offsetFN, mergedFN, numProcs, areUniform, logger
         for key in retFmDeltas.keys():
             if key not in fmDeltas:
                 fmDeltas[key] = [0]*numValidChars
-                np.lib.format.open_memmap(mergedFN+'.'+key+'.'+str(startingColumn-1)+'.npy', 'w+', '<u8,<u1,<u4', (0,))
+                np.lib.format.open_memmap(mergedFN+'.'+key+'.'+str(startingColumn-1)+'.npy', 'w+', '<u8,<u1,<u8', (0,))
             fmDeltas[key] = np.add(fmDeltas[key], retFmDeltas[key])
 
             if key not in insertFNs:
@@ -1033,7 +1033,7 @@ def iterateCreateFromSeqs(startingColumn, fmStarts, fmDeltas, allFirstCounts, al
                     else:
                         cOffset[nextKey] = cOffset[keySort[keyInd]]
                     
-                    #np.lib.format.open_memmap(mergedFN+'.'+nextKey+'.'+str(column)+'.npy', 'w+', '<u8,<u1,<u4', (0,))
+                    #np.lib.format.open_memmap(mergedFN+'.'+nextKey+'.'+str(column)+'.npy', 'w+', '<u8,<u1,<u8', (0,))
                     np.lib.format.open_memmap(mergedFN+'.'+nextKey+'.'+str(column)+'.npy', 'w+', '<u1', (0,))
                 
                 for c2 in range(0, numValidChars):
@@ -1144,7 +1144,7 @@ def bwtInitialInsertionsPoolCall(tup):
             
             #add the file for insertion
             insertFNs[key] = [mergedFN+'.'+str(startingIndex)+'.'+key+'.tempInserts.npy']
-            inserts[key] = np.lib.format.open_memmap(insertFNs[key][0], 'w+', '<u8,<u1,<u4', (j-i,))
+            inserts[key] = np.lib.format.open_memmap(insertFNs[key][0], 'w+', '<u8,<u1,<u8', (j-i,))
             
             #set the inserts
             for k in range(0, j-i):
@@ -1210,7 +1210,7 @@ def bwtInitialInsertionsPoolCall(tup):
             
             #add the file for insertion
             insertFNs[key] = [mergedFN+'.'+str(startingIndex)+'.'+key+'.tempInserts.npy']
-            inserts[key] = np.lib.format.open_memmap(insertFNs[key][0], 'w+', '<u8,<u1,<u4', (j-i,))
+            inserts[key] = np.lib.format.open_memmap(insertFNs[key][0], 'w+', '<u8,<u1,<u8', (j-i,))
             
             #set the inserts
             for k, endOffset in enumerate(offsetData[i+1:j+1]):
@@ -1321,7 +1321,7 @@ def bwtPartialInsertPoolCall(tup):
         
     for c in range(0, vcLen):
         #create this array
-        nextInserts[c] = np.zeros(shape=(insertCounts[c],), dtype='<u8,<u1,<u4')
+        nextInserts[c] = np.zeros(shape=(insertCounts[c],), dtype='<u8,<u1,<u8')
         
         #clear the fmDeltas
         fmDeltas[c] = [0]*vcLen
