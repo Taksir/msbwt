@@ -79,6 +79,29 @@ ALIGNMENT = "suffix-first-base"
 ENCODING = "raw-fastq-quality-byte"
 
 
+def _release_memmap(obj):
+    """M3-R64-W1 (R-Q): flush and close a memmap's underlying handle.
+
+    On Windows, deleting a file fails while any memory mapping over it is
+    open; quality-build temporaries are removed with shutil.rmtree(), so
+    every mapping must be explicitly released beforehand.
+    """
+    if obj is None:
+        return
+    try:
+        flush = getattr(obj, "flush", None)
+        if callable(flush):
+            flush()
+    except Exception:
+        pass
+    mmap_handle = getattr(obj, "_mmap", None)
+    if mmap_handle is not None:
+        try:
+            mmap_handle.close()
+        except Exception:
+            pass
+
+
 class QualitySidecarError(ValueError):
     """Raised for invalid, incomplete, or inconsistent quality sidecars."""
 
@@ -443,10 +466,7 @@ def _fill_quality_rows(
         return temp_root, temp_path
 
     except Exception:
-        try:
-            del out
-        except Exception:
-            pass
+        _release_memmap(out)
         shutil.rmtree(temp_root, ignore_errors=True)
         raise
 
@@ -496,6 +516,7 @@ def initialize_leaf_quality_from_records(
         verify_sequences=verify_sequences,
     )
 
+    values = None
     try:
         values = np.load(
             str(temp_path),
@@ -513,6 +534,9 @@ def initialize_leaf_quality_from_records(
             overwrite=overwrite,
         )
     finally:
+        # R-Q: release the mapping BEFORE deleting the temporary directory;
+        # an open mapping blocks file removal on Windows.
+        _release_memmap(values)
         shutil.rmtree(temp_root, ignore_errors=True)
 
     metadata = _base_metadata(
@@ -704,6 +728,11 @@ class _FastqArchive(object):
         )
 
     def close(self):
+        # R-Q: release every open view mapping before removing the archive
+        # directory (open mappings block deletion on Windows).
+        for opened in self._opened.values():
+            for view in opened[1:]:
+                _release_memmap(view)
         self._opened.clear()
         shutil.rmtree(self.root, ignore_errors=True)
 
@@ -809,6 +838,7 @@ def initialize_leaf_quality_from_fastqs(
             temp_parent=temp_parent,
             verify_sequences=verify_sequences,
         )
+        values = None
         try:
             values = np.load(
                 str(temp_path),
@@ -826,6 +856,9 @@ def initialize_leaf_quality_from_fastqs(
                 overwrite=overwrite,
             )
         finally:
+            # R-Q: release the mapping BEFORE deleting the temporary
+            # directory; an open mapping blocks file removal on Windows.
+            _release_memmap(values)
             shutil.rmtree(temp_root, ignore_errors=True)
 
         metadata = _base_metadata(
