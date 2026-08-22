@@ -1020,6 +1020,21 @@ cdef class BasicBWT(object):
         return ret
         
     cpdef tuple countSeqMatches(BasicBWT self, object seq, Py_ssize_t kmerSize):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1050,6 +1065,21 @@ cdef class BasicBWT(object):
         return (ret, otherChoices)
         
     cpdef tuple countStrandedSeqMatches(BasicBWT self, object seq, Py_ssize_t kmerSize):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1275,6 +1305,21 @@ cdef class BasicBWT(object):
         return ret
     
     cpdef np.ndarray countStrandedSeqMatchesNoOther(BasicBWT self, object seq, Py_ssize_t kmerSize):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1372,6 +1417,21 @@ cdef class BasicBWT(object):
         return ret
     
     cpdef np.ndarray findKmerThreshold(BasicBWT self, object seq, np.uint64_t threshold):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
@@ -1401,6 +1461,21 @@ cdef class BasicBWT(object):
         return ret
         
     cpdef np.ndarray findKmerThresholdStranded(BasicBWT self, object seq, np.uint64_t threshold):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         ??? need desc
         @param seq - the seq to scan
@@ -1473,6 +1548,21 @@ cdef class BasicBWT(object):
         return rightRet
                 
     cpdef np.ndarray findKTOtherStranded(BasicBWT self, object seq, np.uint64_t threshold):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         This function takes an input sequence "seq" and counts the number of occurrences of all k-mers of size
         "kmerSize" in that sequence and return it in an array.
