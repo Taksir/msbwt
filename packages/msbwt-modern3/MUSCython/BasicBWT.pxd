@@ -43,7 +43,9 @@ cdef class BasicBWT(object):
     cdef np.uint64_t iterCount
     cdef unsigned long iterPower
     cdef np.uint8_t iterCurrChar
-    cdef np.uint8_t iterCurrCount
+    # M3-R64-W3: decoded-run remainder lives in the run-length domain
+    # (<= N); the former np.uint8_t wrapped mod 256.
+    cdef np.uint64_t iterCurrCount
     cdef np.uint64_t fileSize
     
     cdef bint lcpsPresent

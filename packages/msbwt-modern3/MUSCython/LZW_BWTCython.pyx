@@ -26,7 +26,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
     for general purposes use the function loadBWT(...) which automatically detects whether this class is correct
     IMPORTANT: THIS CLASS IS NOT THREAD-SAFE DUE TO PRE-ALLOCATED SEARCH ARRAYS
     '''
-    cdef unsigned long uncompLen
+    cdef np.uint64_t uncompLen
     cdef np.ndarray offsetArray
     cdef np.uint64_t [:] offsetArray_view
     
@@ -104,7 +104,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
             raise Exception('Cannot handle starting with more than 8 bits per symbol')
         
         #calculate the total number of symbols
-        cdef unsigned long x
+        cdef np.uint64_t x
         self.uncompLen = 0
         for x in range(1, 9):
             self.uncompLen = self.uncompLen << 8
@@ -174,8 +174,8 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         
         cdef np.ndarray[np.uint64_t, ndim=1] counts
         cdef np.uint64_t [:] counts_view
-        cdef unsigned long i, j
-        cdef unsigned long numSamples
+        cdef np.uint64_t i, j
+        cdef np.uint64_t numSamples
         
         cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] tmpBin
         cdef np.uint8_t [:] tmpBin_view
@@ -269,8 +269,8 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         
         self.totalSize = np.sum(self.totalCounts)
     
-    cpdef np.ndarray[np.uint8_t, ndim=1, mode='c'] decompressBin(LZW_BWT self, unsigned long binID):
-        cdef unsigned long knownLength = min(self.binSize*(binID+1), self.uncompLen)-self.binSize*binID
+    cpdef np.ndarray[np.uint8_t, ndim=1, mode='c'] decompressBin(LZW_BWT self, np.uint64_t binID):
+        cdef np.uint64_t knownLength = min(self.binSize*(binID+1), self.uncompLen)-self.binSize*binID
         cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] ret = np.empty(dtype='<u1', shape=(knownLength, ))
         cdef np.uint8_t [:] ret_view = ret
         self.fillBin(ret_view, binID)
@@ -280,7 +280,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         #extract inputs
         cdef np.uint8_t [:] compressed_view = self.bwt_view[self.offsetArray_view[binID]:self.offsetArray_view[binID+1]]
         
-        cdef unsigned long knownLength = min(self.binSize*(binID+1), self.uncompLen)-self.binSize*binID
+        cdef np.uint64_t knownLength = min(self.binSize*(binID+1), self.uncompLen)-self.binSize*binID
         #cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] ret = np.empty(dtype='<u1', shape=(knownLength, ))
         #cdef np.uint8_t [:] ret_view = ret
         
@@ -301,7 +301,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         cdef unsigned long mask = self.startingMask
         
         cdef unsigned long currByte = compressed_view[0]
-        cdef unsigned long compressedIndex = 1
+        cdef np.uint64_t compressedIndex = 1
         cdef unsigned long currByteUse = 8-bitsPerSymbol
         
         #set up the first value
@@ -311,7 +311,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         currByte = currByte >> bitsPerSymbol
         
         #mark how many values we found, init to 1 obviously
-        cdef unsigned long foundVals = 1
+        cdef np.uint64_t foundVals = 1
         cdef unsigned long prevK = binToFill[0]
         
         #we will set values in the next slot as if it were a special case
@@ -372,8 +372,8 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         @param return - return the character in our BWT that's at a particular index (integer format)
         '''
         #get the bin we should start from
-        cdef unsigned long binID = index >> self.bitPower
-        cdef unsigned long binPos = index - (binID << self.bitPower)
+        cdef np.uint64_t binID = index >> self.bitPower
+        cdef np.uint64_t binPos = index - (binID << self.bitPower)
         
         #make a view for the region we care about
         cdef np.uint8_t [:] compressed_view = self.bwt_view[self.offsetArray_view[binID]:self.offsetArray_view[binID+1]]
@@ -396,10 +396,10 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         cdef unsigned long mask = self.startingMask
         
         cdef unsigned long currByte = compressed_view[0]
-        cdef unsigned long compressedIndex = 1
+        cdef np.uint64_t compressedIndex = 1
         cdef unsigned long currByteUse = 8-bitsPerSymbol
         
-        cdef unsigned long currIndex = 0
+        cdef np.uint64_t currIndex = 0
         cdef unsigned long prevK = currByte & mask
         
         currByte = currByte >> bitsPerSymbol
@@ -456,7 +456,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
             #currIndex -= 1
         
         #return the numpy array
-        return <unsigned long> self.symbolList_view[z]
+        return <np.uint8_t> self.symbolList_view[z]
         
     cpdef np.uint64_t getOccurrenceOfCharAtIndex(LZW_BWT self, np.uint8_t sym, np.uint64_t index):# nogil:
         '''
@@ -468,9 +468,9 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         if index >= self.totalSize:
             return self.endIndex_view[sym]
         
-        cdef unsigned long binID = index >> self.bitPower
-        cdef unsigned long binPos = index - (binID << self.bitPower)
-        cdef unsigned long ret = self.partialFM_view[binID][sym]
+        cdef np.uint64_t binID = index >> self.bitPower
+        cdef np.uint64_t binPos = index - (binID << self.bitPower)
+        cdef np.uint64_t ret = self.partialFM_view[binID][sym]
         
         # Build the dictionary.
         cdef unsigned long dict_size = self.vcLen
@@ -494,10 +494,10 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         #cdef unsigned long currByte = compressed_view[0]
         cdef unsigned long currByte = self.bwt_view[self.offsetArray_view[binID]]
         #cdef unsigned long compressedIndex = 1
-        cdef unsigned long compressedIndex = self.offsetArray_view[binID]+1
+        cdef np.uint64_t compressedIndex = self.offsetArray_view[binID]+1
         cdef unsigned long currByteUse = 8-bitsPerSymbol
         
-        cdef unsigned long currIndex = 0
+        cdef np.uint64_t currIndex = 0
         cdef unsigned long prevK = currByte & mask
         
         currByte = currByte >> bitsPerSymbol
@@ -554,7 +554,7 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         self.symbolCount_view[sym] = 0
         return ret
     
-    def getFullFMAtIndex(LZW_BWT self, unsigned long index):# nogil:
+    def getFullFMAtIndex(LZW_BWT self, np.uint64_t index):# nogil:
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.empty(dtype='<u8', shape=(self.vcLen, ))
         cdef np.uint64_t [:] ret_view = ret
         self.fillFmAtIndex(ret_view, index)
@@ -572,8 +572,8 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
                 ret_view[x] = self.endIndex_view[x]
             return
         
-        cdef unsigned long binID = index >> self.bitPower
-        cdef unsigned long binPos = index - (binID << self.bitPower)
+        cdef np.uint64_t binID = index >> self.bitPower
+        cdef np.uint64_t binPos = index - (binID << self.bitPower)
         
         for x in range(0, self.vcLen):
             ret_view[x] = self.partialFM_view[binID][x]
@@ -593,10 +593,10 @@ cdef class LZW_BWT(BasicBWT.BasicBWT):
         cdef unsigned long mask = self.startingMask
         
         cdef unsigned long currByte = self.bwt_view[self.offsetArray_view[binID]]
-        cdef unsigned long compressedIndex = self.offsetArray_view[binID]+1
+        cdef np.uint64_t compressedIndex = self.offsetArray_view[binID]+1
         cdef unsigned long currByteUse = 8-bitsPerSymbol
         
-        cdef unsigned long currIndex = 0
+        cdef np.uint64_t currIndex = 0
         cdef unsigned long prevK = currByte & mask
         
         currByte = currByte >> bitsPerSymbol

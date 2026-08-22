@@ -23,6 +23,21 @@ from . import MSBWTGenCython as MSBWTGen
 from . import AlignmentUtil
 from cython.operator cimport preincrement as inc
 
+# M3-R64-W3 test-support probe: performs the exact little-endian byte
+# sequence used by removeStrings() recovery-record serialization so the
+# 8-byte record path can be verified with >2^32 values without a huge
+# BWT (see NUMERIC_WIDTH_POLICY.md).
+cpdef bytes recovery_record_u64_le(np.uint64_t value):
+    cdef np.uint64_t v = value
+    cdef np.uint8_t indexByte
+    out = bytearray()
+    cdef int x
+    for x in range(0, 8):
+        indexByte = v & 0xFF
+        out.append(indexByte)
+        v = v >> 8
+    return bytes(out)
+
 cdef enum:
     letterBits = 3 #defined
     numberBits = 5 #8-letterBits
@@ -48,7 +63,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
     
     cdef np.ndarray refFM
     cdef np.uint64_t [:] refFM_view
-    cdef unsigned long offsetSum
+    cdef np.uint64_t offsetSum
     
     cdef bint useMemmapRLE
     
@@ -96,12 +111,12 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         This function constructs the total count for each valid character in the array and stores it under '<DIR>/totalCounts.p'
         since these values are independent of compression
         '''
-        cdef unsigned long i
-        cdef unsigned long numBytes
+        cdef np.uint64_t i
+        cdef np.uint64_t numBytes
         cdef np.uint8_t currentChar
         cdef np.uint8_t prevChar
-        cdef unsigned long currentCount
-        cdef unsigned long powerMultiple
+        cdef np.uint64_t currentCount
+        cdef np.uint64_t powerMultiple
         
         #self.letterBits = 3
         #self.numberBits = 8-self.letterBits
@@ -164,15 +179,15 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         a particular FM-index count.  The two files necessary are '<DIR>/comp_fmIndex.npy' and '<DIR>/comp_refIndex.npy'
         '''
         #sampling method
-        cdef unsigned long i, j
-        cdef unsigned long binID
-        cdef unsigned long totalCharCount
-        cdef unsigned long bwtIndex
+        cdef np.uint64_t i, j
+        cdef np.uint64_t binID
+        cdef np.uint64_t totalCharCount
+        cdef np.uint64_t bwtIndex
         cdef np.uint8_t currentChar
         cdef np.uint8_t prevChar
-        cdef unsigned long prevStart
-        cdef unsigned long powerMultiple
-        cdef unsigned long binEnd
+        cdef np.uint64_t prevStart
+        cdef np.uint64_t powerMultiple
+        cdef np.uint64_t binEnd
         
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] countsSoFar
         cdef np.uint64_t [:] countsSoFar_view
@@ -259,20 +274,20 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @param return - return the character in our BWT that's at a particular index (integer format)
         '''
         #get the bin we should start from
-        cdef unsigned long binID = index >> bitPower
-        cdef unsigned long bwtIndex = self.refFM_view[binID]
+        cdef np.uint64_t binID = index >> bitPower
+        cdef np.uint64_t bwtIndex = self.refFM_view[binID]
         
         #these are the values that indicate how far in we really are
-        cdef unsigned long trueIndex = 0
+        cdef np.uint64_t trueIndex = 0
         cdef unsigned long i
         for i in range(0, vcLen):
             trueIndex += self.partialFM_view[binID,i]
         trueIndex -= self.offsetSum
         
-        cdef unsigned long prevChar = self.bwt_view[bwtIndex] & mask
-        cdef unsigned long currentChar
-        cdef unsigned long prevCount = self.bwt_view[bwtIndex] >> letterBits
-        cdef unsigned long powerMultiple = 1
+        cdef np.uint64_t prevChar = self.bwt_view[bwtIndex] & mask
+        cdef np.uint64_t currentChar
+        cdef np.uint64_t prevCount = self.bwt_view[bwtIndex] >> letterBits
+        cdef np.uint64_t powerMultiple = 1
         
         while trueIndex + prevCount <= index:
             trueIndex += prevCount
@@ -297,24 +312,24 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @param binToFill - the place we can copy the BWT into
         @param binID - the bin we're copying
         '''
-        cdef unsigned long x
-        cdef unsigned long startIndex = binID*binSize
-        cdef unsigned long endIndex = min((binID+1)*binSize, self.totalSize)
+        cdef np.uint64_t x
+        cdef np.uint64_t startIndex = binID*binSize
+        cdef np.uint64_t endIndex = min((binID+1)*binSize, self.totalSize)
         
         #get the bin we should start from
-        cdef unsigned long bwtIndex = self.refFM_view[binID]
+        cdef np.uint64_t bwtIndex = self.refFM_view[binID]
         
         #these are the values that indicate how far in we really are
-        cdef unsigned long trueIndex = 0
+        cdef np.uint64_t trueIndex = 0
         cdef unsigned long i
         for i in range(0, vcLen):
             trueIndex += self.partialFM_view[binID,i]
         trueIndex -= self.offsetSum
         
-        cdef unsigned long prevChar = self.bwt_view[bwtIndex] & mask
-        cdef unsigned long currentChar
-        cdef unsigned long prevCount = self.bwt_view[bwtIndex] >> letterBits
-        cdef unsigned powerMultiple = 1
+        cdef np.uint64_t prevChar = self.bwt_view[bwtIndex] & mask
+        cdef np.uint64_t currentChar
+        cdef np.uint64_t prevCount = self.bwt_view[bwtIndex] >> letterBits
+        cdef np.uint64_t powerMultiple = 1
         
         #first, we may need to skip ahead some
         while trueIndex + prevCount < startIndex:
@@ -358,7 +373,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         for x in range(realStart, endIndex-startIndex):
             binToFill[x] = prevChar
         
-    def getBWTRange(RLE_BWT self, unsigned long start, unsigned long end):
+    def getBWTRange(RLE_BWT self, np.uint64_t start, np.uint64_t end):
         '''
         TODO: cythonize
         This function masks the complexity of retrieving a chunk of the BWT from the compressed format
@@ -374,7 +389,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         #first we will extract the range of blocks
         return self.decompressBlocks(startBlockIndex, endBlockIndex)[start-trueStart:end-trueStart]
     
-    def decompressBlocks(RLE_BWT self, unsigned long startBlock, unsigned long endBlock):
+    def decompressBlocks(RLE_BWT self, np.uint64_t startBlock, np.uint64_t endBlock):
         '''
         TODO: cythonize
         This is mostly a helper function to get BWT range, but I wanted it to be a separate thing for use possibly in 
@@ -418,8 +433,8 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
             same = np.bitwise_and(same[0:same.shape[0]-1], same[1:])
         
         #now I have letters and counts, time to fill in the array
-        cdef unsigned long s = 0
-        cdef unsigned long lInd = 0
+        cdef np.uint64_t s = 0
+        cdef np.uint64_t lInd = 0
         while dist > 0:
             if counts[lInd] < dist:
                 dist -= counts[lInd]
@@ -445,21 +460,20 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @param index - the index we want to find the occurrence level at
         @return - the number of occurrences of char before the specified index
         '''
-        cdef unsigned long binID = index >> bitPower
-        cdef unsigned long compressedIndex = self.refFM_view[binID]
-        cdef unsigned long bwtIndex = 0
+        cdef np.uint64_t binID = index >> bitPower
+        cdef np.uint64_t compressedIndex = self.refFM_view[binID]
+        cdef np.uint64_t bwtIndex = 0
         cdef unsigned long j
         for j in range(0, vcLen):
             bwtIndex += self.partialFM_view[binID,j]
         bwtIndex -= self.offsetSum
             
-        cdef unsigned long ret = self.partialFM_view[binID,sym]
+        cdef np.uint64_t ret = self.partialFM_view[binID,sym]
         
         cdef np.uint8_t prevChar = 255
         cdef np.uint8_t currentChar
-        cdef unsigned long prevCount = 0
-        cdef unsigned long powerMultiple = 1
-        #cdef unsigned long powerMultiple = 0
+        cdef np.uint64_t prevCount = 0
+        cdef np.uint64_t powerMultiple = 1
         
         while bwtIndex + prevCount < index:
             currentChar = self.bwt_view[compressedIndex] & mask
@@ -492,21 +506,20 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @param index - the index we want to find the occurrence level at
         @return - the number of occurrences of char before the specified index
         '''
-        cdef unsigned long binID = index >> bitPower
-        cdef unsigned long compressedIndex = self.refFM_view[binID]
-        cdef unsigned long bwtIndex = 0
+        cdef np.uint64_t binID = index >> bitPower
+        cdef np.uint64_t compressedIndex = self.refFM_view[binID]
+        cdef np.uint64_t bwtIndex = 0
         cdef unsigned long j
         for j in range(0, vcLen):
             bwtIndex += self.partialFM_view[binID,j]
         bwtIndex -= self.offsetSum
             
-        cdef unsigned long ret = self.partialFM_view[binID,sym]
+        cdef np.uint64_t ret = self.partialFM_view[binID,sym]
         
         cdef np.uint8_t prevChar = 255
         cdef np.uint8_t currentChar
-        cdef unsigned long prevCount = 0
-        cdef unsigned long powerMultiple = 1
-        #cdef unsigned long powerMultiple = 0
+        cdef np.uint64_t prevCount = 0
+        cdef np.uint64_t powerMultiple = 1
         
         while bwtIndex + prevCount < index:
             currentChar = self.bwt_view[compressedIndex] & mask
@@ -539,9 +552,9 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @param index - the index we want to find the occurrence level at
         @return - the number of occurrences of char before the specified index
         '''
-        cdef unsigned long binID = inRange.l >> self.bitPower
-        cdef unsigned long compressedIndex = self.refFM_view[binID]
-        cdef unsigned long bwtIndex = 0
+        cdef np.uint64_t binID = inRange.l >> self.bitPower
+        cdef np.uint64_t compressedIndex = self.refFM_view[binID]
+        cdef np.uint64_t bwtIndex = 0
         cdef unsigned long j
         for j in range(0, vcLen):
             bwtIndex += self.partialFM_view[binID,j]
@@ -552,8 +565,8 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         
         cdef np.uint8_t prevChar = 255
         cdef np.uint8_t currentChar
-        cdef unsigned long prevCount = 0
-        cdef unsigned long powerMultiple = 1
+        cdef np.uint64_t prevCount = 0
+        cdef np.uint64_t powerMultiple = 1
         
         while bwtIndex + prevCount < inRange.l:
             currentChar = self.bwt_view[compressedIndex] & mask
@@ -571,11 +584,11 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
                 
             compressedIndex += 1
         
-        cdef unsigned long tempC = ret.l
+        cdef np.uint64_t tempC = ret.l
         if prevChar == sym:
             ret.l += inRange.l-bwtIndex
         
-        cdef unsigned long binID_h = inRange.h >> bitPower
+        cdef np.uint64_t binID_h = inRange.h >> bitPower
         if binID == binID_h:
             #we can continue, just set this value
             ret.h = tempC
@@ -632,9 +645,9 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
                  1 2 4 4 4
         @return - the above information in the form of an array that already incorporates the offset value into the counts
         '''
-        cdef unsigned long binID = index >> bitPower
-        cdef unsigned long compressedIndex = self.refFM_view[binID]
-        cdef unsigned long bwtIndex = 0
+        cdef np.uint64_t binID = index >> bitPower
+        cdef np.uint64_t compressedIndex = self.refFM_view[binID]
+        cdef np.uint64_t bwtIndex = 0
         cdef unsigned long j
         
         for j in range(0, vcLen):
@@ -644,8 +657,8 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         
         cdef np.uint8_t prevChar = self.bwt_view[compressedIndex] & mask
         cdef np.uint8_t currentChar
-        cdef unsigned long prevCount = self.bwt_view[compressedIndex] >> letterBits
-        cdef unsigned long powerMultiple = numPower
+        cdef np.uint64_t prevCount = self.bwt_view[compressedIndex] >> letterBits
+        cdef np.uint64_t powerMultiple = numPower
         compressedIndex += 1
         
         while bwtIndex + prevCount < index:
@@ -694,7 +707,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
                 self.iterCurrChar = sym
                 
             #pull out the number of counts here and reset our counting
-            self.iterCurrCount += (self.bwt_view[self.iterIndex] >> letterBits) * (numPower**self.iterPower)
+            self.iterCurrCount += (<np.uint64_t>(self.bwt_view[self.iterIndex] >> letterBits)) * (<np.uint64_t>1 << (5 * self.iterPower))
             inc(self.iterCount) 
             ret = self.iterCurrChar
             inc(self.iterIndex)
@@ -722,7 +735,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         
         #first, go through each id in the set and pull out the indices of all associated bases to add to a master deletion list
         #make sure that each index is a readID as well prior to adding it
-        cdef unsigned long readID
+        cdef np.uint64_t readID
         
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] tempIndexArray = np.zeros(dtype='<u8', shape=(1, ))
         cdef np.uint64_t [:] tempIndexArray_view = tempIndexArray
@@ -733,13 +746,15 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         # encode(): Cython 3str str values must become bytes for fopen().
         cdef FILE * fp = fopen(deletionFN.encode('UTF-8'), 'w+b')
         
-        cdef unsigned long x, copyIndex
+        cdef unsigned long x
+        cdef np.uint64_t copyIndex
         cdef np.uint8_t indexByte
         
         if logger != None:
             logger.info('Identifying indices for deletion...')
         
-        cdef unsigned long prevSym, currIndex
+        cdef unsigned long prevSym
+        cdef np.uint64_t currIndex
         
         for readID in delSet:
             #verify this is a valid read ID
@@ -766,7 +781,16 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
                 currIndex = self.getOccurrenceOfCharAtIndex(prevSym, currIndex)
             
             #write the read ID, which was the first index we found
-            fwrite(&readID, 8, 1, fp)
+            # M3-R64-W3 memory-safety repair: readID is np.uint64_t; the
+            # former fwrite(&readID, 8, 1, fp) read 8 bytes from a 4-byte
+            # Win64 scalar, serializing adjacent stack bytes.  Serialize
+            # all 8 bytes explicitly, matching the record contract
+            # (deletion_indices.dat = little-endian <u8 records).
+            copyIndex = readID
+            for x in range(0, 8):
+                indexByte = copyIndex & 0xFF
+                fwrite(&indexByte, 1, 1, fp)
+                copyIndex = copyIndex >> 8
             
         fclose(fp)
         
@@ -780,34 +804,34 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         #deletionIndices.sort()
         #cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] delIndices = np.array(deletionIndices, dtype='<u8')
         cdef np.uint64_t [:] delIndices_view = delIndices
-        cdef unsigned long currDel = 0
-        cdef unsigned long totalDels = delIndices.shape[0]
+        cdef np.uint64_t currDel = 0
+        cdef np.uint64_t totalDels = delIndices.shape[0]
         
         #go through each entry in the BWT
-        cdef unsigned long numBytes = self.bwt.shape[0]
+        cdef np.uint64_t numBytes = self.bwt.shape[0]
         
         #currentChar is the symbol we just read, prevChar is in the byte right before it
         cdef np.uint8_t currentChar
         cdef np.uint8_t prevChar = 255
         
         #the position we are currently writing
-        cdef unsigned long writeByte = 0
+        cdef np.uint64_t writeByte = 0
         
         #the last run symbol and the last run count
         cdef np.uint8_t lastRunSym = 255
-        cdef unsigned long lastRunCount = 0
+        cdef np.uint64_t lastRunCount = 0
         
         #these values are related to the current run we're looking at
-        cdef unsigned long currentCount = 0
-        cdef unsigned long powerMultiple = 1
-        cdef unsigned long totalCounted = 0
+        cdef np.uint64_t currentCount = 0
+        cdef np.uint64_t powerMultiple = 1
+        cdef np.uint64_t totalCounted = 0
         cdef np.uint8_t NUM_MASK = (0xFF >> letterBits)#0x1F
         
         if logger != None:
             logger.info('Deleting indices...')
         
         #i = the read byte index for this part of the code
-        cdef unsigned long i, j
+        cdef np.uint64_t i, j
         
         #go through each byte in the BWT
         for i in range(0, numBytes):
@@ -886,8 +910,8 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
             self.bwt_view[j] = 0x00
         
         #TODO: is there a way to clip the actual file so we don't have to clear?
-        cdef unsigned long writeLcp
-        cdef unsigned long readLcp
+        cdef np.uint64_t writeLcp
+        cdef np.uint64_t readLcp
         if self.lcpsPresent:
             #initialize
             writeLcp = 0
@@ -923,6 +947,14 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
                 self.lcps_view[x] = 0x00
             
         #clear Auxiliary data
+        # M3-R64-W3: release our own auxiliary mappings first; an open
+        # mapping blocks file removal on Windows (comp_refIndex/comp_fmIndex).
+        self.partialFM = None
+        self.partialFM_view = None
+        self.refFM = None
+        self.refFM_view = None
+        self.totalCounts = None
+        self.totalCounts_view = None
         MSBWTGen.clearAuxiliaryData(self.dirName)
         # (Windows portability) close the deletion-index mapping first;
         # os.remove() fails on Windows while a memory mapping is open.
@@ -942,6 +974,9 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
             pass
         
     cpdef set findReadsMatchingSeq(RLE_BWT self, object seq, np.uint64_t strLen):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         REQUIRES LCP 
         This function takes a sequence and finds all strings of length "stringLen" which exactly match the sequence
@@ -950,17 +985,17 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @return - a set of dollar IDs corresponding to strings that exactly match the seq somewhere
         '''
         #currLen = the length of the l-h k-mer at all time
-        cdef unsigned long currLen = 0
+        cdef np.uint64_t currLen = 0
         cdef set readSet = set([])
         
-        cdef unsigned long l = 0
-        cdef unsigned long h = self.totalSize
-        cdef unsigned long s = len(seq)
+        cdef np.uint64_t l = 0
+        cdef np.uint64_t h = self.totalSize
+        cdef Py_ssize_t s = len(seq)
         cdef long x, y
         cdef unsigned long c
         
-        cdef unsigned long newL
-        cdef unsigned long newH
+        cdef np.uint64_t newL
+        cdef np.uint64_t newH
         
         #create a view of the sequence that can be used in a nogil region
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
@@ -1017,7 +1052,10 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         #return the readSet
         return readSet
     
-    cpdef set findReadsMatchingSeqWithError(RLE_BWT self, object seq, unsigned long strLen):
+    cpdef set findReadsMatchingSeqWithError(RLE_BWT self, object seq, np.uint64_t strLen):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         REQUIRES LCP 
         This function takes a sequence and finds all strings of length "stringLen" which match the sequence
@@ -1028,14 +1066,14 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @return - a set of dollar IDs corresponding to strings that match with <= 1 base changes the seq somewhere
         '''
         #currLen = the length of the l-h k-mer at all time
-        cdef unsigned long currLen = 0
+        cdef np.uint64_t currLen = 0
         cdef set readSet = set([])
         
-        cdef unsigned long l = 0
-        cdef unsigned long h = self.totalSize
-        cdef unsigned long lc, hc
+        cdef np.uint64_t l = 0
+        cdef np.uint64_t h = self.totalSize
+        cdef np.uint64_t lc, hc
         
-        cdef unsigned long s = len(seq)
+        cdef Py_ssize_t s = len(seq)
         cdef long x, y, z
         cdef unsigned long c, c2
         
@@ -1044,11 +1082,11 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         #altPos is only -1 initially, but since it CAN be negative, the altCurrLen must also be a long
         #I don't foresee any issues with this, but be aware future Matt; alternative is to do a shift of everything
         #which would be both programatically and mentally annoying
-        cdef unsigned long altPos
-        cdef unsigned long altCurrLen
+        cdef np.uint64_t altPos
+        cdef np.uint64_t altCurrLen
         
-        cdef unsigned long newL
-        cdef unsigned long newH
+        cdef np.uint64_t newL
+        cdef np.uint64_t newH
         
         #create a view of the sequence that can be used in a nogil region
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
@@ -1059,7 +1097,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         cdef np.uint64_t [:] lowArray_view = lowArray
         cdef np.uint64_t [:] highArray_view = highArray
         
-        cdef unsigned long halfLen = strLen//2
+        cdef np.uint64_t halfLen = strLen//2
         
         for x in range(s-1, -1, -1):
             #get the character from the sequence, then search at both high and low
@@ -1192,7 +1230,10 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         #return the readSet
         return readSet
     
-    cpdef set findReadsMatchingSeqWithError2(RLE_BWT self, object seq, unsigned long strLen):
+    cpdef set findReadsMatchingSeqWithError2(RLE_BWT self, object seq, np.uint64_t strLen):
+        # M3-R64-W3: guard the uninitialized-lcps_view hazard.
+        if not self.lcpsPresent:
+            raise ValueError('LCP-assisted query requires lcps.npy (F11A layer); not present in ' + self.dirName)
         '''
         REQUIRES LCP 
         This function takes a sequence and finds all strings of length "stringLen" which match the sequence while
@@ -1202,35 +1243,35 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         @return - a set of dollar IDs corresponding to strings that match with <= 1 base changes the seq somewhere
         '''
         #currLen = the length of the l-h k-mer at all time
-        cdef unsigned long currLen = 0
+        cdef np.uint64_t currLen = 0
         cdef set readSet = set([])
         
-        cdef unsigned long l = 0
-        cdef unsigned long h = self.totalSize
-        cdef unsigned long s = len(seq)
+        cdef np.uint64_t l = 0
+        cdef np.uint64_t h = self.totalSize
+        cdef Py_ssize_t s = len(seq)
         cdef long x, y, z, i
         cdef unsigned long c
         
-        cdef unsigned long newL
-        cdef unsigned long newH
+        cdef np.uint64_t newL
+        cdef np.uint64_t newH
         
         #create a view of the sequence that can be used in a nogil region
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
         cdef unsigned char * seq_view = _seq_b
         #this will round down, which is fine
-        cdef unsigned long halfLen = strLen//2
-        cdef unsigned long hL = 0
-        cdef unsigned long hH = self.totalSize
-        cdef unsigned long hCurrLen = 0
+        cdef np.uint64_t halfLen = strLen//2
+        cdef np.uint64_t hL = 0
+        cdef np.uint64_t hH = self.totalSize
+        cdef np.uint64_t hCurrLen = 0
         
         cdef bint isExactEntries = False
-        cdef unsigned long exactMatchLow, exactMatchHigh
+        cdef np.uint64_t exactMatchLow, exactMatchHigh
         
         #local align vars
         cdef str recoveredString
         cdef unsigned long alignScore
         cdef unsigned long c2, nextC
-        cdef unsigned long dollarIndex
+        cdef Py_ssize_t dollarIndex
         cdef unsigned long symBefore, symAfter
         
         #arrays for the fm-indices
@@ -1239,13 +1280,13 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         cdef np.uint64_t [:] lowArray_view = lowArray
         cdef np.uint64_t [:] highArray_view = highArray
         
-        cdef unsigned long altL, altH
-        cdef unsigned long altCurrLen, altChangeOffset
+        cdef np.uint64_t altL, altH
+        cdef np.uint64_t altCurrLen, altChangeOffset
         cdef unsigned long c3
         
-        cdef unsigned long ind
-        cdef unsigned long prevLZero, prevHZero
-        cdef unsigned long currLZero, currHZero
+        cdef np.uint64_t ind
+        cdef np.uint64_t prevLZero, prevHZero
+        cdef np.uint64_t currLZero, currHZero
         
         #with nogil:
         for x in range(s-1, -1, -1):
