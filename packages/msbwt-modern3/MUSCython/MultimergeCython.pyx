@@ -18,6 +18,20 @@ from threading import RLock
 import time
 
 from cython.operator cimport preincrement as inc
+from libc.stdint cimport uintptr_t
+
+# M3-R64-W4 test-support probes: exercise the exact production scalar
+# types/arithmetic at merge boundaries without large allocations
+# (NUMERIC_WIDTH_POLICY.md).
+cpdef np.uint64_t merged_length_probe(np.uint64_t len_a, np.uint64_t len_b):
+    """Merged-length sum exactly as used for ranges[0][2] and memmap shapes."""
+    cdef np.uint64_t total = len_a + len_b
+    return total
+
+cpdef np.uint64_t record_offset_probe(np.uint64_t index, np.uint64_t seq_len):
+    """Offset product exactly as used for retOffsets[y] = x*seqLen."""
+    cdef np.uint64_t v = index * seq_len
+    return v
 
 # (Windows portability) np.save() writes py2-long shape elements into .npy
 # headers on Windows; normalize to ints so headers are byte-identical to
@@ -27,7 +41,7 @@ def _int_shape(shape):
 
 from . import MSBWTGenCython as MSBWTGen
 
-def createMSBWTFromSeqs(list seqArray, str mergedDir, unsigned long numProcs, bint areUniform, logger):
+def createMSBWTFromSeqs(list seqArray, str mergedDir, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function takes a list of input strings and builds the multi-string BWT for it using the merging
     method. Given R reads containing N bases (counting '$' as a base) this algorithm takes O(N*LCP*lg(R))
@@ -46,7 +60,7 @@ def createMSBWTFromSeqs(list seqArray, str mergedDir, unsigned long numProcs, bi
     #finally do the actual interleaving, hand it the output file
     interleaveLevelMerge(mergedDir, numProcs, areUniform, logger)
     
-def preprocessSeqs(list seqArray, str mergedDir, unsigned long numProcs, bint areUniform, logger):
+def preprocessSeqs(list seqArray, str mergedDir, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function preprocesses raw strings for BWT merge construction.
     @param seqArray - the list of strings to be merged
@@ -66,7 +80,7 @@ def preprocessSeqs(list seqArray, str mergedDir, unsigned long numProcs, bint ar
     #convert the sequences into BWTs in uint8 format and then save it
     formatSeqsForMerge(seqArray, seqFN, offsetFN, numProcs, areUniform, logger)
     
-def createMSBWTFromFasta(list fastaFNs, str outputDir, unsigned long numProcs, bint areUniform, logger):
+def createMSBWTFromFasta(list fastaFNs, str outputDir, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function takes a list of input fasta filenames and builds the multi-string BWT for it using the merging
     method. Given R reads containing N bases (counting '$' as a base) this algorithm takes O(N*LCP*lg(R))
@@ -85,7 +99,7 @@ def createMSBWTFromFasta(list fastaFNs, str outputDir, unsigned long numProcs, b
     #finally do the actual interleaving, hand it the output file
     interleaveLevelMerge(outputDir, numProcs, areUniform, logger)
     
-def preprocessFasta(list fastaFNs, str outputDir, unsigned long numProcs, bint areUniform, logger):
+def preprocessFasta(list fastaFNs, str outputDir, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function pre-processes fasta files for BWT merging
     @param seqArray - the list of strings to be merged
@@ -109,7 +123,7 @@ def preprocessFasta(list fastaFNs, str outputDir, unsigned long numProcs, bint a
     #convert the sequences into BWTs in uint8 format and then save it
     formatSeqsForMerge(seqIter, seqFN, offsetFN, numProcs, areUniform, logger)
 
-def createMSBWTFromFastq(list fastqFNs, str outputDir, unsigned long numProcs, bint areUniform, logger):
+def createMSBWTFromFastq(list fastqFNs, str outputDir, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function takes a list of input fasta filenames and builds the multi-string BWT for it using the merging
     method. Given R reads containing N bases (counting '$' as a base) this algorithm takes O(N*LCP*lg(R))
@@ -128,7 +142,7 @@ def createMSBWTFromFastq(list fastqFNs, str outputDir, unsigned long numProcs, b
     #finally do the actual interleaving, hand it the output file
     interleaveLevelMerge(outputDir, numProcs, areUniform, logger)
     
-def preprocessFastqs(list fastqFNs, str outputDir, unsigned long numProcs, bint areUniform, logger):
+def preprocessFastqs(list fastqFNs, str outputDir, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function takes a list of Fastq filenames and pre-processes them for merging
     @param seqArray - the list of strings to be merged
@@ -152,7 +166,7 @@ def preprocessFastqs(list fastqFNs, str outputDir, unsigned long numProcs, bint 
     #convert the sequences into BWTs in uint8 format and then save it
     formatSeqsForMerge(seqIter, seqFN, offsetFN, numProcs, areUniform, logger)
 
-def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsigned long numProcs, logger):
+def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, np.uint64_t numProcs, logger):
     '''
     This function takes two BWTs as input and merges them into a single BWT in O(N*LCP_avg) time where N is the 
     total number of bases and LCP_avg is the average common prefix between adjacent entries in the merged result.
@@ -168,22 +182,22 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
     logger.info('Output:\t'+mergedDir)
     
     #hardcode this as we do everywhere else
-    cdef unsigned long numValidChars = 6
+    cdef np.uint64_t numValidChars = 6
     
     #map the seqs, note we map msbwt.npy because that's where all changes happen
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inputBwt1 = np.load(inputMsbwtDir1+'/msbwt.npy', 'r+')
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inputBwt2 = np.load(inputMsbwtDir2+'/msbwt.npy', 'r+')
     cdef np.uint8_t [:] inputBwt1_view = inputBwt1
     cdef np.uint8_t [:] inputBwt2_view = inputBwt2
-    cdef unsigned long bwtLen1 = inputBwt1.shape[0]
-    cdef unsigned long bwtLen2 = inputBwt2.shape[0]
+    cdef np.uint64_t bwtLen1 = inputBwt1.shape[0]
+    cdef np.uint64_t bwtLen2 = inputBwt2.shape[0]
     
     #prepare to construct total counts for the symbols
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] totalCounts = np.zeros(dtype='<u8', shape=(numValidChars, ))
     cdef np.uint64_t [:] totalCounts_view = totalCounts
     
     #first calculate the total counts for our region
-    cdef unsigned long x, y
+    cdef np.uint64_t x, y
     with nogil:
         for x in range(0, bwtLen1):
             totalCounts_view[inputBwt1_view[x]] += 1
@@ -196,7 +210,7 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
     cdef np.uint64_t [:] fmCurrent_view
     
     #now we should load the interleaves
-    cdef unsigned long interleaveBytes
+    cdef np.uint64_t interleaveBytes
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inter0
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inter1
     
@@ -204,7 +218,7 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
     interleaveBytes = (bwtLen1+bwtLen2)//8+1
     
     #hardcoded as 1 GB right now
-    cdef unsigned long interThresh = 1*10**9
+    cdef np.uint64_t interThresh = 1*10**9
     interleaveFN0 = mergedDir+'/inter0.npy'
     interleaveFN1 = mergedDir+'/inter1.npy'
     
@@ -218,8 +232,8 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
     cdef np.uint8_t [:] inter0_view = inter0
     cdef np.uint8_t [:] inter1_view = inter1
     
-    cdef unsigned long binBits = 11
-    cdef unsigned long binSize = 2**binBits
+    cdef np.uint64_t binBits = 11
+    cdef np.uint64_t binSize = 2**binBits
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fmIndex0
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fmIndex1
     cdef np.uint64_t [:, :] fmIndex0_view
@@ -298,9 +312,9 @@ def mergeTwoMSBWTs(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, unsign
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] msbwt = np.lib.format.open_memmap(mergedDir+'/msbwt.npy', 'w+', '<u1', (bwtLen1+bwtLen2,))
     cdef np.uint8_t [:] msbwt_view = msbwt
     
-    cdef unsigned long readID
-    cdef unsigned long pos1 = 0
-    cdef unsigned long pos2 = 0
+    cdef np.uint64_t readID
+    cdef np.uint64_t pos1 = 0
+    cdef np.uint64_t pos2 = 0
 
     for x in range(0, bwtLen1+bwtLen2):
         #get the read, the symbol, and increment the position in that read
@@ -344,8 +358,8 @@ def mergeUsingInterleave(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, 
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inputBwt2 = np.load(inputMsbwtDir2+'/msbwt.npy', 'r+')
     cdef np.uint8_t [:] inputBwt1_view = inputBwt1
     cdef np.uint8_t [:] inputBwt2_view = inputBwt2
-    cdef unsigned long bwtLen1 = inputBwt1.shape[0]
-    cdef unsigned long bwtLen2 = inputBwt2.shape[0]
+    cdef np.uint64_t bwtLen1 = inputBwt1.shape[0]
+    cdef np.uint64_t bwtLen2 = inputBwt2.shape[0]
     
     #open the interleave file and make views/arrays, we assume bit array
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inter0 = np.load(interleaveFN, 'r+')
@@ -356,9 +370,9 @@ def mergeUsingInterleave(str inputMsbwtDir1, str inputMsbwtDir2, str mergedDir, 
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] msbwt = np.lib.format.open_memmap(mergedDir+'/msbwt.npy', 'w+', '<u1', (bwtLen1+bwtLen2,))
     cdef np.uint8_t [:] msbwt_view = msbwt
     
-    cdef unsigned long x
-    cdef unsigned long pos1 = 0
-    cdef unsigned long pos2 = 0
+    cdef np.uint64_t x
+    cdef np.uint64_t pos1 = 0
+    cdef np.uint64_t pos2 = 0
 
     for x in range(0, bwtLen1+bwtLen2):
         #get the read, the symbol, and increment the position in that read
@@ -432,7 +446,7 @@ def fastqIterator(list fastqFNs, logger):
                 
         fp.close()
     
-def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, unsigned long numProcs, bint areUniform, logger):
+def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function takes an input iterable and reformats all of the input into a sequence file we can read for 
     merging.  Part of the reformat is to recode each input string as a BWT in this file.  Additionally, offset
@@ -450,8 +464,8 @@ def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, unsigned long numProcs,
     offsetFP = open(offsetFN, 'wb')
     
     #everything is 64-bit offsets now, that should be more than enough for the dataset we plan on handling
-    cdef unsigned long offsetNumBytes = 8
-    cdef unsigned long offsetNumNibbles = 2*offsetNumBytes
+    cdef np.uint64_t offsetNumBytes = 8
+    cdef np.uint64_t offsetNumNibbles = 2*offsetNumBytes
     
     #define a constant character map for now
     cdef dict d = {'$':0, 'A':1, 'C':2, 'G':3, 'N':4, 'T':5}
@@ -465,9 +479,9 @@ def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, unsigned long numProcs,
     #this values are for writing offsets to the memmap file
     #cdef np.uint64_t seqOffset = 0
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] seqOffsetArrayWrite = np.zeros(dtype='<u8', shape=(1, ))
-    cdef unsigned long seqLen = 0
+    cdef np.uint64_t seqLen = 0
     
-    cdef unsigned long numReads = 0
+    cdef np.uint64_t numReads = 0
     
     #if the reads are not uniform, we stored each offset, so we need the all zero offset first
     if not areUniform:
@@ -480,8 +494,8 @@ def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, unsigned long numProcs,
     res = pool.imap(memoryBWT, seqIter, chunksize=40)
     
     #values for determining when to log output to our logger
-    cdef unsigned long bufferOutDist = 10**9
-    cdef unsigned long nextOutput = bufferOutDist
+    cdef np.uint64_t bufferOutDist = 10**9
+    cdef np.uint64_t nextOutput = bufferOutDist
     
     #we get back a string encoded numpy array and the length of the sequence in symbols
     for bwt, seqLen in res:
@@ -540,7 +554,7 @@ def memoryBWT(seq):
         dArr_view[<unsigned int>ord(c)] = d[c]
     
     #create the sequence permutations
-    cdef unsigned long seqLen = len(seq)
+    cdef np.uint64_t seqLen = len(seq)
     cdef bytes seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
     cdef char * seq_view = seq_b
     
@@ -570,14 +584,14 @@ def memoryBWT(seq):
             arr0_view[x] = x
     
     #fm index type stuff which helps build the thing
-    # (Windows portability) np.cumsum(u4) - u4 promotes to C 'unsigned long',
+    # (Windows portability) np.cumsum(u4) - u4 promotes to C 'np.uint64_t',
     # which is 32-bit on Windows (64-bit on Linux); forcing the cumsum dtype
     # keeps the fmOffsets result 64-bit on both platforms with identical
     # values.
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmOffsets = np.cumsum(totalCounts, dtype='<u8')-totalCounts
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmOffsetsCopy
     cdef np.uint64_t [:] fmOffsetsCopy_view
-    cdef unsigned long ind
+    cdef np.uint64_t ind
     cdef np.uint8_t symbol
     
     #iterate until convergence, should be relatively quick for a single string
@@ -618,7 +632,7 @@ def memoryBWT(seq):
     #finally return the tuple of (bwt, seqLen)
     return (ret.tobytes(), seqLen)
 
-def interleaveLevelMerge(str mergedDir, unsigned long numProcs, bint areUniform, logger):
+def interleaveLevelMerge(str mergedDir, np.uint64_t numProcs, bint areUniform, logger):
     '''
     This function is for use after all input reads have been processed into separate individual BWTs.  It merges
     the separate BWTs into a single MSBWT through several iterations.  At each iteration it merges 2 or more separate
@@ -633,36 +647,36 @@ def interleaveLevelMerge(str mergedDir, unsigned long numProcs, bint areUniform,
     logger.info('BETA')
     
     #hardcode this as we do everywhere else
-    cdef unsigned long numValidChars = 6
+    cdef np.uint64_t numValidChars = 6
     
     #load these from the input
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] seqs = np.memmap(mergedDir+'/seqs.npy', dtype='<u1')
-    cdef unsigned long seqShape = seqs.shape[0]
+    cdef np.uint64_t seqShape = seqs.shape[0]
     backupFN = None
     
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] offsets = np.memmap(mergedDir+'/offsets.npy', dtype='<u8')
     cdef np.uint64_t [:] offsets_view = offsets
     
     #we do things on a level basis in this method
-    cdef unsigned long numSeqs
+    cdef np.uint64_t numSeqs
     if areUniform:
         numSeqs = seqs.shape[0]//offsets[0]
     else:
         numSeqs = offsets.shape[0]-1
     
     #currMultiplier indicates how many strings are in each group, at the start this is 1 since all are separate
-    cdef unsigned long currMultiplier = 1
+    cdef np.uint64_t currMultiplier = 1
     
     backups = glob.glob(mergedDir+'/backup.*.npy')
-    cdef unsigned long backupID = 0
-    cdef unsigned long tmpID
+    cdef np.uint64_t backupID = 0
+    cdef np.uint64_t tmpID
     for bfn in backups:
         splitters = bfn.split('.')
         tmpID = int(splitters[len(splitters)-2])
         if tmpID > backupID:
             backupID = tmpID
     
-    cdef unsigned long x = 0
+    cdef np.uint64_t x = 0
     
     if backupID == 0:
         #copy the input strings over to our final output, this is what we'll be manipulating
@@ -688,12 +702,12 @@ def interleaveLevelMerge(str mergedDir, unsigned long numProcs, bint areUniform,
     #shutil.copyfile(mergedDir+'/seqs.npy', mergedDir+'/msbwt.npy')
     
     #only set to 2 or 256, eventually change allow 2, 4, 16, 256, 256^2
-    cdef unsigned long splitDist
-    cdef unsigned long activeProcs
-    cdef unsigned long numJobs
+    cdef np.uint64_t splitDist
+    cdef np.uint64_t activeProcs
+    cdef np.uint64_t numJobs
     cdef bint logProgress
-    cdef unsigned long prevProgress
-    cdef unsigned long currProgress
+    cdef np.uint64_t prevProgress
+    cdef np.uint64_t currProgress
     
     while currMultiplier < numSeqs:
         #decide whether our level iterator is 2 or 256
@@ -811,8 +825,8 @@ def interleaveLevelMerge(str mergedDir, unsigned long numProcs, bint areUniform,
     
     logger.info('MSBWT construction finished.')
 
-def levelIterator(offsets, bint areUniform, mergedDir, unsigned long currMultiplier, unsigned long splitDist,
-                  unsigned long numThreads, passedLogger):
+def levelIterator(offsets, bint areUniform, mergedDir, np.uint64_t currMultiplier, np.uint64_t splitDist,
+                  np.uint64_t numThreads, passedLogger):
     '''
     This function is a generator for creating offsets to merge.  It does so based on the current multiplier and 
     the splitDist.
@@ -823,17 +837,17 @@ def levelIterator(offsets, bint areUniform, mergedDir, unsigned long currMultipl
     @param splitDist - how many groups we allocate to merge
     '''
     #initialize all these counters
-    cdef unsigned long offsetLen = offsets.shape[0]
+    cdef np.uint64_t offsetLen = offsets.shape[0]
     cdef np.uint64_t [:] offsets_view = offsets
-    cdef unsigned long x = 0
-    cdef unsigned long y = 0
+    cdef np.uint64_t x = 0
+    cdef np.uint64_t y = 0
     
     #this is all we return - these values can't be made into np.ndarray for some odd reason
     seqs = np.memmap(mergedDir+'/seqs.npy', dtype='<u1')
     retOffsets = np.zeros(dtype='<u8', shape=(splitDist+1, ))
     
-    cdef unsigned long numSeqs
-    cdef unsigned long seqLen
+    cdef np.uint64_t numSeqs
+    cdef np.uint64_t seqLen
     
     if areUniform:
         #seqlen and numSeqs are a function of the data input 
@@ -892,17 +906,17 @@ def buildViaMerge256(tup):
     @param tup[1], mergedDir - the directory for our final result
     '''
     #hardcode this as we do everywhere else
-    cdef unsigned long numValidChars = 6
+    cdef np.uint64_t numValidChars = 6
     
     #extract the input
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] offsets = tup[0]
     cdef str mergedDir = tup[1]
-    cdef unsigned long numThreads = tup[2]
+    cdef np.uint64_t numThreads = tup[2]
     cdef logger = tup[3]
 
     #offset stuff
-    cdef unsigned long offsetLen = offsets.shape[0]
-    cdef unsigned long numInputs = offsetLen-1
+    cdef np.uint64_t offsetLen = offsets.shape[0]
+    cdef np.uint64_t numInputs = offsetLen-1
     cdef np.uint64_t [:] offsets_view = offsets
     
     if logger != None:
@@ -919,7 +933,7 @@ def buildViaMerge256(tup):
     cdef np.uint64_t [:] totalCounts_view = totalCounts
     
     #first calculate the total counts for our region
-    cdef unsigned long x, y
+    cdef np.uint64_t x, y
     #with nogil:
     for x in range(offsets_view[0], offsets_view[offsetLen-1]):
         totalCounts_view[seqs_view[x]] += 1
@@ -931,7 +945,7 @@ def buildViaMerge256(tup):
     
     #now we should load the interleaves
     #TODO: create methods to dynamically decide how to make the interleave array, size and/or on disk
-    cdef unsigned long interleaveBytes
+    cdef np.uint64_t interleaveBytes
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inter0
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] inter1
     if numInputs == 2:
@@ -940,10 +954,10 @@ def buildViaMerge256(tup):
     else:
         #this needs one bytes per base since we have 256 inputs
         interleaveBytes = offsets_view[numInputs]-offsets_view[0]
-    cdef unsigned long totalNumSymbols = offsets_view[numInputs]-offsets_view[0]
+    cdef np.uint64_t totalNumSymbols = offsets_view[numInputs]-offsets_view[0]
     
     #hardcoded as 1 GB right now
-    cdef unsigned long interThresh = 1*10**9
+    cdef np.uint64_t interThresh = 1*10**9
     if interleaveBytes > interThresh:
         interleaveFN0 = mergedDir+'/inter0.'+str(offsets_view[0])+'.npy'
         interleaveFN1 = mergedDir+'/inter1.'+str(offsets_view[0])+'.npy'
@@ -956,8 +970,8 @@ def buildViaMerge256(tup):
     cdef np.uint8_t [:] inter0_view = inter0
     cdef np.uint8_t [:] inter1_view = inter1
     
-    cdef unsigned long binBits = 11
-    cdef unsigned long binSize = 2**binBits
+    cdef np.uint64_t binBits = 11
+    cdef np.uint64_t binSize = 2**binBits
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fmIndex0
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fmIndex1
     cdef np.uint64_t [:, :] fmIndex0_view
@@ -1006,7 +1020,7 @@ def buildViaMerge256(tup):
     cdef np.uint64_t [:] offsetsCopy_view = offsetsCopy
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] ranges
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] fullCoverageRanges
-    cdef unsigned long fullRangeThreshold = 2**10
+    cdef np.uint64_t fullRangeThreshold = 2**10
     cdef double st, el
     if numInputs == 2:
         #format is (position in bwt0, position in bwt1, total length)
@@ -1083,7 +1097,7 @@ def buildViaMerge256(tup):
     
     #TODO: currently set to half a gig, maybe make this a user option?
     #decide whether to hold the temp in memory or on disk
-    cdef unsigned long inMemThreshold = 5*10**8
+    cdef np.uint64_t inMemThreshold = 5*10**8
     if offsets_view[numInputs] - offsets_view[0] < inMemThreshold:
         msbwtOut = np.zeros(dtype='<u1', shape=(offsets[numInputs]-offsets[0], ))
     else:
@@ -1091,7 +1105,7 @@ def buildViaMerge256(tup):
         msbwtOut = np.lib.format.open_memmap(outFN, 'w+', '<u1', (offsets[numInputs]-offsets[0], ))
     msbwtOut_view = msbwtOut    
     
-    cdef unsigned long readID
+    cdef np.uint64_t readID
     
     #copy the offsets info
     #with nogil:
@@ -1141,8 +1155,8 @@ def buildViaMerge256(tup):
     #return the number of iterations it took us to converge
     return iterCount
 
-cdef inline void initializeFMIndex(np.uint8_t * seqs_view, np.uint64_t * fmIndex_view, unsigned long bwtLen, 
-                      unsigned long binSize, unsigned long numValidChars):
+cdef inline void initializeFMIndex(np.uint8_t * seqs_view, np.uint64_t * fmIndex_view, np.uint64_t bwtLen, 
+                      np.uint64_t binSize, np.uint64_t numValidChars):
     '''
     This function takes a BWT string and fills in the FM-index for it at given intervals
     @param seqs_view - the pointer to the string we care about here
@@ -1151,9 +1165,9 @@ cdef inline void initializeFMIndex(np.uint8_t * seqs_view, np.uint64_t * fmIndex
     @param binSize - distance between each entry
     @param numValidChars - 6 for now
     '''
-    cdef unsigned long x
-    cdef unsigned long y = 0
-    cdef unsigned long z
+    cdef np.uint64_t x
+    cdef np.uint64_t y = 0
+    cdef np.uint64_t z
     
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] counts = np.zeros(dtype='<u8', shape=(numValidChars, ))
     for x in range(0, bwtLen):
@@ -1176,7 +1190,7 @@ cdef inline void initializeFMIndex(np.uint8_t * seqs_view, np.uint64_t * fmIndex
             y += 1
 
 cdef inline void getFmAtIndex(np.uint8_t * seqs_view, np.uint64_t [:, :] fmIndex_view, 
-                        unsigned long pos, unsigned long binBits, unsigned long nvc,
+                        np.uint64_t pos, np.uint64_t binBits, np.uint64_t nvc,
                         np.uint64_t [:] ret_view) nogil:
     '''
     Wrapper functions for calculating an FM-index position
@@ -1187,8 +1201,8 @@ cdef inline void getFmAtIndex(np.uint8_t * seqs_view, np.uint64_t [:, :] fmIndex
     @param nvc - Number of Valid Chars (6)
     @param ret_view - the thing we fill in with the index
     '''
-    cdef unsigned long startBin = pos >> binBits
-    cdef unsigned long x
+    cdef np.uint64_t startBin = pos >> binBits
+    cdef np.uint64_t x
     for x in range(0, nvc):
         ret_view[x] = fmIndex_view[startBin,x]
     
@@ -1196,7 +1210,7 @@ cdef inline void getFmAtIndex(np.uint8_t * seqs_view, np.uint64_t [:, :] fmIndex
         ret_view[seqs_view[x]] += 1
 
 cdef inline void getFmAtIndex_p(np.uint8_t * seqs_view, np.uint64_t * fmIndex_view, 
-                        unsigned long pos, unsigned long binBits, unsigned long nvc,
+                        np.uint64_t pos, np.uint64_t binBits, np.uint64_t nvc,
                         np.uint64_t [:] ret_view) nogil:
     '''
     Wrapper functions for calculating an FM-index position, same as previous but fmIndex_view is a pointer now
@@ -1207,8 +1221,8 @@ cdef inline void getFmAtIndex_p(np.uint8_t * seqs_view, np.uint64_t * fmIndex_vi
     @param nvc - Number of Valid Chars (6)
     @param ret_view - the thing we fill in with the index
     '''
-    cdef unsigned long startBin = pos >> binBits
-    cdef unsigned long x
+    cdef np.uint64_t startBin = pos >> binBits
+    cdef np.uint64_t x
     for x in range(0, nvc):
         #ret_view[x] = fmIndex_view[startBin][x]
         ret_view[x] = fmIndex_view[startBin*nvc+x]
@@ -1217,7 +1231,7 @@ cdef inline void getFmAtIndex_p(np.uint8_t * seqs_view, np.uint64_t * fmIndex_vi
         ret_view[seqs_view[x]] += 1
     
 cdef inline bint singleIterationMerge256(np.uint8_t * seqs_view, np.uint64_t [:] offsets_view, np.uint8_t * inputInter_view, 
-                               np.uint8_t * outputInter_view, np.uint64_t [:] fmCurrent_view, unsigned long bwtLen):
+                               np.uint8_t * outputInter_view, np.uint64_t [:] fmCurrent_view, np.uint64_t bwtLen):
     '''
     Performs a single pass over the data for a merge of at most 256 BWTs
     @param seqs_view - a C pointer to the start of the strings specific to this merge
@@ -1227,11 +1241,11 @@ cdef inline bint singleIterationMerge256(np.uint8_t * seqs_view, np.uint64_t [:]
     @param fmCurrent_view - an FM index this function can modify as it iterates
     @param bwtLen - the sum of all input string lengths
     '''
-    cdef unsigned long x
-    cdef unsigned long readID
+    cdef np.uint64_t x
+    cdef np.uint64_t readID
     cdef np.uint8_t symbol
     cdef bint changesMade = False
-    cdef unsigned long startIndex = offsets_view[0]
+    cdef np.uint64_t startIndex = offsets_view[0]
     
     with nogil:
         for x in range(0, bwtLen):
@@ -1251,7 +1265,7 @@ cdef inline bint singleIterationMerge256(np.uint8_t * seqs_view, np.uint64_t [:]
 
 cdef inline bint singleIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * seqs1_view, np.uint64_t [:] offsets_view, 
                                 np.uint8_t * inputInter_view, np.uint8_t * outputInter_view, np.uint64_t [:] fmCurrent_view, 
-                                unsigned long bwtLen):
+                                np.uint64_t bwtLen):
     '''
     Performs a single pass over the data for a merge of at most 2 BWTs, allows for a bit array, instead of byte
     @param seqs0_view - a C pointer to the start of the first string specific to this merge
@@ -1262,13 +1276,13 @@ cdef inline bint singleIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * seq
     @param fmCurrent_view - an FM index this function can modify as it iterates
     @param bwtLen - the sum of all input string lengths
     '''
-    cdef unsigned long x
+    cdef np.uint64_t x
     cdef bint readID
     cdef np.uint8_t symbol
     cdef bint changesMade = False
     
-    cdef unsigned long startIndex0 = 0
-    cdef unsigned long startIndex1 = 0
+    cdef np.uint64_t startIndex0 = 0
+    cdef np.uint64_t startIndex1 = 0
     
     with nogil:
         for x in range(0, bwtLen):
@@ -1297,9 +1311,9 @@ cdef inline bint singleIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * seq
 
 cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * seqs1_view, 
                                   np.uint8_t * inputInter_view, np.uint8_t * outputInter_view, 
-                                  unsigned long bwtLen, np.uint64_t [:, :] fmIndex0_view, np.uint64_t [:, :] fmIndex1_view, 
-                                  np.ndarray[np.uint64_t, ndim=2, mode='c'] ranges, unsigned long binBits, unsigned long nvc,
-                                  unsigned long iterCount, unsigned long numThreads):
+                                  np.uint64_t bwtLen, np.uint64_t [:, :] fmIndex0_view, np.uint64_t [:, :] fmIndex1_view, 
+                                  np.ndarray[np.uint64_t, ndim=2, mode='c'] ranges, np.uint64_t binBits, np.uint64_t nvc,
+                                  np.uint64_t iterCount, np.uint64_t numThreads):
     '''
     Performs a single pass over the data for a merge of at most 2 BWTs, allows for a bit array, instead of byte
     @param seqs0_view - a C pointer to the start of the first string specific to this merge (this is a bwt)
@@ -1310,7 +1324,7 @@ cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * 
     @param bwtLen - the sum of all input string lengths
     '''
     #counters
-    cdef unsigned long x, y, z
+    cdef np.uint64_t x, y, z
     
     #values associated with reading the input ranges
     cdef bint readID
@@ -1326,8 +1340,8 @@ cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * 
     #these are things we need to process results of the sub-threads
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] resultIndex
     cdef np.uint64_t [:] resultIndex_view
-    cdef unsigned long resultStart
-    cdef unsigned long resultOffset
+    cdef np.uint64_t resultStart
+    cdef np.uint64_t resultOffset
     cdef bint resultChangesMade
     
     #FM-index values at the start of a range
@@ -1350,14 +1364,14 @@ cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * 
     cdef np.uint64_t [:, :] ranges_view = ranges
     
     #these values get pulled from each entry as needed
-    cdef unsigned long startIndex0 = 0
-    cdef unsigned long startIndex1 = 0
-    cdef unsigned long dist
+    cdef np.uint64_t startIndex0 = 0
+    cdef np.uint64_t startIndex1 = 0
+    cdef np.uint64_t dist
     
     getFmAtIndex(seqs0_view, fmIndex0_view, 0, binBits, nvc, fmCurrent0_view)
     getFmAtIndex(seqs1_view, fmIndex1_view, 0, binBits, nvc, fmCurrent1_view)
     
-    #cdef unsigned long numThreads = 8
+    #cdef np.uint64_t numThreads = 8
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] pointerArray
     cdef np.uint64_t [:] pointerArray_view
     
@@ -1533,15 +1547,15 @@ cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * 
     #create our final output array
     cdef np.ndarray[np.uint64_t, ndim=2, mode='c'] extendedEntries = np.empty(dtype='<u8', shape=(nvc*ranges.shape[0], 3))
     cdef np.uint64_t [:, :] extendedEntries_view = extendedEntries
-    cdef unsigned long exIndex = 0
+    cdef np.uint64_t exIndex = 0
     
     #track these values so we can find ranges we missed
-    cdef unsigned long start
-    cdef unsigned long end, prevEnd
-    cdef unsigned long input0c, input1c, output0c, output1c, prev0c, prev1c
+    cdef np.uint64_t start
+    cdef np.uint64_t end, prevEnd
+    cdef np.uint64_t input0c, input1c, output0c, output1c, prev0c, prev1c
     
     #these correspond to hidden ranges
-    cdef unsigned long hiddenStart0, hiddenStart1, nextStart
+    cdef np.uint64_t hiddenStart0, hiddenStart1, nextStart
     
     #init
     end = 0
@@ -1634,7 +1648,7 @@ cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * 
     extendedEntries_view = extendedEntries
     
     #here's where we'll do the collapse
-    cdef unsigned long shrinkIndex = 0, currIndex = 1
+    cdef np.uint64_t shrinkIndex = 0, currIndex = 1
     #cdef bint collapseEntries = (iterCount <= 20)
     #cdef bint collapseEntries = (exIndex >= 2**17)
     cdef bint collapseEntries = False
@@ -1656,7 +1670,7 @@ cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * 
         extendedEntries_view = extendedEntries
     
     #go through each of the next entries and correct our input
-    cdef unsigned long totalStart
+    cdef np.uint64_t totalStart
     
     #go through each symbol range we just changed and copy it back into our input
     for z in range(0, nvc):
@@ -1689,8 +1703,8 @@ cdef inline tuple targetedIterationMerge2(np.uint8_t * seqs0_view, np.uint8_t * 
     cdef tuple ret = (changesMade, extendedEntries)
     return ret
 
-def rangeIterator(np.uint64_t [:] pointerArray, unsigned long binBits, unsigned long nvc, np.uint64_t [:, :] ranges_view, 
-                  unsigned long rangeLen, unsigned long numThreads):
+def rangeIterator(np.uint64_t [:] pointerArray, np.uint64_t binBits, np.uint64_t nvc, np.uint64_t [:, :] ranges_view, 
+                  np.uint64_t rangeLen, np.uint64_t numThreads):
     '''
     an iterator that creates ranges for the multi-threading
     @param pointerArray - these values get passed through to the threads
@@ -1700,20 +1714,20 @@ def rangeIterator(np.uint64_t [:] pointerArray, unsigned long binBits, unsigned 
     @param rangeLen - total number of ranges to split up
     @param numThreads - number of threads being used
     '''
-    cdef unsigned long x
-    cdef unsigned long rangeDelta = rangeLen//(2*numThreads)+1
+    cdef np.uint64_t x
+    cdef np.uint64_t rangeDelta = rangeLen//(2*numThreads)+1
     cdef object boundaryLock = RLock()
     
     for x in range(0, rangeLen, rangeDelta):
         #now we actually yield the result tuples
         if x+rangeDelta <= rangeLen:
-            #print (<unsigned long>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, x+rangeDelta, rangeLen)
-            #yield (<unsigned long>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, x+rangeDelta, rangeLen)
-            yield (<unsigned long>&pointerArray[0], binBits, nvc, x, x+rangeDelta, rangeLen, boundaryLock)
+            #print (<np.uint64_t>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, x+rangeDelta, rangeLen)
+            #yield (<np.uint64_t>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, x+rangeDelta, rangeLen)
+            yield (<uintptr_t>&pointerArray[0], binBits, nvc, x, x+rangeDelta, rangeLen, boundaryLock)
         else:
-            #print (<unsigned long>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, rangeLen, rangeLen)
-            #yield (<unsigned long>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, rangeLen, rangeLen)
-            yield (<unsigned long>&pointerArray[0], binBits, nvc, x, rangeLen, rangeLen, boundaryLock)
+            #print (<np.uint64_t>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, rangeLen, rangeLen)
+            #yield (<np.uint64_t>&pointerArray[0], binBits, nvc, rlockStart, rlockEnd, x, rangeLen, rangeLen)
+            yield (<uintptr_t>&pointerArray[0], binBits, nvc, x, rangeLen, rangeLen, boundaryLock)
 
 def rangeSolve_thread(tuple tup):
     '''
@@ -1723,7 +1737,10 @@ def rangeSolve_thread(tuple tup):
     @return - (start of next entries, number of next entries, changesMade)
     '''
     #the first value is an array filled with pointers we can use since this is threaded
-    cdef np.uint64_t * pointerArray = <np.uint64_t*>(<unsigned long>tup[0])
+    # M3-R64-W4: the pointer travels through a Python tuple;
+    # uintptr_t preserves all 64 bits on Win64 LLP64 (the former
+    # unsigned long round trip truncated heap pointers).
+    cdef np.uint64_t * pointerArray = <np.uint64_t*>(<uintptr_t>tup[0])
     cdef np.uint8_t * seqs0_view
     cdef np.uint8_t * seqs1_view
     cdef np.uint64_t * fmIndex0_view
@@ -1734,17 +1751,17 @@ def rangeSolve_thread(tuple tup):
     cdef np.uint64_t * nextEntries_view
     
     #values that are typically constant
-    cdef unsigned long binBits = tup[1]
-    cdef unsigned long nvc = tup[2]
+    cdef np.uint64_t binBits = tup[1]
+    cdef np.uint64_t nvc = tup[2]
     
     #this indicates which ranges we are going to be solving
-    cdef unsigned long rangeStart = tup[3]
-    cdef unsigned long rangeEnd = tup[4]
-    cdef unsigned long totalNumRanges = tup[5]
+    cdef np.uint64_t rangeStart = tup[3]
+    cdef np.uint64_t rangeEnd = tup[4]
+    cdef np.uint64_t totalNumRanges = tup[5]
     cdef object boundaryLock = tup[6]
     
     #FM-index related values
-    cdef unsigned long x
+    cdef np.uint64_t x
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmCurrent0 = np.empty(dtype='<u8', shape=(nvc, ))
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmCurrent1 = np.empty(dtype='<u8', shape=(nvc, ))
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] fmStart0 = np.empty(dtype='<u8', shape=(nvc, ))
@@ -1755,24 +1772,24 @@ def rangeSolve_thread(tuple tup):
     cdef np.uint64_t [:] fmStart1_view = fmStart1
     
     #values extracted from each range
-    cdef unsigned long startIndex0, startIndex1, dist
+    cdef np.uint64_t startIndex0, startIndex1, dist
     
     #these are primarily for determining if there are more groups
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] symbolChange = np.zeros(dtype='<u1', shape=(nvc, ))
     cdef np.uint8_t [:] symbolChange_view = symbolChange
-    cdef unsigned long trueStart, startEnd, endStart, trueEnd
+    cdef np.uint64_t trueStart, startEnd, endStart, trueEnd
     
     #we will return some of these things, some of it is simply filled into an existing array
-    cdef unsigned long c
+    cdef np.uint64_t c
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] neIndex = np.zeros(dtype='<u8', shape=(nvc, ))
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] neCounts = np.zeros(dtype='<u8', shape=(nvc, ))
-    cdef unsigned long neStart
+    cdef np.uint64_t neStart
     
     cdef np.uint64_t [:] neIndex_view = neIndex
     cdef np.uint64_t [:] neCounts_view = neCounts
     
     #extra values
-    cdef unsigned long y1, y2, rangeID
+    cdef np.uint64_t y1, y2, rangeID
     
     #values associated with reading the input ranges
     cdef bint readID
@@ -2021,49 +2038,49 @@ def rangeSolve_thread(tuple tup):
 #Bit manipulation helper functions
 ##################################
     
-cdef inline void setBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline void setBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     #set a bit in an array
     bitArray[index >> 3] |= (0x1 << (index & 0x7))
     
-cdef inline void clearBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline void clearBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     #clear a bit in an array
     bitArray[index >> 3] &= ~(0x1 << (index & 0x7))
     
-cdef inline bint getBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline bint getBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     #get a bit from an array
     return (bitArray[index >> 3] >> (index & 0x7)) & 0x1
     
-cdef inline bint getAndSetBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline bint getAndSetBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     '''
-    cdef unsigned long arrIndex = index >> 3
+    cdef np.uint64_t arrIndex = index >> 3
     cdef np.uint8_t mask = (0x1 << (index & 0x7))
     cdef bint ret = bitArray[arrIndex] & mask
     bitArray[arrIndex] |= mask
     return ret
     '''
-    cdef unsigned long arrIndex = index >> 3
+    cdef np.uint64_t arrIndex = index >> 3
     cdef np.uint8_t shiftSize = index & 0x7
     cdef bint ret = (bitArray[arrIndex] >> shiftSize) & 0x1
     bitArray[arrIndex] |= (0x1 << shiftSize)
     return ret
 
-cdef inline bint getAndClearBit_p(np.uint8_t * bitArray, unsigned long index) nogil:
+cdef inline bint getAndClearBit_p(np.uint8_t * bitArray, np.uint64_t index) nogil:
     '''
-    cdef unsigned long arrIndex = index >> 3
+    cdef np.uint64_t arrIndex = index >> 3
     cdef np.uint8_t mask = (0x1 << (index & 0x7))
     cdef bint ret = bitArray[arrIndex] & mask
     bitArray[arrIndex] &= ~mask
     return ret
     '''
-    cdef unsigned long arrIndex = index >> 3
+    cdef np.uint64_t arrIndex = index >> 3
     cdef np.uint8_t shiftSize = index & 0x7
     cdef np.uint8_t mask = (0x1 << shiftSize)
     cdef bint ret = (bitArray[arrIndex] >> shiftSize) & 0x1
     bitArray[arrIndex] &= ~mask
     return ret
 
-cdef inline bint setValAndRetToggle(np.uint8_t * bitArray, unsigned long index, bint val) nogil:
-    cdef unsigned long arrIndex = index >> 3
+cdef inline bint setValAndRetToggle(np.uint8_t * bitArray, np.uint64_t index, bint val) nogil:
+    cdef np.uint64_t arrIndex = index >> 3
     cdef np.uint8_t bitIndex = index & 0x7
     cdef np.uint8_t byteValue = bitArray[arrIndex]
     cdef bint changed = ((byteValue >> bitIndex) ^ val) & 0x1
