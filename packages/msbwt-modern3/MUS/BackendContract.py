@@ -331,14 +331,23 @@ class LegacyBWTAdapter(object):
         )
 
     def rank(self, symbol, position):
-        for method_name in (
-            "getOccurrence",
-            "getOccurrenceOfCharAtIndex",
-            "rank",
-        ):
-            method = getattr(self.bwt, method_name, None)
-            if method is not None:
-                return int(method(symbol, int(position)))
+        # Contract: rank(c, i) = Occ(c, i).  The preferred probe is a
+        # genuine pure-Occ primitive.  Holt's getOccurrenceOfCharAtIndex
+        # returns C[c] + Occ(c, i) (full-FM stepping value; FM samples are
+        # seeded from the cumulative-count array), so that fallback is
+        # normalized with Occ(x, 0) == 0 => raw(x, 0) == C[x].  A backend
+        # exposing its own `rank` is assumed contract-compliant.
+        symbol = int(symbol)
+        position = int(position)
+        pure = getattr(self.bwt, "getOccurrence", None)
+        if pure is not None:
+            return int(pure(symbol, position))
+        holt = getattr(self.bwt, "getOccurrenceOfCharAtIndex", None)
+        if holt is not None:
+            return int(holt(symbol, position)) - int(holt(symbol, 0))
+        generic = getattr(self.bwt, "rank", None)
+        if generic is not None:
+            return int(generic(symbol, position))
         raise NotImplementedError(
             "legacy BWT object exposes no recognized rank method"
         )
