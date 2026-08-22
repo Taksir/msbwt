@@ -203,12 +203,12 @@ def customiter(numpyArray):
         yield tuple(x)
 
 def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
-    # M3-R64-W5: about.npy persists uint8 file IDs (0xFF is reserved as
-    # the unpaired sentinel on BAM paths); reject inputs that would
-    # silently wrap instead of corrupting provenance.
-    if len(fastqFNs) > 255:
-        raise ValueError(
-            'about.npy supports at most 255 input files (uint8 file IDs); '
+    # M3-R64-W5: about.npy persists uint8 file IDs (0xFF is reserved as
+    # the unpaired sentinel on BAM paths); reject inputs that would
+    # silently wrap instead of corrupting provenance.
+    if len(fastqFNs) > 255:
+        raise ValueError(
+            'about.npy supports at most 255 input files (uint8 file IDs); '
             'got %d' % len(fastqFNs))
     '''
     This function does the grunt work behind string extraction for fastq files
@@ -297,12 +297,12 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
     mergeSubSorts(subSortFNs, numSeqs, areUniform, maxSeqLen, outputDir, logger)
 
 def preprocessBams(bamFNs, outputDir, areUniform, logger):
-    # M3-R64-W5: about.npy persists uint8 file IDs (0xFF is reserved as
-    # the unpaired sentinel on BAM paths); reject inputs that would
-    # silently wrap instead of corrupting provenance.
-    if len(bamFNs) > 255:
-        raise ValueError(
-            'about.npy supports at most 255 input files (uint8 file IDs); '
+    # M3-R64-W5: about.npy persists uint8 file IDs (0xFF is reserved as
+    # the unpaired sentinel on BAM paths); reject inputs that would
+    # silently wrap instead of corrupting provenance.
+    if len(bamFNs) > 255:
+        raise ValueError(
+            'about.npy supports at most 255 input files (uint8 file IDs); '
             'got %d' % len(bamFNs))
     '''
     This does the grunt work behind read extraction from a name-sorted BAM file.  If it isn't sorted, this will not work
@@ -434,12 +434,12 @@ def preprocessBams(bamFNs, outputDir, areUniform, logger):
     mergeSubSorts(subSortFNs, numSeqs, areUniform, maxSeqLen, outputDir, logger)
 
 def preprocessFastas(fastaFNs, outputDir, areUniform, logger):
-    # M3-R64-W5: about.npy persists uint8 file IDs (0xFF is reserved as
-    # the unpaired sentinel on BAM paths); reject inputs that would
-    # silently wrap instead of corrupting provenance.
-    if len(fastaFNs) > 255:
-        raise ValueError(
-            'about.npy supports at most 255 input files (uint8 file IDs); '
+    # M3-R64-W5: about.npy persists uint8 file IDs (0xFF is reserved as
+    # the unpaired sentinel on BAM paths); reject inputs that would
+    # silently wrap instead of corrupting provenance.
+    if len(fastaFNs) > 255:
+        raise ValueError(
+            'about.npy supports at most 255 input files (uint8 file IDs); '
             'got %d' % len(fastaFNs))
     '''
     This function does the grunt work behind string extraction for fasta files
