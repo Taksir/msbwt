@@ -12,6 +12,8 @@ import re
 import unittest
 from pathlib import Path
 
+from modern2_source_acceptance import assert_source_within_acceptance
+
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
 ENV_DIR = PACKAGE / "environment"
@@ -176,6 +178,94 @@ class Python2CompatibilityTests(unittest.TestCase):
         self.assertIn("test_modern2_cli_diff_is_exactly_the_numprocs_fix",
                       merge_tests)
         self.assertIn("MUS/CommandLineInterface.py", merge_tests)
+
+    def test_documented_deviation_is_covered_by_acceptance_checker(self):
+        # M3-R64-W6 (audit A-2): every DOCUMENTED_DEVIATIONS entry must be
+        # enforced by the closed-set acceptance checker, not merely exempted
+        # from the frozen-manifest byte-equality gate above.
+        bootstrap_tests = Path(__file__).read_text(encoding="utf-8")
+        for relative in ("MUS/MSBWTGen.py", "MUS/util.py"):
+            self.assertIn('assert_source_within_acceptance(self, "%s")'
+                          % relative, bootstrap_tests, relative)
+
+    def test_msbwtgen_py_diff_within_accepted_closed_set(self):
+        # M3-R64-W6 (audit A-2): live enforcement - the current MSBWTGen.py
+        # deviation must be exactly the accepted closed set; any other line
+        # fails here.
+        assert_source_within_acceptance(self, "MUS/MSBWTGen.py")
+
+    def test_util_py_diff_within_accepted_closed_set(self):
+        # M3-R64-W6 (audit A-2): live enforcement - see above.
+        assert_source_within_acceptance(self, "MUS/util.py")
+
+    def test_acceptance_checker_rejects_unauthorized_drift(self):
+        # Hostile regression: prove the acceptance helper actually rejects
+        # unauthorized drift for both deviation files, using throwaway copies
+        # of the frozen/modern trees (Modern2 production source is untouched).
+        import modern2_source_acceptance as acceptance
+
+        class StrictCase(object):
+            """Minimal stand-in exposing the attrs/helper contract used by
+            assert_source_within_acceptance()."""
+
+            def __init__(self, repository_root, package):
+                self.REPOSITORY_ROOT = Path(repository_root)
+                self.PACKAGE = Path(package)
+
+            def assertFalse(self, expr, msg=None):
+                if expr:
+                    raise AssertionError(msg or "expected false")
+
+        def build(rel_path, modern_lines):
+            import shutil
+            import tempfile
+            work = Path(tempfile.mkdtemp(prefix="m3r64w6-acceptance-"))
+            self.addCleanup(shutil.rmtree, str(work), True)
+            frozen = work / "repo" / rel_path
+            modern = work / "pkg" / rel_path
+            frozen.parent.mkdir(parents=True)
+            modern.parent.mkdir(parents=True)
+            frozen.write_bytes(b"line-one\nline-two\n")
+            modern.write_bytes("".join(line + "\n"
+                                       for line in modern_lines).encode())
+            return StrictCase(work / "repo", work / "pkg")
+
+        key_map = {
+            "MUS/util.py": ("ACCEPTED_ADDED_MUS_UTIL_PY",
+                            "ACCEPTED_REMOVED_MUS_UTIL_PY"),
+            "MUS/MSBWTGen.py": ("ACCEPTED_ADDED_MUS_MSBWTGEN_PY",
+                                "ACCEPTED_REMOVED_MUS_MSBWTGEN_PY"),
+        }
+        for rel_path, (added_key, removed_key) in key_map.items():
+            accepted_added = sorted(getattr(acceptance, added_key))[:1]
+            self.assertTrue(accepted_added, added_key)
+            approved = ["line-one", "line-two"] + accepted_added
+
+            # approved-only deviation passes
+            assert_source_within_acceptance(build(rel_path, approved),
+                                            rel_path)
+
+            # an arbitrary added line fails
+            with_drift = approved + ["AUDIT_MUTATION_UNAPPROVED = 1"]
+            with self.assertRaises(AssertionError):
+                assert_source_within_acceptance(build(rel_path, with_drift),
+                                                rel_path)
+
+            # modifying an accepted-modern line to unapproved text fails
+            mutated = ["line-one", "line-two",
+                       accepted_added[0] + "  # unauthorized tweak"]
+            with self.assertRaises(AssertionError):
+                assert_source_within_acceptance(build(rel_path, mutated),
+                                                rel_path)
+
+            # deleting a frozen line outside ACCEPTED_REMOVED_* fails
+            accepted_removed = sorted(getattr(acceptance, removed_key))
+            deletion_target = ("line-two" if "line-two"
+                               not in accepted_removed else "line-one")
+            deleted = [ln for ln in approved if ln != deletion_target]
+            with self.assertRaises(AssertionError):
+                assert_source_within_acceptance(build(rel_path, deleted),
+                                                rel_path)
 
     def test_pyx_files_carry_language_level_2(self):
         for name in MIGRATED_MODULES:
