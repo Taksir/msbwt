@@ -6,3 +6,5 @@ recursive-include MUSCython *.py *.pyx *.pxd
 exclude MUSCython/*.c
 global-exclude *.pyc
 global-exclude __pycache__
+include LICENSE
+include tools/*.py
