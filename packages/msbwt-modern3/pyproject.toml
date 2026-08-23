@@ -20,22 +20,17 @@ authors = [
     { name = "James Holt", email = "holtjma@cs.unc.edu" },
 ]
 
-# Core dependencies. pysam is conditional: it has NO native-Windows build
-# (pysam maintainer: "does not currently support Windows"), so it is excluded
-# on win32 via the PEP 508 platform marker. Core FASTQ/FASTA construction,
-# query, compression, decompression, and merge work without pysam. BAM
-# preprocessing is unavailable on native Windows and fails clearly.
+# Core dependencies.  pysam is NOT a dependency of msbwt-modern3 (M3-13C
+# policy): it has no native-Windows build, and the legacy pysam-based BAM
+# ingestion path is unvalidated under the pinned NumPy 2.x toolchain.  BAM
+# entry points reject explicitly (NotImplementedError); core FASTQ/FASTA
+# construction, query, compression, decompression, and merge never touch it.
 dependencies = [
     "numpy>=2.5,<3",
-    "pysam>=0.24; sys_platform != 'win32'",
 ]
 
 [project.urls]
 Homepage = "http://code.google.com/p/msbwt"
-
-[project.optional-dependencies]
-# Explicit opt-in for BAM support on platforms where pysam builds (Linux/macOS).
-bam = ["pysam>=0.24"]
 
 [project.scripts]
 # Legacy CLI (single dispatcher; cffq, pp, cfpp, merge, query, massquery,

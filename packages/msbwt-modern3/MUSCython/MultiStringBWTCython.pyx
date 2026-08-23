@@ -165,6 +165,13 @@ def createMSBWTCompFromFastq(fastqFNs, outputDir, numProcs, areUniform, logger):
     MSBWTCompGen.createMsbwtFromSeqs(outputDir, numProcs, logger)
     cleanupTemporaryFiles(outputDir)
     
+_BAM_UNSUPPORTED_MESSAGE = (
+    'BAM input is explicitly unsupported in msbwt-modern3 0.3.0 '
+    '(M3-13C policy): the legacy pysam-based ingestion path is unvalidated, '
+    'crashes under the pinned NumPy 2.x toolchain, and pysam has no '
+    'native-Windows build. Construct indices from FASTA/FASTQ input instead.')
+
+
 def createMSBWTFromBam(bamFNs, outputDir, numProcs, areUniform, logger):
     '''
     This function takes a fasta filename and creates the BWT using the technique from Cox and Bauer
@@ -173,6 +180,10 @@ def createMSBWTFromBam(bamFNs, outputDir, numProcs, areUniform, logger):
     @param numProcs - the number of processes it's allowed to use
     @areUniform - true if all the sequences passed into the function are of equal length
     '''
+    # M3-13C: explicit controlled rejection; see COMPATIBILITY.md.  The
+    # historical pysam path is retained below unreached for reference.
+    raise NotImplementedError(_BAM_UNSUPPORTED_MESSAGE)
+
     #generate the files we will reference and clear out the in memory array before making the BWT
     logger.info('Saving sorted sequences...')
     
@@ -304,6 +315,9 @@ def preprocessBams(bamFNs, outputDir, areUniform, logger):
         raise ValueError(
             'about.npy supports at most 255 input files (uint8 file IDs); '
             'got %d' % len(bamFNs))
+    # M3-13C: explicit controlled rejection; see COMPATIBILITY.md.  The
+    # historical pysam path is retained below unreached for reference.
+    raise NotImplementedError(_BAM_UNSUPPORTED_MESSAGE)
     '''
     This does the grunt work behind read extraction from a name-sorted BAM file.  If it isn't sorted, this will not work
     as intended.

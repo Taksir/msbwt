@@ -181,3 +181,51 @@ the changes are no-ops or produce byte-identical results.
   - `totalCounts.p` pickle framing differs (numpy py2 shape elements
     are longs on Windows, ints on Linux; logical content identical).
   - pysam absent on Windows (BAM input unsupported).
+
+---
+
+# Modern3 (Python 3) compatibility deviations
+
+## M3-13C: BAM/pysam explicitly unsupported in modern3
+
+- Status: executed and validated - full compatibility suites pass on
+  native Windows and Linux after the change.
+- Affected commands/APIs: MUS.MultiStringBWT.createMSBWTFromBam,
+  MUS.MultiStringBWT.preprocessBams,
+  MUSCython.MultiStringBWTCython.createMSBWTFromBam,
+  MUSCython.MultiStringBWTCython.preprocessBams.  No legacy CLI command
+  exposes BAM (the modern3 CLI offers only cffq/pp/cfpp/merge/query/
+  massquery/compress/decompress/convert).
+- Affected files: packages/msbwt-modern3/MUS/MultiStringBWT.py,
+  packages/msbwt-modern3/MUSCython/MultiStringBWTCython.pyx,
+  packages/msbwt-modern3/pyproject.toml.
+- Old (legacy/modern2) behavior: BAM ingestion existed as an untested,
+  undocumented API surface behind a lazy import pysam; pysam was a
+  mandatory dependency on non-Windows platforms.  Under the modern3 pinned
+  toolchain the path was never validated and is broken:
+    * pure-Python path writes sortTemp arrays with dtype prefix 'a'
+      (
+p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
+    * compiled path computes mate offsets as i+1-2*j where the paired/
+      unpaired test indexes the sequence string ([1-j]) instead of the
+      segment slot, so flag-0 singleton reads take the mate branch; the
+      first such record yields mate offset -1 which NumPy 1.x silently
+      wrapped to 2**64-1 but NumPy 2.x rejects with OverflowError, and
+      later records silently claim unrelated rows as mates.
+- New (modern3) behavior: all four entry points raise
+  NotImplementedError('BAM input is explicitly unsupported ...')
+  deterministically on every platform, before any pysam import or file
+  access.  pysam is no longer a dependency of msbwt-modern3 (removed from
+  core dependencies; no am extra is advertised).  Ordinary FASTA/FASTQ
+  construction, query, compression, decompression, merge, provenance,
+  tags, quality, LCP, benchmarking workflows are unaffected.
+- Rationale (M3-13C evidence): pysam cannot be installed on native Windows
+  (no wheel; source build fails), so cross-platform BAM support is not
+  truthfully advertisable; the ingestion semantics were never tested
+  anywhere in the project; repairing them would require semantic redesign
+  of mate/provenance handling that M3-13C scope forbids.
+- Reader/writer interoperability: none - no persisted format changes; BAM
+  never produced any committed fixture, golden, or artifact.
+- Revisit condition: full BAM support requires a validated implementation
+  (mate handling, quality policy vs Q1, name-sort enforcement) and is out
+  of scope for the 0.3.0 release.
