@@ -906,7 +906,7 @@ def preprocessFastqs(fastqFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger)
                     tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
                     subSortFNs.append(tempFN)
                     
-                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
+                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
                     tempArray[:] = sorted(seqArray)
                     numSeqs += len(seqArray)
                     del tempArray
@@ -926,7 +926,7 @@ def preprocessFastqs(fastqFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger)
         tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
         subSortFNs.append(tempFN)
         
-        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
+        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8', (len(seqArray),))
         tempArray[:] = sorted(seqArray)
         numSeqs += len(seqArray)
         del tempArray
@@ -940,7 +940,10 @@ def preprocessFastqs(fastqFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger)
     
     #save it
     tempFN = seqFNPrefix+'.temp.npy'
-    fp = open(tempFN, 'w+')
+    # M3-R64-FQPY2: py3 str != bytes; the merged sequences arrive as numpy
+    # bytes_ from the sorted 'S'-dtype arrays, so the symbol stream must be
+    # written binary (identical bytes to the legacy py2 text-mode write).
+    fp = open(tempFN, 'wb')
     
     aboutFile = np.lib.format.open_memmap(abtFN, 'w+', '<u1,<u8', (numSeqs,))
     ind = 0
@@ -1073,7 +1076,7 @@ def preprocessBams(bamFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger):
                     
                     sys.stdout.write('\rWriting file '+str(tempFileId))
                     sys.stdout.flush()
-                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
+                    tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
                     tempArray[:] = sorted(seqArray)
                     numSeqs += len(seqArray)
                     del tempArray
@@ -1092,7 +1095,7 @@ def preprocessBams(bamFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger):
         tempFN = seqFNPrefix+'.sortTemp.'+str(tempFileId)+'.npy'
         subSortFNs.append(tempFN)
         
-        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'a'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
+        tempArray = np.lib.format.open_memmap(tempFN, 'w+', 'S'+str(maxSeqLen)+',<u1,<u8,<u1,<u8', (len(seqArray),))
         tempArray[:] = sorted(seqArray)
         numSeqs += len(seqArray)
         del tempArray
@@ -1106,7 +1109,10 @@ def preprocessBams(bamFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger):
     
     #save it
     tempFN = seqFNPrefix+'.temp.npy'
-    fp = open(tempFN, 'w+')
+    # M3-R64-FQPY2: py3 str != bytes; the merged sequences arrive as numpy
+    # bytes_ from the sorted 'S'-dtype arrays, so the symbol stream must be
+    # written binary (identical bytes to the legacy py2 text-mode write).
+    fp = open(tempFN, 'wb')
     
     aboutFile = np.lib.format.open_memmap(abtFN, 'w+', '<u1,<u8,<u1,<u8', (numSeqs,))
     ind = 0
