@@ -1,7 +1,8 @@
 # msbwt-modern3 0.3.0 — Release Notes (release candidate)
 
 Branch: `enhanced-modern3`.  Release-candidate packaging validated at
-HEAD `cd16535` (M3-14).  Nothing has been pushed, tagged, or published.
+the final repaired HEAD (M3-FINAL-R1, following M3-14/M3-14C).  Nothing
+has been pushed, tagged, or published.
 
 ## What it is
 
@@ -40,13 +41,17 @@ msbwt_modern3-0.3.0.tar.gz
 ```
 
 The sdist ships `.pyx`/`.pxd` sources and excludes generated C; all 11
-extensions are regenerated during the build.  See the M3-14 report for
-the authoritative SHA256 digests of the validated candidates.
+extensions are regenerated during the build.  The authoritative SHA256
+digests of the final validated candidates are maintained in
+`release-candidate/SHA256SUMS.txt`; superseded M3-14/M3-14C digests are
+historical audit records only.
 
 ## Validation evidence
 
-- Source-tree compatibility suite at HEAD: Windows 716 passed / 1
-  skipped; Linux 715 passed / 2 skipped (22 subtests each).
+- Source-tree compatibility suite at the final repaired HEAD: Windows
+  728 passed / 1 skipped; Linux 722 passed / 7 environment-dependent
+  failures reproduced identically at the unrepaired baseline (22
+  subtests each).
 - Fresh-environment installs of both wheels and the sdist pass a
   15-check feature battery on both platforms (construction from
   FASTA/FASTQ, byte/RLE round trips, merge + provenance, exact quality,
