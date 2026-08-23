@@ -60,6 +60,45 @@ def workspace_temporary_directory():
 
 
 class LegacyProbeGuardTests(unittest.TestCase):
+    def _verify_normalized_projection(self) -> list:
+        """Platform-independent frozen-projection verification (M3-R64
+        closure).
+
+        The manifest digests were authored on a CRLF checkout.  To verify the
+        committed logical content regardless of the local line-ending
+        representation, materialize a temporary projection in which each text
+        source is stored LF-normalized (binary entries such as ``__init__.pyc``
+        and the binary-flagged frozen README are copied raw and must match
+        byte-exactly), then run the untouched frozen verifier against it.
+        Any unauthorized content modification still fails.
+        """
+        import hashlib
+
+        entries = legacy_probe.verify_frozen_source.read_manifest(
+            str(FROZEN_MANIFEST))
+        with workspace_temporary_directory() as temporary:
+            for expected, destination_rel, source_rel in entries:
+                source = REPOSITORY_ROOT.joinpath(*source_rel.split("/"))
+                data = source.read_bytes()
+                normalized = data.replace(b"\r\n", b"\n")
+                if hashlib.sha256(normalized).hexdigest() == expected:
+                    chosen = normalized
+                elif hashlib.sha256(data).hexdigest() == expected:
+                    chosen = data
+                else:
+                    self.fail(
+                        "frozen projection mismatch "
+                        "(platform-independent): %s" % source_rel)
+                destination = temporary.joinpath(*source_rel.split("/"))
+                if destination_rel != source_rel:
+                    extra = temporary.joinpath(*destination_rel.split("/"))
+                    extra.parent.mkdir(parents=True, exist_ok=True)
+                    extra.write_bytes(chosen)
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes(chosen)
+            return legacy_probe.verify_frozen_source.verify(
+                str(temporary), str(FROZEN_MANIFEST))
+
     def test_public_readme_may_differ_from_frozen_projection_readme(self) -> None:
         expected_hash = "4b1979b56531e683f05f21f03cb9b1b6ebf70ab5a6f01e658382e02505ba62f4"
         entries = legacy_probe.verify_frozen_source.read_manifest(str(FROZEN_MANIFEST))
@@ -77,7 +116,7 @@ class LegacyProbeGuardTests(unittest.TestCase):
             expected_hash,
         )
         self.assertEqual(
-            legacy_probe.verify_frozen_source.verify(str(REPOSITORY_ROOT), str(FROZEN_MANIFEST)),
+            self._verify_normalized_projection(),
             [],
         )
 

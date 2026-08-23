@@ -31,6 +31,9 @@ FROZEN_MANIFEST = REPOSITORY_ROOT / "reference" / "original-0.3.0" / "environmen
 CYTHON_PIN = "3.0.12"
 FROZEN_COMPRESS_TO_RLE_PYX = "1ef40aba3d9551ec5e3b656f30cbdc01f1e9c0e750b0830b7bd928d329ff8ab2"
 FROZEN_CLI_PY = "5265558e9a04e41eab33493a4fed440e2c640c1198b99ae493810647d1b23189"
+# M3-R64 closure: platform-independent pins over the committed LF content.
+FROZEN_COMPRESS_TO_RLE_PYX_LF = "c54981f7915a95fbf6150385d5d21bc136ad0af11a37f12e5a493783130f5722"
+FROZEN_CLI_PY_LF = "e9799313bd9233d5f9973a7606c0c6b7d0db549156899f93162e112bd1a3c845"
 FROZEN_MULTISTRINGBWT_PY = "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0"
 UNIFORM_CONVERT_SHA256 = "121ffb41838b696ed0c543345794f8dad36525373e4d7427de8a45d298ec009b"
 NONUNIFORM_CONVERT_SHA256 = "5fb45204712b0177803104d27a8170f11c159ed4f666c1b2521bc8fc614c7517"
@@ -169,7 +172,10 @@ class CliInventoryTests(unittest.TestCase):
         self.assertIn("GenericMerge.mergeTwoMSBWTs", text)
 
     def test_frozen_cli_untouched(self):
-        self.assertEqual(sha256_file(FROZEN / "CommandLineInterface.py"), FROZEN_CLI_PY)
+        # platform-independent: hashes the committed LF content
+        from frozen_source_digest import lf_sha256_file
+        self.assertEqual(lf_sha256_file(FROZEN / "CommandLineInterface.py"),
+                         FROZEN_CLI_PY_LF)
 
     def test_modern2_cli_diff_is_only_the_numprocs_fix(self):
         added, removed = unified_diff_lines(
@@ -208,8 +214,11 @@ class ImportExportMatrixTests(unittest.TestCase):
 
 class CompressToRleMigrationTests(unittest.TestCase):
     def test_frozen_pyx_hash(self):
+        # platform-independent: hashes the committed LF content
+        from frozen_source_digest import lf_sha256_file
         self.assertEqual(
-            sha256_file(FROZEN_CYN / "CompressToRLE.pyx"), FROZEN_COMPRESS_TO_RLE_PYX)
+            lf_sha256_file(FROZEN_CYN / "CompressToRLE.pyx"),
+            FROZEN_COMPRESS_TO_RLE_PYX_LF)
 
     def test_modern2_pyx_diff_is_exactly_language_level(self):
         added, removed = unified_diff_lines(

@@ -19,6 +19,7 @@ from pathlib import Path
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
 from modern2_source_acceptance import assert_source_within_acceptance
+from frozen_source_digest import lf_sha256_file
 
 EVIDENCE = PACKAGE / "evidence" / "reader-milestone6.json"
 PREFIX_PROBE = PACKAGE / "evidence" / "reader-milestone6-prefix-probe.json"
@@ -43,6 +44,8 @@ COLLECTION_QUERIES = {"AAAAA": 1, "ACGTN": 3, "CCCCC": 1, "AGCTA": 0,
 LEGACY_BINCOUNT_ERROR = ("Cannot cast ufunc add output from dtype('float64') "
                          "to dtype('uint64') with casting rule 'same_kind'")
 FROZEN_SHA256 = "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0"
+# M3-R64 closure: platform-independent pin over the committed LF content.
+FROZEN_SOURCE_SHA256_LF = "125fdc96338ac6f97e569c9f63e923c4b201414bb2eeff36ea12c4c39f8776ea"
 # the modern2 fill-line correction (milestone 6)
 FILL_ADDED = "            np.add.at(ret, letters[0:x-1], counts[0:x-1])"
 FILL_REMOVED = ("            ret += np.bincount(letters[0:x-1], counts[0:x-1], "
@@ -247,9 +250,9 @@ class ReaderFixSourceTests(unittest.TestCase):
             encoding="utf-8", errors="replace")
         self.assertIn(FILL_REMOVED, frozen)
         self.assertNotIn(FILL_ADDED, frozen)
-        self.assertEqual(sha256_bytes((REPOSITORY_ROOT / "MUS" /
-                                       "MultiStringBWT.py").read_bytes()),
-                         FROZEN_SHA256)
+        self.assertEqual(lf_sha256_file(REPOSITORY_ROOT / "MUS" /
+                                        "MultiStringBWT.py"),
+                         FROZEN_SOURCE_SHA256_LF)
 
     def test_modern2_fill_line_is_exact_integer_accumulation(self):
         modern = (PACKAGE / "MUS" / "MultiStringBWT.py").read_text(

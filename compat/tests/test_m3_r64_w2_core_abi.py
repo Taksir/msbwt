@@ -50,10 +50,17 @@ def _pxd_source():
 
 class CoreAbiWidthTests(unittest.TestCase):
     def test_platform_data_model_documented(self):
-        # LLP64 fact: this constant explains WHY unsigned long was unsafe.
-        # It must be present and consistent across rebuilt core modules.
-        self.assertEqual(int(BasicBWT.SIZEOF_UNSIGNED_LONG), 4)
-        self.assertEqual(int(ByteBWTCython.SIZEOF_UNSIGNED_LONG), 4)
+        # Cross-platform semantic assertion (M3-R64 closure): the compiled
+        # SIZEOF_UNSIGNED_LONG constant must equal this interpreter's actual
+        # C data model.  LLP64 (Win64): unsigned long is 4 bytes -- which is
+        # exactly WHY the historical `unsigned long` counters were unsafe.
+        # LP64 (Linux/macOS x86-64): unsigned long is 8 bytes, structurally
+        # masking that class of defect.
+        import ctypes
+        expected = ctypes.sizeof(ctypes.c_ulong)
+        self.assertIn(expected, (4, 8))
+        self.assertEqual(int(BasicBWT.SIZEOF_UNSIGNED_LONG), expected)
+        self.assertEqual(int(ByteBWTCython.SIZEOF_UNSIGNED_LONG), expected)
 
     def test_u64_scalar_roundtrip_boundaries(self):
         for value in BOUNDARY_VALUES:

@@ -173,11 +173,11 @@ class MultiBlockFixSourceTests(unittest.TestCase):
     """
 
     def test_frozen_multi_string_bwt_untouched(self):
-        import hashlib
-        digest = hashlib.sha256((REPOSITORY_ROOT / "MUS" /
-                                 "MultiStringBWT.py").read_bytes()).hexdigest()
+        # platform-independent: hashes the committed LF content
+        from frozen_source_digest import lf_sha256_file
+        digest = lf_sha256_file(REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py")
         self.assertEqual(digest,
-                         "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0")
+                         "125fdc96338ac6f97e569c9f63e923c4b201414bb2eeff36ea12c4c39f8776ea")
 
     def test_modern2_contains_both_documented_corrections(self):
         text = (PACKAGE / "MUS" / "MultiStringBWT.py").read_text(encoding="utf-8")

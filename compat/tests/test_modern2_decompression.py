@@ -20,6 +20,7 @@ from pathlib import Path
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
 from modern2_source_acceptance import assert_source_within_acceptance
+from frozen_source_digest import lf_sha256_file
 
 GOLDENS = REPOSITORY_ROOT / "compat" / "goldens" / "original-0.3.0"
 PROFILE = "py27-late-05a7d6d83862"
@@ -198,9 +199,9 @@ class DecompressionFixSourceTests(unittest.TestCase):
     """
 
     def test_frozen_multi_string_bwt_untouched(self):
-        digest = sha256_bytes((REPOSITORY_ROOT / "MUS" /
-                               "MultiStringBWT.py").read_bytes())
-        self.assertEqual(digest, "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0")
+        # platform-independent: hashes the committed LF content
+        digest = lf_sha256_file(REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py")
+        self.assertEqual(digest, "125fdc96338ac6f97e569c9f63e923c4b201414bb2eeff36ea12c4c39f8776ea")
 
     def test_modern2_diff_vs_frozen_is_exactly_the_index_fixes(self):
         frozen = (REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py").read_bytes()

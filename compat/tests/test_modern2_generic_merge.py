@@ -19,6 +19,7 @@ from pathlib import Path
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
 from modern2_source_acceptance import assert_source_within_acceptance
+from frozen_source_digest import lf_sha256_file
 
 EVIDENCE = PACKAGE / "evidence" / "generic-merge-milestone9.json"
 DRIVER = PACKAGE / "validate" / "generic-merge-milestone9.sh"
@@ -34,6 +35,10 @@ INPUT_B_SHA256 = "15f40b98ce3310dfe71c15c34509075e68a271bcc93b125b7005cd2b8f82ff
 FROZEN_GENERICMERGE_PYX = "fe8b699c73a0e671b63cbbe7f2eeba941b91a321156a02df44bf0e010cedce87"
 FROZEN_CLI_PY = "5265558e9a04e41eab33493a4fed440e2c640c1198b99ae493810647d1b23189"
 FROZEN_MULTISTRINGBWT_PY = "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0"
+# M3-R64 closure: platform-independent pins over the committed LF content.
+FROZEN_GENERICMERGE_PYX_LF = "c177a60951a514542af83267288e3471ae1bedb2d806da33f05f62e6e1edf473"
+FROZEN_CLI_PY_LF = "e9799313bd9233d5f9973a7606c0c6b7d0db549156899f93162e112bd1a3c845"
+FROZEN_MULTISTRINGBWT_PY_LF = "125fdc96338ac6f97e569c9f63e923c4b201414bb2eeff36ea12c4c39f8776ea"
 SYMBOL_COUNTS_EXPECTED = {"$": 8, "A": 9, "C": 9, "G": 9, "N": 4, "T": 9}
 MERGED_READS = ["AAAAA", "ACGTN", "ACGTN", "ACGTN",
                 "CCCCC", "GGGGG", "NACGT", "TTTTT"]
@@ -213,15 +218,16 @@ class EvidenceTests(unittest.TestCase):
 
 class SourcePolicyTests(unittest.TestCase):
     def test_frozen_sources_untouched(self):
+        # platform-independent: hashes the committed LF content
         self.assertEqual(
-            sha256_bytes((REPOSITORY_ROOT / "MUSCython" / "GenericMerge.pyx").read_bytes()),
-            FROZEN_GENERICMERGE_PYX)
+            lf_sha256_file(REPOSITORY_ROOT / "MUSCython" / "GenericMerge.pyx"),
+            FROZEN_GENERICMERGE_PYX_LF)
         self.assertEqual(
-            sha256_bytes((REPOSITORY_ROOT / "MUS" / "CommandLineInterface.py").read_bytes()),
-            FROZEN_CLI_PY)
+            lf_sha256_file(REPOSITORY_ROOT / "MUS" / "CommandLineInterface.py"),
+            FROZEN_CLI_PY_LF)
         self.assertEqual(
-            sha256_bytes((REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py").read_bytes()),
-            FROZEN_MULTISTRINGBWT_PY)
+            lf_sha256_file(REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py"),
+            FROZEN_MULTISTRINGBWT_PY_LF)
 
     def test_modern2_genericmerge_pyx_diff_is_language_level_only(self):
         added, removed = unified_added_removed(

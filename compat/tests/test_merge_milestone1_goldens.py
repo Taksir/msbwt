@@ -42,6 +42,9 @@ MERGED_PAYLOAD_SHA256 = "75134b4893420e725fe2766255545f26a29a9b6467eeb00678fb85d
 INTERLEAVE_SHA256 = "4a6d97a36e9ef4e3c19fb873b7713a9357d207d29433a3eca67a41cc4221afd6"
 FROZEN_PYX_SHA256 = "fe8b699c73a0e671b63cbbe7f2eeba941b91a321156a02df44bf0e010cedce87"
 COMMITTED_C_SHA256 = "9fcf5ec63751c0c3fb56476fa901761fcb218603b5b1c168c645de407343b6ea"
+# M3-R64 closure: platform-independent pins over the committed LF content.
+FROZEN_PYX_SHA256_LF = "c177a60951a514542af83267288e3471ae1bedb2d806da33f05f62e6e1edf473"
+COMMITTED_C_SHA256_LF = "0709bb6878230f28cc3daa43aac35713c0605f3152de9b1d471905f2470c7df9"
 REGENERATED_C_SHA256 = "3116532cb2eeaab0ccfb8a32901b5bee83aabe95a8d34aad878a2d48c03b724c"
 SEGFAULT_STDERR_SHA256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 P1_STDERR_SHA256 = "186d471d861c4eaf8ef200076742e259182b6e3c050ebe26540fbdf1e7eb3a4c"
@@ -244,16 +247,17 @@ class MergeMilestone1GoldenTests(unittest.TestCase):
         first_line = (REPOSITORY_ROOT / "MUSCython" / "GenericMerge.c").read_bytes().split(b"\n", 1)[0]
         self.assertIn(b"Cython 0.23.4", first_line)
         self.assertEqual(
+            # platform-independent: hash the committed LF content
             hashlib.sha256(
-                (REPOSITORY_ROOT / "MUSCython" / "GenericMerge.c").read_bytes()
+                (REPOSITORY_ROOT / "MUSCython" / "GenericMerge.c").read_bytes().replace(b"\r\n", b"\n")
             ).hexdigest(),
-            COMMITTED_C_SHA256,
+            COMMITTED_C_SHA256_LF,
         )
         self.assertEqual(
             hashlib.sha256(
-                (REPOSITORY_ROOT / "MUSCython" / "GenericMerge.pyx").read_bytes()
+                (REPOSITORY_ROOT / "MUSCython" / "GenericMerge.pyx").read_bytes().replace(b"\r\n", b"\n")
             ).hexdigest(),
-            FROZEN_PYX_SHA256,
+            FROZEN_PYX_SHA256_LF,
         )
         # The promoted merged primary is byte-identical to the previously
         # committed uniform-multifile golden, which itself is untouched.

@@ -16,6 +16,7 @@ from pathlib import Path
 REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
 from modern2_source_acceptance import assert_source_within_acceptance
+from frozen_source_digest import lf_sha256_file
 
 EVIDENCE = PACKAGE / "evidence" / "nonuniform-gzip-milestone8.json"
 DRIVER = PACKAGE / "validate" / "nonuniform-gzip-milestone8.sh"
@@ -55,6 +56,9 @@ GZIP_SIDE_EFFECTS = {
 COMPRESSED_GOLDEN = "9d19222eaa78c1d89304e79ff14a8a0a5f0c21c3ae979d179f570f1d8d5c1e66"
 FROZEN_MULTIMERGE_PYX = "9c591c05697a662a0f0a7fb78b0afd609e7a567afb4ed182d926fca0726859cb"
 FROZEN_MULTISTRINGBWT = "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0"
+# M3-R64 closure: platform-independent pins over the committed LF content.
+FROZEN_MULTIMERGE_PYX_LF = "1445eacb96d8c8a18d4291a1ebea30742f1ec75e6085868e2d968778ad181828"
+FROZEN_MULTISTRINGBWT_LF = "125fdc96338ac6f97e569c9f63e923c4b201414bb2eeff36ea12c4c39f8776ea"
 
 
 def load_json(path: Path):
@@ -190,12 +194,13 @@ class EvidenceTests(unittest.TestCase):
 
 class SourcePolicyTests(unittest.TestCase):
     def test_frozen_original_untouched(self):
+        # platform-independent: hashes the committed LF content
         frozen_pyx = REPOSITORY_ROOT / "MUSCython" / "MultimergeCython.pyx"
-        self.assertEqual(sha256_bytes(frozen_pyx.read_bytes()),
-                         FROZEN_MULTIMERGE_PYX)
+        self.assertEqual(lf_sha256_file(frozen_pyx),
+                         FROZEN_MULTIMERGE_PYX_LF)
         frozen_msw = REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py"
-        self.assertEqual(sha256_bytes(frozen_msw.read_bytes()),
-                         FROZEN_MULTISTRINGBWT)
+        self.assertEqual(lf_sha256_file(frozen_msw),
+                         FROZEN_MULTISTRINGBWT_LF)
 
     def test_modern2_multimerge_pyx_diff_is_language_level_only(self):
         added, removed = unified_added_removed(

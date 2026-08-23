@@ -22,12 +22,15 @@ from pathlib import Path
 REPOSITORY_ROOT = Path(__file__).parents[2]
 PACKAGE = REPOSITORY_ROOT / "packages" / "msbwt-modern2"
 from modern2_source_acceptance import assert_source_within_acceptance
+from frozen_source_digest import lf_sha256_file
 
 EVIDENCE = PACKAGE / "evidence" / "reader-milestone7.json"
 
 EVIDENCE_PRIMARY_SHA256 = "24447374bcdfcfc11170cd76d46210dad8795c6eb667e2f4ba1eb8d437924e35"
 RLE_PRIMARY_SHA256 = "681caf56aa0630250234929f8bebee1f0b973b372c2786e48b2d2ad59940eb99"
 FROZEN_SHA256 = "95ac0b8659aa9148ef82a844bb750f1b2f07e82e4a647f5e3c3244050de7b1b0"
+# M3-R64 closure: platform-independent pin over the committed LF content.
+FROZEN_SOURCE_SHA256_LF = "125fdc96338ac6f97e569c9f63e923c4b201414bb2eeff36ea12c4c39f8776ea"
 MODERN2_SHA256 = "3431703364faa8e5aaaaa9ffb0e8c5efaa5acae68cf712e14115a36963858320"
 
 DERIVED = ("totalCounts.p", "comp_fmIndex.npy", "comp_refIndex.npy")
@@ -249,7 +252,8 @@ class Milestone7SourceTests(unittest.TestCase):
 
     def test_frozen_original_untouched(self):
         frozen = REPOSITORY_ROOT / "MUS" / "MultiStringBWT.py"
-        self.assertEqual(sha256_bytes(frozen.read_bytes()), FROZEN_SHA256)
+        # platform-independent: hashes the committed LF content
+        self.assertEqual(lf_sha256_file(frozen), FROZEN_SOURCE_SHA256_LF)
         # the suspicious init sites are unchanged in the frozen original
         text = frozen.read_text(encoding="utf-8", errors="replace")
         self.assertIn("self.totalCounts += np.bincount(letters, "
