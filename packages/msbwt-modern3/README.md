@@ -34,8 +34,13 @@ Windows and Linux:
   paths; non-uniform input uses the Multimerge engine)
 - Byte (uncompressed) and RLE (compressed) indexes: build, load, query,
   recovery, compression, decompression
-- GenericMerge pairwise merging and balanced/unbalanced multi-way merges,
-  with persistent source provenance manifests and interleaves
+- GenericMerge pairwise merging and balanced/unbalanced multi-way merges;
+  provenance-preserving merges additionally persist source-provenance
+  manifests and interleaves (the legacy `msbwt merge` command keeps its
+  historical no-manifest output)
+- FASTA construction via `MUSCython.MultiStringBWTCython.createMSBWTFromFasta`
+  (uniform reads) or `MUSCython.MultimergeCython.createMSBWTFromFasta`
+  (non-uniform reads)
 - FM queries (`findIndicesOfStr`, occurrence counts) and rank/Occurrence
   access
 - Source removal / retention without FASTQ reconstruction
@@ -69,10 +74,21 @@ Additional tool entry points: `msbwt-bwt-tags`, `msbwt-lcp`,
   container may work but carries no validation claim.
 - A single read longer than 2^32 bases is unsupported by the Multimerge
   engine (total index sizes beyond 2^32 symbols are fully supported).
+- Merges whose inputs exceed an internal (~1 GB) in-memory threshold use
+  a disk-backed branch that is parity-tested (via lowered-threshold
+  probes) but has not yet been exercised on a literal production-scale
+  >1 GB run; this is a validation gap, not a known correctness defect.
 - The legacy pure-Python fallbacks (`MUS.MSBWTGen.compressBWT`,
   `MUS.MultiStringBWT.createMSBWTFromFastq`/`createFromSeqs` chain) are
   retained for reference and are not part of the supported cross-platform
   contract; the compiled paths are the supported surface.
+- Importing the compiled reader submodules directly on a cold interpreter
+  (e.g. `from MUSCython import ByteBWTCython`, or likewise
+  `RLE_BWTCython`/`LZW_BWTCython`) raises `ImportError` because of a
+  pre-existing circular module-initialization order.  Import
+  `MUSCython.MultiStringBWTCython` first (or use
+  `MultiStringBWT.loadBWT(...)`); after that all submodules import
+  normally.  Every documented surface is unaffected.
 
 ## License
 

@@ -15,10 +15,20 @@ systems and adding verified source-aware features on top.
 > release-ready**; the `enhanced-modern2` feature track (source-aware
 > queries, provenance, source removal, tags, quality, LCP, benchmarking)
 > is **complete and release-ready** on branch `enhanced-modern2`.
-> `msbwt-modern3` (Python 3) has not been started.
+> `msbwt-modern3` (Python 3) is the **active line**: a verified release
+> candidate (0.3.0) exists on branch `enhanced-modern3` — CPython >=3.14,
+> Windows x86-64 + Linux x86-64 compiled wheels plus sdist.  See
+> [`packages/msbwt-modern3/README.md`](packages/msbwt-modern3/README.md).
 
 ## What this version adds
 
+- **`msbwt-modern3`** — the Python 3 modernization (CPython >=3.14,
+  NumPy >=2.5): the full legacy CLI plus the enhanced feature stack
+  (provenance, read provenance, source removal, tags, lossless quality
+  sidecar, LCP, benchmarking) on compiled 64-bit wheels for Windows and
+  Linux x86-64.  BAM input is explicitly unsupported in this line; see
+  [`packages/msbwt-modern3/README.md`](packages/msbwt-modern3/README.md)
+  for the supported surface and known limitations.
 - **`msbwt-modern2`** — a reproducible Python-2.7 / Cython-3.0.12
   modernization of the original package: all nine legacy CLI commands
   restored, persistent outputs byte-equal to the committed frozen goldens
@@ -74,20 +84,28 @@ compression/decompression code.
 
 ## Installation
 
-Do **not** expect `pip install msbwt-modern2` from a public index — the
-distribution has not been published there.  To install, follow the
-verified procedure in
+There are two independent distributions; install them in **separate
+environments** (they expose the same `MUS`/`MUSCython` import names and
+the same `msbwt` command).
+
+**Python 3 (current line):** install `msbwt-modern3` from the built
+artifacts — a CPython 3.14 wheel for Windows x86-64 or Linux x86-64, or
+the sdist (requires a C compiler); see
+[`packages/msbwt-modern3/README.md`](packages/msbwt-modern3/README.md).
+
+**Python 2.7 (frozen legacy line):** do not expect
+`pip install msbwt-modern2` from a public index — the distribution has
+not been published there.  To install, follow the verified procedure in
 [`packages/msbwt-modern2/README.md`](packages/msbwt-modern2/README.md):
 bootstrap the pinned Python-2.7 environment with
 `packages/msbwt-modern2/environment/bootstrap-modern2.sh`, then
 `pip install` the built wheel or sdist (`--no-deps`) into that
 environment.
 
-The verified reference profile is Ubuntu 26.04 LTS on WSL2 x86-64 with
-CPython 2.7.18, Cython exactly 3.0.12, NumPy 1.16.6, pysam 0.15.4
-(pip/setuptools/wheel 20.3.4/44.1.1/0.37.1).  This is a Python-2.7
-distribution; the Python-3 track (`msbwt-modern3`) is a separate future
-project.
+The modern2 verified reference profile is Ubuntu 26.04 LTS on WSL2
+x86-64 with CPython 2.7.18, Cython exactly 3.0.12, NumPy 1.16.6,
+pysam 0.15.4 (pip/setuptools/wheel 20.3.4/44.1.1/0.37.1); native 64-bit
+Windows is also supported for that line.
 
 Installing the distribution also installs the legacy `msbwt` command and
 six enhanced console scripts: `msbwt-bwt-tags`, `msbwt-lcp`,
@@ -205,8 +223,10 @@ Enhanced (installed console scripts): `msbwt-bwt-tags`, `msbwt-lcp`,
   naive u32 RLE encoding model it reports was *larger* than the raw BWT
   payload on the toy fixture — that negative result is documented, not
   hidden.
-- Verified on the Linux x86-64 Python-2.7 reference profile only;
-  Windows/macOS support is not claimed.
+- Verified for modern2 on the Linux x86-64 Python-2.7 reference profile
+  and native 64-bit Windows; macOS support is not claimed.  Modern3 is
+  verified on Windows x86-64 and Linux x86-64 with CPython 3.14; no
+  other Python version, platform, or architecture is claimed.
 
 ## Project status
 
@@ -221,7 +241,11 @@ Enhanced (installed console scripts): `msbwt-bwt-tags`, `msbwt-lcp`,
   Q1 verified against independent oracles with executed evidence under
   `packages/msbwt-modern2/evidence/`; integrated gate runs all features
   in one package plus a Feature-10-reduced package.
-- `msbwt-modern3` — not started.
+- `msbwt-modern3` — complete, release candidate (0.3.0) on branch
+  `enhanced-modern3`: legacy + enhanced feature parity against the
+  modern2 oracle, cross-platform persistence evidence, three-way
+  randomized audit, and validated sdist/Windows-wheel/Linux-wheel
+  artifacts with installed-distribution smoke gates.
 
 ## Verified legacy baseline
 
@@ -282,12 +306,12 @@ contract.
 This fork should **not** be treated as a finished replacement for every
 historical MSBWT use case.  Remaining work:
 
-- `msbwt-modern3` (Python 3) implementation and validation;
-- publishing `msbwt-modern2` to a public package index (the release
+- publishing either distribution to a public package index (the release
   artifacts are built and validated locally; publication is a separate,
   manual step);
-- native Windows/macOS support (only the Linux x86-64 reference profile
-  is executed);
+- macOS/ARM support and non-3.14 CPython versions for `msbwt-modern3`
+  (only Windows x86-64 + Linux x86-64 on CPython 3.14 are executed);
+- a literal production-scale (>1 GB) GenericMerge run for modern3;
 - CI, benchmark baselines, and performance optimization (deliberately
   deferred until after compatibility is established);
 - broadening malformed/corrupt-artifact hardening.
@@ -312,6 +336,7 @@ repository under `docs/modernization/` and `docs/enhanced-modern2/`:
   defects and their status;
 - `docs/modernization/MODERN2_RELEASE_NOTES.md` and
   `docs/modernization/MODERN2_ENHANCED_RELEASE_NOTES.md` — release notes;
+- `docs/modernization/MODERN3_RELEASE_NOTES.md` — modern3 release notes;
 - `docs/enhanced-modern2/README.md` — feature index with per-feature
   milestone documents and evidence.
 
@@ -322,7 +347,9 @@ reference/original-0.3.0/   frozen historical oracle (40 hash-pinned files)
 packages/msbwt-modern2/     the installable distribution: MUS/, MUSCython/,
                             bin/msbwt, tools/, environment/ locks, tests/,
                             validate/, evidence/, README, setup.py
-packages/msbwt-modern3/     future separate modernization track (not created)
+packages/msbwt-modern3/     the Python 3 distribution (current line):
+                            MUS/, MUSCython/ .pyx sources, tools/,
+                            pyproject.toml/setup.py, README, LICENSE
 compat/                     shared fixtures, goldens, manifests, compatibility
                             tests, and the Q1 audit harness
 docs/modernization/         handoff, milestone reports, bug tracker, audit doc
