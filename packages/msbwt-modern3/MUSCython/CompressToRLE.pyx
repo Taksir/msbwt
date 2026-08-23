@@ -72,11 +72,18 @@ def compressInput(str fn, str bwtDir):
         x += 1
     
     cdef unsigned long readBytes = fread(buffer, 1, BUFFER_SIZE, inputStream)
-    
+
     cdef unsigned char currSym = buffer[0]
-    cdef unsigned long currCount = 0
+    # M3-R64-COMPRESS4G: run-length accumulator and output-byte counter must
+    # be >=64-bit on every platform.  On Win64 LLP64 `unsigned long` is 32-bit,
+    # so a single run longer than 2^32-1 symbols wrapped currCount and more
+    # than 2^32-1 output bytes wrapped bytesWritten, corrupting the .npy
+    # header shape written below.  The persisted RLE encoding is unchanged:
+    # each byte carries one 5-bit count chunk, so arbitrary run lengths were
+    # already representable -- only the accumulator width was defective.
+    cdef np.uint64_t currCount = 0
     cdef unsigned char writeByte
-    cdef unsigned long bytesWritten = 0
+    cdef np.uint64_t bytesWritten = 0
     
     while readBytes > 0:
         for x in range(0, readBytes):
@@ -130,11 +137,35 @@ def compressInput(str fn, str bwtDir):
     
     #now that we know the total length, fill in the bytes for our header
     # NOTE: the tail literal is ',), }' — it must produce e.g. 'shape': (48,), }
-    cdef bytes initialWrite = b'\x93NUMPY\x01\x00' + headerHex.encode('latin1') + b"\x00{'descr': '|u1', 'fortran_order': False, 'shape': (" + str(bytesWritten).encode('ascii') + b',), }'
+    # int(bytesWritten): exact decimal expansion of the 64-bit counter (a bare
+    # str() of a NumPy scalar is formatting-fragile across NumPy versions).
+    cdef bytes initialWrite = b'\x93NUMPY\x01\x00' + headerHex.encode('latin1') + b"\x00{'descr': '|u1', 'fortran_order': False, 'shape': (" + str(int(bytesWritten)).encode('ascii') + b',), }'
     buffer = initialWrite
-    
+
     cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] mmapTemp = np.memmap(bwtDir+'/comp_msbwt.npy', '<u1', 'r+')
     cdef np.uint8_t [:] mmapTemp_view = mmapTemp
     for x in range(0, len(initialWrite)):
         mmapTemp_view[x] = buffer[x]
+
+
+def rle_counter_boundary_probe(np.uint64_t runLength):
+    '''
+    M3-R64-COMPRESS4G compiled boundary probe.
+
+    Exercises the exact production scalar types and arithmetic that
+    compressInput uses for its run accumulator and output-byte counter:
+        bytesWritten += 1 per emitted byte, currCount >>= 5 per chunk,
+    plus the downstream header shape-string calculation.  With the repaired
+    np.uint64_t declarations this is exact for run lengths far beyond 2^32;
+    under the historical `unsigned long` declarations on Win64 LLP64 the
+    parameter truncation makes every boundary value beyond 2^32-1 wrong.
+    '''
+    cdef np.uint64_t currCount = runLength
+    cdef np.uint64_t bytesWritten = 0
+    while currCount > 0:
+        bytesWritten += 1
+        currCount = currCount >> 5
+    # mirror the production header shape construction
+    cdef bytes shapeField = b"(" + str(int(bytesWritten)).encode('ascii') + b",)"
+    return (bytesWritten, shapeField)
     
