@@ -80,7 +80,8 @@ class PureFastqPreprocessTests(unittest.TestCase):
             os.makedirs(out)
             MSB.createMSBWTFromFastq([fq], out, 1, True, LOGGER)
             n = int(np.load(os.path.join(out, "msbwt.npy"), "r").shape[0])
-            self.assertEqual(n, 18)
+            # three uniform 8-base reads -> 3 * 9 suffix rows
+            self.assertEqual(n, 27)
         finally:
             shutil.rmtree(work, ignore_errors=True)
 

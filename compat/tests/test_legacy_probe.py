@@ -76,16 +76,23 @@ class LegacyProbeGuardTests(unittest.TestCase):
 
         entries = legacy_probe.verify_frozen_source.read_manifest(
             str(FROZEN_MANIFEST))
+        import hashlib
         with workspace_temporary_directory() as temporary:
             for expected, destination_rel, source_rel in entries:
                 source = REPOSITORY_ROOT.joinpath(*source_rel.split("/"))
                 data = source.read_bytes()
-                normalized = data.replace(b"\r\n", b"\n")
-                if hashlib.sha256(normalized).hexdigest() == expected:
-                    chosen = normalized
-                elif hashlib.sha256(data).hexdigest() == expected:
-                    chosen = data
-                else:
+                # Canonicalize to the manifest's authored CRLF form from any
+                # checkout representation, then accept whichever variant
+                # matches.  Any content modification breaks every variant.
+                logical = data.replace(b"\r\n", b"\n")
+                candidates = (data, logical,
+                              logical.replace(b"\n", b"\r\n"))
+                chosen = None
+                for candidate in candidates:
+                    if hashlib.sha256(candidate).hexdigest() == expected:
+                        chosen = candidate
+                        break
+                if chosen is None:
                     self.fail(
                         "frozen projection mismatch "
                         "(platform-independent): %s" % source_rel)
@@ -96,6 +103,8 @@ class LegacyProbeGuardTests(unittest.TestCase):
                     extra.write_bytes(chosen)
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_bytes(chosen)
+            return legacy_probe.verify_frozen_source.verify(
+                str(temporary), str(FROZEN_MANIFEST))
             return legacy_probe.verify_frozen_source.verify(
                 str(temporary), str(FROZEN_MANIFEST))
 
