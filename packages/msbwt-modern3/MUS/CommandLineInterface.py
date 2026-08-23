@@ -207,7 +207,7 @@ def mainRun():
         if args.dumpSeqs:
             for x in range(r[0], r[1]):
                 dInd = msbwt.getSequenceDollarID(x)
-                print(msbwt.recoverString(dInd)[1:]+','+str(dInd))
+                print(msbwt.recoverString(dInd)[1:].decode('ascii')+','+str(dInd))
     
     elif args.subparserID == 'massquery':
         logger.info('Input:\t'+str(args.inputBwtDir))

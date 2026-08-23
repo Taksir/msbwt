@@ -495,7 +495,7 @@ def construct_lcp_from_bwt(
     parent = (
         str(temp_parent)
         if temp_parent is not None
-        else os.path.dirname(bwt_dir)
+        else os.path.dirname(os.path.abspath(bwt_dir))
     )
     if not os.path.isdir(parent):
         os.makedirs(parent)

@@ -560,7 +560,7 @@ def retain_sources(
         source_metadata_path=source_metadata_path,
     )
 
-    output_parent = os.path.dirname(output_dir)
+    output_parent = os.path.dirname(os.path.abspath(output_dir))
     if not os.path.isdir(output_parent):
         os.makedirs(output_parent)
     temp_dir = tempfile.mkdtemp(
