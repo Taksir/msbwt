@@ -358,7 +358,9 @@ def createFromSeqs(seqFNPrefix, offsetFN, mergedFN, numProcs, areUniform, logger
     if areUniform:
         totalSize = uniformLength*numSeqs
     else:
-        totalSize = offsetData[-1]
+        # M3-R-NPYHEADER: same scalar-normalization contract as the
+        # non-uniform writeSeqsToFiles fallback (see below).
+        totalSize = int(offsetData[-1])
     bwt = np.lib.format.open_memmap(mergedFN, 'w+', '<u1', (totalSize,))
     
     #initialize the count information
@@ -653,7 +655,10 @@ def writeSeqsToFiles(seqArray, seqFNPrefix, offsetFN, uniformLength):
         #count how many terminal '$' exist, 36 = '$'
         lenSums = np.add(1, np.where(seqArray == 36)[0])
         numSeqs = lenSums.shape[0]
-        totalLen = lenSums[-1]
+        # M3-R-NPYHEADER: normalize to a builtin int so the .npy header
+        # never embeds a NumPy-2 scalar repr (np.int64(N)) that numpy
+        # itself cannot parse back.
+        totalLen = int(lenSums[-1])
         
         #track the total length thus far and open the files we plan to fill in
         seqFN = seqFNPrefix+'.npy'
