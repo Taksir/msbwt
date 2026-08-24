@@ -40,8 +40,10 @@ BOUNDARIES = [
 def _run_snippet(code):
     snippet = (
         "import sys; "
-        "sys.path.insert(0, r'%s'); "
-        "sys.path.insert(0, r'%s');\n" % (PKG_ROOT, REPO_ROOT)
+        "sys.path[:0] = [r'%s', r'%s']; "
+        "import MUSCython; "
+        "assert MUSCython.__file__.startswith(r'%s'), MUSCython.__file__;\n"
+        % (PKG_ROOT, REPO_ROOT, PKG_ROOT)
     ) + code
     return subprocess.run(
         [sys.executable, "-c", snippet], capture_output=True, timeout=180)

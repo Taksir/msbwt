@@ -18,7 +18,8 @@ These tests prove, without allocating multi-GiB strings:
    empty-pattern short-circuit).
 2. *Ordinary semantics* -- the real production query entry points
    (countOccurrencesOfSeq / findIndicesOfStr / findStrWithError /
-   LCP-assisted counting) still agree with independent naive oracles on
+   countPileup / LCP-assisted counting / AlignmentUtil tracebacks) still
+   agree with independent naive or frozen-Modern2 oracles on
    empty, one-symbol, multi-symbol, absent and longer-than-read patterns
    over duplicate-heavy input, on both Byte BWT and RLE BWT readers.
 """
@@ -139,6 +140,16 @@ class LengthTransportBoundaryTests(unittest.TestCase):
             AlignmentUtil.sol_r1_align_length_transport("ACGT", "ACGT"),
             (4, 4, 5, 5))
 
+    def test_alignment_traceback_store_and_difference_boundaries(self):
+        for value in BOUNDARY_VALUES:
+            stored, difference, accumulated, itemsize = (
+                AlignmentUtil.sol_r1_traceback_width_transport(value))
+            self.assertEqual(
+                (stored, difference, accumulated),
+                (value, value, value),
+                value)
+            self.assertEqual(itemsize, 8)
+
 
 class ProductionQuerySemanticsTests(unittest.TestCase):
     """Ordinary (<2^32) query semantics unchanged after the width repair."""
@@ -201,6 +212,50 @@ class ProductionQuerySemanticsTests(unittest.TestCase):
         self.assertTrue(results)
         for low, high in results:
             self.assertLessEqual(int(low), int(high))
+
+    def test_count_pileup_str_and_bytes_match_independent_oracle(self):
+        seq = "ACGTAC"
+        kmer_size = 2
+        expected = []
+        for i in range(len(seq) - kmer_size + 1):
+            kmer = seq[i:i + kmer_size]
+            reverse = MSB.reverseComplement(kmer)
+            expected.append(
+                naive_overlapping_count(READS, kmer) +
+                naive_overlapping_count(READS, reverse))
+        expected = np.asarray(expected, dtype='<u8')
+        np.testing.assert_array_equal(
+            self.bwt.countPileup(seq, kmer_size), expected)
+        np.testing.assert_array_equal(
+            self.bwt.countPileup(seq.encode('ascii'), kmer_size), expected)
+
+
+class AlignmentSemanticsTests(unittest.TestCase):
+    """Traceback-width repair preserves frozen Modern2 ordinary outputs."""
+
+    CASES = [
+        ("", "", [], [(0, '=')], 0, 0),
+        ("A", "A", [(1, '=')], [(1, '=')], 0, 0),
+        ("A", "C", [(1, 'X')], [(1, 'X'), (0, '=')], 1, 1),
+        ("AC", "A", [(1, '='), (1, 'D')],
+         [(1, '='), (1, 'D'), (0, '=')], 1, 2),
+        ("A", "AC", [(1, '='), (1, 'I')],
+         [(1, '='), (1, 'I'), (0, '=')], 1, 2),
+        ("ACGT", "AGT", [(1, '='), (1, 'D'), (2, '=')],
+         [(1, '='), (1, 'D'), (2, '=')], 1, 1),
+    ]
+
+    def test_alignment_outputs_match_frozen_modern2(self):
+        for original, modified, cigar, cigar_no_go, score, changes in self.CASES:
+            self.assertEqual(
+                AlignmentUtil.fullAlign(original, modified), cigar)
+            self.assertEqual(
+                AlignmentUtil.fullAlign_noGO(original, modified),
+                cigar_no_go)
+            self.assertEqual(
+                int(AlignmentUtil.fullED_score(original, modified)), score)
+            self.assertEqual(
+                int(AlignmentUtil.alignChanges(original, modified)), changes)
 
 
 class LcpAssistedQueryTests(unittest.TestCase):
@@ -276,6 +331,23 @@ class RleReaderSemanticsTests(unittest.TestCase):
             expected = naive_overlapping_count(self.reads, pattern)
             observed = int(self.rle_bwt.countOccurrencesOfSeq(pattern))
             self.assertEqual(observed, expected, pattern)
+
+    def test_rle_count_pileup_matches_independent_oracle(self):
+        seq = "ACGTAC"
+        kmer_size = 2
+        expected = []
+        for i in range(len(seq) - kmer_size + 1):
+            kmer = seq[i:i + kmer_size]
+            reverse = MSB.reverseComplement(kmer)
+            expected.append(
+                naive_overlapping_count(self.reads, kmer) +
+                naive_overlapping_count(self.reads, reverse))
+        expected = np.asarray(expected, dtype='<u8')
+        np.testing.assert_array_equal(
+            self.rle_bwt.countPileup(seq, kmer_size), expected)
+        np.testing.assert_array_equal(
+            self.rle_bwt.countPileup(seq.encode('ascii'), kmer_size),
+            expected)
 
 
 if __name__ == "__main__":

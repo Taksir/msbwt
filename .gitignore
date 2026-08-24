@@ -13,3 +13,4 @@ packages/*/*.pyd
 packages/*/*.egg-info/
 packages/*/MUSCython/*.so
 packages/*/MUSCython/*.pyd
+reports/

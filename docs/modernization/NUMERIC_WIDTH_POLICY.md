@@ -25,7 +25,7 @@ unless the domain is provably small (see "narrow domains" below).
 | Run/merge/interleave position | byte/bit positions inside interleave or merge spans | [0, ~N] (bit positions up to 8N) | `int` | `<u8` | `np.uint64_t` | **NO** | interleave stays bit-packed `\|u1`; positions are compute-side only |
 | File/mmap offset | offset or size on disk | [0, 2^64) | `int` | `<u8` (comp_offsets.npy, quality offsets) | `np.uint64_t` / `size_t` | **NO** | offsets persisted `<Q`/`<u8` |
 | NumPy shape/index | array shape element, fancy index | [0, 2^64) | `int` (normalize via `int(x)` before header writes) | intp (64-bit on both target platforms) | `Py_ssize_t` (signed contexts) / `np.uint64_t` | NO (use fixed-width) | `.npy` headers serialize decimal text; normalize shapes with `int()` |
-| Signed length/difference | len(seq), kmerSize, numCounts, stack indexes, `end-start` sentinels | [-2^63, 2^63) | `int` | `<i8` | `Py_ssize_t` / `np.int64_t` | NO (use Py_ssize_t) | — |
+| Signed length/difference | len(seq), kmerSize, numCounts, traceback coordinates/differences, CIGAR run counts, stack indexes, `end-start` sentinels | [-2^63, 2^63) | `int` | `<i8` for in-memory traceback coordinates | `Py_ssize_t` / `np.int64_t` | NO (use Py_ssize_t) | traceback arrays are compute-only; no persisted format change |
 | Source ID | provenance source identifier | [0, number of sources) (bit-packed column) | `int` | bit-packed `\|u1` interleave; rank prefix `<u8` | `np.uint8_t` per row value; counts `np.uint64_t` | NO for counts | interleave format frozen |
 | Read ID / dollar ID | identity of one recovered string | [0, #reads) ⊂ [0, 2^64) | `int` | `<u8` fields (read_provenance mate id) | `np.uint64_t` | **NO** (future-proofing; ABI cannot express ≥2^32 reads otherwise) | read_provenance `<u8` fields unchanged |
 | Symbol/alphabet value | symbol-index byte | [0, vcLen) ⊂ [0, 255] | `int` | `\|u1` (msbwt.npy) | `np.uint8_t` | yes (byte-sized, but prefer uint8 for clarity) | msbwt.npy stays `\|u1` |
@@ -63,8 +63,8 @@ unless the domain is provably small (see "narrow domains" below).
    u1 file IDs), that is flagged as a separate compatibility-design decision,
    not silently changed here.
 8. Cross-platform requirement: the chosen types are fixed-width and identical
-   under Win64 LLP64 and Linux LP64. Linux runtime validation remains a
-   deferred gate (carried blocker); type choices are inherently portable.
+   under Win64 LLP64 and Linux LP64.  The complete source suite and installed
+   artifact boundary probes must pass on both platforms.
 
 ## Test-support probes
 
@@ -82,6 +82,9 @@ bwt_range_roundtrip(lo, hi)  # cpdef: values through the repaired bwtRange struc
 sol_r1_seq_length_transport(seq)  # M3-SOL-R1: len(seq) through the canonical
                          # Py_ssize_t length domain + descending loop bound;
                          # must preserve reported lengths >= 2**32 (Win64 probe)
+sol_r1_traceback_width_transport(coordinate)  # M3-SOL-R2: coordinate through
+                         # the production <i8 traceback store, Py_ssize_t
+                         # difference, and Py_ssize_t CIGAR accumulation
 ```
 
 A `SIZEOF_UNSIGNED_LONG != ctypes.sizeof(c_ulong)` failure proves a core
@@ -90,5 +93,6 @@ value is 4 -- which is exactly why `long`/`unsigned long` are forbidden for
 wide domains there; the R64/SOL-R1 repairs replaced them with fixed-width
 `np.uint64_t` / `Py_ssize_t`, so NO length/index/count scalar depends on the
 platform's `long` width anymore.  A compiled query whose reported pattern
-length >= 2**32 is truncated (`len % 2**32`) or treated as the empty pattern
-is an LLP64 length-domain defect and fails `test_m3_sol_r1_signed_lengths.py`.
+length >= 2**32 is truncated (`len % 2**32`) or treated as the empty pattern,
+or a traceback coordinate wraps while stored/differenced/accumulated, is an
+LLP64 length-domain defect and fails `test_m3_sol_r1_signed_lengths.py`.
