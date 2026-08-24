@@ -29,6 +29,29 @@ cpdef tuple bwt_range_roundtrip(np.uint64_t lo, np.uint64_t hi):
     r.h = hi
     return (r.l, r.h)
 
+# M3-SOL-R1 (SOL HIGH D1 repair): pattern/query LENGTH domain.  len(seq) and
+# every derived pattern-position scalar use the canonical signed length type
+# Py_ssize_t -- never 'long'/'unsigned long', which are 32-bit under Win64
+# LLP64 and silently wrapped reported lengths >= 2^32 to near-zero
+# (countOccurrencesOfSeq treated a 2**32 probe as the empty pattern).
+#
+# M3-SOL-R1 test-support probe: mirrors the exact scalar declarations,
+# transport ('s = len(seq)') and descending loop-bound arithmetic used by
+# countOccurrencesOfSeq/findIndicesOfStr, without dereferencing the sequence
+# buffer at hostile offsets.  Returns (observed_length, iterations_started):
+# an LLP64 narrowing would report len % 2**32 and zero iterations (the
+# empty-pattern short-circuit); the repaired signed path must preserve both.
+cpdef tuple sol_r1_seq_length_transport(object seq):
+    cdef Py_ssize_t s
+    cdef Py_ssize_t x
+    cdef Py_ssize_t started = 0
+    s = len(seq)
+    for x in range(s - 1, -1, -1):
+        started += 1
+        if started >= 3:
+            break
+    return (s, started)
+
 cpdef np.uint64_t stranded_max_alt_probe(np.uint64_t [:] lowArray_view,
                                          np.uint64_t [:] highArray_view):
     """M3-R64-W6 (audit A-1): mirrors findKTOtherStranded's alternative-symbol
@@ -138,8 +161,8 @@ cdef class BasicBWT(object):
         @return - an integer count of the number of times seq occurred in this BWT
         '''
         cdef np.uint64_t l, h
-        cdef long x
-        cdef unsigned long s
+        cdef Py_ssize_t x
+        cdef Py_ssize_t s
         cdef unsigned long c
         
         if givenRange == None:
@@ -176,8 +199,8 @@ cdef class BasicBWT(object):
         @return - a python range representing the start and end of the sequence in the bwt
         '''
         cdef np.uint64_t l, h
-        cdef unsigned long s
-        cdef long x
+        cdef Py_ssize_t s
+        cdef Py_ssize_t x
         cdef unsigned long c
         
         #initialize our search to the whole BWT
@@ -218,8 +241,8 @@ cdef class BasicBWT(object):
         
         cdef np.uint64_t l, h
         cdef np.uint64_t lc, hc
-        cdef unsigned long s
-        cdef long x
+        cdef Py_ssize_t s
+        cdef Py_ssize_t x
         cdef unsigned long c
         
         #initialize our search to the whole BWT
@@ -324,8 +347,8 @@ cdef class BasicBWT(object):
         
         cdef np.uint64_t l, h
         cdef np.uint64_t lc, hc
-        cdef unsigned long s
-        cdef long x, y
+        cdef Py_ssize_t s
+        cdef Py_ssize_t x, y
         cdef unsigned long c, altC
         
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(self.vcLen, ))
@@ -429,8 +452,8 @@ cdef class BasicBWT(object):
         
         cdef np.uint64_t l, h
         cdef np.uint64_t lc, hc
-        cdef unsigned long s
-        cdef long x, y
+        cdef Py_ssize_t s
+        cdef Py_ssize_t x, y
         cdef unsigned long c, altC
         
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(self.vcLen, ))
@@ -539,8 +562,8 @@ cdef class BasicBWT(object):
         
         cdef np.uint64_t l, h
         cdef np.uint64_t lc, hc
-        cdef unsigned long s
-        cdef long x, y
+        cdef Py_ssize_t s
+        cdef Py_ssize_t x, y
         cdef unsigned long c, altC
         
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(self.vcLen, ))
@@ -654,8 +677,8 @@ cdef class BasicBWT(object):
         cdef list ret = []
         
         cdef np.uint64_t l, h
-        cdef unsigned long s
-        cdef long x, y
+        cdef Py_ssize_t s
+        cdef Py_ssize_t x, y
         cdef unsigned long c, altC, seqC
         
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] lowArray = np.zeros(dtype='<u8', shape=(self.vcLen, ))
@@ -693,7 +716,7 @@ cdef class BasicBWT(object):
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
         cdef unsigned char * seq_view = _seq_b
         #initialize the stack
-        cdef long stackIndex = 0
+        cdef Py_ssize_t stackIndex = 0
         self.fillFmAtIndex(lowArray_view, l)
         self.fillFmAtIndex(highArray_view, h)
         for c in range(0, self.vcLen):
@@ -986,7 +1009,7 @@ cdef class BasicBWT(object):
         cdef np.ndarray[np.uint8_t, ndim=1, mode='c'] retConvert = np.zeros(dtype='<u1', shape=(len(retNums, )))
         cdef np.uint8_t [:] retConvert_arr = retConvert
         cdef unsigned long retVal
-        cdef unsigned long x
+        cdef Py_ssize_t x
         cdef Py_ssize_t retNumPos = len(retNums)-1
         for x in range(0, len(retNums)):
             retVal = retNums[retNumPos]
@@ -1017,15 +1040,15 @@ cdef class BasicBWT(object):
         @param kmerSize - the size of the k-mer to count
         @return - a numpy array of size (len(seq)-kmerSize+1) containing the counts
         '''
-        cdef long seqLen = len(seq)
-        cdef long numCounts = max(0, seqLen-kmerSize+1)
+        cdef Py_ssize_t seqLen = len(seq)
+        cdef Py_ssize_t numCounts = max(0, seqLen-kmerSize+1)
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.zeros(dtype='<u8', shape=(numCounts, ))
         cdef np.uint64_t [:] ret_view = ret
         
         cdef bytes subseq, subseqRevComp
         cdef bytes revCompSeq = MultiStringBWT.reverseComplement(seq)
         
-        cdef unsigned long x
+        cdef Py_ssize_t x
         for x in range(0, numCounts):
             subseq = seq[x:x+kmerSize]
             subseqRevComp = revCompSeq[seqLen-kmerSize-x:seqLen-x]
@@ -1045,7 +1068,7 @@ cdef class BasicBWT(object):
         @param kmerSize - the size of the k-mer to count
         @return - a numpy array of size (len(seq)-kmerSize+1) containing the counts
         '''
-        cdef long numCounts = max(0, len(seq)-kmerSize+1)
+        cdef Py_ssize_t numCounts = max(0, len(seq)-kmerSize+1)
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret
         cdef np.ndarray[np.int64_t, ndim=1, mode='c'] otherChoices
         (ret, otherChoices) = self.countStrandedSeqMatches(seq, kmerSize)
@@ -1053,7 +1076,7 @@ cdef class BasicBWT(object):
         cdef np.uint64_t [:] ret_view = ret
         cdef np.int64_t [:] otherChoices_view = otherChoices
         
-        cdef long x
+        cdef Py_ssize_t x
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] retRevComp
         cdef np.ndarray[np.int64_t, ndim=1, mode='c'] otherChoicesRevComp
         (retRevComp, otherChoicesRevComp) = self.countStrandedSeqMatches(MultiStringBWT.reverseComplement(seq), kmerSize)
@@ -1081,10 +1104,10 @@ cdef class BasicBWT(object):
         #get a view of the input
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
         cdef unsigned char * seq_view = _seq_b
-        cdef long s = len(seq)
+        cdef Py_ssize_t s = len(seq)
         
         #array size stuff
-        cdef long numCounts = s-kmerSize+1
+        cdef Py_ssize_t numCounts = s-kmerSize+1
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.zeros(dtype='<u8', shape=(max(0, numCounts), ))
         cdef np.uint64_t [:] ret_view = ret
         
@@ -1107,8 +1130,8 @@ cdef class BasicBWT(object):
         
         #other vars
         cdef unsigned long c, altC
-        cdef long x = len(seq)-1
-        cdef long y = 0
+        cdef Py_ssize_t x = len(seq)-1
+        cdef Py_ssize_t y = 0
         
         #now we start traversing
         for x in range(s-1, -1, -1):
@@ -1180,8 +1203,8 @@ cdef class BasicBWT(object):
         @return - a python range representing the start and end of the sequence in the bwt
         '''
         cdef bwtRange ret
-        cdef unsigned long s
-        cdef long x
+        cdef Py_ssize_t s
+        cdef Py_ssize_t x
         cdef unsigned long c
         
         #initialize our search to the whole BWT
@@ -1208,8 +1231,8 @@ cdef class BasicBWT(object):
         @param kmerSize - the size of the k-mer to count
         @return - a numpy array of size (len(seq)-kmerSize+1) containing the counts
         '''
-        cdef long seqLen = len(seq)
-        cdef long numCounts = max(0, seqLen-kmerSize+1)
+        cdef Py_ssize_t seqLen = len(seq)
+        cdef Py_ssize_t numCounts = max(0, seqLen-kmerSize+1)
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.zeros(dtype='<u8', shape=(numCounts, ))
         cdef np.uint64_t [:] ret_view = ret
         
@@ -1221,7 +1244,7 @@ cdef class BasicBWT(object):
         cdef unsigned char * seq_view = _seq_b
         cdef bytes _revCompSeq_b = revCompSeq if isinstance(revCompSeq, bytes) else revCompSeq.encode('ascii')
         cdef unsigned char * revCompSeq_view = _revCompSeq_b
-        cdef unsigned long x
+        cdef Py_ssize_t x
         for x in range(0, numCounts):
             #subseq = seq[x:x+kmerSize]
             #subseqRevComp = revCompSeq[seqLen-kmerSize-x:seqLen-x]
@@ -1232,7 +1255,7 @@ cdef class BasicBWT(object):
         
         return ret
     
-    cdef np.uint64_t countOccurrencesOfSeq_c(BasicBWT self, unsigned char * seq_view, np.uint64_t seqLen, np.uint64_t mc=1):
+    cdef np.uint64_t countOccurrencesOfSeq_c(BasicBWT self, unsigned char * seq_view, Py_ssize_t seqLen, np.uint64_t mc=1):
         '''
         This function counts the number of occurrences of the given sequence so long as the number of occurrences is >= mc;
         essentially lets you exit early if the value is smaller than some meaningful threshold "mc"
@@ -1251,7 +1274,7 @@ cdef class BasicBWT(object):
         ret.h = self.totalSize
         
         #create a view of the sequence that can be used in a nogil region
-        cdef long x
+        cdef Py_ssize_t x
         for x in range(seqLen-1, -1, -1):
             #get the character from the sequence, then search at both high and low
             c = self.charToNum_view[seq_view[x]]
@@ -1271,7 +1294,7 @@ cdef class BasicBWT(object):
         cdef np.uint64_t ret = 0
         return ret
     
-    cdef bwtRange findRangeOfStr_c(BasicBWT self, unsigned char * seq_view, np.uint64_t seqLen):
+    cdef bwtRange findRangeOfStr_c(BasicBWT self, unsigned char * seq_view, Py_ssize_t seqLen):
         '''
         This function will search for a string and find the location of that string OR the last index less than it. It also
         will start its search within a given range instead of the whole structure
@@ -1280,7 +1303,7 @@ cdef class BasicBWT(object):
         @return - a python range representing the start and end of the sequence in the bwt
         '''
         cdef bwtRange ret
-        cdef long x
+        cdef Py_ssize_t x
         cdef unsigned long c
         
         #initialize our search to the whole BWT
@@ -1309,10 +1332,10 @@ cdef class BasicBWT(object):
         #get a view of the input
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
         cdef unsigned char * seq_view = _seq_b
-        cdef long s = len(seq)
+        cdef Py_ssize_t s = len(seq)
         
         #array size stuff
-        cdef long numCounts = s-kmerSize+1
+        cdef Py_ssize_t numCounts = s-kmerSize+1
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.zeros(dtype='<u8', shape=(max(0, numCounts), ))
         cdef np.uint64_t [:] ret_view = ret
         
@@ -1335,8 +1358,8 @@ cdef class BasicBWT(object):
         
         #other vars
         cdef unsigned long c
-        cdef long x = len(seq)-1
-        cdef long y = 0
+        cdef Py_ssize_t x = len(seq)-1
+        cdef Py_ssize_t y = 0
         
         #now we start traversing
         for x in range(s-1, -1, -1):
@@ -1408,13 +1431,13 @@ cdef class BasicBWT(object):
                             if False, it counts forward strand and reverse-complement strand and adds them together
         @return - a numpy array of size (len(seq)-kmerSize+1) containing the counts
         '''
-        cdef long numCounts = len(seq)
+        cdef Py_ssize_t numCounts = len(seq)
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret
         ret = self.findKmerThresholdStranded(seq, threshold)
         
         cdef np.uint64_t [:] ret_view = ret
         
-        cdef long x
+        cdef Py_ssize_t x
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] retRevComp
         retRevComp = self.findKmerThresholdStranded(MultiStringBWT.reverseComplement(seq), threshold)
         
@@ -1440,10 +1463,10 @@ cdef class BasicBWT(object):
         #get a view of the input
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
         cdef unsigned char * seq_view = _seq_b
-        cdef unsigned long s = len(seq)
+        cdef Py_ssize_t s = len(seq)
         
         #array size stuff
-        cdef long numCounts = s
+        cdef Py_ssize_t numCounts = s
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] rightRet = np.zeros(dtype='<u8', shape=(numCounts, ))
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] leftRet = np.zeros(dtype='<u8', shape=(numCounts, ))
         cdef np.uint64_t [:] rightRet_view = rightRet
@@ -1464,8 +1487,8 @@ cdef class BasicBWT(object):
         
         #other vars
         cdef unsigned long c, altC
-        cdef long x = len(seq)-1
-        cdef long y = 0
+        cdef Py_ssize_t x = len(seq)-1
+        cdef Py_ssize_t y = 0
         
         #now we start traversing
         for x in range(s-1, -1, -1):
@@ -1518,10 +1541,10 @@ cdef class BasicBWT(object):
         #get a view of the input
         cdef bytes _seq_b = seq if isinstance(seq, bytes) else seq.encode('ascii')
         cdef unsigned char * seq_view = _seq_b
-        cdef unsigned long s = len(seq)
+        cdef Py_ssize_t s = len(seq)
         
         #array size stuff
-        cdef long numCounts = s
+        cdef Py_ssize_t numCounts = s
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.zeros(dtype='<u8', shape=(numCounts, ))
         cdef np.uint64_t [:] ret_view = ret
         
@@ -1542,8 +1565,8 @@ cdef class BasicBWT(object):
         
         #other vars
         cdef unsigned long c, altC
-        cdef long x = len(seq)-1
-        cdef long y = 0
+        cdef Py_ssize_t x = len(seq)-1
+        cdef Py_ssize_t y = 0
 
         # M3-R64-W6 (audit A-1): these hold FM interval WIDTHS derived from the
         # uint64 low/high arrays and can validly exceed 2^32-1; the former

@@ -95,9 +95,9 @@ cdef class BasicBWT(object):
     cdef bwtRange getOccurrenceOfCharAtRange(BasicBWT self, np.uint8_t sym, bwtRange inRange) nogil
     cdef bwtRange findRangeOfStr(BasicBWT self, object seq)
     cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] countPileup_c(BasicBWT self, object seq, Py_ssize_t kmerSize)
-    cdef np.uint64_t countOccurrencesOfSeq_c(BasicBWT self, unsigned char * seq_view, np.uint64_t seqLen, np.uint64_t mc=*)
+    cdef np.uint64_t countOccurrencesOfSeq_c(BasicBWT self, unsigned char * seq_view, Py_ssize_t seqLen, np.uint64_t mc=*)
     cdef np.uint64_t getOccurrenceOfCharAtIndex_c(BasicBWT self, np.uint8_t sym, np.uint64_t index)
-    cdef bwtRange findRangeOfStr_c(BasicBWT self, unsigned char * seq_view, np.uint64_t seqLen)
+    cdef bwtRange findRangeOfStr_c(BasicBWT self, unsigned char * seq_view, Py_ssize_t seqLen)
     
     #the following functions require an LCP array
     cpdef tuple countSeqMatches(BasicBWT self, object seq, Py_ssize_t kmerSize)

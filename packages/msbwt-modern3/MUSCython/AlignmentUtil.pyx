@@ -7,6 +7,25 @@
 import numpy as np
 cimport numpy as np
 
+# M3-SOL-R1 (SOL HIGH D1 repair): sequence/string LENGTH domain.  oLen/mLen
+# come from len(original)/len(modified) and use the canonical signed length
+# type Py_ssize_t -- never 'long'/'unsigned long', which are 32-bit under
+# Win64 LLP64 and silently wrapped reported lengths >= 2**32.  Scoring
+# constants, matrix coordinates bounded by the allocated DP array, and
+# CIGAR run counters remain narrow per docs/modernization/NUMERIC_WIDTH_POLICY.md.
+
+cpdef tuple sol_r1_align_length_transport(object original, object modified):
+    """M3-SOL-R1 test-support probe: mirrors the exact scalar declarations and
+    transport ('oLen = len(original)') used by every AlignmentUtil DP entry
+    point, without allocating a hostile-size score matrix.  Returns the
+    observed (oLen, mLen, oLen+1, mLen+1); an LLP64 narrowing through 32-bit
+    'unsigned long' would report len % 2**32."""
+    cdef Py_ssize_t oLen
+    cdef Py_ssize_t mLen
+    oLen = len(original)
+    mLen = len(modified)
+    return (oLen, mLen, oLen + 1, mLen + 1)
+
 def fullAlign(object original, object modified):
     '''
     This version checks for matches, mismatches, and indels with a GAP_OPEN cost
@@ -18,8 +37,8 @@ def fullAlign(object original, object modified):
     cdef unsigned long GAP_EXTEND = 3
     
     #get the string sizes
-    cdef unsigned long oLen = len(original)
-    cdef unsigned long mLen = len(modified)
+    cdef Py_ssize_t oLen = len(original)
+    cdef Py_ssize_t mLen = len(modified)
     
     '''
     initialize the scores
@@ -38,7 +57,7 @@ def fullAlign(object original, object modified):
     cdef np.ndarray[np.uint8_t, ndim=3, mode='c'] previousPos = np.zeros(dtype='<u1', shape=(oLen+1, mLen+1, 3))
     cdef np.uint8_t [:, :, :] previousPos_view = previousPos
     
-    cdef unsigned long x, y, z
+    cdef Py_ssize_t x, y, z
     for x in range(1, oLen+1):
         scoreArray_view[x, 0, 1] = GAP_OPEN+x*GAP_EXTEND
         previousPos_view[x, 0, 1] = 1
@@ -116,7 +135,7 @@ def fullAlign(object original, object modified):
     
     cdef unsigned long numMatches = 0
     cdef list cig = []
-    cdef unsigned long nextX, nextY
+    cdef Py_ssize_t nextX, nextY
     cdef unsigned long instructionType = MATCH_T
     cdef unsigned long instructionCount = 0
     cdef unsigned long currType
@@ -178,8 +197,8 @@ cpdef unsigned long fullED_score(object original, object modified):
     cdef unsigned long GAP_EXTEND = 1
     
     #get the string sizes
-    cdef unsigned long oLen = len(original)
-    cdef unsigned long mLen = len(modified)
+    cdef Py_ssize_t oLen = len(original)
+    cdef Py_ssize_t mLen = len(modified)
     
     cdef np.ndarray[np.uint32_t, ndim=3, mode='c'] scoreArray = np.empty(dtype='<u4', shape=(oLen+1, mLen+1, 3))
     cdef np.uint32_t [:, :, :] scoreArray_view = scoreArray
@@ -192,7 +211,7 @@ cpdef unsigned long fullED_score(object original, object modified):
     cdef np.ndarray[np.uint8_t, ndim=3, mode='c'] previousPos = np.zeros(dtype='<u1', shape=(oLen+1, mLen+1, 3))
     cdef np.uint8_t [:, :, :] previousPos_view = previousPos
     
-    cdef unsigned long x, y, z
+    cdef Py_ssize_t x, y, z
     for x in range(1, oLen+1):
         scoreArray_view[x, 0, 1] = GAP_OPEN+x*GAP_EXTEND
         previousPos_view[x, 0, 1] = 1
@@ -271,8 +290,11 @@ cpdef unsigned long fullED_score(object original, object modified):
     return scoreArray_view[oLen, mLen, choice]
 
 cdef struct scoreLen:
-    unsigned long ed
-    unsigned long length
+    # M3-SOL-R1: 'length' is the clipped sequence-length result; 'ed' is the
+    # uint32-bounded edit-distance score.  Both are carried in the canonical
+    # signed 64-bit return domain so no LLP64 narrowing can occur.
+    Py_ssize_t ed
+    Py_ssize_t length
 
 cpdef scoreLen fullED_minimize(object original, object modified):
     '''
@@ -291,8 +313,8 @@ cpdef scoreLen fullED_minimize(object original, object modified):
     cdef unsigned long GAP_EXTEND = 1
     
     #get the string sizes
-    cdef unsigned long oLen = len(original)
-    cdef unsigned long mLen = len(modified)
+    cdef Py_ssize_t oLen = len(original)
+    cdef Py_ssize_t mLen = len(modified)
     
     cdef np.ndarray[np.uint32_t, ndim=3, mode='c'] scoreArray = np.empty(dtype='<u4', shape=(oLen+1, mLen+1, 3))
     cdef np.uint32_t [:, :, :] scoreArray_view = scoreArray
@@ -305,7 +327,7 @@ cpdef scoreLen fullED_minimize(object original, object modified):
     cdef np.ndarray[np.uint8_t, ndim=3, mode='c'] previousPos = np.zeros(dtype='<u1', shape=(oLen+1, mLen+1, 3))
     cdef np.uint8_t [:, :, :] previousPos_view = previousPos
     
-    cdef unsigned long x, y, z
+    cdef Py_ssize_t x, y, z
     for x in range(1, oLen+1):
         scoreArray_view[x, 0, 1] = GAP_OPEN+x*GAP_EXTEND
         previousPos_view[x, 0, 1] = 1
@@ -375,9 +397,9 @@ cpdef scoreLen fullED_minimize(object original, object modified):
             previousPos_view[x, y, 2] = choice
     
     #we want the last occurrence of the minimum, hence the [::-1]
-    cdef unsigned long argmin0 = mLen-np.argmin(scoreArray[oLen, :, 0][::-1])
-    cdef unsigned long argmin1 = mLen-np.argmin(scoreArray[oLen, :, 1][::-1])
-    cdef unsigned long argmin2 = mLen-np.argmin(scoreArray[oLen, :, 2][::-1])
+    cdef Py_ssize_t argmin0 = mLen-np.argmin(scoreArray[oLen, :, 0][::-1])
+    cdef Py_ssize_t argmin1 = mLen-np.argmin(scoreArray[oLen, :, 1][::-1])
+    cdef Py_ssize_t argmin2 = mLen-np.argmin(scoreArray[oLen, :, 2][::-1])
     
     cdef scoreLen ret
     if scoreArray_view[oLen, argmin0, 0] < scoreArray_view[oLen, argmin1, 1]:
@@ -405,8 +427,8 @@ def fullAlign_noGO(object original, object modified):
     cdef unsigned long GAP_EXTEND = 1
     
     #get the string sizes
-    cdef unsigned long oLen = len(original)
-    cdef unsigned long mLen = len(modified)
+    cdef Py_ssize_t oLen = len(original)
+    cdef Py_ssize_t mLen = len(modified)
     
     #initialize the scores
     cdef np.ndarray[np.uint32_t, ndim=2, mode='c'] scoreArray = np.empty(dtype='<u4', shape=(oLen+1, mLen+1))
@@ -418,7 +440,7 @@ def fullAlign_noGO(object original, object modified):
     cdef np.ndarray[np.uint32_t, ndim=3, mode='c'] previousPos = np.zeros(dtype='<u4', shape=(oLen+1, mLen+1, 2))
     cdef np.uint32_t [:, :, :] previousPos_view = previousPos
     
-    cdef unsigned long x, y, z
+    cdef Py_ssize_t x, y, z
     for x in range(1, oLen+1):
         scoreArray_view[x, 0] = x*GAP_EXTEND
         previousPos_view[x, 0, 0] = x-1
@@ -473,7 +495,7 @@ def fullAlign_noGO(object original, object modified):
     
     cdef unsigned long numMatches = 0
     cdef list cig = []
-    cdef unsigned long nextX, nextY
+    cdef Py_ssize_t nextX, nextY
     cdef unsigned long instructionType = MATCH_T
     cdef unsigned long instructionCount = 0
     cdef unsigned long currType
@@ -537,8 +559,8 @@ cpdef unsigned long alignChanges(object original, object modified):
     cdef unsigned long GAP_EXTEND = 1
     
     #get the string sizes
-    cdef unsigned long oLen = len(original)
-    cdef unsigned long mLen = len(modified)
+    cdef Py_ssize_t oLen = len(original)
+    cdef Py_ssize_t mLen = len(modified)
     
     #if oLen != mLen:
     #    raise Exception("Indels not handled right now")
@@ -549,7 +571,7 @@ cpdef unsigned long alignChanges(object original, object modified):
     scoreArray[:] = 0xFFFFFFFF
     scoreArray_view[0, 0] = 0
     
-    cdef unsigned long x, y, z
+    cdef Py_ssize_t x, y, z
     for x in range(1, oLen+1):
         scoreArray_view[x, 0] = x*GAP_EXTEND
     for x in range(1, mLen+1):

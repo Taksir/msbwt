@@ -991,7 +991,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         cdef np.uint64_t l = 0
         cdef np.uint64_t h = self.totalSize
         cdef Py_ssize_t s = len(seq)
-        cdef long x, y
+        cdef Py_ssize_t x, y
         cdef unsigned long c
         
         cdef np.uint64_t newL
@@ -1074,7 +1074,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         cdef np.uint64_t lc, hc
         
         cdef Py_ssize_t s = len(seq)
-        cdef long x, y, z
+        cdef Py_ssize_t x, y, z
         cdef unsigned long c, c2
         
         cdef unsigned long altC
@@ -1249,7 +1249,7 @@ cdef class RLE_BWT(BasicBWT.BasicBWT):
         cdef np.uint64_t l = 0
         cdef np.uint64_t h = self.totalSize
         cdef Py_ssize_t s = len(seq)
-        cdef long x, y, z, i
+        cdef Py_ssize_t x, y, z, i
         cdef unsigned long c
         
         cdef np.uint64_t newL

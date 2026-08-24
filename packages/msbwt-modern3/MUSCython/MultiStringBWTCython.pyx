@@ -241,14 +241,14 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
     
     cdef np.uint64_t tempFileId = 0
     cdef np.uint64_t seqsPerFile = 10000000
-    cdef long maxSeqLen = -1
+    cdef Py_ssize_t maxSeqLen = -1
     cdef np.uint64_t numSeqs = 0
     
     cdef list subSortFNs = []
     cdef np.uint64_t fnID
     cdef np.uint64_t i
     
-    cdef long uniformSeqLen = -1
+    cdef Py_ssize_t uniformSeqLen = -1
     cdef np.ndarray tempArray
     
     for fnID, fn in enumerate(fastqFNs):
@@ -476,9 +476,9 @@ def preprocessFastas(fastaFNs, outputDir, areUniform, logger):
     #TODO: make the seqPerFile work better for when they aren't uniform
     cdef np.uint64_t tempFileId = 0
     cdef np.uint64_t seqsPerFile = 10000000
-    cdef long maxSeqLen = -1
+    cdef Py_ssize_t maxSeqLen = -1
     cdef np.uint64_t numSeqs = 0
-    cdef long uniformSeqLen = -1
+    cdef Py_ssize_t uniformSeqLen = -1
     
     cdef list subSortFNs = []
     cdef np.uint64_t fnID
