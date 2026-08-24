@@ -48,10 +48,17 @@ historical audit records only.
 
 ## Validation evidence
 
-- Source-tree compatibility suite at the final repaired HEAD: Windows
-  728 passed / 1 skipped; Linux 722 passed / 7 environment-dependent
-  failures reproduced identically at the unrepaired baseline (22
-  subtests each).
+- Source-tree compatibility suite at the current repaired HEAD: Windows
+  full suite green; Linux full suite green in a CLEAN layout.  The
+  authoritative Linux result is the clean-layout run (the earlier
+  "722 passed / 7 environment-dependent failures" summary came from a
+  checkout polluted by legacy root-level binaries and is superseded
+  historical evidence only).  Exact counts for this candidate are recorded
+  in `release-candidate/` release evidence and M3-SOL-R1 test logs; the
+  single documented skips are the native-Windows memmap/file-lifecycle case
+  and, on artifact-present Linux layouts, one frozen-modern2
+  platform-dependent artifact check (a Windows cp27 wheel cannot satisfy a
+  Linux extension-suffix assertion and is unrelated to Modern3 runtime).
 - Fresh-environment installs of both wheels and the sdist pass a
   15-check feature battery on both platforms (construction from
   FASTA/FASTQ, byte/RLE round trips, merge + provenance, exact quality,

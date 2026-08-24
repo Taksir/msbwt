@@ -68,14 +68,27 @@ unless the domain is provably small (see "narrow domains" below).
 
 ## Test-support probes
 
-Core modules expose two cheap compiled probes so tests can prove width at real
+Core modules expose cheap compiled probes so tests can prove width at real
 Cython boundaries without allocating large structures:
 
 ```text
-SIZEOF_UNSIGNED_LONG     # module-level constant: sizeof(unsigned long); must be 8 on win_amd64 after R64-1
+SIZEOF_UNSIGNED_LONG     # module-level constant: sizeof(unsigned long).
+                         # Platform data model, NOT a repair target:
+                         # LLP64 win_amd64 reports 4; LP64 linux_x86_64
+                         # reports 8.  The committed test compares it with
+                         # ctypes.sizeof(c_ulong) of the running interpreter.
 u64_roundtrip(v)         # cpdef: np.uint64_t -> arithmetic (*3+7) -> np.uint64_t return
 bwt_range_roundtrip(lo, hi)  # cpdef: values through the repaired bwtRange struct
+sol_r1_seq_length_transport(seq)  # M3-SOL-R1: len(seq) through the canonical
+                         # Py_ssize_t length domain + descending loop bound;
+                         # must preserve reported lengths >= 2**32 (Win64 probe)
 ```
 
-A `SIZEOF_UNSIGNED_LONG != 8` assertion failure on win_amd64 proves some core
-module was built against stale (32-bit `long`) declarations.
+A `SIZEOF_UNSIGNED_LONG != ctypes.sizeof(c_ulong)` failure proves a core
+module was built against a mismatched data model.  On win_amd64 the correct
+value is 4 -- which is exactly why `long`/`unsigned long` are forbidden for
+wide domains there; the R64/SOL-R1 repairs replaced them with fixed-width
+`np.uint64_t` / `Py_ssize_t`, so NO length/index/count scalar depends on the
+platform's `long` width anymore.  A compiled query whose reported pattern
+length >= 2**32 is truncated (`len % 2**32`) or treated as the empty pattern
+is an LLP64 length-domain defect and fails `test_m3_sol_r1_signed_lengths.py`.
