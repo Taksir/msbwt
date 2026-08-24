@@ -48,22 +48,21 @@ historical audit records only.
 
 ## Validation evidence
 
-- Source-tree compatibility suite at the current repaired HEAD: Windows
-  full suite green; Linux full suite green in a CLEAN layout.  The
-  authoritative Linux result is the clean-layout run (the earlier
-  "722 passed / 7 environment-dependent failures" summary came from a
-  checkout polluted by legacy root-level binaries and is superseded
-  historical evidence only).  Exact counts for this candidate are recorded
-  in `release-candidate/` release evidence and M3-SOL-R1 test logs; the
-  single documented skips are the native-Windows memmap/file-lifecycle case
-  and, on artifact-present Linux layouts, one frozen-modern2
-  platform-dependent artifact check (a Windows cp27 wheel cannot satisfy a
-  Linux extension-suffix assertion and is unrelated to Modern3 runtime).
-- Fresh-environment installs of both wheels and the sdist pass a
-  15-check feature battery on both platforms (construction from
-  FASTA/FASTQ, byte/RLE round trips, merge + provenance, exact quality,
-  source removal, LCP, benchmarking, BAM rejection, cross-process
-  reopen).
+- Source-tree compatibility suite at the M3-SOL-R1 repaired HEAD:
+  Windows `743 passed / 1 skipped` and clean-layout Linux
+  `742 passed / 2 skipped` (22 subtests each).  Both counts are +15 over
+  the accepted pre-SOL-R1 baseline (728/727): exactly the new
+  length-domain/oracle-integrity regressions.  The single Windows skip is
+  the documented memmap/file-lifecycle platform case; the second Linux
+  skip is the frozen-modern2 built-artifact check taking its no-artifacts
+  branch in a clean layout.  The earlier "722 passed / 7
+  environment-dependent failures" summary came from a checkout polluted by
+  legacy root-level binaries and is superseded historical evidence only.
+- Fresh-environment installs of both wheels and the sdist pass the
+  installed battery on both platforms (construction from FASTQ, byte/RLE
+  round trips, provenance-preserving merge, query/-d semantics, exact LCP
+  construct/validate, source removal with input immutability, BAM
+  rejection, and the >2^32 compiled length-boundary probes).
 - Cross-platform persistence spot check: a package built by the
   installed Windows wheel consumed by the installed Linux wheel
   (and reverse) preserves payload hashes, recovery results, RLE bytes,
