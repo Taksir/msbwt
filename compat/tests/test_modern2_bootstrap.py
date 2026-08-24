@@ -199,9 +199,15 @@ class Python2CompatibilityTests(unittest.TestCase):
         assert_source_within_acceptance(self, "MUS/util.py")
 
     def test_acceptance_checker_rejects_unauthorized_drift(self):
-        # Hostile regression: prove the acceptance helper actually rejects
-        # unauthorized drift for both deviation files, using throwaway copies
-        # of the frozen/modern trees (Modern2 production source is untouched).
+        # Hostile regression (M3-R64-W6; hardened by M3-SOL-R1): prove the
+        # acceptance helper enforces EXACT accepted identity using throwaway
+        # copies of the real modern2 tree (Modern2 production source is
+        # untouched).  The former set-membership guard accepted duplicated,
+        # relocated or reordered allowlisted lines; the pinned-digest guard
+        # must reject every one of those transformations.
+        import shutil
+        import tempfile
+
         import modern2_source_acceptance as acceptance
 
         class StrictCase(object):
@@ -216,56 +222,79 @@ class Python2CompatibilityTests(unittest.TestCase):
                 if expr:
                     raise AssertionError(msg or "expected false")
 
-        def build(rel_path, modern_lines):
-            import shutil
-            import tempfile
-            work = Path(tempfile.mkdtemp(prefix="m3r64w6-acceptance-"))
-            self.addCleanup(shutil.rmtree, str(work), True)
-            frozen = work / "repo" / rel_path
-            modern = work / "pkg" / rel_path
-            frozen.parent.mkdir(parents=True)
-            modern.parent.mkdir(parents=True)
-            frozen.write_bytes(b"line-one\nline-two\n")
-            modern.write_bytes("".join(line + "\n"
-                                       for line in modern_lines).encode())
-            return StrictCase(work / "repo", work / "pkg")
+            def assertEqual(self, left, right, msg=None):
+                if left != right:
+                    raise AssertionError(msg or "expected equal")
 
-        key_map = {
-            "MUS/util.py": ("ACCEPTED_ADDED_MUS_UTIL_PY",
-                            "ACCEPTED_REMOVED_MUS_UTIL_PY"),
-            "MUS/MSBWTGen.py": ("ACCEPTED_ADDED_MUS_MSBWTGEN_PY",
-                                "ACCEPTED_REMOVED_MUS_MSBWTGEN_PY"),
+        rel_path = "MUS/util.py"
+        expected_digest = acceptance.ACCEPTED_SHA256[rel_path]
+        # Frozen original (same resolution as the guard's own fallback:
+        # the root-level MUS tree is the frozen oracle checkout).
+        frozen_src = REPOSITORY_ROOT / "MUS" / "util.py"
+        self.assertTrue(frozen_src.exists())
+        original_lines = ((PACKAGE / rel_path).read_bytes()
+                          .replace(b"\r\n", b"\n").decode("utf-8")
+                          .split("\n"))
+        if original_lines and original_lines[-1] == "":
+            original_lines.pop()
+
+        # An allowlisted code line that really occurs in the accepted file.
+        dup_line = next(line for line in original_lines
+                        if line.strip() == "os.fsync(fp.fileno())")
+        self.assertIn(dup_line, acceptance.ACCEPTED_ADDED_MUS_UTIL_PY)
+
+        mutations = {
+            "unapproved-add": ["AUDIT_MUTATION_UNAPPROVED = 1"]
+                              + original_lines,
+            "deletion": original_lines[1:],
+            "modification": [original_lines[0] + "  # unauthorized tweak"]
+                             + original_lines[1:],
+            "duplicate-allowlisted-line": ([dup_line] + original_lines),
+            "relocate-allowlisted-line": (original_lines[1:]
+                                           + [original_lines[0]]),
+            "reorder": ([original_lines[0], original_lines[2],
+                         original_lines[1]] + original_lines[3:]),
         }
-        for rel_path, (added_key, removed_key) in key_map.items():
-            accepted_added = sorted(getattr(acceptance, added_key))[:1]
-            self.assertTrue(accepted_added, added_key)
-            approved = ["line-one", "line-two"] + accepted_added
 
-            # approved-only deviation passes
-            assert_source_within_acceptance(build(rel_path, approved),
-                                            rel_path)
+        def build(modern_bytes):
+            work = Path(tempfile.mkdtemp(prefix="m3solr1-oracle-"))
+            self.addCleanup(shutil.rmtree, str(work), True)
+            frozen_root = work / "repo"
+            pkg_root = work / "pkg"
+            (pkg_root / "MUS").mkdir(parents=True)
+            frozen_dir = frozen_root / "MUS"
+            frozen_dir.mkdir(parents=True)
+            if frozen_src.exists():
+                shutil.copyfile(frozen_src, frozen_dir / "util.py")
+            (pkg_root / rel_path).write_bytes(modern_bytes)
+            return StrictCase(frozen_root, pkg_root)
 
-            # an arbitrary added line fails
-            with_drift = approved + ["AUDIT_MUTATION_UNAPPROVED = 1"]
-            with self.assertRaises(AssertionError):
-                assert_source_within_acceptance(build(rel_path, with_drift),
-                                                rel_path)
+        def lines_to_bytes(lines):
+            return "".join(line + "\n" for line in lines).encode("utf-8")
 
-            # modifying an accepted-modern line to unapproved text fails
-            mutated = ["line-one", "line-two",
-                       accepted_added[0] + "  # unauthorized tweak"]
-            with self.assertRaises(AssertionError):
-                assert_source_within_acceptance(build(rel_path, mutated),
-                                                rel_path)
+        # The unmodified real accepted state passes BOTH gates.
+        assert_source_within_acceptance(
+            build(lines_to_bytes(original_lines)), rel_path)
 
-            # deleting a frozen line outside ACCEPTED_REMOVED_* fails
-            accepted_removed = sorted(getattr(acceptance, removed_key))
-            deletion_target = ("line-two" if "line-two"
-                               not in accepted_removed else "line-one")
-            deleted = [ln for ln in approved if ln != deletion_target]
-            with self.assertRaises(AssertionError):
-                assert_source_within_acceptance(build(rel_path, deleted),
-                                                rel_path)
+        # CRLF re-encoding of the identical content must still pass: the
+        # pin is deliberately checkout-line-ending independent.
+        assert_source_within_acceptance(
+            build(("\r\n".join(original_lines) + "\r\n").encode("utf-8")),
+            rel_path)
+
+        # Every hostile transformation must fail.
+        for label, mutated in mutations.items():
+            with self.assertRaises(AssertionError, msg=label):
+                assert_source_within_acceptance(
+                    build(lines_to_bytes(mutated)), rel_path)
+
+        # Direct primitive check: digest mismatch is detected even when the
+        # caller only has raw bytes (no files involved).
+        with self.assertRaises(AssertionError):
+            acceptance.assert_exact_accepted_content(
+                self, b"tampered\n", expected_digest, rel_path)
+        acceptance.assert_exact_accepted_content(
+            self, lines_to_bytes(original_lines), expected_digest, rel_path)
 
     def test_pyx_files_carry_language_level_2(self):
         for name in MIGRATED_MODULES:

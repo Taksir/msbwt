@@ -1,10 +1,31 @@
 """Accepted frozen->modern2 source-diff whitelist (M3-R64-W5 rebaseline).
 
 The frozen original under ``MUS``/``MUSCython`` remains the untouched oracle;
-``packages/msbwt-modern2`` may differ ONLY by the line sets below.  Every
-accepted line is backed by a documented compatibility entry
-(``COMPATIBILITY.md`` milestones 3-9 / W-* entries) or an accepted
-Windows-portability repair:
+``packages/msbwt-modern2`` may differ from it ONLY by the line sets below,
+and its exact accepted content is additionally PINNED by SHA-256.
+
+Enforcement model (M3-SOL-R1, SOL HIGH finding D2 -- the former set-membership
+guard accepted duplicated/relocated/reordered allowlisted lines):
+
+1. EXACT IDENTITY (primary gate): every modern2 file with accepted
+   deviations must hash, after LF normalization (CRLF -> LF; deliberately
+   platform-neutral so the guard never depends on checkout line endings),
+   to its entry in ``ACCEPTED_SHA256`` below.  Any added line, deleted line,
+   modified line, duplicated allowlisted line, relocated allowlisted line,
+   or reordered hunk changes the digest and fails.
+2. CLOSED LINE SETS (documentation gate): the unified diff against the
+   frozen original must still stay inside the per-file sets below, so a
+   digest re-baseline can never silently authorize undocumented drift.
+
+Provenance of ``ACCEPTED_SHA256``: computed over the committed
+``packages/msbwt-modern2`` tree at HEAD ``a0422ef`` on branch
+``enhanced-modern3``, which is byte-identical (after LF normalization) to
+the annotated release tag ``msbwt-enhanced-modern2-0.3.0`` (tag object
+``aecce33539f16d01e12e7200018c0cd66b2d9148``; commit ``746cf93``) -- the
+state validated by the Modern2 milestone suites and confirmed diff-free
+against that tag.  Every accepted line is backed by a documented
+compatibility entry (``COMPATIBILITY.md`` milestones 3-9 / W-* entries) or
+an accepted Windows-portability repair:
 
   * milestone 3-6 reader index/count corrections (int() conversions,
     np.add.at float64-bincount replacement)
@@ -15,9 +36,8 @@ Windows-portability repair:
   * Windows-portability ``np.save()`` .npy-header normalization
     (``_int_shape`` helper + open_memmap), byte-identical to Linux
 
-Any FUTURE modern2 source line outside these sets fails the guard tests --
-rebaselining then requires reviewing and documenting the new drift here.
-Do not add entries silently.
+Any FUTURE modern2 source change requires recomputing its digest here AND
+reviewing/documenting the new drift.  Do not add entries silently.
 """
 
 # MUS/MultiStringBWT.py
@@ -349,8 +369,61 @@ ACCEPTED_REMOVED_MUSCYTHON_MULTISTRINGBWTCYTHON_PYX = frozenset([
 ])
 
 
+# M3-SOL-R1 (SOL HIGH D2): exact accepted-content identity pins.
+# sha256 of the LF-normalized (CRLF -> LF) bytes of each accepted modern2
+# file; see module docstring for provenance.  This is the enforcement
+# boundary -- line sets above are retained as human-readable documentation.
+def _normalized_sha256(content):
+    import hashlib
+    return hashlib.sha256(
+        content.replace(b"\r\n", b"\n")).hexdigest()
+
+
+ACCEPTED_SHA256 = {
+    "MUS/MultiStringBWT.py":
+        "8a7e7cae021cacd50559edf106405b54d119820aa0ca689093476d09354c26f9",
+    "MUS/CommandLineInterface.py":
+        "61ef1e06545b6b6f5487bfa698dc708d99010060d7a312cb62197c9a771a5f7d",
+    "MUS/MSBWTGen.py":
+        "79064f1f28a62a67b1e7ae1afd684c653e572536d2347a5f2b7f5151d9c01b97",
+    "MUS/util.py":
+        "c90286e2a0cb3cb8bb4ff508f48610de63177f926e1780b8d8da7b8bcda31161",
+    "MUSCython/GenericMerge.pyx":
+        "0963757a81c9b1eec6dab379f39fc5923ea0733946a7117b0d9738bd98fadef1",
+    "MUSCython/MultimergeCython.pyx":
+        "665771a4b226a3a75dbc76bbbc9d72ef666d258d5b57f4a5d8b5c1445301a2ca",
+    "MUSCython/RLE_BWTCython.pyx":
+        "79a2319ac6539da735d6a6c6fe6bbd18a4c47475fb549f2a434ed22104d5ef34",
+    "MUSCython/CompressToRLE.pyx":
+        "77262d48da90ce5101522f0767d45dc80e56a483998a94bbc501bb9d11ec967c",
+    "MUSCython/MSBWTCompGenCython.pyx":
+        "4c0c6650582a22852d51740f19994dac0fda408f4b9afb1762e14e43aac15d1f",
+    "MUSCython/MSBWTGenCython.pyx":
+        "ded7d6ec73e6ddffb44189f08024188d5a6b3eb3e49c238772325087860cd7a5",
+    "MUSCython/MultiStringBWTCython.pyx":
+        "dc182108f6cb0a02e2901446840c647d332229d378c464ea8cdf2e6d69e8ca90",
+}
+
+
+def assert_exact_accepted_content(testcase, content, expected_digest, label):
+    """Assert LF-normalized ``content`` hashes exactly to ``expected_digest``.
+
+    This is the primitive both the production guard and the hostile
+    regressions exercise: any single-line addition, deletion, modification,
+    duplication of an allowlisted line, relocation, or reordering changes
+    the digest and must fail.
+    """
+    observed = _normalized_sha256(content)
+    testcase.assertEqual(
+        observed, expected_digest,
+        "%s: content is not the pinned accepted state "
+        "(expected %s, observed %s)" % (label, expected_digest, observed))
+    return observed
+
+
 def assert_source_within_acceptance(testcase, rel_path):
-    """Assert the modern2 file differs from frozen only by accepted lines."""
+    """Assert the modern2 file IS the exact pinned accepted state and that
+    its diff vs the frozen original stays inside the documented closed sets."""
     import difflib
     import sys
     mod = sys.modules[type(testcase).__module__]
@@ -367,8 +440,15 @@ def assert_source_within_acceptance(testcase, rel_path):
     if pkg is None:
         pkg = getattr(mod, "PACKAGE")
     modern = pkg / rel_path
+
+    # Primary gate (M3-SOL-R1): exact normalized identity.
+    modern_bytes = modern.read_bytes()
+    assert_exact_accepted_content(
+        testcase, modern_bytes, ACCEPTED_SHA256[rel_path], rel_path)
+
+    # Documentation gate: diff vs frozen stays inside the closed line sets.
     a = frozen.read_bytes().replace(b"\r\n", b"\n").decode("utf-8")
-    b = modern.read_bytes().replace(b"\r\n", b"\n").decode("utf-8")
+    b = modern_bytes.replace(b"\r\n", b"\n").decode("utf-8")
     added, removed = [], []
     for line in difflib.unified_diff(a.splitlines(), b.splitlines(),
                                      lineterm=""):
