@@ -1040,17 +1040,29 @@ cdef class BasicBWT(object):
         @param kmerSize - the size of the k-mer to count
         @return - a numpy array of size (len(seq)-kmerSize+1) containing the counts
         '''
-        cdef Py_ssize_t seqLen = len(seq)
+        cdef bytes seq_b
+        cdef str seq_text
+        if isinstance(seq, bytes):
+            seq_b = seq
+            seq_text = seq.decode('ascii')
+        elif isinstance(seq, str):
+            seq_text = seq
+            seq_b = seq.encode('ascii')
+        else:
+            raise TypeError('seq must be str or ASCII bytes')
+
+        cdef Py_ssize_t seqLen = len(seq_b)
         cdef Py_ssize_t numCounts = max(0, seqLen-kmerSize+1)
         cdef np.ndarray[np.uint64_t, ndim=1, mode='c'] ret = np.zeros(dtype='<u8', shape=(numCounts, ))
         cdef np.uint64_t [:] ret_view = ret
         
         cdef bytes subseq, subseqRevComp
-        cdef bytes revCompSeq = MultiStringBWT.reverseComplement(seq)
+        cdef bytes revCompSeq = MultiStringBWT.reverseComplement(
+            seq_text).encode('ascii')
         
         cdef Py_ssize_t x
         for x in range(0, numCounts):
-            subseq = seq[x:x+kmerSize]
+            subseq = seq_b[x:x+kmerSize]
             subseqRevComp = revCompSeq[seqLen-kmerSize-x:seqLen-x]
             #ret_view[x] = self.countOccurrencesOfSeq(subseq)+self.countOccurrencesOfSeq(subseqRevComp)
             ret_view[x] = self.countOccurrencesOfSeq(subseq)+self.countOccurrencesOfSeq(subseqRevComp)

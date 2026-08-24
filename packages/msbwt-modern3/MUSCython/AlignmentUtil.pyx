@@ -11,8 +11,9 @@ cimport numpy as np
 # come from len(original)/len(modified) and use the canonical signed length
 # type Py_ssize_t -- never 'long'/'unsigned long', which are 32-bit under
 # Win64 LLP64 and silently wrapped reported lengths >= 2**32.  Scoring
-# constants, matrix coordinates bounded by the allocated DP array, and
-# CIGAR run counters remain narrow per docs/modernization/NUMERIC_WIDTH_POLICY.md.
+# constants and state selectors stay narrow.  Matrix coordinates, coordinate
+# differences, and CIGAR run counters use the canonical signed length domain;
+# an allocatable-matrix argument is not permission to narrow those values.
 
 cpdef tuple sol_r1_align_length_transport(object original, object modified):
     """M3-SOL-R1 test-support probe: mirrors the exact scalar declarations and
@@ -25,6 +26,28 @@ cpdef tuple sol_r1_align_length_transport(object original, object modified):
     oLen = len(original)
     mLen = len(modified)
     return (oLen, mLen, oLen + 1, mLen + 1)
+
+cpdef tuple sol_r1_traceback_width_transport(Py_ssize_t coordinate):
+    """Exercise the production traceback store/read/difference domains.
+
+    The real ``fullAlign_noGO`` traceback stores matrix coordinates, reads
+    them into ``nextX``/``nextY``, derives a run length, and accumulates that
+    length into a CIGAR counter.  Keep this probe allocation-constant while
+    using the exact repaired storage and scalar types.
+    """
+    cdef np.ndarray[np.int64_t, ndim=3, mode='c'] previousPos = np.zeros(
+        dtype='<i8', shape=(1, 1, 2))
+    cdef np.int64_t [:, :, :] previousPos_view = previousPos
+    cdef Py_ssize_t nextX
+    cdef Py_ssize_t currCount
+    cdef Py_ssize_t instructionCount = 0
+    previousPos_view[0, 0, 0] = coordinate
+    previousPos_view[0, 0, 1] = 0
+    nextX = previousPos_view[0, 0, 0]
+    currCount = nextX - previousPos_view[0, 0, 1]
+    instructionCount += currCount
+    return (nextX, currCount, instructionCount,
+            (<object>previousPos).dtype.itemsize)
 
 def fullAlign(object original, object modified):
     '''
@@ -137,9 +160,9 @@ def fullAlign(object original, object modified):
     cdef list cig = []
     cdef Py_ssize_t nextX, nextY
     cdef unsigned long instructionType = MATCH_T
-    cdef unsigned long instructionCount = 0
+    cdef Py_ssize_t instructionCount = 0
     cdef unsigned long currType
-    cdef unsigned long currCount
+    cdef Py_ssize_t currCount
     
     if scoreArray_view[oLen, mLen, 0] < scoreArray_view[oLen, mLen, 1]:
         choice = 0
@@ -437,8 +460,10 @@ def fullAlign_noGO(object original, object modified):
     scoreArray_view[0, 0] = 0
     
     #initialize the jumpers
-    cdef np.ndarray[np.uint32_t, ndim=3, mode='c'] previousPos = np.zeros(dtype='<u4', shape=(oLen+1, mLen+1, 2))
-    cdef np.uint32_t [:, :, :] previousPos_view = previousPos
+    # Traceback coordinates are an in-memory index domain, not a persisted
+    # score domain.  Keep them signed/fixed-width across Win64 LLP64 and LP64.
+    cdef np.ndarray[np.int64_t, ndim=3, mode='c'] previousPos = np.zeros(dtype='<i8', shape=(oLen+1, mLen+1, 2))
+    cdef np.int64_t [:, :, :] previousPos_view = previousPos
     
     cdef Py_ssize_t x, y, z
     for x in range(1, oLen+1):
@@ -497,9 +522,9 @@ def fullAlign_noGO(object original, object modified):
     cdef list cig = []
     cdef Py_ssize_t nextX, nextY
     cdef unsigned long instructionType = MATCH_T
-    cdef unsigned long instructionCount = 0
+    cdef Py_ssize_t instructionCount = 0
     cdef unsigned long currType
-    cdef unsigned long currCount
+    cdef Py_ssize_t currCount
     
     x = oLen
     y = mLen

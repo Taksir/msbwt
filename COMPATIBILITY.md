@@ -352,3 +352,32 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
   longer than 2^32 bases (total index sizes beyond 2^32 symbols are
   supported); sequence/query string lengths are carried in the canonical
   signed length domain (`Py_ssize_t`) after M3-SOL-R1.
+
+## M3-SOL-R2: final re-audit repairs
+
+- Status: executed and validated by the complete native Windows and
+  exact-layout Linux compatibility suites, plus fresh installed-artifact
+  batteries.
+- Affected APIs: `BasicBWT.countPileup`, `AlignmentUtil.fullAlign`, and
+  `AlignmentUtil.fullAlign_noGO`; W3/W4 subprocess tests also select the
+  intended Modern3 package explicitly.
+- Old behavior: on Python 3, `countPileup(str, k)` passed text into compiled
+  byte-oriented query code and raised `TypeError`, while `bytes` input was
+  passed to the text reverse-complement helper and raised `KeyError`.
+  `fullAlign_noGO` stored compute-only traceback coordinates in `<u4>`, and
+  both alignment tracebacks accumulated CIGAR run lengths in native
+  `unsigned long` (32-bit under Win64 LLP64).  W3/W4 subprocess snippets
+  inserted the repository root ahead of `packages/msbwt-modern3`, so an
+  exact checkout imported the tracked legacy root package.
+- New behavior: `countPileup` accepts `str` or ASCII `bytes`, normalizes once,
+  and returns identical `<u8` counts for both forms.  Traceback coordinates
+  use compute-only `<i8>` storage and their differences/CIGAR accumulators use
+  `Py_ssize_t`.  Subprocess tests assert that imports resolve from the selected
+  Modern3 package before exercising behavior.
+- Oracle evidence: ordinary alignment outputs match the characterized frozen
+  Modern2 results; byte and RLE `countPileup` results match an independent
+  overlapping-read oracle; six mandatory boundary values from 2^31-1 through
+  2^32+12345 survive traceback store, difference, and accumulation exactly.
+- Reader/writer interoperability: unchanged.  The widened traceback array is
+  in-memory only, `countPileup` is read-only, and no persisted dtype, filename,
+  byte layout, dependency, or distribution namespace changed.

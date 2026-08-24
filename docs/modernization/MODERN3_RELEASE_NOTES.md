@@ -1,8 +1,9 @@
 # msbwt-modern3 0.3.0 — Release Notes (release candidate)
 
-Branch: `enhanced-modern3`.  Release-candidate packaging validated at
-the final repaired HEAD (M3-FINAL-R1, following M3-14/M3-14C).  Nothing
-has been pushed, tagged, or published.
+Branch: `enhanced-modern3`.  Release-candidate packaging validated at the
+final M3-SOL-R2 repaired source state (following M3-FINAL-R1 and
+M3-14/M3-14C).  Nothing has been committed, pushed, tagged, or published by
+the final re-audit repair.
 
 ## What it is
 
@@ -48,21 +49,26 @@ historical audit records only.
 
 ## Validation evidence
 
-- Source-tree compatibility suite at the M3-SOL-R1 repaired HEAD:
-  Windows `743 passed / 1 skipped` and clean-layout Linux
-  `742 passed / 2 skipped` (22 subtests each).  Both counts are +15 over
-  the accepted pre-SOL-R1 baseline (728/727): exactly the new
-  length-domain/oracle-integrity regressions.  The single Windows skip is
+- Source-tree compatibility suite at the M3-SOL-R2 repaired source state:
+  Windows `748 passed / 1 skipped` and exact-layout Linux
+  `747 passed / 2 skipped` (22 subtests each).  Both counts are +20 over
+  the accepted pre-SOL-R1 baseline (728/727): exactly the SOL-R1 and SOL-R2
+  length-domain, oracle-integrity, public-query, alignment, and import-layout
+  regressions.  The tracked root `MUSCython/__init__.py` remains present in
+  the Linux snapshot.  The single Windows skip is
   the documented memmap/file-lifecycle platform case; the second Linux
   skip is the frozen-modern2 built-artifact check taking its no-artifacts
-  branch in a clean layout.  The earlier "722 passed / 7
+  branch in a clean layout.  The former six W3/W4 failures were test-harness
+  import-precedence defects and are closed without removing or renaming any
+  tracked file.  The earlier "722 passed / 7
   environment-dependent failures" summary came from a checkout polluted by
   legacy root-level binaries and is superseded historical evidence only.
 - Fresh-environment installs of both wheels and the sdist pass the
   installed battery on both platforms (construction from FASTQ, byte/RLE
   round trips, provenance-preserving merge, query/-d semantics, exact LCP
   construct/validate, source removal with input immutability, BAM
-  rejection, and the >2^32 compiled length-boundary probes).
+  rejection, `countPileup` `str`/ASCII-`bytes` parity, and the >2^32 compiled
+  sequence-length and traceback-boundary probes).
 - Cross-platform persistence spot check: a package built by the
   installed Windows wheel consumed by the installed Linux wheel
   (and reverse) preserves payload hashes, recovery results, RLE bytes,
