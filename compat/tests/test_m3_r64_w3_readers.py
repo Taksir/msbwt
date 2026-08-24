@@ -80,8 +80,10 @@ class LcpAbsenceSafetyTests(unittest.TestCase):
         env_path = os.path.join(REPO_ROOT, "packages", "msbwt-modern3")
         snippet = (
             "import sys; "
-            "sys.path.insert(0, r'%s'); "
-            "sys.path.insert(0, r'%s');\n" % (env_path, REPO_ROOT)
+            "sys.path[:0] = [r'%s', r'%s']; "
+            "import MUSCython; "
+            "assert MUSCython.__file__.startswith(r'%s'), MUSCython.__file__;\n"
+            % (env_path, REPO_ROOT, env_path)
         ) + code
         return subprocess.run(
             [sys.executable, "-c", snippet],
@@ -105,6 +107,14 @@ class LcpAbsenceSafetyTests(unittest.TestCase):
         result = self._run_snippet(probe)
         self.assertEqual(result.returncode, 0, result.stderr.decode()[-800:])
         self.assertIn(b"VALUEERROR-OK", result.stdout)
+
+    def test_subprocess_imports_selected_modern3_package(self):
+        result = self._run_snippet(
+            "from MUSCython import BasicBWT\n"
+            "print(BasicBWT.__file__)\n")
+        self.assertEqual(result.returncode, 0, result.stderr.decode()[-800:])
+        expected = os.path.join("packages", "msbwt-modern3", "MUSCython")
+        self.assertIn(expected.encode(), result.stdout)
 
     def test_all_guarded_entry_points_raise_without_lcp(self):
         leaf = self._leaf("pkg")
