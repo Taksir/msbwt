@@ -255,7 +255,7 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
         #open the file and read in starting form the second, every 4th line
         logger.info('Loading \''+fn+'\'...')
         if fn.endswith('.gz'):
-            fp = gzip.open(fn, 'r')
+            fp = gzip.open(fn, 'rt')
         else:
             fp = open(fn, 'r')
         i = 0
