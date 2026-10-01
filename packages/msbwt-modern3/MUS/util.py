@@ -8,7 +8,11 @@ handed correct file types
 import argparse as ap
 import glob
 import gzip
+import io
 import os
+import pickle
+
+import numpy as np
 
 #I see no need for the versions to be different as of now
 DESC = "A multi-string BWT package for DNA and RNA."
@@ -16,6 +20,55 @@ VERSION = '0.3.0'
 PKG_VERSION = VERSION
 
 validCharacters = set(['$', 'A', 'C', 'G', 'N', 'T'])
+
+# Globals a genuine totalCounts.p may reference: a NumPy integer/float array (any
+# supported NumPy major version, protocols 2-5) and nothing else.
+_TOTAL_COUNTS_ALLOWED_GLOBALS = {
+    ('numpy', 'dtype'): np.dtype,
+    ('numpy', 'ndarray'): np.ndarray,
+    ('numpy.core.multiarray', '_reconstruct'): None,
+    ('numpy._core.multiarray', '_reconstruct'): None,
+    ('numpy.core.multiarray', 'scalar'): None,
+    ('numpy._core.multiarray', 'scalar'): None,
+    ('numpy.core.numeric', '_frombuffer'): None,
+    ('numpy._core.numeric', '_frombuffer'): None,
+}
+
+def _latin1_encode(text, encoding):
+    # protocol-2 pickles of binary NumPy data use _codecs.encode(text, 'latin1');
+    # accept only that so the reader cannot be pointed at other codecs
+    if type(text) is not str or encoding != 'latin1':
+        raise pickle.UnpicklingError("unsupported codecs.encode arguments")
+    return text.encode('latin1')
+
+class _TotalCountsUnpickler(pickle.Unpickler):
+    '''Unpickler that refuses everything except what a totalCounts array needs.'''
+    def find_class(self, module, name):
+        if (module, name) == ('_codecs', 'encode'):
+            return _latin1_encode
+        if (module, name) in _TOTAL_COUNTS_ALLOWED_GLOBALS:
+            known = _TOTAL_COUNTS_ALLOWED_GLOBALS[(module, name)]
+            if known is not None:
+                return known
+            return super().find_class(module, name)
+        raise pickle.UnpicklingError("forbidden global in totalCounts.p: %s.%s" % (module, name))
+
+def loadTotalCounts(fileName):
+    '''
+    Safely load '<DIR>/totalCounts.p'.  The file is a pickle only for historical reasons and datasets are
+    untrusted input, so this never executes arbitrary callables from the file.
+    @param fileName - path to a totalCounts.p file
+    @return - the 1-D numeric array stored in the file (integer for byte BWTs, float64 for RLE BWTs)
+    @raise ValueError - if the file is not a plain 1-D integer/float NumPy array
+    '''
+    with open(fileName, 'rb') as fp:
+        try:
+            counts = _TotalCountsUnpickler(fp).load()
+        except (pickle.UnpicklingError, EOFError, AttributeError, ImportError, IndexError, TypeError) as e:
+            raise ValueError("'%s' is not a valid totalCounts file: %s" % (fileName, e))
+    if not isinstance(counts, np.ndarray) or counts.ndim != 1 or counts.dtype.kind not in 'iuf':
+        raise ValueError("'%s' is not a valid totalCounts file: expected a 1-D numeric array" % fileName)
+    return counts
 
 def readableFastqFile(fileName): 
     '''
