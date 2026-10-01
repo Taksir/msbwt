@@ -405,3 +405,20 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
   Files from the original writer that use other globals are rejected and must be
   rebuilt, consistent with the existing "derived, rebuildable" status of
   `totalCounts.p`.
+
+## M3-S1-GZIP: gzip FASTQ input in the compiled loaders
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_fastq_input.py`).
+- Affected commands/APIs: `msbwt pp`, `cffq` (uniform and non-uniform) on `.gz`
+  input; `MultiStringBWTCython.preprocessFastqs` and
+  `MultimergeCython.preprocessFastqs`/`fastqIterator`.
+- Old behavior (modern3 before this fix): `gzip.open(fn, 'r')` yields bytes on
+  Python 3, so every `.gz` input failed with `TypeError: a bytes-like object is
+  required, not 'str'`.  The frozen original (Python 2) accepted gzip input.
+- New behavior: `.gz` files are read in text mode (`'rt'`), matching the plain
+  file path and the pure-Python loader, so gzip and plain input of the same
+  reads produce byte-identical artifacts.
+- Rationale: restores the original, documented behavior lost in the Python 3
+  port; no format or output change.
+- Reader/writer interoperability: unchanged.
