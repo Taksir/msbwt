@@ -381,3 +381,27 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Reader/writer interoperability: unchanged.  The widened traceback array is
   in-memory only, `countPileup` is read-only, and no persisted dtype, filename,
   byte layout, dependency, or distribution namespace changed.
+
+## M3-S1-PICKLE: restricted `totalCounts.p` reader
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_totalcounts_safety.py`); full compat suite otherwise
+  unchanged.
+- Affected APIs/files: `MUS.util.loadTotalCounts` (new), used by the `constructTotalCounts`
+  readers in `MUS/MultiStringBWT.py` (byte and RLE).  Persisted file:
+  `<DIR>/totalCounts.p`.
+- Old behavior: `pickle.load` on `totalCounts.p`, so opening an MSBWT directory
+  executed any callable embedded in that file.
+- New behavior: a restricted unpickler accepts only a 1-D integer or float NumPy
+  array (NumPy `ndarray`/`dtype` reconstruction under the `numpy.core` and
+  `numpy._core` names, and `_codecs.encode(..., 'latin1')` for protocol-2
+  pickles).  Any other global, an object/complex/2-D array, or a truncated file
+  raises `ValueError` naming the file.
+- Rationale: datasets are untrusted input (`AGENTS.md`); arbitrary code execution
+  on read was a confirmed security defect.  The legacy behavior is not preserved.
+- Reader/writer interoperability: unchanged.  The writer, filename, and pickle
+  bytes are untouched.  Byte BWTs store an integer array and RLE BWTs a float64
+  array (from `np.bincount` with weights, as in the legacy code); both load.
+  Files from the original writer that use other globals are rejected and must be
+  rebuilt, consistent with the existing "derived, rebuildable" status of
+  `totalCounts.p`.

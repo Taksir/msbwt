@@ -18,6 +18,7 @@ import shutil
 import sys
 
 from MUS import MSBWTGen
+from MUS import util
 
 #flags for samtools
 REVERSE_COMPLEMENTED_FLAG = 1 << 4#0x10
@@ -257,11 +258,7 @@ class MultiStringBWT(BasicBWT):
         
         abtFN = self.dirName+'/totalCounts.p'
         if os.path.exists(abtFN):
-            # binary mode: pickle framing bytes must not be rewritten by
-            # Windows text-mode newline translation
-            fp = open(abtFN, 'rb')
-            self.totalCounts = pickle.load(fp)
-            fp.close()
+            self.totalCounts = util.loadTotalCounts(abtFN)
         else:
             chunkSize = 2**20
             if logger != None:
@@ -445,11 +442,7 @@ class CompressedMSBWT(BasicBWT):
         
         abtFN = self.dirName+'/totalCounts.p'
         if os.path.exists(abtFN):
-            # binary mode: pickle framing bytes must not be rewritten by
-            # Windows text-mode newline translation
-            fp = open(abtFN, 'rb')
-            self.totalCounts = pickle.load(fp)
-            fp.close()
+            self.totalCounts = util.loadTotalCounts(abtFN)
         else:
             if logger != None:
                 logger.info('First time calculation of \'%s\'' % abtFN)
