@@ -131,9 +131,9 @@ and what is safe to reconstruct.
   deviations are recorded in `COMPATIBILITY.md`.
 - Enhanced layers are additive and never change legacy semantics or
   formats.
-- **Out of scope (not implemented, not claimed):** Feature 8B, Feature
-  11C, Feature 11B in modern2 (modern3 has it; see `COMPATIBILITY.md`
-  M3-F11B), a new compressed backend, and any performance superiority
+- **Out of scope (not implemented, not claimed):** Feature 8B, Features
+  11B/11C in modern2 (modern3 has both; see `COMPATIBILITY.md` M3-F11B and
+  M3-F11C), a new compressed backend, and any performance superiority
   claim.  Feature-13A's benchmark tool measures the index as it is; the
   naive u32 RLE encoding model it reports was *larger* than the raw BWT
   payload on the toy fixture — that negative result is documented, not

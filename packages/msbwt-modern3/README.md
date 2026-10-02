@@ -53,7 +53,8 @@ Windows and Linux:
 - Source removal / retention without FASTQ reconstruction; an LCP layer
   is carried through removal exactly (Feature 11B)
 - Per-read provenance, row tags, exact FASTQ quality sidecars (255 marks
-  terminal-`$` rows), LCP construction/validation
+  terminal-`$` rows), LCP construction/validation, LCP intervals and
+  maximal repeats with per-source support (`msbwt-lcp repeats`)
 - Storage accounting, run statistics, benchmark hooks, backend capability
   reporting
 
