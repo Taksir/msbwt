@@ -559,3 +559,17 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Observed legacy hazard, not changed here:
   `MultimergeCython.createMSBWTFromSeqs` loops forever on unterminated
   periodic input; the companion builder always passes `$`-terminated reads.
+
+## M3-FMD-SCREEN: FMD feasibility screen (modern3, experimental)
+
+- Status: experimental screen with regression tests
+  (`compat/tests/test_fmd_screen.py`) and a measurement script
+  (`compat/screens/fmd_vs_2bwt.py`); decision record in
+  `docs/roadmap/CHECKPOINT_FMD_VS_2BWT.md`.
+- Affected: `MUS.Bidirectional.build_fmd_index`,
+  `BidirectionalIndex.load_fmd`, `reverse_complement`.  No CLI command.
+- Old behavior: none (new surface); the source package is never modified.
+- New persisted files, in a separate directory only: a Holt `msbwt.npy` of
+  the reads plus their reverse complements and `fmd_index.json`
+  (`msbwt-fmd-screen` v1).  An FMD index counts both strands and carries no
+  source provenance; it is not a drop-in replacement for a forward index.

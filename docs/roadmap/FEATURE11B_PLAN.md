@@ -149,6 +149,9 @@ naive row-for-row filtering makes 9 tests fail.
   per-source and per-group support. Feed them through the existing
   `nonzero_sources_interval`/`subset_counts_interval` paths, so a repeat
   reports the samples that contain it without enumerating occurrences.
+- **Update (same day):** 11C, 8B.0 and the FMD screen are done; see
+  `FEATURE11C.md`, `STEP8B0_BIDIRECTIONAL.md` and
+  `CHECKPOINT_FMD_VS_2BWT.md`.
 - **Then: 8B.0 as a 2BWT screen.** Build a reversed companion index from
   recovered reads, and check that `bidir_extend_left/right` equals ordinary
   search over the roadmap's edge cases. Revisit FMD at the architecture

@@ -1,0 +1,70 @@
+{
+  "caveats": [
+    "uncompressed byte BWTs; run counts are the input to any future RLBWT/move backend, not a measured compressed size",
+    "single-process construction; timings from one run, warm cache, shared cloud container",
+    "extension cost uses the Python prototype over the compiled FM index; both sides use the same code path"
+  ],
+  "companion_2bwt": {
+    "mean_run_length": 12.699590249606674,
+    "msbwt_bytes": 8080128,
+    "rows": 8080000,
+    "runs": 636241,
+    "runs_per_row": 0.07874269801980198
+  },
+  "construction_seconds": {
+    "companion_2bwt": 70.05036487300004,
+    "fmd": 156.40890414700016,
+    "forward": 83.09247349200041
+  },
+  "data": "SYNTHETIC cohort; not a biological measurement",
+  "extension_seconds_per_call": {
+    "2bwt": 1.2200169838677303e-05,
+    "calls_each": 6200,
+    "fmd": 1.2435845322567817e-05
+  },
+  "fmd": {
+    "mean_run_length": 15.99619892302819,
+    "msbwt_bytes": 16160128,
+    "rows": 16160000,
+    "runs": 1010240,
+    "runs_per_row": 0.06251485148514851
+  },
+  "forward": {
+    "mean_run_length": 12.692408588739257,
+    "msbwt_bytes": 8080128,
+    "rows": 8080000,
+    "runs": 636601,
+    "runs_per_row": 0.07878725247524752
+  },
+  "parameters": {
+    "coverage": 20,
+    "error_rate": 0.005,
+    "genome_length": 20000,
+    "out": "compat/screens/results/fmd_vs_2bwt_cov20_s20.json",
+    "queries": 200,
+    "read_length": 100,
+    "repeat_copies": 6,
+    "repeat_families": 5,
+    "samples": 20,
+    "seed": 20261002,
+    "snp_rate": 0.002,
+    "work": null
+  },
+  "platform": {
+    "machine": "x86_64",
+    "numpy": "2.5.3",
+    "python": "3.14.0rc2",
+    "system": "Linux"
+  },
+  "reads": 80000,
+  "reads_sha256": "1dff595fe50518ac12d99b8b95e3d8feada31dbb13f701998178d0819709e4b5",
+  "screen": "fmd-vs-2bwt",
+  "totals": {
+    "2bwt_rows": 16160000,
+    "2bwt_runs": 1272842,
+    "fmd_plus_forward_rows": 24240000,
+    "fmd_plus_forward_runs": 1646841,
+    "fmd_rows": 16160000,
+    "fmd_runs": 1010240
+  }
+}
