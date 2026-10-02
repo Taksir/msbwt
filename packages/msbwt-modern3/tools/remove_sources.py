@@ -88,8 +88,8 @@ def main():
         "--drop-lcp",
         action="store_true",
         help=(
-            "explicitly produce a reduced MSBWT without the Feature-11A "
-            "LCP layer (LCP-preserving removal requires Feature 11B)"
+            "produce a reduced MSBWT without the Feature-11A LCP layer "
+            "(by default an input LCP layer is carried through removal)"
         ),
     )
 

@@ -22,7 +22,8 @@ Coverage:
 - stale/corrupt protection: same-length replaced BWT, wrong length,
   wrong dtype, wrong version, corrupt metadata, stale max_lcp, missing
   array;
-- Point-10 fail-safe (LCP removal rejected) and explicit ``drop_lcp``;
+- Point-10 fail-safe (LCP removal rejected; modern3 Feature 11B carries
+  the layer instead) and explicit ``drop_lcp``;
 - randomized differentials (seeds 20260811/20260812/20260813);
 - evidence-record and validation-driver consistency.
 """
@@ -514,15 +515,24 @@ class QueryAndStaleHostTests(LCPHostTestBase):
 
 class RemovalFailSafeHostTests(LCPHostTestBase):
     def test_removal_rejected_and_drop_lcp(self):
+        import MUS.LCP
         leaves, output, oracle, rbs = self.build_merged(
             f3.TEN_SOURCE_READS, name="merged10")
         self.construct(output, oracle)
-        with self.assertRaises(LCPError):
+        if hasattr(MUS.LCP, "filter_lcp_for_removal"):
+            # Feature 11B (modern3) replaces the fail-safe with an
+            # LCP-preserving removal; see test_lcp_source_removal.py.
             remove_sources(
                 output, os.path.join(self.work, "r"),
                 sources=["sample09"])
-        self.assertFalse(os.path.exists(
-            os.path.join(self.work, "r", "msbwt.npy")))
+            self.assertTrue(lcp_exists(os.path.join(self.work, "r")))
+        else:
+            with self.assertRaises(LCPError):
+                remove_sources(
+                    output, os.path.join(self.work, "r"),
+                    sources=["sample09"])
+            self.assertFalse(os.path.exists(
+                os.path.join(self.work, "r", "msbwt.npy")))
         reduced = os.path.join(self.work, "r2")
         remove_sources(
             output, reduced, sources=["sample09"], drop_lcp=True)

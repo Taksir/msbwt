@@ -50,7 +50,8 @@ Windows and Linux:
   (non-uniform reads)
 - FM queries (`findIndicesOfStr`, occurrence counts) and rank/Occurrence
   access
-- Source removal / retention without FASTQ reconstruction
+- Source removal / retention without FASTQ reconstruction; an LCP layer
+  is carried through removal exactly (Feature 11B)
 - Per-read provenance, row tags, exact FASTQ quality sidecars (255 marks
   terminal-`$` rows), LCP construction/validation
 - Storage accounting, run statistics, benchmark hooks, backend capability
