@@ -459,3 +459,25 @@ walk LF cycles with `recoverString(d, withIndex=True)` and split on `$`
 (see `MUS.Bidirectional._recover_reads`). For per-read identity on
 fixtures, use the oracle adapters (`OracleBackedAdapter`,
 `OracleBWTAdapter`).
+
+---
+
+## M25 — `git apply` rejected the wiki patch on a Windows checkout
+
+**What happened:** On Windows, `git apply --check --ignore-whitespace
+..\docs\wiki\wiki-refresh.patch` failed with `git diff header lacks filename
+information when removing 1 leading pathname component` at the hunk that
+deletes an empty file.  The same patch applied cleanly on Linux.
+
+**Why:** With `core.autocrlf=true`, the patch file was checked out with CRLF
+line endings.  A content-free diff (deleting an empty file has no `---`/`+++`
+lines) makes `git apply` take the filename from the `diff --git` line, which
+now ends in `\r`, so the parse fails.  `--ignore-whitespace` only relaxes
+content matching, not header parsing.
+
+**Lesson:** Ship patch files with `eol=lf` in `.gitattributes`
+(`docs/wiki/*.patch -whitespace eol=lf`).  To recover an existing CRLF
+checkout, delete the file and run
+`git -c core.autocrlf=false checkout -- <path>`.  Never pipe patches through
+PowerShell `>` redirection, which re-encodes as UTF-16.  Test patches against
+a CRLF-converted copy before handing them to a Windows user.

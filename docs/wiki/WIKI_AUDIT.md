@@ -46,4 +46,10 @@ not empty, it should be about 28 KB):
     git apply --ignore-whitespace /path/to/wiki-refresh.patch
     git add -A && git commit -m "wiki: refresh for modern3" && git push origin master
 
-(`--ignore-whitespace` makes it work on Windows checkouts with CRLF line endings.)
+(`--ignore-whitespace` makes it work on Windows checkouts whose wiki pages have CRLF
+line endings.  The patch file itself must have LF endings; `.gitattributes` now
+enforces that.  If `git apply` reports `git diff header lacks filename
+information`, your copy of the patch has CRLF endings: from the main repository
+run `Remove-Item docs\wiki\wiki-refresh.patch` and then
+`git -c core.autocrlf=false checkout -- docs/wiki/wiki-refresh.patch`.  See
+Mistakes.md M25.)

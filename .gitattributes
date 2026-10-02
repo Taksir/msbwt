@@ -23,5 +23,7 @@
 /reference/original-0.3.0/environment/run-probe.sh text eol=lf
 /reference/original-0.3.0/frozen-source/README.md binary
 
-# patch files carry the target files' own whitespace verbatim
-docs/wiki/*.patch -whitespace
+# patch files carry the target files' own whitespace verbatim; always check them
+# out with LF: git apply cannot parse a CRLF header for a content-free diff
+# (e.g. deleting an empty file), see Mistakes.md M25
+docs/wiki/*.patch -whitespace eol=lf
