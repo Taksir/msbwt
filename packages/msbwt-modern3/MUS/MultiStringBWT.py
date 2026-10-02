@@ -820,7 +820,7 @@ def createMSBWTFromFastq(fastqFNs, outputDir, numProcs, areUniform, logger):
     MSBWTGen.createFromSeqs(seqFN, offsetFN, bwtFN, numProcs, areUniform, logger)
 
 _BAM_UNSUPPORTED_MESSAGE = (
-    'BAM input is explicitly unsupported in msbwt-modern3 0.3.0 '
+    'BAM input is explicitly unsupported in msbwt-modern3 '
     '(M3-13C policy): the legacy pysam-based ingestion path is unvalidated, '
     'crashes under the pinned NumPy 2.x toolchain, and pysam has no '
     'native-Windows build. Construct indices from FASTA/FASTQ input instead.')

@@ -2,7 +2,7 @@
 # PEP 517 build backend + pinned toolchain from MODERN3_REFERENCE_ENVIRONMENT.md.
 # build 1.5.0 (1.5.1 is YANKED). Cython 3.2.x (not 3.1+). NumPy 2.5.x.
 requires = [
-    "setuptools>=64",
+    "setuptools>=77",
     "wheel==0.48.0",
     "Cython>=3.2,<3.3",
     "numpy>=2.5,<3",
@@ -10,14 +10,28 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "msbwt-modern3"
-version = "0.3.0"
+name = "pymsbwt"
+dynamic = ["version"]
 description = "Multi-string BWT merging and querying for genomic strings (Python 3 modernization)"
 readme = "README.md"
 requires-python = ">=3.14"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["bioinformatics", "BWT", "Burrows-Wheeler", "multi-string BWT", "FM-index", "genomics", "k-mer"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Cython",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
 authors = [
     { name = "James Holt", email = "holtjma@cs.unc.edu" },
+    { name = "Leonard McMillan" },
+]
+maintainers = [
+    { name = "Taksir" },
 ]
 
 # Core dependencies.  pysam is NOT a dependency of msbwt-modern3 (M3-13C
@@ -30,22 +44,33 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "http://code.google.com/p/msbwt"
+Homepage = "https://github.com/Taksir/msbwt"
+Source = "https://github.com/Taksir/msbwt"
+Documentation = "https://github.com/Taksir/msbwt/wiki"
+Issues = "https://github.com/Taksir/msbwt/issues"
+Changelog = "https://github.com/Taksir/msbwt/blob/master/COMPATIBILITY.md"
+"Original project" = "https://github.com/holtjma/msbwt"
 
 [project.scripts]
 # Legacy CLI (single dispatcher; cffq, pp, cfpp, merge, query, massquery,
 # compress, decompress, convert are its subcommands).
 msbwt = "MUS.CommandLineInterface:mainRun"
 # Enhanced console scripts.
-msbwt-bwt-tags = "tools.bwt_tags:main"
-msbwt-lcp = "tools.lcp:main"
-msbwt-quality-sidecar = "tools.quality_sidecar:main"
-msbwt-remove-sources = "tools.remove_sources:main"
-msbwt-retrofit-read-provenance = "tools.retrofit_read_provenance:main"
-msbwt-benchmark-index = "tools.benchmark_index:main"
+msbwt-bwt-tags = "MUS.tools.bwt_tags:main"
+msbwt-lcp = "MUS.tools.lcp:main"
+msbwt-quality-sidecar = "MUS.tools.quality_sidecar:main"
+msbwt-remove-sources = "MUS.tools.remove_sources:main"
+msbwt-retrofit-read-provenance = "MUS.tools.retrofit_read_provenance:main"
+msbwt-benchmark-index = "MUS.tools.benchmark_index:main"
 
 [tool.setuptools]
-packages = ["MUS", "MUSCython", "tools"]
+packages = ["MUS", "MUSCython", "MUS.tools"]
+# the CLI helper modules live in tools/ in the source tree but install as MUS.tools,
+# so no generic top-level "tools" package lands in site-packages
+package-dir = { "MUS.tools" = "tools" }
 # BasicBWT.pxd (and any future .pxd) becomes package data in M3-3.
 package-data = { "MUSCython" = ["*.pxd"] }
 zip-safe = false
+
+[tool.setuptools.dynamic]
+version = { attr = "MUS.util.VERSION" }

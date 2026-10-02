@@ -1,0 +1,108 @@
+name: Build and release pymsbwt
+
+# Pushing a tag like v0.4.0 builds everything, publishes to TestPyPI, then (after a
+# manual approval on the "pypi" environment) to PyPI.  "Run workflow" from the
+# Actions tab builds and tests only; it never publishes.
+on:
+  push:
+    tags: ["v*"]
+  pull_request:
+    paths:
+      - "packages/msbwt-modern3/**"
+      - ".github/workflows/release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Compatibility suite (Linux, CPython 3.14)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Build extensions in place
+        working-directory: packages/msbwt-modern3
+        run: |
+          python -m pip install --upgrade pip "setuptools>=77" wheel "Cython>=3.2,<3.3" "numpy>=2.5,<3" pytest
+          python setup.py build_ext --inplace
+      - name: Run compat tests
+        run: python -m pytest compat/tests -q
+
+  sdist:
+    name: Source distribution
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - run: python -m pip install build twine
+      - run: python -m build --sdist --outdir dist packages/msbwt-modern3
+      - run: twine check dist/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist-sdist
+          path: dist/*.tar.gz
+
+  wheels:
+    name: Wheel (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pypa/cibuildwheel@v3
+        with:
+          package-dir: packages/msbwt-modern3
+          output-dir: wheelhouse
+        env:
+          CIBW_BUILD: "cp314-*"
+          CIBW_SKIP: "*-musllinux_*"
+          CIBW_ARCHS_LINUX: "native"
+          CIBW_ARCHS_WINDOWS: "AMD64"
+          CIBW_ARCHS_MACOS: "native"
+          # runs inside a clean environment holding only the installed wheel
+          CIBW_TEST_COMMAND: "python {project}/ci/smoke_test.py"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist-wheels-${{ matrix.os }}
+          path: wheelhouse/*.whl
+
+  publish-testpypi:
+    name: Publish to TestPyPI
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [test, sdist, wheels]
+    runs-on: ubuntu-latest
+    environment: testpypi
+    permissions:
+      id-token: write   # Trusted Publishing, no API token stored
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: dist-*
+          merge-multiple: true
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  publish-pypi:
+    name: Publish to PyPI
+    needs: [publish-testpypi]
+    runs-on: ubuntu-latest
+    environment: pypi     # add "required reviewers" to this environment for the approval gate
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: dist-*
+          merge-multiple: true
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
