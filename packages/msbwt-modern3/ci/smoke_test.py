@@ -7,6 +7,7 @@ import gzip
 import importlib.metadata
 import os
 import random
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -25,7 +26,10 @@ def naive_count(reads, kmer):
 
 def main():
     version = importlib.metadata.version("pymsbwt")
-    assert run("msbwt", "-V").split()[1] == version, "msbwt -V does not match package version"
+    printed = run("msbwt", "-V")
+    assert version in printed.split(), (
+        "msbwt -V printed %r but the installed package version is %r (msbwt resolved to %r)"
+        % (printed, version, shutil.which("msbwt")))
     for script in ("msbwt-lcp", "msbwt-bwt-tags", "msbwt-remove-sources", "msbwt-quality-sidecar",
                    "msbwt-retrofit-read-provenance", "msbwt-benchmark-index"):
         run(script, "--help")
