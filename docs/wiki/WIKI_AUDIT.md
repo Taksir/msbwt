@@ -15,10 +15,13 @@ the subcommands of every console script, internal wiki links, and the legacy
 | `Constructing-the-MSBWT` | `convert` quirk quotes the Python 2 `TypeError` text only | add the Python 3 text |
 | `Queries-with-the-Python-API`, `BasicBWT-API` | `recoverString` returns `bytes` from the `MUSCython` loader but `str` from the pure-Python loader | state both |
 | `Persistent-Files-and-Compatibility` | `totalCounts.p` not listed | add row (derived cache, restricted reader) |
-| `Installation` | Describes locally built wheels only | update after the PyPI release (`pip install pymsbwt`) |
+| `Installation`, `Home` | Described locally built 0.3.0 wheels for two platforms | rewrite for `pip install pymsbwt` 0.4.0 and the published wheel platforms |
 
-`wiki-refresh.patch` contains the first five rows.  Apply it from the root of
-the wiki checkout:
+`wiki-refresh.patch` contains every row above and also deletes a stray empty
+`wiki-refresh.patch` file that an earlier failed attempt committed to the wiki.
+It is written against wiki commit `1456ae2`.  Apply it from the root of the wiki
+checkout, pointing at the file inside your clone of this repository (do not copy
+it around first; check it is not empty, it should be about 10 KB):
 
     git apply --ignore-whitespace /path/to/wiki-refresh.patch
     git add -A && git commit -m "wiki: refresh for modern3" && git push origin master
