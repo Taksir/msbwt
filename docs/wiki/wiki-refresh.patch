@@ -1,20 +1,3 @@
-From a41bd9c7fd203d6e4051b3b598899ad9de2a9094 Mon Sep 17 00:00:00 2001
-From: x <x@x>
-Date: Fri, 2 Oct 2026 00:33:48 +0000
-Subject: [PATCH] wiki: refresh for modern3 behaviour; drop stale staging
- README and stub Wiki page
-
----
- BasicBWT-API.md                       |  2 +-
- Constructing-the-MSBWT.md             | 11 ++++-
- Persistent-Files-and-Compatibility.md |  1 +
- Queries-with-the-Python-API.md        |  3 +-
- README.md                             | 61 ---------------------------
- Wiki.md                               |  1 -
- 6 files changed, 13 insertions(+), 66 deletions(-)
- delete mode 100644 README.md
- delete mode 100644 Wiki.md
-
 diff --git a/BasicBWT-API.md b/BasicBWT-API.md
 index 34a791c..0ae13c3 100644
 --- a/BasicBWT-API.md
@@ -57,6 +40,98 @@ index 38e83c5..0cfd12e 100644
  
  ## Command summary
  
+diff --git a/Home.md b/Home.md
+index bd03d12..d62aebc 100644
+--- a/Home.md
++++ b/Home.md
+@@ -6,8 +6,9 @@ a maintenance fork of the original Holt/McMillan
+ 
+ > **Current line: `msbwt-modern3` 0.3.0 (Python 3).**  The active,
+ > preferred installation route is the Python 3 distribution — CPython
+-> >=3.14 on Windows x86-64 and Linux x86-64, with compiled wheels and a
+-> source distribution.  It provides construction from FASTA/FASTQ,
++> >=3.14, installed with `pip install pymsbwt` (prebuilt wheels for Linux
++> x86-64/ARM64, Windows x86-64 and macOS Apple silicon, plus a source
++> distribution).  It provides construction from FASTA/FASTQ,
+ > byte/RLE indexes, merging with provenance, source-aware queries, read
+ > provenance, source removal, BWT-aligned tags, lossless FASTQ quality
+ > sidecars, LCP, benchmarking, and the full legacy `msbwt` command.
+diff --git a/Installation.md b/Installation.md
+index 5ec112d..c2666e8 100644
+--- a/Installation.md
++++ b/Installation.md
+@@ -1,12 +1,13 @@
+ # Installation
+ 
+-> The original wiki's 2016 installation instructions (pip from PyPI,
+-> Cython 0.x, Python 2/Cython ecosystem) no longer apply.  This fork is
+-> installed from locally built artifacts.
++> **Quick start:** `pip install pymsbwt` (CPython 3.14 or newer).  The
++> 2016 instructions for the original package (Cython 0.x, Python 2) no
++> longer apply.
+ 
+ ## Current line: msbwt-modern3 (Python 3, preferred)
+ 
+-`msbwt-modern3` is the active Python 3 distribution.  It preserves the
++The Python 3 distribution is published on PyPI as **`pymsbwt`** (the source
++tree and internal name is `msbwt-modern3`).  It preserves the
+ legacy `MUS` / `MUSCython` import namespaces and the full `msbwt`
+ command-line interface (`cffq`, `pp`, `cfpp`, `merge`, `query`,
+ `massquery`, `compress`, `decompress`, `convert`) and installs the same
+@@ -18,38 +19,39 @@ six enhanced console scripts as the Python-2.7 line.
+ |---|---|
+ | CPython | >= 3.14 (validated on CPython 3.14) |
+ | NumPy | >= 2.5, < 3 (installed automatically as the only runtime dependency) |
+-| Platforms | Windows x86-64 or Linux x86-64 |
+-| Building from source | a C compiler (the wheels are self-contained) |
++| Prebuilt wheels | Linux x86-64 and ARM64 (manylinux), Windows x86-64, macOS Apple silicon; CPython 3.14 only |
++| Other platforms | install from the source distribution (needs a C compiler; takes a few minutes) |
+ 
+ **BAM/SAM input is explicitly unsupported** in this line: the legacy
+ pysam-based entry points reject with an explanatory error, and pysam is
+ not a dependency.  Build indexes from FASTA/FASTQ instead.
+ 
+-### Install from a wheel
++### Install from PyPI
+ 
+ ```bash
+-pip install msbwt_modern3-0.3.0-cp314-cp314-win_amd64.whl   # Windows x86-64
+-pip install msbwt_modern3-0.3.0-cp314-cp314-linux_x86_64.whl # Linux x86-64
++pip install pymsbwt
+ ```
+ 
+-The wheels are platform-specific compiled wheels; there is no macOS,
+-ARM, or universal wheel.
++Use a Python 3.14 environment (`python -m venv .venv`, then activate it).  pip
++picks the matching prebuilt wheel automatically.  Each wheel is installed into a
++clean environment and exercised in CI (a small index is built from FASTQ,
++queried, compressed and decompressed); the full compatibility test suite runs on
++Linux x86-64.  If no wheel matches your platform, pip builds from the source
++distribution instead, which requires a C compiler and downloads Cython and NumPy
++as build requirements.
+ 
+-### Install from source
++### Install from a repository checkout
+ 
+ ```bash
+-pip install msbwt_modern3-0.3.0.tar.gz
++git clone https://github.com/Taksir/msbwt
++pip install ./msbwt/packages/msbwt-modern3
+ ```
+ 
+-This regenerates all compiled extensions from the `.pyx` sources during
+-the build (requires Cython 3.2.x and NumPy 2.5, which pip fetches as
+-build requirements automatically).
+-
+ ### Verify
+ 
+ ```bash
+ msbwt -V
+-# -> ...msbwt 0.3.0 in MSBWT 0.3.0
++# -> msbwt 0.4.0 in MSBWT 0.4.0
+ python -c "import MUS, MUSCython; print(MUS.__file__)"
+ msbwt-bwt-tags --help
+ ```
 diff --git a/Persistent-Files-and-Compatibility.md b/Persistent-Files-and-Compatibility.md
 index 0242e44..c804922 100644
 --- a/Persistent-Files-and-Compatibility.md
@@ -157,6 +232,6 @@ index b8c7a7e..0000000
 +++ /dev/null
 @@ -1 +0,0 @@
 -Welcome to the msbwt wiki!
--- 
-2.43.0
-
+diff --git a/wiki-refresh.patch b/wiki-refresh.patch
+deleted file mode 100644
+index e69de29..0000000

@@ -12,20 +12,21 @@ a Python 3 port and some extra features for working with merged indexes.
 
 ## Install
 
-The Python 3 port is `msbwt-modern3` (`packages/msbwt-modern3`). It needs
-CPython 3.14 or newer, NumPy 2.5 or newer, and a C compiler, because the core is
-Cython; installing from source takes a few minutes while it compiles.
+The Python 3 port is published on PyPI as `pymsbwt` (source tree:
+`packages/msbwt-modern3`). It needs CPython 3.14 or newer and NumPy 2.5 or newer.
 
 ```bash
-git clone https://github.com/Taksir/msbwt
-cd msbwt
-pip install ./packages/msbwt-modern3
+pip install pymsbwt
 ```
 
-A PyPI release under the name `pymsbwt` is planned but not published yet. The
-Python 2.7 line (`packages/msbwt-modern2`) is frozen and not on PyPI; its README
-has the install steps. Don't install both distributions into one environment:
-they provide the same `MUS` and `MUSCython` packages and the same `msbwt` command.
+Prebuilt wheels cover Linux (x86-64 and ARM64), Windows x86-64 and macOS on Apple
+silicon. On any other platform pip builds from source, which needs a C compiler and
+takes a few minutes. The package installs the `MUS` and `MUSCython` modules and the
+`msbwt` command.
+
+The Python 2.7 line (`packages/msbwt-modern2`) is frozen and not on PyPI; its README
+has the install steps. Don't install both distributions into one environment: they
+provide the same `MUS` and `MUSCython` packages and the same `msbwt` command.
 
 ## Build an index
 
@@ -101,8 +102,9 @@ documented on the wiki and in [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md).
 ## Limits
 
 - BAM input is not supported in the Python 3 port.
-- Tested on Windows x86-64 and Linux x86-64 with CPython 3.14. Other platforms
-  and Python versions are untested, so don't assume they work.
+- CPython 3.14 only. Each wheel is installed and smoke-tested in CI; the full
+  compatibility suite runs on Linux x86-64, so treat the other platforms as less
+  exercised. Older Python versions are not supported.
 - Behaviour changes from the original are listed in
   [COMPATIBILITY.md](COMPATIBILITY.md).
 
