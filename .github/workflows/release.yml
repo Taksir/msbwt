@@ -57,7 +57,7 @@ jobs:
         os: [ubuntu-latest, ubuntu-24.04-arm, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v4
-      - uses: pypa/cibuildwheel@v3
+      - uses: pypa/cibuildwheel@v3.4.1
         with:
           package-dir: packages/msbwt-modern3
           output-dir: wheelhouse
