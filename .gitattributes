@@ -22,3 +22,6 @@
 /compat/fixtures/synthetic/*.gz binary
 /reference/original-0.3.0/environment/run-probe.sh text eol=lf
 /reference/original-0.3.0/frozen-source/README.md binary
+
+# patch files carry the target files' own whitespace verbatim
+docs/wiki/*.patch -whitespace
