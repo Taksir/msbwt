@@ -541,3 +541,21 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Reader/writer interoperability: read-only over the existing `lcps.npy` /
   `msbwt.npy` / provenance files, so it works on any valid 11A or 11B layer,
   including one written by modern2.
+
+## M3-8B0: bidirectional (2BWT) correctness prototype (modern3, experimental)
+
+- Status: experimental prototype with regression tests
+  (`compat/tests/test_bidirectional.py`); details and gate results in
+  `docs/roadmap/STEP8B0_BIDIRECTIONAL.md`.
+- Affected: new module `MUS.Bidirectional` (`build_reverse_companion`,
+  `BidirectionalIndex`, `BiInterval`).  No CLI command.
+- Old behavior: none (new surface).  No existing API, command, or file
+  changes.  The forward package is never modified.
+- New persisted files, in a separate companion directory only: an ordinary
+  Holt `msbwt.npy` of the reversed reads (plus the standard Multimerge
+  build files) and `reverse_companion.json` (`msbwt-reverse-companion` v1,
+  binding the forward and companion `msbwt.npy` SHA-256 digests).  The
+  format is experimental and may change before any production 8B feature.
+- Observed legacy hazard, not changed here:
+  `MultimergeCython.createMSBWTFromSeqs` loops forever on unterminated
+  periodic input; the companion builder always passes `$`-terminated reads.
