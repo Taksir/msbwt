@@ -556,9 +556,8 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
   build files) and `reverse_companion.json` (`msbwt-reverse-companion` v1,
   binding the forward and companion `msbwt.npy` SHA-256 digests).  The
   format is experimental and may change before any production 8B feature.
-- Observed legacy hazard, not changed here:
-  `MultimergeCython.createMSBWTFromSeqs` loops forever on unterminated
-  periodic input; the companion builder always passes `$`-terminated reads.
+- Observed legacy hazard: `MultimergeCython.createMSBWTFromSeqs` looped
+  forever on unterminated periodic input.  Fixed by M3-S2-INPUT below.
 
 ## M3-FMD-SCREEN: FMD feasibility screen (modern3, experimental)
 
@@ -573,3 +572,38 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
   the reads plus their reverse complements and `fmd_index.json`
   (`msbwt-fmd-screen` v1).  An FMD index counts both strands and carries no
   source provenance; it is not a drop-in replacement for a forward index.
+
+## M3-S2-INPUT: construction input validation (modern3)
+
+- Status: fixed with regression tests
+  (`compat/tests/test_m3_s2_input_validation.py`).  Supersedes the
+  "observed legacy hazard, not changed here" note in M3-8B0.
+- Affected APIs/commands: `MultimergeCython.memoryBWT`,
+  `formatSeqsForMerge`, and every path through them
+  (`createMSBWTFromSeqs`, `createMSBWTFromFasta`, `createMSBWTFromFastq`,
+  `msbwt cffq` / `msbwt pp` without `-u`); `MSBWTGenCython.writeSeqsToFiles`
+  and every uniform path through it (`MultiStringBWTCython.createMSBWTFromSeqs`,
+  `createMSBWTFromFastq`, `msbwt cffq -u` / `msbwt pp -u`).
+- Old behavior (both modules compile with `boundscheck=False` and trusted
+  input): a byte outside `$ACGNT` (lowercase soft-masking, IUPAC codes)
+  mapped to code 6 and was used as an out-of-bounds index (heap corruption
+  `malloc(): invalid size` or segfault); a non-uniform read without its
+  terminal `$` looped forever (periodic reads) or silently produced a wrong
+  BWT; an inner `$` was accepted; an empty string became a zero-length read;
+  bytes >= 128 were read as negative indexes.  Inside a pool worker any of
+  these left the caller, including `msbwt cffq` in both modes, hanging
+  forever.
+- New behavior: each such input raises `ValueError` naming the read,
+  position, symbol, and fix (uppercase soft-masked input; map IUPAC codes to
+  N) before any unchecked write or output file; the merge pool is
+  terminated and files closed before the error propagates.  Valid input is
+  unchanged: Multimerge and uniform Bauer `msbwt.npy` were byte-identical
+  before and after on a seeded valid read set, and `memoryBWT` matches an
+  independent rotation-sort oracle.
+- Rationale: memory-safety and liveness defects on untrusted biological
+  input (`AGENTS.md`, Bugs and security).  The legacy result is not
+  preserved as an oracle: it is undefined behavior or non-termination.
+- Not changed: the pure-Python `MUS.MSBWTGen` path (bounds-checked NumPy;
+  raises `IndexError` instead of corrupting memory); empty reads (a lone
+  `$`) on the uniform/Bauer non-uniform byte layout.
+- Reader/writer interoperability: unchanged; no persisted format changes.
