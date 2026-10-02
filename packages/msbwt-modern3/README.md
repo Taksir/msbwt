@@ -1,4 +1,8 @@
-# msbwt-modern3
+# pymsbwt
+
+The PyPI distribution of the Python 3 port of msBWT (`pymsbwt`; the source tree
+and internal name is `msbwt-modern3`). Import names are unchanged: `MUS`,
+`MUSCython`, and the `msbwt` command.
 
 Python 3 distribution of the MSBWT multi-string Burrows–Wheeler transform
 tooling: construction, compression, merging, and querying of multi-string
@@ -21,9 +25,12 @@ environments**.
 ## Installation
 
 ```bash
-pip install msbwt_modern3-0.3.0-cp314-cp314-win_amd64.whl   # Windows
-pip install msbwt_modern3-0.3.0-cp314-cp314-linux_x86_64.whl # Linux
+pip install pymsbwt
 ```
+
+Binary wheels are published for the platforms listed on the PyPI page; on other
+platforms pip builds from the source distribution, which needs a C compiler and
+takes a few minutes.
 
 ## Supported functionality
 
