@@ -11,11 +11,89 @@ index 34a791c..0ae13c3 100644
  
  ## Example
  
+diff --git a/Bidirectional-Search-Experimental.md b/Bidirectional-Search-Experimental.md
+new file mode 100644
+index 0000000..2b06485
+--- /dev/null
++++ b/Bidirectional-Search-Experimental.md
+@@ -0,0 +1,72 @@
++# Bidirectional Search (experimental)
++
++*Since pymsbwt 0.5.0.*  **Experimental**: the API and the on-disk companion
++format may change before a production release.  It exists to prove that
++bidirectional search is exact on msBWT indexes; it is not yet faster than
++the existing `extendRight`, and it has no command-line tool.
++
++An ordinary msBWT extends a match to the left cheaply.  Extending to the right
++needs a second view of the data.  `MUS.Bidirectional` supports two:
++
++| Design | What is built | Counts |
++|---|---|---|
++| 2BWT companion | a second index of the **reversed** reads, next to your index | single strand, same as today |
++| FMD index | one index of the reads **plus their reverse complements** | both strands, always |
++
++Your existing index is never modified.
++
++## 2BWT companion
++
++```python
++from MUS import Bidirectional as bd
++
++bd.build_reverse_companion("data/merged10", "data/merged10.reverse")
++index = bd.BidirectionalIndex.load("data/merged10", "data/merged10.reverse")
++
++state = index.search("ACGT")             # BiInterval(forward, reverse, size)
++state = index.extend_right(state, "A")   # ACGTA
++state = index.extend_left(state, "T")    # TACGTA
++print(state.size)                        # occurrences of TACGTA
++
++children = index.extend_right_all(state) # {b"A": BiInterval, b"C": ..., ...}
++```
++
++`state.forward` / `state.size` is an ordinary interval of your index, so the
++per-sample queries apply to it, for example
++`MultiSourceQueryIndex.count_interval(source, state.forward, state.forward + state.size)`.
++
++## FMD index
++
++```python
++bd.build_fmd_index("data/merged10", "data/merged10.fmd")
++fmd = bd.BidirectionalIndex.load_fmd("data/merged10.fmd")
++fmd.search("ACGT").size    # occurrences of ACGT on either strand
++```
++
++An FMD index carries no source provenance and always counts both strands.
++It is a screen for a possible future index type, not a replacement for your
++index.
++
++## Building
++
++- Construction recovers every read from your index and builds a new one, so
++  it takes about as long as the original build and holds the reads in memory.
++- Call it from a script file or a notebook, not from `python -` reading
++  stdin: index construction uses `multiprocessing`, and Python 3.14 starts
++  worker processes in a way that needs an importable main script.
++- `reverse_companion.json` / `fmd_index.json` bind the new index to the exact
++  `msbwt.npy` it was built from; a stale companion is rejected on load.
++
++## Status
++
++Correctness was checked against direct search for every extension order of
++every pattern up to length 3, every read substring, palindromes, `N`,
++duplicate reads, read ends, and per-sample counts.  On synthetic data, an FMD
++index had 15–21% fewer BWT runs than a 2BWT at the same size, which matters
++only once a run-length compressed backend exists.  The design discussion is
++in `docs/roadmap/CHECKPOINT_FMD_VS_2BWT.md` in the main repository.
++
++## Related pages
++
++- [Source-Aware and Multi-Source Queries](Source-Aware-and-Multi-Source-Queries)
++- [Persistent Files and Compatibility](Persistent-Files-and-Compatibility)
 diff --git a/Constructing-the-MSBWT.md b/Constructing-the-MSBWT.md
-index 38e83c5..0cfd12e 100644
+index 38e83c5..1c29adc 100644
 --- a/Constructing-the-MSBWT.md
 +++ b/Constructing-the-MSBWT.md
-@@ -21,6 +21,12 @@ the original package:
+@@ -21,6 +21,19 @@ the original package:
  Both routes support uniform-length reads (`-u`) and nonuniform reads
  (no flag), and plain or gzip-compressed FASTQ.
  
@@ -25,10 +103,17 @@ index 38e83c5..0cfd12e 100644
 +building from the incomplete data.  Discard the output directory and fix or
 +re-transfer the input.
 +
++Reads must use uppercase `A`, `C`, `G`, `N`, `T`.  Since pymsbwt 0.5.0,
++any other symbol (lowercase soft-masking such as `acgt`, IUPAC codes such
++as `R` or `Y`) stops construction with a `ValueError` naming the read,
++position and symbol.  Uppercase soft-masked input and map IUPAC codes to
++`N` before building.  Earlier releases did not check, and such input could
++hang `msbwt cffq` or corrupt memory.
++
  ## Two-step construction
  
  ```bash
-@@ -107,8 +113,9 @@ documented in the legacy bug tracker in the main repository):
+@@ -107,8 +120,9 @@ documented in the legacy bug tracker in the main repository):
  - `convert` silently drops everything after the first newline of the
    input (exit 0);
  - `convert` reports an invalid symbol before the first newline as a
@@ -40,13 +125,51 @@ index 38e83c5..0cfd12e 100644
  
  ## Command summary
  
+diff --git a/Enhanced-Features-Overview.md b/Enhanced-Features-Overview.md
+index 4276b46..1bab41c 100644
+--- a/Enhanced-Features-Overview.md
++++ b/Enhanced-Features-Overview.md
+@@ -55,7 +55,9 @@ do not change query semantics and do not implement a new backend.
+ | Source removal | Unmerge selected sources without FASTQ rebuild | `MUS.SourceRemoval` |
+ | BWT-aligned tags | Arbitrary row-aligned arrays surviving merge/removal | `MUS.BWTTags` |
+ | FASTQ quality sidecar | Lossless byte-exact quality, row-aligned | `MUS.QualitySidecar` |
+-| LCP retrofit | Exact adjacent LCP over the final BWT | `MUS.LCP` |
++| LCP retrofit | Exact adjacent LCP over the final BWT; kept through source removal (0.5.0) | `MUS.LCP` |
++| LCP intervals and maximal repeats (0.5.0) | Repeats with per-sample, group and read support | `maximalRepeats`, `msbwt-lcp repeats` |
++| Bidirectional search, experimental (0.5.0) | Reversed-read companion (2BWT) and an FMD screen | `MUS.Bidirectional` |
+ | Benchmarking/backend contract | Storage, run, structural, and query accounting | `MUS.Benchmarking`, `MUS.BackendContract` |
+ 
+ ## Design rules
+@@ -99,8 +101,9 @@ pysam distribution.
+ 
+ The following are **not** part of this release and are not claimed:
+ 
+-- Feature 8B (succinct extension storage);
+-- Features 11B/11C (LCP-preserving removal / succinct LCP);
++- production bidirectional search (the 0.5.0 module is an experimental
++  correctness prototype), MEM/SMEM, and approximate search;
++- succinct or compressed LCP storage;
+ - a new compressed backend — the benchmark layer measures the index as
+   it is but implements no backend;
+ - performance superiority claims — the naive u32 RLE encoding model
+@@ -116,5 +119,7 @@ The following are **not** part of this release and are not claimed:
+ - [BWT-Aligned Tags](BWT-Aligned-Tags)
+ - [Lossless FASTQ Quality Sidecar](Lossless-FASTQ-Quality-Sidecar)
+ - [LCP Retrofit](LCP-Retrofit)
++- [LCP Intervals and Maximal Repeats](LCP-Intervals-and-Maximal-Repeats)
++- [Bidirectional Search (experimental)](Bidirectional-Search-Experimental)
+ - [Benchmarking and Backend Contract](Benchmarking-and-Backend-Contract)
+ - [Persistent Files and Compatibility](Persistent-Files-and-Compatibility)
 diff --git a/Home.md b/Home.md
-index bd03d12..d62aebc 100644
+index bd03d12..b3308bc 100644
 --- a/Home.md
 +++ b/Home.md
-@@ -6,8 +6,9 @@ a maintenance fork of the original Holt/McMillan
+@@ -4,10 +4,11 @@ Welcome to the msbwt wiki — documentation for [msbwt](https://github.com/Taksi
+ a maintenance fork of the original Holt/McMillan
+ [`holtjma/msbwt`](https://github.com/holtjma/msbwt) project.
  
- > **Current line: `msbwt-modern3` 0.3.0 (Python 3).**  The active,
+-> **Current line: `msbwt-modern3` 0.3.0 (Python 3).**  The active,
++> **Current line: `pymsbwt` (Python 3).**  The active,
  > preferred installation route is the Python 3 distribution — CPython
 -> >=3.14 on Windows x86-64 and Linux x86-64, with compiled wheels and a
 -> source distribution.  It provides construction from FASTA/FASTQ,
@@ -56,6 +179,28 @@ index bd03d12..d62aebc 100644
  > byte/RLE indexes, merging with provenance, source-aware queries, read
  > provenance, source removal, BWT-aligned tags, lossless FASTQ quality
  > sidecars, LCP, benchmarking, and the full legacy `msbwt` command.
+@@ -26,6 +27,8 @@ verified **enhanced source-aware features** added by this fork:
+ persistent multi-source provenance, per-source queries, read-level
+ provenance, source removal, BWT-aligned tags, a lossless FASTQ quality
+ sidecar, post-construction LCP, and a whole-index benchmarking harness.
++Since 0.5.0: LCP kept through source removal, maximal repeats with
++per-sample support, and an experimental bidirectional-search module.
+ 
+ ## Supported Platforms
+ 
+@@ -60,8 +63,10 @@ For the frozen Python-2.7 line specifically:
+ 6. [BWT-Aligned Tags](BWT-Aligned-Tags) — arbitrary row-aligned tag arrays
+ 7. [Lossless FASTQ Quality Sidecar](Lossless-FASTQ-Quality-Sidecar) — byte-exact quality, row-aligned
+ 8. [LCP Retrofit](LCP-Retrofit) — exact post-construction LCP without a rebuild
+-9. [Benchmarking and Backend Contract](Benchmarking-and-Backend-Contract) — storage, run, structural, and query accounting
+-10. [Persistent Files and Compatibility](Persistent-Files-and-Compatibility) — what each on-disk file is, and what is safe to reconstruct
++9. [LCP Intervals and Maximal Repeats](LCP-Intervals-and-Maximal-Repeats) — repeats with per-sample support (0.5.0)
++10. [Bidirectional Search (experimental)](Bidirectional-Search-Experimental) — 2BWT companion and FMD screen (0.5.0)
++11. [Benchmarking and Backend Contract](Benchmarking-and-Backend-Contract) — storage, run, structural, and query accounting
++12. [Persistent Files and Compatibility](Persistent-Files-and-Compatibility) — what each on-disk file is, and what is safe to reconstruct
+ 
+ ## References
+ 
 diff --git a/Installation.md b/Installation.md
 index 5ec112d..c2666e8 100644
 --- a/Installation.md
@@ -132,8 +277,162 @@ index 5ec112d..c2666e8 100644
  python -c "import MUS, MUSCython; print(MUS.__file__)"
  msbwt-bwt-tags --help
  ```
+diff --git a/LCP-Intervals-and-Maximal-Repeats.md b/LCP-Intervals-and-Maximal-Repeats.md
+new file mode 100644
+index 0000000..47989ea
+--- /dev/null
++++ b/LCP-Intervals-and-Maximal-Repeats.md
+@@ -0,0 +1,96 @@
++# LCP Intervals and Maximal Repeats
++
++*Since pymsbwt 0.5.0 (Feature 11C).*  Requires an LCP layer
++([LCP Retrofit](LCP-Retrofit)) and a provenance-preserving merged index.
++
++An **LCP interval** is a block of BWT rows whose suffixes all start with the
++same string, and which is as large as possible for that string.  These are the
++internal nodes of the suffix tree of your reads.  Because an LCP interval is
++an ordinary BWT interval, the per-sample queries from
++[Source-Aware and Multi-Source Queries](Source-Aware-and-Multi-Source-Queries)
++work on it directly: a repeat reports which samples contain it without
++listing every occurrence.
++
++## Definitions
++
++Each read end acts as its own terminator, so a match never runs across reads.
++
++| Term | Meaning |
++|---|---|
++| maximal repeat | occurs at least twice and cannot be extended to the left or right without losing an occurrence |
++| supermaximal repeat | a maximal repeat that is not part of a longer maximal repeat |
++
++## Command line
++
++```bash
++# maximal repeats of length >= 25 found in at least 3 samples
++msbwt-lcp repeats --input data/merged10 --min-length 25 --min-sources 3 \
++    --include-sources
++
++# supermaximal repeats only, first 100
++msbwt-lcp repeats --input data/merged10 --min-length 20 --supermaximal --limit 100
++
++# counts for a metadata group, keeping repeats seen at least 5 times in it
++msbwt-lcp repeats --input data/merged10 --min-length 25 --group case --min-selected 5
++```
++
++Output is one JSON record per line:
++
++```json
++{"end": 1042, "length": 31, "occurrences": 12, "sequence": "ACGT...", "source_frequency": 4, "start": 1030}
++```
++
++Other options: `--max-length`, `--min-occurrences`, `--max-sources`,
++`--include-read-count` (needs read provenance).
++
++## Python API
++
++```python
++from MUS.MultiSourceQuery import MultiSourceBWT
++
++msbwt = MultiSourceBWT.load("data/merged10")      # loads lcps.npy automatically
++
++for record in msbwt.maximalRepeats(min_length=25, min_sources=3,
++                                   include_sources=True, limit=10):
++    print(record["sequence"], record["occurrences"], record["source_frequency"])
++    for source in record["sources"]:
++        print("   ", source["source_name"], source["count"])
++
++# Raw intervals (suffix-tree internal nodes), children first:
++for interval in msbwt.lcpIntervals(min_lcp=30):
++    print(interval.lcp, interval.start, interval.end,
++          msbwt.lcpIntervalSequence(interval))
++    children = msbwt.lcpChildren(interval)   # [(start, end, lcp or None), ...]
++    break
++```
++
++`maximalRepeats` records always contain `start`, `end`, `length`,
++`occurrences` and `source_frequency`.  Optional fields:
++
++| Option | Adds |
++|---|---|
++| `include_sequence=True` (default) | `sequence` (bytes) |
++| `include_sources=True` | `sources`: per-sample counts, nonzero samples only |
++| `sources=` / `group=` / `where=` | `selected_count` for that selection; filter with `min_selected` |
++| `include_read_count=True` | `read_count`: distinct reads containing the repeat (needs read provenance) |
++
++## Cost
++
++Enumeration is one pass over `lcps.npy`.  Rows below `--min-length` are
++skipped quickly, so a higher minimum length is much faster: on a synthetic
++10M-row array, minimum length 1 took about 8 s and 25 took about 0.1 s.
++Each reported repeat costs one walk along a single read to spell it, plus one
++provenance-tree traversal for the sample counts.
++
++## Notes
++
++- Works on any valid LCP layer, including one carried through
++  [Source Removal](Source-Removal).
++- Nothing new is written to the index directory.
++- Repeats containing `N` are reported like any other symbol.
++
++## Related pages
++
++- [LCP Retrofit](LCP-Retrofit)
++- [Source-Aware and Multi-Source Queries](Source-Aware-and-Multi-Source-Queries)
++- [Read-Level Provenance](Read-Level-Provenance)
+diff --git a/LCP-Retrofit.md b/LCP-Retrofit.md
+index fc65081..543a303 100644
+--- a/LCP-Retrofit.md
++++ b/LCP-Retrofit.md
+@@ -90,21 +90,41 @@ consumed.
+ 
+ ## Interaction with source removal
+ 
+-Removing sources drops the LCP layer unless explicitly handled:
++*Since pymsbwt 0.5.0 (Feature 11B).*  Removing sources keeps the LCP
++layer.  When removal makes two surviving rows adjacent, their LCP is the
++minimum of the original LCPs between them, so the reduced layer is computed
++in one sequential pass with no FASTQ and no read recovery.  It is exactly
++the array a fresh `msbwt-lcp construct` would produce on the reduced index.
+ 
+ ```bash
+ msbwt-remove-sources --input data/merged10 --output data/merged7 \
+-    --remove sample00,sample02 --drop-lcp
++    --remove sample00,sample02            # LCP carried through
++msbwt-remove-sources --input data/merged10 --output data/merged7 \
++    --remove sample00,sample02 --drop-lcp # reduced index without LCP
+ ```
+ 
+-LCP-preserving removal is **not** part of this release.
++The input layer is validated first; a stale layer stops the removal and
++nothing is written.  The reduced `lcp.json` records
++`"algorithm": "point10-survivor-range-minimum"`, the input digest under
++`derived_from`, and `"max_read_length_exact": false` (the inherited value
++stays a valid upper bound).
++
++In pymsbwt 0.4.0 and in the frozen Python 2.7 line, removal from an
++LCP-enabled index fails unless `--drop-lcp` is given.
++
++## Using the LCP layer
++
++LCP intervals, maximal repeats and per-sample repeat support are described
++on [LCP Intervals and Maximal Repeats](LCP-Intervals-and-Maximal-Repeats).
+ 
+-## Future / not included
++## Not included
+ 
+-- LCP-preserving source removal (Feature 11B) — not implemented.
+-- Succinct LCP storage (Feature 11C) — not implemented.
++- Succinct or compressed LCP storage.
++- LCP generation during merge; the post-construction retrofit remains the
++  reference.
+ 
+ ## Related pages
+ 
+ - [Source Removal](Source-Removal)
++- [LCP Intervals and Maximal Repeats](LCP-Intervals-and-Maximal-Repeats)
+ - [Persistent Files and Compatibility](Persistent-Files-and-Compatibility)
 diff --git a/Persistent-Files-and-Compatibility.md b/Persistent-Files-and-Compatibility.md
-index 0242e44..c804922 100644
+index 0242e44..435bb9a 100644
 --- a/Persistent-Files-and-Compatibility.md
 +++ b/Persistent-Files-and-Compatibility.md
 @@ -23,6 +23,7 @@ optional       an added layer; absence does not affect legacy behavior
@@ -144,6 +443,25 @@ index 0242e44..c804922 100644
  
  ## Two-source provenance (Feature 1)
  
+@@ -53,7 +54,9 @@ reconstruction requires re-merging from the leaves.
+ | `quality_sidecar.json` | optional | quality-sidecar metadata (Q1) |
+ | reserved tag `fastq_quality_ascii` | optional | the quality values (a tag under `bwt_tags/`); reconstructible from the original FASTQs |
+ | `lcps.npy` | optional | adjacent-LCP array (Feature 11A); recomputable with `msbwt-lcp construct` |
+-| `lcp.json` | optional | LCP metadata; goes with the array |
++| `lcp.json` | optional | LCP metadata; goes with the array.  A layer carried through source removal (0.5.0) adds `derived_from` and `max_read_length_exact` |
++| `reverse_companion.json` + companion `msbwt.npy` | optional, experimental | separate directory from `MUS.Bidirectional.build_reverse_companion` (0.5.0); rebuildable from the forward index |
++| `fmd_index.json` + FMD `msbwt.npy` | optional, experimental | separate directory from `build_fmd_index` (0.5.0); counts both strands; not a replacement for the forward index |
+ 
+ ## Compatibility rules
+ 
+@@ -81,5 +84,5 @@ reconstruction requires re-merging from the leaves.
+ 
+ - A new compressed backend — none is implemented; the RLE format is the
+   historical one.
+-- Succinct LCP (11C) and LCP-preserving removal (11B) — not
+-  implemented; source removal drops LCP unless explicitly handled.
++- Succinct or compressed LCP storage.  (Since 0.5.0, source removal keeps
++  the LCP layer exactly; earlier releases drop it only with `--drop-lcp`.)
 diff --git a/Queries-with-the-Python-API.md b/Queries-with-the-Python-API.md
 index 5df46e7..ff2a62d 100644
 --- a/Queries-with-the-Python-API.md
@@ -225,6 +543,66 @@ index 68a32dc..0000000
 -McMillan).  The content documents this repository's verified
 -implementation; original scholarly attribution is preserved on the
 -`Home` page and the primer.
+diff --git a/Source-Removal.md b/Source-Removal.md
+index 0c31506..5b39bfc 100644
+--- a/Source-Removal.md
++++ b/Source-Removal.md
+@@ -25,12 +25,11 @@ new index containing only the retained sources:
+ msbwt-remove-sources \
+     --input data/merged10 \
+     --output data/merged7 \
+-    --remove sample00,sample02,sample09 \
+-    --drop-lcp
++    --remove sample00,sample02,sample09
+ 
+ # keep only selected sources (equivalent selection)
+ msbwt-remove-sources --input data/merged10 --output data/panel \
+-    --keep sample01,sample05,sample08 --drop-lcp
++    --keep sample01,sample05,sample08
+ 
+ # remove a named metadata group
+ msbwt-remove-sources --input data/merged10 --output data/control \
+@@ -38,12 +37,13 @@ msbwt-remove-sources --input data/merged10 --output data/control \
+ 
+ # remove by metadata predicate (repeat --where for AND)
+ msbwt-remove-sources --input data/merged10 --output data/ex \
+-    --where cohort=control --drop-lcp
++    --where cohort=control
+ ```
+ 
+-`--drop-lcp` explicitly produces a reduced MSBWT without the LCP layer
+-(LCP-preserving removal is not part of this release — see the
+-[LCP Retrofit](LCP-Retrofit) page).
++An LCP layer on the input is carried into the reduced index (since
++pymsbwt 0.5.0).  `--drop-lcp` produces a reduced index without it.  In
++0.4.0 and the Python 2.7 line, removal from an LCP-enabled index needs
++`--drop-lcp`.  See [LCP Retrofit](LCP-Retrofit).
+ 
+ ## Python API
+ 
+@@ -53,10 +53,9 @@ from MUS.SourceRemoval import remove_sources, retain_sources
+ stats = remove_sources(
+     "data/merged10", "data/merged7",
+     sources=["sample00", "sample02", "sample09"],
+-    drop_lcp=True,
+ )
+ # stats: read_provenance_preserved, bwt_tags_preserved,
+-#        quality_sidecar_preserved, output_bwt_rows, ...
++#        quality_sidecar_preserved, lcp_preserved, output_bwt_rows, ...
+ 
+ stats = retain_sources("data/merged10", "data/panel", ["sample01", "sample05"])
+ ```
+@@ -75,8 +74,8 @@ caches are copied.
+ 
+ - The reduced index supports the same source-aware queries, read
+   provenance, tags, and quality sidecar for the retained sources.
+-- The LCP layer is dropped unless you handle it explicitly (Feature 11B
+-  — LCP-preserving removal — is **not** implemented).
++- The LCP layer is kept and equals a fresh LCP construction on the reduced
++  index (since 0.5.0); pass `drop_lcp=True` to leave it out.
+ - The output bytes are verified against independent retained rebuilds on
+   the exercised fixtures; treat byte-identity as verified for those
+   shapes, not as a universal guarantee beyond what the tests prove.
 diff --git a/Wiki.md b/Wiki.md
 deleted file mode 100644
 index b8c7a7e..0000000
@@ -232,6 +610,19 @@ index b8c7a7e..0000000
 +++ /dev/null
 @@ -1 +0,0 @@
 -Welcome to the msbwt wiki!
+diff --git a/_Sidebar.md b/_Sidebar.md
+index b78bd7d..e76d761 100644
+--- a/_Sidebar.md
++++ b/_Sidebar.md
+@@ -22,6 +22,8 @@
+ - [BWT Tags](BWT-Aligned-Tags)
+ - [FASTQ Quality](Lossless-FASTQ-Quality-Sidecar)
+ - [LCP](LCP-Retrofit)
++- [Maximal Repeats](LCP-Intervals-and-Maximal-Repeats)
++- [Bidirectional (experimental)](Bidirectional-Search-Experimental)
+ - [Benchmarking](Benchmarking-and-Backend-Contract)
+ 
+ ## Reference
 diff --git a/wiki-refresh.patch b/wiki-refresh.patch
 deleted file mode 100644
 index e69de29..0000000

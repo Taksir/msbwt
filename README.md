@@ -53,7 +53,8 @@ msbwt convert -i raw.txt OUT
 ```
 
 `-p` sets the number of processes. Input that ends partway through a FASTQ record
-is rejected with an error.
+is rejected with an error, and so are reads containing anything other than uppercase
+`A C G N T`: uppercase soft-masked reads and map IUPAC codes to `N` first.
 
 ## Query
 
@@ -83,15 +84,17 @@ Installing the package also adds these commands, each with `--help`:
 
 | Command | What it does |
 |---|---|
-| `msbwt-remove-sources` | drop chosen samples from a merged index without rebuilding |
-| `msbwt-lcp` | add an LCP array to an existing index |
+| `msbwt-remove-sources` | drop chosen samples from a merged index without rebuilding (keeps an LCP array) |
+| `msbwt-lcp` | add an LCP array to an existing index; `msbwt-lcp repeats` lists maximal repeats with per-sample counts |
 | `msbwt-bwt-tags` | attach row-aligned arrays to an index |
 | `msbwt-quality-sidecar` | store FASTQ quality strings alongside the index |
 | `msbwt-retrofit-read-provenance` | record which read each BWT row came from |
 | `msbwt-benchmark-index` | report storage use of an index |
 
 Per-sample counts over a merged index are available from Python through
-`MUS.MultiSourceQuery.MultiSourceBWT`. The wiki has worked examples.
+`MUS.MultiSourceQuery.MultiSourceBWT`, including `maximalRepeats` for repeated
+sequences and which samples contain them. `MUS.Bidirectional` is an experimental
+module for extending matches in both directions. The wiki has worked examples.
 
 ## Index files
 
