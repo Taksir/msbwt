@@ -255,7 +255,7 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
         #open the file and read in starting form the second, every 4th line
         logger.info('Loading \''+fn+'\'...')
         if fn.endswith('.gz'):
-            fp = gzip.open(fn, 'r')
+            fp = gzip.open(fn, 'rt')
         else:
             fp = open(fn, 'r')
         i = 0
@@ -285,6 +285,8 @@ def preprocessFastqs(list fastqFNs, outputDir, bint areUniform, logger):
             i += 1
                 
         fp.close()
+        if (i & 0x3) != 0:
+            raise ValueError('Truncated FASTQ input \'%s\': %d lines is not a whole number of 4-line records' % (fn, i))
     
     if len(seqArray) > 0:
         for seq, fID, seqID in seqArray:

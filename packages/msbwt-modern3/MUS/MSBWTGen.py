@@ -212,7 +212,7 @@ def bwtPartialInsertPoolCall(tup):
         insertCounts = np.add(insertCounts, np.bincount(insertionArrays[i]['f1'], minlength=vcLen))
         try:
             os.remove(fn)
-        except:
+        except OSError:
             pass
         
     debugDump('Loaded inserts.', procLabel, sTime, debug)
@@ -242,7 +242,7 @@ def bwtPartialInsertPoolCall(tup):
     del prevIter
     try:
         os.remove(prevIterFN)
-    except:
+    except OSError:
         pass
         
     for c in range(0, vcLen):
@@ -589,12 +589,12 @@ def iterateCreateFromSeqs(startingColumn, fmStarts, fmDeltas, allFirstCounts, al
             prevIterFN = mergedFN+'.'+key+'.'+str(column-1)+'.npy'
             try:
                 os.remove(prevIterFN)
-            except:
+            except OSError:
                 pass
             for fn in insertFNs[key]:
                 try:
                     os.remove(fn)
-                except:
+                except OSError:
                     pass
         
         insertFNs = nextInsertFNs

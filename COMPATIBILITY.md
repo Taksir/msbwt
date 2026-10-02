@@ -381,3 +381,117 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Reader/writer interoperability: unchanged.  The widened traceback array is
   in-memory only, `countPileup` is read-only, and no persisted dtype, filename,
   byte layout, dependency, or distribution namespace changed.
+
+## M3-S1-PICKLE: restricted `totalCounts.p` reader
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_totalcounts_safety.py`); full compat suite otherwise
+  unchanged.
+- Affected APIs/files: `MUS.util.loadTotalCounts` (new), used by the `constructTotalCounts`
+  readers in `MUS/MultiStringBWT.py` (byte and RLE).  Persisted file:
+  `<DIR>/totalCounts.p`.
+- Old behavior: `pickle.load` on `totalCounts.p`, so opening an MSBWT directory
+  executed any callable embedded in that file.
+- New behavior: a restricted unpickler accepts only a 1-D integer or float NumPy
+  array (NumPy `ndarray`/`dtype` reconstruction under the `numpy.core` and
+  `numpy._core` names, and `_codecs.encode(..., 'latin1')` for protocol-2
+  pickles).  Any other global, an object/complex/2-D array, or a truncated file
+  raises `ValueError` naming the file.
+- Rationale: datasets are untrusted input (`AGENTS.md`); arbitrary code execution
+  on read was a confirmed security defect.  The legacy behavior is not preserved.
+- Reader/writer interoperability: unchanged.  The writer, filename, and pickle
+  bytes are untouched.  Byte BWTs store an integer array and RLE BWTs a float64
+  array (from `np.bincount` with weights, as in the legacy code); both load.
+  Files from the original writer that use other globals are rejected and must be
+  rebuilt, consistent with the existing "derived, rebuildable" status of
+  `totalCounts.p`.
+
+## M3-S1-GZIP: gzip FASTQ input in the compiled loaders
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_fastq_input.py`).
+- Affected commands/APIs: `msbwt pp`, `cffq` (uniform and non-uniform) on `.gz`
+  input; `MultiStringBWTCython.preprocessFastqs` and
+  `MultimergeCython.preprocessFastqs`/`fastqIterator`, and
+  `MultimergeCython.fastaIterator` for `.gz` FASTA.
+- Old behavior (modern3 before this fix): `gzip.open(fn, 'r')` yields bytes on
+  Python 3, so every `.gz` input failed with `TypeError: a bytes-like object is
+  required, not 'str'`.  The frozen original (Python 2) accepted gzip input.
+- New behavior: `.gz` files are read in text mode (`'rt'`), matching the plain
+  file path and the pure-Python loader, so gzip and plain input of the same
+  reads produce byte-identical artifacts.
+- Rationale: restores the original, documented behavior lost in the Python 3
+  port; no format or output change.
+- Reader/writer interoperability: unchanged.
+
+## M3-S1-FASTQ-TRUNC: truncated FASTQ input is an error
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_fastq_input.py`).
+- Affected commands/APIs: `msbwt pp`, `cffq` (uniform and non-uniform);
+  `MultiStringBWTCython.preprocessFastqs`, `MultimergeCython.fastqIterator`,
+  `MultiStringBWT.preprocessFastqs` (pure-Python), `MUS.util.fastqIterator`.
+- Old behavior: FASTQ is read as 4-line records by line position only.  A file
+  whose last record is cut short (line count not a multiple of 4) was accepted
+  silently, so the dataset was built without the incomplete read (or with a read
+  whose later lines were missing) and the command exited 0.
+- New behavior: after the last line is read, a line count that is not a multiple
+  of 4 raises `ValueError: Truncated FASTQ input '<file>': <n> lines is not a
+  whole number of 4-line records` and the command exits nonzero.  Complete
+  records read before the end were already consumed; no artifact from a failed
+  run should be used.  Only the line count is checked: headers, `+` lines, and
+  sequence/quality length agreement are not validated.
+- Rationale: silent data loss on corrupt or partially transferred input is a
+  correctness defect.  The legacy behavior is not preserved.
+- Reader/writer interoperability: unchanged; valid input produces byte-identical
+  artifacts.  A file with trailing blank lines now fails this check (previously
+  uniform builds failed with a length error and non-uniform builds added a
+  spurious empty read).
+
+## M3-S1-CLEANUP: scratch-directory safety and handle hygiene
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_cleanup_hygiene.py`).
+- Affected APIs: `MUS.MultiStringBWT.mergeNewSeqs` (library function, not a CLI
+  command); best-effort temp-file cleanup in `MUS/MSBWTGen.py`;
+  `MUS.util.fastaIterator`/`fastqIterator`; `MultiStringBWT.compareKmerProfiles`.
+- Old behavior: `mergeNewSeqs(seqs, D, ...)` ran `shutil.rmtree` on `D0`, `D1`,
+  and `D2` and silently ignored every error, so a user's own sibling directory
+  with such a name was deleted.  Cleanup of temp files used bare `except:`, which
+  also swallowed `KeyboardInterrupt`/`SystemExit`.  The iterators and
+  `compareKmerProfiles` opened files without guaranteeing they are closed.
+- New behavior: `D0`/`D1`/`D2` are removed only if absent-or-empty or if they
+  hold MSBWT build output (`msbwt.npy`, `comp_msbwt.npy`, `seqs.npy`,
+  `offsets.npy`, or `about.npy`); anything else, a plain file, or a symlink raises
+  `ValueError` and nothing is deleted.  Temp-file cleanup catches only `OSError`.
+  File handles are closed on early exit and on error.  Results for valid input
+  are unchanged.
+- Rationale: unsafe path cleanup and resource leaks (`AGENTS.md`); leaked handles
+  also block file removal on Windows.
+- Reader/writer interoperability: unchanged; no persisted file is touched.
+- Not changed: the unsupported BAM path (`MultiStringBWT.py`) still has a bare
+  `except:`, and the compiled loaders still rely on process exit to release
+  handles on error.
+
+## M3-S1-PACKAGING: PyPI distribution `pymsbwt`
+
+- Status: implemented; sdist and a Linux wheel built, `twine check` passed, and a
+  clean-environment install of the wheel passed the smoke test
+  (`packages/msbwt-modern3/ci/smoke_test.py`).
+- Affected: distribution metadata of `packages/msbwt-modern3`; `msbwt -V`; the
+  enhanced console scripts.
+- Old behavior: distribution name `msbwt-modern3`, version 0.3.0 (the original
+  project's number), license `text = "MIT"`, homepage pointing to the retired Google
+  Code page; the six enhanced console scripts imported a generic top-level `tools`
+  package that was installed into site-packages.
+- New behavior: distribution name `pymsbwt`, version `0.4.0` (single source:
+  `MUS.util.VERSION`, which `msbwt -V` prints), SPDX license `MIT` with the
+  `LICENSE` file included, project URLs on GitHub.  The helper modules install as
+  `MUS.tools` and the console scripts point there; a top-level `tools` package is
+  no longer installed.  The source directory is still `tools/`, so source-tree
+  imports used by the test suite are unchanged.
+- Rationale: the name `msbwt` is taken on PyPI; a generic top-level module name
+  can shadow or be shadowed by unrelated packages.
+- Reader/writer interoperability: unchanged.  Import names `MUS` and `MUSCython`,
+  the `msbwt` command, and all persisted formats are the same.  Code that imported
+  `tools.<module>` from an installed package must use `MUS.tools.<module>`.

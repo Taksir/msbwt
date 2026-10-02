@@ -18,6 +18,7 @@ import shutil
 import sys
 
 from MUS import MSBWTGen
+from MUS import util
 
 #flags for samtools
 REVERSE_COMPLEMENTED_FLAG = 1 << 4#0x10
@@ -257,11 +258,7 @@ class MultiStringBWT(BasicBWT):
         
         abtFN = self.dirName+'/totalCounts.p'
         if os.path.exists(abtFN):
-            # binary mode: pickle framing bytes must not be rewritten by
-            # Windows text-mode newline translation
-            fp = open(abtFN, 'rb')
-            self.totalCounts = pickle.load(fp)
-            fp.close()
+            self.totalCounts = util.loadTotalCounts(abtFN)
         else:
             chunkSize = 2**20
             if logger != None:
@@ -445,11 +442,7 @@ class CompressedMSBWT(BasicBWT):
         
         abtFN = self.dirName+'/totalCounts.p'
         if os.path.exists(abtFN):
-            # binary mode: pickle framing bytes must not be rewritten by
-            # Windows text-mode newline translation
-            fp = open(abtFN, 'rb')
-            self.totalCounts = pickle.load(fp)
-            fp.close()
+            self.totalCounts = util.loadTotalCounts(abtFN)
         else:
             if logger != None:
                 logger.info('First time calculation of \'%s\'' % abtFN)
@@ -827,7 +820,7 @@ def createMSBWTFromFastq(fastqFNs, outputDir, numProcs, areUniform, logger):
     MSBWTGen.createFromSeqs(seqFN, offsetFN, bwtFN, numProcs, areUniform, logger)
 
 _BAM_UNSUPPORTED_MESSAGE = (
-    'BAM input is explicitly unsupported in msbwt-modern3 0.3.0 '
+    'BAM input is explicitly unsupported in msbwt-modern3 '
     '(M3-13C policy): the legacy pysam-based ingestion path is unvalidated, '
     'crashes under the pinned NumPy 2.x toolchain, and pysam has no '
     'native-Windows build. Construct indices from FASTA/FASTQ input instead.')
@@ -915,6 +908,8 @@ def preprocessFastqs(fastqFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger)
             i += 1
                 
         fp.close()
+        if (i + 1) % 4 != 0:
+            raise ValueError('Truncated FASTQ input \'%s\': %d lines is not a whole number of 4-line records' % (fn, i+1))
     
     if len(seqArray) > 0:
         if not areUniform or maxSeqLen == -1:
@@ -1144,6 +1139,24 @@ def preprocessBams(bamFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger):
     del seqArray
     os.remove(tempFN)
 
+_MSBWT_DIR_MARKERS = ('msbwt.npy', 'comp_msbwt.npy', 'seqs.npy', 'offsets.npy', 'about.npy')
+
+def _clearScratchDir(path):
+    '''
+    Remove a leftover scratch BWT directory from an earlier run so it can be rebuilt.  Only an empty directory or
+    one that holds MSBWT build output is removed; anything else is user data and is never deleted.
+    @param path - the scratch directory path (it need not exist)
+    @raise ValueError - if path exists but is not an empty directory or an MSBWT directory
+    '''
+    if not os.path.lexists(path):
+        return
+    if os.path.islink(path) or not os.path.isdir(path):
+        raise ValueError("refusing to remove '%s': not a plain directory" % path)
+    names = os.listdir(path)
+    if len(names) > 0 and not any(m in names for m in _MSBWT_DIR_MARKERS):
+        raise ValueError("refusing to remove '%s': it does not look like an MSBWT directory" % path)
+    shutil.rmtree(path)
+
 def mergeNewSeqs(seqArray, mergedDir, numProcs, areUniform, logger):
     '''
     This function takes a series of sequences and creates a big BWT by merging the smaller ones 
@@ -1161,18 +1174,9 @@ def mergeNewSeqs(seqArray, mergedDir, numProcs, areUniform, logger):
     mergedDir2 = mergedDir+'1'
     mergedDir3 = mergedDir+'2'
     
-    try:
-        shutil.rmtree(mergedDir1)
-    except:
-        pass
-    try:
-        shutil.rmtree(mergedDir2)
-    except:
-        pass
-    try:
-        shutil.rmtree(mergedDir3)
-    except:
-        pass
+    _clearScratchDir(mergedDir1)
+    _clearScratchDir(mergedDir2)
+    _clearScratchDir(mergedDir3)
     os.makedirs(mergedDir1)
     os.makedirs(mergedDir2)
     os.makedirs(mergedDir3)
@@ -1191,9 +1195,13 @@ def compareKmerProfiles(profileFN1, profileFN2):
     @param profileFN2 - the second kmer-profile to compare to
     @return - a tuple of the form (1-norm, 2-norm, sum of differences, normalized Dot product)
     '''
-    fp1 = open(profileFN1, 'r')
-    fp2 = open(profileFN2, 'r')
-    
+    with open(profileFN1, 'r') as fp1, open(profileFN2, 'r') as fp2:
+        return _compareKmerProfileStreams(fp1, fp2)
+
+def _compareKmerProfileStreams(fp1, fp2):
+    '''
+    Body of compareKmerProfiles working on already-open profile files (the caller closes them).
+    '''
     oneNorm = 0
     twoNorm = 0
     sumDeltas = 0
@@ -1223,9 +1231,6 @@ def compareKmerProfiles(profileFN1, profileFN2):
         
         twoNorm += delta*delta
         sumDeltas += delta
-    
-    fp1.close()
-    fp2.close()
     
     twoNorm = math.sqrt(twoNorm)
     #print '1-norm:\t\t'+str(oneNorm)

@@ -1,0 +1,162 @@
+From a41bd9c7fd203d6e4051b3b598899ad9de2a9094 Mon Sep 17 00:00:00 2001
+From: x <x@x>
+Date: Fri, 2 Oct 2026 00:33:48 +0000
+Subject: [PATCH] wiki: refresh for modern3 behaviour; drop stale staging
+ README and stub Wiki page
+
+---
+ BasicBWT-API.md                       |  2 +-
+ Constructing-the-MSBWT.md             | 11 ++++-
+ Persistent-Files-and-Compatibility.md |  1 +
+ Queries-with-the-Python-API.md        |  3 +-
+ README.md                             | 61 ---------------------------
+ Wiki.md                               |  1 -
+ 6 files changed, 13 insertions(+), 66 deletions(-)
+ delete mode 100644 README.md
+ delete mode 100644 Wiki.md
+
+diff --git a/BasicBWT-API.md b/BasicBWT-API.md
+index 34a791c..0ae13c3 100644
+--- a/BasicBWT-API.md
++++ b/BasicBWT-API.md
+@@ -31,7 +31,7 @@ The pure-Python readers in `MUS.MultiStringBWT` expose the same methods
+ | `getCharAtIndex(index)` | BWT column symbol at one row |
+ | `getOccurrenceOfCharAtIndex(sym, index)` | occurrence/rank of `sym` up to `index` |
+ | `getSequenceDollarID(strIndex, returnOffset=False)` | dollar ID (read ID) owning a row; optionally the offset within the read |
+-| `recoverString(strIndex, withIndex=False)` | recover `'$' + read` for a dollar ID; with `withIndex=True` also returns the BWT row indices of the rotations |
++| `recoverString(strIndex, withIndex=False)` | recover `'$' + read` for a dollar ID (`bytes` from the `MUSCython` loader, `str` from the pure-Python `MUS` loader); with `withIndex=True` also returns the BWT row indices of the rotations |
+ 
+ ## Example
+ 
+diff --git a/Constructing-the-MSBWT.md b/Constructing-the-MSBWT.md
+index 38e83c5..0cfd12e 100644
+--- a/Constructing-the-MSBWT.md
++++ b/Constructing-the-MSBWT.md
+@@ -21,6 +21,12 @@ the original package:
+ Both routes support uniform-length reads (`-u`) and nonuniform reads
+ (no flag), and plain or gzip-compressed FASTQ.
+ 
++FASTQ is read as 4-line records.  If a file ends partway through a record
++(its line count is not a multiple of 4), construction stops with
++`Truncated FASTQ input '<file>' ...` and a nonzero exit code instead of
++building from the incomplete data.  Discard the output directory and fix or
++re-transfer the input.
++
+ ## Two-step construction
+ 
+ ```bash
+@@ -107,8 +113,9 @@ documented in the legacy bug tracker in the main repository):
+ - `convert` silently drops everything after the first newline of the
+   input (exit 0);
+ - `convert` reports an invalid symbol before the first newline as a
+-  masked `TypeError: cannot concatenate 'str' and 'int' objects`
+-  (exit 1).
++  masked `TypeError` (exit 1).  The message text depends on the Python
++  version: `cannot concatenate 'str' and 'int' objects` on Python 2,
++  `can only concatenate str (not "int") to str` on Python 3.
+ 
+ ## Command summary
+ 
+diff --git a/Persistent-Files-and-Compatibility.md b/Persistent-Files-and-Compatibility.md
+index 0242e44..c804922 100644
+--- a/Persistent-Files-and-Compatibility.md
++++ b/Persistent-Files-and-Compatibility.md
+@@ -23,6 +23,7 @@ optional       an added layer; absence does not affect legacy behavior
+ | `fmIndex.npy` | derived/cache | byte-reader FM index; rebuilt by the reader (verified by the Q1 audit's cache-regeneration family) |
+ | `comp_fmIndex.npy` | derived/cache | compressed-reader FM index; rebuilt on demand |
+ | `comp_refIndex.npy` | derived/cache | compressed-reader reference index; rebuilt on demand |
++| `totalCounts.p` | derived/cache | per-symbol totals, stored as a pickle of a 1-D NumPy array (integers for byte indexes, float64 for RLE); rebuilt when missing.  `msbwt-modern3` loads it with a restricted reader that refuses anything but a plain numeric array, so an untrusted or tampered file is rejected with an error rather than executed; delete it to have it regenerated |
+ 
+ ## Two-source provenance (Feature 1)
+ 
+diff --git a/Queries-with-the-Python-API.md b/Queries-with-the-Python-API.md
+index 5df46e7..ff2a62d 100644
+--- a/Queries-with-the-Python-API.md
++++ b/Queries-with-the-Python-API.md
+@@ -48,7 +48,8 @@ reads:
+ # dollar ID of the read owning a row
+ dollar_id = bwt.getSequenceDollarID(row_index)
+ 
+-# recover the read as '$' + read bytes
++# recover the read as '$' + read
++# (bytes from the MUSCython loader, str from the pure-Python MUS loader)
+ seq = bwt.recoverString(dollar_id)
+ 
+ # with the BWT row indices of each rotation
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index 68a32dc..0000000
+--- a/README.md
++++ /dev/null
+@@ -1,61 +0,0 @@
+-# msbwt Wiki — staging directory
+-
+-This directory contains the prepared GitHub Wiki page set for
+-[`github.com/Taksir/msbwt`](https://github.com/Taksir/msbwt).
+-
+-**The wiki repository does not exist yet.**  It will appear once the
+-wiki is initialized on GitHub (see below).  Until then, keep these pages
+-here; when the wiki exists, copy/commit them into
+-`https://github.com/Taksir/msbwt.wiki.git`.
+-
+-## How to publish (manual step, once)
+-
+-1. On GitHub, open `https://github.com/Taksir/msbwt` → **Wiki** tab →
+-   **Create the first page** (GitHub creates the wiki repository at
+-   `https://github.com/Taksir/msbwt.wiki.git`).
+-2. Clone the wiki next to this staging directory:
+-
+-   ```bash
+-   git clone https://github.com/Taksir/msbwt.wiki.git ../msbwt-wiki
+-   ```
+-
+-3. Copy the pages (including `_Sidebar.md` and `Home.md`) into the wiki
+-   clone:
+-
+-   ```bash
+-   cp *.md ../msbwt-wiki/
+-   ```
+-
+-4. Commit and push:
+-
+-   ```bash
+-   cd ../msbwt-wiki
+-   git add Home.md _Sidebar.md *.md
+-   git commit -m "docs: populate msbwt wiki"
+-   git push
+-   ```
+-
+-## Pages
+-
+-- `Home.md` — landing page with navigation
+-- `_Sidebar.md` — wiki sidebar
+-- Getting started: `A-Multi-String-Burrows-Wheeler-Transform-Primer.md`,
+-  `Installation.md`, `Constructing-the-MSBWT.md`,
+-  `Queries-with-the-Command-Line-Interface.md`,
+-  `Queries-with-the-Python-API.md`, `BasicBWT-API.md`,
+-  `Converting-to-msbwt-RLE-Format.md`
+-- Enhanced features: `Enhanced-Features-Overview.md`,
+-  `Source-Aware-and-Multi-Source-Queries.md`,
+-  `Provenance-and-Source-Metadata.md`, `Read-Level-Provenance.md`,
+-  `Source-Removal.md`, `BWT-Aligned-Tags.md`,
+-  `Lossless-FASTQ-Quality-Sidecar.md`, `LCP-Retrofit.md`,
+-  `Benchmarking-and-Backend-Contract.md`
+-- Reference: `Persistent-Files-and-Compatibility.md`
+-
+-## Attribution
+-
+-The wiki's organization follows the original
+-[`holtjma/msbwt` wiki](https://github.com/holtjma/msbwt/wiki) (Holt &
+-McMillan).  The content documents this repository's verified
+-implementation; original scholarly attribution is preserved on the
+-`Home` page and the primer.
+diff --git a/Wiki.md b/Wiki.md
+deleted file mode 100644
+index b8c7a7e..0000000
+--- a/Wiki.md
++++ /dev/null
+@@ -1 +0,0 @@
+-Welcome to the msbwt wiki!
+-- 
+2.43.0
+

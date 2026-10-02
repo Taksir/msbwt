@@ -397,7 +397,7 @@ def fastaIterator(list fastaFNs, logger):
         #fp = open(fn, 'r')
         
         if fn.endswith('.gz'):
-            fp = gzip.open(fn, 'r')
+            fp = gzip.open(fn, 'rt')
         else:
             fp = open(fn, 'r')
         
@@ -432,7 +432,7 @@ def fastqIterator(list fastqFNs, logger):
         #open the file and read in starting form the second, every 4th line
         logger.info('Loading \''+fn+'\'...')
         if fn.endswith('.gz'):
-            fp = gzip.open(fn, 'r')
+            fp = gzip.open(fn, 'rt')
         else:
             fp = open(fn, 'r')
         
@@ -445,6 +445,8 @@ def fastqIterator(list fastqFNs, logger):
             i += 1
                 
         fp.close()
+        if (i & 0x3) != 0:
+            raise ValueError('Truncated FASTQ input \'%s\': %d lines is not a whole number of 4-line records' % (fn, i))
     
 def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, np.uint64_t numProcs, bint areUniform, logger):
     '''
