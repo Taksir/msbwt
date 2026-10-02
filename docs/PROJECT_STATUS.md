@@ -72,7 +72,9 @@ Full details, milestone documents, and executed evidence live under
 | Source removal | Unmerge selected sources without FASTQ rebuild | `MUS.SourceRemoval.remove_sources` / `retain_sources` |
 | BWT-aligned tags | Arbitrary row-aligned arrays surviving merge/removal | `MUS.BWTTags.BWTTagStore`, `attach_tag` |
 | FASTQ quality sidecar | Lossless byte-exact quality, row-aligned | `MUS.QualitySidecar`, reserved tag `fastq_quality_ascii` |
-| LCP retrofit | Exact adjacent LCP over the final BWT | `MUS.LCP.construct_lcp_from_bwt`, `LCPIndex` |
+| LCP retrofit | Exact adjacent LCP over the final BWT; kept through source removal (11B, modern3) | `MUS.LCP.construct_lcp_from_bwt`, `LCPIndex` |
+| LCP intervals and maximal repeats (11C, modern3) | Repeats with per-source, group and read support | `MultiSourceBWT.maximalRepeats`, `msbwt-lcp repeats` |
+| Bidirectional search, experimental (8B.0, modern3) | Reversed-read companion (2BWT) and FMD screen | `MUS.Bidirectional` |
 | Benchmarking/backend contract | Storage, run, structural, and query accounting | `MUS.Benchmarking`, `MUS.BackendContract` |
 
 Each enhanced capability is an additive pure-Python `MUS.*` module with
