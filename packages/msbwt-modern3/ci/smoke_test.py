@@ -20,6 +20,17 @@ def run(*args):
     return res.stdout
 
 
+def run_fail(expected, *args):
+    """Run a command that must fail fast with ``expected`` in stderr (no hang)."""
+    try:
+        res = subprocess.run(list(args), capture_output=True, text=True, timeout=180)
+    except subprocess.TimeoutExpired:
+        raise SystemExit("HUNG: %s" % " ".join(args))
+    if res.returncode == 0 or expected not in res.stderr:
+        raise SystemExit("EXPECTED FAILURE %r: %s\nrc=%d\n%s"
+                         % (expected, " ".join(args), res.returncode, res.stderr[-1500:]))
+
+
 def naive_count(reads, kmer):
     return sum(r[i:i + len(kmer)] == kmer for r in reads for i in range(len(r) - len(kmer) + 1))
 
@@ -33,6 +44,7 @@ def main():
     for script in ("msbwt-lcp", "msbwt-bwt-tags", "msbwt-remove-sources", "msbwt-quality-sidecar",
                    "msbwt-retrofit-read-provenance", "msbwt-benchmark-index"):
         run(script, "--help")
+    run("msbwt-lcp", "repeats", "--help")
 
     random.seed(7)
     reads = ["".join(random.choice("ACGT") for _ in range(24)) for _ in range(60)]
@@ -57,6 +69,12 @@ def main():
         with open(os.path.join(a, "msbwt.npy"), "rb") as f1, open(os.path.join(back, "msbwt.npy"), "rb") as f2:
             assert f1.read() == f2.read(), "compress/decompress round trip changed the BWT"
         assert int(run("msbwt", "query", rle, "ACG").strip().splitlines()[-1]) == naive_count(reads, "ACG")
+        # M3-S2-INPUT: soft-masked reads are rejected in both construction modes
+        masked = os.path.join(tmp, "masked.fastq")
+        with open(masked, "w", newline="\n") as fp:
+            fp.write(text + "@m\n%s\n+\n%s\n" % (reads[0].lower(), "I" * len(reads[0])))
+        run_fail("invalid symbol", "msbwt", "cffq", "-p", "1", "-u", os.path.join(tmp, "m_u"), masked)
+        run_fail("invalid symbol", "msbwt", "cffq", "-p", "1", os.path.join(tmp, "m_nu"), masked)
     print("pymsbwt %s smoke test passed on %s" % (version, sys.platform))
 
 

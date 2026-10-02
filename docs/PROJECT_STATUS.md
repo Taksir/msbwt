@@ -72,7 +72,9 @@ Full details, milestone documents, and executed evidence live under
 | Source removal | Unmerge selected sources without FASTQ rebuild | `MUS.SourceRemoval.remove_sources` / `retain_sources` |
 | BWT-aligned tags | Arbitrary row-aligned arrays surviving merge/removal | `MUS.BWTTags.BWTTagStore`, `attach_tag` |
 | FASTQ quality sidecar | Lossless byte-exact quality, row-aligned | `MUS.QualitySidecar`, reserved tag `fastq_quality_ascii` |
-| LCP retrofit | Exact adjacent LCP over the final BWT | `MUS.LCP.construct_lcp_from_bwt`, `LCPIndex` |
+| LCP retrofit | Exact adjacent LCP over the final BWT; kept through source removal (11B, modern3) | `MUS.LCP.construct_lcp_from_bwt`, `LCPIndex` |
+| LCP intervals and maximal repeats (11C, modern3) | Repeats with per-source, group and read support | `MultiSourceBWT.maximalRepeats`, `msbwt-lcp repeats` |
+| Bidirectional search, experimental (8B.0, modern3) | Reversed-read companion (2BWT) and FMD screen | `MUS.Bidirectional` |
 | Benchmarking/backend contract | Storage, run, structural, and query accounting | `MUS.Benchmarking`, `MUS.BackendContract` |
 
 Each enhanced capability is an additive pure-Python `MUS.*` module with
@@ -131,8 +133,9 @@ and what is safe to reconstruct.
   deviations are recorded in `COMPATIBILITY.md`.
 - Enhanced layers are additive and never change legacy semantics or
   formats.
-- **Out of scope (not implemented, not claimed):** Feature 8B, Feature
-  11B/11C, a new compressed backend, and any performance superiority
+- **Out of scope (not implemented, not claimed):** Feature 8B, Features
+  11B/11C in modern2 (modern3 has both; see `COMPATIBILITY.md` M3-F11B and
+  M3-F11C), a new compressed backend, and any performance superiority
   claim.  Feature-13A's benchmark tool measures the index as it is; the
   naive u32 RLE encoding model it reports was *larger* than the raw BWT
   payload on the toy fixture — that negative result is documented, not

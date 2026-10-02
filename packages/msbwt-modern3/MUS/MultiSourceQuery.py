@@ -119,9 +119,16 @@ from MUS.QualitySidecar import (
     QUALITY_TAG_NAME,
     quality_sidecar_exists,
 )
+from MUS.LCPIntervals import (
+    child_intervals,
+    interval_sequence,
+    iter_lcp_intervals,
+    iter_maximal_repeats,
+)
 from MUS.LCP import (
     LCPError,
     LCPIndex,
+    _load_bwt_rows,
     lcp_exists,
 )
 
@@ -2346,6 +2353,137 @@ class MultiSourceBWT(object):
         """
         return self._require_lcp_index().between_rows(
             left_row, right_row)
+
+    # ---- Feature 11C: LCP-interval applications ------------------------
+
+    def _lcp_arrays(self):
+        index = self._require_lcp_index()
+        bwt_rows = getattr(self, "_lcp_bwt_rows", None)
+        if bwt_rows is None:
+            bwt_rows = _load_bwt_rows(index.bwt_dir)
+            self._lcp_bwt_rows = bwt_rows
+        return index.values, bwt_rows
+
+    def lcpIntervals(self, min_lcp=1, max_lcp=None, min_occurrences=2):
+        """Yield every lcp-interval (generalized suffix-tree internal node)
+        with ``min_lcp <= lcp <= max_lcp`` and at least
+        ``min_occurrences`` rows, bottom-up.  Each item is an
+        ``LCPInterval(lcp, start, end)`` over merged rows ``[start, end)``.
+        """
+        return iter_lcp_intervals(
+            self._require_lcp_index().values,
+            min_lcp=min_lcp,
+            max_lcp=max_lcp,
+            min_size=min_occurrences,
+        )
+
+    def lcpChildren(self, interval):
+        """Children of an lcp-interval as ``(start, end, lcp)``; ``lcp`` is
+        None for a single-suffix child."""
+        return child_intervals(self._require_lcp_index().values, interval)
+
+    def lcpIntervalSequence(self, interval):
+        """The string shared by every row of ``interval``."""
+        return interval_sequence(self.bwt, interval)
+
+    def maximalRepeats(
+        self,
+        min_length=1,
+        max_length=None,
+        min_occurrences=2,
+        supermaximal=False,
+        min_sources=None,
+        max_sources=None,
+        sources=None,
+        group=None,
+        where=None,
+        min_selected=None,
+        include_sequence=True,
+        include_sources=False,
+        include_read_count=False,
+        limit=None,
+    ):
+        """Yield maximal (or supermaximal) repeats with source support.
+
+        Each record holds the merged interval (``start``, ``end``), the
+        repeat ``length``, total ``occurrences`` and ``source_frequency``
+        (number of sources containing the repeat), plus optionally:
+
+        * ``sequence`` - the repeat itself (one read recovery per record);
+        * ``sources`` - Feature-4 sparse per-source counts;
+        * ``selected_count`` - aggregate count over a ``sources`` /
+          ``group`` / ``where`` selection (Feature 7), filtered by
+          ``min_selected`` when given;
+        * ``read_count`` - number of distinct reads containing the repeat
+          (Feature 9; requires read provenance).
+
+        Source and group counts come from the provenance tree without
+        enumerating occurrences.  Records are produced bottom-up and
+        ``limit`` stops after that many.
+        """
+        modes = (int(sources is not None) + int(group is not None)
+                 + int(where is not None))
+        if modes > 1:
+            raise ValueError("use only one of sources, group, or where")
+        selected = None
+        if modes:
+            selected = self._resolve_subset_selection(
+                sources=sources, group=group, where=where)
+        if min_selected is not None and selected is None:
+            raise ValueError(
+                "min_selected requires a sources, group, or where selection")
+        if include_read_count:
+            self._require_read_provenance()
+        if limit is not None and int(limit) < 0:
+            raise ValueError("limit must be non-negative")
+
+        lcps, bwt_rows = self._lcp_arrays()
+        produced = 0
+        if limit is not None and int(limit) == 0:
+            return
+        for interval in iter_maximal_repeats(
+            lcps,
+            bwt_rows,
+            min_length=min_length,
+            max_length=max_length,
+            min_occurrences=min_occurrences,
+            supermaximal=supermaximal,
+        ):
+            start, end = int(interval.start), int(interval.end)
+            frequency = int(self.source_index.source_frequency_interval(
+                start, end))
+            if min_sources is not None and frequency < int(min_sources):
+                continue
+            if max_sources is not None and frequency > int(max_sources):
+                continue
+            record = {
+                "start": start,
+                "end": end,
+                "length": int(interval.lcp),
+                "occurrences": end - start,
+                "source_frequency": frequency,
+            }
+            if selected is not None:
+                count = int(self.source_index.subset_count_interval(
+                    start, end, selected))
+                if min_selected is not None and count < int(min_selected):
+                    continue
+                record["selected_count"] = count
+            sequence = None
+            if include_sequence or include_read_count:
+                sequence = interval_sequence(self.bwt, interval)
+            if include_sequence:
+                record["sequence"] = sequence
+            if include_sources:
+                record["sources"] = self.source_index.nonzero_sources_interval(
+                    start, end)
+            if include_read_count:
+                record["read_count"] = int(
+                    self.readsContaining(sequence)["unique_read_count"])
+            yield record
+            produced += 1
+            if limit is not None and produced >= int(limit):
+                return
 
 
 # PEP-8 aliases for new code; camelCase methods intentionally match the
