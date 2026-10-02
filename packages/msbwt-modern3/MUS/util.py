@@ -164,63 +164,60 @@ def validKmer(kmer):
             raise ap.ArgumentTypeError("Invalid k-mer: All characters must be in ($, A, C, G, N, T)")
     return kmer
 
+def _openText(fileName):
+    '''
+    Open a plain or '.gz' text file for reading; use as a context manager so the handle is always released.
+    '''
+    if fileName[len(fileName)-3:] == '.gz':
+        return gzip.open(fileName, 'rt')
+    return open(fileName, 'r')
+
 def fastaIterator(fastaFN):
     '''
     Iterator that yields tuples containing a sequence label and the sequence itself
     @param fastaFN - the FASTA filename to open and parse
     @return - an iterator yielding tuples of the form (label, sequence) from the FASTA file
     '''
-    if fastaFN[len(fastaFN)-3:] == '.gz':
-        fp = gzip.open(fastaFN, 'rt')
-    else:
-        fp = open(fastaFN, 'r')
-    
-    label = ''
-    segments = []
-    line = ''
-    
-    for line in fp:
-        if line[0] == '>':
-            if label != '':
-                yield (label, ''.join(segments))
-            label = (line.strip('\n')[1:]).split(' ')[0]
-            segments = []
-        else:
-            segments.append(line.strip('\n'))
-            
-    if label != '' and len(segments) > 0:
-        yield (label, ''.join(segments))
-    
-    fp.close()
+    with _openText(fastaFN) as fp:
+        label = ''
+        segments = []
+        line = ''
+
+        for line in fp:
+            if line[0] == '>':
+                if label != '':
+                    yield (label, ''.join(segments))
+                label = (line.strip('\n')[1:]).split(' ')[0]
+                segments = []
+            else:
+                segments.append(line.strip('\n'))
+
+        if label != '' and len(segments) > 0:
+            yield (label, ''.join(segments))
 
 def fastqIterator(fastqFN):
-    if fastqFN[len(fastqFN)-3:] == '.gz':
-        fp = gzip.open(fastqFN, 'rt')
-    else:
-        fp = open(fastqFN, 'r')
-    
-    l1 = ''
-    seq = ''
-    l2 = ''
-    quals = ''
-    i = 0
-    for line in fp:
-        if i & 0x3 == 0:
-            l1 = line.strip('\n')
-        elif i & 0x3 == 1:
-            seq = line.strip('\n')
-        elif i & 0x3 == 2:
-            l2 = line.strip('\n')
-        else:
-            quals = line.strip('\n')
-            yield (l1, seq, l2, quals)
-            
-            l1 = ''
-            seq = ''
-            l2 = ''
-            quals = ''
-        i += 1
-    fp.close()
+    with _openText(fastqFN) as fp:
+        l1 = ''
+        seq = ''
+        l2 = ''
+        quals = ''
+        i = 0
+        for line in fp:
+            if i & 0x3 == 0:
+                l1 = line.strip('\n')
+            elif i & 0x3 == 1:
+                seq = line.strip('\n')
+            elif i & 0x3 == 2:
+                l2 = line.strip('\n')
+            else:
+                quals = line.strip('\n')
+                yield (l1, seq, l2, quals)
+
+                l1 = ''
+                seq = ''
+                l2 = ''
+                quals = ''
+            i += 1
     if i & 0x3:
         raise ValueError("Truncated FASTQ input '%s': %d lines is not a whole number of 4-line records" % (fastqFN, i))
 
