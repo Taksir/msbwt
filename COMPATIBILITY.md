@@ -447,3 +447,28 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
   artifacts.  A file with trailing blank lines now fails this check (previously
   uniform builds failed with a length error and non-uniform builds added a
   spurious empty read).
+
+## M3-S1-CLEANUP: scratch-directory safety and handle hygiene
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_cleanup_hygiene.py`).
+- Affected APIs: `MUS.MultiStringBWT.mergeNewSeqs` (library function, not a CLI
+  command); best-effort temp-file cleanup in `MUS/MSBWTGen.py`;
+  `MUS.util.fastaIterator`/`fastqIterator`; `MultiStringBWT.compareKmerProfiles`.
+- Old behavior: `mergeNewSeqs(seqs, D, ...)` ran `shutil.rmtree` on `D0`, `D1`,
+  and `D2` and silently ignored every error, so a user's own sibling directory
+  with such a name was deleted.  Cleanup of temp files used bare `except:`, which
+  also swallowed `KeyboardInterrupt`/`SystemExit`.  The iterators and
+  `compareKmerProfiles` opened files without guaranteeing they are closed.
+- New behavior: `D0`/`D1`/`D2` are removed only if absent-or-empty or if they
+  hold MSBWT build output (`msbwt.npy`, `comp_msbwt.npy`, `seqs.npy`,
+  `offsets.npy`, or `about.npy`); anything else, a plain file, or a symlink raises
+  `ValueError` and nothing is deleted.  Temp-file cleanup catches only `OSError`.
+  File handles are closed on early exit and on error.  Results for valid input
+  are unchanged.
+- Rationale: unsafe path cleanup and resource leaks (`AGENTS.md`); leaked handles
+  also block file removal on Windows.
+- Reader/writer interoperability: unchanged; no persisted file is touched.
+- Not changed: the unsupported BAM path (`MultiStringBWT.py`) still has a bare
+  `except:`, and the compiled loaders still rely on process exit to release
+  handles on error.
