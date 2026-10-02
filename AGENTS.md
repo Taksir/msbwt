@@ -6,7 +6,7 @@ These rules apply to every change in this repository.
 
 - Treat executable behavior and persisted bytes from the frozen original implementation as the compatibility authority. Treat README text, comments, and package metadata as claims to verify.
 - Preserve the original authors, MIT license, scientific references, and repository history. This is a maintenance fork.
-- Start with [the current handoff](docs/modernization/HANDOFF.md), then use its links to the forensic audit, behavioral surface, architecture proposal, test plan, legacy oracle status, and risk register.
+- Start with [the agent roadmap](docs/roadmap/AGENT_ROADMAP.md) for the current state, session setup, and the ordered feature backlog. For the legacy-oracle history, use [the original handoff](docs/modernization/HANDOFF.md) and its links to the forensic audit, behavioral surface, architecture proposal, test plan, legacy oracle status, and risk register.
 
 ## Mistakes reference
 
