@@ -472,3 +472,26 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Not changed: the unsupported BAM path (`MultiStringBWT.py`) still has a bare
   `except:`, and the compiled loaders still rely on process exit to release
   handles on error.
+
+## M3-S1-PACKAGING: PyPI distribution `pymsbwt`
+
+- Status: implemented; sdist and a Linux wheel built, `twine check` passed, and a
+  clean-environment install of the wheel passed the smoke test
+  (`packages/msbwt-modern3/ci/smoke_test.py`).
+- Affected: distribution metadata of `packages/msbwt-modern3`; `msbwt -V`; the
+  enhanced console scripts.
+- Old behavior: distribution name `msbwt-modern3`, version 0.3.0 (the original
+  project's number), license `text = "MIT"`, homepage pointing to the retired Google
+  Code page; the six enhanced console scripts imported a generic top-level `tools`
+  package that was installed into site-packages.
+- New behavior: distribution name `pymsbwt`, version `0.4.0` (single source:
+  `MUS.util.VERSION`, which `msbwt -V` prints), SPDX license `MIT` with the
+  `LICENSE` file included, project URLs on GitHub.  The helper modules install as
+  `MUS.tools` and the console scripts point there; a top-level `tools` package is
+  no longer installed.  The source directory is still `tools/`, so source-tree
+  imports used by the test suite are unchanged.
+- Rationale: the name `msbwt` is taken on PyPI; a generic top-level module name
+  can shadow or be shadowed by unrelated packages.
+- Reader/writer interoperability: unchanged.  Import names `MUS` and `MUSCython`,
+  the `msbwt` command, and all persisted formats are the same.  Code that imported
+  `tools.<module>` from an installed package must use `MUS.tools.<module>`.
