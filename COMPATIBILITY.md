@@ -526,3 +526,18 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
   11B layer with identical values (tested); modern3 11B consumes a
   modern2-written 11A layer (tested).  modern2 itself still rejects
   LCP-enabled removal.
+
+## M3-F11C: LCP-interval applications (modern3 only, additive)
+
+- Status: implemented with regression tests
+  (`compat/tests/test_lcp_intervals.py`); details in
+  `docs/roadmap/FEATURE11C.md`.  Supersedes the "F11C absent by design" line
+  of the M3-SOL-R1 snapshot for modern3.
+- Affected: new module `MUS.LCPIntervals`; new `MultiSourceBWT` methods
+  `lcpIntervals`, `lcpChildren`, `lcpIntervalSequence`, `maximalRepeats`;
+  new `msbwt-lcp repeats` subcommand.
+- Old behavior: none (new surface).  No existing API, command, or persisted
+  file changes; nothing new is persisted.
+- Reader/writer interoperability: read-only over the existing `lcps.npy` /
+  `msbwt.npy` / provenance files, so it works on any valid 11A or 11B layer,
+  including one written by modern2.
