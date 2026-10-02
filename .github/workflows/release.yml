@@ -68,7 +68,7 @@ jobs:
           CIBW_ARCHS_WINDOWS: "AMD64"
           CIBW_ARCHS_MACOS: "native"
           # runs inside a clean environment holding only the installed wheel
-          CIBW_TEST_COMMAND: "python {project}/ci/smoke_test.py"
+          CIBW_TEST_COMMAND: "python {package}/ci/smoke_test.py"
       - uses: actions/upload-artifact@v4
         with:
           name: dist-wheels-${{ matrix.os }}
