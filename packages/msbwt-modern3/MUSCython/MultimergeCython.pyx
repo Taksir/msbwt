@@ -445,6 +445,8 @@ def fastqIterator(list fastqFNs, logger):
             i += 1
                 
         fp.close()
+        if (i & 0x3) != 0:
+            raise ValueError('Truncated FASTQ input \'%s\': %d lines is not a whole number of 4-line records' % (fn, i))
     
 def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, np.uint64_t numProcs, bint areUniform, logger):
     '''
