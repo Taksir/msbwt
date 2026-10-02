@@ -495,3 +495,115 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Reader/writer interoperability: unchanged.  Import names `MUS` and `MUSCython`,
   the `msbwt` command, and all persisted formats are the same.  Code that imported
   `tools.<module>` from an installed package must use `MUS.tools.<module>`.
+
+## M3-F11B: LCP-preserving source removal (modern3 only)
+
+- Status: implemented with regression tests
+  (`compat/tests/test_lcp_source_removal.py`); plan and rationale in
+  `docs/roadmap/FEATURE11B_PLAN.md`.  Supersedes the "F11B absent by design"
+  line of the M3-SOL-R1 snapshot for modern3.
+- Affected APIs/commands: `MUS.SourceRemoval.retain_sources`,
+  `MUS.SourceRemoval.remove_sources`, `msbwt-remove-sources`; new
+  `MUS.LCP.filter_lcp_for_removal`.  Files: `lcps.npy`, `lcp.json` in the
+  reduced output package.
+- Old behavior: removal from a package carrying a Feature-11A LCP layer
+  raised `LCPError` and published nothing unless `drop_lcp=True`, which
+  produced a reduced package without an LCP layer.
+- New behavior: by default the reduced package carries an exact LCP layer
+  derived from the input layer by a sequential range minimum over the
+  survivor mask (no FASTQ, no read recovery).  The input layer is fully
+  validated first; a stale layer raises `LCPError` and nothing is published.
+  `drop_lcp=True` / `--drop-lcp` are unchanged.  Removal stats gain
+  `lcp_preserved`.  Calls that previously succeeded produce the same files.
+- Rationale: Feature 10 and Feature 11A were mutually exclusive; recovering
+  the layer after `drop_lcp` required a full 11A reconstruction.
+- Format: still `msbwt-lcp` version 1; `lcps.npy` layout and dtype rule
+  unchanged and element-equal to an 11A rebuild of the reduced package.
+  `lcp.json` adds `algorithm = "point10-survivor-range-minimum"`,
+  `derived_from`, and `max_read_length_exact = false` (`max_read_length` is
+  inherited from the input and remains an upper bound).
+- Reader/writer interoperability: the modern2 reader validates and reads an
+  11B layer with identical values (tested); modern3 11B consumes a
+  modern2-written 11A layer (tested).  modern2 itself still rejects
+  LCP-enabled removal.
+
+## M3-F11C: LCP-interval applications (modern3 only, additive)
+
+- Status: implemented with regression tests
+  (`compat/tests/test_lcp_intervals.py`); details in
+  `docs/roadmap/FEATURE11C.md`.  Supersedes the "F11C absent by design" line
+  of the M3-SOL-R1 snapshot for modern3.
+- Affected: new module `MUS.LCPIntervals`; new `MultiSourceBWT` methods
+  `lcpIntervals`, `lcpChildren`, `lcpIntervalSequence`, `maximalRepeats`;
+  new `msbwt-lcp repeats` subcommand.
+- Old behavior: none (new surface).  No existing API, command, or persisted
+  file changes; nothing new is persisted.
+- Reader/writer interoperability: read-only over the existing `lcps.npy` /
+  `msbwt.npy` / provenance files, so it works on any valid 11A or 11B layer,
+  including one written by modern2.
+
+## M3-8B0: bidirectional (2BWT) correctness prototype (modern3, experimental)
+
+- Status: experimental prototype with regression tests
+  (`compat/tests/test_bidirectional.py`); details and gate results in
+  `docs/roadmap/STEP8B0_BIDIRECTIONAL.md`.
+- Affected: new module `MUS.Bidirectional` (`build_reverse_companion`,
+  `BidirectionalIndex`, `BiInterval`).  No CLI command.
+- Old behavior: none (new surface).  No existing API, command, or file
+  changes.  The forward package is never modified.
+- New persisted files, in a separate companion directory only: an ordinary
+  Holt `msbwt.npy` of the reversed reads (plus the standard Multimerge
+  build files) and `reverse_companion.json` (`msbwt-reverse-companion` v1,
+  binding the forward and companion `msbwt.npy` SHA-256 digests).  The
+  format is experimental and may change before any production 8B feature.
+- Observed legacy hazard: `MultimergeCython.createMSBWTFromSeqs` looped
+  forever on unterminated periodic input.  Fixed by M3-S2-INPUT below.
+
+## M3-FMD-SCREEN: FMD feasibility screen (modern3, experimental)
+
+- Status: experimental screen with regression tests
+  (`compat/tests/test_fmd_screen.py`) and a measurement script
+  (`compat/screens/fmd_vs_2bwt.py`); decision record in
+  `docs/roadmap/CHECKPOINT_FMD_VS_2BWT.md`.
+- Affected: `MUS.Bidirectional.build_fmd_index`,
+  `BidirectionalIndex.load_fmd`, `reverse_complement`.  No CLI command.
+- Old behavior: none (new surface); the source package is never modified.
+- New persisted files, in a separate directory only: a Holt `msbwt.npy` of
+  the reads plus their reverse complements and `fmd_index.json`
+  (`msbwt-fmd-screen` v1).  An FMD index counts both strands and carries no
+  source provenance; it is not a drop-in replacement for a forward index.
+
+## M3-S2-INPUT: construction input validation (modern3)
+
+- Status: fixed with regression tests
+  (`compat/tests/test_m3_s2_input_validation.py`).  Supersedes the
+  "observed legacy hazard, not changed here" note in M3-8B0.
+- Affected APIs/commands: `MultimergeCython.memoryBWT`,
+  `formatSeqsForMerge`, and every path through them
+  (`createMSBWTFromSeqs`, `createMSBWTFromFasta`, `createMSBWTFromFastq`,
+  `msbwt cffq` / `msbwt pp` without `-u`); `MSBWTGenCython.writeSeqsToFiles`
+  and every uniform path through it (`MultiStringBWTCython.createMSBWTFromSeqs`,
+  `createMSBWTFromFastq`, `msbwt cffq -u` / `msbwt pp -u`).
+- Old behavior (both modules compile with `boundscheck=False` and trusted
+  input): a byte outside `$ACGNT` (lowercase soft-masking, IUPAC codes)
+  mapped to code 6 and was used as an out-of-bounds index (heap corruption
+  `malloc(): invalid size` or segfault); a non-uniform read without its
+  terminal `$` looped forever (periodic reads) or silently produced a wrong
+  BWT; an inner `$` was accepted; an empty string became a zero-length read;
+  bytes >= 128 were read as negative indexes.  Inside a pool worker any of
+  these left the caller, including `msbwt cffq` in both modes, hanging
+  forever.
+- New behavior: each such input raises `ValueError` naming the read,
+  position, symbol, and fix (uppercase soft-masked input; map IUPAC codes to
+  N) before any unchecked write or output file; the merge pool is
+  terminated and files closed before the error propagates.  Valid input is
+  unchanged: Multimerge and uniform Bauer `msbwt.npy` were byte-identical
+  before and after on a seeded valid read set, and `memoryBWT` matches an
+  independent rotation-sort oracle.
+- Rationale: memory-safety and liveness defects on untrusted biological
+  input (`AGENTS.md`, Bugs and security).  The legacy result is not
+  preserved as an oracle: it is undefined behavior or non-termination.
+- Not changed: the pure-Python `MUS.MSBWTGen` path (bounds-checked NumPy;
+  raises `IndexError` instead of corrupting memory); empty reads (a lone
+  `$`) on the uniform/Bauer non-uniform byte layout.
+- Reader/writer interoperability: unchanged; no persisted format changes.

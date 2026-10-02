@@ -38,7 +38,9 @@ All of the following are exercised by the compatibility suite on native
 Windows and Linux:
 
 - Uniform and non-uniform index construction from FASTA/FASTQ (compiled
-  paths; non-uniform input uses the Multimerge engine)
+  paths; non-uniform input uses the Multimerge engine).  Reads must be
+  uppercase `A C G N T`; other symbols (soft-masking, IUPAC codes) raise a
+  `ValueError` since 0.5.0
 - Byte (uncompressed) and RLE (compressed) indexes: build, load, query,
   recovery, compression, decompression
 - GenericMerge pairwise merging and balanced/unbalanced multi-way merges;
@@ -50,9 +52,13 @@ Windows and Linux:
   (non-uniform reads)
 - FM queries (`findIndicesOfStr`, occurrence counts) and rank/Occurrence
   access
-- Source removal / retention without FASTQ reconstruction
+- Source removal / retention without FASTQ reconstruction; an LCP layer
+  is carried through removal exactly (Feature 11B)
+- Experimental bidirectional search (`MUS.Bidirectional`): reversed-read
+  companion index and an FMD-index screen
 - Per-read provenance, row tags, exact FASTQ quality sidecars (255 marks
-  terminal-`$` rows), LCP construction/validation
+  terminal-`$` rows), LCP construction/validation, LCP intervals and
+  maximal repeats with per-source support (`msbwt-lcp repeats`)
 - Storage accounting, run statistics, benchmark hooks, backend capability
   reporting
 

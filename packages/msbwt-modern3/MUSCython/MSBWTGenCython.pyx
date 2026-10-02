@@ -745,6 +745,52 @@ def clearAuxiliaryData(dirName):
         if os.path.exists(dirName+'/lzw_fmIndex.npy'):
             os.remove(dirName+'/lzw_fmIndex.npy')
 
+def _validateSeqBytes(seqArray, dArr, uniformLength, totalLen=None, chunkReads=100000):
+    '''
+    (M3-S2-INPUT) Reject input the unchecked conversion below cannot encode: any byte
+    other than uppercase A/C/G/N/T/'$' (it maps to code 6, which this boundscheck=False
+    module would use as an out-of-bounds index), and for uniform input any read that
+    does not end in exactly one '$'.  Runs in bounded-size chunks.
+    '''
+    total = seqArray.shape[0]
+    if uniformLength:
+        L = int(uniformLength)
+        if L <= 0 or total % L != 0:
+            raise ValueError('sequence data length %d is not a multiple of the uniform read length %d' % (total, L))
+        numReads = total // L
+        for r0 in range(0, numReads, chunkReads):
+            r1 = min(numReads, r0 + chunkReads)
+            block = dArr[np.asarray(seqArray[r0*L:r1*L])].reshape(r1 - r0, L)
+            problems = (block > 5) | (block[:, :] == 0)
+            problems[:, L-1] = (block[:, L-1] != 0)
+            if problems.any():
+                read, col = np.argwhere(problems)[0]
+                raw = bytes(np.asarray(seqArray[(r0+read)*L:(r0+read+1)*L]))
+                _raiseBadRead(raw, int(col), r0 + int(read))
+    else:
+        if totalLen is not None and int(totalLen) != total:
+            raise ValueError('%d trailing input bytes are not terminated by \'$\'' % (total - int(totalLen)))
+        step = chunkReads * 100
+        for b0 in range(0, total, step):
+            block = dArr[np.asarray(seqArray[b0:b0+step])]
+            bad = np.flatnonzero(block > 5)
+            if bad.size:
+                pos = b0 + int(bad[0])
+                raise ValueError('invalid symbol %r at input byte %d; reads must be uppercase A/C/G/N/T '
+                                 '(uppercase soft-masked input and map IUPAC codes to N first)'
+                                 % (bytes([int(seqArray[pos])]), pos))
+
+def _raiseBadRead(bytes raw, int col, readIndex):
+    if raw[col:col+1] == b'$':
+        reason = "'$' before the end at position %d" % col
+    elif col == len(raw) - 1 and raw[col:col+1] in (b'A', b'C', b'G', b'N', b'T'):
+        reason = "missing the terminal '$'"
+    else:
+        reason = 'invalid symbol %r at position %d' % (raw[col:col+1], col)
+    raise ValueError('invalid read %d %r: %s; reads must be uppercase A/C/G/N/T followed by one '
+                     'terminal \'$\' (uppercase soft-masked input and map IUPAC codes to N first)'
+                     % (readIndex, raw[:40], reason))
+
 def writeSeqsToFiles(np.ndarray[np.uint8_t, ndim=1, mode='c'] seqArray, seqFNPrefix, offsetFN, uniformLength):    
     '''
     This function takes a seqArray and saves the values to a memmap file that can be accessed for multi-processing.
@@ -769,6 +815,18 @@ def writeSeqsToFiles(np.ndarray[np.uint8_t, ndim=1, mode='c'] seqArray, seqFNPre
     cdef np.uint64_t seqLen
     cdef np.uint64_t numSeqs
     
+    #(M3-S2-INPUT) validate before any output file is created
+    d = {'$':0, 'A':1, 'C':2, 'G':3, 'N':4, 'T':5}
+    dArr = np.add(np.zeros(dtype='<u1', shape=(256,)), len(d.keys()))
+    for c in d.keys():
+        dArr[ord(c)] = d[c]
+    if uniformLength:
+        _validateSeqBytes(seqArray, dArr, uniformLength)
+    else:
+        terminators = np.where(seqArray == 36)[0]
+        _validateSeqBytes(seqArray, dArr, 0, int(terminators[terminators.shape[0]-1]) + 1 if terminators.size else 0)
+        del terminators
+
     if uniformLength:
         #first, store the uniform size in our offsets file
         offsets = np.lib.format.open_memmap(offsetFN, 'w+', '<u8', (1,))

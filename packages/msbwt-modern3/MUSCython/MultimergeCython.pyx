@@ -499,27 +499,36 @@ def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, np.uint64_t numProcs, b
     cdef np.uint64_t bufferOutDist = 10**9
     cdef np.uint64_t nextOutput = bufferOutDist
     
-    #we get back a string encoded numpy array and the length of the sequence in symbols
-    for bwt, seqLen in res:
-        #store the string with all our sequences
-        seqFP.write(bwt)
+    #(M3-S2-INPUT) a worker ValueError surfaces in this loop; shut the pool down
+    #and close the files before re-raising so callers do not leak workers or handles
+    try:
+        #we get back a string encoded numpy array and the length of the sequence in symbols
+        for bwt, seqLen in res:
+            #store the string with all our sequences
+            seqFP.write(bwt)
         
-        #update our offset
-        #seqOffset += seqLen
-        seqOffsetArrayWrite[0] += seqLen
+            #update our offset
+            #seqOffset += seqLen
+            seqOffsetArrayWrite[0] += seqLen
         
-        #we only write this offset if it's non-uniform
-        if not areUniform:
-            #create a 1-D array so we can use tostring
-            #seqOffsetArrayWrite[0] = seqOffset
-            offsetFP.write(seqOffsetArrayWrite.tobytes())
+            #we only write this offset if it's non-uniform
+            if not areUniform:
+                #create a 1-D array so we can use tostring
+                #seqOffsetArrayWrite[0] = seqOffset
+                offsetFP.write(seqOffsetArrayWrite.tobytes())
         
-        #check if we want to write anything to our logger
-        if seqOffsetArrayWrite[0] > nextOutput:
-            logger.info('Processed '+str(seqOffsetArrayWrite[0]/(1000000000))+' giga-bases...')
-            nextOutput += bufferOutDist
-            seqFP.flush()
-            offsetFP.flush()
+            #check if we want to write anything to our logger
+            if seqOffsetArrayWrite[0] > nextOutput:
+                logger.info('Processed '+str(seqOffsetArrayWrite[0]/(1000000000))+' giga-bases...')
+                nextOutput += bufferOutDist
+                seqFP.flush()
+                offsetFP.flush()
+    except BaseException:
+        pool.terminate()
+        pool.join()
+        seqFP.close()
+        offsetFP.close()
+        raise
     
     #uniform seqs only need this written once
     if areUniform:
@@ -536,6 +545,22 @@ def formatSeqsForMerge(seqIter, str seqFN, str offsetFN, np.uint64_t numProcs, b
     #save it all
     seqFP.close()
     offsetFP.close()
+
+def _invalidSeqMessage(bytes seq, Py_ssize_t badPos):
+    '''
+    Describe why a merge input string is invalid (M3-S2-INPUT).
+    '''
+    if len(seq) == 0:
+        reason = 'empty string'
+    elif seq[badPos:badPos+1] == b'$':
+        reason = "'$' before the end at position %d" % badPos
+    elif seq[badPos:badPos+1] in (b'A', b'C', b'G', b'N', b'T'):
+        reason = "missing the terminal '$'"
+    else:
+        reason = 'invalid symbol %r at position %d' % (seq[badPos:badPos+1], badPos)
+    return ('invalid sequence %r (%d symbols): %s; each input must be uppercase '
+            'A/C/G/N/T followed by exactly one terminal \'$\' (uppercase soft-masked '
+            'input and map IUPAC codes to N first)' % (seq[:40], len(seq), reason))
 
 def memoryBWT(seq):
     '''
@@ -578,12 +603,21 @@ def memoryBWT(seq):
     cdef np.uint32_t [:] totalCounts_view = totalCounts
     
     #iterate through the plain string doing both conversions and counts simultaneously
+    #(M3-S2-INPUT) validate before each counted write: this module is compiled with
+    #boundscheck=False, so an unmapped byte (code 6) would write past totalCounts,
+    #and a read without exactly one trailing '$' never converges below
     cdef unsigned int x
+    cdef np.uint64_t badPos = seqLen
     with nogil:
         for x in range(0, seqLen):
-            converted_view[x] = dArr_view[seq_view[x]]
+            converted_view[x] = dArr_view[<unsigned char>seq_view[x]]
+            if converted_view[x] > 5 or ((converted_view[x] == 0) != (x == seqLen-1)):
+                badPos = x
+                break
             totalCounts_view[converted_view[x]] += 1
             arr0_view[x] = x
+    if seqLen == 0 or badPos != seqLen:
+        raise ValueError(_invalidSeqMessage(seq_b, badPos))
     
     #fm index type stuff which helps build the thing
     # (Windows portability) np.cumsum(u4) - u4 promotes to C 'np.uint64_t',
