@@ -38,6 +38,10 @@ O(N), resident RAM is dominated by one recovered read plus OS page cache.
 This baseline is intended to remain the exact correctness oracle for any later
 succinct BWT-only construction.
 
+Feature 11B (``filter_lcp_for_removal``) carries the layer through Point-10
+source removal with a sequential range-minimum pass over the input array; its
+output equals this construction on the reduced package element for element.
+
 Persistence classification
 
 - ``lcps.npy``  AUTHORITATIVE adjacency array (uint32/uint64, length
@@ -70,6 +74,7 @@ LCP_METADATA_FILENAME = "lcp.json"
 FORMAT_NAME = "msbwt-lcp"
 FORMAT_VERSION = 1
 ALGORITHM_NAME = "lf-recovery-generalized-kasai"
+REMOVAL_ALGORITHM_NAME = "point10-survivor-range-minimum"
 TERMINATOR_SEMANTICS = "virtual-distinct-ordered-dollar-excluded-from-lcp"
 
 
@@ -588,6 +593,188 @@ def construct_lcp_from_bwt(
         raise
     finally:
         shutil.rmtree(temp_root, ignore_errors=True)
+
+
+def _filter_lcp_values(lcps, keep_mask, output, chunk_rows):
+    """Range-minimum survivor filter (Feature 11B).
+
+    For survivor rows ``s_0 < s_1 < ...`` of a sorted suffix list, the
+    LCP of adjacent survivors is ``min(lcps[s_k : s_{k+1}])``.  This holds
+    for every lexicographically sorted list, and the distinct virtual
+    terminators keep identical biological suffixes contiguous, so the
+    identity is exact for Holt collection order.
+
+    One sequential pass; resident memory is bounded by ``chunk_rows``.
+    Works on the canonical array ``C[j] = LCP(SA[j-1], SA[j])``.
+    Returns ``(rows_written, max_value)``.
+    """
+    n_rows = int(keep_mask.shape[0])
+    sentinel = np.iinfo(lcps.dtype).max
+    have_prev = False
+    carry = sentinel
+    write_pos = 0
+    max_value = 0
+
+    for start in range(0, n_rows, chunk_rows):
+        end = min(start + chunk_rows, n_rows)
+        mask = np.asarray(keep_mask[start:end], dtype=np.bool_)
+        if start == 0:
+            # C[0] is undefined; it is never emitted because no survivor
+            # precedes row 0.
+            canonical = np.empty(end, dtype=lcps.dtype)
+            canonical[0] = sentinel
+            canonical[1:] = lcps[0:end - 1]
+        else:
+            canonical = np.asarray(lcps[start - 1:end - 1])
+
+        positions = np.flatnonzero(mask)
+        if positions.size == 0:
+            if have_prev:
+                carry = min(carry, int(canonical.min()))
+            continue
+
+        bounds = np.empty(positions.size, dtype=np.intp)
+        bounds[0] = 0
+        bounds[1:] = positions[:-1] + 1
+        # Segment k covers (previous survivor, positions[k]].
+        segments = np.minimum.reduceat(
+            canonical[:positions[-1] + 1], bounds)
+
+        if have_prev:
+            first = min(carry, int(segments[0]))
+            emitted = np.empty(segments.size, dtype=lcps.dtype)
+            emitted[0] = first
+            emitted[1:] = segments[1:]
+        else:
+            emitted = segments[1:]
+        have_prev = True
+
+        if emitted.size:
+            output[write_pos:write_pos + emitted.size] = emitted
+            write_pos += int(emitted.size)
+            max_value = max(max_value, int(emitted.max()))
+
+        tail = canonical[positions[-1] + 1:]
+        carry = int(tail.min()) if tail.size else sentinel
+
+    return write_pos, max_value
+
+
+def filter_lcp_for_removal(
+    input_dir,
+    output_dir,
+    keep_mask,
+    chunk_rows=8 * 1024 * 1024,
+    validate=True,
+):
+    """Derive the LCP layer of a Point-10 reduced package (Feature 11B).
+
+    ``keep_mask`` is the root survivor mask over the input BWT rows (the
+    same mask that filtered ``msbwt.npy``).  ``output_dir`` must already
+    hold the reduced ``msbwt.npy`` and a validated provenance manifest so
+    the new layer can be bound to the reduced BWT digest.
+
+    No FASTQ, string recovery, or suffix comparison is performed: the
+    reduced array is a sequential running minimum over the input
+    ``lcps.npy``.  The result equals Feature-11A construction on the
+    reduced package element for element.
+
+    ``max_read_length`` is inherited from the input layer.  It remains a
+    valid upper bound (the only way validation uses it) but is not
+    recomputed, because that would require recovering every retained read;
+    ``max_read_length_exact`` records which case applies.
+    """
+    input_dir = str(input_dir)
+    output_dir = str(output_dir)
+
+    # Never propagate a stale or corrupt layer.
+    input_meta = validate_lcp(input_dir, full=True)
+    lcps = np.load(
+        lcp_array_path(input_dir), mmap_mode="r", allow_pickle=False)
+
+    mask = np.asarray(keep_mask, dtype=np.bool_)
+    input_rows = int(input_meta["bwt_rows"])
+    if mask.ndim != 1 or int(mask.shape[0]) != input_rows:
+        raise LCPError(
+            "keep mask length %r != input BWT rows %d"
+            % (mask.shape, input_rows)
+        )
+    output_rows = int(np.count_nonzero(mask))
+    output_bwt = _load_bwt_rows(output_dir)
+    if int(output_bwt.shape[0]) != output_rows:
+        raise LCPError(
+            "reduced BWT has %d rows but keep mask retains %d"
+            % (output_bwt.shape[0], output_rows)
+        )
+
+    final_array = lcp_array_path(output_dir)
+    final_meta = lcp_metadata_path(output_dir)
+    if os.path.exists(final_array) or os.path.exists(final_meta):
+        raise LCPError("output already carries an LCP layer")
+
+    started = _monotonic()
+    temp_array = final_array + ".tmp.npy"
+    output = open_memmap(
+        str(temp_array),
+        mode="w+",
+        dtype=lcps.dtype,
+        shape=(max(0, output_rows - 1),),
+    )
+    try:
+        try:
+            written, max_lcp = _filter_lcp_values(
+                lcps, mask, output, max(1, int(chunk_rows)))
+            output.flush()
+        finally:
+            # Release the mapping before rename/remove (Windows, M15).
+            del output
+        if written != max(0, output_rows - 1):
+            raise LCPError(
+                "filtered LCP wrote %d boundaries, expected %d"
+                % (written, max(0, output_rows - 1))
+            )
+    except BaseException:
+        if os.path.exists(temp_array):
+            os.remove(temp_array)
+        raise
+
+    metadata = {
+        "format": FORMAT_NAME,
+        "version": FORMAT_VERSION,
+        "algorithm": REMOVAL_ALGORITHM_NAME,
+        "array_file": LCP_ARRAY_FILENAME,
+        "array_dtype": lcps.dtype.str,
+        "array_length": max(0, output_rows - 1),
+        "bwt_file": BWT_FILENAME,
+        "bwt_rows": output_rows,
+        "bwt_sha256": _bwt_identity_sha256(output_dir),
+        "read_count": int(np.count_nonzero(output_bwt == 0)),
+        "max_read_length": int(input_meta["max_read_length"]),
+        "max_read_length_exact": False,
+        "max_lcp": int(max_lcp),
+        "terminator_semantics": TERMINATOR_SEMANTICS,
+        "stored_convention": input_meta["stored_convention"],
+        "canonical_convention": input_meta["canonical_convention"],
+        "source": "point10-removal-range-minimum-no-fastq-no-recovery",
+        "derived_from": {
+            "algorithm": input_meta.get("algorithm"),
+            "bwt_rows": input_rows,
+            "bwt_sha256": input_meta["bwt_sha256"],
+            "max_lcp": int(input_meta["max_lcp"]),
+        },
+        "working_storage": (
+            "one sequential pass over the input lcps.npy; resident memory "
+            "bounded by chunk_rows"
+        ),
+        "construction_seconds": float(_monotonic() - started),
+    }
+
+    _atomic_replace(str(temp_array), str(final_array))
+    _atomic_write_json(final_meta, metadata)
+
+    if validate:
+        validate_lcp(output_dir, full=True)
+    return metadata
 
 
 def load_lcp_metadata(bwt_dir):

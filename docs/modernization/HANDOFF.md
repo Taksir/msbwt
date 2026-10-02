@@ -1,5 +1,8 @@
 # Modernization handoff
 
+> **Historical.** This records the legacy-oracle and pre-port state. For the
+> current state and backlog, start at `docs/roadmap/AGENT_ROADMAP.md`.
+
 Status: Compression/Recovery Milestone 1 (clean RLE), Milestone 2 (builder
 recovery), and Milestone 3 (non-resumable interruption failure characterization)
 are complete on branch `codex/modernization`.  The post-hoc and direct uniform

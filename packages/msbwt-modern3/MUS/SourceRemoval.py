@@ -31,6 +31,9 @@ Persistence classification
   ``provenance/interleaves/*``, ``inter0.npy`` (when the reduced root is a
   merge node), ``read_provenance.npy`` + ``read_provenance.json`` (when
   the input carries them) -- AUTHORITATIVE, exactly as for Features 2/9.
+- ``lcps.npy`` + ``lcp.json`` (when the input carries a Feature-11A layer
+  and ``drop_lcp`` is not set) -- AUTHORITATIVE, derived by the Feature-11B
+  range-minimum filter and bound to the reduced BWT digest.
 - ``source_metadata.json`` -- MUTABLE / REBUILDABLE (Feature 7), pruned to
   retained sources.
 - ``provenance/ranks/*`` -- DERIVED / REBUILDABLE; never copied from the
@@ -98,8 +101,9 @@ from MUS.QualitySidecar import (
     quality_sidecar_exists,
 )
 from MUS.LCP import (
-    LCPError,
+    filter_lcp_for_removal,
     lcp_exists,
+    validate_lcp,
 )
 from MUS.SourceMetadata import (
     METADATA_FILENAME,
@@ -503,10 +507,12 @@ def retain_sources(
     temporary sibling directory and atomically published only after the
     complete package validates.
 
-    Feature-11A LCP is adjacency data, not a row-aligned tag: it cannot be
-    filtered row-for-row.  A removal from an LCP-enabled input therefore
-    FAILS unless ``drop_lcp=True`` explicitly requests a reduced MSBWT
-    without the LCP layer (Feature 11B will add LCP-preserving removal).
+    Feature-11A LCP is adjacency data, not a row-aligned tag, so it is not
+    filtered row-for-row.  Feature 11B carries it through instead: the LCP
+    of two survivors that become adjacent is the minimum of the input LCPs
+    between them, computed in one sequential pass with no FASTQ or string
+    recovery.  ``drop_lcp=True`` produces a reduced MSBWT without the LCP
+    layer.
     """
     input_dir = str(input_dir)
     output_dir = str(output_dir)
@@ -544,16 +550,10 @@ def retain_sources(
             "output already exists: %s" % output_dir
         )
 
-    # Feature 11A: an LCP layer is adjacency data.  It cannot be filtered
-    # row-for-row, so removal fails safely unless the caller explicitly
-    # requests a reduced package WITHOUT the LCP layer.
-    if lcp_exists(input_dir) and not drop_lcp:
-        raise LCPError(
-            "input package carries a Feature-11A LCP layer, which cannot "
-            "be filtered row-for-row by source removal; Feature 11B is "
-            "required for LCP-preserving removal.  Pass drop_lcp=True to "
-            "explicitly produce a reduced MSBWT without the LCP layer"
-        )
+    preserve_lcp = lcp_exists(input_dir) and not drop_lcp
+    if preserve_lcp:
+        # Fail before any output work if the input layer is stale.
+        validate_lcp(input_dir, full=True)
 
     metadata_document, _ = _load_metadata_document(
         input_dir,
@@ -583,6 +583,7 @@ def retain_sources(
         "bwt_tags_preserved": False,
         "bwt_tag_count": 0,
         "quality_sidecar_preserved": False,
+        "lcp_preserved": False,
         "rank_indexes_built": 0,
     }
 
@@ -694,6 +695,18 @@ def retain_sources(
                 temp_dir,
             )
             stats["quality_sidecar_preserved"] = True
+
+        # Feature 11B: derive the reduced LCP layer from the input layer
+        # and the same survival mask.  It binds to the reduced BWT digest,
+        # so it must follow the manifest write above.
+        if preserve_lcp:
+            filter_lcp_for_removal(
+                input_dir,
+                temp_dir,
+                root_mask,
+                chunk_rows=chunk_rows,
+            )
+            stats["lcp_preserved"] = True
 
         _save_filtered_metadata(
             temp_dir,
