@@ -495,3 +495,34 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Reader/writer interoperability: unchanged.  Import names `MUS` and `MUSCython`,
   the `msbwt` command, and all persisted formats are the same.  Code that imported
   `tools.<module>` from an installed package must use `MUS.tools.<module>`.
+
+## M3-F11B: LCP-preserving source removal (modern3 only)
+
+- Status: implemented with regression tests
+  (`compat/tests/test_lcp_source_removal.py`); plan and rationale in
+  `docs/roadmap/FEATURE11B_PLAN.md`.  Supersedes the "F11B absent by design"
+  line of the M3-SOL-R1 snapshot for modern3.
+- Affected APIs/commands: `MUS.SourceRemoval.retain_sources`,
+  `MUS.SourceRemoval.remove_sources`, `msbwt-remove-sources`; new
+  `MUS.LCP.filter_lcp_for_removal`.  Files: `lcps.npy`, `lcp.json` in the
+  reduced output package.
+- Old behavior: removal from a package carrying a Feature-11A LCP layer
+  raised `LCPError` and published nothing unless `drop_lcp=True`, which
+  produced a reduced package without an LCP layer.
+- New behavior: by default the reduced package carries an exact LCP layer
+  derived from the input layer by a sequential range minimum over the
+  survivor mask (no FASTQ, no read recovery).  The input layer is fully
+  validated first; a stale layer raises `LCPError` and nothing is published.
+  `drop_lcp=True` / `--drop-lcp` are unchanged.  Removal stats gain
+  `lcp_preserved`.  Calls that previously succeeded produce the same files.
+- Rationale: Feature 10 and Feature 11A were mutually exclusive; recovering
+  the layer after `drop_lcp` required a full 11A reconstruction.
+- Format: still `msbwt-lcp` version 1; `lcps.npy` layout and dtype rule
+  unchanged and element-equal to an 11A rebuild of the reduced package.
+  `lcp.json` adds `algorithm = "point10-survivor-range-minimum"`,
+  `derived_from`, and `max_read_length_exact = false` (`max_read_length` is
+  inherited from the input and remains an upper bound).
+- Reader/writer interoperability: the modern2 reader validates and reads an
+  11B layer with identical values (tested); modern3 11B consumes a
+  modern2-written 11A layer (tested).  modern2 itself still rejects
+  LCP-enabled removal.
