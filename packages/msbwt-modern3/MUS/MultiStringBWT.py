@@ -908,6 +908,8 @@ def preprocessFastqs(fastqFNs, seqFNPrefix, offsetFN, abtFN, areUniform, logger)
             i += 1
                 
         fp.close()
+        if (i + 1) % 4 != 0:
+            raise ValueError('Truncated FASTQ input \'%s\': %d lines is not a whole number of 4-line records' % (fn, i+1))
     
     if len(seqArray) > 0:
         if not areUniform or maxSeqLen == -1:

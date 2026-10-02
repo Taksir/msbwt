@@ -412,7 +412,8 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
   (`compat/tests/test_m3_s1_fastq_input.py`).
 - Affected commands/APIs: `msbwt pp`, `cffq` (uniform and non-uniform) on `.gz`
   input; `MultiStringBWTCython.preprocessFastqs` and
-  `MultimergeCython.preprocessFastqs`/`fastqIterator`.
+  `MultimergeCython.preprocessFastqs`/`fastqIterator`, and
+  `MultimergeCython.fastaIterator` for `.gz` FASTA.
 - Old behavior (modern3 before this fix): `gzip.open(fn, 'r')` yields bytes on
   Python 3, so every `.gz` input failed with `TypeError: a bytes-like object is
   required, not 'str'`.  The frozen original (Python 2) accepted gzip input.
@@ -422,3 +423,27 @@ p.dtype('a9') is invalid under NumPy 2.x -> TypeError);
 - Rationale: restores the original, documented behavior lost in the Python 3
   port; no format or output change.
 - Reader/writer interoperability: unchanged.
+
+## M3-S1-FASTQ-TRUNC: truncated FASTQ input is an error
+
+- Status: implemented with regression tests
+  (`compat/tests/test_m3_s1_fastq_input.py`).
+- Affected commands/APIs: `msbwt pp`, `cffq` (uniform and non-uniform);
+  `MultiStringBWTCython.preprocessFastqs`, `MultimergeCython.fastqIterator`,
+  `MultiStringBWT.preprocessFastqs` (pure-Python), `MUS.util.fastqIterator`.
+- Old behavior: FASTQ is read as 4-line records by line position only.  A file
+  whose last record is cut short (line count not a multiple of 4) was accepted
+  silently, so the dataset was built without the incomplete read (or with a read
+  whose later lines were missing) and the command exited 0.
+- New behavior: after the last line is read, a line count that is not a multiple
+  of 4 raises `ValueError: Truncated FASTQ input '<file>': <n> lines is not a
+  whole number of 4-line records` and the command exits nonzero.  Complete
+  records read before the end were already consumed; no artifact from a failed
+  run should be used.  Only the line count is checked: headers, `+` lines, and
+  sequence/quality length agreement are not validated.
+- Rationale: silent data loss on corrupt or partially transferred input is a
+  correctness defect.  The legacy behavior is not preserved.
+- Reader/writer interoperability: unchanged; valid input produces byte-identical
+  artifacts.  A file with trailing blank lines now fails this check (previously
+  uniform builds failed with a length error and non-uniform builds added a
+  spurious empty read).

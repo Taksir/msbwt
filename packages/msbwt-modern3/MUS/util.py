@@ -221,6 +221,8 @@ def fastqIterator(fastqFN):
             quals = ''
         i += 1
     fp.close()
+    if i & 0x3:
+        raise ValueError("Truncated FASTQ input '%s': %d lines is not a whole number of 4-line records" % (fastqFN, i))
 
 
 def atomic_replace(source_path, dest_path):
