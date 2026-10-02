@@ -56,12 +56,12 @@ off-by-one in the "sorts before" bound makes 3 fail.
    not.** LF cycles in the fixtures span several reads. The companion
    builder therefore splits each LF cycle on `$`, which is exact for any
    valid collection BWT.
-2. **Legacy hazard, recorded but not fixed here.**
+2. **Legacy hazard (since fixed by `M3-S2-INPUT`).**
    `MultimergeCython.createMSBWTFromSeqs` requires `$`-terminated input.
-   `memoryBWT` loops forever on an unterminated periodic read such as
+   `memoryBWT` looped forever on an unterminated periodic read such as
    `TTTT`, and because it runs in a `multiprocessing` worker, the parent
-   waits forever instead of failing. This needs its own fix and its own
-   COMPATIBILITY entry.
+   waited forever instead of failing. The same root cause also allowed
+   out-of-bounds writes on lowercase or IUPAC input.
 3. **Python 3.14 uses `forkserver` on Linux.** Construction must be called
    from an importable `__main__`. A script file or pytest works; `python -`
    from stdin hangs.

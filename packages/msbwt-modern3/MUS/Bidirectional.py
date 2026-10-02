@@ -162,8 +162,7 @@ def build_reverse_companion(forward_dir, reverse_dir, overwrite=False,
 
     reversed_reads = []
     for read in _recover_reads(forward, read_count):
-        # Multimerge requires '$'-terminated input; an unterminated
-        # periodic read makes its worker loop forever.
+        # Multimerge requires '$'-terminated input (M3-S2-INPUT).
         reversed_reads.append(read[::-1].decode("ascii") + "$")
 
     parent = os.path.dirname(os.path.abspath(reverse_dir))

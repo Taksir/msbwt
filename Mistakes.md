@@ -402,3 +402,60 @@ Windows. This applies to `pickle.dump` and `pickle.load`, as well as any
 format that uses structured line-oriented framing (e.g., numpy's old
 `np.save` text headers). Check all `open()` calls in modules that do
 serialization.
+
+---
+
+## M22 — Construction ran from stdin hung under Python 3.14 `forkserver`
+
+**What happened:** Building an index with `MultimergeCython` from a
+`python - <<EOF` heredoc hung forever. The forkserver and resource-tracker
+processes outlived the `timeout`, which also kept the shell pipe open.
+
+**Why:** Python 3.14 defaults to the `forkserver` start method on Linux.
+The forkserver re-imports `__main__`, which is impossible for a script read
+from stdin. The pool never receives working workers.
+
+**Lesson:** Run anything that uses `multiprocessing` (all compiled
+constructors) from a script *file* with an `if __name__ == "__main__":`
+guard, or from pytest. Redirect stdin from `/dev/null`, use `timeout -k`,
+and check for orphaned workers afterwards
+(`ps -eo cmd | grep '[f]orkserver import main'`). Compare M16 and M20.
+
+---
+
+## M23 — A crashing or looping pool worker hangs the parent forever
+
+**What happened:** `msbwt cffq` hung on soft-masked FASTQ. A first guess
+blamed the start method, but forcing `fork` hung too.
+
+**Why:** `MultimergeCython.memoryBWT` and `MSBWTGenCython.writeSeqsToFiles`
+are compiled with `boundscheck=False` and trusted their input. A lowercase
+or IUPAC byte wrote past a 6-element buffer (heap corruption or segfault),
+and an unterminated periodic read never converged. `Pool.imap` waits
+forever for a worker that died or never returns. Fixed in M3-S2-INPUT.
+
+**Lesson:** Under `boundscheck=False`, validate untrusted input *before*
+the first unchecked index. Diagnose hangs with
+`faulthandler.dump_traceback_later(..., file=...)` and probe the worker
+function in-process with each suspicious input. Write hang-prone
+regression tests as subprocesses with a timeout, so a regression fails
+instead of freezing the suite.
+
+---
+
+## M24 — The naive test fixtures are not per-read LF cycles
+
+**What happened:** `recoverString(0)` on a merged fixture from
+`test_multisource_query.read_derived_merge` returned several reads joined
+by `$`, which broke a builder that assumed one read per call.
+
+**Why:** The naive fixtures order `$` rows by read ID, not by read
+content, so the LF permutation's cycles can span several reads. Real Holt
+construction and merges give one read per cycle, and Feature 11A relies
+on that.
+
+**Lesson:** To enumerate reads from an arbitrary valid collection BWT,
+walk LF cycles with `recoverString(d, withIndex=True)` and split on `$`
+(see `MUS.Bidirectional._recover_reads`). For per-read identity on
+fixtures, use the oracle adapters (`OracleBackedAdapter`,
+`OracleBWTAdapter`).
