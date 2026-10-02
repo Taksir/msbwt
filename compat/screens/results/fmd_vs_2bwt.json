@@ -1,0 +1,70 @@
+{
+  "caveats": [
+    "uncompressed byte BWTs; run counts are the input to any future RLBWT/move backend, not a measured compressed size",
+    "single-process construction; timings from one run, warm cache, shared cloud container",
+    "extension cost uses the Python prototype over the compiled FM index; both sides use the same code path"
+  ],
+  "companion_2bwt": {
+    "mean_run_length": 7.635665361295493,
+    "msbwt_bytes": 1010128,
+    "rows": 1010000,
+    "runs": 132274,
+    "runs_per_row": 0.13096435643564355
+  },
+  "construction_seconds": {
+    "companion_2bwt": 8.335804045999794,
+    "fmd": 18.09622509599967,
+    "forward": 7.1553185640000265
+  },
+  "data": "SYNTHETIC cohort; not a biological measurement",
+  "extension_seconds_per_call": {
+    "2bwt": 1.2666868548377908e-05,
+    "calls_each": 6200,
+    "fmd": 1.2708411935481337e-05
+  },
+  "fmd": {
+    "mean_run_length": 8.945098351799205,
+    "msbwt_bytes": 2020128,
+    "rows": 2020000,
+    "runs": 225822,
+    "runs_per_row": 0.1117930693069307
+  },
+  "forward": {
+    "mean_run_length": 7.655574926097173,
+    "msbwt_bytes": 1010128,
+    "rows": 1010000,
+    "runs": 131930,
+    "runs_per_row": 0.13062376237623763
+  },
+  "parameters": {
+    "coverage": 5,
+    "error_rate": 0.005,
+    "genome_length": 20000,
+    "out": "compat/screens/results/fmd_vs_2bwt.json",
+    "queries": 200,
+    "read_length": 100,
+    "repeat_copies": 6,
+    "repeat_families": 5,
+    "samples": 10,
+    "seed": 20261002,
+    "snp_rate": 0.002,
+    "work": null
+  },
+  "platform": {
+    "machine": "x86_64",
+    "numpy": "2.5.3",
+    "python": "3.14.0rc2",
+    "system": "Linux"
+  },
+  "reads": 10000,
+  "reads_sha256": "d59e6c402c16e7a7a7e841c0920c33d1fb2c81bf7f9cfce83ef18dca46ade617",
+  "screen": "fmd-vs-2bwt",
+  "totals": {
+    "2bwt_rows": 2020000,
+    "2bwt_runs": 264204,
+    "fmd_plus_forward_rows": 3030000,
+    "fmd_plus_forward_runs": 357752,
+    "fmd_rows": 2020000,
+    "fmd_runs": 225822
+  }
+}

@@ -206,6 +206,82 @@ def build_reverse_companion(forward_dir, reverse_dir, overwrite=False,
     return metadata
 
 
+FMD_METADATA = "fmd_index.json"
+FMD_FORMAT_NAME = "msbwt-fmd-screen"
+
+
+def reverse_complement(read):
+    """Reverse complement over A, C, G, N, T (N is its own complement)."""
+    return bytes(read)[::-1].translate(_COMPLEMENT_TABLE)
+
+
+def build_fmd_index(forward_dir, fmd_dir, overwrite=False, num_procs=1,
+                    logger=None):
+    """Build an FMD-style index: every read of ``forward_dir`` plus its
+    reverse complement, in one Holt MSBWT (FMD screen, experimental).
+
+    Searching this index counts both strands; it cannot answer
+    single-strand questions, and every read occupies two read slots.
+    """
+    from MUSCython import MultimergeCython
+
+    forward_dir = str(forward_dir)
+    fmd_dir = str(fmd_dir)
+    if os.path.abspath(forward_dir) == os.path.abspath(fmd_dir):
+        raise BidirectionalError("FMD index needs its own directory")
+    if os.path.exists(fmd_dir) and not overwrite:
+        raise BidirectionalError("output already exists: %s" % fmd_dir)
+    logger = logger or logging.getLogger("msbwt.bidirectional")
+
+    forward_rows = np.load(
+        os.path.join(forward_dir, BWT_FILENAME), mmap_mode="r")
+    read_count = int(np.count_nonzero(forward_rows == 0))
+    if read_count == 0:
+        raise BidirectionalError("forward BWT holds no reads")
+    reads = _recover_reads(_load_compiled(forward_dir), read_count)
+    both_strands = []
+    for read in reads:
+        both_strands.append(read.decode("ascii") + "$")
+        both_strands.append(reverse_complement(read).decode("ascii") + "$")
+
+    parent = os.path.dirname(os.path.abspath(fmd_dir))
+    if not os.path.isdir(parent):
+        os.makedirs(parent)
+    temp_dir = tempfile.mkdtemp(
+        prefix=".%s.fmd-" % os.path.basename(fmd_dir), dir=parent)
+    try:
+        MultimergeCython.createMSBWTFromSeqs(
+            both_strands, temp_dir, int(num_procs), False, logger)
+        fmd_rows = np.load(os.path.join(temp_dir, BWT_FILENAME),
+                           mmap_mode="r")
+        if int(fmd_rows.shape[0]) != 2 * int(forward_rows.shape[0]):
+            raise BidirectionalError(
+                "FMD index has %d rows, expected %d"
+                % (fmd_rows.shape[0], 2 * forward_rows.shape[0]))
+        metadata = {
+            "format": FMD_FORMAT_NAME,
+            "version": FORMAT_VERSION,
+            "status": "experimental-fmd-screen",
+            "forward_bwt_sha256": _file_sha256(
+                os.path.join(forward_dir, BWT_FILENAME)),
+            "fmd_bwt_sha256": _file_sha256(
+                os.path.join(temp_dir, BWT_FILENAME)),
+            "bwt_rows": int(fmd_rows.shape[0]),
+            "read_count": 2 * read_count,
+            "transform": "reads plus reverse complements",
+        }
+        with open(os.path.join(temp_dir, FMD_METADATA), "w") as fp:
+            json.dump(metadata, fp, indent=2, sort_keys=True)
+            fp.write("\n")
+        if os.path.exists(fmd_dir):
+            shutil.rmtree(fmd_dir)
+        os.rename(temp_dir, fmd_dir)
+    except BaseException:
+        shutil.rmtree(temp_dir, ignore_errors=True)
+        raise
+    return metadata
+
+
 def load_companion_metadata(forward_dir, reverse_dir):
     """Validate the companion binding and return its metadata."""
     path = os.path.join(str(reverse_dir), COMPANION_METADATA)
@@ -256,6 +332,21 @@ class BidirectionalIndex(object):
         load_companion_metadata(forward_dir, reverse_dir)
         return cls(_load_compiled(forward_dir, mmap),
                    _load_compiled(reverse_dir, mmap))
+
+    @classmethod
+    def load_fmd(cls, fmd_dir, mmap=True):
+        """FMD: one index holding both strands; the partner is itself."""
+        path = os.path.join(str(fmd_dir), FMD_METADATA)
+        if not os.path.exists(path):
+            raise BidirectionalError("FMD metadata not found: %s" % path)
+        with open(path) as fp:
+            metadata = json.load(fp)
+        if metadata.get("format") != FMD_FORMAT_NAME or \
+                metadata["fmd_bwt_sha256"] != _file_sha256(
+                    os.path.join(str(fmd_dir), BWT_FILENAME)):
+            raise BidirectionalError("FMD index metadata does not match")
+        index = _load_compiled(fmd_dir, mmap)
+        return cls(index, index, complement=True)
 
     def transform(self, pattern):
         """``T(P)``: the partner-side spelling of ``pattern``."""
